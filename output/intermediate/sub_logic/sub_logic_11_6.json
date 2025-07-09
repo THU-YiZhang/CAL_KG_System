@@ -1,0 +1,282 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_6_1",
+      "label": "本征噪声",
+      "node_type": "basic_concept",
+      "summary": "本征噪声是电路中的固有噪声，决定电路系统信号处理的最高精度。主要来源包括电阻的热噪声、1/f噪声和PN结的闪烁噪声。",
+      "difficulty": 2,
+      "keywords": [
+        "固有噪声",
+        "热噪声",
+        "1/f噪声",
+        "闪烁噪声"
+      ],
+      "formulas": [],
+      "applications": [
+        "CMOS电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "噪声理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "本征噪声是电路中的固有噪声，决定电路系统信号处理的最高精度。主要来源包括电阻的热噪声、1/f噪声和PN结的闪烁噪声。"
+    },
+    {
+      "id": "bc_11_6_2",
+      "label": "噪声谱密度",
+      "node_type": "basic_concept",
+      "summary": "噪声谱密度是描述噪声信号在频域特性的参数。白噪声的谱密度函数为常数，1/f噪声的谱密度函数随频率增加而线性降低。",
+      "difficulty": 2,
+      "keywords": [
+        "频域参数",
+        "白噪声",
+        "1/f噪声"
+      ],
+      "formulas": [],
+      "applications": [
+        "噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号处理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声谱密度是描述噪声信号在频域特性的参数。白噪声的谱密度函数为常数，1/f噪声的谱密度函数随频率增加而线性降低。"
+    },
+    {
+      "id": "bc_11_6_3",
+      "label": "PSRR",
+      "node_type": "basic_concept",
+      "summary": "电源抑制比（PSRR）是描述电源噪声相对大小的指标，与电路的开环增益和具体结构有关，与输出阻抗等状态无关。",
+      "difficulty": 3,
+      "keywords": [
+        "电源噪声",
+        "相对大小",
+        "开环增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "数模混合系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电源管理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制比（PSRR）是描述电源噪声相对大小的指标，与电路的开环增益和具体结构有关，与输出阻抗等状态无关。"
+    },
+    {
+      "id": "bc_11_6_4",
+      "label": "PSR",
+      "node_type": "basic_concept",
+      "summary": "电源抑制（PSR）是描述电源噪声绝对量的指标，与电路的输出阻抗、反馈网络、开环增益和结构形式密切相关。",
+      "difficulty": 3,
+      "keywords": [
+        "电源噪声",
+        "绝对量",
+        "输出阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "数模混合系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电源管理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制（PSR）是描述电源噪声绝对量的指标，与电路的输出阻抗、反馈网络、开环增益和结构形式密切相关。"
+    },
+    {
+      "id": "ct_11_6_1",
+      "label": "低噪声电路设计",
+      "node_type": "core_technology",
+      "summary": "通过消除或抑制噪声源，选择低噪声元件和电路结构，以及区别对待有效信号和噪声信号来提高信噪比。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声抑制",
+        "信噪比",
+        "电路结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过消除或抑制噪声源，选择低噪声元件和电路结构，以及区别对待有效信号和噪声信号来提高信噪比。"
+    },
+    {
+      "id": "ct_11_6_2",
+      "label": "噪声整形技术",
+      "node_type": "core_technology",
+      "summary": "将基带内噪声搬移到高频端后通过滤波器滤除，从而降低基带内的噪声水平。",
+      "difficulty": 4,
+      "keywords": [
+        "噪声搬移",
+        "高频滤除",
+        "基带噪声"
+      ],
+      "formulas": [],
+      "applications": [
+        "低噪声电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将基带内噪声搬移到高频端后通过滤波器滤除，从而降低基带内的噪声水平。"
+    },
+    {
+      "id": "ct_11_6_3",
+      "label": "小信号等效电路法",
+      "node_type": "core_technology",
+      "summary": "通过建立小信号等效电路模型来分析PSRR特性，可以获得相对精确的分析结果。",
+      "difficulty": 4,
+      "keywords": [
+        "等效电路",
+        "精确分析",
+        "PSRR"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过建立小信号等效电路模型来分析PSRR特性，可以获得相对精确的分析结果。"
+    },
+    {
+      "id": "ct_11_6_4",
+      "label": "电源噪声电流模分析",
+      "node_type": "core_technology",
+      "summary": "通过分析电源噪声电流的产生及传输过程来理解PSRR特性，物理概念清晰但可能带来分析误差。",
+      "difficulty": 4,
+      "keywords": [
+        "噪声电流",
+        "物理概念",
+        "PSRR"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过分析电源噪声电流的产生及传输过程来理解PSRR特性，物理概念清晰但可能带来分析误差。"
+    },
+    {
+      "id": "ca_11_6_1",
+      "label": "RC低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "通过RC低通滤波器滤除高频噪声，常用于低噪声电路设计中。",
+      "difficulty": 3,
+      "keywords": [
+        "高频噪声",
+        "滤波",
+        "RC电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过RC低通滤波器滤除高频噪声，常用于低噪声电路设计中。"
+    },
+    {
+      "id": "ca_11_6_2",
+      "label": "全差分对称电路",
+      "node_type": "circuit_application",
+      "summary": "采用全差分的对称电路结构及参数优化设计，可以提高PSRR性能，改善信噪比。",
+      "difficulty": 4,
+      "keywords": [
+        "对称结构",
+        "PSRR",
+        "信噪比"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用全差分的对称电路结构及参数优化设计，可以提高PSRR性能，改善信噪比。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_6_1",
+      "target_id": "ct_11_6_1",
+      "relationship": "enables",
+      "description": "理解本征噪声的来源和特性是设计低噪声电路的基础。",
+      "weight": 0.9,
+      "evidence": "本征噪声是电路中的固有噪声，决定电路系统信号处理的最高精度。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_6_2",
+      "target_id": "ct_11_6_1",
+      "relationship": "supports",
+      "description": "噪声谱密度的理解有助于设计区别对待有效信号和噪声信号的电路。",
+      "weight": 0.8,
+      "evidence": "噪声在电路中表现为一种随机信号，通常以共模信号的形式影响电路对信号的处理性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_6_1",
+      "target_id": "ca_11_6_1",
+      "relationship": "implements",
+      "description": "低噪声电路设计方法通过RC低通滤波器实现高频噪声的滤除。",
+      "weight": 0.85,
+      "evidence": "采用RC低通滤波器滤除高频噪声，已成为低噪声电路设计中关注的主要内容。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_6_1",
+      "target_id": "ca_11_6_2",
+      "relationship": "implements",
+      "description": "低噪声电路设计方法通过全差分对称电路实现PSRR性能的提升。",
+      "weight": 0.85,
+      "evidence": "采用全差分的对称电路结构及电路参数的优化设计，可以在已有基础上获得最优的PSRR性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_6_3",
+      "target_id": "ct_11_6_3",
+      "relationship": "enables",
+      "description": "PSRR的定义和理解是小信号等效电路法分析的基础。",
+      "weight": 0.9,
+      "evidence": "PSRR是电源噪声的一种相对大小描述，与电路的开环与闭环及输出阻抗的大小等状态近似无关。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_6_4",
+      "target_id": "ct_11_6_4",
+      "relationship": "enables",
+      "description": "PSR的定义和理解是电源噪声电流模分析方法的基础。",
+      "weight": 0.9,
+      "evidence": "PSR则是电源噪声的一种绝对量的描述，与电路的输出阻抗、反馈网络以及开环增益、电路结构形式密切相关。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "11.6",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:46:50.486604"
+}

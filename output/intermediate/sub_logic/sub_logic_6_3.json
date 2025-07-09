@@ -1,0 +1,427 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_3_1",
+      "label": "互补推挽差分电路",
+      "node_type": "basic_concept",
+      "summary": "互补推挽差分电路由NMOS和PMOS互补的CS（共源）放大器构成，NMOS CS电路输入接Vi+/Vi-信号，输出驱动PMOS负载；PMOS CS电路输入接Vi-/Vi+信号，输出驱动NMOS负载。这种结构可以提高小信号增益，降低非线性失真。",
+      "difficulty": 2,
+      "keywords": [
+        "NMOS",
+        "PMOS",
+        "CS放大器",
+        "互补推挽"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分输入级"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理",
+        "差分放大原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "互补推挽差分电路由NMOS和PMOS互补的CS（共源）放大器构成，NMOS CS电路输入接Vi+/Vi-信号，输出驱动PMOS负载；PMOS CS电路输入接Vi-/Vi+信号，输出驱动NMOS负载。这种结构可以提高小信号增益，降低非线性失真。"
+    },
+    {
+      "id": "bc_6_3_2",
+      "label": "Class A工作模式",
+      "node_type": "basic_concept",
+      "summary": "Class A工作模式下，放大器在整个信号周期内都有电流流过，具有高线性但效率较低的特点。在互补推挽差分电路中，两路互补CS放大器构成Class A的差分输入级互补驱动。",
+      "difficulty": 2,
+      "keywords": [
+        "Class A",
+        "高线性",
+        "低效率"
+      ],
+      "formulas": [],
+      "applications": [
+        "高线性放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器工作模式"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class A工作模式下，放大器在整个信号周期内都有电流流过，具有高线性但效率较低的特点。在互补推挽差分电路中，两路互补CS放大器构成Class A的差分输入级互补驱动。"
+    },
+    {
+      "id": "bc_6_3_3",
+      "label": "Class B工作模式",
+      "node_type": "basic_concept",
+      "summary": "Class B工作模式下，放大器仅在信号的一半周期内有电流流过，具有高效率但线性较差的特点。在低电源电压条件下，互补推挽差分电路可能进入Class B工作模式。",
+      "difficulty": 2,
+      "keywords": [
+        "Class B",
+        "高效率",
+        "低线性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高效率放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器工作模式"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class B工作模式下，放大器仅在信号的一半周期内有电流流过，具有高效率但线性较差的特点。在低电源电压条件下，互补推挽差分电路可能进入Class B工作模式。"
+    },
+    {
+      "id": "bc_6_3_4",
+      "label": "Class AB工作模式",
+      "node_type": "basic_concept",
+      "summary": "Class AB工作模式是Class A和Class B的折中，既有较高的线性，又有较高的效率。在互补推挽差分电路中，通过直流电平移位技术可以实现Class AB工作模式。",
+      "difficulty": 2,
+      "keywords": [
+        "Class AB",
+        "高线性",
+        "高效率"
+      ],
+      "formulas": [],
+      "applications": [
+        "线性与效率兼顾的放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器工作模式"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB工作模式是Class A和Class B的折中，既有较高的线性，又有较高的效率。在互补推挽差分电路中，通过直流电平移位技术可以实现Class AB工作模式。"
+    },
+    {
+      "id": "bc_6_3_5",
+      "label": "直流电平移位技术",
+      "node_type": "basic_concept",
+      "summary": "直流电平移位技术用于调整互补推挽差分电路中NMOS和PMOS管的直流偏置点，使其在低电源电压下也能进入Class AB或Class A工作模式。通过源跟随器实现直流电平移位，使VGN比VGP高出VLS = VTN + VTP + 2Δ的直流电平。",
+      "difficulty": 3,
+      "keywords": [
+        "直流电平移位",
+        "源跟随器",
+        "偏置点"
+      ],
+      "formulas": [
+        "VLS = VTN + VTP + 2Δ"
+      ],
+      "applications": [
+        "Class AB差分输入级"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管偏置",
+        "源跟随器"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "直流电平移位技术用于调整互补推挽差分电路中NMOS和PMOS管的直流偏置点，使其在低电源电压下也能进入Class AB或Class A工作模式。通过源跟随器实现直流电平移位，使VGN比VGP高出VLS = VTN + VTP + 2Δ的直流电平。"
+    },
+    {
+      "id": "bc_6_3_6",
+      "label": "差分电流线性关系",
+      "node_type": "basic_concept",
+      "summary": "在结构完全匹配的条件下，互补推挽差分电路的差分输出电流ΔIDS = ID1 - ID2与差模电压Vid具有良好的线性关系。这种线性关系是由于非线性因子的完全抵消。",
+      "difficulty": 3,
+      "keywords": [
+        "差分电流",
+        "线性关系",
+        "非线性抵消"
+      ],
+      "formulas": [
+        "ΔID = 2√(2ISS) * (√kn√kp)/(√kn + √kp) * Vid"
+      ],
+      "applications": [
+        "高线性差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大原理",
+        "MOS管电流公式"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在结构完全匹配的条件下，互补推挽差分电路的差分输出电流ΔIDS = ID1 - ID2与差模电压Vid具有良好的线性关系。这种线性关系是由于非线性因子的完全抵消。"
+    },
+    {
+      "id": "ct_6_3_1",
+      "label": "互补推挽差分电路设计",
+      "node_type": "core_technology",
+      "summary": "设计互补推挽差分电路需要构造两个类型互补的CS放大器，NMOS CS电路输入接Vi+/Vi-信号，输出驱动PMOS负载；PMOS CS电路输入接Vi-/Vi+信号，输出驱动NMOS负载。两路互补CS放大器可以构成Class A的差分输入级互补驱动。",
+      "difficulty": 3,
+      "keywords": [
+        "互补CS放大器",
+        "Class A驱动",
+        "对称结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "Class A差分输入级"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计互补推挽差分电路需要构造两个类型互补的CS放大器，NMOS CS电路输入接Vi+/Vi-信号，输出驱动PMOS负载；PMOS CS电路输入接Vi-/Vi+信号，输出驱动NMOS负载。两路互补CS放大器可以构成Class A的差分输入级互补驱动。"
+    },
+    {
+      "id": "ct_6_3_2",
+      "label": "Class AB工作模式实现",
+      "node_type": "core_technology",
+      "summary": "实现Class AB工作模式需要通过直流电平移位技术调整NMOS和PMOS管的直流偏置点。采用源跟随的直流电平移位，使VGN比VGP高出VLS = VTN + VTP + 2Δ的直流电平，并通过调节VLS电平控制静态电流的具体数值。",
+      "difficulty": 4,
+      "keywords": [
+        "直流电平移位",
+        "静态电流控制",
+        "Class AB"
+      ],
+      "formulas": [
+        "VLS = VTN + VTP + 2Δ"
+      ],
+      "applications": [
+        "Class AB差分输入级"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "实现Class AB工作模式需要通过直流电平移位技术调整NMOS和PMOS管的直流偏置点。采用源跟随的直流电平移位，使VGN比VGP高出VLS = VTN + VTP + 2Δ的直流电平，并通过调节VLS电平控制静态电流的具体数值。"
+    },
+    {
+      "id": "ct_6_3_3",
+      "label": "电流模式分析",
+      "node_type": "core_technology",
+      "summary": "电流模式分析用于分析互补推挽差分电路的支路电流ID1和ID2与差分输入电压Vid的关系。通过求解MOS管的电流公式，可以得到ID1和ID2的表达式，并证明差分输出电流ΔID与Vid具有良好的线性关系。",
+      "difficulty": 4,
+      "keywords": [
+        "支路电流",
+        "差分输入电压",
+        "线性关系"
+      ],
+      "formulas": [
+        "ID1 = 1/2 * [ (√kn√kp)/(√kn + √kp) * (Vi1 - Vi2) + √(2ISS) ]^2",
+        "ΔID = 2√(2ISS) * (√kn√kp)/(√kn + √kp) * Vid"
+      ],
+      "applications": [
+        "高线性差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流模式分析用于分析互补推挽差分电路的支路电流ID1和ID2与差分输入电压Vid的关系。通过求解MOS管的电流公式，可以得到ID1和ID2的表达式，并证明差分输出电流ΔID与Vid具有良好的线性关系。"
+    },
+    {
+      "id": "ct_6_3_4",
+      "label": "电压模式分析",
+      "node_type": "core_technology",
+      "summary": "电压模式分析采用叠加原理分析Vi1和Vi2对输出电压的影响。通过分析Vi1输入而Vi2=0，或Vi2输入而Vi1=0的情况，叠加得到差分增益。电压模式分析的结果与电流模式分析一致，验证了电路的线性特性。",
+      "difficulty": 4,
+      "keywords": [
+        "叠加原理",
+        "差分增益",
+        "电压模式"
+      ],
+      "formulas": [
+        "Av = 2 * (gm1 / (1 + gm1/gm3)) * (gm9/gm5) * (ro9//ro10)"
+      ],
+      "applications": [
+        "高线性差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压模式分析采用叠加原理分析Vi1和Vi2对输出电压的影响。通过分析Vi1输入而Vi2=0，或Vi2输入而Vi1=0的情况，叠加得到差分增益。电压模式分析的结果与电流模式分析一致，验证了电路的线性特性。"
+    },
+    {
+      "id": "ca_6_3_1",
+      "label": "全差分Class A输入级",
+      "node_type": "circuit_application",
+      "summary": "全差分Class A输入级由两路互补CS放大器构成，输出电流镜相互交叉耦合驱动输出恒流管。这种结构具有高线性、高增益的特点，适用于需要高线性度的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "全差分",
+        "Class A",
+        "高线性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分Class A输入级由两路互补CS放大器构成，输出电流镜相互交叉耦合驱动输出恒流管。这种结构具有高线性、高增益的特点，适用于需要高线性度的应用场景。"
+    },
+    {
+      "id": "ca_6_3_2",
+      "label": "Class AB单级推挽放大电路",
+      "node_type": "circuit_application",
+      "summary": "Class AB单级推挽放大电路通过直流电平移位技术实现Class AB工作模式，具有高线性、高压摆率、宽的动态范围和大的负载电流驱动能力。电路结构完全对称，可以抑制非线性失真，扩展线性范围。",
+      "difficulty": 5,
+      "keywords": [
+        "Class AB",
+        "推挽放大",
+        "高压摆率"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB单级推挽放大电路通过直流电平移位技术实现Class AB工作模式，具有高线性、高压摆率、宽的动态范围和大的负载电流驱动能力。电路结构完全对称，可以抑制非线性失真，扩展线性范围。"
+    },
+    {
+      "id": "ca_6_3_3",
+      "label": "全差分Cascode Class AB单级放大器",
+      "node_type": "circuit_application",
+      "summary": "全差分Cascode Class AB单级放大器结合了Cascode结构和Class AB工作模式的优点，具有更高的增益和更好的线性度。需要附加共模反馈（CMFB）电路来稳定共模工作点。",
+      "difficulty": 5,
+      "keywords": [
+        "全差分",
+        "Cascode",
+        "Class AB",
+        "CMFB"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分Cascode Class AB单级放大器结合了Cascode结构和Class AB工作模式的优点，具有更高的增益和更好的线性度。需要附加共模反馈（CMFB）电路来稳定共模工作点。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_3_1",
+      "target_id": "ct_6_3_1",
+      "relationship": "enables",
+      "description": "互补推挽差分电路的基本概念使能了互补推挽差分电路的设计技术。",
+      "weight": 0.9,
+      "evidence": "互补推挽差分电路由NMOS和PMOS互补的CS放大器构成，这种基本概念是设计互补推挽差分电路的基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_3_4",
+      "target_id": "ct_6_3_2",
+      "relationship": "enables",
+      "description": "Class AB工作模式的基本概念使能了Class AB工作模式的实现技术。",
+      "weight": 0.9,
+      "evidence": "通过直流电平移位技术可以实现Class AB工作模式，这种基本概念是实现Class AB工作模式的基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_3_5",
+      "target_id": "ct_6_3_2",
+      "relationship": "supports",
+      "description": "直流电平移位技术的基本概念支撑了Class AB工作模式的实现技术。",
+      "weight": 0.8,
+      "evidence": "采用源跟随的直流电平移位，使VGN比VGP高出VLS = VTN + VTP + 2Δ的直流电平，这种技术是实现Class AB工作模式的关键。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_3_6",
+      "target_id": "ct_6_3_3",
+      "relationship": "supports",
+      "description": "差分电流线性关系的基本概念支撑了电流模式分析技术。",
+      "weight": 0.8,
+      "evidence": "差分输出电流ΔID与差模电压Vid具有良好的线性关系，这种基本概念是电流模式分析的基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_3_1",
+      "target_id": "ca_6_3_1",
+      "relationship": "implements",
+      "description": "互补推挽差分电路设计技术实现了全差分Class A输入级电路应用。",
+      "weight": 0.9,
+      "evidence": "全差分Class A输入级由两路互补CS放大器构成，这种设计技术是实现该电路应用的关键。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_3_2",
+      "target_id": "ca_6_3_2",
+      "relationship": "implements",
+      "description": "Class AB工作模式实现技术实现了Class AB单级推挽放大电路应用。",
+      "weight": 0.9,
+      "evidence": "Class AB单级推挽放大电路通过直流电平移位技术实现Class AB工作模式，这种实现技术是该电路应用的关键。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_3_3",
+      "target_id": "ca_6_3_2",
+      "relationship": "applies_to",
+      "description": "电流模式分析技术应用于Class AB单级推挽放大电路的设计和分析。",
+      "weight": 0.8,
+      "evidence": "通过电流模式分析可以得到Class AB单级推挽放大电路的支路电流和差分电流的表达式，这种分析技术是该电路设计的重要工具。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_3_4",
+      "target_id": "ca_6_3_2",
+      "relationship": "applies_to",
+      "description": "电压模式分析技术应用于Class AB单级推挽放大电路的设计和分析。",
+      "weight": 0.8,
+      "evidence": "通过电压模式分析可以得到Class AB单级推挽放大电路的差分增益表达式，这种分析技术是该电路设计的重要工具。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_3_2",
+      "target_id": "bc_6_3_3",
+      "relationship": "complements",
+      "description": "Class A和Class B工作模式是互补的，分别强调高线性和高效率。",
+      "weight": 0.7,
+      "evidence": "Class A工作模式具有高线性但效率较低，Class B工作模式具有高效率但线性较差，两者是互补的。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "bc_6_3_4",
+      "target_id": "bc_6_3_2",
+      "relationship": "extends",
+      "description": "Class AB工作模式扩展了Class A工作模式，在保持较高线性的同时提高了效率。",
+      "weight": 0.7,
+      "evidence": "Class AB工作模式是Class A和Class B的折中，既有较高的线性，又有较高的效率。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_3_4",
+      "target_id": "bc_6_3_3",
+      "relationship": "extends",
+      "description": "Class AB工作模式扩展了Class B工作模式，在保持较高效率的同时提高了线性。",
+      "weight": 0.7,
+      "evidence": "Class AB工作模式是Class A和Class B的折中，既有较高的线性，又有较高的效率。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_3_3",
+      "target_id": "ct_6_3_4",
+      "relationship": "complements",
+      "description": "电流模式分析和电压模式分析是互补的，分别从电流和电压的角度分析电路性能。",
+      "weight": 0.8,
+      "evidence": "电流模式分析通过支路电流表达式分析电路性能，电压模式分析通过叠加原理分析差分增益，两者是互补的。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_6_3_3",
+      "relationship": "extends",
+      "description": "全差分Cascode Class AB单级放大器扩展了Class AB单级推挽放大电路，通过Cascode结构提高了增益和线性度。",
+      "weight": 0.8,
+      "evidence": "全差分Cascode Class AB单级放大器结合了Cascode结构和Class AB工作模式的优点，具有更高的增益和更好的线性度。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.3",
+  "title": "Class AB差分输入级",
+  "extraction_timestamp": "2025-07-08T16:40:25.619292"
+}

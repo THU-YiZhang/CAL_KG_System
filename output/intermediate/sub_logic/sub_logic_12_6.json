@@ -1,0 +1,292 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_6_1",
+      "label": "低电压CMOS运算放大器",
+      "node_type": "basic_concept",
+      "summary": "低电压CMOS运算放大器是指在低电源电压下工作的CMOS运算放大器，通常用于便携式和低功耗电子设备。其设计需要考虑低电压下的性能优化和功耗控制。",
+      "difficulty": 3,
+      "keywords": [
+        "低电压",
+        "CMOS",
+        "运算放大器"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "低功耗电子设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "CMOS技术",
+        "运算放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压CMOS运算放大器是指在低电源电压下工作的CMOS运算放大器，通常用于便携式和低功耗电子设备。其设计需要考虑低电压下的性能优化和功耗控制。"
+    },
+    {
+      "id": "bc_12_6_2",
+      "label": "恒定跨导（Constant-gm）",
+      "node_type": "basic_concept",
+      "summary": "恒定跨导是指在输入信号变化时，放大器的跨导保持恒定，从而确保放大器的增益和带宽稳定。这是低电压运算放大器设计中的关键技术之一。",
+      "difficulty": 4,
+      "keywords": [
+        "恒定跨导",
+        "跨导",
+        "增益稳定性"
+      ],
+      "formulas": [
+        "gm = 2*I_D/V_eff"
+      ],
+      "applications": [
+        "轨到轨输入级",
+        "低电压放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOSFET跨导",
+        "放大器设计"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒定跨导是指在输入信号变化时，放大器的跨导保持恒定，从而确保放大器的增益和带宽稳定。这是低电压运算放大器设计中的关键技术之一。"
+    },
+    {
+      "id": "bc_12_6_3",
+      "label": "轨到轨输入/输出（Rail-to-Rail）",
+      "node_type": "basic_concept",
+      "summary": "轨到轨输入/输出是指放大器的输入和输出信号能够达到电源电压的上下限，从而最大化信号的动态范围。这是低电压设计中的重要特性。",
+      "difficulty": 3,
+      "keywords": [
+        "轨到轨",
+        "动态范围",
+        "输入/输出级"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压运算放大器",
+        "视频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器输入/输出级",
+        "动态范围"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨到轨输入/输出是指放大器的输入和输出信号能够达到电源电压的上下限，从而最大化信号的动态范围。这是低电压设计中的重要特性。"
+    },
+    {
+      "id": "ct_12_6_1",
+      "label": "低电压模拟电路设计技术",
+      "node_type": "core_technology",
+      "summary": "低电压模拟电路设计技术包括低电压偏置、低电压电流镜、低电压放大器设计等方法，旨在在低电源电压下实现高性能的模拟电路。",
+      "difficulty": 4,
+      "keywords": [
+        "低电压设计",
+        "模拟电路",
+        "电流镜"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压运算放大器",
+        "低电压电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压模拟电路设计技术包括低电压偏置、低电压电流镜、低电压放大器设计等方法，旨在在低电源电压下实现高性能的模拟电路。"
+    },
+    {
+      "id": "ct_12_6_2",
+      "label": "恒定跨导设计技术",
+      "node_type": "core_technology",
+      "summary": "恒定跨导设计技术通过静态反馈和动态电流导向等方法，确保放大器在输入信号变化时跨导保持恒定，从而优化放大器的性能。",
+      "difficulty": 5,
+      "keywords": [
+        "恒定跨导",
+        "静态反馈",
+        "动态电流导向"
+      ],
+      "formulas": [
+        "gm = I_D / V_eff"
+      ],
+      "applications": [
+        "轨到轨输入级",
+        "低电压放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒定跨导设计技术通过静态反馈和动态电流导向等方法，确保放大器在输入信号变化时跨导保持恒定，从而优化放大器的性能。"
+    },
+    {
+      "id": "ct_12_6_3",
+      "label": "轨到轨输入级设计技术",
+      "node_type": "core_technology",
+      "summary": "轨到轨输入级设计技术通过互补输入对和恒定共模输出电流等方法，实现放大器输入级的轨到轨操作，并保持跨导恒定。",
+      "difficulty": 4,
+      "keywords": [
+        "轨到轨输入",
+        "互补输入对",
+        "共模输出电流"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压运算放大器",
+        "视频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨到轨输入级设计技术通过互补输入对和恒定共模输出电流等方法，实现放大器输入级的轨到轨操作，并保持跨导恒定。"
+    },
+    {
+      "id": "ca_12_6_1",
+      "label": "低电压CMOS运算放大器",
+      "node_type": "circuit_application",
+      "summary": "低电压CMOS运算放大器采用低电压设计技术和恒定跨导技术，在低电源电压下实现高性能的放大功能，适用于便携式和低功耗设备。",
+      "difficulty": 5,
+      "keywords": [
+        "低电压",
+        "CMOS",
+        "运算放大器"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "低功耗电子设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压CMOS运算放大器采用低电压设计技术和恒定跨导技术，在低电源电压下实现高性能的放大功能，适用于便携式和低功耗设备。"
+    },
+    {
+      "id": "ca_12_6_2",
+      "label": "轨到轨视频运算放大器",
+      "node_type": "circuit_application",
+      "summary": "轨到轨视频运算放大器采用轨到轨输入/输出级设计技术，实现宽动态范围的视频信号放大，适用于视频处理应用。",
+      "difficulty": 5,
+      "keywords": [
+        "轨到轨",
+        "视频放大器",
+        "宽动态范围"
+      ],
+      "formulas": [],
+      "applications": [
+        "视频处理",
+        "图像传感器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨到轨视频运算放大器采用轨到轨输入/输出级设计技术，实现宽动态范围的视频信号放大，适用于视频处理应用。"
+    },
+    {
+      "id": "ca_12_6_3",
+      "label": "恒定跨导轨到轨输入级",
+      "node_type": "circuit_application",
+      "summary": "恒定跨导轨到轨输入级通过互补输入对和静态反馈技术，实现输入信号的轨到轨操作并保持跨导恒定，适用于低电压运算放大器。",
+      "difficulty": 5,
+      "keywords": [
+        "恒定跨导",
+        "轨到轨输入",
+        "互补输入对"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压运算放大器",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒定跨导轨到轨输入级通过互补输入对和静态反馈技术，实现输入信号的轨到轨操作并保持跨导恒定，适用于低电压运算放大器。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_6_1",
+      "target_id": "ct_12_6_1",
+      "relationship": "enables",
+      "description": "低电压CMOS运算放大器的定义和原理为低电压模拟电路设计技术提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "参考文献[1]和[2]讨论了低电压CMOS运算放大器的设计和低电压模拟电路设计技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_6_2",
+      "target_id": "ct_12_6_2",
+      "relationship": "enables",
+      "description": "恒定跨导的原理为恒定跨导设计技术提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "参考文献[5]和[6]讨论了恒定跨导的设计和实现方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_6_3",
+      "target_id": "ct_12_6_3",
+      "relationship": "enables",
+      "description": "轨到轨输入/输出的定义和原理为轨到轨输入级设计技术提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "参考文献[5]和[8]讨论了轨到轨输入级的设计和实现方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_6_1",
+      "target_id": "ca_12_6_1",
+      "relationship": "implements",
+      "description": "低电压模拟电路设计技术实现了低电压CMOS运算放大器的具体电路设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[1]和[2]讨论了低电压CMOS运算放大器的设计和实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_6_2",
+      "target_id": "ca_12_6_3",
+      "relationship": "implements",
+      "description": "恒定跨导设计技术实现了恒定跨导轨到轨输入级的具体电路设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[5]和[6]讨论了恒定跨导轨到轨输入级的设计和实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_6_3",
+      "target_id": "ca_12_6_2",
+      "relationship": "implements",
+      "description": "轨到轨输入级设计技术实现了轨到轨视频运算放大器的具体电路设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[8]讨论了轨到轨视频运算放大器的设计和实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_6_2",
+      "target_id": "bc_12_6_3",
+      "relationship": "relates_to",
+      "description": "恒定跨导和轨到轨输入/输出是低电压运算放大器设计中的两个关键技术，它们在实际设计中常常需要同时考虑。",
+      "weight": 0.8,
+      "evidence": "参考文献[5]和[6]讨论了恒定跨导和轨到轨输入/输出的结合设计。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_12_6_2",
+      "target_id": "ct_12_6_3",
+      "relationship": "complements",
+      "description": "恒定跨导设计技术和轨到轨输入级设计技术在低电压运算放大器设计中常常需要结合使用，以实现最佳性能。",
+      "weight": 0.8,
+      "evidence": "参考文献[5]和[6]讨论了恒定跨导和轨到轨输入级的结合设计。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "12.6",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:48:28.827519"
+}

@@ -1,0 +1,257 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_2_1",
+      "label": "小信号瞬态响应",
+      "node_type": "basic_concept",
+      "summary": "小信号瞬态响应是指运放在小信号输入下的时间响应特性，与系统带宽密切相关。它描述了系统对阶跃输入的响应速度和稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "带宽",
+        "阶跃响应",
+        "稳定性"
+      ],
+      "formulas": [
+        "V_o(t)/V_swing = 1 - exp(-pt)"
+      ],
+      "applications": [
+        "音频信号处理",
+        "视频信号采集"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换",
+        "系统传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "小信号瞬态响应是指运放在小信号输入下的时间响应特性，与系统带宽密切相关。它描述了系统对阶跃输入的响应速度和稳定性。"
+    },
+    {
+      "id": "bc_10_2_2",
+      "label": "零极点分析",
+      "node_type": "basic_concept",
+      "summary": "零极点分析是通过系统的传递函数中的零点和极点来研究系统的频率响应和瞬态特性。零点和极点的位置决定了系统的稳定性和响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "零点",
+        "极点",
+        "传递函数"
+      ],
+      "formulas": [
+        "G(s)/G_0 = (1 + s/z)/(1 + s/p)"
+      ],
+      "applications": [
+        "频率补偿",
+        "系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "控制系统理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "零极点分析是通过系统的传递函数中的零点和极点来研究系统的频率响应和瞬态特性。零点和极点的位置决定了系统的稳定性和响应速度。"
+    },
+    {
+      "id": "bc_10_2_3",
+      "label": "闭环系统带宽",
+      "node_type": "basic_concept",
+      "summary": "闭环系统带宽是指闭环反馈系统中信号的频率范围，通常由开环增益和反馈系数决定。带宽越宽，系统对高频信号的响应能力越强。",
+      "difficulty": 2,
+      "keywords": [
+        "闭环增益",
+        "反馈系数",
+        "单位增益带宽"
+      ],
+      "formulas": [
+        "A_CL(s) = G(s)/(1 + F·G(s))"
+      ],
+      "applications": [
+        "实时信号处理",
+        "高速数据采集"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论",
+        "运放基础知识"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环系统带宽是指闭环反馈系统中信号的频率范围，通常由开环增益和反馈系数决定。带宽越宽，系统对高频信号的响应能力越强。"
+    },
+    {
+      "id": "ct_10_2_1",
+      "label": "一阶系统瞬态响应分析",
+      "node_type": "core_technology",
+      "summary": "通过分析一阶系统的传递函数和阶跃响应，研究系统的瞬态特性。重点分析零点和极点对响应速度和稳定性的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "一阶系统",
+        "瞬态响应",
+        "零极点补偿"
+      ],
+      "formulas": [
+        "V_o(t)/V_swing = 1 - (1 - p/z)exp(-pt)"
+      ],
+      "applications": [
+        "运放设计",
+        "频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过分析一阶系统的传递函数和阶跃响应，研究系统的瞬态特性。重点分析零点和极点对响应速度和稳定性的影响。"
+    },
+    {
+      "id": "ct_10_2_2",
+      "label": "二阶系统瞬态响应分析",
+      "node_type": "core_technology",
+      "summary": "分析二阶系统的传递函数和阶跃响应，研究极点的分布类型（实极点或共轭复极点）对系统瞬态特性的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "二阶系统",
+        "阻尼系数",
+        "品质因数"
+      ],
+      "formulas": [
+        "V_o_scale(s) = (1 + s/z)/(1 + s(2ζ/ω_0) + s^2(1/ω_0^2))"
+      ],
+      "applications": [
+        "高阶滤波器设计",
+        "控制系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "分析二阶系统的传递函数和阶跃响应，研究极点的分布类型（实极点或共轭复极点）对系统瞬态特性的影响。"
+    },
+    {
+      "id": "ct_10_2_3",
+      "label": "零极点偶对设计",
+      "node_type": "core_technology",
+      "summary": "通过设计零点和极点的位置形成偶对，以优化系统的瞬态响应和频率特性。偶对的匹配程度直接影响系统的性能。",
+      "difficulty": 4,
+      "keywords": [
+        "偶对",
+        "零极点匹配",
+        "瞬态优化"
+      ],
+      "formulas": [
+        "ω_z = ω_dp/α",
+        "α = 1 + ε"
+      ],
+      "applications": [
+        "高速运放设计",
+        "相位补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过设计零点和极点的位置形成偶对，以优化系统的瞬态响应和频率特性。偶对的匹配程度直接影响系统的性能。"
+    },
+    {
+      "id": "ca_10_2_1",
+      "label": "高速运放设计",
+      "node_type": "circuit_application",
+      "summary": "设计高速运放电路，通过优化零极点分布和反馈结构，实现宽带宽和快速瞬态响应。适用于音频和视频信号处理。",
+      "difficulty": 4,
+      "keywords": [
+        "运放",
+        "反馈网络",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "A_CL(s) ≈ A_CL(0)(1 + s/z)/(1 + s/(F·GBW))"
+      ],
+      "applications": [
+        "实时信号采集",
+        "视频处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计高速运放电路，通过优化零极点分布和反馈结构，实现宽带宽和快速瞬态响应。适用于音频和视频信号处理。"
+    },
+    {
+      "id": "ca_10_2_2",
+      "label": "电容反馈放大器",
+      "node_type": "circuit_application",
+      "summary": "采用电容反馈结构的放大器电路，通过调整反馈系数和零极点位置，优化闭环系统的瞬态性能和稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "电容反馈",
+        "闭环带宽",
+        "瞬态优化"
+      ],
+      "formulas": [
+        "F = C_f/C_s",
+        "ω_t = F·ω_u"
+      ],
+      "applications": [
+        "高频信号放大",
+        "低噪声设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用电容反馈结构的放大器电路，通过调整反馈系数和零极点位置，优化闭环系统的瞬态性能和稳定性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_2_1",
+      "target_id": "ct_10_2_1",
+      "relationship": "enables",
+      "description": "小信号瞬态响应的定义和分析方法为一阶系统瞬态响应分析提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "小信号瞬态响应与系统带宽相联系，此时高速与带宽的要求相吻合。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_2_2",
+      "target_id": "ct_10_2_2",
+      "relationship": "supports",
+      "description": "零极点分析的原理为二阶系统瞬态响应分析提供了数学工具和理论基础。",
+      "weight": 0.8,
+      "evidence": "零点和极点的位置决定了系统的稳定性和响应速度。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_2_1",
+      "target_id": "ca_10_2_1",
+      "relationship": "implements",
+      "description": "一阶系统瞬态响应分析的方法被应用于高速运放设计中，以优化其瞬态性能。",
+      "weight": 0.7,
+      "evidence": "通过分析一阶系统的传递函数和阶跃响应，研究系统的瞬态特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_2_3",
+      "target_id": "ca_10_2_2",
+      "relationship": "applies_to",
+      "description": "零极点偶对设计技术被应用于电容反馈放大器中，以优化其闭环带宽和瞬态响应。",
+      "weight": 0.8,
+      "evidence": "通过设计零点和极点的位置形成偶对，以优化系统的瞬态响应和频率特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_2_3",
+      "target_id": "ct_10_2_3",
+      "relationship": "supports",
+      "description": "闭环系统带宽的概念为零极点偶对设计提供了性能指标和设计目标。",
+      "weight": 0.7,
+      "evidence": "闭环系统的带宽和瞬态响应速度性能与开环运放的瞬态特性及负反馈结构密切相关。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "10.2",
+  "title": "小信号瞬态特性",
+  "extraction_timestamp": "2025-07-08T16:44:54.321422"
+}

@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_4_1",
+      "label": "线性电阻",
+      "node_type": "basic_concept",
+      "summary": "线性电阻是指电阻的阻值不随电压或电流的工作点而变化，对减小模拟信号处理所要求的低失真至关重要。无源电阻可以克服有源电阻线性度不足的问题，但扩散和多晶结构的无源电阻绝对精度不高，工艺、温度稳定性较差。",
+      "difficulty": 2,
+      "keywords": [
+        "线性电阻",
+        "无源电阻",
+        "有源电阻"
+      ],
+      "formulas": [],
+      "applications": [
+        "电流取样",
+        "电平变换",
+        "负载"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "线性电阻是指电阻的阻值不随电压或电流的工作点而变化，对减小模拟信号处理所要求的低失真至关重要。无源电阻可以克服有源电阻线性度不足的问题，但扩散和多晶结构的无源电阻绝对精度不高，工艺、温度稳定性较差。"
+    },
+    {
+      "id": "bc_2_4_2",
+      "label": "方块电阻",
+      "node_type": "basic_concept",
+      "summary": "方块电阻是电阻材料的一个基本参数，由电阻率ρ（或导电率σ=1/ρ）以及扩散或电阻膜厚度d决定。计算公式为R□=ρ/d。不同类型的电阻方块电阻值差异明显，例如重掺杂多晶低阻为几十欧姆量级，轻掺杂多晶高阻为几千欧姆量级。",
+      "difficulty": 2,
+      "keywords": [
+        "方块电阻",
+        "电阻率",
+        "导电率"
+      ],
+      "formulas": [
+        "R□=ρ/d"
+      ],
+      "applications": [
+        "电阻设计",
+        "匹配型电阻图形设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "材料科学"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "方块电阻是电阻材料的一个基本参数，由电阻率ρ（或导电率σ=1/ρ）以及扩散或电阻膜厚度d决定。计算公式为R□=ρ/d。不同类型的电阻方块电阻值差异明显，例如重掺杂多晶低阻为几十欧姆量级，轻掺杂多晶高阻为几千欧姆量级。"
+    },
+    {
+      "id": "bc_2_4_3",
+      "label": "平板电容",
+      "node_type": "basic_concept",
+      "summary": "平板电容是实现高精度线性电容器的一种理想结构，上下极板可为多晶硅或金属Al。电容值由极板面积S、氧化层介电常数ε和氧化层厚度tox决定，计算公式为C=Aε/tox。平板电容的线性度和一致性良好。",
+      "difficulty": 2,
+      "keywords": [
+        "平板电容",
+        "极板",
+        "介电常数"
+      ],
+      "formulas": [
+        "C=Aε/tox"
+      ],
+      "applications": [
+        "频率补偿",
+        "振荡器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电容原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "平板电容是实现高精度线性电容器的一种理想结构，上下极板可为多晶硅或金属Al。电容值由极板面积S、氧化层介电常数ε和氧化层厚度tox决定，计算公式为C=Aε/tox。平板电容的线性度和一致性良好。"
+    },
+    {
+      "id": "bc_2_4_4",
+      "label": "MOS电容",
+      "node_type": "basic_concept",
+      "summary": "MOS电容由源漏及衬底均为短路的MOS管构成，其电容值随栅压VG变化而变化。在强反型或积累区，MOS电容保持为Cox栅电容的线性性质；在弱反型区，电容值下降。MOS电容的非线性特性对电路设计有重要影响。",
+      "difficulty": 2,
+      "keywords": [
+        "MOS电容",
+        "栅压",
+        "非线性"
+      ],
+      "formulas": [],
+      "applications": [
+        "动态频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS电容由源漏及衬底均为短路的MOS管构成，其电容值随栅压VG变化而变化。在强反型或积累区，MOS电容保持为Cox栅电容的线性性质；在弱反型区，电容值下降。MOS电容的非线性特性对电路设计有重要影响。"
+    },
+    {
+      "id": "ct_2_4_1",
+      "label": "电阻匹配设计",
+      "node_type": "core_technology",
+      "summary": "在集成电路中，绝对精度准确的电阻很难实现，而同类型电阻间的相对精度易于实现。因此，设计中应充分利用电阻的匹配特性，采用对称的版图设计，如交叉嵌套式结构或单元电阻条的Al引线交叉互联结构，以提高电阻的控制精度和匹配电阻的比值控制。",
+      "difficulty": 3,
+      "keywords": [
+        "电阻匹配",
+        "对称版图",
+        "交叉互联"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在集成电路中，绝对精度准确的电阻很难实现，而同类型电阻间的相对精度易于实现。因此，设计中应充分利用电阻的匹配特性，采用对称的版图设计，如交叉嵌套式结构或单元电阻条的Al引线交叉互联结构，以提高电阻的控制精度和匹配电阻的比值控制。"
+    },
+    {
+      "id": "ct_2_4_2",
+      "label": "复合电阻结构",
+      "node_type": "core_technology",
+      "summary": "当单一电阻无法满足电路要求时，可采用不同类型电阻形成复合电阻结构，通过调节不同类型电阻的比例成分，对等效电阻的温度系数进行有效调配和控制。例如，结合高阻多晶和低阻多晶，以实现温度系数的优化。",
+      "difficulty": 3,
+      "keywords": [
+        "复合电阻",
+        "温度系数",
+        "调配"
+      ],
+      "formulas": [],
+      "applications": [
+        "温度稳定性要求高的电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "当单一电阻无法满足电路要求时，可采用不同类型电阻形成复合电阻结构，通过调节不同类型电阻的比例成分，对等效电阻的温度系数进行有效调配和控制。例如，结合高阻多晶和低阻多晶，以实现温度系数的优化。"
+    },
+    {
+      "id": "ct_2_4_3",
+      "label": "电容匹配设计",
+      "node_type": "core_technology",
+      "summary": "为了提高电容的匹配精度，通常采用正方形的单位电容并联结构组成大的电容，通过AB/BA的两维交叉耦合对称分布，得到完全匹配的电容分布。这种设计方法可以确保电容的相对误差最小化。",
+      "difficulty": 3,
+      "keywords": [
+        "电容匹配",
+        "对称分布",
+        "单位电容"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度电容电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "为了提高电容的匹配精度，通常采用正方形的单位电容并联结构组成大的电容，通过AB/BA的两维交叉耦合对称分布，得到完全匹配的电容分布。这种设计方法可以确保电容的相对误差最小化。"
+    },
+    {
+      "id": "ca_2_4_1",
+      "label": "电阻串联分压结构",
+      "node_type": "circuit_application",
+      "summary": "电阻串联分压结构用于电压设定与移位，通过串联电阻的分压作用实现电压的精确控制。这种结构在模拟电路中广泛应用，如电平变换和偏置电路。",
+      "difficulty": 4,
+      "keywords": [
+        "串联分压",
+        "电压设定",
+        "电平变换"
+      ],
+      "formulas": [
+        "Vout=Vin*R2/(R1+R2)"
+      ],
+      "applications": [
+        "偏置电路",
+        "电平变换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻串联分压结构用于电压设定与移位，通过串联电阻的分压作用实现电压的精确控制。这种结构在模拟电路中广泛应用，如电平变换和偏置电路。"
+    },
+    {
+      "id": "ca_2_4_2",
+      "label": "RC充放电延迟控制",
+      "node_type": "circuit_application",
+      "summary": "RC充放电延迟控制利用电阻和电容的充放电特性实现信号的延迟控制。这种电路在时序控制和振荡器中有重要应用。",
+      "difficulty": 4,
+      "keywords": [
+        "RC充放电",
+        "延迟控制",
+        "时序控制"
+      ],
+      "formulas": [
+        "τ=RC"
+      ],
+      "applications": [
+        "振荡器",
+        "时序电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "RC充放电延迟控制利用电阻和电容的充放电特性实现信号的延迟控制。这种电路在时序控制和振荡器中有重要应用。"
+    },
+    {
+      "id": "ca_2_4_3",
+      "label": "运放频率补偿",
+      "node_type": "circuit_application",
+      "summary": "运放频率补偿利用平板电容的线性特性，通过电容的反馈作用实现运放的频率稳定性。这种补偿方法在高频运放设计中尤为重要。",
+      "difficulty": 4,
+      "keywords": [
+        "频率补偿",
+        "运放",
+        "平板电容"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运放频率补偿利用平板电容的线性特性，通过电容的反馈作用实现运放的频率稳定性。这种补偿方法在高频运放设计中尤为重要。"
+    },
+    {
+      "id": "ca_2_4_4",
+      "label": "动态频率补偿",
+      "node_type": "circuit_application",
+      "summary": "动态频率补偿利用MOS电容的非线性特性，通过栅压的变化动态调整电容值，实现电路的频率补偿。这种方法在动态电路中具有独特优势。",
+      "difficulty": 4,
+      "keywords": [
+        "动态补偿",
+        "MOS电容",
+        "非线性"
+      ],
+      "formulas": [],
+      "applications": [
+        "动态电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "动态频率补偿利用MOS电容的非线性特性，通过栅压的变化动态调整电容值，实现电路的频率补偿。这种方法在动态电路中具有独特优势。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_4_1",
+      "target_id": "ct_2_4_1",
+      "relationship": "enables",
+      "description": "线性电阻的特性使得电阻匹配设计成为可能，通过对称版图设计实现高精度匹配。",
+      "weight": 0.8,
+      "evidence": "线性电阻对减小模拟信号处理所要求的低失真至关重要，无源电阻可以克服有源电阻线性度不足的问题。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_4_2",
+      "target_id": "ct_2_4_2",
+      "relationship": "supports",
+      "description": "方块电阻的参数差异为复合电阻结构的设计提供了理论基础，通过调节不同类型电阻的比例优化温度系数。",
+      "weight": 0.7,
+      "evidence": "不同类型电阻的方块电阻及其温度系数存在明显的差异，可通过复合电阻结构调配温度系数。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_4_3",
+      "target_id": "ca_2_4_3",
+      "relationship": "applies_to",
+      "description": "平板电容的线性特性使其非常适合用于运放频率补偿，实现高频稳定性。",
+      "weight": 0.9,
+      "evidence": "平板电容的线性度和一致性良好，是运放频率补偿的理想选择。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_4_4",
+      "target_id": "ca_2_4_4",
+      "relationship": "applies_to",
+      "description": "MOS电容的非线性特性使其能够用于动态频率补偿，通过栅压变化调整电容值。",
+      "weight": 0.8,
+      "evidence": "MOS电容在弱反型区表现出非线性特性，可用于动态频率补偿。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_4_1",
+      "target_id": "ca_2_4_1",
+      "relationship": "implements",
+      "description": "电阻匹配设计方法应用于电阻串联分压结构，实现电压的精确控制。",
+      "weight": 0.7,
+      "evidence": "匹配型电阻图形设计可用于电阻串联分压结构，提高电压精度。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_4_3",
+      "target_id": "ca_2_4_3",
+      "relationship": "implements",
+      "description": "电容匹配设计方法应用于运放频率补偿，确保电容的匹配精度和频率稳定性。",
+      "weight": 0.8,
+      "evidence": "单位电容并联结构和对称分布设计可用于运放频率补偿。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.4",
+  "title": "无源器件",
+  "extraction_timestamp": "2025-07-08T16:33:48.439092"
+}

@@ -1,0 +1,207 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_5_1",
+      "label": "负反馈闭环系统",
+      "node_type": "basic_concept",
+      "summary": "负反馈闭环系统是运放电路设计中常见的结构，通过将输出信号的一部分反馈到输入端，与输入信号相减，从而稳定系统性能。负反馈可以降低增益灵敏度、扩展带宽、改善线性度和输入输出阻抗。",
+      "difficulty": 2,
+      "keywords": [
+        "负反馈",
+        "闭环系统",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈闭环系统是运放电路设计中常见的结构，通过将输出信号的一部分反馈到输入端，与输入信号相减，从而稳定系统性能。负反馈可以降低增益灵敏度、扩展带宽、改善线性度和输入输出阻抗。"
+    },
+    {
+      "id": "bc_7_5_2",
+      "label": "系统稳定性（BIBO）",
+      "node_type": "basic_concept",
+      "summary": "系统稳定性是指有界的输入导致有界的输出（BIBO）的性质。在瞬态响应中，稳定性表现为输出项的收敛性。所有极点必须位于s域的左半轴（LHP）内，否则瞬态响应会发散。",
+      "difficulty": 2,
+      "keywords": [
+        "BIBO",
+        "稳定性",
+        "极点"
+      ],
+      "formulas": [],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "系统稳定性是指有界的输入导致有界的输出（BIBO）的性质。在瞬态响应中，稳定性表现为输出项的收敛性。所有极点必须位于s域的左半轴（LHP）内，否则瞬态响应会发散。"
+    },
+    {
+      "id": "bc_7_5_3",
+      "label": "极点位置",
+      "node_type": "basic_concept",
+      "summary": "极点是传递函数分母多项式的根，决定了系统的动态响应特性。极点位于s域左半轴（LHP）时系统稳定，右半轴（RHP）时系统不稳定。极点的位置直接影响系统的瞬态响应和频率特性。",
+      "difficulty": 2,
+      "keywords": [
+        "极点",
+        "LHP",
+        "RHP"
+      ],
+      "formulas": [],
+      "applications": [
+        "系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点是传递函数分母多项式的根，决定了系统的动态响应特性。极点位于s域左半轴（LHP）时系统稳定，右半轴（RHP）时系统不稳定。极点的位置直接影响系统的瞬态响应和频率特性。"
+    },
+    {
+      "id": "ct_7_5_1",
+      "label": "根轨迹法",
+      "node_type": "core_technology",
+      "summary": "根轨迹法是一种图解方法，用于分析闭环系统极点的分布随开环增益变化的轨迹。通过绘制根轨迹，可以直观地判断系统的稳定性和瞬态响应特性，并设计合适的增益值以满足性能要求。",
+      "difficulty": 3,
+      "keywords": [
+        "根轨迹",
+        "极点分布",
+        "稳定性设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "闭环系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根轨迹法是一种图解方法，用于分析闭环系统极点的分布随开环增益变化的轨迹。通过绘制根轨迹，可以直观地判断系统的稳定性和瞬态响应特性，并设计合适的增益值以满足性能要求。"
+    },
+    {
+      "id": "ct_7_5_2",
+      "label": "Bode图法",
+      "node_type": "core_technology",
+      "summary": "Bode图法是一种频率响应分析方法，通过绘制幅频和相频特性曲线，评估系统的稳定性和频率特性。Bode图可以用于分析开环和闭环系统的增益裕度和相位裕度，从而设计稳定的反馈系统。",
+      "difficulty": 3,
+      "keywords": [
+        "Bode图",
+        "频率响应",
+        "增益裕度"
+      ],
+      "formulas": [],
+      "applications": [
+        "频率特性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Bode图法是一种频率响应分析方法，通过绘制幅频和相频特性曲线，评估系统的稳定性和频率特性。Bode图可以用于分析开环和闭环系统的增益裕度和相位裕度，从而设计稳定的反馈系统。"
+    },
+    {
+      "id": "ct_7_5_3",
+      "label": "闭环极点直接求解",
+      "node_type": "core_technology",
+      "summary": "闭环极点直接求解是一种数学方法，通过求解闭环传递函数的分母多项式，直接得到极点的位置。这种方法可以精确地分析系统的稳定性，但计算复杂度较高，适用于简单系统或计算机辅助设计。",
+      "difficulty": 3,
+      "keywords": [
+        "闭环极点",
+        "数学求解",
+        "稳定性分析"
+      ],
+      "formulas": [],
+      "applications": [
+        "系统稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环极点直接求解是一种数学方法，通过求解闭环传递函数的分母多项式，直接得到极点的位置。这种方法可以精确地分析系统的稳定性，但计算复杂度较高，适用于简单系统或计算机辅助设计。"
+    },
+    {
+      "id": "ca_7_5_1",
+      "label": "四种闭环负反馈结构",
+      "node_type": "circuit_application",
+      "summary": "四种闭环负反馈结构包括电压串联、电压并联、电流串联和电流并联反馈。每种结构具有不同的输入输出阻抗特性和信号处理功能，需要与开环运放的结构和功能类型相匹配，以充分发挥性能。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈结构",
+        "电压反馈",
+        "电流反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "四种闭环负反馈结构包括电压串联、电压并联、电流串联和电流并联反馈。每种结构具有不同的输入输出阻抗特性和信号处理功能，需要与开环运放的结构和功能类型相匹配，以充分发挥性能。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_5_1",
+      "target_id": "ct_7_5_1",
+      "relationship": "enables",
+      "description": "负反馈闭环系统的概念使能了根轨迹法的应用，因为根轨迹法主要用于分析闭环系统的极点分布。",
+      "weight": 0.8,
+      "evidence": "运放构成的系统多为负反馈闭环系统。根轨迹和Bode图都是采用图解方法即依据开环或闭环的极点分布关系,设计系统的稳定性和瞬态响应特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_5_2",
+      "target_id": "ct_7_5_2",
+      "relationship": "supports",
+      "description": "系统稳定性的BIBO性质支撑了Bode图法的应用，因为Bode图法通过频率响应分析系统的稳定性。",
+      "weight": 0.7,
+      "evidence": "系统稳定性的实质是有界的输入导致有界的输出 (BIBO) 的性质, 表现在瞬态输出项的收敛性上。Bode图都是采用图解方法即依据开环或闭环的极点分布关系,设计系统的稳定性和瞬态响应特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_5_3",
+      "target_id": "ct_7_5_3",
+      "relationship": "enables",
+      "description": "极点位置的概念使能了闭环极点直接求解方法的应用，因为该方法直接依赖于极点的位置分析。",
+      "weight": 0.9,
+      "evidence": "所有极点位于 LHP 的性质,可以通过控制传递函数中分母 s 高阶多项式的系数而实现。直接采用基于闭环极点的直接数学求解, 也可实现对系统的稳定性设计。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_5_1",
+      "target_id": "ca_7_5_1",
+      "relationship": "applies_to",
+      "description": "根轨迹法应用于四种闭环负反馈结构的设计，帮助分析其稳定性和性能。",
+      "weight": 0.6,
+      "evidence": "四种类型的闭环负反馈, 其实现的信号处理功能类型应与开环运放的结构与功能类型相匹配。根轨迹和Bode图都是采用图解方法即依据开环或闭环的极点分布关系,设计系统的稳定性和瞬态响应特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_5_2",
+      "target_id": "ca_7_5_1",
+      "relationship": "applies_to",
+      "description": "Bode图法应用于四种闭环负反馈结构的频率特性分析，确保其稳定性。",
+      "weight": 0.6,
+      "evidence": "四种类型的闭环负反馈, 其实现的信号处理功能类型应与开环运放的结构与功能类型相匹配。Bode图都是采用图解方法即依据开环或闭环的极点分布关系,设计系统的稳定性和瞬态响应特性。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "7.5",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:41:49.185697"
+}

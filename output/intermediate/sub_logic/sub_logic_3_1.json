@@ -1,0 +1,283 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_1_1",
+      "label": "滤波器",
+      "node_type": "basic_concept",
+      "summary": "滤波器是一种电子电路或信号处理系统，用于选择性地通过或阻止特定频率范围内的信号。其核心功能是根据频率对信号进行选择性处理。",
+      "difficulty": 2,
+      "keywords": [
+        "频率选择",
+        "信号处理",
+        "电子电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "通信系统",
+        "音频处理",
+        "图像处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统",
+        "傅里叶分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器是一种电子电路或信号处理系统，用于选择性地通过或阻止特定频率范围内的信号。其核心功能是根据频率对信号进行选择性处理。"
+    },
+    {
+      "id": "bc_3_1_2",
+      "label": "截止频率",
+      "node_type": "basic_concept",
+      "summary": "滤波器的重要参数，指滤波器响应从通带过渡到阻带的边界频率点。对于低通和高通滤波器，通常定义为幅度响应下降3dB时的频率。",
+      "difficulty": 2,
+      "keywords": [
+        "3dB点",
+        "过渡区",
+        "边界频率"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "分贝概念",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器的重要参数，指滤波器响应从通带过渡到阻带的边界频率点。对于低通和高通滤波器，通常定义为幅度响应下降3dB时的频率。"
+    },
+    {
+      "id": "ct_3_1_1",
+      "label": "低通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许低频信号通过而衰减高频信号的电路。关键参数包括截止频率、滚降速率和通带纹波。常用实现方法包括RC电路、LC电路和有源滤波器。",
+      "difficulty": 3,
+      "keywords": [
+        "RC电路",
+        "滚降速率",
+        "巴特沃斯"
+      ],
+      "formulas": [
+        "截止频率公式：fc=1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "抗混叠"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许低频信号通过而衰减高频信号的电路。关键参数包括截止频率、滚降速率和通带纹波。常用实现方法包括RC电路、LC电路和有源滤波器。"
+    },
+    {
+      "id": "ct_3_1_2",
+      "label": "高通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许高频信号通过而衰减低频信号的电路。与低通滤波器类似但频率特性相反，常用CR电路或LC电路实现。需要考虑低频截止特性和高频响应平坦度。",
+      "difficulty": 3,
+      "keywords": [
+        "CR电路",
+        "截止特性",
+        "切比雪夫"
+      ],
+      "formulas": [
+        "截止频率公式：fc=1/(2πRC)"
+      ],
+      "applications": [
+        "直流隔离",
+        "噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许高频信号通过而衰减低频信号的电路。与低通滤波器类似但频率特性相反，常用CR电路或LC电路实现。需要考虑低频截止特性和高频响应平坦度。"
+    },
+    {
+      "id": "ct_3_1_3",
+      "label": "带通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许特定频带信号通过而衰减其他频率的电路。需要确定中心频率和带宽两个关键参数。实现方法包括串联低通和高通滤波器，或使用LC谐振电路。",
+      "difficulty": 4,
+      "keywords": [
+        "中心频率",
+        "带宽",
+        "品质因数"
+      ],
+      "formulas": [
+        "中心频率公式：f0=1/(2π√(LC))"
+      ],
+      "applications": [
+        "无线通信",
+        "频谱分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许特定频带信号通过而衰减其他频率的电路。需要确定中心频率和带宽两个关键参数。实现方法包括串联低通和高通滤波器，或使用LC谐振电路。"
+    },
+    {
+      "id": "ct_3_1_4",
+      "label": "带阻滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计阻止特定频带信号而允许其他频率通过的电路。也称为陷波滤波器，常用于消除特定干扰频率。实现方法包括并联谐振电路或双T网络。",
+      "difficulty": 4,
+      "keywords": [
+        "陷波",
+        "双T网络",
+        "干扰抑制"
+      ],
+      "formulas": [
+        "陷波频率公式：fn=1/(2πRC)"
+      ],
+      "applications": [
+        "电源滤波",
+        "噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计阻止特定频带信号而允许其他频率通过的电路。也称为陷波滤波器，常用于消除特定干扰频率。实现方法包括并联谐振电路或双T网络。"
+    },
+    {
+      "id": "ca_3_1_1",
+      "label": "RC低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电阻和电容组成的最简单低通滤波器电路。电阻串联在信号路径中，电容并联到地。截止频率由RC时间常数决定，具有-20dB/十倍频的滚降特性。",
+      "difficulty": 3,
+      "keywords": [
+        "一阶滤波器",
+        "无源滤波器",
+        "RC时间常数"
+      ],
+      "formulas": [
+        "fc=1/(2πRC)"
+      ],
+      "applications": [
+        "信号调理",
+        "抗混叠"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电阻和电容组成的最简单低通滤波器电路。电阻串联在信号路径中，电容并联到地。截止频率由RC时间常数决定，具有-20dB/十倍频的滚降特性。"
+    },
+    {
+      "id": "ca_3_1_2",
+      "label": "CR高通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电容和电阻组成的基本高通滤波器电路。电容串联在信号路径中，电阻并联到地。与RC低通滤波器结构对称但元件位置互换，频率特性相反。",
+      "difficulty": 3,
+      "keywords": [
+        "耦合电容",
+        "直流隔离",
+        "CR电路"
+      ],
+      "formulas": [
+        "fc=1/(2πRC)"
+      ],
+      "applications": [
+        "交流耦合",
+        "低频噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电容和电阻组成的基本高通滤波器电路。电容串联在信号路径中，电阻并联到地。与RC低通滤波器结构对称但元件位置互换，频率特性相反。"
+    },
+    {
+      "id": "ca_3_1_3",
+      "label": "LC带通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电感和电容组成的谐振电路实现的带通滤波器。LC并联谐振在中心频率呈现高阻抗，串联谐振呈现低阻抗。品质因数Q值决定带宽选择性。",
+      "difficulty": 4,
+      "keywords": [
+        "谐振电路",
+        "Q值",
+        "阻抗变换"
+      ],
+      "formulas": [
+        "Q=2πfL/R"
+      ],
+      "applications": [
+        "射频接收",
+        "频率选择"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电感和电容组成的谐振电路实现的带通滤波器。LC并联谐振在中心频率呈现高阻抗，串联谐振呈现低阻抗。品质因数Q值决定带宽选择性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_1_1",
+      "target_id": "ct_3_1_1",
+      "relationship": "enables",
+      "description": "滤波器基本概念为低通滤波器设计提供理论基础",
+      "weight": 0.9,
+      "evidence": "滤波器定义中提到的频率选择特性是低通滤波器设计的核心目标",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_1_2",
+      "target_id": "ct_3_1_1",
+      "relationship": "supports",
+      "description": "截止频率概念直接应用于低通滤波器设计参数",
+      "weight": 0.95,
+      "evidence": "低通滤波器设计必须明确指定截止频率参数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_1_1",
+      "target_id": "ca_3_1_1",
+      "relationship": "implements",
+      "description": "低通滤波器设计方法具体实现为RC低通滤波器电路",
+      "weight": 0.9,
+      "evidence": "RC电路是低通滤波器设计的最基本实现方式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_1_2",
+      "target_id": "ca_3_1_2",
+      "relationship": "implements",
+      "description": "高通滤波器设计方法具体实现为CR高通滤波器电路",
+      "weight": 0.9,
+      "evidence": "CR电路是高通滤波器设计的最基本实现方式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_1_3",
+      "target_id": "ca_3_1_3",
+      "relationship": "implements",
+      "description": "带通滤波器设计方法具体实现为LC带通滤波器电路",
+      "weight": 0.85,
+      "evidence": "LC谐振是带通滤波器设计的典型实现方式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_1_1",
+      "target_id": "ct_3_1_3",
+      "relationship": "relates_to",
+      "description": "低通和高通滤波器设计方法可组合实现带通滤波器",
+      "weight": 0.8,
+      "evidence": "带通滤波器可通过串联低通和高通滤波器实现",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "3.1",
+  "title": "滤波器基础",
+  "extraction_timestamp": "2025-07-08T15:31:15.866445",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

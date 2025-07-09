@@ -1,0 +1,268 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_5_1",
+      "label": "PTAT电流",
+      "node_type": "basic_concept",
+      "summary": "PTAT(Proportional To Absolute Temperature)电流是一种与绝对温度成正比的电流源。其基本原理是利用双极型晶体管的基极-发射极电压差ΔVBE与热电压VT成正比的关系产生电流，具有正温度系数特性。PTAT电流是构建温度稳定电流基准的基础组件之一。",
+      "difficulty": 2,
+      "keywords": [
+        "正温度系数",
+        "ΔVBE",
+        "热电压"
+      ],
+      "formulas": [
+        "I_PTAT ∝ T"
+      ],
+      "applications": [
+        "温度传感器",
+        "电流基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "双极晶体管原理",
+        "热电压概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PTAT(Proportional To Absolute Temperature)电流是一种与绝对温度成正比的电流源。其基本原理是利用双极型晶体管的基极-发射极电压差ΔVBE与热电压VT成正比的关系产生电流，具有正温度系数特性。PTAT电流是构建温度稳定电流基准的基础组件之一。"
+    },
+    {
+      "id": "bc_4_5_2",
+      "label": "零温度系数电流",
+      "node_type": "basic_concept",
+      "summary": "通过将正温度系数的PTAT电流与负温度系数的VBE/R电流进行加权求和，可以得到与温度无关的零温度系数电流。这种补偿原理类似于带隙基准电压的设计，是电流基准的核心思想。",
+      "difficulty": 2,
+      "keywords": [
+        "温度补偿",
+        "加权求和",
+        "稳定性"
+      ],
+      "formulas": [
+        "I_ref = αI_PTAT + β(VBE/R)"
+      ],
+      "applications": [
+        "基准电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PTAT电流",
+        "VBE温度特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过将正温度系数的PTAT电流与负温度系数的VBE/R电流进行加权求和，可以得到与温度无关的零温度系数电流。这种补偿原理类似于带隙基准电压的设计，是电流基准的核心思想。"
+    },
+    {
+      "id": "bc_4_5_3",
+      "label": "电阻温度特性",
+      "node_type": "basic_concept",
+      "summary": "电阻值随温度变化的特性通常用一阶和二阶温度系数描述。在HSPICE模型中表示为R(T)=R0[1+TC1(T-T0)+TC2(T-T0)^2]。不同类型的电阻(如多晶电阻、扩散电阻)具有不同的温度系数特性，可用于温度补偿设计。",
+      "difficulty": 2,
+      "keywords": [
+        "TC1",
+        "TC2",
+        "非线性"
+      ],
+      "formulas": [
+        "R(T)=R0[1+TC1(T-T0)+TC2(T-T0)^2]"
+      ],
+      "applications": [
+        "温度补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "材料特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻值随温度变化的特性通常用一阶和二阶温度系数描述。在HSPICE模型中表示为R(T)=R0[1+TC1(T-T0)+TC2(T-T0)^2]。不同类型的电阻(如多晶电阻、扩散电阻)具有不同的温度系数特性，可用于温度补偿设计。"
+    },
+    {
+      "id": "ct_4_5_1",
+      "label": "V-I转换基准设计",
+      "node_type": "core_technology",
+      "summary": "通过零温漂的基准电压源与零温度系数电阻，可以近似得到零温度系数基准电流，即I_ref=V_ref/R。这种方法利用基准电压到输出基准电流的转换结构，通过PMOS电流镜提供偏置电流，同时完成对NMOS的偏置。采用Cascode电流镜可提高电流与电源电压的无关性。",
+      "difficulty": 3,
+      "keywords": [
+        "电压转换",
+        "电流镜",
+        "Cascode"
+      ],
+      "formulas": [
+        "I_ref = V_ref/R"
+      ],
+      "applications": [
+        "偏置电流生成"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过零温漂的基准电压源与零温度系数电阻，可以近似得到零温度系数基准电流，即I_ref=V_ref/R。这种方法利用基准电压到输出基准电流的转换结构，通过PMOS电流镜提供偏置电流，同时完成对NMOS的偏置。采用Cascode电流镜可提高电流与电源电压的无关性。"
+    },
+    {
+      "id": "ct_4_5_2",
+      "label": "电阻温度补偿技术",
+      "node_type": "core_technology",
+      "summary": "利用不同类型电阻具有正负温度系数的性质进行补偿设计，是减小输出电流温度系数的有效方法。通过调节正温度系数电阻与负温度系数电阻的比例关系α=-TCn,1/TCp,1，可以在室温附近实现温度补偿。对于宽温度范围，需要综合考虑高、中、低温点的补偿效果。",
+      "difficulty": 3,
+      "keywords": [
+        "补偿系数",
+        "宽温度范围",
+        "非线性"
+      ],
+      "formulas": [
+        "α = -TCn,1/TCp,1",
+        "f_C(T)=(1+α)+(TCn,1+αTCp,1)ΔT+(TCn,2+αTCp,2)(ΔT)^2"
+      ],
+      "applications": [
+        "精密基准源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用不同类型电阻具有正负温度系数的性质进行补偿设计，是减小输出电流温度系数的有效方法。通过调节正温度系数电阻与负温度系数电阻的比例关系α=-TCn,1/TCp,1，可以在室温附近实现温度补偿。对于宽温度范围，需要综合考虑高、中、低温点的补偿效果。"
+    },
+    {
+      "id": "ct_4_5_3",
+      "label": "偏置控制方法",
+      "node_type": "core_technology",
+      "summary": "通过人为引入MOS管W/L比例失配(ΔVGS)和电阻差值(ΔR)的协同控制，将PTAT电流转变为近似零温度系数输出。这种方法在保持PTAT基本结构的同时，利用失配效应产生的负温度系数来补偿PTAT的正温度系数，实现温度稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "失配控制",
+        "协同补偿",
+        "参数调节"
+      ],
+      "formulas": [
+        "ΔVGS = √(2I2/k2)(1-1/√m)",
+        "α√I2T^(-1/4)-I2∂ΔR/∂T = (VT0lnN)/T0"
+      ],
+      "applications": [
+        "低功耗偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过人为引入MOS管W/L比例失配(ΔVGS)和电阻差值(ΔR)的协同控制，将PTAT电流转变为近似零温度系数输出。这种方法在保持PTAT基本结构的同时，利用失配效应产生的负温度系数来补偿PTAT的正温度系数，实现温度稳定。"
+    },
+    {
+      "id": "ca_4_5_1",
+      "label": "基于V-I转换的电流基准电路",
+      "node_type": "circuit_application",
+      "summary": "如图4-35所示，该电路利用基准电压源和零温度系数电阻实现V-I转换，通过PMOS电流镜提供各PMOS管的偏置，同时转换成NMOS电流镜电流。采用Cascode结构提高电源抑制比，通过电阻温度补偿技术降低输出电流的温度系数。",
+      "difficulty": 4,
+      "keywords": [
+        "电流镜",
+        "Cascode",
+        "偏置生成"
+      ],
+      "formulas": [
+        "I_ref = V_ref/R"
+      ],
+      "applications": [
+        "模拟IC偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "如图4-35所示，该电路利用基准电压源和零温度系数电阻实现V-I转换，通过PMOS电流镜提供各PMOS管的偏置，同时转换成NMOS电流镜电流。采用Cascode结构提高电源抑制比，通过电阻温度补偿技术降低输出电流的温度系数。"
+    },
+    {
+      "id": "ca_4_5_2",
+      "label": "零温度系数电流源电路",
+      "node_type": "circuit_application",
+      "summary": "如图4-36所示，该电路采用电阻R3自偏置的PMOS Cascode电流镜保证支路电流匹配，通过调节M1和M2管的W/L比例(m)以及R1与R2的差值(ΔR)，引入失配效应实现温度补偿。在-30°C~135°C范围内温度系数可控制在100ppm/°C以内。",
+      "difficulty": 4,
+      "keywords": [
+        "自偏置",
+        "失配控制",
+        "宽温度范围"
+      ],
+      "formulas": [
+        "VGS1+I1R1+VBE1 = VGS2+I2R2+VBE2"
+      ],
+      "applications": [
+        "温度稳定偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "如图4-36所示，该电路采用电阻R3自偏置的PMOS Cascode电流镜保证支路电流匹配，通过调节M1和M2管的W/L比例(m)以及R1与R2的差值(ΔR)，引入失配效应实现温度补偿。在-30°C~135°C范围内温度系数可控制在100ppm/°C以内。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_5_1",
+      "target_id": "ct_4_5_3",
+      "relationship": "enables",
+      "description": "PTAT电流的正温度特性是偏置控制方法实现温度补偿的基础",
+      "weight": 0.9,
+      "evidence": "对于基本的PTAT结构...有可能将PTAT电流输出转变到近似零温度系数输出",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_5_2",
+      "target_id": "ct_4_5_1",
+      "relationship": "supports",
+      "description": "零温度系数电流原理为V-I转换设计提供了理论基础",
+      "weight": 0.8,
+      "evidence": "通过零温漂的基准电压源与零温度系数电阻，可以近似得到零温度系数基准电流",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_5_3",
+      "target_id": "ct_4_5_2",
+      "relationship": "enables",
+      "description": "电阻温度特性的理解是实施温度补偿技术的前提",
+      "weight": 0.9,
+      "evidence": "利用不同类型电阻具有正负温度系数的性质进行补偿设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_5_1",
+      "target_id": "ca_4_5_1",
+      "relationship": "implements",
+      "description": "V-I转换设计方法具体实现了基于V-I转换的电流基准电路",
+      "weight": 0.9,
+      "evidence": "图4-35所示的电压BGR电路...成为电流基准电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_5_3",
+      "target_id": "ca_4_5_2",
+      "relationship": "implements",
+      "description": "偏置控制方法具体实现了零温度系数电流源电路",
+      "weight": 0.9,
+      "evidence": "基于对PTAT改进的零温度系数电流偏置结构如图4-36所示",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_5_2",
+      "target_id": "ct_4_5_3",
+      "relationship": "complements",
+      "description": "电阻温度补偿技术与偏置控制方法在温度稳定性设计上相互补充",
+      "weight": 0.7,
+      "evidence": "通过复合电阻改变其TC温度系数，可进一步提高电流的温度稳定性",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_4_5_1",
+      "target_id": "ca_4_5_2",
+      "relationship": "relates_to",
+      "description": "两种电流基准电路都致力于实现温度稳定的电流输出",
+      "weight": 0.6,
+      "evidence": "温度稳定的电流基准从某种意义上看其应用比电压基准更广",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "4.5",
+  "title": "电流基准",
+  "extraction_timestamp": "2025-07-08T16:36:54.751623"
+}

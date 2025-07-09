@@ -1,0 +1,307 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_2_1",
+      "label": "负反馈",
+      "node_type": "basic_concept",
+      "summary": "负反馈是一种将输出信号的一部分反馈到输入端并与原始输入信号相减的控制机制。其主要作用是稳定电路性能，包括增益稳定性、带宽扩展、非线性失真和噪声降低、阻抗变化等。负反馈的基本公式为A_cl = A_ol / (1 + F*A_ol)，其中F为反馈系数，A_ol为开环增益。",
+      "difficulty": 3,
+      "keywords": [
+        "负反馈",
+        "闭环增益",
+        "开环增益",
+        "反馈系数"
+      ],
+      "formulas": [
+        "A_cl = A_ol / (1 + F*A_ol)"
+      ],
+      "applications": [
+        "运算放大器",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论",
+        "放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈是一种将输出信号的一部分反馈到输入端并与原始输入信号相减的控制机制。其主要作用是稳定电路性能，包括增益稳定性、带宽扩展、非线性失真和噪声降低、阻抗变化等。负反馈的基本公式为A_cl = A_ol / (1 + F*A_ol)，其中F为反馈系数，A_ol为开环增益。"
+    },
+    {
+      "id": "bc_7_2_2",
+      "label": "环路增益",
+      "node_type": "basic_concept",
+      "summary": "环路增益T = F*A_ol是反馈系统中反馈系数与开环增益的乘积，是衡量反馈系统性能的重要参数。当T趋近于无穷大时，闭环增益A_cl趋近于1/F，此时系统的传输特性仅由反馈网络决定。环路增益的高低直接影响系统的稳定性和性能改善程度。",
+      "difficulty": 3,
+      "keywords": [
+        "环路增益",
+        "反馈系数",
+        "开环增益"
+      ],
+      "formulas": [
+        "T = F*A_ol"
+      ],
+      "applications": [
+        "反馈系统设计",
+        "稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "负反馈原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "环路增益T = F*A_ol是反馈系统中反馈系数与开环增益的乘积，是衡量反馈系统性能的重要参数。当T趋近于无穷大时，闭环增益A_cl趋近于1/F，此时系统的传输特性仅由反馈网络决定。环路增益的高低直接影响系统的稳定性和性能改善程度。"
+    },
+    {
+      "id": "bc_7_2_3",
+      "label": "四种负反馈结构",
+      "node_type": "basic_concept",
+      "summary": "负反馈结构根据对输出信号的采样方式和对输入信号的修正方式分为四种类型：电压串联、电压并联、电流并联和电流串联。电压串联反馈提高输入阻抗和降低输出阻抗；电流并联反馈降低输入阻抗和提高输出阻抗。不同类型的反馈结构适用于不同的信号处理和放大需求。",
+      "difficulty": 4,
+      "keywords": [
+        "电压串联",
+        "电压并联",
+        "电流并联",
+        "电流串联"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器设计",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "负反馈原理",
+        "阻抗分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈结构根据对输出信号的采样方式和对输入信号的修正方式分为四种类型：电压串联、电压并联、电流并联和电流串联。电压串联反馈提高输入阻抗和降低输出阻抗；电流并联反馈降低输入阻抗和提高输出阻抗。不同类型的反馈结构适用于不同的信号处理和放大需求。"
+    },
+    {
+      "id": "ct_7_2_1",
+      "label": "负反馈电路分析",
+      "node_type": "core_technology",
+      "summary": "负反馈电路分析的首要任务是区分信号的前向和反向传输通路。通过忽略反馈网络的正向传输和开环运放的反向传输，可以简化电路分析的复杂度。分析过程中需要计算环路增益T，并评估其对闭环增益、带宽、阻抗等性能的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "信号传输",
+        "环路增益",
+        "简化分析"
+      ],
+      "formulas": [
+        "A_cl = A_ol / (1 + T)"
+      ],
+      "applications": [
+        "反馈系统设计",
+        "性能优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈电路分析的首要任务是区分信号的前向和反向传输通路。通过忽略反馈网络的正向传输和开环运放的反向传输，可以简化电路分析的复杂度。分析过程中需要计算环路增益T，并评估其对闭环增益、带宽、阻抗等性能的影响。"
+    },
+    {
+      "id": "ct_7_2_2",
+      "label": "带宽扩展技术",
+      "node_type": "core_technology",
+      "summary": "负反馈通过降低电路的电压增益来扩展带宽。在单极点近似下，闭环-3dB带宽比开环带宽提高了1+T0倍，其中T0为低频环路增益。带宽扩展是负反馈系统的重要优势之一，尤其适用于需要高速响应的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "带宽扩展",
+        "单极点近似",
+        "环路增益"
+      ],
+      "formulas": [
+        "ω_cl = (1 + T0)*ω_0"
+      ],
+      "applications": [
+        "宽带放大器",
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈通过降低电路的电压增益来扩展带宽。在单极点近似下，闭环-3dB带宽比开环带宽提高了1+T0倍，其中T0为低频环路增益。带宽扩展是负反馈系统的重要优势之一，尤其适用于需要高速响应的应用场景。"
+    },
+    {
+      "id": "ct_7_2_3",
+      "label": "阻抗变换技术",
+      "node_type": "core_technology",
+      "summary": "负反馈可以显著改变电路的输入和输出阻抗。电压串联反馈提高输入阻抗和降低输出阻抗；电流并联反馈降低输入阻抗和提高输出阻抗。阻抗变换技术是实现信号源与负载匹配的关键，能够提高信号传输效率和电路性能。",
+      "difficulty": 4,
+      "keywords": [
+        "输入阻抗",
+        "输出阻抗",
+        "阻抗匹配"
+      ],
+      "formulas": [
+        "R_if = R_i*(1 + T)",
+        "R_of = R_o / (1 + T)"
+      ],
+      "applications": [
+        "阻抗匹配",
+        "信号传输优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈可以显著改变电路的输入和输出阻抗。电压串联反馈提高输入阻抗和降低输出阻抗；电流并联反馈降低输入阻抗和提高输出阻抗。阻抗变换技术是实现信号源与负载匹配的关键，能够提高信号传输效率和电路性能。"
+    },
+    {
+      "id": "ca_7_2_1",
+      "label": "电压串联负反馈放大器",
+      "node_type": "circuit_application",
+      "summary": "电压串联负反馈放大器采用VCVS或VCCS开环增益电路，反馈网络由Rf1和Rf2串联分压电阻构成。其特点是输入阻抗高、输出阻抗低，适合电压信号放大。环路增益T与反馈系数F和开环增益A_ol相关，闭环增益A_cl = 1/F。适用于需要高输入阻抗和低输出阻抗的电压放大场景。",
+      "difficulty": 4,
+      "keywords": [
+        "电压串联",
+        "VCVS",
+        "VCCS",
+        "反馈网络"
+      ],
+      "formulas": [
+        "A_cl = 1/F",
+        "T = A_ol*F"
+      ],
+      "applications": [
+        "运算放大器",
+        "音频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压串联负反馈放大器采用VCVS或VCCS开环增益电路，反馈网络由Rf1和Rf2串联分压电阻构成。其特点是输入阻抗高、输出阻抗低，适合电压信号放大。环路增益T与反馈系数F和开环增益A_ol相关，闭环增益A_cl = 1/F。适用于需要高输入阻抗和低输出阻抗的电压放大场景。"
+    },
+    {
+      "id": "ca_7_2_2",
+      "label": "电流并联负反馈放大器",
+      "node_type": "circuit_application",
+      "summary": "电流并联负反馈放大器采用CCCS或CCVS开环增益电路，反馈网络感应输出电流并通过并联电阻将信号反馈到输入端。其特点是输入阻抗低、输出阻抗高，适合电流信号放大。适用于需要稳定输出电流的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "电流并联",
+        "CCCS",
+        "CCVS",
+        "反馈网络"
+      ],
+      "formulas": [],
+      "applications": [
+        "电流源",
+        "电流放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流并联负反馈放大器采用CCCS或CCVS开环增益电路，反馈网络感应输出电流并通过并联电阻将信号反馈到输入端。其特点是输入阻抗低、输出阻抗高，适合电流信号放大。适用于需要稳定输出电流的应用场景。"
+    },
+    {
+      "id": "ca_7_2_3",
+      "label": "跨阻放大器",
+      "node_type": "circuit_application",
+      "summary": "跨阻放大器采用电压并联负反馈结构，反馈网络感应输出电压并通过反馈电阻Rf将信号转换为电流反馈到输入端。其特点是输入阻抗低、输出阻抗低，适合将电流信号转换为电压信号。适用于光电检测等需要跨阻放大的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "跨阻放大",
+        "电压并联",
+        "反馈电阻"
+      ],
+      "formulas": [
+        "T = 1/(G_S + g_i + 1/Rf)*g_m*R_L*F"
+      ],
+      "applications": [
+        "光电检测",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨阻放大器采用电压并联负反馈结构，反馈网络感应输出电压并通过反馈电阻Rf将信号转换为电流反馈到输入端。其特点是输入阻抗低、输出阻抗低，适合将电流信号转换为电压信号。适用于光电检测等需要跨阻放大的应用场景。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_2_1",
+      "target_id": "ct_7_2_1",
+      "relationship": "enables",
+      "description": "负反馈原理为负反馈电路分析提供了理论基础，使得分析信号传输和环路增益成为可能。",
+      "weight": 0.9,
+      "evidence": "负反馈电路分析的首要问题是首先分清信号传输的前向和反向通路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_2_2",
+      "target_id": "ct_7_2_2",
+      "relationship": "supports",
+      "description": "环路增益的概念是带宽扩展技术的核心，通过提高环路增益可以实现带宽的有效扩展。",
+      "weight": 0.8,
+      "evidence": "闭环-3dB带宽比开环带宽提高了1+T0倍。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_2_3",
+      "target_id": "ct_7_2_3",
+      "relationship": "supports",
+      "description": "四种负反馈结构为阻抗变换技术提供了理论基础，不同类型的反馈结构对应不同的阻抗变化特性。",
+      "weight": 0.8,
+      "evidence": "电压串联反馈提高输入阻抗和降低输出阻抗；电流并联反馈降低输入阻抗和提高输出阻抗。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_2_1",
+      "target_id": "ca_7_2_1",
+      "relationship": "implements",
+      "description": "负反馈电路分析方法在电压串联负反馈放大器的设计中得到具体应用，用于计算环路增益和闭环性能。",
+      "weight": 0.9,
+      "evidence": "电压串联负反馈放大器采用VCVS或VCCS开环增益电路，反馈网络由Rf1和Rf2串联分压电阻构成。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_2_3",
+      "target_id": "ca_7_2_2",
+      "relationship": "implements",
+      "description": "阻抗变换技术在电流并联负反馈放大器中得到应用，通过反馈网络实现输入阻抗的降低和输出阻抗的提高。",
+      "weight": 0.8,
+      "evidence": "电流并联负反馈放大器采用CCCS或CCVS开环增益电路，反馈网络感应输出电流并通过并联电阻将信号反馈到输入端。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_2_1",
+      "target_id": "ca_7_2_3",
+      "relationship": "implements",
+      "description": "负反馈电路分析方法在跨阻放大器的设计中得到应用，用于分析反馈网络的信号传输和环路增益。",
+      "weight": 0.8,
+      "evidence": "跨阻放大器采用电压并联负反馈结构，反馈网络感应输出电压并通过反馈电阻Rf将信号转换为电流反馈到输入端。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_2_1",
+      "target_id": "bc_7_2_2",
+      "relationship": "relates_to",
+      "description": "负反馈原理与环路增益密切相关，环路增益是负反馈系统性能的重要指标。",
+      "weight": 0.7,
+      "evidence": "环路增益T = F*A_ol是反馈系统中反馈系数与开环增益的乘积。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "bc_7_2_3",
+      "target_id": "bc_7_2_1",
+      "relationship": "extends",
+      "description": "四种负反馈结构扩展了负反馈原理的应用范围，提供了不同类型的信号处理和放大方案。",
+      "weight": 0.7,
+      "evidence": "负反馈结构根据对输出信号的采样方式和对输入信号的修正方式分为四种类型。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "7.2",
+  "title": "反馈放大电路",
+  "extraction_timestamp": "2025-07-08T16:41:53.496326"
+}

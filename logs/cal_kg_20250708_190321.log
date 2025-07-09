@@ -1,0 +1,4 @@
+2025-07-08 19:03:26,094 - CAL_KG - INFO - 可视化器初始化完成
+2025-07-08 19:03:26,095 - CAL_KG - INFO - CAL-KG系统初始化完成 (并发数: 8)
+2025-07-08 19:04:39,205 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 19:04:39,213 - CAL_KG - INFO - 步骤 main_logic 成功完成

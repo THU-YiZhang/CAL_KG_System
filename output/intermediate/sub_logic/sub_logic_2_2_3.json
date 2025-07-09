@@ -1,0 +1,208 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_2_3_1",
+      "label": "电压跟随器",
+      "node_type": "basic_concept",
+      "summary": "电压跟随器是一种增益为1的同相放大器电路，其主要功能是提供高输入阻抗和低输出阻抗，用于隔离前后级电路，防止负载效应。",
+      "difficulty": 2,
+      "keywords": [
+        "电压跟随器",
+        "同相放大器",
+        "增益"
+      ],
+      "formulas": [
+        "增益 = 1"
+      ],
+      "applications": [
+        "信号隔离",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压跟随器是一种增益为1的同相放大器电路，其主要功能是提供高输入阻抗和低输出阻抗，用于隔离前后级电路，防止负载效应。"
+    },
+    {
+      "id": "bc_2_2_3_2",
+      "label": "输入阻抗",
+      "node_type": "basic_concept",
+      "summary": "输入阻抗是指电路输入端对信号源呈现的阻抗，高输入阻抗可以减少对信号源的负载效应，提高信号传输效率。",
+      "difficulty": 2,
+      "keywords": [
+        "输入阻抗",
+        "高阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号传输"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入阻抗是指电路输入端对信号源呈现的阻抗，高输入阻抗可以减少对信号源的负载效应，提高信号传输效率。"
+    },
+    {
+      "id": "bc_2_2_3_3",
+      "label": "输出阻抗",
+      "node_type": "basic_concept",
+      "summary": "输出阻抗是指电路输出端对负载呈现的阻抗，低输出阻抗可以提高驱动能力，减少信号衰减。",
+      "difficulty": 2,
+      "keywords": [
+        "输出阻抗",
+        "低阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出阻抗是指电路输出端对负载呈现的阻抗，低输出阻抗可以提高驱动能力，减少信号衰减。"
+    },
+    {
+      "id": "ct_2_2_3_1",
+      "label": "同相放大器设计",
+      "node_type": "core_technology",
+      "summary": "同相放大器是一种放大器电路，其输出信号与输入信号同相，通过调整反馈电阻可以实现不同的增益。电压跟随器是增益为1的同相放大器。",
+      "difficulty": 3,
+      "keywords": [
+        "同相放大器",
+        "反馈电阻",
+        "增益调整"
+      ],
+      "formulas": [
+        "增益 = 1 + (Rf/R1)"
+      ],
+      "applications": [
+        "信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器是一种放大器电路，其输出信号与输入信号同相，通过调整反馈电阻可以实现不同的增益。电压跟随器是增益为1的同相放大器。"
+    },
+    {
+      "id": "ct_2_2_3_2",
+      "label": "阻抗匹配技术",
+      "node_type": "core_technology",
+      "summary": "阻抗匹配技术用于优化信号传输，通过调整电路的输入输出阻抗，减少信号反射和衰减，提高信号完整性。",
+      "difficulty": 3,
+      "keywords": [
+        "阻抗匹配",
+        "信号完整性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阻抗匹配技术用于优化信号传输，通过调整电路的输入输出阻抗，减少信号反射和衰减，提高信号完整性。"
+    },
+    {
+      "id": "ca_2_2_3_1",
+      "label": "信号缓冲器",
+      "node_type": "circuit_application",
+      "summary": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性，隔离前后级电路，防止负载效应，确保信号稳定传输。",
+      "difficulty": 4,
+      "keywords": [
+        "信号缓冲器",
+        "隔离"
+      ],
+      "formulas": [],
+      "applications": [
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性，隔离前后级电路，防止负载效应，确保信号稳定传输。"
+    },
+    {
+      "id": "ca_2_2_3_2",
+      "label": "阻抗变换器",
+      "node_type": "circuit_application",
+      "summary": "阻抗变换器利用电压跟随器实现阻抗转换，将高阻抗信号源转换为低阻抗输出，提高驱动能力。",
+      "difficulty": 4,
+      "keywords": [
+        "阻抗变换器",
+        "驱动能力"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阻抗变换器利用电压跟随器实现阻抗转换，将高阻抗信号源转换为低阻抗输出，提高驱动能力。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_2_3_1",
+      "target_id": "ct_2_2_3_1",
+      "relationship": "enables",
+      "description": "电压跟随器的定义和特性使能了同相放大器的设计",
+      "weight": 0.9,
+      "evidence": "电压跟随器是增益为1的同相放大器",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_3_2",
+      "target_id": "ct_2_2_3_2",
+      "relationship": "supports",
+      "description": "高输入阻抗的特性支撑了阻抗匹配技术的实现",
+      "weight": 0.8,
+      "evidence": "高输入阻抗可以减少对信号源的负载效应",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_3_3",
+      "target_id": "ct_2_2_3_2",
+      "relationship": "supports",
+      "description": "低输出阻抗的特性支撑了阻抗匹配技术的实现",
+      "weight": 0.8,
+      "evidence": "低输出阻抗可以提高驱动能力",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_3_1",
+      "target_id": "ca_2_2_3_1",
+      "relationship": "implements",
+      "description": "同相放大器设计实现了信号缓冲器的电路应用",
+      "weight": 0.9,
+      "evidence": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_3_2",
+      "target_id": "ca_2_2_3_2",
+      "relationship": "applies_to",
+      "description": "阻抗匹配技术应用于阻抗变换器的电路设计",
+      "weight": 0.8,
+      "evidence": "阻抗变换器利用电压跟随器实现阻抗转换",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.2.3",
+  "title": "电压跟随器",
+  "extraction_timestamp": "2025-07-08T15:30:32.345379",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

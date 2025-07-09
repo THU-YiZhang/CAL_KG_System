@@ -1,0 +1,238 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_2_1",
+      "label": "最小工作电压",
+      "node_type": "basic_concept",
+      "summary": "最小工作电压是指电路支路可正常工作但输入或输出动态范围为零时所对应的电压。对于低压电子系统，最小工作电压是设计的关键参数之一。",
+      "difficulty": 3,
+      "keywords": [
+        "最小工作电压",
+        "动态范围",
+        "电源电压"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "最小工作电压是指电路支路可正常工作但输入或输出动态范围为零时所对应的电压。对于低压电子系统，最小工作电压是设计的关键参数之一。"
+    },
+    {
+      "id": "bc_12_2_2",
+      "label": "阈值电压",
+      "node_type": "basic_concept",
+      "summary": "阈值电压（V_TH）是MOS管开始导通的栅源电压。在低压电路中，阈值电压直接影响电路的最小工作电压和动态范围。",
+      "difficulty": 3,
+      "keywords": [
+        "阈值电压",
+        "MOS管",
+        "低压电路"
+      ],
+      "formulas": [
+        "V_TH = V_TH0 + γ(√(2φ_F - V_BS) - √(2φ_F))"
+      ],
+      "applications": [
+        "低压电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阈值电压（V_TH）是MOS管开始导通的栅源电压。在低压电路中，阈值电压直接影响电路的最小工作电压和动态范围。"
+    },
+    {
+      "id": "bc_12_2_3",
+      "label": "亚阈值区导电",
+      "node_type": "basic_concept",
+      "summary": "当V_GS略小于V_TH时，MOS管中仍有导通电流，这种状态称为亚阈值区导电。亚阈值区导电的特点是电流受弱反型沟道区中载流子扩散机制的控制。",
+      "difficulty": 4,
+      "keywords": [
+        "亚阈值区",
+        "弱反型",
+        "扩散机制"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "当V_GS略小于V_TH时，MOS管中仍有导通电流，这种状态称为亚阈值区导电。亚阈值区导电的特点是电流受弱反型沟道区中载流子扩散机制的控制。"
+    },
+    {
+      "id": "ct_12_2_1",
+      "label": "亚阈偏置技术",
+      "node_type": "core_technology",
+      "summary": "将模拟电路中的MOS管偏置于亚阈工作区，可以降低电源电压。亚阈偏置技术的优点是低压、低功耗，但缺点是跨导绝对值低，电流驱动能力弱。",
+      "difficulty": 4,
+      "keywords": [
+        "亚阈偏置",
+        "低压",
+        "低功耗"
+      ],
+      "formulas": [],
+      "applications": [
+        "内置心脏起搏器",
+        "BGR设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将模拟电路中的MOS管偏置于亚阈工作区，可以降低电源电压。亚阈偏置技术的优点是低压、低功耗，但缺点是跨导绝对值低，电流驱动能力弱。"
+    },
+    {
+      "id": "ct_12_2_2",
+      "label": "衬底偏置技术",
+      "node_type": "core_technology",
+      "summary": "通过衬底偏置电压的极性和大小控制MOS管有效开启电压的技术。衬底正偏可以降低V_TH，但会受到衬底泄漏电流的限制。",
+      "difficulty": 4,
+      "keywords": [
+        "衬底偏置",
+        "VDB",
+        "CDB"
+      ],
+      "formulas": [
+        "V_TH = V_TH0 + γ(√(2φ_F - V_BS) - √(2φ_F))"
+      ],
+      "applications": [
+        "低压Cascode结构"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过衬底偏置电压的极性和大小控制MOS管有效开启电压的技术。衬底正偏可以降低V_TH，但会受到衬底泄漏电流的限制。"
+    },
+    {
+      "id": "ct_12_2_3",
+      "label": "浮栅控制技术",
+      "node_type": "core_technology",
+      "summary": "通过浮栅技术调整MOS管的等效阈值电压，实现低压工作。浮栅技术需要特殊工艺支持，且单位面积有效跨导减小。",
+      "difficulty": 5,
+      "keywords": [
+        "浮栅技术",
+        "等效阈值电压",
+        "低压"
+      ],
+      "formulas": [
+        "V_THequ = (C_T/C_in)V_TH - (C_b/C_in)V_b"
+      ],
+      "applications": [
+        "存储器",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过浮栅技术调整MOS管的等效阈值电压，实现低压工作。浮栅技术需要特殊工艺支持，且单位面积有效跨导减小。"
+    },
+    {
+      "id": "ca_12_2_1",
+      "label": "低压宽摆幅电流镜",
+      "node_type": "circuit_application",
+      "summary": "自偏置Cascode和电平移位结构可以在低压下实现高阻电流镜，提高增益。自偏置Cascode结构通过删除一个MOS管，减少阈值电压的消耗。",
+      "difficulty": 4,
+      "keywords": [
+        "自偏置Cascode",
+        "电平移位",
+        "高阻电流镜"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压电流镜设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "自偏置Cascode和电平移位结构可以在低压下实现高阻电流镜，提高增益。自偏置Cascode结构通过删除一个MOS管，减少阈值电压的消耗。"
+    },
+    {
+      "id": "ca_12_2_2",
+      "label": "衬底驱动低压运放",
+      "node_type": "circuit_application",
+      "summary": "通过衬底驱动技术扩展输入共模电压范围（ICMR），使低压运放能够在更宽的输入范围内工作。衬底驱动技术的缺点是噪声较大，频率特性受影响。",
+      "difficulty": 5,
+      "keywords": [
+        "衬底驱动",
+        "ICMR",
+        "低压运放"
+      ],
+      "formulas": [
+        "g_mbs = (γg_m)/(2√(2|φ_F| - V_BS))"
+      ],
+      "applications": [
+        "低压运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过衬底驱动技术扩展输入共模电压范围（ICMR），使低压运放能够在更宽的输入范围内工作。衬底驱动技术的缺点是噪声较大，频率特性受影响。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_2_1",
+      "target_id": "ct_12_2_1",
+      "relationship": "enables",
+      "description": "最小工作电压的概念使能了亚阈偏置技术的应用，通过降低工作电压实现低压电路设计。",
+      "weight": 0.8,
+      "evidence": "亚阈偏置技术有利于电源电压的适当降低。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_2_2",
+      "target_id": "ct_12_2_2",
+      "relationship": "supports",
+      "description": "阈值电压的定义和原理支撑了衬底偏置技术的实现，通过调整衬底偏置电压来调制阈值电压。",
+      "weight": 0.9,
+      "evidence": "衬底偏置技术通过衬底偏置电压的极性和大小控制MOS管有效开启电压。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_2_1",
+      "target_id": "ca_12_2_1",
+      "relationship": "applies_to",
+      "description": "亚阈偏置技术应用于低压宽摆幅电流镜的设计，通过亚阈偏置降低工作电压。",
+      "weight": 0.7,
+      "evidence": "亚阈偏置技术在某些特殊领域如内置心脏起搏器、BGR设计中得到广泛应用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_2_2",
+      "target_id": "ca_12_2_2",
+      "relationship": "implements",
+      "description": "衬底偏置技术实现了衬底驱动低压运放的设计，通过衬底驱动扩展输入共模电压范围。",
+      "weight": 0.8,
+      "evidence": "衬底驱动技术对改善电路的ICMR性能非常有效。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_2_3",
+      "target_id": "ct_12_2_1",
+      "relationship": "supports",
+      "description": "亚阈值区导电的原理支撑了亚阈偏置技术的实现，通过弱反型沟道区中载流子扩散机制控制电流。",
+      "weight": 0.8,
+      "evidence": "亚阈值区导电的特点是电流受弱反型沟道区中载流子扩散机制的控制。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "12.2",
+  "title": "低压单元电路",
+  "extraction_timestamp": "2025-07-08T16:47:34.961538"
+}

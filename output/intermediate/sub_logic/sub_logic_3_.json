@@ -1,0 +1,175 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_1",
+      "label": "偏置电路",
+      "node_type": "basic_concept",
+      "summary": "偏置电路是为有源器件（如MOS二极管、BJT、CMOS等）提供开启电压或电流的电路。狭义上，它提供开启电压或电流；广义上，它为模拟集成电路提供电流、电压偏置的静态工作点。偏置电路的影响是全局性的，是构建电路系统的骨架。",
+      "difficulty": 2,
+      "keywords": [
+        "偏置电路",
+        "开启电压",
+        "静态工作点"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "有源器件"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "偏置电路是为有源器件（如MOS二极管、BJT、CMOS等）提供开启电压或电流的电路。狭义上，它提供开启电压或电流；广义上，它为模拟集成电路提供电流、电压偏置的静态工作点。偏置电路的影响是全局性的，是构建电路系统的骨架。"
+    },
+    {
+      "id": "bc_3_2",
+      "label": "电阻分压偏置",
+      "node_type": "basic_concept",
+      "summary": "电阻分压偏置是最基本的偏置电路结构，依据串联电阻分压原理构建。其特点是支路均为低阻通路，电路启动不存在问题。但其偏置电压与电源电压高度相关，导致静态特性上电流功耗随电源电压增加而单调增加，动态特性上电源抑制比较低，电源噪声影响大。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻分压",
+        "低阻通路",
+        "电源抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "分立电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "串联电阻"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻分压偏置是最基本的偏置电路结构，依据串联电阻分压原理构建。其特点是支路均为低阻通路，电路启动不存在问题。但其偏置电压与电源电压高度相关，导致静态特性上电流功耗随电源电压增加而单调增加，动态特性上电源抑制比较低，电源噪声影响大。"
+    },
+    {
+      "id": "ct_3_1",
+      "label": "自偏置技术",
+      "node_type": "core_technology",
+      "summary": "自偏置技术是一种通过电路内部反馈机制实现偏置电压或电流稳定的技术。它克服了电阻分压偏置对电源电压的依赖性，提高了电源抑制比和噪声抑制能力。",
+      "difficulty": 3,
+      "keywords": [
+        "自偏置",
+        "反馈机制",
+        "电源抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "自偏置技术是一种通过电路内部反馈机制实现偏置电压或电流稳定的技术。它克服了电阻分压偏置对电源电压的依赖性，提高了电源抑制比和噪声抑制能力。"
+    },
+    {
+      "id": "ct_3_2",
+      "label": "高性能电流源设计",
+      "node_type": "core_technology",
+      "summary": "高性能电流源设计是基于自偏置技术的进一步发展，通过优化电路结构和参数，实现更稳定的电流输出和更低的电源依赖性。",
+      "difficulty": 3,
+      "keywords": [
+        "高性能电流源",
+        "稳定性",
+        "电源依赖性"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高性能电流源设计是基于自偏置技术的进一步发展，通过优化电路结构和参数，实现更稳定的电流输出和更低的电源依赖性。"
+    },
+    {
+      "id": "ca_3_1",
+      "label": "电阻分压偏置电路",
+      "node_type": "circuit_application",
+      "summary": "电阻分压偏置电路是一种基于串联电阻分压原理的简单偏置电路。其结构简单，启动容易，但偏置电压与电源电压高度相关，导致功耗和噪声问题。在VLSI模拟集成电路中已很少采用。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻分压",
+        "低阻通路",
+        "电源噪声"
+      ],
+      "formulas": [],
+      "applications": [
+        "分立电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻分压偏置电路是一种基于串联电阻分压原理的简单偏置电路。其结构简单，启动容易，但偏置电压与电源电压高度相关，导致功耗和噪声问题。在VLSI模拟集成电路中已很少采用。"
+    },
+    {
+      "id": "ca_3_2",
+      "label": "高性能自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "高性能自偏置电路通过内部反馈机制实现稳定的偏置电压或电流，克服了电阻分压偏置的缺点。具有高电源抑制比和低噪声特性，广泛应用于模拟集成电路中。",
+      "difficulty": 4,
+      "keywords": [
+        "自偏置",
+        "反馈机制",
+        "高电源抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高性能自偏置电路通过内部反馈机制实现稳定的偏置电压或电流，克服了电阻分压偏置的缺点。具有高电源抑制比和低噪声特性，广泛应用于模拟集成电路中。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_1",
+      "target_id": "ct_3_1",
+      "relationship": "enables",
+      "description": "偏置电路的基本概念为自偏置技术提供了理论基础，使其能够通过反馈机制实现稳定的偏置电压或电流。",
+      "weight": 0.8,
+      "evidence": "偏置电路的影响是全局性的，是构建电路系统的骨架。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2",
+      "target_id": "ct_3_1",
+      "relationship": "supports",
+      "description": "电阻分压偏置的缺点（如电源电压依赖性）促使了自偏置技术的发展，以克服这些缺点。",
+      "weight": 0.7,
+      "evidence": "电阻分压结构在集成电路中已很少应用，但其核心思想仍然成为分析各类高性能电流或电压偏置电路的基本出发点。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_1",
+      "target_id": "ca_3_2",
+      "relationship": "implements",
+      "description": "自偏置技术通过内部反馈机制实现了高性能自偏置电路的设计。",
+      "weight": 0.9,
+      "evidence": "本章分析的基本思路为简单偏置 → 自(互)偏置 → 高性能电流源 → 高性能自偏置。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_2",
+      "target_id": "ca_3_2",
+      "relationship": "applies_to",
+      "description": "高性能电流源设计技术直接应用于高性能自偏置电路中，实现更稳定的电流输出。",
+      "weight": 0.8,
+      "evidence": "本章分析的基本思路为简单偏置 → 自(互)偏置 → 高性能电流源 → 高性能自偏置。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.",
+  "title": "1 概述",
+  "extraction_timestamp": "2025-07-08T16:33:31.495493"
+}

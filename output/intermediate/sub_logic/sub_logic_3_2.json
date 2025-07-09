@@ -1,0 +1,274 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_2_1",
+      "label": "理想恒流源",
+      "node_type": "basic_concept",
+      "summary": "理想恒流源是一种能够提供恒定输出电流的电路元件，其输出阻抗为无穷大，导纳为零。在CMOS电路中，理想恒流源的关键特性是工作范围宽、精度高且稳定，不受工艺、电源电压和温度（PVT）的影响。",
+      "difficulty": 2,
+      "keywords": [
+        "恒流源",
+        "输出阻抗",
+        "PVT无关性"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "理想恒流源是一种能够提供恒定输出电流的电路元件，其输出阻抗为无穷大，导纳为零。在CMOS电路中，理想恒流源的关键特性是工作范围宽、精度高且稳定，不受工艺、电源电压和温度（PVT）的影响。"
+    },
+    {
+      "id": "bc_3_2_2",
+      "label": "理想恒压源",
+      "node_type": "basic_concept",
+      "summary": "理想恒压源是一种能够提供恒定输出电压的电路元件，其输出阻抗为零，导纳无穷大。在CMOS电路中，理想恒压源的关键特性是提供稳定的栅电压，且不受工艺、电源电压和温度（PVT）的影响。",
+      "difficulty": 2,
+      "keywords": [
+        "恒压源",
+        "输出阻抗",
+        "PVT无关性"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "理想恒压源是一种能够提供恒定输出电压的电路元件，其输出阻抗为零，导纳无穷大。在CMOS电路中，理想恒压源的关键特性是提供稳定的栅电压，且不受工艺、电源电压和温度（PVT）的影响。"
+    },
+    {
+      "id": "bc_3_2_3",
+      "label": "PVT无关性",
+      "node_type": "basic_concept",
+      "summary": "PVT无关性是指电路特性不受工艺（Process）、电源电压（Voltage）和温度（Temperature）变化的影响。这是模拟电路设计的最高境界，尤其是在偏置电路设计中，PVT无关性是实现稳定偏置的关键要求。",
+      "difficulty": 2,
+      "keywords": [
+        "工艺",
+        "电源电压",
+        "温度"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PVT无关性是指电路特性不受工艺（Process）、电源电压（Voltage）和温度（Temperature）变化的影响。这是模拟电路设计的最高境界，尤其是在偏置电路设计中，PVT无关性是实现稳定偏置的关键要求。"
+    },
+    {
+      "id": "bc_3_2_4",
+      "label": "MOS管串并联等效原理",
+      "node_type": "basic_concept",
+      "summary": "MOS管的串并联等效原理描述了多个MOS管串联或并联时的等效宽长比（W/L）计算方法。并联等效MOS管的W/L为各管W/L的线性叠加，而串联等效MOS管的L/W为各管L/W的线性叠加。这一原理是分析复杂MOS电路的基础。",
+      "difficulty": 3,
+      "keywords": [
+        "串并联",
+        "宽长比",
+        "等效"
+      ],
+      "formulas": [
+        "并联等效：W/L = Σ(W/L)_i",
+        "串联等效：L/W = Σ(L/W)_i"
+      ],
+      "applications": [
+        "MOS电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管的串并联等效原理描述了多个MOS管串联或并联时的等效宽长比（W/L）计算方法。并联等效MOS管的W/L为各管W/L的线性叠加，而串联等效MOS管的L/W为各管L/W的线性叠加。这一原理是分析复杂MOS电路的基础。"
+    },
+    {
+      "id": "ct_3_2_1",
+      "label": "偏置电路设计",
+      "node_type": "core_technology",
+      "summary": "偏置电路设计的核心目标是提供稳定的电流或电压偏置，减小对工艺和温度的敏感性，降低功耗和成本。设计中的三个核心问题是静态工作点的确定、支路电流的电源抑制比特性以及各支路电流的线性匹配精度控制。",
+      "difficulty": 3,
+      "keywords": [
+        "静态工作点",
+        "电源抑制比",
+        "电流镜"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "偏置电路设计的核心目标是提供稳定的电流或电压偏置，减小对工艺和温度的敏感性，降低功耗和成本。设计中的三个核心问题是静态工作点的确定、支路电流的电源抑制比特性以及各支路电流的线性匹配精度控制。"
+    },
+    {
+      "id": "ct_3_2_2",
+      "label": "等效电路法",
+      "node_type": "core_technology",
+      "summary": "等效电路法是一种电路分析方法，通过将电路元件用其交直流等效模型代替，并通过电路方程求解相应的信号变量输出。这种方法适合单元结构及小规模模拟电路的设计，结果精确但不直观。",
+      "difficulty": 3,
+      "keywords": [
+        "等效模型",
+        "电路方程",
+        "精确分析"
+      ],
+      "formulas": [],
+      "applications": [
+        "小规模电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "等效电路法是一种电路分析方法，通过将电路元件用其交直流等效模型代替，并通过电路方程求解相应的信号变量输出。这种方法适合单元结构及小规模模拟电路的设计，结果精确但不直观。"
+    },
+    {
+      "id": "ct_3_2_3",
+      "label": "物理近似法",
+      "node_type": "core_technology",
+      "summary": "物理近似法是一种直观但精度欠佳的电路分析方法，通过抓住电路最核心和本质的物理机制及相关制约条件，忽略次要因素，快速得到具有特定物理意义的描述。这种方法适合复杂电路的简化分析。",
+      "difficulty": 3,
+      "keywords": [
+        "物理机制",
+        "简化分析",
+        "直观"
+      ],
+      "formulas": [],
+      "applications": [
+        "复杂电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "物理近似法是一种直观但精度欠佳的电路分析方法，通过抓住电路最核心和本质的物理机制及相关制约条件，忽略次要因素，快速得到具有特定物理意义的描述。这种方法适合复杂电路的简化分析。"
+    },
+    {
+      "id": "ca_3_2_1",
+      "label": "MOS分裂二极管电路",
+      "node_type": "circuit_application",
+      "summary": "MOS分裂二极管电路是一种由两个MOS管串联组成的电路，其中上方的MOS管（M1）处于饱和恒流区，下方的MOS管（M2）处于线性电阻区。这种电路结构通过反馈控制实现稳定的偏置输出，适用于高精度电流镜设计。",
+      "difficulty": 4,
+      "keywords": [
+        "分裂二极管",
+        "饱和区",
+        "线性区"
+      ],
+      "formulas": [
+        "Δ2 - V_DS2 = V_TH1 + Δ1 - V_TH2"
+      ],
+      "applications": [
+        "电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS分裂二极管电路是一种由两个MOS管串联组成的电路，其中上方的MOS管（M1）处于饱和恒流区，下方的MOS管（M2）处于线性电阻区。这种电路结构通过反馈控制实现稳定的偏置输出，适用于高精度电流镜设计。"
+    },
+    {
+      "id": "ca_3_2_2",
+      "label": "带分流MOS的偏置电路",
+      "node_type": "circuit_application",
+      "summary": "带分流MOS的偏置电路在MOS分裂二极管电路的基础上增加了一个并联的MOS管（M3），通过分流作用进一步稳定偏置电流。M3管通常工作在饱和区，M2管仍保留线性电阻的工作状态，通过负反馈控制实现稳定的工作点。",
+      "difficulty": 4,
+      "keywords": [
+        "分流",
+        "负反馈",
+        "工作点稳定"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带分流MOS的偏置电路在MOS分裂二极管电路的基础上增加了一个并联的MOS管（M3），通过分流作用进一步稳定偏置电流。M3管通常工作在饱和区，M2管仍保留线性电阻的工作状态，通过负反馈控制实现稳定的工作点。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_2_1",
+      "target_id": "ct_3_2_1",
+      "relationship": "enables",
+      "description": "理想恒流源的概念使能了偏置电路设计中对稳定电流源的需求。",
+      "weight": 0.8,
+      "evidence": "偏置电路的关键和基础地位对模拟集成偏置提出了更高的要求，即稳定性与适用性，偏置的目的是提供电路理想的恒流源或理想的恒压源。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2_2",
+      "target_id": "ct_3_2_1",
+      "relationship": "enables",
+      "description": "理想恒压源的概念使能了偏置电路设计中对稳定电压源的需求。",
+      "weight": 0.8,
+      "evidence": "CMOS电路系统中电压偏置的基本要求是提供电路（主要是MOS管）稳定的栅电压。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2_3",
+      "target_id": "ct_3_2_1",
+      "relationship": "supports",
+      "description": "PVT无关性的原理支撑了偏置电路设计中实现稳定偏置的目标。",
+      "weight": 0.9,
+      "evidence": "提供的偏置应尽量减小对工艺和温度的敏感性，降低功耗和成本。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2_4",
+      "target_id": "ca_3_2_1",
+      "relationship": "applies_to",
+      "description": "MOS管串并联等效原理应用于MOS分裂二极管电路的分析与设计。",
+      "weight": 0.7,
+      "evidence": "利用MOS串并联引起的W/L变化及其在电路内的连接关系，可以清晰地判断各MOS管的工作状态。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_2_1",
+      "target_id": "ca_3_2_1",
+      "relationship": "implements",
+      "description": "偏置电路设计技术实现了MOS分裂二极管电路的具体应用。",
+      "weight": 0.8,
+      "evidence": "在CMOS偏置电路设计中，就是寻找电流和电压相互之间的依存或因果关系，通过合理的反馈控制，获得稳定的电流、电压状态。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_2_2",
+      "target_id": "ct_3_2_3",
+      "relationship": "complements",
+      "description": "等效电路法与物理近似法在电路分析中互为补充，前者精确但不直观，后者直观但精度欠佳。",
+      "weight": 0.7,
+      "evidence": "在实际的电路分析中，通常需要将以上两种方法有机结合。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_3_2_1",
+      "target_id": "ca_3_2_2",
+      "relationship": "extends",
+      "description": "带分流MOS的偏置电路在MOS分裂二极管电路的基础上扩展了分流功能，进一步提高了稳定性。",
+      "weight": 0.6,
+      "evidence": "图3-2(b)中因M3的分流作用，虽然M2的电流减小，但M2管仍保留线性电阻的工作状态。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.2",
+  "title": "基本要求与方法",
+  "extraction_timestamp": "2025-07-08T16:34:10.157794"
+}

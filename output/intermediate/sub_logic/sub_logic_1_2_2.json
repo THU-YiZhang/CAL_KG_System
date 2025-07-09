@@ -1,0 +1,145 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_2_2_1",
+      "label": "基尔霍夫电压定律",
+      "node_type": "basic_concept",
+      "summary": "基尔霍夫电压定律(Kirchhoff's Voltage Law, KVL)是电路分析的基本定律之一，指出在任何闭合回路中，所有电压降的代数和等于所有电压升的代数和。数学表达式为∑V_drop = ∑V_rise。该定律基于能量守恒原理，适用于任何集总参数电路。",
+      "difficulty": 2,
+      "keywords": [
+        "KVL",
+        "电压守恒",
+        "闭合回路"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "电路分析",
+        "网络定理推导"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "电压概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基尔霍夫电压定律(Kirchhoff's Voltage Law, KVL)是电路分析的基本定律之一，指出在任何闭合回路中，所有电压降的代数和等于所有电压升的代数和。数学表达式为∑V_drop = ∑V_rise。该定律基于能量守恒原理，适用于任何集总参数电路。"
+    },
+    {
+      "id": "bc_1_2_2_2",
+      "label": "闭合回路",
+      "node_type": "basic_concept",
+      "summary": "闭合回路是指电路中从某一点出发，经过若干元件后回到起点的路径。在KVL分析中，闭合回路是应用电压定律的基本单元，回路中的电压源和元件电压降必须满足KVL关系。",
+      "difficulty": 1,
+      "keywords": [
+        "回路",
+        "闭合路径",
+        "电路拓扑"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路分析",
+        "网络定理应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基本概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭合回路是指电路中从某一点出发，经过若干元件后回到起点的路径。在KVL分析中，闭合回路是应用电压定律的基本单元，回路中的电压源和元件电压降必须满足KVL关系。"
+    },
+    {
+      "id": "ct_1_2_2_1",
+      "label": "KVL回路分析法",
+      "node_type": "core_technology",
+      "summary": "使用基尔霍夫电压定律进行电路分析的标准方法。步骤包括：1) 识别电路中的所有独立闭合回路；2) 为每个回路指定参考方向；3) 沿回路方向列出电压方程；4) 解方程组求未知量。该方法特别适用于多网孔电路分析。",
+      "difficulty": 3,
+      "keywords": [
+        "回路分析",
+        "电压方程",
+        "电路求解"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "直流电路分析",
+        "交流电路稳态分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用基尔霍夫电压定律进行电路分析的标准方法。步骤包括：1) 识别电路中的所有独立闭合回路；2) 为每个回路指定参考方向；3) 沿回路方向列出电压方程；4) 解方程组求未知量。该方法特别适用于多网孔电路分析。"
+    },
+    {
+      "id": "ca_1_2_2_1",
+      "label": "多网孔电路分析",
+      "node_type": "circuit_application",
+      "summary": "应用KVL分析具有多个独立回路的复杂电路。典型电路结构包含多个电压源、电阻和其他元件形成的交叉网孔。通过为每个网孔建立KVL方程，可以求解各支路电流和电压。这是电路设计中最常见的KVL应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "网孔分析",
+        "复杂电路",
+        "多回路"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "电源设计",
+        "滤波器分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "应用KVL分析具有多个独立回路的复杂电路。典型电路结构包含多个电压源、电阻和其他元件形成的交叉网孔。通过为每个网孔建立KVL方程，可以求解各支路电流和电压。这是电路设计中最常见的KVL应用场景。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_2_2_1",
+      "target_id": "ct_1_2_2_1",
+      "relationship": "enables",
+      "description": "基尔霍夫电压定律为回路分析法提供了理论基础和数学依据",
+      "weight": 0.9,
+      "evidence": "KVL回路分析法直接基于基尔霍夫电压定律的数学表达式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_2_2_2",
+      "target_id": "ct_1_2_2_1",
+      "relationship": "supports",
+      "description": "闭合回路概念是应用KVL分析法的前提条件",
+      "weight": 0.8,
+      "evidence": "KVL回路分析法必须首先识别电路中的闭合回路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_2_2_1",
+      "target_id": "ca_1_2_2_1",
+      "relationship": "implements",
+      "description": "KVL回路分析法是实现多网孔电路分析的具体方法",
+      "weight": 0.85,
+      "evidence": "多网孔电路分析需要应用KVL回路分析法的步骤和技巧",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_2_2_1",
+      "target_id": "ca_1_2_2_1",
+      "relationship": "applies_to",
+      "description": "基尔霍夫电压定律直接应用于多网孔电路分析场景",
+      "weight": 0.8,
+      "evidence": "多网孔电路分析中每个网孔都必须满足KVL",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "1.2.2",
+  "title": "基尔霍夫电压定律(KVL)",
+  "extraction_timestamp": "2025-07-08T15:29:27.887272",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

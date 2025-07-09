@@ -1,0 +1,339 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_3_1",
+      "label": "带隙基准电压",
+      "node_type": "basic_concept",
+      "summary": "带隙基准电压是一种温度稳定的参考电压，通常由正温度系数电压和负温度系数电压加权求和得到。在电压模式BGR中，基准电压约为1.2V。",
+      "difficulty": 2,
+      "keywords": [
+        "基准电压",
+        "温度稳定性",
+        "1.2V"
+      ],
+      "formulas": [],
+      "applications": [
+        "电压参考源"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带隙基准电压是一种温度稳定的参考电压，通常由正温度系数电压和负温度系数电压加权求和得到。在电压模式BGR中，基准电压约为1.2V。"
+    },
+    {
+      "id": "bc_4_3_2",
+      "label": "PTAT电流",
+      "node_type": "basic_concept",
+      "summary": "PTAT（Proportional To Absolute Temperature）电流是与绝对温度成正比的电流，常用于带隙基准电路中提供正温度系数补偿。",
+      "difficulty": 2,
+      "keywords": [
+        "温度补偿",
+        "正温度系数"
+      ],
+      "formulas": [],
+      "applications": [
+        "温度补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PTAT（Proportional To Absolute Temperature）电流是与绝对温度成正比的电流，常用于带隙基准电路中提供正温度系数补偿。"
+    },
+    {
+      "id": "bc_4_3_3",
+      "label": "VBE电压",
+      "node_type": "basic_concept",
+      "summary": "VBE是双极型晶体管基极-发射极电压，具有负温度系数特性，是带隙基准电路中负温度系数补偿的来源。",
+      "difficulty": 2,
+      "keywords": [
+        "负温度系数",
+        "双极晶体管"
+      ],
+      "formulas": [],
+      "applications": [
+        "温度补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "VBE是双极型晶体管基极-发射极电压，具有负温度系数特性，是带隙基准电路中负温度系数补偿的来源。"
+    },
+    {
+      "id": "ct_4_3_1",
+      "label": "电流求和模式",
+      "node_type": "core_technology",
+      "summary": "电流求和模式通过在输出电阻上线性叠加不同温度特性的电流来产生基准电压，相比电压求和模式更适合低电压应用。",
+      "difficulty": 3,
+      "keywords": [
+        "电流叠加",
+        "线性叠加",
+        "低电压"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流求和模式通过在输出电阻上线性叠加不同温度特性的电流来产生基准电压，相比电压求和模式更适合低电压应用。"
+    },
+    {
+      "id": "ct_4_3_2",
+      "label": "合并式电流求和",
+      "node_type": "core_technology",
+      "summary": "改进的电流求和方式，通过共享运放和电阻网络减少电路规模，降低功耗和复杂度。运放强制Va=Vb，实现电流的无失真传输。",
+      "difficulty": 3,
+      "keywords": [
+        "共享运放",
+        "电流镜",
+        "简化电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "改进的电流求和方式，通过共享运放和电阻网络减少电路规模，降低功耗和复杂度。运放强制Va=Vb，实现电流的无失真传输。"
+    },
+    {
+      "id": "ct_4_3_3",
+      "label": "高阶曲率补偿",
+      "node_type": "core_technology",
+      "summary": "通过增加独立支路产生非线性补偿电流，与PTAT电流和VBE电流叠加，实现更高精度的温度补偿。",
+      "difficulty": 3,
+      "keywords": [
+        "非线性补偿",
+        "高阶补偿",
+        "温度稳定性"
+      ],
+      "formulas": [
+        "公式4-32",
+        "公式4-33"
+      ],
+      "applications": [
+        "高精度基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过增加独立支路产生非线性补偿电流，与PTAT电流和VBE电流叠加，实现更高精度的温度补偿。"
+    },
+    {
+      "id": "ct_4_3_4",
+      "label": "低共模电压设计",
+      "node_type": "core_technology",
+      "summary": "通过电阻裂变技术降低运放输入共模电平，突破PN结导通电压限制，使电路能在更低电源电压下工作。",
+      "difficulty": 3,
+      "keywords": [
+        "共模电平",
+        "低电压",
+        "电阻裂变"
+      ],
+      "formulas": [],
+      "applications": [
+        "超低电压基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过电阻裂变技术降低运放输入共模电平，突破PN结导通电压限制，使电路能在更低电源电压下工作。"
+    },
+    {
+      "id": "ca_4_3_1",
+      "label": "简单电流求和基准电路",
+      "node_type": "circuit_application",
+      "summary": "采用两条独立支路实现电流叠加的基准电路，结构直观但需要两个运放，功耗和复杂度较高。",
+      "difficulty": 4,
+      "keywords": [
+        "独立支路",
+        "双运放"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用两条独立支路实现电流叠加的基准电路，结构直观但需要两个运放，功耗和复杂度较高。"
+    },
+    {
+      "id": "ca_4_3_2",
+      "label": "合并式电流求和基准电路",
+      "node_type": "circuit_application",
+      "summary": "改进的基准电路结构，共享运放和电阻网络，通过电流镜实现电流传输，显著降低电路规模和功耗。",
+      "difficulty": 4,
+      "keywords": [
+        "共享运放",
+        "电流镜"
+      ],
+      "formulas": [
+        "公式4-31"
+      ],
+      "applications": [
+        "低功耗基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "改进的基准电路结构，共享运放和电阻网络，通过电流镜实现电流传输，显著降低电路规模和功耗。"
+    },
+    {
+      "id": "ca_4_3_3",
+      "label": "高阶补偿基准电路",
+      "node_type": "circuit_application",
+      "summary": "增加Q3支路产生非线性补偿电流的基准电路，通过精确控制电阻比例实现高阶温度补偿。",
+      "difficulty": 4,
+      "keywords": [
+        "非线性补偿",
+        "高阶补偿"
+      ],
+      "formulas": [
+        "公式4-32",
+        "公式4-33",
+        "公式4-34"
+      ],
+      "applications": [
+        "高精度基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增加Q3支路产生非线性补偿电流的基准电路，通过精确控制电阻比例实现高阶温度补偿。"
+    },
+    {
+      "id": "ca_4_3_4",
+      "label": "低共模电压基准电路",
+      "node_type": "circuit_application",
+      "summary": "采用电阻裂变技术降低运放输入共模电平的基准电路，可在更低电源电压下工作。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻裂变",
+        "低共模"
+      ],
+      "formulas": [],
+      "applications": [
+        "超低电压基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用电阻裂变技术降低运放输入共模电平的基准电路，可在更低电源电压下工作。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_3_1",
+      "target_id": "ct_4_3_1",
+      "relationship": "enables",
+      "description": "带隙基准电压原理使能了电流求和模式的设计",
+      "weight": 0.9,
+      "evidence": "根据对电压模式BGR的分析...需要采用完全不同于以上电压求和的电压基准生成方式，即电流求和模式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_3_2",
+      "target_id": "ct_4_3_1",
+      "relationship": "supports",
+      "description": "PTAT电流特性支持电流求和模式的实现",
+      "weight": 0.8,
+      "evidence": "R0上产生的是近似PTAT电流，两者叠加后在M2管上形成近似零温度系数电流",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_3_3",
+      "target_id": "ct_4_3_1",
+      "relationship": "supports",
+      "description": "VBE电压特性支持电流求和模式的实现",
+      "weight": 0.8,
+      "evidence": "R1上的VBE1/R1负温度系数电流被无失真地传输到电阻R2上",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_1",
+      "target_id": "ca_4_3_1",
+      "relationship": "implements",
+      "description": "电流求和模式实现了简单电流求和基准电路",
+      "weight": 0.9,
+      "evidence": "根据以上原理得到的基本电流模式基准电路结构(简单电流求和)如图4-9所示",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_2",
+      "target_id": "ca_4_3_2",
+      "relationship": "implements",
+      "description": "合并式电流求和实现了改进的基准电路结构",
+      "weight": 0.9,
+      "evidence": "一种改进的实现方式(合并式电流求和)如图4-10所示",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_3",
+      "target_id": "ca_4_3_3",
+      "relationship": "implements",
+      "description": "高阶曲率补偿技术实现了高精度基准电路",
+      "weight": 0.9,
+      "evidence": "图4-12是图4-10的一种简单改进形式，增加了一个独立的Q3偏置支路，用以产生非线性电流项",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_4",
+      "target_id": "ca_4_3_4",
+      "relationship": "implements",
+      "description": "低共模电压设计实现了超低电压基准电路",
+      "weight": 0.9,
+      "evidence": "图4-11给出了一种简单的改进方式，将R1和R2电阻分别裂变成对称的两个电阻的串联，以降低运放输入的共模信号电平",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_1",
+      "target_id": "ct_4_3_2",
+      "relationship": "extends",
+      "description": "合并式电流求和是对基本电流求和模式的扩展和改进",
+      "weight": 0.8,
+      "evidence": "采用两条独立的支路完成电流的线性叠加，虽直观但电路规模较大...一种改进的实现方式(合并式电流求和)如图4-10所示",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_2",
+      "target_id": "ct_4_3_3",
+      "relationship": "extends",
+      "description": "高阶曲率补偿技术是对合并式电流求和的进一步扩展",
+      "weight": 0.8,
+      "evidence": "图4-12是图4-10的一种简单改进形式，增加了一个独立的Q3偏置支路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_2",
+      "target_id": "ct_4_3_4",
+      "relationship": "complements",
+      "description": "低共模电压设计是对合并式电流求和的互补改进",
+      "weight": 0.7,
+      "evidence": "对于采用PMOS差分对输入的运放电路，其最小工作电压随输入共模信号的增加而提高...给出了一种简单的改进方式",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.3",
+  "title": "电流模带隙电压基准",
+  "extraction_timestamp": "2025-07-08T16:36:31.865622"
+}

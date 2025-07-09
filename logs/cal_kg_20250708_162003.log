@@ -1,0 +1,9 @@
+2025-07-08 16:20:08,221 - CAL_KG - INFO - 可视化器初始化完成
+2025-07-08 16:20:08,222 - CAL_KG - INFO - CAL-KG系统初始化完成 (并发数: 8)
+2025-07-08 16:21:36,504 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 16:23:03,420 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 16:24:01,370 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 16:24:01,517 - CAL_KG - INFO - 步骤 document_split 成功完成
+2025-07-08 16:27:08,357 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 16:27:08,369 - CAL_KG - INFO - 步骤 main_logic 成功完成
+2025-07-08 16:27:08,384 - CAL_KG - ERROR - 步骤 sub_logic 执行异常: 'ProgressTracker' object has no attribute 'start'

@@ -1,0 +1,406 @@
+{
+  "title": "智能分割文档",
+  "total_sections": 80,
+  "sections_summary": [
+    {
+      "section_num": "1.1",
+      "title": "模拟集成电路的历史地位",
+      "content_length": 1577
+    },
+    {
+      "section_num": "1.2",
+      "title": "集成运放的基础地位",
+      "content_length": 2236
+    },
+    {
+      "section_num": "1.3",
+      "title": "内容体系",
+      "content_length": 2378
+    },
+    {
+      "section_num": "1.4",
+      "title": "模拟电路设计艺术",
+      "content_length": 3338
+    },
+    {
+      "section_num": "1.5",
+      "title": "参考文献",
+      "content_length": 1002
+    },
+    {
+      "section_num": "2.1",
+      "title": "概述",
+      "content_length": 1356
+    },
+    {
+      "section_num": "2.2",
+      "title": "PN 结与晶体管",
+      "content_length": 3722
+    },
+    {
+      "section_num": "2.3",
+      "title": "MOS 场效应晶体管",
+      "content_length": 40203
+    },
+    {
+      "section_num": "2.4",
+      "title": "无源器件",
+      "content_length": 7127
+    },
+    {
+      "section_num": "2.5",
+      "title": "小结",
+      "content_length": 1009
+    },
+    {
+      "section_num": "2.6",
+      "title": "参考文献",
+      "content_length": 1083
+    },
+    {
+      "section_num": "3.",
+      "title": "1 概述",
+      "content_length": 659
+    },
+    {
+      "section_num": "3.2",
+      "title": "基本要求与方法",
+      "content_length": 7179
+    },
+    {
+      "section_num": "3.3",
+      "title": "基本电压偏置结构",
+      "content_length": 8887
+    },
+    {
+      "section_num": "3.4",
+      "title": "电流镜互偏结构",
+      "content_length": 9794
+    },
+    {
+      "section_num": "3.5",
+      "title": "有源非线性自偏置电路",
+      "content_length": 13086
+    },
+    {
+      "section_num": "3.6",
+      "title": "电流源",
+      "content_length": 11446
+    },
+    {
+      "section_num": "3.7",
+      "title": "偏置启动电路",
+      "content_length": 8804
+    },
+    {
+      "section_num": "3.8",
+      "title": "小结",
+      "content_length": 603
+    },
+    {
+      "section_num": "3.9",
+      "title": "参考文献",
+      "content_length": 1451
+    },
+    {
+      "section_num": "4.",
+      "title": "1 概述",
+      "content_length": 3946
+    },
+    {
+      "section_num": "4.2",
+      "title": "电压模带隙基准",
+      "content_length": 21676
+    },
+    {
+      "section_num": "4.3",
+      "title": "电流模带隙电压基准",
+      "content_length": 5079
+    },
+    {
+      "section_num": "4.4",
+      "title": "常用带隙电压基准结构设计",
+      "content_length": 35802
+    },
+    {
+      "section_num": "4.5",
+      "title": "电流基准",
+      "content_length": 9741
+    },
+    {
+      "section_num": "4.6",
+      "title": "小结",
+      "content_length": 525
+    },
+    {
+      "section_num": "4.7",
+      "title": "参考文献",
+      "content_length": 2197
+    },
+    {
+      "section_num": "5.1",
+      "title": "概述",
+      "content_length": 1379
+    },
+    {
+      "section_num": "5.2",
+      "title": "单级放大电路",
+      "content_length": 26644
+    },
+    {
+      "section_num": "5.3",
+      "title": "组合放大电路",
+      "content_length": 9419
+    },
+    {
+      "section_num": "5.4",
+      "title": "差分放大电路",
+      "content_length": 20135
+    },
+    {
+      "section_num": "5.5",
+      "title": "电流模电路",
+      "content_length": 10661
+    },
+    {
+      "section_num": "5.6",
+      "title": "小结",
+      "content_length": 963
+    },
+    {
+      "section_num": "5.7",
+      "title": "参考文献",
+      "content_length": 1408
+    },
+    {
+      "section_num": "6.",
+      "title": "1 概述",
+      "content_length": 2421
+    },
+    {
+      "section_num": "6.2",
+      "title": "高增益差分输入级",
+      "content_length": 6825
+    },
+    {
+      "section_num": "6.3",
+      "title": "Class AB差分输入级",
+      "content_length": 9840
+    },
+    {
+      "section_num": "6.4",
+      "title": "全差分输入级 14",
+      "content_length": 8996
+    },
+    {
+      "section_num": "6.5",
+      "title": "宽线性范围差分输入级",
+      "content_length": 29188
+    },
+    {
+      "section_num": "6.6",
+      "title": "多级运放",
+      "content_length": 5880
+    },
+    {
+      "section_num": "6.",
+      "title": "7 小结",
+      "content_length": 680
+    },
+    {
+      "section_num": "6.8",
+      "title": "参考文献",
+      "content_length": 2040
+    },
+    {
+      "section_num": "7.1",
+      "title": "概述",
+      "content_length": 955
+    },
+    {
+      "section_num": "7.2",
+      "title": "反馈放大电路",
+      "content_length": 23193
+    },
+    {
+      "section_num": "7.3",
+      "title": "系统的频率特性与稳定性",
+      "content_length": 34300
+    },
+    {
+      "section_num": "7.4",
+      "title": "根轨迹分析法",
+      "content_length": 16364
+    },
+    {
+      "section_num": "7.5",
+      "title": "小结",
+      "content_length": 617
+    },
+    {
+      "section_num": "7.6",
+      "title": "参考文献",
+      "content_length": 1503
+    },
+    {
+      "section_num": "8.",
+      "title": "1 概述",
+      "content_length": 684
+    },
+    {
+      "section_num": "8.",
+      "title": "2 频响特性分析方法",
+      "content_length": 8042
+    },
+    {
+      "section_num": "8.3",
+      "title": "单级增益频响特性",
+      "content_length": 43116
+    },
+    {
+      "section_num": "8.4",
+      "title": "两级共源放大器频响特性",
+      "content_length": 9569
+    },
+    {
+      "section_num": "8.5",
+      "title": "多极点系统频率特性",
+      "content_length": 16250
+    },
+    {
+      "section_num": "8.",
+      "title": "6 小结",
+      "content_length": 844
+    },
+    {
+      "section_num": "8.",
+      "title": "7 参考文献",
+      "content_length": 1779
+    },
+    {
+      "section_num": "9.1",
+      "title": "概述",
+      "content_length": 356
+    },
+    {
+      "section_num": "9.2",
+      "title": "系统稳定性分析设计",
+      "content_length": 23015
+    },
+    {
+      "section_num": "9.3",
+      "title": "两级放大器频率补偿结构",
+      "content_length": 34375
+    },
+    {
+      "section_num": "9.4",
+      "title": "三级放大器频率补偿结构",
+      "content_length": 35193
+    },
+    {
+      "section_num": "9.5",
+      "title": "小结",
+      "content_length": 2349
+    },
+    {
+      "section_num": "9.6",
+      "title": "参考文献",
+      "content_length": 2211
+    },
+    {
+      "section_num": "10.",
+      "title": "1 概述",
+      "content_length": 431
+    },
+    {
+      "section_num": "10.2",
+      "title": "小信号瞬态特性",
+      "content_length": 18632
+    },
+    {
+      "section_num": "10.3",
+      "title": "大信号瞬态特性与建立时间",
+      "content_length": 8510
+    },
+    {
+      "section_num": "10.4",
+      "title": "高速高增益运放系统设计",
+      "content_length": 25418
+    },
+    {
+      "section_num": "10.5",
+      "title": "小结",
+      "content_length": 838
+    },
+    {
+      "section_num": "10.6",
+      "title": "参考文献",
+      "content_length": 1312
+    },
+    {
+      "section_num": "11.",
+      "title": "1 概述",
+      "content_length": 585
+    },
+    {
+      "section_num": "11.2",
+      "title": "本征噪声模型",
+      "content_length": 15165
+    },
+    {
+      "section_num": "11.",
+      "title": "3 电路噪声",
+      "content_length": 20829
+    },
+    {
+      "section_num": "11.4",
+      "title": "非本征噪声",
+      "content_length": 43755
+    },
+    {
+      "section_num": "11.5",
+      "title": "电源噪声",
+      "content_length": 11157
+    },
+    {
+      "section_num": "11.6",
+      "title": "小结",
+      "content_length": 1444
+    },
+    {
+      "section_num": "11.7",
+      "title": "参考文献",
+      "content_length": 1596
+    },
+    {
+      "section_num": "12.",
+      "title": "1 概述",
+      "content_length": 792
+    },
+    {
+      "section_num": "12.2",
+      "title": "低压单元电路",
+      "content_length": 10115
+    },
+    {
+      "section_num": "12.3",
+      "title": "轨至轨输入级",
+      "content_length": 22815
+    },
+    {
+      "section_num": "12.4",
+      "title": "轨至轨输出级",
+      "content_length": 31060
+    },
+    {
+      "section_num": "12.5",
+      "title": "小结",
+      "content_length": 609
+    },
+    {
+      "section_num": "12.6",
+      "title": "参考文献",
+      "content_length": 1731
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_5_1",
+      "label": "电流模电路",
+      "node_type": "basic_concept",
+      "summary": "电流模电路是一种以电流信号为主要处理对象的电路类型，其特点是电压摆幅小、输出阻抗低，适合于低压工作环境。电流模电路具有高速、低压和低功耗的优势，适用于高频信号处理。",
+      "difficulty": 2,
+      "keywords": [
+        "电流信号",
+        "电压摆幅",
+        "输出阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频信号处理",
+        "低压电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础",
+        "信号处理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流模电路是一种以电流信号为主要处理对象的电路类型，其特点是电压摆幅小、输出阻抗低，适合于低压工作环境。电流模电路具有高速、低压和低功耗的优势，适用于高频信号处理。"
+    },
+    {
+      "id": "bc_5_5_2",
+      "label": "跨导线性电路(TL)",
+      "node_type": "basic_concept",
+      "summary": "跨导线性电路(TL)是一种基于电流模信号处理的高速电路，能够实现对输入信号的非线性处理。TL电路利用BJT或MOS管的跨导特性，通过电压变量的线性处理实现对电流变量的非线性控制。",
+      "difficulty": 3,
+      "keywords": [
+        "跨导",
+        "非线性处理",
+        "BJT/MOS"
+      ],
+      "formulas": [
+        "g_m(BJT) = I_C/V_T = α_BJT I_C",
+        "g_m(MOS) = (2k)^(1/2) (I_DS)^(1/2) = α_MOS (I_DS)^(1/2)"
+      ],
+      "applications": [
+        "信号处理",
+        "非线性控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "BJT/MOS特性",
+        "跨导概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨导线性电路(TL)是一种基于电流模信号处理的高速电路，能够实现对输入信号的非线性处理。TL电路利用BJT或MOS管的跨导特性，通过电压变量的线性处理实现对电流变量的非线性控制。"
+    },
+    {
+      "id": "bc_5_5_3",
+      "label": "电流放大器",
+      "node_type": "basic_concept",
+      "summary": "电流放大器是一种将输入电流信号放大输出的电路，通常通过将输入电流在低阻负载上转换为电压信号，再利用电压放大器完成放大。电流放大器具有高速响应和低功耗的特点。",
+      "difficulty": 3,
+      "keywords": [
+        "电流放大",
+        "低阻负载",
+        "电压转换"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "高速电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器原理",
+        "阻抗匹配"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流放大器是一种将输入电流信号放大输出的电路，通常通过将输入电流在低阻负载上转换为电压信号，再利用电压放大器完成放大。电流放大器具有高速响应和低功耗的特点。"
+    },
+    {
+      "id": "ct_5_5_1",
+      "label": "TL电路设计",
+      "node_type": "core_technology",
+      "summary": "TL电路设计方法包括利用BJT或MOS管的跨导特性，通过闭合回路中的电压平衡关系实现对电流信号的非线性控制。设计步骤包括选择合适的器件参数、确定回路结构、计算电流关系等。",
+      "difficulty": 4,
+      "keywords": [
+        "跨导特性",
+        "回路设计",
+        "非线性控制"
+      ],
+      "formulas": [
+        "∑(CW) (V_BE)i = ∑(CCW) (V_BE)j",
+        "∑(CW) (V_GS)i = ∑(CCW) (V_GS)j"
+      ],
+      "applications": [
+        "非线性信号处理",
+        "电流控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "TL电路设计方法包括利用BJT或MOS管的跨导特性，通过闭合回路中的电压平衡关系实现对电流信号的非线性控制。设计步骤包括选择合适的器件参数、确定回路结构、计算电流关系等。"
+    },
+    {
+      "id": "ct_5_5_2",
+      "label": "电流放大器设计",
+      "node_type": "core_technology",
+      "summary": "电流放大器设计方法包括采用间接实现的控制方式，将输入电流在低阻负载上转换为电压信号，再利用电压放大器完成放大。设计步骤包括选择低阻负载、设计电压放大器、优化阻抗匹配等。",
+      "difficulty": 4,
+      "keywords": [
+        "低阻负载",
+        "电压转换",
+        "阻抗匹配"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "高速电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流放大器设计方法包括采用间接实现的控制方式，将输入电流在低阻负载上转换为电压信号，再利用电压放大器完成放大。设计步骤包括选择低阻负载、设计电压放大器、优化阻抗匹配等。"
+    },
+    {
+      "id": "ca_5_5_1",
+      "label": "MOS TL差分信号线性电流镜",
+      "node_type": "circuit_application",
+      "summary": "MOS TL差分信号线性电流镜是一种利用TL原理实现的线性电流处理电路，通过差分电流输入实现对电流信号的线性处理。电路结构包括M1-M4组成的TL环路，通过栅电位调节保证各MOS管工作在饱和区。",
+      "difficulty": 5,
+      "keywords": [
+        "差分信号",
+        "线性处理",
+        "TL环路"
+      ],
+      "formulas": [
+        "√((1+x)I_A/(W/L)_1) + √((1-y)I_B/(W/L)_3) = √((1-x)I_A/(W/L)_1) + √((1+y)I_B/(W/L)_3)"
+      ],
+      "applications": [
+        "差分信号处理",
+        "线性电流控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS TL差分信号线性电流镜是一种利用TL原理实现的线性电流处理电路，通过差分电流输入实现对电流信号的线性处理。电路结构包括M1-M4组成的TL环路，通过栅电位调节保证各MOS管工作在饱和区。"
+    },
+    {
+      "id": "ca_5_5_2",
+      "label": "TL非线性控制电路",
+      "node_type": "circuit_application",
+      "summary": "TL非线性控制电路是一种利用TL原理实现信号非线性处理的电路，通过TL环路的控制原理实现对输入电流的非线性组合。电路结构包括M1-M4组成的TL环，通过特定W/L比例实现非线性关系。",
+      "difficulty": 5,
+      "keywords": [
+        "非线性处理",
+        "TL环路",
+        "电流组合"
+      ],
+      "formulas": [
+        "√I_y + √I_x = 2√((I_x+y + I_z)/4)"
+      ],
+      "applications": [
+        "非线性信号处理",
+        "电流控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "TL非线性控制电路是一种利用TL原理实现信号非线性处理的电路，通过TL环路的控制原理实现对输入电流的非线性组合。电路结构包括M1-M4组成的TL环，通过特定W/L比例实现非线性关系。"
+    },
+    {
+      "id": "ca_5_5_3",
+      "label": "CG输入差分电流放大器",
+      "node_type": "circuit_application",
+      "summary": "CG输入差分电流放大器是一种采用共栅(CG)输入结构的差分电流放大电路，通过CG输入和电流镜传递实现差分电流的反相线性传输。电路结构包括M1-M2组成的CG输入级和电流镜输出级。",
+      "difficulty": 5,
+      "keywords": [
+        "CG输入",
+        "差分放大",
+        "反相传输"
+      ],
+      "formulas": [
+        "i_out = -(i_1 + i_2)"
+      ],
+      "applications": [
+        "差分信号放大",
+        "高速电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CG输入差分电流放大器是一种采用共栅(CG)输入结构的差分电流放大电路，通过CG输入和电流镜传递实现差分电流的反相线性传输。电路结构包括M1-M2组成的CG输入级和电流镜输出级。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_5_1",
+      "target_id": "ct_5_5_1",
+      "relationship": "enables",
+      "description": "电流模电路的低压高速特性使能了TL电路的设计，使其能够实现高速非线性信号处理。",
+      "weight": 0.9,
+      "evidence": "电流模电路电压信号摆幅小的本质原因在于输出阻抗低，正是由于此特性不但使电流模电路适合于低压工作，同时由于低阻导致的高频极点，使得电流模电路还具有比电压模电路更好的频率特性与系统稳定性，以及更快的动态响应速度。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_5_2",
+      "target_id": "ct_5_5_1",
+      "relationship": "supports",
+      "description": "跨导线性电路的原理支持了TL电路设计方法，通过跨导特性实现对电流信号的非线性控制。",
+      "weight": 0.8,
+      "evidence": "跨导线性电路 TL(Transconductance Linear)是对电流模信号进行处理的一种高速电路，如同非线性数字电路可以实现对信号的线性处理一样，可以完成对输入信号的非线性处理。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_5_1",
+      "target_id": "ca_5_5_1",
+      "relationship": "implements",
+      "description": "TL电路设计方法实现了MOS TL差分信号线性电流镜的具体电路应用。",
+      "weight": 0.85,
+      "evidence": "图 5-25 给出了 MOS TL 的一种线性处理电路，M1∼M4 组成 TL 环路，其中 M1/M3 方向相同，而 M2/M4 方向相同。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_5_1",
+      "target_id": "ca_5_5_2",
+      "relationship": "implements",
+      "description": "TL电路设计方法实现了TL非线性控制电路的具体电路应用。",
+      "weight": 0.85,
+      "evidence": "图 5-26 给出了利用 TL 原理实现信号非线性处理的另一种类型的电路，其中 M1∼M4 组成 TL 环，M1/M3 同相，且其 W/L 相同并为 1,M2/M4 同相，其 W/L 相同并为4。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_5_3",
+      "target_id": "ct_5_5_2",
+      "relationship": "supports",
+      "description": "电流放大器的原理支持了电流放大器设计方法，通过低阻负载和电压转换实现电流放大。",
+      "weight": 0.8,
+      "evidence": "电流放大通常采用间接实现的控制方式，将输入电流在 MOS 二极管低阻负载上转换成交流电压信号，再利用电压放大器完成对输入电压信号的放大，得到电压或电流输出，实现电流放大功能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_5_2",
+      "target_id": "ca_5_5_3",
+      "relationship": "implements",
+      "description": "电流放大器设计方法实现了CG输入差分电流放大器的具体电路应用。",
+      "weight": 0.85,
+      "evidence": "图 5-30 所示的差分电流放大电路中，在输出支路的 CG 输入端同样引入另一交流小信号输入电流 i2。当 i2 = 0 时，i_out = -m i1，对应为单端输入的线性电流放大，m 为 M2 与 M1 尺寸 (W/L)之比决定的电流放大系数。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.5",
+  "title": "电流模电路",
+  "extraction_timestamp": "2025-07-08T16:38:26.283672"
+}

@@ -1,0 +1,366 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_1",
+      "label": "电路噪声",
+      "node_type": "basic_concept",
+      "summary": "电路噪声是指在电路中存在的随机波动信号，即使输入信号为零，输出端仍存在噪声功率信号。电路噪声主要由热噪声和1/f噪声组成，对有效信号的处理产生重要影响。",
+      "difficulty": 2,
+      "keywords": [
+        "热噪声",
+        "1/f噪声",
+        "噪声功率"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电路噪声是指在电路中存在的随机波动信号，即使输入信号为零，输出端仍存在噪声功率信号。电路噪声主要由热噪声和1/f噪声组成，对有效信号的处理产生重要影响。"
+    },
+    {
+      "id": "bc_11_2",
+      "label": "等效输入噪声",
+      "node_type": "basic_concept",
+      "summary": "等效输入噪声是通过将输出噪声功率折算到输入端得到的噪声源，用于将实际噪声电路等效为无噪声电路进行分析。等效输入噪声包括电压噪声和电流噪声两种模型，两者在数量上相互关联但在作用上相互独立。",
+      "difficulty": 2,
+      "keywords": [
+        "电压噪声",
+        "电流噪声",
+        "噪声等效"
+      ],
+      "formulas": [],
+      "applications": [
+        "噪声分析",
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路噪声"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "等效输入噪声是通过将输出噪声功率折算到输入端得到的噪声源，用于将实际噪声电路等效为无噪声电路进行分析。等效输入噪声包括电压噪声和电流噪声两种模型，两者在数量上相互关联但在作用上相互独立。"
+    },
+    {
+      "id": "bc_11_3",
+      "label": "热噪声",
+      "node_type": "basic_concept",
+      "summary": "热噪声是由电路中电子热运动引起的随机噪声，其功率谱密度与温度和电阻值相关。热噪声是电路噪声的主要来源之一，尤其在MOS管中表现显著。",
+      "difficulty": 2,
+      "keywords": [
+        "热噪声",
+        "功率谱密度",
+        "MOS管"
+      ],
+      "formulas": [
+        "4kTγ/gm"
+      ],
+      "applications": [
+        "噪声分析",
+        "MOS管设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "统计物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "热噪声是由电路中电子热运动引起的随机噪声，其功率谱密度与温度和电阻值相关。热噪声是电路噪声的主要来源之一，尤其在MOS管中表现显著。"
+    },
+    {
+      "id": "bc_11_4",
+      "label": "1/f噪声",
+      "node_type": "basic_concept",
+      "summary": "1/f噪声是一种低频噪声，其功率谱密度与频率成反比。1/f噪声主要来源于MOS管中的载流子捕获和释放过程，对低频电路性能影响较大。",
+      "difficulty": 2,
+      "keywords": [
+        "1/f噪声",
+        "低频噪声",
+        "MOS管"
+      ],
+      "formulas": [
+        "kf/(fCoxWL)"
+      ],
+      "applications": [
+        "低频电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "1/f噪声是一种低频噪声，其功率谱密度与频率成反比。1/f噪声主要来源于MOS管中的载流子捕获和释放过程，对低频电路性能影响较大。"
+    },
+    {
+      "id": "ct_11_1",
+      "label": "噪声等效模型",
+      "node_type": "core_technology",
+      "summary": "噪声等效模型是通过将输出噪声折算到输入端，建立等效电压噪声和电流噪声源的方法。该方法将实际噪声电路等效为无噪声电路，简化了噪声分析过程。",
+      "difficulty": 3,
+      "keywords": [
+        "等效模型",
+        "电压噪声",
+        "电流噪声"
+      ],
+      "formulas": [
+        "dVieq² = dVout²/Av²"
+      ],
+      "applications": [
+        "电路噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声等效模型是通过将输出噪声折算到输入端，建立等效电压噪声和电流噪声源的方法。该方法将实际噪声电路等效为无噪声电路，简化了噪声分析过程。"
+    },
+    {
+      "id": "ct_11_2",
+      "label": "噪声指数(NF)",
+      "node_type": "core_technology",
+      "summary": "噪声指数用于衡量电路噪声与信号源噪声的相对关系，定义为总噪声功率与信号源噪声功率的比值。噪声指数越小，表示电路引入的噪声越小。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声指数",
+        "信噪比",
+        "噪声功率"
+      ],
+      "formulas": [
+        "NF = 1 + NA/NS"
+      ],
+      "applications": [
+        "低噪声放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声指数用于衡量电路噪声与信号源噪声的相对关系，定义为总噪声功率与信号源噪声功率的比值。噪声指数越小，表示电路引入的噪声越小。"
+    },
+    {
+      "id": "ct_11_3",
+      "label": "噪声优化技术",
+      "node_type": "core_technology",
+      "summary": "噪声优化技术包括提高跨导gm、增加负载电阻RD、优化MOS管尺寸等方法，旨在降低电路的等效输入噪声。这些技术需要在噪声性能与其他电路性能之间进行权衡。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声优化",
+        "跨导",
+        "负载电阻"
+      ],
+      "formulas": [
+        "dVieq² = 4kT(γ/gm + 1/gm²RD)"
+      ],
+      "applications": [
+        "低噪声电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声优化技术包括提高跨导gm、增加负载电阻RD、优化MOS管尺寸等方法，旨在降低电路的等效输入噪声。这些技术需要在噪声性能与其他电路性能之间进行权衡。"
+    },
+    {
+      "id": "ca_11_1",
+      "label": "CS单级增益电路噪声",
+      "node_type": "circuit_application",
+      "summary": "CS(共源)单级增益电路的噪声主要由输入管的热噪声和负载电阻的噪声组成。通过提高跨导gm和增加负载电阻RD可以有效降低输入等效噪声电压。",
+      "difficulty": 4,
+      "keywords": [
+        "CS电路",
+        "热噪声",
+        "跨导"
+      ],
+      "formulas": [
+        "dVieq² = 4kT(γ/gm + 1/gm²RD)"
+      ],
+      "applications": [
+        "低噪声放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS(共源)单级增益电路的噪声主要由输入管的热噪声和负载电阻的噪声组成。通过提高跨导gm和增加负载电阻RD可以有效降低输入等效噪声电压。"
+    },
+    {
+      "id": "ca_11_2",
+      "label": "CG单级增益电路噪声",
+      "node_type": "circuit_application",
+      "summary": "CG(共栅)单级增益电路的噪声特性与CS电路不同，负载电阻的噪声会直接传递到输入端。CG电路的等效输入噪声电压与跨导gm和衬偏跨导gmb相关。",
+      "difficulty": 4,
+      "keywords": [
+        "CG电路",
+        "噪声传递",
+        "跨导"
+      ],
+      "formulas": [
+        "dVieq² = 4kT(γgm1 + 1/RD)/(gm + gmb)²"
+      ],
+      "applications": [
+        "宽带放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CG(共栅)单级增益电路的噪声特性与CS电路不同，负载电阻的噪声会直接传递到输入端。CG电路的等效输入噪声电压与跨导gm和衬偏跨导gmb相关。"
+    },
+    {
+      "id": "ca_11_3",
+      "label": "CS-CG Cascode电路噪声",
+      "node_type": "circuit_application",
+      "summary": "CS-CG Cascode结构通过级联CS和CG电路，在保持高增益的同时降低噪声。在低频条件下，Cascode电路的噪声主要由输入管决定，CG管的噪声贡献可以忽略。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "噪声抑制",
+        "高增益"
+      ],
+      "formulas": [
+        "dVieq² ≈ dV1²"
+      ],
+      "applications": [
+        "低噪声高增益放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS-CG Cascode结构通过级联CS和CG电路，在保持高增益的同时降低噪声。在低频条件下，Cascode电路的噪声主要由输入管决定，CG管的噪声贡献可以忽略。"
+    },
+    {
+      "id": "ca_11_4",
+      "label": "CD源跟随器噪声",
+      "node_type": "circuit_application",
+      "summary": "CD(共漏)源跟随器主要考虑输入管的电压噪声，中低频下输入电流噪声很小。通过优化输入管和负载管的尺寸比例可以降低1/f噪声。",
+      "difficulty": 4,
+      "keywords": [
+        "源跟随器",
+        "电压噪声",
+        "1/f噪声"
+      ],
+      "formulas": [
+        "dVieq² = 4kTγ/gm1(1 + gm2/gm1)"
+      ],
+      "applications": [
+        "缓冲器",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CD(共漏)源跟随器主要考虑输入管的电压噪声，中低频下输入电流噪声很小。通过优化输入管和负载管的尺寸比例可以降低1/f噪声。"
+    },
+    {
+      "id": "ca_11_5",
+      "label": "差分对噪声",
+      "node_type": "circuit_application",
+      "summary": "差分对电路的噪声分析需要考虑两输入管的噪声相关性。在差模噪声假设下，差分对的总输入噪声为单支路噪声的两倍。通过优化跨导和负载可以降低差分对的噪声。",
+      "difficulty": 4,
+      "keywords": [
+        "差分对",
+        "共模抑制",
+        "差模噪声"
+      ],
+      "formulas": [
+        "dVieq² = 2×4kT(γ/gm + 1/gm²RD)"
+      ],
+      "applications": [
+        "差分放大器",
+        "混频器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分对电路的噪声分析需要考虑两输入管的噪声相关性。在差模噪声假设下，差分对的总输入噪声为单支路噪声的两倍。通过优化跨导和负载可以降低差分对的噪声。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_1",
+      "target_id": "ct_11_1",
+      "relationship": "enables",
+      "description": "电路噪声的基本概念使能了噪声等效模型的建立",
+      "weight": 0.9,
+      "evidence": "由于噪声存在,即使电路的输入信号为零,输出端同样存在噪声功率信号。采用与MOS管噪声分析相类似的方式,将电路输出端电压噪声功率除以电路电压增益的平方,使输出噪声功率等效到输入端",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_3",
+      "target_id": "ct_11_3",
+      "relationship": "supports",
+      "description": "热噪声原理支撑了噪声优化技术的开发",
+      "weight": 0.8,
+      "evidence": "等效电压输入噪声主要由沟道热噪声决定,并为dVieq² = 4kT(γ/gm + 1/gm²RD)",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_1",
+      "target_id": "ca_11_1",
+      "relationship": "applies_to",
+      "description": "噪声等效模型应用于CS单级增益电路的噪声分析",
+      "weight": 0.85,
+      "evidence": "设输入电容为Cin,在忽略1/f噪声和相关寄生电阻RG和RS的条件下,等效电压输入噪声主要由沟道热噪声决定",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_3",
+      "target_id": "ca_11_3",
+      "relationship": "implements",
+      "description": "噪声优化技术在CS-CG Cascode电路中实现",
+      "weight": 0.75,
+      "evidence": "在低频条件下,若CS结构的单级增益足够高,则CS-CG的Cascode增益级的电压噪声主要由输入管的噪声决定",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_4",
+      "target_id": "ca_11_4",
+      "relationship": "supports",
+      "description": "1/f噪声原理支撑了CD源跟随器的噪声分析",
+      "weight": 0.7,
+      "evidence": "对于CD的1/f噪声,由于M1和M2为同类型MOS管,则dV2f²/dV1f² = (WL)1/(WL)2",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_11_3",
+      "relationship": "extends",
+      "description": "CS单级增益电路噪声分析扩展到CS-CG Cascode电路",
+      "weight": 0.8,
+      "evidence": "对于套筒型Cascode增益结构,其CG管等效栅输入噪声,经过源跟随传输到M1管CS增益级的输出,再经CS的增益作用转换到电路的输入",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_2",
+      "target_id": "ct_11_2",
+      "relationship": "enables",
+      "description": "等效输入噪声概念使能了噪声指数的定义",
+      "weight": 0.85,
+      "evidence": "噪声指数可用于电路噪声水平的判断。当RS.opt越小,NF=3dB所对应的电压源噪声电阻RS也越小",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_2",
+      "target_id": "ca_11_5",
+      "relationship": "applies_to",
+      "description": "噪声指数应用于差分对电路的噪声性能评估",
+      "weight": 0.75,
+      "evidence": "在差模噪声源的假设条件下,差分对共源点交流接地,则可将差分对分裂为2个并联并以RD为负载的CS增益结构",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "11.",
+  "title": "3 电路噪声",
+  "extraction_timestamp": "2025-07-08T16:46:46.443567"
+}

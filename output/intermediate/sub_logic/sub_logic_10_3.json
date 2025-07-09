@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_3_1",
+      "label": "压摆率(SR)",
+      "node_type": "basic_concept",
+      "summary": "压摆率(Slew Rate)是运放在大信号输入下输出电压的最大变化速率，由恒流充放电机制决定。公式为SR = ISS/CLeff，其中ISS是尾电流，CLeff是有效负载电容。压摆率决定了运放在大信号阶段的瞬态响应速度。",
+      "difficulty": 2,
+      "keywords": [
+        "压摆率",
+        "恒流充放电",
+        "大信号响应"
+      ],
+      "formulas": [
+        "SR = ISS/CLeff"
+      ],
+      "applications": [
+        "运放瞬态响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理",
+        "电容充放电原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "压摆率(Slew Rate)是运放在大信号输入下输出电压的最大变化速率，由恒流充放电机制决定。公式为SR = ISS/CLeff，其中ISS是尾电流，CLeff是有效负载电容。压摆率决定了运放在大信号阶段的瞬态响应速度。"
+    },
+    {
+      "id": "bc_10_3_2",
+      "label": "动态范围(Δmax)",
+      "node_type": "basic_concept",
+      "summary": "动态范围是运放输入差分电压的最大变化范围，当其中一个MOS管截止时达到最大值。公式为Δmax = √(2ISS/k)，其中k是MOS管的跨导系数。动态范围决定了运放从大信号到小信号工作的转换点。",
+      "difficulty": 2,
+      "keywords": [
+        "动态范围",
+        "差分输入",
+        "MOS管工作区"
+      ],
+      "formulas": [
+        "Δmax = √(2ISS/k)"
+      ],
+      "applications": [
+        "运放工作区判断"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管饱和区工作条件"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "动态范围是运放输入差分电压的最大变化范围，当其中一个MOS管截止时达到最大值。公式为Δmax = √(2ISS/k)，其中k是MOS管的跨导系数。动态范围决定了运放从大信号到小信号工作的转换点。"
+    },
+    {
+      "id": "bc_10_3_3",
+      "label": "反馈系数(F)",
+      "node_type": "basic_concept",
+      "summary": "反馈系数表示运放输出信号反馈到输入端的比例，影响闭环增益和建立时间。F≤1，增大F可以减小建立时间但会降低闭环增益。",
+      "difficulty": 2,
+      "keywords": [
+        "反馈系数",
+        "闭环增益",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "闭环运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈系数表示运放输出信号反馈到输入端的比例，影响闭环增益和建立时间。F≤1，增大F可以减小建立时间但会降低闭环增益。"
+    },
+    {
+      "id": "ct_10_3_1",
+      "label": "大信号瞬态分析",
+      "node_type": "core_technology",
+      "summary": "分析运放在大信号输入下的瞬态响应，首先考虑压摆率控制的恒流充放电阶段，然后过渡到小信号线性区。关键步骤包括：1)计算压摆率阶段时间Tslew；2)确定进入线性区的临界点；3)建立大信号与小信号模型的等效关系。",
+      "difficulty": 3,
+      "keywords": [
+        "大信号分析",
+        "压摆率控制",
+        "模型转换"
+      ],
+      "formulas": [
+        "Tslew = (CLeff/ISS)(Vi_step/F)(1-Δmax/Vi_step)"
+      ],
+      "applications": [
+        "运放瞬态响应建模"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "分析运放在大信号输入下的瞬态响应，首先考虑压摆率控制的恒流充放电阶段，然后过渡到小信号线性区。关键步骤包括：1)计算压摆率阶段时间Tslew；2)确定进入线性区的临界点；3)建立大信号与小信号模型的等效关系。"
+    },
+    {
+      "id": "ct_10_3_2",
+      "label": "建立时间计算",
+      "node_type": "core_technology",
+      "summary": "计算运放从输入阶跃到输出稳定的总时间，包括大信号压摆时间Tslew和小信号线性建立时间Tlinear。对于单极点系统，Tset = Tslew + τln(Δmax/(Vi_step(1-Vo_scale)))；对于共轭复极点系统，还需考虑阻尼系数ζ的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "建立时间",
+        "单极点系统",
+        "复极点系统"
+      ],
+      "formulas": [
+        "Tset = Tslew + Tlinear",
+        "Tset = Tslew + (1/ζω0)ln(2mΔmax/Vi_step)"
+      ],
+      "applications": [
+        "运放速度优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "计算运放从输入阶跃到输出稳定的总时间，包括大信号压摆时间Tslew和小信号线性建立时间Tlinear。对于单极点系统，Tset = Tslew + τln(Δmax/(Vi_step(1-Vo_scale)))；对于共轭复极点系统，还需考虑阻尼系数ζ的影响。"
+    },
+    {
+      "id": "ct_10_3_3",
+      "label": "统一瞬态模型",
+      "node_type": "core_technology",
+      "summary": "将大信号和小信号瞬态响应统一建模的方法：1)将大信号延迟Tslew等效为小信号延迟t0；2)在t>t0后采用小信号模型；3)调整时间变量为t-(Tslew-t0)使模型闭合。这种方法可以完整描述整个瞬态过程。",
+      "difficulty": 3,
+      "keywords": [
+        "统一模型",
+        "瞬态响应",
+        "等效延迟"
+      ],
+      "formulas": [
+        "Vo_scale(t) = 1-exp[-(t-(Tslew-t0))/τ]"
+      ],
+      "applications": [
+        "运放全范围响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将大信号和小信号瞬态响应统一建模的方法：1)将大信号延迟Tslew等效为小信号延迟t0；2)在t>t0后采用小信号模型；3)调整时间变量为t-(Tslew-t0)使模型闭合。这种方法可以完整描述整个瞬态过程。"
+    },
+    {
+      "id": "ca_10_3_1",
+      "label": "高速闭环运放",
+      "node_type": "circuit_application",
+      "summary": "设计高速闭环运放需要考虑建立时间优化：1)增大尾电流ISS减小Tslew；2)提高反馈系数F；3)减小负载电容CLeff；4)优化极点位置(单极点或轻微欠阻尼)。典型应用包括ADC驱动、高速信号处理等。",
+      "difficulty": 4,
+      "keywords": [
+        "闭环运放",
+        "建立时间优化",
+        "高速应用"
+      ],
+      "formulas": [
+        "Tset ≈ (CLeff/F)(0.8V/ISS + 5.3/gm)"
+      ],
+      "applications": [
+        "ADC驱动电路",
+        "高速信号链"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计高速闭环运放需要考虑建立时间优化：1)增大尾电流ISS减小Tslew；2)提高反馈系数F；3)减小负载电容CLeff；4)优化极点位置(单极点或轻微欠阻尼)。典型应用包括ADC驱动、高速信号处理等。"
+    },
+    {
+      "id": "ca_10_3_2",
+      "label": "精密运放电路",
+      "node_type": "circuit_application",
+      "summary": "在需要高精度的应用中(如0.1%精度)，需精确计算建立时间：1)确保Vi_step > Δmax；2)选择合适的阻尼系数ζ≈0.9；3)平衡大信号和小信号阶段的贡献。典型应用包括精密测量、仪器仪表等。",
+      "difficulty": 4,
+      "keywords": [
+        "精密运放",
+        "建立时间精度",
+        "误差控制"
+      ],
+      "formulas": [
+        "error ≈ (Δmax/Vi_step)exp(-nζπ/√(1-ζ²))"
+      ],
+      "applications": [
+        "精密测量电路",
+        "高精度ADC"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在需要高精度的应用中(如0.1%精度)，需精确计算建立时间：1)确保Vi_step > Δmax；2)选择合适的阻尼系数ζ≈0.9；3)平衡大信号和小信号阶段的贡献。典型应用包括精密测量、仪器仪表等。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_3_1",
+      "target_id": "ct_10_3_1",
+      "relationship": "enables",
+      "description": "压摆率概念是大信号瞬态分析的基础，决定了初始阶段的响应速度",
+      "weight": 0.9,
+      "evidence": "在差分运放实际阶跃响应的初始状态下，运放输入为典型的大信号，使电路开始阶段处于压摆率控制的充放电状态",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_3_2",
+      "target_id": "ct_10_3_1",
+      "relationship": "supports",
+      "description": "动态范围决定了运放从大信号到小信号工作的转换点，是瞬态分析的关键参数",
+      "weight": 0.8,
+      "evidence": "当Vid降低到某一临界值即进入临界动态范围内后，运放逐步进入小信号线性放大区",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_3_1",
+      "target_id": "ct_10_3_2",
+      "relationship": "depends_on",
+      "description": "建立时间计算依赖于大信号瞬态分析得到的Tslew",
+      "weight": 0.85,
+      "evidence": "总的建立时间Tset = Tslew + Tlinear",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_3_2",
+      "target_id": "ca_10_3_1",
+      "relationship": "applies_to",
+      "description": "建立时间计算方法直接应用于高速闭环运放的设计优化",
+      "weight": 0.9,
+      "evidence": "增加反馈系数F和尾电流ISS，降低输入摆幅和负载电容，均有利于降低大信号建立时间",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_3_3",
+      "target_id": "ca_10_3_2",
+      "relationship": "implements",
+      "description": "统一瞬态模型实现了精密运放电路的精确建立时间预测",
+      "weight": 0.85,
+      "evidence": "将初始的SR控制等效成小信号控制，则在相同的临界状态输出电压下，大信号延迟Tslew等效成小信号延迟t0",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_3_3",
+      "target_id": "ct_10_3_2",
+      "relationship": "supports",
+      "description": "反馈系数F是建立时间计算公式中的关键参数",
+      "weight": 0.8,
+      "evidence": "在F·Acf(0)≈1的条件下，有Tset = Tslew + τln(Δmax/(Vi_step(1-Vo_scale)))",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "10.3",
+  "title": "大信号瞬态特性与建立时间",
+  "extraction_timestamp": "2025-07-08T16:45:08.297105"
+}

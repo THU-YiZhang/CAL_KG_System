@@ -1,0 +1,140 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_2_2_1",
+      "label": "同相放大器",
+      "node_type": "basic_concept",
+      "summary": "同相放大器是一种运算放大器电路配置，输入信号施加到运算放大器的同相输入端，输出信号与输入信号同相。其特点是输入阻抗高，输出阻抗低。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "同相输入",
+        "电压增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器是一种运算放大器电路配置，输入信号施加到运算放大器的同相输入端，输出信号与输入信号同相。其特点是输入阻抗高，输出阻抗低。"
+    },
+    {
+      "id": "bc_2_2_2_2",
+      "label": "电压增益",
+      "node_type": "basic_concept",
+      "summary": "电压增益是指放大器输出电压与输入电压的比值，表示信号放大的程度。在同相放大器中，增益由反馈电阻和输入电阻决定。",
+      "difficulty": 2,
+      "keywords": [
+        "放大倍数",
+        "电压比",
+        "信号放大"
+      ],
+      "formulas": [
+        "Av = Vout/Vin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压增益是指放大器输出电压与输入电压的比值，表示信号放大的程度。在同相放大器中，增益由反馈电阻和输入电阻决定。"
+    },
+    {
+      "id": "ct_2_2_2_1",
+      "label": "同相放大器增益计算",
+      "node_type": "core_technology",
+      "summary": "同相放大器的增益计算公式为Av = 1 + Rf/Rin，其中Rf是反馈电阻，Rin是输入电阻。通过调整这两个电阻的比值可以精确控制放大器的增益。",
+      "difficulty": 3,
+      "keywords": [
+        "增益公式",
+        "电阻比",
+        "反馈网络"
+      ],
+      "formulas": [
+        "Av = 1 + Rf/Rin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器的增益计算公式为Av = 1 + Rf/Rin，其中Rf是反馈电阻，Rin是输入电阻。通过调整这两个电阻的比值可以精确控制放大器的增益。"
+    },
+    {
+      "id": "ca_2_2_2_1",
+      "label": "同相放大器电路",
+      "node_type": "circuit_application",
+      "summary": "典型的同相放大器电路由运算放大器、反馈电阻Rf和输入电阻Rin组成。输入信号连接到同相输入端，输出信号通过Rf反馈到反相输入端。",
+      "difficulty": 4,
+      "keywords": [
+        "运算放大器电路",
+        "反馈网络",
+        "信号放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的同相放大器电路由运算放大器、反馈电阻Rf和输入电阻Rin组成。输入信号连接到同相输入端，输出信号通过Rf反馈到反相输入端。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_2_2_1",
+      "target_id": "ct_2_2_2_1",
+      "relationship": "enables",
+      "description": "同相放大器的基本概念使能了其增益计算方法的建立",
+      "weight": 0.9,
+      "evidence": "章节内容直接给出了基于同相放大器概念的增益公式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_2_2",
+      "target_id": "ct_2_2_2_1",
+      "relationship": "supports",
+      "description": "电压增益的概念支撑了增益计算公式的建立",
+      "weight": 0.8,
+      "evidence": "公式Av = 1 + Rf/Rin直接体现了电压增益的计算方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_2_1",
+      "target_id": "ca_2_2_2_1",
+      "relationship": "implements",
+      "description": "增益计算方法实现了同相放大器电路的设计",
+      "weight": 0.85,
+      "evidence": "公式用于实际电路设计中确定电阻值",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_2_1",
+      "target_id": "ca_2_2_2_1",
+      "relationship": "applies_to",
+      "description": "同相放大器的基本概念应用于具体电路实现",
+      "weight": 0.7,
+      "evidence": "电路应用体现了同相放大器的基本特性",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.2.2",
+  "title": "同相放大器",
+  "extraction_timestamp": "2025-07-08T15:30:10.359495",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

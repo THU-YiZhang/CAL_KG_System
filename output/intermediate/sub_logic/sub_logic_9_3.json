@@ -1,0 +1,270 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_3_1",
+      "label": "极点分离",
+      "node_type": "basic_concept",
+      "summary": "通过调整电路参数使主极点和次极点频率分离的技术，目的是提高放大器的稳定性。在两级放大器中，主极点通常被压缩到低频，而次极点被扩展到高频，确保单位增益带宽(GBW)位于次极点的1/2处。",
+      "difficulty": 3,
+      "keywords": [
+        "主极点",
+        "次极点",
+        "稳定性"
+      ],
+      "formulas": [
+        "GBW = A0*p1"
+      ],
+      "applications": [
+        "两级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "极点分析",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过调整电路参数使主极点和次极点频率分离的技术，目的是提高放大器的稳定性。在两级放大器中，主极点通常被压缩到低频，而次极点被扩展到高频，确保单位增益带宽(GBW)位于次极点的1/2处。"
+    },
+    {
+      "id": "bc_9_3_2",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "衡量放大器稳定性的重要指标，定义为180度与开环增益相位在单位增益频率处的相位差。通常要求相位裕度大于60度以确保稳定性。相位裕度与极点位置和零点性质密切相关。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "相位差",
+        "GBW"
+      ],
+      "formulas": [
+        "PM = 180° - ∠A(GBW)"
+      ],
+      "applications": [
+        "放大器稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "相位分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "衡量放大器稳定性的重要指标，定义为180度与开环增益相位在单位增益频率处的相位差。通常要求相位裕度大于60度以确保稳定性。相位裕度与极点位置和零点性质密切相关。"
+    },
+    {
+      "id": "bc_9_3_3",
+      "label": "Miller效应",
+      "node_type": "basic_concept",
+      "summary": "跨接在放大器输入和输出之间的电容由于放大作用产生的等效输入电容增大的现象。Miller电容Cm等效输入电容为Cm*(1+Av)，其中Av是放大级增益。这一效应被广泛应用于极点分离技术中。",
+      "difficulty": 3,
+      "keywords": [
+        "电容倍增",
+        "极点压缩",
+        "前馈通路"
+      ],
+      "formulas": [
+        "Ceq = Cm*(1+Av)"
+      ],
+      "applications": [
+        "频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器增益",
+        "电容特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨接在放大器输入和输出之间的电容由于放大作用产生的等效输入电容增大的现象。Miller电容Cm等效输入电容为Cm*(1+Av)，其中Av是放大级增益。这一效应被广泛应用于极点分离技术中。"
+    },
+    {
+      "id": "ct_9_3_1",
+      "label": "Miller电容补偿",
+      "node_type": "core_technology",
+      "summary": "在两级放大器的输出级输入和输出之间跨接补偿电容的技术。通过Miller效应压缩主极点，同时扩展次极点，实现极点分离。会引入RHP零点，需要满足gmL/gm1>10的设计约束。补偿电容Cm通常选择为负载电容CL的0.22倍。",
+      "difficulty": 4,
+      "keywords": [
+        "极点分离",
+        "RHP零点",
+        "补偿电容"
+      ],
+      "formulas": [
+        "p1 ≈ 1/(gmL*R1*RL*Cm)",
+        "p2 ≈ gmL/(C1+CL)",
+        "z1 = gmL/Cm"
+      ],
+      "applications": [
+        "两级运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在两级放大器的输出级输入和输出之间跨接补偿电容的技术。通过Miller效应压缩主极点，同时扩展次极点，实现极点分离。会引入RHP零点，需要满足gmL/gm1>10的设计约束。补偿电容Cm通常选择为负载电容CL的0.22倍。"
+    },
+    {
+      "id": "ct_9_3_2",
+      "label": "并联电容补偿",
+      "node_type": "core_technology",
+      "summary": "在第一级增益输出节点引入并联补偿电容的技术。直接压缩主极点p1，但不影响次极点p2。补偿效率低，占用面积大，但避免了RHP零点的引入。适用于对RHP零点敏感的应用场景。",
+      "difficulty": 3,
+      "keywords": [
+        "主极点压缩",
+        "无RHP零点",
+        "面积效率低"
+      ],
+      "formulas": [
+        "p1 = 1/(R1*(C1+Cp))"
+      ],
+      "applications": [
+        "敏感电路补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在第一级增益输出节点引入并联补偿电容的技术。直接压缩主极点p1，但不影响次极点p2。补偿效率低，占用面积大，但避免了RHP零点的引入。适用于对RHP零点敏感的应用场景。"
+    },
+    {
+      "id": "ct_9_3_3",
+      "label": "串联电阻Miller补偿",
+      "node_type": "core_technology",
+      "summary": "在Miller电容补偿基础上串联调节电阻Rm的技术。通过选择Rm=1/gmL可消除RHP零点，或选择Rm>1/gmL将RHP零点转换为LHP零点。LHP零点可提供超前相位补偿，改善相位裕度。需要精确控制Rm值以实现最佳补偿效果。",
+      "difficulty": 4,
+      "keywords": [
+        "零点控制",
+        "LHP零点",
+        "相位补偿"
+      ],
+      "formulas": [
+        "z = 1/(Cm*(Rm-1/gmL))",
+        "Rm = 1/(2gm1) + 1/gmL"
+      ],
+      "applications": [
+        "高性能运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在Miller电容补偿基础上串联调节电阻Rm的技术。通过选择Rm=1/gmL可消除RHP零点，或选择Rm>1/gmL将RHP零点转换为LHP零点。LHP零点可提供超前相位补偿，改善相位裕度。需要精确控制Rm值以实现最佳补偿效果。"
+    },
+    {
+      "id": "ca_9_3_1",
+      "label": "简单Miller补偿两级运放",
+      "node_type": "circuit_application",
+      "summary": "采用基本Miller电容补偿的两级运算放大器结构。第一级为共源放大器，第二级为共源放大器或源极跟随器。跨接Cm在第二级的输入和输出之间，实现极点分离。设计约束包括gmL/gm1>10和Cm>0.22CL。适用于中等性能要求的应用。",
+      "difficulty": 4,
+      "keywords": [
+        "两级结构",
+        "Miller电容",
+        "RHP零点"
+      ],
+      "formulas": [
+        "GBW = gm1/Cm",
+        "PM ≈ arctan(GBW/p2)"
+      ],
+      "applications": [
+        "通用运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用基本Miller电容补偿的两级运算放大器结构。第一级为共源放大器，第二级为共源放大器或源极跟随器。跨接Cm在第二级的输入和输出之间，实现极点分离。设计约束包括gmL/gm1>10和Cm>0.22CL。适用于中等性能要求的应用。"
+    },
+    {
+      "id": "ca_9_3_2",
+      "label": "串联电阻Miller补偿运放",
+      "node_type": "circuit_application",
+      "summary": "在简单Miller补偿基础上增加串联电阻Rm的两级运放结构。通过精确控制Rm值，可以消除RHP零点或将其转换为LHP零点。LHP零点可提供超前相位补偿，允许更小的Cm值和更高的GBW。适用于高性能、低功耗运放设计。",
+      "difficulty": 5,
+      "keywords": [
+        "LHP零点",
+        "相位补偿",
+        "高GBW"
+      ],
+      "formulas": [
+        "z = 1/(Cm*(Rm-1/gmL))",
+        "Rm = 1/gmL*(1+CL/Cm)"
+      ],
+      "applications": [
+        "低功耗高性能运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在简单Miller补偿基础上增加串联电阻Rm的两级运放结构。通过精确控制Rm值，可以消除RHP零点或将其转换为LHP零点。LHP零点可提供超前相位补偿，允许更小的Cm值和更高的GBW。适用于高性能、低功耗运放设计。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_3_1",
+      "target_id": "ct_9_3_1",
+      "relationship": "enables",
+      "description": "极点分离概念使能了Miller电容补偿技术的实现",
+      "weight": 0.9,
+      "evidence": "两级运放采用基于极点分离的Miller电容补偿",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_3_2",
+      "target_id": "ct_9_3_1",
+      "relationship": "supports",
+      "description": "相位裕度概念为Miller补偿提供了设计目标和验证标准",
+      "weight": 0.8,
+      "evidence": "为达到60°相位裕量的基本要求，引入常规的Miller电容Cm补偿",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_3_3",
+      "target_id": "ct_9_3_1",
+      "relationship": "enables",
+      "description": "Miller效应是Miller电容补偿实现极点压缩的基础",
+      "weight": 0.9,
+      "evidence": "电容Cm对系统传递函数引入一个RHP零点z1，并将原来的两个极点重新定位",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_3_1",
+      "target_id": "ca_9_3_1",
+      "relationship": "implements",
+      "description": "Miller电容补偿技术实现了简单Miller补偿两级运放的设计",
+      "weight": 0.9,
+      "evidence": "Miller电容补偿的两级增益与输出级单级增益间的GBW带宽关系",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_3_3",
+      "target_id": "ca_9_3_2",
+      "relationship": "implements",
+      "description": "串联电阻Miller补偿技术实现了高性能运放的设计",
+      "weight": 0.9,
+      "evidence": "SMCNR补偿是对基本SMC补偿的一种改进方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_3_1",
+      "target_id": "ct_9_3_3",
+      "relationship": "extends",
+      "description": "串联电阻Miller补偿扩展了基本Miller补偿的功能",
+      "weight": 0.8,
+      "evidence": "SMCNR补偿是对基本SMC补偿的一种改进方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_9_3_1",
+      "target_id": "ca_9_3_2",
+      "relationship": "extends",
+      "description": "串联电阻Miller补偿运放是简单Miller补偿运放的改进版本",
+      "weight": 0.8,
+      "evidence": "在简单Miller补偿基础上增加串联电阻Rm的两级运放结构",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "9.3",
+  "title": "两级放大器频率补偿结构",
+  "extraction_timestamp": "2025-07-08T16:44:13.121925"
+}

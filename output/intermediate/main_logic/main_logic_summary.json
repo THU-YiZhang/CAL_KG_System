@@ -1,0 +1,16 @@
+{
+  "title": "技术文档",
+  "total_nodes": 18,
+  "total_edges": 17,
+  "knowledge_layers": {
+    "application": 2,
+    "foundation": 2,
+    "intermediate": 14
+  },
+  "difficulty_distribution": {
+    "3": 4,
+    "2": 4,
+    "4": 10
+  },
+  "generation_timestamp": "2025-07-08T15:40:30.968748"
+}

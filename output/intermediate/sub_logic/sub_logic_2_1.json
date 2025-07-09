@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_1_1",
+      "label": "电路元器件",
+      "node_type": "basic_concept",
+      "summary": "电路元器件是构成电路系统不可分割的基本单元，电路功能的实现和性能的提高很大程度上决定于器件的性能。电路元器件主要包含以电阻、电容、电感为代表的无源器件，以及以二极管、双极型晶体管(BJT)、场效应晶体管(MOS管)为代表的有源器件。",
+      "difficulty": 2,
+      "keywords": [
+        "无源器件",
+        "有源器件",
+        "电路功能"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电路元器件是构成电路系统不可分割的基本单元，电路功能的实现和性能的提高很大程度上决定于器件的性能。电路元器件主要包含以电阻、电容、电感为代表的无源器件，以及以二极管、双极型晶体管(BJT)、场效应晶体管(MOS管)为代表的有源器件。"
+    },
+    {
+      "id": "bc_2_1_2",
+      "label": "有源器件",
+      "node_type": "basic_concept",
+      "summary": "有源器件需要特定的静态偏置点才能正常工作，其电参数与静态工作点有关，并随工作点的变化而改变，具有非线性特性。典型的例子包括二极管、双极型晶体管(BJT)和场效应晶体管(MOS管)。",
+      "difficulty": 2,
+      "keywords": [
+        "静态偏置点",
+        "非线性特性",
+        "BJT",
+        "MOS管"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "振荡器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源器件需要特定的静态偏置点才能正常工作，其电参数与静态工作点有关，并随工作点的变化而改变，具有非线性特性。典型的例子包括二极管、双极型晶体管(BJT)和场效应晶体管(MOS管)。"
+    },
+    {
+      "id": "bc_2_1_3",
+      "label": "无源器件",
+      "node_type": "basic_concept",
+      "summary": "无源元件无需静态工作点，只需施加电压或电流即可正常工作，其电参数通常为固定常数，并不随电压或电流工作点的变化而改变，表现为线性特性。典型的例子包括电阻、电容和电感。",
+      "difficulty": 2,
+      "keywords": [
+        "线性特性",
+        "电阻",
+        "电容",
+        "电感"
+      ],
+      "formulas": [],
+      "applications": [
+        "分压电路",
+        "滤波电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "无源元件无需静态工作点，只需施加电压或电流即可正常工作，其电参数通常为固定常数，并不随电压或电流工作点的变化而改变，表现为线性特性。典型的例子包括电阻、电容和电感。"
+    },
+    {
+      "id": "bc_2_1_4",
+      "label": "线性电路",
+      "node_type": "basic_concept",
+      "summary": "线性电路是指满足齐次性与叠加性的线性约束关系的电路，其产生的线性信号失真只有幅度的变化而没有频率的改变。线性电路又称为小信号电路，工作在线性区。",
+      "difficulty": 2,
+      "keywords": [
+        "齐次性",
+        "叠加性",
+        "小信号电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "线性电路是指满足齐次性与叠加性的线性约束关系的电路，其产生的线性信号失真只有幅度的变化而没有频率的改变。线性电路又称为小信号电路，工作在线性区。"
+    },
+    {
+      "id": "bc_2_1_5",
+      "label": "非线性电路",
+      "node_type": "basic_concept",
+      "summary": "非线性电路不满足齐次性与叠加性的线性约束关系，其非线性失真将有新的频率分量产生。典型的非线性电路包括比较器和振荡器。",
+      "difficulty": 2,
+      "keywords": [
+        "非线性失真",
+        "比较器",
+        "振荡器"
+      ],
+      "formulas": [],
+      "applications": [
+        "数字逻辑电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "非线性电路不满足齐次性与叠加性的线性约束关系，其非线性失真将有新的频率分量产生。典型的非线性电路包括比较器和振荡器。"
+    },
+    {
+      "id": "ct_2_1_1",
+      "label": "小信号近似",
+      "node_type": "core_technology",
+      "summary": "小信号近似是指在合适静态点的小信号条件下，将有源器件近似为线性器件，从而实现对交流小信号的线性处理。这种方法广泛应用于模拟放大器的设计中。",
+      "difficulty": 3,
+      "keywords": [
+        "静态点",
+        "线性近似",
+        "交流小信号"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "小信号近似是指在合适静态点的小信号条件下，将有源器件近似为线性器件，从而实现对交流小信号的线性处理。这种方法广泛应用于模拟放大器的设计中。"
+    },
+    {
+      "id": "ct_2_1_2",
+      "label": "MOS管物理模型",
+      "node_type": "core_technology",
+      "summary": "MOS管基于电荷感应的物理模型是CMOS模拟电路设计中的关键模型，包括连续型模型和经典的平方率模型。这些模型用于分析MOS管在不同工作状态下的电学特性。",
+      "difficulty": 3,
+      "keywords": [
+        "电荷感应",
+        "连续型模型",
+        "平方率模型"
+      ],
+      "formulas": [
+        "平方率模型公式"
+      ],
+      "applications": [
+        "CMOS电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管基于电荷感应的物理模型是CMOS模拟电路设计中的关键模型，包括连续型模型和经典的平方率模型。这些模型用于分析MOS管在不同工作状态下的电学特性。"
+    },
+    {
+      "id": "ca_2_1_1",
+      "label": "模拟放大器",
+      "node_type": "circuit_application",
+      "summary": "模拟放大器是一种典型的线性电路，是构成各类线性系统的基本功能单元。它利用小信号近似将有源器件工作在线性区，实现对交流小信号的线性放大。",
+      "difficulty": 4,
+      "keywords": [
+        "线性放大",
+        "交流小信号",
+        "有源器件"
+      ],
+      "formulas": [
+        "增益公式"
+      ],
+      "applications": [
+        "音频放大",
+        "射频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模拟放大器是一种典型的线性电路，是构成各类线性系统的基本功能单元。它利用小信号近似将有源器件工作在线性区，实现对交流小信号的线性放大。"
+    },
+    {
+      "id": "ca_2_1_2",
+      "label": "数字逻辑门电路",
+      "node_type": "circuit_application",
+      "summary": "数字逻辑门电路利用MOS管在非线性的开关导通与截止状态之间切换和转化，实现稳定的非线性状态。基本的数字电路包括随机逻辑门电路。",
+      "difficulty": 4,
+      "keywords": [
+        "MOS管",
+        "开关状态",
+        "逻辑门"
+      ],
+      "formulas": [],
+      "applications": [
+        "数字处理器",
+        "存储器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "数字逻辑门电路利用MOS管在非线性的开关导通与截止状态之间切换和转化，实现稳定的非线性状态。基本的数字电路包括随机逻辑门电路。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_1_1",
+      "target_id": "ct_2_1_1",
+      "relationship": "enables",
+      "description": "电路元器件的基本概念使能了小信号近似技术的应用，因为有源器件的非线性特性需要通过小信号近似来处理。",
+      "weight": 0.8,
+      "evidence": "有源器件的线性近似才能成立，并可实现对交流小信号的线性处理。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_1_2",
+      "target_id": "ct_2_1_1",
+      "relationship": "supports",
+      "description": "有源器件的非线性特性支持了小信号近似技术的应用，因为小信号近似正是针对有源器件的非线性特性进行线性化处理。",
+      "weight": 0.9,
+      "evidence": "只有在合适静态点的小信号条件下，有源器件的线性近似才能成立。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_1_1",
+      "target_id": "ca_2_1_1",
+      "relationship": "implements",
+      "description": "小信号近似技术实现了模拟放大器的设计，因为模拟放大器需要将有源器件工作在线性区。",
+      "weight": 0.85,
+      "evidence": "模拟放大器就是其中一种典型的线性电路，是构成各类线性系统的基本功能单元。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_1_5",
+      "target_id": "ca_2_1_2",
+      "relationship": "applies_to",
+      "description": "非线性电路的概念应用于数字逻辑门电路的设计，因为数字逻辑门利用MOS管的非线性开关特性。",
+      "weight": 0.9,
+      "evidence": "数字逻辑电路利用的就是这样一种稳定的非线性状态。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_1_3",
+      "target_id": "bc_2_1_2",
+      "relationship": "complements",
+      "description": "无源器件的线性特性与有源器件的非线性特性在电路中互补，共同构成完整的电路功能。",
+      "weight": 0.7,
+      "evidence": "电阻分压可以直接为有源器件提供静态偏置电压，正是利用了无源元件的这一特性。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "2.1",
+  "title": "概述",
+  "extraction_timestamp": "2025-07-08T16:32:29.706035"
+}

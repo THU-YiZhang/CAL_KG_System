@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_2_1_1",
+      "label": "传递函数",
+      "node_type": "basic_concept",
+      "summary": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶低通滤波器，传递函数为H(s) = 1/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "频域分析",
+        "系统响应"
+      ],
+      "formulas": [
+        "H(s) = 1/(1 + sRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换",
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶低通滤波器，传递函数为H(s) = 1/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。"
+    },
+    {
+      "id": "bc_3_2_1_2",
+      "label": "截止频率",
+      "node_type": "basic_concept",
+      "summary": "截止频率是滤波器频率响应中信号幅度下降3dB时的频率点，表示滤波器开始显著衰减信号的频率。对于一阶低通滤波器，截止频率计算公式为fc = 1/(2πRC)，其中R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "截止频率",
+        "3dB点",
+        "频率响应"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "分贝概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "截止频率是滤波器频率响应中信号幅度下降3dB时的频率点，表示滤波器开始显著衰减信号的频率。对于一阶低通滤波器，截止频率计算公式为fc = 1/(2πRC)，其中R是电阻值，C是电容值。"
+    },
+    {
+      "id": "ct_3_2_1_1",
+      "label": "一阶低通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "一阶低通滤波器的设计方法基于RC电路，通过选择合适的电阻R和电容C值来实现所需的截止频率。设计步骤包括：1) 确定目标截止频率fc；2) 根据公式fc = 1/(2πRC)计算RC乘积；3) 选择合适的R和C值组合；4) 验证频率响应特性。",
+      "difficulty": 3,
+      "keywords": [
+        "滤波器设计",
+        "RC电路",
+        "参数选择"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一阶低通滤波器的设计方法基于RC电路，通过选择合适的电阻R和电容C值来实现所需的截止频率。设计步骤包括：1) 确定目标截止频率fc；2) 根据公式fc = 1/(2πRC)计算RC乘积；3) 选择合适的R和C值组合；4) 验证频率响应特性。"
+    },
+    {
+      "id": "ca_3_2_1_1",
+      "label": "RC低通滤波器电路",
+      "node_type": "circuit_application",
+      "summary": "基本的一阶RC低通滤波器电路由一个电阻和一个电容组成，电阻串联在输入信号路径上，电容并联在输出端与地之间。该电路结构简单，能有效衰减高频信号，保留低频信号。典型应用包括音频信号处理、抗混叠滤波和噪声抑制等。",
+      "difficulty": 4,
+      "keywords": [
+        "RC电路",
+        "低通滤波",
+        "信号处理"
+      ],
+      "formulas": [
+        "H(s) = 1/(1 + sRC)",
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频设备",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基本的一阶RC低通滤波器电路由一个电阻和一个电容组成，电阻串联在输入信号路径上，电容并联在输出端与地之间。该电路结构简单，能有效衰减高频信号，保留低频信号。典型应用包括音频信号处理、抗混叠滤波和噪声抑制等。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_2_1_1",
+      "target_id": "ct_3_2_1_1",
+      "relationship": "enables",
+      "description": "传递函数的概念使能了一阶低通滤波器的设计方法",
+      "weight": 0.9,
+      "evidence": "传递函数H(s) = 1/(1 + sRC)是滤波器设计的基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2_1_2",
+      "target_id": "ct_3_2_1_1",
+      "relationship": "supports",
+      "description": "截止频率的概念支撑了滤波器设计中的参数选择",
+      "weight": 0.8,
+      "evidence": "截止频率公式fc = 1/(2πRC)直接用于设计计算",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_2_1_1",
+      "target_id": "ca_3_2_1_1",
+      "relationship": "implements",
+      "description": "一阶低通滤波器设计方法实现了RC低通滤波器电路",
+      "weight": 0.85,
+      "evidence": "设计方法指导了RC电路的具体实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_2_1_1",
+      "target_id": "bc_3_2_1_2",
+      "relationship": "relates_to",
+      "description": "传递函数与截止频率密切相关",
+      "weight": 0.7,
+      "evidence": "截止频率可以从传递函数的极点位置推导出来",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "3.2.1",
+  "title": "一阶低通滤波器",
+  "extraction_timestamp": "2025-07-08T15:30:42.255374",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

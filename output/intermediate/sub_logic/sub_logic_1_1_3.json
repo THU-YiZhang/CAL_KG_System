@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_1_3_1",
+      "label": "电感器",
+      "node_type": "basic_concept",
+      "summary": "电感器是一种能够储存磁场能量的被动电子元件，由导线绕制而成，通常具有线圈结构。其核心特性是抵抗电流变化，通过产生感应电动势来维持电流的连续性。",
+      "difficulty": 2,
+      "keywords": [
+        "磁场能量",
+        "被动元件",
+        "线圈"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波电路",
+        "能量存储"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电磁学基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器是一种能够储存磁场能量的被动电子元件，由导线绕制而成，通常具有线圈结构。其核心特性是抵抗电流变化，通过产生感应电动势来维持电流的连续性。"
+    },
+    {
+      "id": "bc_1_1_3_2",
+      "label": "电压-电流关系",
+      "node_type": "basic_concept",
+      "summary": "电感器的电压与电流变化率成正比，数学表达式为v = L(di/dt)，其中v是电压，L是电感值，di/dt是电流随时间的变化率。这个关系体现了电感器抵抗电流变化的特性。",
+      "difficulty": 3,
+      "keywords": [
+        "微分关系",
+        "感应电动势",
+        "时间导数"
+      ],
+      "formulas": [
+        "v = L(di/dt)"
+      ],
+      "applications": [
+        "瞬态分析",
+        "电路建模"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "微积分基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器的电压与电流变化率成正比，数学表达式为v = L(di/dt)，其中v是电压，L是电感值，di/dt是电流随时间的变化率。这个关系体现了电感器抵抗电流变化的特性。"
+    },
+    {
+      "id": "bc_1_1_3_3",
+      "label": "能量储存",
+      "node_type": "basic_concept",
+      "summary": "电感器储存的能量与电感值和电流平方成正比，表达式为W = ½LI²。这个能量以磁场形式储存在电感器中，可以在电流减小时释放。",
+      "difficulty": 2,
+      "keywords": [
+        "磁场能量",
+        "能量公式",
+        "储能元件"
+      ],
+      "formulas": [
+        "W = ½LI²"
+      ],
+      "applications": [
+        "能量转换",
+        "功率调节"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "能量守恒"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器储存的能量与电感值和电流平方成正比，表达式为W = ½LI²。这个能量以磁场形式储存在电感器中，可以在电流减小时释放。"
+    },
+    {
+      "id": "ct_1_1_3_1",
+      "label": "电感值计算",
+      "node_type": "core_technology",
+      "summary": "通过测量或计算确定电感器的电感值L，这是分析电感电路的基础。可以通过电压-电流关系推导或使用专用仪器测量。",
+      "difficulty": 3,
+      "keywords": [
+        "参数提取",
+        "特性分析",
+        "测量技术"
+      ],
+      "formulas": [
+        "L = v/(di/dt)"
+      ],
+      "applications": [
+        "电路设计",
+        "元件选型"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过测量或计算确定电感器的电感值L，这是分析电感电路的基础。可以通过电压-电流关系推导或使用专用仪器测量。"
+    },
+    {
+      "id": "ct_1_1_3_2",
+      "label": "瞬态分析",
+      "node_type": "core_technology",
+      "summary": "利用电压-电流微分关系分析电感电路在开关切换等瞬态条件下的响应特性，需要求解微分方程。",
+      "difficulty": 4,
+      "keywords": [
+        "时间响应",
+        "暂态分析",
+        "微分方程"
+      ],
+      "formulas": [
+        "v = L(di/dt)"
+      ],
+      "applications": [
+        "开关电路",
+        "电源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电压-电流微分关系分析电感电路在开关切换等瞬态条件下的响应特性，需要求解微分方程。"
+    },
+    {
+      "id": "ca_1_1_3_1",
+      "label": "LC滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电感和电容组成的滤波电路，利用电感阻止高频信号、电容旁路高频信号的特性实现滤波功能。",
+      "difficulty": 4,
+      "keywords": [
+        "无源滤波",
+        "频率选择",
+        "谐振电路"
+      ],
+      "formulas": [
+        "谐振频率公式"
+      ],
+      "applications": [
+        "射频电路",
+        "电源滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电感和电容组成的滤波电路，利用电感阻止高频信号、电容旁路高频信号的特性实现滤波功能。"
+    },
+    {
+      "id": "ca_1_1_3_2",
+      "label": "开关电源储能",
+      "node_type": "circuit_application",
+      "summary": "利用电感储能特性，在开关电源中实现能量的临时存储和转换，提高电源效率。",
+      "difficulty": 5,
+      "keywords": [
+        "DC-DC转换",
+        "功率调节",
+        "能量缓冲"
+      ],
+      "formulas": [
+        "W = ½LI²"
+      ],
+      "applications": [
+        "电源管理",
+        "电压转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电感储能特性，在开关电源中实现能量的临时存储和转换，提高电源效率。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_1_3_1",
+      "target_id": "ct_1_1_3_1",
+      "relationship": "enables",
+      "description": "电感器的基本定义使能了电感值计算技术的实现",
+      "weight": 0.9,
+      "evidence": "必须先理解电感器是什么，才能进行其参数计算",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_3_2",
+      "target_id": "ct_1_1_3_2",
+      "relationship": "supports",
+      "description": "电压-电流关系支撑了瞬态分析技术的理论基础",
+      "weight": 0.95,
+      "evidence": "瞬态分析直接基于电压-电流微分关系",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_3_3",
+      "target_id": "ca_1_1_3_2",
+      "relationship": "applies_to",
+      "description": "能量储存公式直接应用于开关电源储能电路设计",
+      "weight": 0.85,
+      "evidence": "开关电源设计需要计算电感储能能力",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_3_1",
+      "target_id": "ca_1_1_3_1",
+      "relationship": "implements",
+      "description": "电感值计算技术实现了LC滤波器的精确设计",
+      "weight": 0.8,
+      "evidence": "滤波器设计需要准确知道电感参数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_3_2",
+      "target_id": "bc_1_1_3_3",
+      "relationship": "relates_to",
+      "description": "电压-电流关系与能量储存公式密切相关",
+      "weight": 0.7,
+      "evidence": "两者都是描述电感器特性的基本方程",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "1.1.3",
+  "title": "电感元件",
+  "extraction_timestamp": "2025-07-08T15:29:46.315026",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

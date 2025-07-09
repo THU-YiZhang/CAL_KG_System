@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_6_1",
+      "label": "MOS晶体管模型",
+      "node_type": "basic_concept",
+      "summary": "MOS晶体管模型是描述MOSFET在不同工作区域行为的数学模型，用于电路分析和设计。",
+      "difficulty": 3,
+      "keywords": [
+        "MOSFET",
+        "模型",
+        "工作区域"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路分析",
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS晶体管模型是描述MOSFET在不同工作区域行为的数学模型，用于电路分析和设计。"
+    },
+    {
+      "id": "bc_2_6_2",
+      "label": "低功耗设计",
+      "node_type": "basic_concept",
+      "summary": "低功耗设计是指在电路设计中通过各种技术手段降低电路的功耗，以满足便携式设备和电池供电设备的需求。",
+      "difficulty": 3,
+      "keywords": [
+        "低功耗",
+        "设计",
+        "电池供电"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "电池供电设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路设计",
+        "功耗分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低功耗设计是指在电路设计中通过各种技术手段降低电路的功耗，以满足便携式设备和电池供电设备的需求。"
+    },
+    {
+      "id": "ct_2_6_1",
+      "label": "模拟集成电路设计",
+      "node_type": "core_technology",
+      "summary": "模拟集成电路设计是指设计和实现模拟信号处理电路的工程技术，包括放大器、滤波器、振荡器等。",
+      "difficulty": 4,
+      "keywords": [
+        "模拟电路",
+        "集成电路",
+        "设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模拟集成电路设计是指设计和实现模拟信号处理电路的工程技术，包括放大器、滤波器、振荡器等。"
+    },
+    {
+      "id": "ct_2_6_2",
+      "label": "CMOS电路设计",
+      "node_type": "core_technology",
+      "summary": "CMOS电路设计是指使用互补金属氧化物半导体技术设计和实现数字和模拟电路的工程技术。",
+      "difficulty": 4,
+      "keywords": [
+        "CMOS",
+        "电路设计",
+        "集成电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "数字电路",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CMOS电路设计是指使用互补金属氧化物半导体技术设计和实现数字和模拟电路的工程技术。"
+    },
+    {
+      "id": "ct_2_6_3",
+      "label": "分形电容器设计",
+      "node_type": "core_technology",
+      "summary": "分形电容器设计是指利用分形几何结构设计和实现高密度电容器的技术。",
+      "difficulty": 4,
+      "keywords": [
+        "分形",
+        "电容器",
+        "高密度"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频电路",
+        "集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "分形电容器设计是指利用分形几何结构设计和实现高密度电容器的技术。"
+    },
+    {
+      "id": "ca_2_6_1",
+      "label": "低电压低电流应用电路",
+      "node_type": "circuit_application",
+      "summary": "低电压低电流应用电路是指工作在低电压和低电流条件下的电路，通常用于便携式设备和电池供电设备。",
+      "difficulty": 4,
+      "keywords": [
+        "低电压",
+        "低电流",
+        "便携式设备"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "电池供电设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压低电流应用电路是指工作在低电压和低电流条件下的电路，通常用于便携式设备和电池供电设备。"
+    },
+    {
+      "id": "ca_2_6_2",
+      "label": "短沟道MOS器件电路",
+      "node_type": "circuit_application",
+      "summary": "短沟道MOS器件电路是指使用短沟道MOSFET设计和实现的电路，通常用于高频和高性能应用。",
+      "difficulty": 4,
+      "keywords": [
+        "短沟道",
+        "MOSFET",
+        "高频"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频电路",
+        "高性能电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "短沟道MOS器件电路是指使用短沟道MOSFET设计和实现的电路，通常用于高频和高性能应用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_6_1",
+      "target_id": "ct_2_6_1",
+      "relationship": "enables",
+      "description": "MOS晶体管模型为模拟集成电路设计提供了理论基础和分析工具。",
+      "weight": 0.9,
+      "evidence": "参考文献[2]和[4]讨论了MOS晶体管模型在电路设计中的应用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_6_2",
+      "target_id": "ct_2_6_1",
+      "relationship": "supports",
+      "description": "低功耗设计理念支持模拟集成电路设计中的功耗优化。",
+      "weight": 0.8,
+      "evidence": "参考文献[7]讨论了低功耗设计在模拟电路中的应用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_6_1",
+      "target_id": "ca_2_6_1",
+      "relationship": "implements",
+      "description": "模拟集成电路设计技术实现了低电压低电流应用电路的设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[2]和[7]讨论了低电压低电流电路的设计方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_6_2",
+      "target_id": "ca_2_6_2",
+      "relationship": "implements",
+      "description": "CMOS电路设计技术实现了短沟道MOS器件电路的设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[3]和[5]讨论了短沟道MOS器件的设计方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_6_3",
+      "target_id": "ca_2_6_1",
+      "relationship": "applies_to",
+      "description": "分形电容器设计技术应用于低电压低电流应用电路中的电容设计。",
+      "weight": 0.7,
+      "evidence": "参考文献[6]讨论了分形电容器在低功耗电路中的应用。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.6",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:33:35.282009"
+}

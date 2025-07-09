@@ -1,0 +1,277 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_2_1",
+      "label": "集成运算放大器",
+      "node_type": "basic_concept",
+      "summary": "集成运算放大器（运放）是一种高增益的电压放大器，具有差分输入和单端输出。其理想特性包括无限大的开环增益、无限大的输入阻抗和零输出阻抗。运放广泛应用于模拟信号处理中，如放大、滤波、积分等。",
+      "difficulty": 2,
+      "keywords": [
+        "高增益",
+        "差分输入",
+        "单端输出"
+      ],
+      "formulas": [
+        "A_v = V_out / (V_+ - V_-)"
+      ],
+      "applications": [
+        "信号放大",
+        "滤波",
+        "积分"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "集成运算放大器（运放）是一种高增益的电压放大器，具有差分输入和单端输出。其理想特性包括无限大的开环增益、无限大的输入阻抗和零输出阻抗。运放广泛应用于模拟信号处理中，如放大、滤波、积分等。"
+    },
+    {
+      "id": "bc_1_2_2",
+      "label": "静态工作点",
+      "node_type": "basic_concept",
+      "summary": "静态工作点是指电路在无信号输入时的直流工作状态，是电路稳定工作的基础。对于运放电路，静态工作点的设计尤为重要，因为它直接影响电路的动态性能和稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "直流工作状态",
+        "稳定性",
+        "动态性能"
+      ],
+      "formulas": [
+        "V_Q = V_CC / 2"
+      ],
+      "applications": [
+        "运放设计",
+        "偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "直流电路分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "静态工作点是指电路在无信号输入时的直流工作状态，是电路稳定工作的基础。对于运放电路，静态工作点的设计尤为重要，因为它直接影响电路的动态性能和稳定性。"
+    },
+    {
+      "id": "bc_1_2_3",
+      "label": "负反馈",
+      "node_type": "basic_concept",
+      "summary": "负反馈是将输出信号的一部分反相后反馈到输入端，用于稳定放大器的增益、减少失真和扩展带宽。运放通常在闭环负反馈配置下工作，以实现稳定的线性放大。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "增益控制",
+        "失真减少"
+      ],
+      "formulas": [
+        "A_f = A / (1 + A*β)"
+      ],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈是将输出信号的一部分反相后反馈到输入端，用于稳定放大器的增益、减少失真和扩展带宽。运放通常在闭环负反馈配置下工作，以实现稳定的线性放大。"
+    },
+    {
+      "id": "ct_1_2_1",
+      "label": "偏置电路设计",
+      "node_type": "core_technology",
+      "summary": "偏置电路用于为运放提供稳定的静态工作点，是运放设计的基础。高性能偏置电路需要考虑工艺变化、温度漂移等因素，通常采用电流镜、带隙基准等结构实现。",
+      "difficulty": 3,
+      "keywords": [
+        "电流镜",
+        "带隙基准",
+        "温度稳定性"
+      ],
+      "formulas": [
+        "I_ref = (V_T / R) * ln(N)"
+      ],
+      "applications": [
+        "运放设计",
+        "电压基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "偏置电路用于为运放提供稳定的静态工作点，是运放设计的基础。高性能偏置电路需要考虑工艺变化、温度漂移等因素，通常采用电流镜、带隙基准等结构实现。"
+    },
+    {
+      "id": "ct_1_2_2",
+      "label": "频率补偿",
+      "node_type": "core_technology",
+      "summary": "频率补偿是确保运放在闭环负反馈下稳定的关键技术，通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡。常见的补偿技术包括米勒补偿、超前补偿等。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性",
+        "米勒补偿",
+        "超前补偿"
+      ],
+      "formulas": [
+        "f_c = 1 / (2πRC)"
+      ],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿是确保运放在闭环负反馈下稳定的关键技术，通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡。常见的补偿技术包括米勒补偿、超前补偿等。"
+    },
+    {
+      "id": "ct_1_2_3",
+      "label": "非线性信号处理",
+      "node_type": "core_technology",
+      "summary": "运放在大信号作用下可工作在非线性区，实现比较器、振荡器等非线性功能。非线性信号处理需要分析运放的饱和特性和切换速度，设计时需权衡线性与非线性性能。",
+      "difficulty": 3,
+      "keywords": [
+        "比较器",
+        "振荡器",
+        "饱和特性"
+      ],
+      "formulas": [
+        "t_sw = (V_sat / SR)"
+      ],
+      "applications": [
+        "电压比较器",
+        "振荡器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运放在大信号作用下可工作在非线性区，实现比较器、振荡器等非线性功能。非线性信号处理需要分析运放的饱和特性和切换速度，设计时需权衡线性与非线性性能。"
+    },
+    {
+      "id": "ca_1_2_1",
+      "label": "电压比较器",
+      "node_type": "circuit_application",
+      "summary": "电压比较器是一种将输入电压与参考电压进行比较的非线性电路，输出为高或低电平。运放通过工作在开环或正反馈模式下实现比较器功能，具有高增益和快速响应特点。",
+      "difficulty": 4,
+      "keywords": [
+        "非线性",
+        "快速响应",
+        "电平检测"
+      ],
+      "formulas": [
+        "V_out = V_high if V_in > V_ref, else V_low"
+      ],
+      "applications": [
+        "ADC",
+        "电平检测"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压比较器是一种将输入电压与参考电压进行比较的非线性电路，输出为高或低电平。运放通过工作在开环或正反馈模式下实现比较器功能，具有高增益和快速响应特点。"
+    },
+    {
+      "id": "ca_1_2_2",
+      "label": "振荡器",
+      "node_type": "circuit_application",
+      "summary": "振荡器是利用运放的非线性特性产生周期性信号的电路，常见结构包括RC振荡器、晶体振荡器等。设计时需考虑频率稳定性、起振条件和波形质量。",
+      "difficulty": 4,
+      "keywords": [
+        "周期性信号",
+        "频率稳定性",
+        "起振条件"
+      ],
+      "formulas": [
+        "f_osc = 1 / (2π√(LC))"
+      ],
+      "applications": [
+        "时钟生成",
+        "信号源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "振荡器是利用运放的非线性特性产生周期性信号的电路，常见结构包括RC振荡器、晶体振荡器等。设计时需考虑频率稳定性、起振条件和波形质量。"
+    },
+    {
+      "id": "ca_1_2_3",
+      "label": "数据转换器",
+      "node_type": "circuit_application",
+      "summary": "数据转换器（ADC/DAC）是数模混合系统的核心模块，利用运放的线性放大和非线性切换功能实现模拟与数字信号的相互转换。设计需兼顾精度、速度和功耗。",
+      "difficulty": 4,
+      "keywords": [
+        "ADC",
+        "DAC",
+        "精度"
+      ],
+      "formulas": [
+        "SNR = 6.02N + 1.76 dB"
+      ],
+      "applications": [
+        "通信系统",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "数据转换器（ADC/DAC）是数模混合系统的核心模块，利用运放的线性放大和非线性切换功能实现模拟与数字信号的相互转换。设计需兼顾精度、速度和功耗。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_2_1",
+      "target_id": "ct_1_2_1",
+      "relationship": "enables",
+      "description": "集成运放的高增益特性使能了偏置电路的设计，偏置电路为运放提供稳定的静态工作点。",
+      "weight": 0.9,
+      "evidence": "运放电路的设计一方面建立在静态偏置电路分析与设计基础上",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_2_3",
+      "target_id": "ct_1_2_2",
+      "relationship": "supports",
+      "description": "负反馈理论支撑了频率补偿技术的实现，确保运放在闭环下的稳定性。",
+      "weight": 0.8,
+      "evidence": "运放的设计与应用必然涉及到模拟系统方面的相关知识，包括系统的频率响应特性、系统的稳定性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_2_3",
+      "target_id": "ca_1_2_1",
+      "relationship": "implements",
+      "description": "非线性信号处理技术实现了电压比较器的功能，利用运放的饱和特性。",
+      "weight": 0.85,
+      "evidence": "运放结构在大信号作用下，工作在非线性开关工作区，表现出强烈的非线性特性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_2_2",
+      "target_id": "ca_1_2_2",
+      "relationship": "applies_to",
+      "description": "频率补偿技术应用于振荡器设计，确保振荡信号的稳定性和纯度。",
+      "weight": 0.75,
+      "evidence": "通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_2_2",
+      "target_id": "ct_1_2_1",
+      "relationship": "depends_on",
+      "description": "偏置电路设计依赖于静态工作点的理论，确保电路的直流稳定性。",
+      "weight": 0.7,
+      "evidence": "稳定的偏置电路设计除了应具备器件物理、工艺版图方面的基础知识外，必然涉及电路的瞬态启动和动态变化性能",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "1.2",
+  "title": "集成运放的基础地位",
+  "extraction_timestamp": "2025-07-08T16:32:38.906320"
+}

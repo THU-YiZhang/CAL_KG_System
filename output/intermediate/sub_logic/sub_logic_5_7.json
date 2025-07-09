@@ -1,0 +1,182 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_7_1",
+      "label": "差分放大器",
+      "node_type": "basic_concept",
+      "summary": "差分放大器是一种放大两个输入信号差值的电路，具有高共模抑制比(CMRR)和低噪声的特点。在CMOS技术中，差分放大器通常采用对称结构设计。",
+      "difficulty": 2,
+      "keywords": [
+        "差分输入",
+        "共模抑制比",
+        "对称结构"
+      ],
+      "formulas": [
+        "CMRR = 20log(Ad/Ac)"
+      ],
+      "applications": [
+        "运算放大器输入级",
+        "传感器接口电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOSFET工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分放大器是一种放大两个输入信号差值的电路，具有高共模抑制比(CMRR)和低噪声的特点。在CMOS技术中，差分放大器通常采用对称结构设计。"
+    },
+    {
+      "id": "bc_5_7_2",
+      "label": "电流模式运算",
+      "node_type": "basic_concept",
+      "summary": "电流模式运算放大器直接处理电流信号而非电压信号，具有高速、宽带宽的特点。其设计需要考虑电流镜匹配和电流传输特性。",
+      "difficulty": 3,
+      "keywords": [
+        "电流镜",
+        "宽带宽",
+        "高速"
+      ],
+      "formulas": [
+        "GBW = gm/(2πCL)"
+      ],
+      "applications": [
+        "高速信号处理",
+        "数据转换器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电流镜原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流模式运算放大器直接处理电流信号而非电压信号，具有高速、宽带宽的特点。其设计需要考虑电流镜匹配和电流传输特性。"
+    },
+    {
+      "id": "ct_5_7_1",
+      "label": "有源负载设计",
+      "node_type": "core_technology",
+      "summary": "在CMOS差分放大器中采用有源负载可以提高增益和线性度。常见技术包括电流源负载和共源共栅结构，需要精确匹配晶体管尺寸。",
+      "difficulty": 3,
+      "keywords": [
+        "电流源负载",
+        "共源共栅",
+        "增益提升"
+      ],
+      "formulas": [
+        "Av = gm*ro"
+      ],
+      "applications": [
+        "高增益放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在CMOS差分放大器中采用有源负载可以提高增益和线性度。常见技术包括电流源负载和共源共栅结构，需要精确匹配晶体管尺寸。"
+    },
+    {
+      "id": "ct_5_7_2",
+      "label": "动态偏置技术",
+      "node_type": "core_technology",
+      "summary": "通过动态调整输出级偏置电流来提高功率效率的技术，可以在保持性能的同时降低静态功耗。需要精确的偏置控制电路设计。",
+      "difficulty": 4,
+      "keywords": [
+        "功率效率",
+        "自适应偏置",
+        "低功耗"
+      ],
+      "formulas": [
+        "η = Pout/Pdc"
+      ],
+      "applications": [
+        "低电压运算放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过动态调整输出级偏置电流来提高功率效率的技术，可以在保持性能的同时降低静态功耗。需要精确的偏置控制电路设计。"
+    },
+    {
+      "id": "ca_5_7_1",
+      "label": "CMOS差分放大器",
+      "node_type": "circuit_application",
+      "summary": "采用CMOS工艺实现的差分放大器，具有单端输出和有源负载。典型结构包括差分对、有源负载和偏置电路，适用于低噪声应用。",
+      "difficulty": 4,
+      "keywords": [
+        "差分对",
+        "单端输出",
+        "低噪声"
+      ],
+      "formulas": [
+        "SNR = 20log(Vsig/Vnoise)"
+      ],
+      "applications": [
+        "传感器接口",
+        "ADC前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用CMOS工艺实现的差分放大器，具有单端输出和有源负载。典型结构包括差分对、有源负载和偏置电路，适用于低噪声应用。"
+    },
+    {
+      "id": "ca_5_7_2",
+      "label": "超Class AB OTA",
+      "node_type": "circuit_application",
+      "summary": "低电压超Class AB运算跨导放大器，具有极高的压摆率和功率效率。采用动态偏置输出级和自适应偏置技术，适用于便携式设备。",
+      "difficulty": 5,
+      "keywords": [
+        "高压摆率",
+        "低电压",
+        "功率效率"
+      ],
+      "formulas": [
+        "SR = Iout/CL"
+      ],
+      "applications": [
+        "电池供电系统",
+        "音频处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压超Class AB运算跨导放大器，具有极高的压摆率和功率效率。采用动态偏置输出级和自适应偏置技术，适用于便携式设备。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_7_1",
+      "target_id": "ct_5_7_1",
+      "relationship": "enables",
+      "description": "差分放大器的基本原理使能有源负载技术的应用",
+      "weight": 0.9,
+      "evidence": "参考文献[1]中分析了CMOS差分放大器与有源负载的结合",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_7_2",
+      "target_id": "ca_5_7_2",
+      "relationship": "implements",
+      "description": "动态偏置技术在超Class AB OTA中得到具体实现",
+      "weight": 0.85,
+      "evidence": "参考文献[8]讨论了1.2V CMOS运放中的动态偏置输出级",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_7_2",
+      "target_id": "ca_5_7_1",
+      "relationship": "supports",
+      "description": "电流模式运算原理支持差分输入输出放大器的设计",
+      "weight": 0.8,
+      "evidence": "参考文献[2]设计了差分输入输出的电流模式运算放大器",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.7",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:37:51.997200"
+}

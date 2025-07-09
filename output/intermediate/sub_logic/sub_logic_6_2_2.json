@@ -1,0 +1,202 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_2_2_1",
+      "label": "无限冲激响应滤波器",
+      "node_type": "basic_concept",
+      "summary": "无限冲激响应滤波器（IIR滤波器）是一种数字滤波器，其输出不仅依赖于当前和过去的输入，还依赖于过去的输出。这种递归特性使得IIR滤波器具有无限长的冲激响应。IIR滤波器通常具有较高的计算效率，但可能因为递归结构而存在稳定性问题。",
+      "difficulty": 3,
+      "keywords": [
+        "IIR滤波器",
+        "递归",
+        "冲激响应"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + ... + bMz^-M) / (1 + a1z^-1 + ... + aNz^-N)"
+      ],
+      "applications": [
+        "音频处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "数字信号处理",
+        "Z变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "无限冲激响应滤波器（IIR滤波器）是一种数字滤波器，其输出不仅依赖于当前和过去的输入，还依赖于过去的输出。这种递归特性使得IIR滤波器具有无限长的冲激响应。IIR滤波器通常具有较高的计算效率，但可能因为递归结构而存在稳定性问题。"
+    },
+    {
+      "id": "bc_6_2_2_2",
+      "label": "滤波器稳定性",
+      "node_type": "basic_concept",
+      "summary": "滤波器稳定性是指滤波器在输入有界时，输出也是有界的。对于IIR滤波器，稳定性取决于其极点是否位于单位圆内。如果极点位于单位圆内，滤波器是稳定的；否则，滤波器可能不稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性",
+        "极点",
+        "单位圆"
+      ],
+      "formulas": [
+        "|p_i| < 1, 其中p_i是极点"
+      ],
+      "applications": [
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "系统稳定性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器稳定性是指滤波器在输入有界时，输出也是有界的。对于IIR滤波器，稳定性取决于其极点是否位于单位圆内。如果极点位于单位圆内，滤波器是稳定的；否则，滤波器可能不稳定。"
+    },
+    {
+      "id": "ct_6_2_2_1",
+      "label": "IIR滤波器设计方法",
+      "node_type": "core_technology",
+      "summary": "IIR滤波器的设计通常基于模拟滤波器的设计方法，通过双线性变换或脉冲响应不变法将模拟滤波器转换为数字滤波器。设计过程中需要考虑滤波器的稳定性、频率响应和计算复杂度。",
+      "difficulty": 4,
+      "keywords": [
+        "双线性变换",
+        "脉冲响应不变法",
+        "频率响应"
+      ],
+      "formulas": [
+        "s = (2/T)(1 - z^-1)/(1 + z^-1)"
+      ],
+      "applications": [
+        "数字滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "IIR滤波器的设计通常基于模拟滤波器的设计方法，通过双线性变换或脉冲响应不变法将模拟滤波器转换为数字滤波器。设计过程中需要考虑滤波器的稳定性、频率响应和计算复杂度。"
+    },
+    {
+      "id": "ct_6_2_2_2",
+      "label": "稳定性分析",
+      "node_type": "core_technology",
+      "summary": "稳定性分析是IIR滤波器设计中的关键步骤，通过分析滤波器的极点位置来判断其稳定性。常用的方法包括极点图分析和稳定性判据（如Routh-Hurwitz判据的数字化版本）。",
+      "difficulty": 4,
+      "keywords": [
+        "极点图",
+        "Routh-Hurwitz判据",
+        "稳定性判据"
+      ],
+      "formulas": [
+        "|p_i| < 1"
+      ],
+      "applications": [
+        "滤波器验证"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "稳定性分析是IIR滤波器设计中的关键步骤，通过分析滤波器的极点位置来判断其稳定性。常用的方法包括极点图分析和稳定性判据（如Routh-Hurwitz判据的数字化版本）。"
+    },
+    {
+      "id": "ca_6_2_2_1",
+      "label": "音频均衡器",
+      "node_type": "circuit_application",
+      "summary": "音频均衡器是一种常见的IIR滤波器应用，用于调整音频信号的频率响应。通过设计多个IIR滤波器（如低通、高通、带通滤波器），可以实现对不同频段的增益控制。",
+      "difficulty": 4,
+      "keywords": [
+        "音频处理",
+        "均衡器",
+        "频段控制"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + b2z^-2) / (1 + a1z^-1 + a2z^-2)"
+      ],
+      "applications": [
+        "音乐制作",
+        "音响系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "音频均衡器是一种常见的IIR滤波器应用，用于调整音频信号的频率响应。通过设计多个IIR滤波器（如低通、高通、带通滤波器），可以实现对不同频段的增益控制。"
+    },
+    {
+      "id": "ca_6_2_2_2",
+      "label": "通信系统中的信道滤波器",
+      "node_type": "circuit_application",
+      "summary": "在通信系统中，IIR滤波器常用于信道滤波，以去除噪声和干扰。由于其高效的计算性能，IIR滤波器特别适合实时信号处理应用。",
+      "difficulty": 4,
+      "keywords": [
+        "通信系统",
+        "信道滤波",
+        "实时处理"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + ... + bMz^-M) / (1 + a1z^-1 + ... + aNz^-N)"
+      ],
+      "applications": [
+        "无线通信",
+        "数字广播"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在通信系统中，IIR滤波器常用于信道滤波，以去除噪声和干扰。由于其高效的计算性能，IIR滤波器特别适合实时信号处理应用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_2_2_1",
+      "target_id": "ct_6_2_2_1",
+      "relationship": "enables",
+      "description": "无限冲激响应滤波器的基本概念使能了IIR滤波器的设计方法。",
+      "weight": 0.9,
+      "evidence": "IIR滤波器的递归特性是其设计方法的基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_2_2",
+      "target_id": "ct_6_2_2_2",
+      "relationship": "supports",
+      "description": "滤波器稳定性的概念支撑了稳定性分析方法。",
+      "weight": 0.8,
+      "evidence": "稳定性分析依赖于极点的位置判断。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_2_1",
+      "target_id": "ca_6_2_2_1",
+      "relationship": "implements",
+      "description": "IIR滤波器设计方法实现了音频均衡器的具体应用。",
+      "weight": 0.85,
+      "evidence": "音频均衡器通过IIR滤波器设计方法实现频段控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_2_1",
+      "target_id": "ca_6_2_2_2",
+      "relationship": "applies_to",
+      "description": "IIR滤波器设计方法应用于通信系统中的信道滤波器。",
+      "weight": 0.85,
+      "evidence": "信道滤波器利用IIR滤波器的高效计算性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_2_1",
+      "target_id": "bc_6_2_2_2",
+      "relationship": "relates_to",
+      "description": "无限冲激响应滤波器与滤波器稳定性密切相关。",
+      "weight": 0.7,
+      "evidence": "IIR滤波器的递归特性可能导致稳定性问题。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "6.2.2",
+  "title": "IIR滤波器",
+  "extraction_timestamp": "2025-07-08T15:32:50.526841",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

@@ -1,0 +1,200 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_6_1",
+      "label": "嵌套米勒补偿",
+      "node_type": "basic_concept",
+      "summary": "一种用于多级放大器的频率补偿技术，通过在放大器各级之间引入补偿电容来改善频率响应和稳定性。基本原理是利用米勒效应将补偿电容等效放大，从而用较小的物理电容实现较大的等效补偿电容。",
+      "difficulty": 3,
+      "keywords": [
+        "频率补偿",
+        "米勒效应",
+        "稳定性"
+      ],
+      "formulas": [
+        "Z_out = 1/(sC_c(1+A_v))"
+      ],
+      "applications": [
+        "多级放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器基础",
+        "频率响应分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一种用于多级放大器的频率补偿技术，通过在放大器各级之间引入补偿电容来改善频率响应和稳定性。基本原理是利用米勒效应将补偿电容等效放大，从而用较小的物理电容实现较大的等效补偿电容。"
+    },
+    {
+      "id": "bc_9_6_2",
+      "label": "右半平面零点",
+      "node_type": "basic_concept",
+      "summary": "在传递函数中位于右半复平面的零点，会导致相位滞后和增益增加，严重影响放大器的稳定性。在频率补偿设计中需要特别注意消除或移动这些零点。",
+      "difficulty": 4,
+      "keywords": [
+        "稳定性",
+        "传递函数",
+        "相位裕度"
+      ],
+      "formulas": [
+        "ω_z = g_m/C_c"
+      ],
+      "applications": [
+        "补偿电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "控制系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在传递函数中位于右半复平面的零点，会导致相位滞后和增益增加，严重影响放大器的稳定性。在频率补偿设计中需要特别注意消除或移动这些零点。"
+    },
+    {
+      "id": "ct_9_6_1",
+      "label": "正反馈频率补偿",
+      "node_type": "core_technology",
+      "summary": "一种创新的补偿技术，通过引入受控的正反馈路径来抵消传统补偿技术中的右半平面零点问题。该方法特别适合低电压低功耗的三级放大器设计，能显著提高相位裕度。",
+      "difficulty": 4,
+      "keywords": [
+        "正反馈",
+        "相位裕度",
+        "低功耗"
+      ],
+      "formulas": [
+        "GBW = g_m1/C_c"
+      ],
+      "applications": [
+        "三级放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一种创新的补偿技术，通过引入受控的正反馈路径来抵消传统补偿技术中的右半平面零点问题。该方法特别适合低电压低功耗的三级放大器设计，能显著提高相位裕度。"
+    },
+    {
+      "id": "ct_9_6_2",
+      "label": "增益增强前馈路径补偿",
+      "node_type": "core_technology",
+      "summary": "通过在前馈路径中增加增益级来增强补偿效果的技术，特别适用于重容性负载情况。该方法能有效实现极零点对消，提高放大器的稳定性和带宽。",
+      "difficulty": 4,
+      "keywords": [
+        "前馈补偿",
+        "极零点对消",
+        "重容性负载"
+      ],
+      "formulas": [
+        "ω_p2 = g_m2/C_L"
+      ],
+      "applications": [
+        "驱动大电容负载"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过在前馈路径中增加增益级来增强补偿效果的技术，特别适用于重容性负载情况。该方法能有效实现极零点对消，提高放大器的稳定性和带宽。"
+    },
+    {
+      "id": "ca_9_6_1",
+      "label": "低电压低功耗CMOS放大器",
+      "node_type": "circuit_application",
+      "summary": "采用嵌套米勒补偿技术的多级CMOS放大器，专为低电压(1V以下)和低功耗应用设计。电路结构通常包括三级增益级、补偿电容网络和偏置电路，在保持良好稳定性的同时实现高增益带宽积。",
+      "difficulty": 4,
+      "keywords": [
+        "CMOS",
+        "低电压",
+        "多级"
+      ],
+      "formulas": [
+        "PSRR = 20log(A_v/A_ps)"
+      ],
+      "applications": [
+        "便携式设备",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用嵌套米勒补偿技术的多级CMOS放大器，专为低电压(1V以下)和低功耗应用设计。电路结构通常包括三级增益级、补偿电容网络和偏置电路，在保持良好稳定性的同时实现高增益带宽积。"
+    },
+    {
+      "id": "ca_9_6_2",
+      "label": "大容性负载驱动器",
+      "node_type": "circuit_application",
+      "summary": "专门设计用于驱动大电容负载(>1nF)的放大器电路，采用增益增强前馈路径补偿技术。电路特点包括输出缓冲级、前馈补偿路径和自适应偏置，能够在重负载下保持稳定性和快速建立时间。",
+      "difficulty": 5,
+      "keywords": [
+        "大电容",
+        "驱动器",
+        "建立时间"
+      ],
+      "formulas": [
+        "t_settling = 4/ζω_n"
+      ],
+      "applications": [
+        "LCD驱动",
+        "功率管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "专门设计用于驱动大电容负载(>1nF)的放大器电路，采用增益增强前馈路径补偿技术。电路特点包括输出缓冲级、前馈补偿路径和自适应偏置，能够在重负载下保持稳定性和快速建立时间。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_6_1",
+      "target_id": "ct_9_6_1",
+      "relationship": "enables",
+      "description": "嵌套米勒补偿的基本原理为正反馈频率补偿技术提供了理论基础",
+      "weight": 0.9,
+      "evidence": "文献[5]提出正反馈补偿是在传统嵌套米勒补偿基础上的创新",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_6_2",
+      "target_id": "ct_9_6_2",
+      "relationship": "supports",
+      "description": "对右半平面零点的理解是开发增益增强前馈路径补偿技术的关键",
+      "weight": 0.85,
+      "evidence": "文献[4]专门研究右半平面零点消除技术",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_6_1",
+      "target_id": "ca_9_6_1",
+      "relationship": "implements",
+      "description": "正反馈频率补偿技术被具体实现在低电压低功耗CMOS放大器中",
+      "weight": 0.95,
+      "evidence": "文献[5]详细描述了该技术在三级放大器中的应用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_6_2",
+      "target_id": "ca_9_6_2",
+      "relationship": "applies_to",
+      "description": "增益增强前馈路径补偿技术专门应用于大容性负载驱动器设计",
+      "weight": 0.9,
+      "evidence": "文献[7]展示了该技术在重容性负载下的应用效果",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_6_1",
+      "target_id": "bc_9_6_2",
+      "relationship": "relates_to",
+      "description": "嵌套米勒补偿设计与右半平面零点问题密切相关",
+      "weight": 0.8,
+      "evidence": "多篇文献同时讨论这两个主题",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "9.6",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:44:20.779880"
+}

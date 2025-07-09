@@ -1,0 +1,154 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_2_1_1",
+      "label": "Buck变换器",
+      "node_type": "basic_concept",
+      "summary": "Buck变换器是一种降压型DC-DC变换器，能够将输入直流电压转换为较低的输出直流电压。其工作原理基于开关管的周期性导通和关断，通过电感和电容的储能和释能实现电压转换。",
+      "difficulty": 2,
+      "keywords": [
+        "降压",
+        "DC-DC",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "电源管理",
+        "电压转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础",
+        "开关电源原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Buck变换器是一种降压型DC-DC变换器，能够将输入直流电压转换为较低的输出直流电压。其工作原理基于开关管的周期性导通和关断，通过电感和电容的储能和释能实现电压转换。"
+    },
+    {
+      "id": "bc_5_2_1_2",
+      "label": "占空比(D)",
+      "node_type": "basic_concept",
+      "summary": "占空比是指开关管导通时间与开关周期的比值，用于控制Buck变换器的输出电压。在Buck变换器中，输出电压与输入电压和占空比成正比关系。",
+      "difficulty": 2,
+      "keywords": [
+        "PWM",
+        "开关控制",
+        "导通时间"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "电压调节",
+        "功率控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PWM原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "占空比是指开关管导通时间与开关周期的比值，用于控制Buck变换器的输出电压。在Buck变换器中，输出电压与输入电压和占空比成正比关系。"
+    },
+    {
+      "id": "ct_5_2_1_1",
+      "label": "PWM控制技术",
+      "node_type": "core_technology",
+      "summary": "通过调节PWM信号的占空比来控制Buck变换器的输出电压。具体实现步骤包括：1) 产生固定频率的PWM信号；2) 根据输出电压反馈调节占空比；3) 驱动开关管工作。",
+      "difficulty": 3,
+      "keywords": [
+        "脉宽调制",
+        "反馈控制",
+        "电压调节"
+      ],
+      "formulas": [],
+      "applications": [
+        "闭环控制",
+        "稳压输出"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过调节PWM信号的占空比来控制Buck变换器的输出电压。具体实现步骤包括：1) 产生固定频率的PWM信号；2) 根据输出电压反馈调节占空比；3) 驱动开关管工作。"
+    },
+    {
+      "id": "ca_5_2_1_1",
+      "label": "降压电源电路",
+      "node_type": "circuit_application",
+      "summary": "典型的Buck变换器应用电路，包含开关管(MOSFET)、续流二极管、电感和输出电容等元件。电路工作时，通过控制开关管的导通和关断，在输出端得到稳定的降压直流电压。",
+      "difficulty": 4,
+      "keywords": [
+        "功率电路",
+        "降压设计",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "电子设备供电",
+        "电池充电"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的Buck变换器应用电路，包含开关管(MOSFET)、续流二极管、电感和输出电容等元件。电路工作时，通过控制开关管的导通和关断，在输出端得到稳定的降压直流电压。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "ct_5_2_1_1",
+      "relationship": "enables",
+      "description": "Buck变换器的基本工作原理使能了PWM控制技术的应用",
+      "weight": 0.9,
+      "evidence": "Buck变换器的输出电压调节需要PWM控制技术",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_1_2",
+      "target_id": "ct_5_2_1_1",
+      "relationship": "supports",
+      "description": "占空比概念为PWM控制技术提供了理论基础",
+      "weight": 0.8,
+      "evidence": "PWM控制技术通过调节占空比来实现电压控制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_2_1_1",
+      "target_id": "ca_5_2_1_1",
+      "relationship": "implements",
+      "description": "PWM控制技术实现了降压电源电路的电压调节功能",
+      "weight": 0.85,
+      "evidence": "降压电源电路需要PWM控制来稳定输出电压",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "ca_5_2_1_1",
+      "relationship": "applies_to",
+      "description": "Buck变换器原理直接应用于降压电源电路设计",
+      "weight": 0.9,
+      "evidence": "降压电源电路基于Buck变换器拓扑",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "bc_5_2_1_2",
+      "relationship": "depends_on",
+      "description": "Buck变换器的工作依赖于占空比参数",
+      "weight": 0.7,
+      "evidence": "输出电压公式Vout = D × Vin表明这种依赖关系",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.2.1",
+  "title": "Buck变换器",
+  "extraction_timestamp": "2025-07-08T15:32:11.761233",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

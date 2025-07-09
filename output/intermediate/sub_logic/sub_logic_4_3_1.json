@@ -1,0 +1,130 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_3_1_1",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指系统开环传递函数在增益交越频率处的相位与-180°之间的差值，是衡量系统稳定性的重要指标。较大的相位裕度意味着系统具有更好的稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "增益交越频率",
+        "相位差"
+      ],
+      "formulas": [
+        "Phase Margin = φ - (-180°)"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "传递函数",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指系统开环传递函数在增益交越频率处的相位与-180°之间的差值，是衡量系统稳定性的重要指标。较大的相位裕度意味着系统具有更好的稳定性。"
+    },
+    {
+      "id": "bc_4_3_1_2",
+      "label": "瞬态响应",
+      "node_type": "basic_concept",
+      "summary": "瞬态响应是指系统在输入信号突变时的输出响应特性，包括上升时间、超调量和调节时间等指标。良好的瞬态响应意味着系统能快速且平稳地达到稳态。",
+      "difficulty": 2,
+      "keywords": [
+        "上升时间",
+        "超调量",
+        "调节时间"
+      ],
+      "formulas": [],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "时域分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "瞬态响应是指系统在输入信号突变时的输出响应特性，包括上升时间、超调量和调节时间等指标。良好的瞬态响应意味着系统能快速且平稳地达到稳态。"
+    },
+    {
+      "id": "ct_4_3_1_1",
+      "label": "超前补偿",
+      "node_type": "core_technology",
+      "summary": "超前补偿是一种通过在系统中引入超前网络（通常由电阻和电容组成）来增加相位裕度的技术。它通过在特定频率范围内提供相位超前，从而改善系统的稳定性和瞬态响应。",
+      "difficulty": 3,
+      "keywords": [
+        "超前网络",
+        "相位超前",
+        "补偿"
+      ],
+      "formulas": [
+        "G_c(s) = (1 + αTs)/(1 + Ts), α > 1"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "超前补偿是一种通过在系统中引入超前网络（通常由电阻和电容组成）来增加相位裕度的技术。它通过在特定频率范围内提供相位超前，从而改善系统的稳定性和瞬态响应。"
+    },
+    {
+      "id": "ca_4_3_1_1",
+      "label": "超前补偿电路",
+      "node_type": "circuit_application",
+      "summary": "典型的超前补偿电路由一个电阻和一个电容组成，形成RC网络。该电路在特定频率范围内提供相位超前，用于改善控制系统的稳定性和瞬态响应。",
+      "difficulty": 4,
+      "keywords": [
+        "RC网络",
+        "相位超前",
+        "补偿电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "反馈控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的超前补偿电路由一个电阻和一个电容组成，形成RC网络。该电路在特定频率范围内提供相位超前，用于改善控制系统的稳定性和瞬态响应。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_3_1_1",
+      "target_id": "ct_4_3_1_1",
+      "relationship": "enables",
+      "description": "相位裕度的概念使能了超前补偿技术的应用",
+      "weight": 0.9,
+      "evidence": "超前补偿增加相位裕度",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_3_1_2",
+      "target_id": "ct_4_3_1_1",
+      "relationship": "supports",
+      "description": "瞬态响应的概念支撑了超前补偿技术的设计目标",
+      "weight": 0.8,
+      "evidence": "超前补偿改善瞬态响应",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_1_1",
+      "target_id": "ca_4_3_1_1",
+      "relationship": "implements",
+      "description": "超前补偿技术通过RC网络电路实现",
+      "weight": 0.9,
+      "evidence": "超前补偿增加相位裕度，改善瞬态响应",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.3.1",
+  "title": "超前补偿",
+  "extraction_timestamp": "2025-07-08T15:31:26.628112",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

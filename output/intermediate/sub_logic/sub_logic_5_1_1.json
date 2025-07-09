@@ -1,0 +1,290 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_1_1_1",
+      "label": "功率二极管",
+      "node_type": "basic_concept",
+      "summary": "功率二极管是一种用于处理高功率电子信号的半导体器件，主要用于整流和续流功能。它能够将交流电转换为直流电（整流），并在开关电路中提供续流路径以防止电压尖峰。",
+      "difficulty": 2,
+      "keywords": [
+        "整流",
+        "续流",
+        "半导体"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源转换",
+        "电机驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率二极管是一种用于处理高功率电子信号的半导体器件，主要用于整流和续流功能。它能够将交流电转换为直流电（整流），并在开关电路中提供续流路径以防止电压尖峰。"
+    },
+    {
+      "id": "bc_5_1_1_2",
+      "label": "正向电流额定值",
+      "node_type": "basic_concept",
+      "summary": "正向电流额定值是指功率二极管在正常工作条件下能够持续通过的最大正向电流。超过此值可能导致器件过热损坏。",
+      "difficulty": 2,
+      "keywords": [
+        "正向电流",
+        "额定值",
+        "热管理"
+      ],
+      "formulas": [],
+      "applications": [
+        "器件选型",
+        "热设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正向电流额定值是指功率二极管在正常工作条件下能够持续通过的最大正向电流。超过此值可能导致器件过热损坏。"
+    },
+    {
+      "id": "bc_5_1_1_3",
+      "label": "反向耐压",
+      "node_type": "basic_concept",
+      "summary": "反向耐压是指功率二极管在反向偏置时能够承受的最大电压。超过此值可能导致器件击穿损坏。",
+      "difficulty": 2,
+      "keywords": [
+        "反向电压",
+        "耐压",
+        "击穿"
+      ],
+      "formulas": [],
+      "applications": [
+        "高压电路设计",
+        "保护电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PN结特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反向耐压是指功率二极管在反向偏置时能够承受的最大电压。超过此值可能导致器件击穿损坏。"
+    },
+    {
+      "id": "bc_5_1_1_4",
+      "label": "反向恢复时间",
+      "node_type": "basic_concept",
+      "summary": "反向恢复时间是指功率二极管从导通状态切换到截止状态所需的时间。这个参数影响开关电路的效率和EMI性能。",
+      "difficulty": 3,
+      "keywords": [
+        "开关速度",
+        "恢复时间",
+        "EMI"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频开关电路",
+        "功率转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "开关电路原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反向恢复时间是指功率二极管从导通状态切换到截止状态所需的时间。这个参数影响开关电路的效率和EMI性能。"
+    },
+    {
+      "id": "ct_5_1_1_1",
+      "label": "功率二极管选型方法",
+      "node_type": "core_technology",
+      "summary": "根据应用需求选择合适功率二极管的技术方法，包括：1) 确定电路最大正向电流；2) 评估最大反向电压；3) 考虑开关频率需求；4) 评估热管理要求。",
+      "difficulty": 3,
+      "keywords": [
+        "器件选型",
+        "参数匹配",
+        "热设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源设计",
+        "功率电子系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根据应用需求选择合适功率二极管的技术方法，包括：1) 确定电路最大正向电流；2) 评估最大反向电压；3) 考虑开关频率需求；4) 评估热管理要求。"
+    },
+    {
+      "id": "ct_5_1_1_2",
+      "label": "功率二极管热设计",
+      "node_type": "core_technology",
+      "summary": "确保功率二极管在安全工作温度范围内运行的技术，包括：1) 计算功率损耗；2) 选择适当散热器；3) 优化PCB布局；4) 考虑环境温度影响。",
+      "difficulty": 4,
+      "keywords": [
+        "热管理",
+        "散热",
+        "可靠性"
+      ],
+      "formulas": [
+        "P_loss = I_F × V_F"
+      ],
+      "applications": [
+        "高功率应用",
+        "高温环境"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "确保功率二极管在安全工作温度范围内运行的技术，包括：1) 计算功率损耗；2) 选择适当散热器；3) 优化PCB布局；4) 考虑环境温度影响。"
+    },
+    {
+      "id": "ca_5_1_1_1",
+      "label": "桥式整流电路",
+      "node_type": "circuit_application",
+      "summary": "使用四个功率二极管组成的全波整流电路，将交流输入转换为直流输出。关键设计考虑包括：二极管耐压值、正向电流能力、散热设计和EMI滤波。",
+      "difficulty": 4,
+      "keywords": [
+        "整流",
+        "AC-DC转换",
+        "电源"
+      ],
+      "formulas": [
+        "V_out = V_peak - 2×V_F"
+      ],
+      "applications": [
+        "电源适配器",
+        "电机驱动电源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用四个功率二极管组成的全波整流电路，将交流输入转换为直流输出。关键设计考虑包括：二极管耐压值、正向电流能力、散热设计和EMI滤波。"
+    },
+    {
+      "id": "ca_5_1_1_2",
+      "label": "续流二极管应用",
+      "node_type": "circuit_application",
+      "summary": "在感性负载开关电路中，功率二极管用于提供电流续流路径，防止开关断开时产生的高压尖峰损坏其他元件。关键参数包括反向恢复时间和正向电流能力。",
+      "difficulty": 4,
+      "keywords": [
+        "续流",
+        "感性负载",
+        "保护"
+      ],
+      "formulas": [
+        "V_spike = L × di/dt"
+      ],
+      "applications": [
+        "继电器驱动",
+        "电机控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在感性负载开关电路中，功率二极管用于提供电流续流路径，防止开关断开时产生的高压尖峰损坏其他元件。关键参数包括反向恢复时间和正向电流能力。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_1_1_1",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "enables",
+      "description": "功率二极管的基本功能理解是进行正确选型的基础",
+      "weight": 0.9,
+      "evidence": "功率二极管用于整流和续流",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_2",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "正向电流额定值是选型的关键参数之一",
+      "weight": 0.8,
+      "evidence": "主要参数包括正向电流额定值",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_3",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "反向耐压是选型的关键参数之一",
+      "weight": 0.8,
+      "evidence": "主要参数包括反向耐压",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_4",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "反向恢复时间是高频应用选型的关键参数",
+      "weight": 0.7,
+      "evidence": "主要参数包括反向恢复时间",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_1_1",
+      "target_id": "ca_5_1_1_1",
+      "relationship": "implements",
+      "description": "正确的选型方法确保桥式整流电路的可靠工作",
+      "weight": 0.9,
+      "evidence": "桥式整流电路需要选择合适的功率二极管",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_1_2",
+      "target_id": "ca_5_1_1_1",
+      "relationship": "applies_to",
+      "description": "热设计方法应用于高功率整流电路",
+      "weight": 0.8,
+      "evidence": "桥式整流电路需要考虑散热设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_1",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "enables",
+      "description": "功率二极管的续流功能是保护电路的基础",
+      "weight": 0.9,
+      "evidence": "功率二极管用于续流",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_4",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "supports",
+      "description": "反向恢复时间影响续流电路的性能",
+      "weight": 0.8,
+      "evidence": "续流应用需要考虑反向恢复时间",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_1_2",
+      "target_id": "bc_5_1_1_3",
+      "relationship": "relates_to",
+      "description": "正向电流和反向耐压都是功率二极管的关键参数",
+      "weight": 0.6,
+      "evidence": "两者都是主要参数",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_5_1_1_1",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "complements",
+      "description": "整流和续流是功率二极管的两大主要应用",
+      "weight": 0.7,
+      "evidence": "功率二极管用于整流和续流",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "5.1.1",
+  "title": "功率二极管",
+  "extraction_timestamp": "2025-07-08T15:32:28.289003",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

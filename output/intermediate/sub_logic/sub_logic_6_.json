@@ -1,0 +1,289 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6__1",
+      "label": "差分输入级电路",
+      "node_type": "basic_concept",
+      "summary": "差分输入级电路是在基本电路基础上发展的高性能线性信号处理电路，通过增加硬件资源消耗来扩展共模范围和提升共模抑制比。基本差分输入级无法满足实际应用需求，因此需要改进。",
+      "difficulty": 2,
+      "keywords": [
+        "差分输入",
+        "共模范围",
+        "共模抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分输入级电路是在基本电路基础上发展的高性能线性信号处理电路，通过增加硬件资源消耗来扩展共模范围和提升共模抑制比。基本差分输入级无法满足实际应用需求，因此需要改进。"
+    },
+    {
+      "id": "bc_6__2",
+      "label": "全差分电路",
+      "node_type": "basic_concept",
+      "summary": "全差分电路具有抗噪声能力强、共模抑制比高等优点，但其两输出支路的共模电平不能稳定在同一静态点，需要共模反馈(CMFB)电路调节。",
+      "difficulty": 2,
+      "keywords": [
+        "全差分",
+        "抗噪声",
+        "共模反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分电路原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分电路具有抗噪声能力强、共模抑制比高等优点，但其两输出支路的共模电平不能稳定在同一静态点，需要共模反馈(CMFB)电路调节。"
+    },
+    {
+      "id": "bc_6__3",
+      "label": "多级增益结构",
+      "node_type": "basic_concept",
+      "summary": "模拟集成运放采用多级增益结构级联构成，输入级为差分增益结构，中间级和输出级多采用CS、CG、CD及其组合结构，完成电压增益和输出负载电流驱动功能。",
+      "difficulty": 2,
+      "keywords": [
+        "多级增益",
+        "CS结构",
+        "CG结构",
+        "CD结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模拟集成运放采用多级增益结构级联构成，输入级为差分增益结构，中间级和输出级多采用CS、CG、CD及其组合结构，完成电压增益和输出负载电流驱动功能。"
+    },
+    {
+      "id": "ct_6__1",
+      "label": "共模反馈(CMFB)技术",
+      "node_type": "core_technology",
+      "summary": "用于调节全差分电路两输出支路的共模电平，使其稳定在同一静态点。是全差分电路设计中的关键技术。",
+      "difficulty": 3,
+      "keywords": [
+        "CMFB",
+        "共模稳定",
+        "反馈控制"
+      ],
+      "formulas": [],
+      "applications": [
+        "全差分电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "用于调节全差分电路两输出支路的共模电平，使其稳定在同一静态点。是全差分电路设计中的关键技术。"
+    },
+    {
+      "id": "ct_6__2",
+      "label": "增益降低技术",
+      "node_type": "core_technology",
+      "summary": "用于拓展差分结构的线性范围的技术方法，包括辅助源耦对的负反馈结构和自适应补偿等技术。",
+      "difficulty": 3,
+      "keywords": [
+        "增益降低",
+        "负反馈",
+        "自适应补偿"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分电路线性化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "用于拓展差分结构的线性范围的技术方法，包括辅助源耦对的负反馈结构和自适应补偿等技术。"
+    },
+    {
+      "id": "ct_6__3",
+      "label": "Class AB/B互补推挽放大",
+      "node_type": "core_technology",
+      "summary": "用于改善电路输出驱动性能和提高响应速度的技术，Class AB结构还能提高系统线性度。",
+      "difficulty": 3,
+      "keywords": [
+        "Class AB",
+        "Class B",
+        "推挽放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "用于改善电路输出驱动性能和提高响应速度的技术，Class AB结构还能提高系统线性度。"
+    },
+    {
+      "id": "ct_6__4",
+      "label": "多级稳定性设计",
+      "node_type": "core_technology",
+      "summary": "针对多级结构引入的多个极点对系统稳定性的影响，需要在设计中综合考虑的稳定性设计技术。",
+      "difficulty": 3,
+      "keywords": [
+        "多极点",
+        "稳定性",
+        "补偿技术"
+      ],
+      "formulas": [],
+      "applications": [
+        "多级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对多级结构引入的多个极点对系统稳定性的影响，需要在设计中综合考虑的稳定性设计技术。"
+    },
+    {
+      "id": "ca_6__1",
+      "label": "模拟集成运放",
+      "node_type": "circuit_application",
+      "summary": "由多级增益结构级联构成的集成电路，输入级为差分增益结构，中间级和输出级采用CS、CG、CD及其组合结构。通常以闭环负反馈形式应用，内部也可采用局部闭环负反馈改善性能。",
+      "difficulty": 4,
+      "keywords": [
+        "集成运放",
+        "多级结构",
+        "闭环反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由多级增益结构级联构成的集成电路，输入级为差分增益结构，中间级和输出级采用CS、CG、CD及其组合结构。通常以闭环负反馈形式应用，内部也可采用局部闭环负反馈改善性能。"
+    },
+    {
+      "id": "ca_6__2",
+      "label": "高性能差分放大器",
+      "node_type": "circuit_application",
+      "summary": "采用全差分结构、共模反馈技术和增益降低技术设计的高性能放大器，具有高共模抑制比和宽线性范围。",
+      "difficulty": 4,
+      "keywords": [
+        "差分放大",
+        "高CMRR",
+        "宽线性"
+      ],
+      "formulas": [],
+      "applications": [
+        "精密测量"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用全差分结构、共模反馈技术和增益降低技术设计的高性能放大器，具有高共模抑制比和宽线性范围。"
+    },
+    {
+      "id": "ca_6__3",
+      "label": "Class AB输出级",
+      "node_type": "circuit_application",
+      "summary": "采用Class AB互补推挽结构的输出级电路，具有高驱动能力和良好线性度。",
+      "difficulty": 4,
+      "keywords": [
+        "输出级",
+        "Class AB",
+        "推挽"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用Class AB互补推挽结构的输出级电路，具有高驱动能力和良好线性度。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6__1",
+      "target_id": "ct_6__1",
+      "relationship": "enables",
+      "description": "差分输入级电路的基本原理使能了共模反馈技术的应用",
+      "weight": 0.9,
+      "evidence": "全差分电路具有抗噪声能力强、共模抑制比高等优点，但是它两输出支路的共模电平不能稳定在同一静态点，因此需要采用共模反馈 CMFB 电路进行调节。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6__2",
+      "target_id": "ct_6__2",
+      "relationship": "supports",
+      "description": "全差分电路的概念支撑了增益降低技术的发展",
+      "weight": 0.8,
+      "evidence": "为了拓展差分结构的线性范围，又引入了增益降低技术、辅助源耦对的负反馈结构以及自适应补偿等技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6__3",
+      "target_id": "ct_6__4",
+      "relationship": "supports",
+      "description": "多级增益结构的概念支撑了多级稳定性设计技术",
+      "weight": 0.85,
+      "evidence": "但是，多级结构引入了多个极点，对系统的稳定性产生了影响，须在设计中综合考虑。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6__1",
+      "target_id": "ca_6__2",
+      "relationship": "implements",
+      "description": "共模反馈技术实现了高性能差分放大器的设计",
+      "weight": 0.9,
+      "evidence": "全差分电路具有抗噪声能力强、共模抑制比高等优点，但是它两输出支路的共模电平不能稳定在同一静态点，因此需要采用共模反馈 CMFB 电路进行调节。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6__2",
+      "target_id": "ca_6__2",
+      "relationship": "applies_to",
+      "description": "增益降低技术应用于高性能差分放大器的线性范围扩展",
+      "weight": 0.8,
+      "evidence": "为了拓展差分结构的线性范围，又引入了增益降低技术、辅助源耦对的负反馈结构以及自适应补偿等技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6__3",
+      "target_id": "ca_6__3",
+      "relationship": "implements",
+      "description": "Class AB/B互补推挽放大技术实现了Class AB输出级的设计",
+      "weight": 0.95,
+      "evidence": "为改善电路的输出驱动性能，提高电路的响应速度，可采用 Class AB 或 Class B 的互补推挽放大，而且 Class AB 结构又可提高系统的线性度，改善电路性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6__4",
+      "target_id": "ca_6__1",
+      "relationship": "applies_to",
+      "description": "多级稳定性设计技术应用于模拟集成运放的设计",
+      "weight": 0.85,
+      "evidence": "但是，多级结构引入了多个极点，对系统的稳定性产生了影响，须在设计中综合考虑。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.",
+  "title": "7 小结",
+  "extraction_timestamp": "2025-07-08T16:40:16.995399"
+}

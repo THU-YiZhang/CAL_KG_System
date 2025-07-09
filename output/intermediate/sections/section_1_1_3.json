@@ -1,0 +1,7 @@
+{
+  "section_num": "1.1.3",
+  "title": "电感元件",
+  "level": 3,
+  "content": "电感器是储存磁场能量的元件，其电压-电流关系为：v = L(di/dt)\n\n电感器储存的能量为：W = ½LI²",
+  "subsections": []
+}

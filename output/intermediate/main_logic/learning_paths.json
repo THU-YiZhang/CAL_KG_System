@@ -1,0 +1,29 @@
+[
+  {
+    "path_name": "基础设计路径",
+    "description": "从器件基础到放大器设计的完整流程",
+    "sections_sequence": [
+      "1.1",
+      "2.2",
+      "3.4",
+      "5.4",
+      "7.3"
+    ],
+    "estimated_duration": "8周",
+    "difficulty_progression": "线性递增"
+  },
+  {
+    "path_name": "高级优化路径",
+    "description": "针对噪声和低压优化的专项提升",
+    "sections_sequence": [
+      "3.4",
+      "5.4",
+      "7.3",
+      "9.3",
+      "11.4",
+      "12.3"
+    ],
+    "estimated_duration": "10周",
+    "difficulty_progression": "阶梯式上升"
+  }
+]

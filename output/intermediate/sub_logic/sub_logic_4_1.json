@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_1_1",
+      "label": "反馈",
+      "node_type": "basic_concept",
+      "summary": "反馈是将输出信号的一部分返回到输入端的技术，用于调节系统的性能。反馈可以分为负反馈和正反馈两种类型。",
+      "difficulty": 2,
+      "keywords": [
+        "反馈",
+        "输出信号",
+        "输入端"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "振荡器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号处理基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈是将输出信号的一部分返回到输入端的技术，用于调节系统的性能。反馈可以分为负反馈和正反馈两种类型。"
+    },
+    {
+      "id": "bc_4_1_2",
+      "label": "负反馈",
+      "node_type": "basic_concept",
+      "summary": "负反馈是将输出信号的一部分以相反相位返回到输入端，用于减少误差和提高系统的稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "负反馈",
+        "误差减少",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈是将输出信号的一部分以相反相位返回到输入端，用于减少误差和提高系统的稳定性。"
+    },
+    {
+      "id": "bc_4_1_3",
+      "label": "正反馈",
+      "node_type": "basic_concept",
+      "summary": "正反馈是将输出信号的一部分以相同相位返回到输入端，可能导致系统振荡或不稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "正反馈",
+        "振荡",
+        "不稳定"
+      ],
+      "formulas": [],
+      "applications": [
+        "振荡器",
+        "触发器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正反馈是将输出信号的一部分以相同相位返回到输入端，可能导致系统振荡或不稳定。"
+    },
+    {
+      "id": "ct_4_1_1",
+      "label": "负反馈技术",
+      "node_type": "core_technology",
+      "summary": "负反馈技术通过将输出信号的一部分以相反相位返回到输入端，减少系统误差并提高稳定性。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试系统响应。",
+      "difficulty": 3,
+      "keywords": [
+        "负反馈",
+        "误差减少",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈技术通过将输出信号的一部分以相反相位返回到输入端，减少系统误差并提高稳定性。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试系统响应。"
+    },
+    {
+      "id": "ct_4_1_2",
+      "label": "正反馈技术",
+      "node_type": "core_technology",
+      "summary": "正反馈技术通过将输出信号的一部分以相同相位返回到输入端，用于产生振荡或触发特定状态。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试振荡频率。",
+      "difficulty": 3,
+      "keywords": [
+        "正反馈",
+        "振荡",
+        "触发器"
+      ],
+      "formulas": [],
+      "applications": [
+        "振荡器设计",
+        "触发器电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正反馈技术通过将输出信号的一部分以相同相位返回到输入端，用于产生振荡或触发特定状态。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试振荡频率。"
+    },
+    {
+      "id": "ca_4_1_1",
+      "label": "负反馈放大器",
+      "node_type": "circuit_application",
+      "summary": "负反馈放大器利用负反馈技术减少失真并提高稳定性。电路结构包括：1) 放大器核心；2) 反馈网络；3) 输入输出匹配网络。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "放大器",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈放大器利用负反馈技术减少失真并提高稳定性。电路结构包括：1) 放大器核心；2) 反馈网络；3) 输入输出匹配网络。"
+    },
+    {
+      "id": "ca_4_1_2",
+      "label": "LC振荡器",
+      "node_type": "circuit_application",
+      "summary": "LC振荡器利用正反馈技术产生高频振荡信号。电路结构包括：1) LC谐振回路；2) 放大器；3) 正反馈网络。",
+      "difficulty": 4,
+      "keywords": [
+        "正反馈",
+        "振荡器",
+        "LC谐振"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频信号源",
+        "时钟发生器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "LC振荡器利用正反馈技术产生高频振荡信号。电路结构包括：1) LC谐振回路；2) 放大器；3) 正反馈网络。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_1_1",
+      "target_id": "ct_4_1_1",
+      "relationship": "enables",
+      "description": "反馈的基本概念使能了负反馈技术的实现。",
+      "weight": 0.8,
+      "evidence": "反馈是将输出信号的一部分返回到输入端的技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_1_1",
+      "target_id": "ct_4_1_2",
+      "relationship": "enables",
+      "description": "反馈的基本概念使能了正反馈技术的实现。",
+      "weight": 0.8,
+      "evidence": "反馈是将输出信号的一部分返回到输入端的技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_1_2",
+      "target_id": "ct_4_1_1",
+      "relationship": "supports",
+      "description": "负反馈的定义支撑了负反馈技术的实现。",
+      "weight": 0.9,
+      "evidence": "负反馈：减少误差，提高稳定性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_1_3",
+      "target_id": "ct_4_1_2",
+      "relationship": "supports",
+      "description": "正反馈的定义支撑了正反馈技术的实现。",
+      "weight": 0.9,
+      "evidence": "正反馈：可能导致振荡",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_1_1",
+      "target_id": "ca_4_1_1",
+      "relationship": "implements",
+      "description": "负反馈技术实现了负反馈放大器的设计。",
+      "weight": 0.85,
+      "evidence": "负反馈放大器利用负反馈技术减少失真并提高稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_1_2",
+      "target_id": "ca_4_1_2",
+      "relationship": "implements",
+      "description": "正反馈技术实现了LC振荡器的设计。",
+      "weight": 0.85,
+      "evidence": "LC振荡器利用正反馈技术产生高频振荡信号。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_1_2",
+      "target_id": "bc_4_1_3",
+      "relationship": "complements",
+      "description": "负反馈和正反馈是反馈的两种互补类型。",
+      "weight": 0.7,
+      "evidence": "分为：负反馈：减少误差，提高稳定性；正反馈：可能导致振荡",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "4.1",
+  "title": "反馈基础",
+  "extraction_timestamp": "2025-07-08T15:31:35.775965",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

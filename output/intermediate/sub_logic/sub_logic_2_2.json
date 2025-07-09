@@ -1,0 +1,252 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_2_1",
+      "label": "PN结",
+      "node_type": "basic_concept",
+      "summary": "PN结是由P型和N型半导体接触形成的结构，具有单向导电特性。其核心特性包括内建电场、势垒电容和扩散电容。内建电场由施主与受主掺杂浓度决定，计算公式为Vj = VT * ln(NA*ND/ni^2)。正偏时势垒耗尽层减小，形成扩散电流；反偏时耗尽层展宽，电流达到饱和。",
+      "difficulty": 2,
+      "keywords": [
+        "PN结",
+        "内建电场",
+        "单向导电"
+      ],
+      "formulas": [
+        "Vj = VT * ln(NA*ND/ni^2)"
+      ],
+      "applications": [
+        "半导体器件基础"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体掺杂"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PN结是由P型和N型半导体接触形成的结构，具有单向导电特性。其核心特性包括内建电场、势垒电容和扩散电容。内建电场由施主与受主掺杂浓度决定，计算公式为Vj = VT * ln(NA*ND/ni^2)。正偏时势垒耗尽层减小，形成扩散电流；反偏时耗尽层展宽，电流达到饱和。"
+    },
+    {
+      "id": "bc_2_2_2",
+      "label": "内建电场",
+      "node_type": "basic_concept",
+      "summary": "PN结中由于P型和N型半导体的费米能级差异形成的电势差，计算公式为Vj = VT * ln(NA*ND/ni^2)，其中NA和ND分别为受主和施主掺杂浓度，ni为本征载流子浓度，VT为热电压。",
+      "difficulty": 2,
+      "keywords": [
+        "内建电场",
+        "热电压",
+        "本征载流子"
+      ],
+      "formulas": [
+        "Vj = VT * ln(NA*ND/ni^2)"
+      ],
+      "applications": [
+        "PN结特性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体能带理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PN结中由于P型和N型半导体的费米能级差异形成的电势差，计算公式为Vj = VT * ln(NA*ND/ni^2)，其中NA和ND分别为受主和施主掺杂浓度，ni为本征载流子浓度，VT为热电压。"
+    },
+    {
+      "id": "bc_2_2_3",
+      "label": "扩散电流",
+      "node_type": "basic_concept",
+      "summary": "正偏PN结中，由于非平衡少子注入形成的电流。扩散电流密度Jn = q*Dn*(∂n/∂x) = q*VT*μn*(n-n0)/Ln，其中Dn为扩散系数，μn为迁移率，Ln为扩散长度。",
+      "difficulty": 2,
+      "keywords": [
+        "扩散电流",
+        "少子注入",
+        "扩散长度"
+      ],
+      "formulas": [
+        "Jn = q*Dn*(∂n/∂x) = q*VT*μn*(n-n0)/Ln"
+      ],
+      "applications": [
+        "PN结电流分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "载流子输运"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正偏PN结中，由于非平衡少子注入形成的电流。扩散电流密度Jn = q*Dn*(∂n/∂x) = q*VT*μn*(n-n0)/Ln，其中Dn为扩散系数，μn为迁移率，Ln为扩散长度。"
+    },
+    {
+      "id": "bc_2_2_4",
+      "label": "BJT结构",
+      "node_type": "basic_concept",
+      "summary": "双极型晶体管由两个PN结组成，分为发射区、基区和集电区。发射区掺杂浓度最高，基区浓度适中，集电区浓度最低。基区宽度远小于少子扩散长度以提高电流放大倍数。",
+      "difficulty": 2,
+      "keywords": [
+        "BJT",
+        "发射区",
+        "基区",
+        "集电区"
+      ],
+      "formulas": [],
+      "applications": [
+        "晶体管设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PN结"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "双极型晶体管由两个PN结组成，分为发射区、基区和集电区。发射区掺杂浓度最高，基区浓度适中，集电区浓度最低。基区宽度远小于少子扩散长度以提高电流放大倍数。"
+    },
+    {
+      "id": "ct_2_2_1",
+      "label": "PN结偏置分析",
+      "node_type": "core_technology",
+      "summary": "分析PN结在不同偏置条件下的特性。正偏时势垒耗尽层减小，形成扩散电流；反偏时耗尽层展宽，电流饱和。正偏电流公式为IPN = IS0[exp(V/VT)-1]，反偏电流为IS0。",
+      "difficulty": 3,
+      "keywords": [
+        "正偏",
+        "反偏",
+        "电流特性"
+      ],
+      "formulas": [
+        "IPN = IS0[exp(V/VT)-1]"
+      ],
+      "applications": [
+        "PN结特性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "分析PN结在不同偏置条件下的特性。正偏时势垒耗尽层减小，形成扩散电流；反偏时耗尽层展宽，电流饱和。正偏电流公式为IPN = IS0[exp(V/VT)-1]，反偏电流为IS0。"
+    },
+    {
+      "id": "ct_2_2_2",
+      "label": "BJT电流放大",
+      "node_type": "core_technology",
+      "summary": "BJT在发射结正偏、集电结反偏时具有电流放大作用。集电极电流IC ≈ IE = IS0*exp(VBE/VT)*[1-exp(-VCE/VT)]。在放大区，考虑基区宽度调制效应，引入厄利电压VA，非理想输出电流为IC = IC0*(1+VCE/VA)。",
+      "difficulty": 3,
+      "keywords": [
+        "电流放大",
+        "基区调制",
+        "厄利电压"
+      ],
+      "formulas": [
+        "IC ≈ IE = IS0*exp(VBE/VT)*[1-exp(-VCE/VT)]",
+        "IC = IC0*(1+VCE/VA)"
+      ],
+      "applications": [
+        "晶体管放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BJT在发射结正偏、集电结反偏时具有电流放大作用。集电极电流IC ≈ IE = IS0*exp(VBE/VT)*[1-exp(-VCE/VT)]。在放大区，考虑基区宽度调制效应，引入厄利电压VA，非理想输出电流为IC = IC0*(1+VCE/VA)。"
+    },
+    {
+      "id": "ca_2_2_1",
+      "label": "PN结偏置电路",
+      "node_type": "circuit_application",
+      "summary": "利用PN结的正偏特性实现直流电平移位、电压钳位和交流短路等功能。正偏PN结在模拟电路中主要起偏置作用，反偏PN结用于反向隔离和稳压。",
+      "difficulty": 4,
+      "keywords": [
+        "偏置",
+        "电平移位",
+        "电压钳位"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用PN结的正偏特性实现直流电平移位、电压钳位和交流短路等功能。正偏PN结在模拟电路中主要起偏置作用，反偏PN结用于反向隔离和稳压。"
+    },
+    {
+      "id": "ca_2_2_2",
+      "label": "BJT放大电路",
+      "node_type": "circuit_application",
+      "summary": "利用BJT的电流放大特性构建放大电路。工作在放大区时，BJT具有低噪声、强电流驱动能力，适用于模拟信号放大。需考虑基区宽度调制效应对输出电流的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "放大电路",
+        "模拟信号",
+        "电流驱动"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大",
+        "传感器信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用BJT的电流放大特性构建放大电路。工作在放大区时，BJT具有低噪声、强电流驱动能力，适用于模拟信号放大。需考虑基区宽度调制效应对输出电流的影响。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_2_1",
+      "target_id": "ct_2_2_1",
+      "relationship": "enables",
+      "description": "PN结的基本特性使能了对其偏置条件的分析",
+      "weight": 0.9,
+      "evidence": "PN结的单向导电特性是分析其正反偏特性的基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_4",
+      "target_id": "ct_2_2_2",
+      "relationship": "enables",
+      "description": "BJT的结构特性使能了对其电流放大机制的分析",
+      "weight": 0.9,
+      "evidence": "BJT的发射区、基区和集电区设计是实现电流放大的物理基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_1",
+      "target_id": "ca_2_2_1",
+      "relationship": "implements",
+      "description": "PN结偏置分析技术实现了偏置电路的设计",
+      "weight": 0.8,
+      "evidence": "基于PN结正反偏特性的分析，可以设计出相应的偏置电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_2",
+      "target_id": "ca_2_2_2",
+      "relationship": "implements",
+      "description": "BJT电流放大技术实现了放大电路的设计",
+      "weight": 0.8,
+      "evidence": "基于BJT电流放大特性的分析，可以设计出相应的放大电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_2",
+      "target_id": "bc_2_2_1",
+      "relationship": "complements",
+      "description": "内建电场是PN结特性的重要组成部分",
+      "weight": 0.7,
+      "evidence": "内建电场的计算是理解PN结单向导电特性的关键",
+      "bidirectional": true
+    },
+    {
+      "source_id": "bc_2_2_3",
+      "target_id": "bc_2_2_1",
+      "relationship": "complements",
+      "description": "扩散电流是PN结正偏特性的重要表现",
+      "weight": 0.7,
+      "evidence": "扩散电流的分析是理解PN结正偏特性的关键",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "2.2",
+  "title": "PN 结与晶体管",
+  "extraction_timestamp": "2025-07-08T16:32:32.004950"
+}

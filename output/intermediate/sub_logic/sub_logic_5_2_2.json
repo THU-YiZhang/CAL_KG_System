@@ -1,0 +1,147 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_2_2_1",
+      "label": "Boost变换器",
+      "node_type": "basic_concept",
+      "summary": "Boost变换器是一种升压型DC-DC变换器，能够将输入直流电压升高到所需的输出电压。其基本原理是通过控制开关管的导通和关断时间来调节输出电压。",
+      "difficulty": 2,
+      "keywords": [
+        "DC-DC变换器",
+        "升压变换器",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电源管理",
+        "可再生能源系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电力电子",
+        "开关电源"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器是一种升压型DC-DC变换器，能够将输入直流电压升高到所需的输出电压。其基本原理是通过控制开关管的导通和关断时间来调节输出电压。"
+    },
+    {
+      "id": "bc_5_2_2_2",
+      "label": "占空比D",
+      "node_type": "basic_concept",
+      "summary": "占空比D是开关管导通时间与开关周期的比值，用于控制Boost变换器的输出电压。占空比D的范围在0到1之间，D越大，输出电压越高。",
+      "difficulty": 2,
+      "keywords": [
+        "占空比",
+        "开关控制",
+        "PWM"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "开关电源控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PWM控制"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "占空比D是开关管导通时间与开关周期的比值，用于控制Boost变换器的输出电压。占空比D的范围在0到1之间，D越大，输出电压越高。"
+    },
+    {
+      "id": "ct_5_2_2_1",
+      "label": "Boost变换器控制方法",
+      "node_type": "core_technology",
+      "summary": "Boost变换器的控制方法主要包括PWM控制和电压反馈控制。通过调节占空比D来控制输出电压，使其稳定在设定值。电压反馈控制通常采用PID控制器来实现。",
+      "difficulty": 3,
+      "keywords": [
+        "PWM控制",
+        "电压反馈",
+        "PID控制"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电源稳压",
+        "动态负载调整"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器的控制方法主要包括PWM控制和电压反馈控制。通过调节占空比D来控制输出电压，使其稳定在设定值。电压反馈控制通常采用PID控制器来实现。"
+    },
+    {
+      "id": "ca_5_2_2_1",
+      "label": "Boost变换器电路",
+      "node_type": "circuit_application",
+      "summary": "Boost变换器电路由开关管（MOSFET或IGBT）、电感、二极管和输出电容组成。通过控制开关管的导通和关断，电感储能和释放能量，实现升压功能。输出电压由占空比D决定。",
+      "difficulty": 4,
+      "keywords": [
+        "开关管",
+        "电感",
+        "二极管",
+        "输出电容"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电池供电系统",
+        "LED驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器电路由开关管（MOSFET或IGBT）、电感、二极管和输出电容组成。通过控制开关管的导通和关断，电感储能和释放能量，实现升压功能。输出电压由占空比D决定。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_2_2_1",
+      "target_id": "ct_5_2_2_1",
+      "relationship": "enables",
+      "description": "Boost变换器的基本工作原理使能了其控制方法的设计",
+      "weight": 0.9,
+      "evidence": "Boost变换器的输出电压公式Vout = Vin/(1-D)是控制方法的基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_2_2",
+      "target_id": "ct_5_2_2_1",
+      "relationship": "supports",
+      "description": "占空比D的概念支撑了Boost变换器的控制方法",
+      "weight": 0.8,
+      "evidence": "控制方法通过调节占空比D来实现输出电压的调节",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_2_2_1",
+      "target_id": "ca_5_2_2_1",
+      "relationship": "implements",
+      "description": "Boost变换器的控制方法实现了具体的电路应用",
+      "weight": 0.9,
+      "evidence": "控制方法通过调节开关管的占空比来控制电路的实际输出电压",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_2_1",
+      "target_id": "ca_5_2_2_1",
+      "relationship": "applies_to",
+      "description": "Boost变换器的基本概念应用于具体的电路设计",
+      "weight": 0.8,
+      "evidence": "电路设计基于Boost变换器的升压原理",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.2.2",
+  "title": "Boost变换器",
+  "extraction_timestamp": "2025-07-08T15:32:14.944778",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

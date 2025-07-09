@@ -1,0 +1,309 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_4_1",
+      "label": "轨至轨输出级",
+      "node_type": "basic_concept",
+      "summary": "轨至轨输出级是轨至轨运放系统的一部分，用于提供宽电压摆幅下的大电流输出。其设计需考虑静态电流、电流效率、失真和频率特性等性能参数的折中。",
+      "difficulty": 3,
+      "keywords": [
+        "轨至轨",
+        "输出级",
+        "静态电流"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨至轨输出级是轨至轨运放系统的一部分，用于提供宽电压摆幅下的大电流输出。其设计需考虑静态电流、电流效率、失真和频率特性等性能参数的折中。"
+    },
+    {
+      "id": "bc_12_4_2",
+      "label": "电流效率",
+      "node_type": "basic_concept",
+      "summary": "电流效率定义为输出级可以输出的最大变化电流与总电流的比值，公式为η = IL/(IQ + IL)，其中IQ为输出级不带负载时的静态偏置电流。高效率要求在输出电压范围接近整个电源电压摆幅时，输出级空载下偏置在小的静态电流下，同时在大负载条件下能够提供大的输出电流。",
+      "difficulty": 2,
+      "keywords": [
+        "电流效率",
+        "静态电流",
+        "输出电流"
+      ],
+      "formulas": [
+        "η = IL/(IQ + IL)"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电流定义"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流效率定义为输出级可以输出的最大变化电流与总电流的比值，公式为η = IL/(IQ + IL)，其中IQ为输出级不带负载时的静态偏置电流。高效率要求在输出电压范围接近整个电源电压摆幅时，输出级空载下偏置在小的静态电流下，同时在大负载条件下能够提供大的输出电流。"
+    },
+    {
+      "id": "bc_12_4_3",
+      "label": "失真",
+      "node_type": "basic_concept",
+      "summary": "失真分为非线性失真和线性失真，根据引起失真的原因可分为静态失真和动态失真。静态失真由闭环增益随输入信号的变化引起，动态失真由闭环增益随频率变化引起。开环增益Av越大或Av不随输入信号Vin变化时，非线性失真越小。",
+      "difficulty": 3,
+      "keywords": [
+        "失真",
+        "非线性失真",
+        "静态失真",
+        "动态失真"
+      ],
+      "formulas": [
+        "∂Af(Vin)/∂Vin = ∂Av/∂Vin / (1 + Av)^2"
+      ],
+      "applications": [
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "增益定义"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "失真分为非线性失真和线性失真，根据引起失真的原因可分为静态失真和动态失真。静态失真由闭环增益随输入信号的变化引起，动态失真由闭环增益随频率变化引起。开环增益Av越大或Av不随输入信号Vin变化时，非线性失真越小。"
+    },
+    {
+      "id": "ct_12_4_1",
+      "label": "Class AB偏置技术",
+      "node_type": "core_technology",
+      "summary": "Class AB偏置技术用于在输出级中实现静态工作点的设定，以在功耗、效率、频率特性和失真等性能参数之间取得折中。其关键是通过反馈或前馈结构的确定及其参数优化来实现静态工作点的精确控制。",
+      "difficulty": 4,
+      "keywords": [
+        "Class AB",
+        "偏置技术",
+        "静态工作点"
+      ],
+      "formulas": [],
+      "applications": [
+        "输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB偏置技术用于在输出级中实现静态工作点的设定，以在功耗、效率、频率特性和失真等性能参数之间取得折中。其关键是通过反馈或前馈结构的确定及其参数优化来实现静态工作点的精确控制。"
+    },
+    {
+      "id": "ct_12_4_2",
+      "label": "反馈控制结构",
+      "node_type": "core_technology",
+      "summary": "反馈控制结构用于Class AB偏置技术中，通过输出级电流检测和Class AB控制原理的实现来提供静态工作点及输出功率管的最大及最小驱动电流。反馈环路的设计需考虑稳定性问题，避免振荡。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈控制",
+        "Class AB",
+        "稳定性"
+      ],
+      "formulas": [
+        "√I11 + √I12 = 2√IQ"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈控制结构用于Class AB偏置技术中，通过输出级电流检测和Class AB控制原理的实现来提供静态工作点及输出功率管的最大及最小驱动电流。反馈环路的设计需考虑稳定性问题，避免振荡。"
+    },
+    {
+      "id": "ct_12_4_3",
+      "label": "最小电流选择电路",
+      "node_type": "core_technology",
+      "summary": "最小电流选择电路用于无截止型Class AB控制结构中，通过反馈环路中的差分运放将参考电流传输到输出管中，确保输出管的最小电流不为零，从而提高动态响应速度并降低高频失真。",
+      "difficulty": 4,
+      "keywords": [
+        "最小电流",
+        "Class AB",
+        "反馈环路"
+      ],
+      "formulas": [
+        "IO = 2C IQ"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "最小电流选择电路用于无截止型Class AB控制结构中，通过反馈环路中的差分运放将参考电流传输到输出管中，确保输出管的最小电流不为零，从而提高动态响应速度并降低高频失真。"
+    },
+    {
+      "id": "ca_12_4_1",
+      "label": "CS增益输出级",
+      "node_type": "circuit_application",
+      "summary": "CS增益输出级是一种基本的输出级结构，具有电压增益高、输出摆幅大的优点，但输出阻抗高，电流驱动能力小，通常只用于输出驱动容性负载。工作于Class A模式，失真小但转换效率低。",
+      "difficulty": 3,
+      "keywords": [
+        "CS增益",
+        "输出级",
+        "Class A"
+      ],
+      "formulas": [],
+      "applications": [
+        "容性负载驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS增益输出级是一种基本的输出级结构，具有电压增益高、输出摆幅大的优点，但输出阻抗高，电流驱动能力小，通常只用于输出驱动容性负载。工作于Class A模式，失真小但转换效率低。"
+    },
+    {
+      "id": "ca_12_4_2",
+      "label": "CS源跟随器输出",
+      "node_type": "circuit_application",
+      "summary": "CS源跟随器输出结构具有输出阻抗小、电流驱动能力强的优点，但输出摆幅范围下降。工作于Class A模式，偏置简单易控，但转换效率难以提高。",
+      "difficulty": 3,
+      "keywords": [
+        "CS源跟随器",
+        "输出级",
+        "Class A"
+      ],
+      "formulas": [],
+      "applications": [
+        "阻性负载驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS源跟随器输出结构具有输出阻抗小、电流驱动能力强的优点，但输出摆幅范围下降。工作于Class A模式，偏置简单易控，但转换效率难以提高。"
+    },
+    {
+      "id": "ca_12_4_3",
+      "label": "互补推挽输出结构",
+      "node_type": "circuit_application",
+      "summary": "互补推挽输出结构具有负载电流驱动能力强、输出电压摆幅大的特点，但静态工作点对电路的效率和失真影响显著。通常选择互补推挽驱动结构以满足宽摆幅电阻负载的基本驱动要求。",
+      "difficulty": 4,
+      "keywords": [
+        "互补推挽",
+        "输出级",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "宽摆幅电阻负载驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "互补推挽输出结构具有负载电流驱动能力强、输出电压摆幅大的特点，但静态工作点对电路的效率和失真影响显著。通常选择互补推挽驱动结构以满足宽摆幅电阻负载的基本驱动要求。"
+    },
+    {
+      "id": "ca_12_4_4",
+      "label": "反馈型Class AB控制电路",
+      "node_type": "circuit_application",
+      "summary": "反馈型Class AB控制电路通过反馈环路实现静态工作点的精确控制，包括截止型和非截止型两种结构。非截止型结构通过最小电流选择电路确保输出管的最小电流不为零，提高动态响应速度并降低高频失真。",
+      "difficulty": 5,
+      "keywords": [
+        "反馈控制",
+        "Class AB",
+        "非截止型"
+      ],
+      "formulas": [
+        "√I3 = 2√Im - √I11",
+        "√I4 = 2√Im - √I12"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈型Class AB控制电路通过反馈环路实现静态工作点的精确控制，包括截止型和非截止型两种结构。非截止型结构通过最小电流选择电路确保输出管的最小电流不为零，提高动态响应速度并降低高频失真。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_4_1",
+      "target_id": "ct_12_4_1",
+      "relationship": "enables",
+      "description": "轨至轨输出级的定义和性能要求使能了Class AB偏置技术的应用，以实现静态工作点的精确控制。",
+      "weight": 0.9,
+      "evidence": "静态条件下,当输出级仅驱动容性负载时,对输出电流驱动能力的要求不高,输出静态电流的下限条件为满足系统带宽要求。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_4_2",
+      "target_id": "ct_12_4_1",
+      "relationship": "supports",
+      "description": "电流效率的概念支撑了Class AB偏置技术的设计，通过优化静态电流来提高效率。",
+      "weight": 0.8,
+      "evidence": "为了得到优异的电流效率, 在输出电压范围接近整个电源电压摆幅条件下, 输出级空载下应该偏置在小的静态电流下,同时在大负载条件下能够提供大的输出电流。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_4_3",
+      "target_id": "ct_12_4_1",
+      "relationship": "supports",
+      "description": "失真的概念支撑了Class AB偏置技术的设计，通过控制静态工作点来降低失真。",
+      "weight": 0.8,
+      "evidence": "就时域内的静态失真而言,开环增益Av越大,或者在Av不随输入信号Vin变化的情况下,非线性失真越小。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_4_1",
+      "target_id": "ct_12_4_2",
+      "relationship": "implements",
+      "description": "Class AB偏置技术通过反馈控制结构来实现静态工作点的精确控制。",
+      "weight": 0.9,
+      "evidence": "反馈控制电路提供Class AB合适的静态工作点,以及输出功率管的最大及最小驱动电流。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_4_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "applies_to",
+      "description": "反馈控制结构应用于反馈型Class AB控制电路的设计中，以实现静态工作点的精确控制。",
+      "weight": 0.9,
+      "evidence": "反馈型Class AB输出级需要两个输入控制信号Vinl和Vin2,M3按比例将M1中的电流复制到控制电路,同样M4将M2中的电流按比例复制到控制电路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_4_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "applies_to",
+      "description": "最小电流选择电路应用于反馈型Class AB控制电路的设计中，以确保输出管的最小电流不为零。",
+      "weight": 0.9,
+      "evidence": "M3-M6构成了一个最小电流选择电路。M3通过M4感应流过M2的电流,M6的栅极与M1的栅极相连,在M5进入深度线性区的条件下,M6感应输出管M1中的电流。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_12_4_1",
+      "target_id": "ca_12_4_2",
+      "relationship": "complements",
+      "description": "CS增益输出级和CS源跟随器输出在输出阻抗和电流驱动能力上互补，适用于不同的负载条件。",
+      "weight": 0.7,
+      "evidence": "CS增益输出级的主要优点是电压增益高、输出摆幅大,缺点是输出阻抗高,电流驱动能力小。CS源跟随器输出的主要优点是输出阻抗小, 电流驱动能力强。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "extends",
+      "description": "互补推挽输出结构通过反馈型Class AB控制电路扩展了其应用范围，实现了更优的性能。",
+      "weight": 0.8,
+      "evidence": "低压运放的输出级通常选择Class AB互补推挽放大结构,以满足输出电压的轨至轨摆幅、提高负载的电流驱动能力并降低失真。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "12.4",
+  "title": "轨至轨输出级",
+  "extraction_timestamp": "2025-07-08T16:48:14.387809"
+}

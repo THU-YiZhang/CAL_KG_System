@@ -1,0 +1,214 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_2_1_1",
+      "label": "有限冲激响应滤波器",
+      "node_type": "basic_concept",
+      "summary": "FIR(Finite Impulse Response)滤波器是一种数字滤波器，其特点是冲激响应在有限时间内衰减为零。其系统函数仅包含零点，没有极点，因此总是稳定的。FIR滤波器的输出仅取决于当前和过去的输入值，与输出值无关。",
+      "difficulty": 2,
+      "keywords": [
+        "FIR",
+        "数字滤波器",
+        "冲激响应"
+      ],
+      "formulas": [
+        "y[n] = Σb[k]x[n-k] (k=0 to N-1)"
+      ],
+      "applications": [
+        "数字信号处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "离散时间信号",
+        "卷积运算"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR(Finite Impulse Response)滤波器是一种数字滤波器，其特点是冲激响应在有限时间内衰减为零。其系统函数仅包含零点，没有极点，因此总是稳定的。FIR滤波器的输出仅取决于当前和过去的输入值，与输出值无关。"
+    },
+    {
+      "id": "bc_6_2_1_2",
+      "label": "线性相位特性",
+      "node_type": "basic_concept",
+      "summary": "FIR滤波器的一个重要特性是能够实现严格的线性相位响应。这意味着信号通过滤波器时，所有频率分量都会经历相同的群延迟，从而保持信号的波形形状不变。线性相位特性对于需要保持信号形状的应用至关重要。",
+      "difficulty": 3,
+      "keywords": [
+        "相位响应",
+        "群延迟",
+        "波形保持"
+      ],
+      "formulas": [
+        "θ(ω) = -kω"
+      ],
+      "applications": [
+        "音频处理",
+        "图像处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶变换",
+        "相位响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器的一个重要特性是能够实现严格的线性相位响应。这意味着信号通过滤波器时，所有频率分量都会经历相同的群延迟，从而保持信号的波形形状不变。线性相位特性对于需要保持信号形状的应用至关重要。"
+    },
+    {
+      "id": "ct_6_2_1_1",
+      "label": "窗函数设计法",
+      "node_type": "core_technology",
+      "summary": "FIR滤波器的一种基本设计方法，通过截断理想滤波器的无限长冲激响应并使用窗函数来减少吉布斯现象。常用窗函数包括矩形窗、汉宁窗、汉明窗和布莱克曼窗等。设计步骤包括：1)确定理想滤波器响应；2)选择窗函数类型；3)确定滤波器阶数；4)计算滤波器系数。",
+      "difficulty": 3,
+      "keywords": [
+        "窗函数",
+        "吉布斯现象",
+        "滤波器设计"
+      ],
+      "formulas": [
+        "h[n] = hd[n]·w[n]"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "带通滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器的一种基本设计方法，通过截断理想滤波器的无限长冲激响应并使用窗函数来减少吉布斯现象。常用窗函数包括矩形窗、汉宁窗、汉明窗和布莱克曼窗等。设计步骤包括：1)确定理想滤波器响应；2)选择窗函数类型；3)确定滤波器阶数；4)计算滤波器系数。"
+    },
+    {
+      "id": "ct_6_2_1_2",
+      "label": "频率采样法",
+      "node_type": "core_technology",
+      "summary": "另一种FIR滤波器设计方法，通过在频域采样理想滤波器的频率响应，然后通过离散傅里叶逆变换得到滤波器系数。这种方法特别适用于需要精确控制特定频率点响应的应用。设计步骤包括：1)确定频率采样点；2)计算理想频率响应；3)进行IDFT得到冲激响应。",
+      "difficulty": 4,
+      "keywords": [
+        "频率采样",
+        "IDFT",
+        "精确控制"
+      ],
+      "formulas": [
+        "H(k) = Hd(e^(j2πk/N))"
+      ],
+      "applications": [
+        "多频带滤波器",
+        "任意幅度响应设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "另一种FIR滤波器设计方法，通过在频域采样理想滤波器的频率响应，然后通过离散傅里叶逆变换得到滤波器系数。这种方法特别适用于需要精确控制特定频率点响应的应用。设计步骤包括：1)确定频率采样点；2)计算理想频率响应；3)进行IDFT得到冲激响应。"
+    },
+    {
+      "id": "ca_6_2_1_1",
+      "label": "FIR数字滤波器实现",
+      "node_type": "circuit_application",
+      "summary": "典型的FIR滤波器电路实现包括：1)移位寄存器链用于存储输入序列；2)乘法器阵列用于实现系数乘法；3)加法器树用于累加部分积。结构上可分为直接型、转置型和对称型等。关键设计参数包括字长选择、舍入方式、流水线级数等。",
+      "difficulty": 4,
+      "keywords": [
+        "移位寄存器",
+        "乘法器",
+        "加法器树"
+      ],
+      "formulas": [
+        "硬件复杂度 ≈ N×(乘法器+加法器)"
+      ],
+      "applications": [
+        "实时信号处理",
+        "数字通信接收机"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的FIR滤波器电路实现包括：1)移位寄存器链用于存储输入序列；2)乘法器阵列用于实现系数乘法；3)加法器树用于累加部分积。结构上可分为直接型、转置型和对称型等。关键设计参数包括字长选择、舍入方式、流水线级数等。"
+    },
+    {
+      "id": "ca_6_2_1_2",
+      "label": "多速率信号处理系统",
+      "node_type": "circuit_application",
+      "summary": "FIR滤波器在多速率系统中作为抗混叠滤波器和重构滤波器使用。典型应用包括抽取器和内插器，通过级联多个FIR滤波器实现高效的采样率转换。系统设计需要考虑过渡带宽度、阻带衰减和计算复杂度之间的平衡。",
+      "difficulty": 5,
+      "keywords": [
+        "抽取",
+        "内插",
+        "多相分解"
+      ],
+      "formulas": [
+        "高效实现：H(z) = ΣE_k(z^M)z^(-k)"
+      ],
+      "applications": [
+        "软件无线电",
+        "音频编解码"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器在多速率系统中作为抗混叠滤波器和重构滤波器使用。典型应用包括抽取器和内插器，通过级联多个FIR滤波器实现高效的采样率转换。系统设计需要考虑过渡带宽度、阻带衰减和计算复杂度之间的平衡。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_2_1_1",
+      "target_id": "ct_6_2_1_1",
+      "relationship": "enables",
+      "description": "FIR滤波器的定义和基本特性为窗函数设计法提供了理论基础",
+      "weight": 0.9,
+      "evidence": "窗函数设计法基于FIR滤波器的冲激响应特性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_1_2",
+      "target_id": "ct_6_2_1_1",
+      "relationship": "supports",
+      "description": "线性相位特性指导窗函数设计法中对称系数的选择",
+      "weight": 0.8,
+      "evidence": "为获得线性相位，窗函数设计法需要设计对称系数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_1_1",
+      "target_id": "ca_6_2_1_1",
+      "relationship": "implements",
+      "description": "窗函数设计法产生的滤波器系数直接用于FIR数字滤波器实现",
+      "weight": 0.95,
+      "evidence": "电路实现需要具体的滤波器系数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_1_2",
+      "target_id": "ca_6_2_1_2",
+      "relationship": "applies_to",
+      "description": "频率采样法特别适合多速率系统中精确控制频响的需求",
+      "weight": 0.85,
+      "evidence": "多速率系统需要精确控制过渡带特性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_1_1",
+      "target_id": "bc_6_2_1_2",
+      "relationship": "relates_to",
+      "description": "FIR滤波器的定义与其线性相位特性密切相关",
+      "weight": 0.7,
+      "evidence": "FIR结构天然支持线性相位实现",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_6_2_1_1",
+      "target_id": "ct_6_2_1_2",
+      "relationship": "complements",
+      "description": "窗函数法和频率采样法互为补充，适用于不同设计需求",
+      "weight": 0.6,
+      "evidence": "两种方法各有优势，常结合使用",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "6.2.1",
+  "title": "FIR滤波器",
+  "extraction_timestamp": "2025-07-08T15:32:46.998668",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

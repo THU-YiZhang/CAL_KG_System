@@ -1,0 +1,302 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_4_1",
+      "label": "差分放大原理",
+      "node_type": "basic_concept",
+      "summary": "差分放大电路是一种特殊的组合电路，能够区分并分别处理差模信号和共模信号。理想情况下，差分放大电路只放大差分信号，完全抑制共模信号，共模抑制比无穷大。差分对主要完成输入级V-I转换（跨导作用），经过中间级的电流信号处理，在输出级完成I-V转换后获得电压输出。",
+      "difficulty": 3,
+      "keywords": [
+        "差模信号",
+        "共模信号",
+        "共模抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本放大电路原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分放大电路是一种特殊的组合电路，能够区分并分别处理差模信号和共模信号。理想情况下，差分放大电路只放大差分信号，完全抑制共模信号，共模抑制比无穷大。差分对主要完成输入级V-I转换（跨导作用），经过中间级的电流信号处理，在输出级完成I-V转换后获得电压输出。"
+    },
+    {
+      "id": "bc_5_4_2",
+      "label": "共模抑制比(CMRR)",
+      "node_type": "basic_concept",
+      "summary": "共模抑制比(CMRR)定义为差模增益(A_vd)与共模增益(A_vc)之比。理想运放由于A_vc=0，则CMRR趋近无穷大。实际运放中由于对称结构中存在的各种失配影响，A_vc增加导致CMRR下降。CMRR与运放失配的关系为CMRR = A_vd/A_vc = (∂V_os/∂V_ic)^-1。",
+      "difficulty": 3,
+      "keywords": [
+        "差模增益",
+        "共模增益",
+        "失配"
+      ],
+      "formulas": [
+        "CMRR = A_vd/A_vc = (∂V_os/∂V_ic)^-1"
+      ],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模抑制比(CMRR)定义为差模增益(A_vd)与共模增益(A_vc)之比。理想运放由于A_vc=0，则CMRR趋近无穷大。实际运放中由于对称结构中存在的各种失配影响，A_vc增加导致CMRR下降。CMRR与运放失配的关系为CMRR = A_vd/A_vc = (∂V_os/∂V_ic)^-1。"
+    },
+    {
+      "id": "bc_5_4_3",
+      "label": "输入失调电压",
+      "node_type": "basic_concept",
+      "summary": "输入失调电压是实际运放中输出电压调节到静态工作点所需施加的差分输入信号V_id。它是各类不匹配源对电路整体影响的综合体现，分为随机失调和系统失调两大类。随机失调主要由器件参数的不对称变化引起，如V_TH、W/L的失配等；系统失调由电路工作点的失配引起。",
+      "difficulty": 4,
+      "keywords": [
+        "随机失调",
+        "系统失调",
+        "失配"
+      ],
+      "formulas": [
+        "V_os = ΔV_TH1,2 + (V_GS-V_TH)1/(V_GS-V_TH)3 ΔV_TH3,4 - (V_GS-V_TH)1,2/2 [MG + Mk']"
+      ],
+      "applications": [
+        "运放精度分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性",
+        "差分放大原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入失调电压是实际运放中输出电压调节到静态工作点所需施加的差分输入信号V_id。它是各类不匹配源对电路整体影响的综合体现，分为随机失调和系统失调两大类。随机失调主要由器件参数的不对称变化引起，如V_TH、W/L的失配等；系统失调由电路工作点的失配引起。"
+    },
+    {
+      "id": "ct_5_4_1",
+      "label": "差分对设计",
+      "node_type": "core_technology",
+      "summary": "差分对设计需要考虑对称性、共模反馈和尾电流源的设计。全对称型的双端输入-双端输出结构对抑制共模信号十分有效，而单端输出结构对共模信号的抑制仅由交流负反馈尾电阻R_S的反馈作用实现。对于差模信号，共源点电位交流接地，电阻R_S因短路而不起作用。",
+      "difficulty": 4,
+      "keywords": [
+        "全对称",
+        "单端输出",
+        "尾电流源"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分输入级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分对设计需要考虑对称性、共模反馈和尾电流源的设计。全对称型的双端输入-双端输出结构对抑制共模信号十分有效，而单端输出结构对共模信号的抑制仅由交流负反馈尾电阻R_S的反馈作用实现。对于差模信号，共源点电位交流接地，电阻R_S因短路而不起作用。"
+    },
+    {
+      "id": "ct_5_4_2",
+      "label": "失调电压补偿",
+      "node_type": "core_technology",
+      "summary": "降低失调电压的方法包括：1)降低MOS管开启电压V_TH失配以及图形失配；2)降低负载与输入差分对的跨导之比；3)降低输入差分对管静态工作点下的过驱动电压。对于系统失调，可通过W/L与后级放大管的匹配设计使V1=Vy，提高输出阻抗(降低λ值)，提高(W/L)1以降低过压驱动。",
+      "difficulty": 4,
+      "keywords": [
+        "随机失调",
+        "系统失调",
+        "补偿技术"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "降低失调电压的方法包括：1)降低MOS管开启电压V_TH失配以及图形失配；2)降低负载与输入差分对的跨导之比；3)降低输入差分对管静态工作点下的过驱动电压。对于系统失调，可通过W/L与后级放大管的匹配设计使V1=Vy，提高输出阻抗(降低λ值)，提高(W/L)1以降低过压驱动。"
+    },
+    {
+      "id": "ct_5_4_3",
+      "label": "CMRR提升技术",
+      "node_type": "core_technology",
+      "summary": "提高CMRR的主要方法包括：1)提高电路对称性，减少失配；2)采用共模负反馈技术稳定共模工作点；3)优化尾电流源设计，提高共模抑制能力。CMRR是各失配条件下CMRR_i的并联求和，1/CMRR = ∂V_os/∂V_ic = ∂V_os,r/∂V_ic + ∂V_os,s/∂V_ic。",
+      "difficulty": 4,
+      "keywords": [
+        "共模负反馈",
+        "对称设计",
+        "尾电流优化"
+      ],
+      "formulas": [
+        "1/CMRR = ∂V_os/∂V_ic = ∂V_os,r/∂V_ic + ∂V_os,s/∂V_ic"
+      ],
+      "applications": [
+        "低噪声运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "提高CMRR的主要方法包括：1)提高电路对称性，减少失配；2)采用共模负反馈技术稳定共模工作点；3)优化尾电流源设计，提高共模抑制能力。CMRR是各失配条件下CMRR_i的并联求和，1/CMRR = ∂V_os/∂V_ic = ∂V_os,r/∂V_ic + ∂V_os,s/∂V_ic。"
+    },
+    {
+      "id": "ca_5_4_1",
+      "label": "NMOS差分输入级",
+      "node_type": "circuit_application",
+      "summary": "NMOS差分输入级是在普通CS单级放大的基础上演化而来的。差分输入对管其源端共接尾电流恒流源，在两对称支路相同的负载上取差分电压输出，构成全差分双端输出。尾电流源的主要作用是利用R_S共模反馈电阻扩展输入信号的共模范围，降低共模增益并提高共模抑制比。",
+      "difficulty": 4,
+      "keywords": [
+        "NMOS",
+        "差分对",
+        "尾电流源"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放输入级"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "NMOS差分输入级是在普通CS单级放大的基础上演化而来的。差分输入对管其源端共接尾电流恒流源，在两对称支路相同的负载上取差分电压输出，构成全差分双端输出。尾电流源的主要作用是利用R_S共模反馈电阻扩展输入信号的共模范围，降低共模增益并提高共模抑制比。"
+    },
+    {
+      "id": "ca_5_4_2",
+      "label": "单端输出N/P型差分输入对",
+      "node_type": "circuit_application",
+      "summary": "在基本结构基础上，采用电流镜传输方式将互补变化的电流由MOS二极管传递到输出管高阻支路上，形成宽摆幅单端电压输出。全差分结构中的单端输出增益仅为差分增益的1/2，但由于负载电流镜的电流传输作用，差分对中一放大管的电流与电流镜负载电流极性相反，其差值为单个放大管电流的两倍。",
+      "difficulty": 4,
+      "keywords": [
+        "单端输出",
+        "电流镜",
+        "宽摆幅"
+      ],
+      "formulas": [],
+      "applications": [
+        "单端输出运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在基本结构基础上，采用电流镜传输方式将互补变化的电流由MOS二极管传递到输出管高阻支路上，形成宽摆幅单端电压输出。全差分结构中的单端输出增益仅为差分增益的1/2，但由于负载电流镜的电流传输作用，差分对中一放大管的电流与电流镜负载电流极性相反，其差值为单个放大管电流的两倍。"
+    },
+    {
+      "id": "ca_5_4_3",
+      "label": "OTA(跨导放大器)",
+      "node_type": "circuit_application",
+      "summary": "当输出为容性负载时，在低频下负载容抗很高，电路具有很高的电压增益。当频率增加后，负载容抗下降导致电压增益衰减，此时实现的是电流放大。这种实现电流线性驱动功能的差分放大器称为线性跨导放大器OTA。对OTA电路的基本要求首先是跨导g_m值高，同时要求它的线性范围宽。OTA对负载电容的最大驱动电流为I_SS，因此最大压摆率SR受到差分对尾电流的限制。",
+      "difficulty": 4,
+      "keywords": [
+        "跨导放大器",
+        "容性负载",
+        "压摆率"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "数据转换器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "当输出为容性负载时，在低频下负载容抗很高，电路具有很高的电压增益。当频率增加后，负载容抗下降导致电压增益衰减，此时实现的是电流放大。这种实现电流线性驱动功能的差分放大器称为线性跨导放大器OTA。对OTA电路的基本要求首先是跨导g_m值高，同时要求它的线性范围宽。OTA对负载电容的最大驱动电流为I_SS，因此最大压摆率SR受到差分对尾电流的限制。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_4_1",
+      "target_id": "ct_5_4_1",
+      "relationship": "enables",
+      "description": "差分放大原理为差分对设计提供了理论基础，理解差模和共模信号的不同处理方式是设计高效差分对的关键。",
+      "weight": 0.9,
+      "evidence": "差分对是模拟集成电路中应用最广泛的一种基础线性单元结构，可视为一种特殊的组合电路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_4_2",
+      "target_id": "ct_5_4_3",
+      "relationship": "supports",
+      "description": "共模抑制比的定义和分析方法为CMRR提升技术提供了理论依据和优化方向。",
+      "weight": 0.8,
+      "evidence": "CMRR可定义为差模增益A_vd与共模增益A_vc之比。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_4_3",
+      "target_id": "ct_5_4_2",
+      "relationship": "supports",
+      "description": "输入失调电压的分析为失调补偿技术提供了理论基础和具体补偿目标。",
+      "weight": 0.9,
+      "evidence": "输入失调电压是各类不匹配源对电路整体影响的综合体现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_4_1",
+      "target_id": "ca_5_4_1",
+      "relationship": "implements",
+      "description": "差分对设计技术直接应用于NMOS差分输入级的实现。",
+      "weight": 0.9,
+      "evidence": "差分输入对管其源端共接尾电流恒流源，在两对称支路相同的负载上取差分电压输出。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_4_1",
+      "target_id": "ca_5_4_2",
+      "relationship": "implements",
+      "description": "差分对设计技术也应用于单端输出N/P型差分输入对的设计。",
+      "weight": 0.8,
+      "evidence": "采用电流镜传输方式将互补变化的电流由MOS二极管传递到输出管高阻支路上。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_4_3",
+      "target_id": "ca_5_4_3",
+      "relationship": "applies_to",
+      "description": "CMRR提升技术可应用于OTA设计，以提高其共模抑制能力。",
+      "weight": 0.7,
+      "evidence": "对OTA电路的基本要求首先是跨导g_m值高，同时要求它的线性范围宽。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_4_1",
+      "target_id": "bc_5_4_2",
+      "relationship": "relates_to",
+      "description": "差分放大原理与共模抑制比密切相关，前者是后者的理论基础。",
+      "weight": 0.8,
+      "evidence": "差分放大电路对差模与共模区别对待，理想情况下只放大差分信号，完全抑制共模信号。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "bc_5_4_2",
+      "target_id": "bc_5_4_3",
+      "relationship": "relates_to",
+      "description": "共模抑制比与输入失调电压都涉及电路失配问题，两者在分析上有相关性。",
+      "weight": 0.7,
+      "evidence": "CMRR与运放失配的关系为CMRR = (∂V_os/∂V_ic)^-1。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_5_4_2",
+      "target_id": "ct_5_4_3",
+      "relationship": "complements",
+      "description": "失调电压补偿技术与CMRR提升技术在提高电路性能方面相互补充。",
+      "weight": 0.7,
+      "evidence": "降低失调电压和提升CMRR都需要优化电路对称性和匹配。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_5_4_1",
+      "target_id": "ca_5_4_2",
+      "relationship": "extends",
+      "description": "单端输出N/P型差分输入对扩展了基本差分输入级的应用范围。",
+      "weight": 0.8,
+      "evidence": "在基本结构基础上，采用电流镜传输方式形成宽摆幅单端电压输出。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.4",
+  "title": "差分放大电路",
+  "extraction_timestamp": "2025-07-08T16:38:42.443100"
+}

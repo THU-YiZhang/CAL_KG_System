@@ -1,0 +1,283 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_4_1",
+      "label": "带隙基准电压",
+      "node_type": "basic_concept",
+      "summary": "带隙基准电压是一种具有低温度系数的电压参考源，通过将具有正温度系数的电压与具有负温度系数的电压进行加权求和，实现温度补偿。基本原理是利用双极型晶体管的基极-发射极电压VBE的负温度系数和热电压VT的正温度系数进行补偿。",
+      "difficulty": 3,
+      "keywords": [
+        "温度系数",
+        "VBE",
+        "VT",
+        "补偿"
+      ],
+      "formulas": [
+        "Vref = VBE + M*VT"
+      ],
+      "applications": [
+        "电压参考源",
+        "ADC/DAC参考"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "双极型晶体管"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带隙基准电压是一种具有低温度系数的电压参考源，通过将具有正温度系数的电压与具有负温度系数的电压进行加权求和，实现温度补偿。基本原理是利用双极型晶体管的基极-发射极电压VBE的负温度系数和热电压VT的正温度系数进行补偿。"
+    },
+    {
+      "id": "bc_4_4_2",
+      "label": "亚阈区工作",
+      "node_type": "basic_concept",
+      "summary": "MOS管在亚阈区工作时，栅源电压VGS低于阈值电压VTH，但仍能产生指数关系的漏极电流。这种工作状态下的VGS具有与BJT开启电压VBE相似的温度特性，可用于替代传统带隙基准中的PN结。",
+      "difficulty": 3,
+      "keywords": [
+        "亚阈区",
+        "VGS",
+        "指数关系",
+        "温度特性"
+      ],
+      "formulas": [
+        "IDS = I0*exp((VGS-VTH)/(nVT))"
+      ],
+      "applications": [
+        "低压带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管在亚阈区工作时，栅源电压VGS低于阈值电压VTH，但仍能产生指数关系的漏极电流。这种工作状态下的VGS具有与BJT开启电压VBE相似的温度特性，可用于替代传统带隙基准中的PN结。"
+    },
+    {
+      "id": "bc_4_4_3",
+      "label": "PTAT电流",
+      "node_type": "basic_concept",
+      "summary": "与绝对温度成正比的电流，通过两个工作在不同电流密度下的BJT或MOS管的VBE/VGS差值产生。PTAT电流是带隙基准中正温度系数分量的来源。",
+      "difficulty": 2,
+      "keywords": [
+        "正温度系数",
+        "ΔVBE",
+        "电流镜"
+      ],
+      "formulas": [
+        "IPTAT = ΔVBE/R"
+      ],
+      "applications": [
+        "温度传感器",
+        "带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "双极型晶体管"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "与绝对温度成正比的电流，通过两个工作在不同电流密度下的BJT或MOS管的VBE/VGS差值产生。PTAT电流是带隙基准中正温度系数分量的来源。"
+    },
+    {
+      "id": "ct_4_4_1",
+      "label": "亚阈区稳定控制技术",
+      "node_type": "core_technology",
+      "summary": "确保MOS管在电源电压变化或工艺漂移时仍能保持在亚阈区工作的技术。关键是通过自适应偏置技术动态反馈控制VGS-VTH，使其保持在规定的亚阈范围内。从电流方面限定更为有效，需使单位W/L下的MOS管电流限制在临界转折电流IS0以内。",
+      "difficulty": 4,
+      "keywords": [
+        "自适应偏置",
+        "动态反馈",
+        "临界电流"
+      ],
+      "formulas": [
+        "VGS-VTH < 2nVT",
+        "IS0 = 2nμCoxVT²"
+      ],
+      "applications": [
+        "亚阈型带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "确保MOS管在电源电压变化或工艺漂移时仍能保持在亚阈区工作的技术。关键是通过自适应偏置技术动态反馈控制VGS-VTH，使其保持在规定的亚阈范围内。从电流方面限定更为有效，需使单位W/L下的MOS管电流限制在临界转折电流IS0以内。"
+    },
+    {
+      "id": "ct_4_4_2",
+      "label": "电流镜精确控制技术",
+      "node_type": "core_technology",
+      "summary": "通过Cascode或Wilson电流镜实现两支路电流严格线性关系的技术。在带隙基准中用于精确控制PTAT电流的产生和传递，提高输出基准的精度。",
+      "difficulty": 3,
+      "keywords": [
+        "Cascode",
+        "Wilson",
+        "电流匹配"
+      ],
+      "formulas": [
+        "Iout = (W/L)out/(W/L)in*Iin"
+      ],
+      "applications": [
+        "电流模带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过Cascode或Wilson电流镜实现两支路电流严格线性关系的技术。在带隙基准中用于精确控制PTAT电流的产生和传递，提高输出基准的精度。"
+    },
+    {
+      "id": "ct_4_4_3",
+      "label": "温度系数补偿技术",
+      "node_type": "core_technology",
+      "summary": "通过调节电阻比例和器件尺寸，使正负温度系数分量达到最佳补偿比例的技术。关键是根据工艺参数计算所需的补偿系数，并通过仿真验证。",
+      "difficulty": 4,
+      "keywords": [
+        "温度补偿",
+        "电阻比例",
+        "尺寸调节"
+      ],
+      "formulas": [
+        "α/β = -VT0/kG"
+      ],
+      "applications": [
+        "带隙基准优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过调节电阻比例和器件尺寸，使正负温度系数分量达到最佳补偿比例的技术。关键是根据工艺参数计算所需的补偿系数，并通过仿真验证。"
+    },
+    {
+      "id": "ca_4_4_1",
+      "label": "基于亚阈电流控制的电压带隙基准",
+      "node_type": "circuit_application",
+      "summary": "采用亚阈MOS管的VGS代替传统PN结的VBE，简化工艺并降低工作电压。结构包括亚阈MOS管支路、电流镜和输出电阻。关键设计在于保证亚阈区稳定工作，通过自适应偏置和限流机制实现。",
+      "difficulty": 4,
+      "keywords": [
+        "亚阈MOS",
+        "低压",
+        "自适应偏置"
+      ],
+      "formulas": [
+        "Vref = VGS1 + neM(R2/R1)VTln(NP)"
+      ],
+      "applications": [
+        "低压应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用亚阈MOS管的VGS代替传统PN结的VBE，简化工艺并降低工作电压。结构包括亚阈MOS管支路、电流镜和输出电阻。关键设计在于保证亚阈区稳定工作，通过自适应偏置和限流机制实现。"
+    },
+    {
+      "id": "ca_4_4_2",
+      "label": "运放控制的电压模带隙基准",
+      "node_type": "circuit_application",
+      "summary": "采用两级运放实现精确的ΔVBE和支路电流比例控制。输入级为PMOS差分放大，输出级为NMOS放大的CS结构。关键设计在于降低运放失调电压，提高对称性。",
+      "difficulty": 4,
+      "keywords": [
+        "运放控制",
+        "差分放大",
+        "失调电压"
+      ],
+      "formulas": [
+        "Av > 1k",
+        "Vos < few mV"
+      ],
+      "applications": [
+        "高精度基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用两级运放实现精确的ΔVBE和支路电流比例控制。输入级为PMOS差分放大，输出级为NMOS放大的CS结构。关键设计在于降低运放失调电压，提高对称性。"
+    },
+    {
+      "id": "ca_4_4_3",
+      "label": "全CMOS电流模带隙基准",
+      "node_type": "circuit_application",
+      "summary": "完全采用MOS管和电阻电容实现的带隙基准，避免使用BJT。通过亚阈MOS产生VGS的温度特性，电流镜实现PTAT电流，电阻转换输出基准。关键设计在于亚阈区稳定和温度系数补偿。",
+      "difficulty": 5,
+      "keywords": [
+        "全CMOS",
+        "电流模",
+        "亚阈区"
+      ],
+      "formulas": [
+        "Vref = (1+R4/R3)VGS1 + (1+R4/R3)ln(S8S5/S7S6)VT"
+      ],
+      "applications": [
+        "纯CMOS工艺"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "完全采用MOS管和电阻电容实现的带隙基准，避免使用BJT。通过亚阈MOS产生VGS的温度特性，电流镜实现PTAT电流，电阻转换输出基准。关键设计在于亚阈区稳定和温度系数补偿。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_4_1",
+      "target_id": "ct_4_4_3",
+      "relationship": "enables",
+      "description": "带隙基准电压原理为温度系数补偿技术提供理论基础",
+      "weight": 0.9,
+      "evidence": "通过将具有正温度系数的电压与具有负温度系数的电压进行加权求和，实现温度补偿",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_4_2",
+      "target_id": "ca_4_4_1",
+      "relationship": "applies_to",
+      "description": "亚阈区工作特性直接应用于亚阈电流控制的带隙基准设计",
+      "weight": 0.95,
+      "evidence": "采用亚阈MOS管的VGS代替传统PN结的VBE",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_4_1",
+      "target_id": "ca_4_4_1",
+      "relationship": "implements",
+      "description": "亚阈区稳定控制技术在亚阈型带隙基准中得到具体实现",
+      "weight": 0.85,
+      "evidence": "关键设计在于保证亚阈区稳定工作，通过自适应偏置和限流机制实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_4_2",
+      "target_id": "ca_4_4_3",
+      "relationship": "implements",
+      "description": "电流镜精确控制技术在全CMOS电流模基准中实现PTAT电流传递",
+      "weight": 0.8,
+      "evidence": "通过亚阈MOS产生VGS的温度特性，电流镜实现PTAT电流",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_4_3",
+      "target_id": "ct_4_4_3",
+      "relationship": "supports",
+      "description": "PTAT电流原理支持温度系数补偿技术的实现",
+      "weight": 0.75,
+      "evidence": "通过调节电阻比例和器件尺寸，使正负温度系数分量达到最佳补偿比例",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_4_3",
+      "target_id": "ca_4_4_3",
+      "relationship": "applies_to",
+      "description": "温度系数补偿技术应用于全CMOS电流模基准的优化设计",
+      "weight": 0.85,
+      "evidence": "关键设计在于亚阈区稳定和温度系数补偿",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.4",
+  "title": "常用带隙电压基准结构设计",
+  "extraction_timestamp": "2025-07-08T16:36:40.401983"
+}

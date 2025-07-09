@@ -1,0 +1,139 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_2_2_1",
+      "label": "增益裕度",
+      "node_type": "basic_concept",
+      "summary": "增益裕度是指系统在相位交叉频率处的增益与0 dB之间的差值，用于衡量系统的稳定性。增益裕度大于0 dB表示系统稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "增益裕度",
+        "稳定性",
+        "dB"
+      ],
+      "formulas": [
+        "Gain Margin = 0 dB - |G(jω)| at phase crossover frequency"
+      ],
+      "applications": [
+        "反馈控制系统",
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益裕度是指系统在相位交叉频率处的增益与0 dB之间的差值，用于衡量系统的稳定性。增益裕度大于0 dB表示系统稳定。"
+    },
+    {
+      "id": "bc_4_2_2_2",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指系统在增益交叉频率处的相位与-180°之间的差值，用于衡量系统的稳定性。相位裕度大于0°表示系统稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "相位裕度",
+        "稳定性",
+        "度"
+      ],
+      "formulas": [
+        "Phase Margin = ∠G(jω) - (-180°) at gain crossover frequency"
+      ],
+      "applications": [
+        "反馈控制系统",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指系统在增益交叉频率处的相位与-180°之间的差值，用于衡量系统的稳定性。相位裕度大于0°表示系统稳定。"
+    },
+    {
+      "id": "ct_4_2_2_1",
+      "label": "波德图分析",
+      "node_type": "core_technology",
+      "summary": "波德图分析是一种通过绘制系统的幅频特性和相频特性曲线来分析系统稳定性的方法。通过观察增益裕度和相位裕度来判断系统是否稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "波德图",
+        "稳定性分析",
+        "频率响应"
+      ],
+      "formulas": [
+        "Bode Plot = Magnitude Plot + Phase Plot"
+      ],
+      "applications": [
+        "控制系统设计",
+        "电路稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "波德图分析是一种通过绘制系统的幅频特性和相频特性曲线来分析系统稳定性的方法。通过观察增益裕度和相位裕度来判断系统是否稳定。"
+    },
+    {
+      "id": "ca_4_2_2_1",
+      "label": "反馈放大器稳定性分析",
+      "node_type": "circuit_application",
+      "summary": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度来确保放大器在闭环工作时不会产生振荡或不稳定现象。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈放大器",
+        "稳定性",
+        "波德图"
+      ],
+      "formulas": [
+        "Loop Gain T(s) = A(s)β(s)"
+      ],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度来确保放大器在闭环工作时不会产生振荡或不稳定现象。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_2_2_1",
+      "target_id": "ct_4_2_2_1",
+      "relationship": "enables",
+      "description": "增益裕度的概念使能了波德图分析技术，通过增益裕度可以定量评估系统稳定性。",
+      "weight": 0.9,
+      "evidence": "通过增益裕度来判断系统稳定性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_2_2_2",
+      "target_id": "ct_4_2_2_1",
+      "relationship": "enables",
+      "description": "相位裕度的概念使能了波德图分析技术，通过相位裕度可以定量评估系统稳定性。",
+      "weight": 0.9,
+      "evidence": "通过相位裕度来判断系统稳定性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_2_2_1",
+      "target_id": "ca_4_2_2_1",
+      "relationship": "implements",
+      "description": "波德图分析技术实现了反馈放大器稳定性分析，通过绘制波德图来评估放大器的稳定性。",
+      "weight": 0.8,
+      "evidence": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.2.2",
+  "title": "波德图分析",
+  "extraction_timestamp": "2025-07-08T15:31:33.033004",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

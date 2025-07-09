@@ -1,0 +1,362 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_2_1",
+      "label": "相位裕度(PM)",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指系统在单位增益带宽处的相位与-180度之间的差值，用于衡量系统的相对稳定性。PM越大，系统稳定性越好。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "相位裕度",
+        "单位增益带宽"
+      ],
+      "formulas": [
+        "PM = 180° - φ(ωt)"
+      ],
+      "applications": [
+        "运放稳定性设计",
+        "反馈系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "相位分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指系统在单位增益带宽处的相位与-180度之间的差值，用于衡量系统的相对稳定性。PM越大，系统稳定性越好。"
+    },
+    {
+      "id": "bc_9_2_2",
+      "label": "增益裕度(GM)",
+      "node_type": "basic_concept",
+      "summary": "增益裕度是指系统在相位达到-180度时的增益与0dB之间的差值，用于衡量系统的绝对稳定性。GM越大，系统稳定性越好。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "增益裕度",
+        "相位交叉频率"
+      ],
+      "formulas": [
+        "GM = -|A(jωπ)| (dB)"
+      ],
+      "applications": [
+        "运放稳定性设计",
+        "反馈系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "增益分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益裕度是指系统在相位达到-180度时的增益与0dB之间的差值，用于衡量系统的绝对稳定性。GM越大，系统稳定性越好。"
+    },
+    {
+      "id": "bc_9_2_3",
+      "label": "Routh-Hurwitz判据",
+      "node_type": "basic_concept",
+      "summary": "Routh-Hurwitz判据是一种通过系统特征方程的系数来判断系统稳定性的方法，无需直接求解极点。通过构造Routh表，可以判断系统是否稳定以及不稳定极点的数量。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性判据",
+        "特征方程",
+        "极点分析"
+      ],
+      "formulas": [
+        "b1 = -(a0a3 - a1a2)/a2",
+        "c1 = (a3² + a1²a4 - a1a2a3)/(a1a4 - a2a3)"
+      ],
+      "applications": [
+        "高阶系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "多项式分析",
+        "极点概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Routh-Hurwitz判据是一种通过系统特征方程的系数来判断系统稳定性的方法，无需直接求解极点。通过构造Routh表，可以判断系统是否稳定以及不稳定极点的数量。"
+    },
+    {
+      "id": "bc_9_2_4",
+      "label": "品质因子(Q)",
+      "node_type": "basic_concept",
+      "summary": "品质因子是描述二阶系统阻尼特性的参数，与阻尼因子ζ的关系为Qζ=1/2。Q值越大，系统响应越快但过冲越大；Q值越小，系统响应越慢但更稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "阻尼特性",
+        "二阶系统",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "Q = √(b2)/b1",
+        "ζ = 1/(2Q)"
+      ],
+      "applications": [
+        "二阶系统设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "二阶系统",
+        "阻尼分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "品质因子是描述二阶系统阻尼特性的参数，与阻尼因子ζ的关系为Qζ=1/2。Q值越大，系统响应越快但过冲越大；Q值越小，系统响应越慢但更稳定。"
+    },
+    {
+      "id": "ct_9_2_1",
+      "label": "开环运放设计方法",
+      "node_type": "core_technology",
+      "summary": "开环运放设计方法首先设计开环运放的拓扑结构和静态指标，然后针对特定负载条件进行频率补偿设计，确保开环单位负反馈构成的闭环系统满足PM和GM要求。",
+      "difficulty": 4,
+      "keywords": [
+        "开环设计",
+        "频率补偿",
+        "拓扑结构"
+      ],
+      "formulas": [
+        "GBW = A0p1",
+        "PM = 90° - arctan(GBW/p2)"
+      ],
+      "applications": [
+        "运放设计",
+        "反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开环运放设计方法首先设计开环运放的拓扑结构和静态指标，然后针对特定负载条件进行频率补偿设计，确保开环单位负反馈构成的闭环系统满足PM和GM要求。"
+    },
+    {
+      "id": "ct_9_2_2",
+      "label": "闭环运放设计方法",
+      "node_type": "core_technology",
+      "summary": "闭环运放设计方法考虑反馈网络的频响特性，根据环路PM要求确定运放必须具有的相位移和增益，然后构造运放的结构及其频率响应。可以采用gm/zo方式或内部闭环负反馈方法。",
+      "difficulty": 4,
+      "keywords": [
+        "闭环设计",
+        "频率整形",
+        "反馈网络"
+      ],
+      "formulas": [
+        "ωn = √(F·GBW·p2)",
+        "Q = √(F·GBW/p2)"
+      ],
+      "applications": [
+        "有源反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环运放设计方法考虑反馈网络的频响特性，根据环路PM要求确定运放必须具有的相位移和增益，然后构造运放的结构及其频率响应。可以采用gm/zo方式或内部闭环负反馈方法。"
+    },
+    {
+      "id": "ct_9_2_3",
+      "label": "二阶系统稳定性设计",
+      "node_type": "core_technology",
+      "summary": "二阶系统稳定性设计通过控制闭环系统的Q值或ζ值来设定LHP极点的位置分布，实现稳定的相位裕度要求。对于Q<0.707和Q>0.707两种情况分别采用不同的PM计算方法。",
+      "difficulty": 3,
+      "keywords": [
+        "二阶系统",
+        "极点配置",
+        "相位裕度设计"
+      ],
+      "formulas": [
+        "PM = arctan(1/Q²) (Q<0.707)",
+        "PM = arctan(√(2/(√(1+4Q⁴)-1))) (Q>0.707)"
+      ],
+      "applications": [
+        "二阶反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二阶系统稳定性设计通过控制闭环系统的Q值或ζ值来设定LHP极点的位置分布，实现稳定的相位裕度要求。对于Q<0.707和Q>0.707两种情况分别采用不同的PM计算方法。"
+    },
+    {
+      "id": "ct_9_2_4",
+      "label": "三阶系统巴特沃思设计",
+      "node_type": "core_technology",
+      "summary": "三阶系统巴特沃思设计方法通过等效滤波器设计实现60°相位裕度。首先确定闭环巴特沃思响应条件，然后推导出所需开环运放状态，确保GBW限制在(ζ/2)ωn范围内。",
+      "difficulty": 4,
+      "keywords": [
+        "三阶系统",
+        "巴特沃思响应",
+        "滤波器等效"
+      ],
+      "formulas": [
+        "GBW = ω0/2 = ωn/(2√2)",
+        "p2,3 = -(1±j)ωn/√2"
+      ],
+      "applications": [
+        "高阶反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三阶系统巴特沃思设计方法通过等效滤波器设计实现60°相位裕度。首先确定闭环巴特沃思响应条件，然后推导出所需开环运放状态，确保GBW限制在(ζ/2)ωn范围内。"
+    },
+    {
+      "id": "ca_9_2_1",
+      "label": "单位负反馈运放电路",
+      "node_type": "circuit_application",
+      "summary": "单位负反馈运放电路是最基本的闭环运放应用，通过将输出直接反馈到反相输入端实现单位增益放大。其稳定性由开环运放的PM和GM决定，特别需要考虑次极点p2与GBW的关系。",
+      "difficulty": 3,
+      "keywords": [
+        "单位增益缓冲器",
+        "负反馈",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "Q = √(GBW/p2)",
+        "PM = arctan(1/Q²)"
+      ],
+      "applications": [
+        "信号缓冲",
+        "阻抗变换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单位负反馈运放电路是最基本的闭环运放应用，通过将输出直接反馈到反相输入端实现单位增益放大。其稳定性由开环运放的PM和GM决定，特别需要考虑次极点p2与GBW的关系。"
+    },
+    {
+      "id": "ca_9_2_2",
+      "label": "二阶巴特沃思滤波器",
+      "node_type": "circuit_application",
+      "summary": "二阶巴特沃思滤波器采用特定极点配置实现最大平坦度响应，其闭环特征多项式系数为b0=1、b1=2、b2=1，对应Q=0.5、ζ=1。开环系统具有分离的LHP实极点，GBW=ω0/2，p2=2ω0。",
+      "difficulty": 4,
+      "keywords": [
+        "滤波器设计",
+        "巴特沃思响应",
+        "极点配置"
+      ],
+      "formulas": [
+        "B(s) = 1 + 2s/ω0 + s²/ω0²",
+        "PM = arctan4 ≈ 76°"
+      ],
+      "applications": [
+        "抗混叠滤波",
+        "信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二阶巴特沃思滤波器采用特定极点配置实现最大平坦度响应，其闭环特征多项式系数为b0=1、b1=2、b2=1，对应Q=0.5、ζ=1。开环系统具有分离的LHP实极点，GBW=ω0/2，p2=2ω0。"
+    },
+    {
+      "id": "ca_9_2_3",
+      "label": "三阶巴特沃思反馈系统",
+      "node_type": "circuit_application",
+      "summary": "三阶巴特沃思反馈系统通过特定极点配置实现60°相位裕度，其闭环特征多项式为B(s)=1+2s/ω0+2s²/ω0²+s³/ω0³。开环系统包含一个低频主极点和一对共轭复极点，GBW=ω0/2=ζωn/2。",
+      "difficulty": 5,
+      "keywords": [
+        "高阶反馈系统",
+        "巴特沃思响应",
+        "共轭极点"
+      ],
+      "formulas": [
+        "GBW = ωn/(2√2)",
+        "p2,3 = -(1±j)ωn/√2"
+      ],
+      "applications": [
+        "高阶滤波",
+        "宽带放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三阶巴特沃思反馈系统通过特定极点配置实现60°相位裕度，其闭环特征多项式为B(s)=1+2s/ω0+2s²/ω0²+s³/ω0³。开环系统包含一个低频主极点和一对共轭复极点，GBW=ω0/2=ζωn/2。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_2_1",
+      "target_id": "ct_9_2_1",
+      "relationship": "enables",
+      "description": "相位裕度概念是开环运放设计方法的基础指标，设计过程中需要确保系统满足PM要求。",
+      "weight": 0.9,
+      "evidence": "开环设计是以一般条件下的闭环稳定为基本出发点，使开环单位负反馈构成的闭环系统满足相位裕度PM和增益裕度GM的要求。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_2_3",
+      "target_id": "ct_9_2_3",
+      "relationship": "supports",
+      "description": "Routh-Hurwitz判据为二阶系统稳定性设计提供了理论基础，确保极点配置在LHP平面内。",
+      "weight": 0.8,
+      "evidence": "Routh准则给出了高阶电路系统稳定性的判据，对于两阶系统，根据Routh定理，只要开环特征多项式系数均为正，则闭环系统一定稳定。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_2_3",
+      "target_id": "ca_9_2_1",
+      "relationship": "implements",
+      "description": "二阶系统稳定性设计方法直接应用于单位负反馈运放电路的设计中，确保其稳定性。",
+      "weight": 0.9,
+      "evidence": "对于F=1的单位闭环负反馈系统特例，控制Q值，即等效控制了GBW与高频次极点的关系。当Q=1/√2时，p2=2GBW，满足基本相位裕度的要求。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_2_4",
+      "target_id": "ca_9_2_3",
+      "relationship": "applies_to",
+      "description": "三阶系统巴特沃思设计方法专门用于设计具有60°相位裕度的三阶巴特沃思反馈系统。",
+      "weight": 0.95,
+      "evidence": "三阶巴特沃思滤波器的闭环系统设计具有PM=60°的相位裕度，B(s)=1+2s/ω0+2s²/ω0²+s³/ω0³为其归一化特征多项式的标准形式。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_2_4",
+      "target_id": "ct_9_2_3",
+      "relationship": "supports",
+      "description": "品质因子Q是二阶系统稳定性设计中的关键参数，直接影响系统的PM和瞬态响应。",
+      "weight": 0.85,
+      "evidence": "品质因子Q的大小决定极点的性质、位置和相位裕度，并由此影响瞬态特性。闭环稳定性的差异与闭环的幅度过冲有关，即过冲幅度与PM发生关联。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_2_2",
+      "target_id": "ct_9_2_2",
+      "relationship": "enables",
+      "description": "增益裕度概念是闭环运放设计的重要指标，设计过程中需要确保系统满足GM要求。",
+      "weight": 0.8,
+      "evidence": "系统设计的出发点和要求都是相同的，即闭环系统的稳定性。根据环路的PM确定运放必须具有的相位移和增益。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_2_1",
+      "target_id": "ct_9_2_2",
+      "relationship": "complements",
+      "description": "开环和闭环运放设计方法是互补的两种设计方法，分别适用于不同的反馈网络条件。",
+      "weight": 0.75,
+      "evidence": "开环运放设计适用于一般条件下的闭环稳定，而闭环运放设计针对系统环路中存在有源反馈时的系统设计。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_9_2_2",
+      "target_id": "ca_9_2_3",
+      "relationship": "extends",
+      "description": "三阶巴特沃思反馈系统是二阶巴特沃思滤波器的扩展，增加了系统阶数以实现更陡峭的滚降特性。",
+      "weight": 0.7,
+      "evidence": "三级增益结构是在两级增益的基础上发展而来的，并至少存在3个以上的极点。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "9.2",
+  "title": "系统稳定性分析设计",
+  "extraction_timestamp": "2025-07-08T16:44:37.528186"
+}

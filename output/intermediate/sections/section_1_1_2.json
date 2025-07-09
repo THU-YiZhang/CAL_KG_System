@@ -1,0 +1,7 @@
+{
+  "section_num": "1.1.2",
+  "title": "电容元件",
+  "level": 3,
+  "content": "电容器是储存电荷的元件，其电压-电流关系为：i = C(dv/dt)\n\n电容器储存的能量为：W = ½CV²",
+  "subsections": []
+}

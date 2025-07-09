@@ -1,0 +1,353 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_3_1",
+      "label": "静态工作点匹配",
+      "node_type": "basic_concept",
+      "summary": "在多级放大电路中，各级电路的输入和输出需要处于适合的静态工作点，确保各级电路均处于有效的放大区。特别是前级驱动后级时，前后级直流静态工作点的匹配尤为重要。",
+      "difficulty": 3,
+      "keywords": [
+        "静态工作点",
+        "直流匹配",
+        "放大区"
+      ],
+      "formulas": [],
+      "applications": [
+        "多级放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "单级放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在多级放大电路中，各级电路的输入和输出需要处于适合的静态工作点，确保各级电路均处于有效的放大区。特别是前级驱动后级时，前后级直流静态工作点的匹配尤为重要。"
+    },
+    {
+      "id": "bc_5_3_2",
+      "label": "直流电平移位",
+      "node_type": "basic_concept",
+      "summary": "直流电平移位是多级放大电路中必须考虑的问题，用于解决前后级电路直流电平不匹配的问题。普通电阻分压对直流和交流信号有相同的衰减，无法满足要求。二极管或MOS二极管结合恒流源偏置，可以提供固定的直流电平移位，同时保持交流信号的传输。",
+      "difficulty": 3,
+      "keywords": [
+        "电平移位",
+        "直流电平",
+        "恒流源"
+      ],
+      "formulas": [],
+      "applications": [
+        "多级放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "二极管特性",
+        "恒流源原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "直流电平移位是多级放大电路中必须考虑的问题，用于解决前后级电路直流电平不匹配的问题。普通电阻分压对直流和交流信号有相同的衰减，无法满足要求。二极管或MOS二极管结合恒流源偏置，可以提供固定的直流电平移位，同时保持交流信号的传输。"
+    },
+    {
+      "id": "bc_5_3_3",
+      "label": "Class A/B/AB模式",
+      "node_type": "basic_concept",
+      "summary": "Class A、B和AB是放大电路的不同工作模式。Class A模式下，晶体管在整个信号周期内导通，线性度好但效率低；Class B模式下，晶体管仅在半个信号周期内导通，效率高但存在交越失真；Class AB模式介于两者之间，通过设置适当的偏置电压，可以在效率和线性度之间取得平衡。",
+      "difficulty": 3,
+      "keywords": [
+        "工作模式",
+        "Class A",
+        "Class B",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class A、B和AB是放大电路的不同工作模式。Class A模式下，晶体管在整个信号周期内导通，线性度好但效率低；Class B模式下，晶体管仅在半个信号周期内导通，效率高但存在交越失真；Class AB模式介于两者之间，通过设置适当的偏置电压，可以在效率和线性度之间取得平衡。"
+    },
+    {
+      "id": "ct_5_3_1",
+      "label": "Cascade组合放大电路设计",
+      "node_type": "core_technology",
+      "summary": "Cascade组合放大电路通过信号级联放大的方式提高总增益，适合低压电路设计。典型的组合方式包括CS-CS（共源-共源）、CS-CD（共源-共漏）和CD-CG-CS（共漏-共栅-共源）等。CS-CS组合实现电压放大，CS-CD组合实现功率放大，CD-CG-CS组合可用于Class AB模式的差分输入对。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascade",
+        "CS-CS",
+        "CS-CD",
+        "CD-CG-CS"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascade组合放大电路通过信号级联放大的方式提高总增益，适合低压电路设计。典型的组合方式包括CS-CS（共源-共源）、CS-CD（共源-共漏）和CD-CG-CS（共漏-共栅-共源）等。CS-CS组合实现电压放大，CS-CD组合实现功率放大，CD-CG-CS组合可用于Class AB模式的差分输入对。"
+    },
+    {
+      "id": "ct_5_3_2",
+      "label": "Cascode组合放大电路设计",
+      "node_type": "core_technology",
+      "summary": "Cascode组合放大电路通过提高输出阻抗的方式实现增益的提高，具有优异的频率响应特性。Cascode结构分为套筒式（Telescope）和折叠式（Folded）两种。套筒式Cascode采用同类型MOS管垂直级联，需要较高的电源电压；折叠式Cascode采用不同类型MOS管，电源电压要求较低但功耗略高。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "Telescope",
+        "Folded",
+        "高输出阻抗"
+      ],
+      "formulas": [
+        "A_v = -g_m1 * r_o (基本增益公式)",
+        "R_o = g_m * r_o^2 / (2α) (输出阻抗公式)"
+      ],
+      "applications": [
+        "高增益放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode组合放大电路通过提高输出阻抗的方式实现增益的提高，具有优异的频率响应特性。Cascode结构分为套筒式（Telescope）和折叠式（Folded）两种。套筒式Cascode采用同类型MOS管垂直级联，需要较高的电源电压；折叠式Cascode采用不同类型MOS管，电源电压要求较低但功耗略高。"
+    },
+    {
+      "id": "ct_5_3_3",
+      "label": "Class AB模式设计",
+      "node_type": "core_technology",
+      "summary": "Class AB模式的设计关键在于设置适当的偏置电压，使NMOS和PMOS管在静态条件下流过相同的电流，形成Class AB驱动。通过调整偏置电压V_bn和V_bp的大小，可以控制静态电流和动态范围。V_bn > V_bp时进入Class AB模式，V_bn = V_bp时为Class B模式，V_bn < V_bp时为Class C模式。",
+      "difficulty": 4,
+      "keywords": [
+        "Class AB",
+        "偏置电压",
+        "静态电流"
+      ],
+      "formulas": [
+        "V_bn - (Δ_n5 + Δ_p8) > V_bp - (Δ_n7 + Δ_p6) (Class AB必要条件)"
+      ],
+      "applications": [
+        "功率放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB模式的设计关键在于设置适当的偏置电压，使NMOS和PMOS管在静态条件下流过相同的电流，形成Class AB驱动。通过调整偏置电压V_bn和V_bp的大小，可以控制静态电流和动态范围。V_bn > V_bp时进入Class AB模式，V_bn = V_bp时为Class B模式，V_bn < V_bp时为Class C模式。"
+    },
+    {
+      "id": "ca_5_3_1",
+      "label": "CS-CS组合放大电路",
+      "node_type": "circuit_application",
+      "summary": "CS-CS组合放大电路是一种两级电压放大电路，通过前后两级共源放大器的级联实现高电压增益。当前后两级采用N型与P型输入结构搭配时，直流工作点容易匹配，适合静态低电流和宽摆幅输出的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "CS-CS",
+        "电压放大",
+        "N型与P型搭配"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益电压放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS-CS组合放大电路是一种两级电压放大电路，通过前后两级共源放大器的级联实现高电压增益。当前后两级采用N型与P型输入结构搭配时，直流工作点容易匹配，适合静态低电流和宽摆幅输出的应用场景。"
+    },
+    {
+      "id": "ca_5_3_2",
+      "label": "CS-CD组合放大电路",
+      "node_type": "circuit_application",
+      "summary": "CS-CD组合放大电路通过CS输入级实现高阻下的电压增益，再由CD电压跟随器实现低阻下的电流增益，最终完成功率放大。CD作为内部电压放大电路，实现满量程放大信号对输出负载的隔离缓冲作用。",
+      "difficulty": 4,
+      "keywords": [
+        "CS-CD",
+        "功率放大",
+        "电压跟随"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS-CD组合放大电路通过CS输入级实现高阻下的电压增益，再由CD电压跟随器实现低阻下的电流增益，最终完成功率放大。CD作为内部电压放大电路，实现满量程放大信号对输出负载的隔离缓冲作用。"
+    },
+    {
+      "id": "ca_5_3_3",
+      "label": "CD-CG-CS组合放大电路",
+      "node_type": "circuit_application",
+      "summary": "CD-CG-CS是一种三级组合放大电路，通过CD电压缓冲级将输入电压转变为电流信号，再通过CG电流跟随将电流信号转变为输出电压信号。CD和CG的放大管类型必须相反，可用于Class AB模式的CMOS差分输入对，也可作为电平移位结构。",
+      "difficulty": 5,
+      "keywords": [
+        "CD-CG-CS",
+        "Class AB",
+        "电平移位"
+      ],
+      "formulas": [
+        "V_GSN + V_GSP (固定偏压)"
+      ],
+      "applications": [
+        "差分放大器",
+        "电平移位电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CD-CG-CS是一种三级组合放大电路，通过CD电压缓冲级将输入电压转变为电流信号，再通过CG电流跟随将电流信号转变为输出电压信号。CD和CG的放大管类型必须相反，可用于Class AB模式的CMOS差分输入对，也可作为电平移位结构。"
+    },
+    {
+      "id": "ca_5_3_4",
+      "label": "Telescope Cascode放大电路",
+      "node_type": "circuit_application",
+      "summary": "Telescope Cascode放大电路采用同类型MOS管垂直级联，通过提高输出阻抗实现高增益。其电压增益公式为A_v = -g_m * R_o，其中R_o = g_m * r_o^2 / (2α)。该结构具有优异的频率响应特性，但需要较高的电源电压且输出摆幅较小。",
+      "difficulty": 5,
+      "keywords": [
+        "Telescope Cascode",
+        "高输出阻抗",
+        "高增益"
+      ],
+      "formulas": [
+        "A_v = -g_m * R_o",
+        "R_o = g_m * r_o^2 / (2α)"
+      ],
+      "applications": [
+        "高增益放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Telescope Cascode放大电路采用同类型MOS管垂直级联，通过提高输出阻抗实现高增益。其电压增益公式为A_v = -g_m * R_o，其中R_o = g_m * r_o^2 / (2α)。该结构具有优异的频率响应特性，但需要较高的电源电压且输出摆幅较小。"
+    },
+    {
+      "id": "ca_5_3_5",
+      "label": "Folded Cascode放大电路",
+      "node_type": "circuit_application",
+      "summary": "Folded Cascode放大电路采用不同类型MOS管（N型CS与P型CG或反之），通过折叠式结构降低电源电压要求。其增益与输出阻抗与Telescope Cascode相近，但增加了一条电流支路，功耗略高。适用于低压高增益放大器设计。",
+      "difficulty": 5,
+      "keywords": [
+        "Folded Cascode",
+        "低压设计",
+        "高增益"
+      ],
+      "formulas": [
+        "A_v ≈ -g_m1 * r_ds3"
+      ],
+      "applications": [
+        "低压高增益放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Folded Cascode放大电路采用不同类型MOS管（N型CS与P型CG或反之），通过折叠式结构降低电源电压要求。其增益与输出阻抗与Telescope Cascode相近，但增加了一条电流支路，功耗略高。适用于低压高增益放大器设计。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_3_1",
+      "target_id": "ct_5_3_1",
+      "relationship": "enables",
+      "description": "静态工作点匹配是设计Cascade组合放大电路的基础，确保各级电路处于有效的放大区。",
+      "weight": 0.9,
+      "evidence": "在多级组合放大电路中，首先应保证各单级放大电路的输入和输出都处于适合的静态工作点。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_3_2",
+      "target_id": "ct_5_3_1",
+      "relationship": "supports",
+      "description": "直流电平移位技术解决了Cascade组合放大电路中前后级直流电平不匹配的问题。",
+      "weight": 0.8,
+      "evidence": "直流电平移位是多级放大电路中所必须考虑的问题，与集成放大电路全局偏置的结构特点相对应。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_3_3",
+      "target_id": "ct_5_3_3",
+      "relationship": "enables",
+      "description": "Class A/B/AB模式的理解是设计Class AB模式放大电路的基础。",
+      "weight": 0.9,
+      "evidence": "该电路NMOS与PMOS独立输入支路的电压增益，分别对应为Class B工作点下两区域内的电压增益。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_1",
+      "target_id": "ca_5_3_1",
+      "relationship": "implements",
+      "description": "Cascade组合放大电路设计方法实现了CS-CS组合放大电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "在图5-15所示的两级Cascade组合放大电路中，CS-CS组合电路实现的是电压放大。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_1",
+      "target_id": "ca_5_3_2",
+      "relationship": "implements",
+      "description": "Cascade组合放大电路设计方法实现了CS-CD组合放大电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "CS-CD组合电路则能实现电流与电压同时放大，即功率放大。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_1",
+      "target_id": "ca_5_3_3",
+      "relationship": "implements",
+      "description": "Cascade组合放大电路设计方法实现了CD-CG-CS组合放大电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "CD-CG-CS是一种三级组合电路，首先通过电压缓冲级将输入电压转变为电流信号。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_2",
+      "target_id": "ca_5_3_4",
+      "relationship": "implements",
+      "description": "Cascode组合放大电路设计方法实现了Telescope Cascode放大电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "当Cascode结构中的CS和CG为同类型MOS管时，称为套筒式(Telescope)Cascode结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_2",
+      "target_id": "ca_5_3_5",
+      "relationship": "implements",
+      "description": "Cascode组合放大电路设计方法实现了Folded Cascode放大电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "当CS与CG中的MOS管类型相反时，为折叠式(Folded)Cascode结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_3_3",
+      "target_id": "ca_5_3_3",
+      "relationship": "applies_to",
+      "description": "Class AB模式设计方法应用于CD-CG-CS组合放大电路，实现Class AB工作模式。",
+      "weight": 0.8,
+      "evidence": "CD-CG通常可用于Class AB模式的CMOS差分输入对。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_5_3_5",
+      "relationship": "complements",
+      "description": "Telescope Cascode和Folded Cascode是互补的Cascode结构，分别适用于不同的电源电压和功耗要求。",
+      "weight": 0.7,
+      "evidence": "Telescope Cascode采用同方向上的垂直级连，所需的最低工作电压有所提升，Folded Cascode由于改变垂直级连的方向，因此工作电压的下限值相比Telescope Cascode略有降低。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "5.3",
+  "title": "组合放大电路",
+  "extraction_timestamp": "2025-07-08T16:38:44.515448"
+}

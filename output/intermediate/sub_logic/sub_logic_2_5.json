@@ -1,0 +1,391 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_5_1",
+      "label": "PN结",
+      "node_type": "basic_concept",
+      "summary": "PN结是构成半导体器件及其电路的物理和结构基础，由P型和N型半导体材料接触形成，具有单向导电性。正向偏置时导通，反向偏置时截止。",
+      "difficulty": 2,
+      "keywords": [
+        "半导体",
+        "单向导电性",
+        "正向导通",
+        "反向截止"
+      ],
+      "formulas": [],
+      "applications": [
+        "二极管",
+        "BJT管",
+        "MOS管"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PN结是构成半导体器件及其电路的物理和结构基础，由P型和N型半导体材料接触形成，具有单向导电性。正向偏置时导通，反向偏置时截止。"
+    },
+    {
+      "id": "bc_2_5_2",
+      "label": "二极管",
+      "node_type": "basic_concept",
+      "summary": "二极管是由PN结构成的半导体器件，具有正向导通与反向截止的基本特性，在电路中用于整流、开关、稳压等多种功能。",
+      "difficulty": 2,
+      "keywords": [
+        "正向导通",
+        "反向截止",
+        "整流",
+        "开关"
+      ],
+      "formulas": [],
+      "applications": [
+        "整流电路",
+        "开关电路",
+        "稳压电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PN结"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二极管是由PN结构成的半导体器件，具有正向导通与反向截止的基本特性，在电路中用于整流、开关、稳压等多种功能。"
+    },
+    {
+      "id": "bc_2_5_3",
+      "label": "BJT管",
+      "node_type": "basic_concept",
+      "summary": "BJT管（双极型晶体管）是由两个背靠背PN结构成的电流放大器件，多子与少子（双载流子）参与导电，输入电压与输出电流呈指数关系，具有高跨导、高速和大电流驱动特性，但静态电流大，不适合大规模集成。",
+      "difficulty": 3,
+      "keywords": [
+        "双极型晶体管",
+        "电流放大",
+        "高跨导",
+        "大电流驱动"
+      ],
+      "formulas": [
+        "指数关系"
+      ],
+      "applications": [
+        "放大电路",
+        "开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PN结",
+        "载流子扩散"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BJT管（双极型晶体管）是由两个背靠背PN结构成的电流放大器件，多子与少子（双载流子）参与导电，输入电压与输出电流呈指数关系，具有高跨导、高速和大电流驱动特性，但静态电流大，不适合大规模集成。"
+    },
+    {
+      "id": "bc_2_5_4",
+      "label": "MOS管",
+      "node_type": "basic_concept",
+      "summary": "MOS管（金属氧化物半导体场效应晶体管）是基于表面沟道反型的电场感应多子输运型有源器件，输入电压与输出电流呈平方率关系，输入阻抗高，适合电压驱动，但噪声大，跨导和电流驱动能力较弱。",
+      "difficulty": 3,
+      "keywords": [
+        "场效应晶体管",
+        "平方率关系",
+        "高输入阻抗",
+        "电压驱动"
+      ],
+      "formulas": [
+        "平方率关系"
+      ],
+      "applications": [
+        "放大电路",
+        "开关电路",
+        "数字电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电场效应",
+        "载流子漂移"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管（金属氧化物半导体场效应晶体管）是基于表面沟道反型的电场感应多子输运型有源器件，输入电压与输出电流呈平方率关系，输入阻抗高，适合电压驱动，但噪声大，跨导和电流驱动能力较弱。"
+    },
+    {
+      "id": "bc_2_5_5",
+      "label": "静态工作点",
+      "node_type": "basic_concept",
+      "summary": "静态工作点是电路中有源器件在无信号输入时的直流工作状态，提供合适的静态工作点偏置是确保器件正常工作和实现最佳信号处理功能的关键。",
+      "difficulty": 2,
+      "keywords": [
+        "直流偏置",
+        "工作状态",
+        "信号处理"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大电路",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "有源器件特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "静态工作点是电路中有源器件在无信号输入时的直流工作状态，提供合适的静态工作点偏置是确保器件正常工作和实现最佳信号处理功能的关键。"
+    },
+    {
+      "id": "bc_2_5_6",
+      "label": "无源器件",
+      "node_type": "basic_concept",
+      "summary": "无源器件（如电阻、电容）在电路中具有不可替代的作用，其精度和线性度对电路性能有至关重要的影响。设计时应尽量采用匹配性设计以提高精度并降低寄生效应的影响。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻",
+        "电容",
+        "匹配性设计",
+        "寄生效应"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波电路",
+        "振荡电路",
+        "匹配网络"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "无源器件（如电阻、电容）在电路中具有不可替代的作用，其精度和线性度对电路性能有至关重要的影响。设计时应尽量采用匹配性设计以提高精度并降低寄生效应的影响。"
+    },
+    {
+      "id": "ct_2_5_1",
+      "label": "有源器件偏置技术",
+      "node_type": "core_technology",
+      "summary": "有源器件（如二极管、BJT管、MOS管）需要提供合适的静态工作点偏置以确保正常工作和最佳信号处理功能。二极管和BJT管的正向导通电压稳定（0.6~0.7V），而MOS管的阈值电压与工艺密切相关。",
+      "difficulty": 3,
+      "keywords": [
+        "静态工作点",
+        "偏置电路",
+        "阈值电压",
+        "工艺相关性"
+      ],
+      "formulas": [
+        "V_BE(on) = 0.6~0.7V",
+        "V_TH (工艺相关)"
+      ],
+      "applications": [
+        "放大电路",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源器件（如二极管、BJT管、MOS管）需要提供合适的静态工作点偏置以确保正常工作和最佳信号处理功能。二极管和BJT管的正向导通电压稳定（0.6~0.7V），而MOS管的阈值电压与工艺密切相关。"
+    },
+    {
+      "id": "ct_2_5_2",
+      "label": "匹配性设计",
+      "node_type": "core_technology",
+      "summary": "在电路设计中采用匹配性设计以提高无源器件（电阻、电容）的精度和线性度，同时降低寄生电阻、电容对电路性能的不利影响。",
+      "difficulty": 3,
+      "keywords": [
+        "匹配设计",
+        "精度",
+        "线性度",
+        "寄生效应"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路",
+        "高频电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在电路设计中采用匹配性设计以提高无源器件（电阻、电容）的精度和线性度，同时降低寄生电阻、电容对电路性能的不利影响。"
+    },
+    {
+      "id": "ct_2_5_3",
+      "label": "电路拓扑设计",
+      "node_type": "core_technology",
+      "summary": "电路拓扑设计的本质是确定各有源器件的合理静态工作点以确保有效的信号处理通道，设计必须建立在器件物理控制的基础上，并区分直流与交流特性。",
+      "difficulty": 4,
+      "keywords": [
+        "拓扑结构",
+        "静态工作点",
+        "信号处理",
+        "直流与交流特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大电路",
+        "滤波电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电路拓扑设计的本质是确定各有源器件的合理静态工作点以确保有效的信号处理通道，设计必须建立在器件物理控制的基础上，并区分直流与交流特性。"
+    },
+    {
+      "id": "ca_2_5_1",
+      "label": "二极管应用电路",
+      "node_type": "circuit_application",
+      "summary": "二极管在电路中用于整流、开关、稳压等多种功能，其正向导通与反向截止特性是这些应用的基础。",
+      "difficulty": 3,
+      "keywords": [
+        "整流电路",
+        "开关电路",
+        "稳压电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源电路",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二极管在电路中用于整流、开关、稳压等多种功能，其正向导通与反向截止特性是这些应用的基础。"
+    },
+    {
+      "id": "ca_2_5_2",
+      "label": "BJT放大电路",
+      "node_type": "circuit_application",
+      "summary": "BJT管用于放大电路，利用其高跨导、高速和大电流驱动特性实现信号放大，但需注意静态电流较大的问题。",
+      "difficulty": 4,
+      "keywords": [
+        "放大电路",
+        "高跨导",
+        "大电流驱动"
+      ],
+      "formulas": [
+        "增益公式"
+      ],
+      "applications": [
+        "音频放大",
+        "射频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BJT管用于放大电路，利用其高跨导、高速和大电流驱动特性实现信号放大，但需注意静态电流较大的问题。"
+    },
+    {
+      "id": "ca_2_5_3",
+      "label": "MOS管开关电路",
+      "node_type": "circuit_application",
+      "summary": "MOS管用于开关电路，利用其高输入阻抗和电压驱动特性实现高效开关功能，但噪声较大且驱动能力较弱。",
+      "difficulty": 4,
+      "keywords": [
+        "开关电路",
+        "高输入阻抗",
+        "电压驱动"
+      ],
+      "formulas": [
+        "开关时间公式"
+      ],
+      "applications": [
+        "数字电路",
+        "功率开关"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管用于开关电路，利用其高输入阻抗和电压驱动特性实现高效开关功能，但噪声较大且驱动能力较弱。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_5_1",
+      "target_id": "bc_2_5_2",
+      "relationship": "enables",
+      "description": "PN结是二极管的基本结构，其单向导电性使二极管能够实现正向导通与反向截止的功能。",
+      "weight": 0.9,
+      "evidence": "PN结是构成半导体器件及其电路的物理和结构基础。PN结构成的二极管在电路中具有多种不同的功能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_5_1",
+      "target_id": "bc_2_5_3",
+      "relationship": "enables",
+      "description": "两个背靠背PN结构成BJT管，其电流放大功能依赖于PN结的载流子扩散机制。",
+      "weight": 0.9,
+      "evidence": "利用不同电压偏置的两个背靠背PN结可构成多子与少子即双载流子参与导电的电流放大型BJT管。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_5_3",
+      "target_id": "ct_2_5_1",
+      "relationship": "supports",
+      "description": "BJT管的指数关系特性支持静态工作点偏置技术的实现。",
+      "weight": 0.8,
+      "evidence": "BJT管的输入电压与输出电流具有典型的指数规律关系，因此需要合适的静态工作点偏置。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_5_4",
+      "target_id": "ct_2_5_1",
+      "relationship": "supports",
+      "description": "MOS管的平方率关系和高输入阻抗特性支持静态工作点偏置技术的实现。",
+      "weight": 0.8,
+      "evidence": "MOS管的输入电压与输出电流表现为平方率关系，低频下输入阻抗趋近无穷大，适合电压驱动。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_5_1",
+      "target_id": "ca_2_5_2",
+      "relationship": "implements",
+      "description": "有源器件偏置技术是实现BJT放大电路正常工作的关键。",
+      "weight": 0.9,
+      "evidence": "有源器件必须提供合适的静态工作点偏置，器件才能正常工作并实现最佳的信号处理功能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_5_1",
+      "target_id": "ca_2_5_3",
+      "relationship": "implements",
+      "description": "有源器件偏置技术是实现MOS管开关电路正常工作的关键。",
+      "weight": 0.9,
+      "evidence": "有源器件必须提供合适的静态工作点偏置，器件才能正常工作并实现最佳的信号处理功能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_5_2",
+      "target_id": "ca_2_5_1",
+      "relationship": "applies_to",
+      "description": "匹配性设计技术应用于二极管电路以提高精度并降低寄生效应的影响。",
+      "weight": 0.7,
+      "evidence": "电路设计中应尽量采取匹配性设计，提高电路匹配精度，同时降低寄生电阻、电容对电路的不利影响。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_5_3",
+      "target_id": "ca_2_5_2",
+      "relationship": "applies_to",
+      "description": "电路拓扑设计技术应用于BJT放大电路以确保有效的信号处理通道。",
+      "weight": 0.8,
+      "evidence": "电路拓扑结构即连接关系的设计必须建立在器件物理控制的基础上。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_5_6",
+      "target_id": "ct_2_5_2",
+      "relationship": "supports",
+      "description": "无源器件的精度和线性度特性支持匹配性设计技术的实现。",
+      "weight": 0.8,
+      "evidence": "无源器件的精度和线性度对电路性能有至关重要的影响，设计时应尽量采取匹配性设计。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.5",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:34:14.725622"
+}

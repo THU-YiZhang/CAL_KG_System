@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_1_1",
+      "label": "SoC",
+      "node_type": "basic_concept",
+      "summary": "片上集成系统(System on a Chip)是21世纪微电子技术发展的必然产物，以软、硬件的协同配合与集成为最显著特点，硬件中包含数字与模拟信号处理部分。",
+      "difficulty": 2,
+      "keywords": [
+        "SoC",
+        "片上集成系统",
+        "软硬件协同"
+      ],
+      "formulas": [],
+      "applications": [
+        "信息技术",
+        "微电子技术"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "集成电路",
+        "信号处理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "片上集成系统(System on a Chip)是21世纪微电子技术发展的必然产物，以软、硬件的协同配合与集成为最显著特点，硬件中包含数字与模拟信号处理部分。"
+    },
+    {
+      "id": "bc_1_1_2",
+      "label": "IP",
+      "node_type": "basic_concept",
+      "summary": "知识产权(Intellectual Property)模块中固化了已有的各种知识与成功的设计经验，是SoC设计中的关键因素之一。",
+      "difficulty": 2,
+      "keywords": [
+        "IP",
+        "知识产权",
+        "设计经验"
+      ],
+      "formulas": [],
+      "applications": [
+        "SoC设计",
+        "集成电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "集成电路设计",
+        "SoC"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "知识产权(Intellectual Property)模块中固化了已有的各种知识与成功的设计经验，是SoC设计中的关键因素之一。"
+    },
+    {
+      "id": "bc_1_1_3",
+      "label": "BGR",
+      "node_type": "basic_concept",
+      "summary": "带隙电压基准(Bandgap Reference)电路是一种相对成熟的模拟IP，必须具备与工艺、电源电压、温度无关或近似无关的特性。",
+      "difficulty": 3,
+      "keywords": [
+        "BGR",
+        "带隙电压基准",
+        "PVT无关"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟IP设计",
+        "电压基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "模拟电路",
+        "电压基准"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带隙电压基准(Bandgap Reference)电路是一种相对成熟的模拟IP，必须具备与工艺、电源电压、温度无关或近似无关的特性。"
+    },
+    {
+      "id": "ct_1_1_1",
+      "label": "IP重用技术",
+      "node_type": "core_technology",
+      "summary": "IP重用分为两种层次：一种是在同一工艺条件下应用到类似产品中，要求IP具有稳定的工艺特性；另一种是改变工艺或应用到不同产品中，要求IP参数适当调整或改变。",
+      "difficulty": 3,
+      "keywords": [
+        "IP重用",
+        "工艺特性",
+        "参数调整"
+      ],
+      "formulas": [],
+      "applications": [
+        "SoC设计",
+        "集成电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "IP重用分为两种层次：一种是在同一工艺条件下应用到类似产品中，要求IP具有稳定的工艺特性；另一种是改变工艺或应用到不同产品中，要求IP参数适当调整或改变。"
+    },
+    {
+      "id": "ct_1_1_2",
+      "label": "模拟IP设计",
+      "node_type": "core_technology",
+      "summary": "模拟IP设计要求适应不同工艺条件的高性能、高稳定模拟集成电路功能模块的设计与应用，特别是PVT弱相关性的要求。",
+      "difficulty": 4,
+      "keywords": [
+        "模拟IP",
+        "PVT弱相关性",
+        "高性能"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计",
+        "SoC"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模拟IP设计要求适应不同工艺条件的高性能、高稳定模拟集成电路功能模块的设计与应用，特别是PVT弱相关性的要求。"
+    },
+    {
+      "id": "ca_1_1_1",
+      "label": "BGR电路",
+      "node_type": "circuit_application",
+      "summary": "BGR电路是一种模拟IP，具备与工艺、电源电压、温度无关或近似无关的特性，是模拟IP设计的典型应用。",
+      "difficulty": 4,
+      "keywords": [
+        "BGR电路",
+        "PVT无关",
+        "模拟IP"
+      ],
+      "formulas": [],
+      "applications": [
+        "电压基准",
+        "SoC"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BGR电路是一种模拟IP，具备与工艺、电源电压、温度无关或近似无关的特性，是模拟IP设计的典型应用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_1_1",
+      "target_id": "ct_1_1_1",
+      "relationship": "enables",
+      "description": "SoC技术的发展使得IP重用技术成为可能，IP重用技术是SoC设计中的关键因素之一。",
+      "weight": 0.9,
+      "evidence": "SoC以软、硬件的协同配合与集成为最显著特点，硬件中则包含了数字与模拟信号处理部分。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_2",
+      "target_id": "ct_1_1_1",
+      "relationship": "supports",
+      "description": "IP模块的设计和重用技术是SoC设计中的关键因素，IP重用技术依赖于IP模块的设计。",
+      "weight": 0.8,
+      "evidence": "SoC取得成功的关键因素之一,就在于有成熟并经过验证的 IP 技术的支持。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_3",
+      "target_id": "ct_1_1_2",
+      "relationship": "supports",
+      "description": "BGR电路的设计要求支持模拟IP设计的核心问题，即适应不同工艺条件的高性能、高稳定模拟集成电路功能模块的设计与应用。",
+      "weight": 0.85,
+      "evidence": "BGR电路的模拟 IP 设计要求指出了一般模拟 IP 设计的最核心问题。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_2",
+      "target_id": "ca_1_1_1",
+      "relationship": "implements",
+      "description": "模拟IP设计技术实现了BGR电路的设计和应用，BGR电路是模拟IP设计的典型实例。",
+      "weight": 0.9,
+      "evidence": "在模拟电路中一种相对成熟的集成 IP 是带隙电压基准 BGR(Bandgap Reference)电路。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "1.1",
+  "title": "模拟集成电路的历史地位",
+  "extraction_timestamp": "2025-07-08T16:32:03.515250"
+}

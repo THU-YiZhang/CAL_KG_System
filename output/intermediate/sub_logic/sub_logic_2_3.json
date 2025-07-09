@@ -1,0 +1,218 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_3_1",
+      "label": "MOS管导电机理",
+      "node_type": "basic_concept",
+      "summary": "MOS管导电基于平板电容电荷感应形成沟道反型的控制机理。栅控电压VG形成源漏之间的感应沟道，VS和VD分别为源端和漏端电位，VDS为源漏端电压差。当感应形成反型沟道后，在VDS的作用下形成输出电流IDS。",
+      "difficulty": 3,
+      "keywords": [
+        "平板电容",
+        "沟道反型",
+        "栅控电压",
+        "源漏电位"
+      ],
+      "formulas": [
+        "VDS = VD - VS"
+      ],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "电场理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管导电基于平板电容电荷感应形成沟道反型的控制机理。栅控电压VG形成源漏之间的感应沟道，VS和VD分别为源端和漏端电位，VDS为源漏端电压差。当感应形成反型沟道后，在VDS的作用下形成输出电流IDS。"
+    },
+    {
+      "id": "bc_2_3_2",
+      "label": "表面电势",
+      "node_type": "basic_concept",
+      "summary": "表面电势φS是半导体表面相对于体内的电势差，由栅电压VG引起。VG消耗在反型沟道Qinv/Cox、衬底耗尽QB/Cox和表面电势φS三个方面。表面势达到φS=2φB时对应于强反型条件。",
+      "difficulty": 4,
+      "keywords": [
+        "表面电势",
+        "强反型",
+        "栅电压",
+        "衬底耗尽"
+      ],
+      "formulas": [
+        "VG = -Qt/Cox + φS",
+        "Qt = Qinv + QB"
+      ],
+      "applications": [
+        "MOS管阈值电压计算"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "能带理论",
+        "电场感应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "表面电势φS是半导体表面相对于体内的电势差，由栅电压VG引起。VG消耗在反型沟道Qinv/Cox、衬底耗尽QB/Cox和表面电势φS三个方面。表面势达到φS=2φB时对应于强反型条件。"
+    },
+    {
+      "id": "bc_2_3_3",
+      "label": "阈值电压",
+      "node_type": "basic_concept",
+      "summary": "阈值电压VTH是MOS管开启的临界电压，由表面电势φS、衬底耗尽电荷和沟道感应电荷决定。VTH = γ√φS + φS + VFB，其中VFB为平带电压。衬底反偏电压VBS会调制VTH。",
+      "difficulty": 4,
+      "keywords": [
+        "阈值电压",
+        "平带电压",
+        "衬底反偏",
+        "开启电压"
+      ],
+      "formulas": [
+        "VTH = γ√φS + φS + VFB",
+        "VFB = φMS + QSS/Cox"
+      ],
+      "applications": [
+        "MOS管设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "表面电势",
+        "PN结理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阈值电压VTH是MOS管开启的临界电压，由表面电势φS、衬底耗尽电荷和沟道感应电荷决定。VTH = γ√φS + φS + VFB，其中VFB为平带电压。衬底反偏电压VBS会调制VTH。"
+    },
+    {
+      "id": "ct_2_3_1",
+      "label": "强反型模型",
+      "node_type": "core_technology",
+      "summary": "在VG >> VTH的强反型条件下，沟道内感应的载流子密度高且分布均匀，输出以漂移电流为主。输出电流IDS与VGS和VDS的关系由平方率模型描述，考虑沟道长度调制效应后，输出电流与VDS相关。",
+      "difficulty": 4,
+      "keywords": [
+        "强反型",
+        "漂移电流",
+        "平方率模型",
+        "沟道长度调制"
+      ],
+      "formulas": [
+        "IDS = (1/2n)k(VGS - VTH0)^2(1 + λVDS)"
+      ],
+      "applications": [
+        "MOS管饱和区设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在VG >> VTH的强反型条件下，沟道内感应的载流子密度高且分布均匀，输出以漂移电流为主。输出电流IDS与VGS和VDS的关系由平方率模型描述，考虑沟道长度调制效应后，输出电流与VDS相关。"
+    },
+    {
+      "id": "ct_2_3_2",
+      "label": "弱反型模型",
+      "node_type": "core_technology",
+      "summary": "在VG ≤ VTH的弱反型条件下，沟道内感应的载流子密度低且分布不均匀，扩散电流不可忽略。输出电流由漂移和扩散电流共同决定，感应电荷密度与沟道电势V呈指数关系。",
+      "difficulty": 5,
+      "keywords": [
+        "弱反型",
+        "扩散电流",
+        "指数关系",
+        "亚阈值电流"
+      ],
+      "formulas": [
+        "IDS = μCoxW[-(Qinv/Cox)dφS/dx - VTd/dφS(-Qinv/Cox)dφS/dx]"
+      ],
+      "applications": [
+        "低功耗电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在VG ≤ VTH的弱反型条件下，沟道内感应的载流子密度低且分布不均匀，扩散电流不可忽略。输出电流由漂移和扩散电流共同决定，感应电荷密度与沟道电势V呈指数关系。"
+    },
+    {
+      "id": "ca_2_3_1",
+      "label": "MOS管恒流源",
+      "node_type": "circuit_application",
+      "summary": "基于强反型模型的MOS管在饱和区表现出恒流特性，输出电流与VDS无关。沟道长度调制效应会影响恒流特性，输出阻抗由厄利电压VA和沟道长度L决定。",
+      "difficulty": 4,
+      "keywords": [
+        "恒流源",
+        "饱和区",
+        "输出阻抗",
+        "厄利电压"
+      ],
+      "formulas": [
+        "r = (VA0L + VDS)/IDS"
+      ],
+      "applications": [
+        "模拟电路恒流源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于强反型模型的MOS管在饱和区表现出恒流特性，输出电流与VDS无关。沟道长度调制效应会影响恒流特性，输出阻抗由厄利电压VA和沟道长度L决定。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_3_1",
+      "target_id": "ct_2_3_1",
+      "relationship": "enables",
+      "description": "MOS管导电机理是强反型模型的基础，强反型模型描述了在VG >> VTH条件下的电流控制机制。",
+      "weight": 0.9,
+      "evidence": "在强反型条件下，沟道内感应的载流子密度高且分布均匀，输出以漂移电流为主。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_3_2",
+      "target_id": "ct_2_3_1",
+      "relationship": "supports",
+      "description": "表面电势的计算是强反型模型中栅电压VG分配的基础，直接影响阈值电压VTH的确定。",
+      "weight": 0.8,
+      "evidence": "VG消耗在反型沟道Qinv/Cox、衬底耗尽QB/Cox和表面电势φS三个方面。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_3_3",
+      "target_id": "ct_2_3_1",
+      "relationship": "supports",
+      "description": "阈值电压VTH是强反型模型中的关键参数，决定了MOS管的开启条件。",
+      "weight": 0.9,
+      "evidence": "VTH = γ√φS + φS + VFB，是强反型模型中的核心参数。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_3_1",
+      "target_id": "ca_2_3_1",
+      "relationship": "implements",
+      "description": "强反型模型实现了MOS管恒流源的设计，通过控制VGS和VDS获得恒流特性。",
+      "weight": 0.8,
+      "evidence": "基于强反型模型的MOS管在饱和区表现出恒流特性，输出电流与VDS无关。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_3_1",
+      "target_id": "ct_2_3_2",
+      "relationship": "enables",
+      "description": "MOS管导电机理是弱反型模型的基础，弱反型模型描述了在VG ≤ VTH条件下的电流控制机制。",
+      "weight": 0.8,
+      "evidence": "在弱反型条件下，沟道内感应的载流子密度低且分布不均匀，扩散电流不可忽略。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_3_2",
+      "target_id": "ct_2_3_2",
+      "relationship": "supports",
+      "description": "表面电势的计算是弱反型模型中栅电压VG分配的基础，直接影响感应电荷密度的确定。",
+      "weight": 0.7,
+      "evidence": "VG消耗在反型沟道Qinv/Cox、衬底耗尽QB/Cox和表面电势φS三个方面。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "2.3",
+  "title": "MOS 场效应晶体管",
+  "extraction_timestamp": "2025-07-08T16:32:29.188433"
+}

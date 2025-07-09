@@ -1,0 +1,7 @@
+{
+  "section_num": "1.2.2",
+  "title": "基尔霍夫电压定律(KVL)",
+  "level": 3,
+  "content": "在任何闭合回路中，电压降之和等于电压升之和：∑V_drop = ∑V_rise",
+  "subsections": []
+}

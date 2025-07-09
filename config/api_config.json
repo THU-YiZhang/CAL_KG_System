@@ -1,0 +1,35 @@
+{
+  "api_settings": {
+    "api_key": "sk-pBUBTdSpfx0ppYf30rzzmbr60WiffKq52EQzx45r9rntGjli",
+    "base_url": "https://www.dmxapi.cn/v1",
+    "model": "DMXAPI-DeepSeek-V3",
+    "temperature": 0.3,
+    "max_tokens": 10000,
+    "timeout": 60,
+    "max_retries": 3
+  },
+  "concurrent_settings": {
+    "default_workers": 8,
+    "max_workers": 32,
+    "min_workers": 1,
+    "retry_delay": 1.0
+  },
+  "model_specific": {
+    "document_split": {
+      "temperature": 0.2,
+      "max_tokens": 10000
+    },
+    "main_logic": {
+      "temperature": 0.3,
+      "max_tokens": 10000
+    },
+    "sub_logic": {
+      "temperature": 0.3,
+      "max_tokens": 10000
+    },
+    "connection_analysis": {
+      "temperature": 0.3,
+      "max_tokens": 10000
+    }
+  }
+}

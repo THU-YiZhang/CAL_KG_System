@@ -1,0 +1,322 @@
+{
+  "nodes": [
+    {
+      "id": "bc_8_3_1",
+      "label": "单极点传递函数",
+      "node_type": "basic_concept",
+      "summary": "在理想电压源激励下，忽略Miller电容作用时，CS放大器的传递函数表现为单极点特性，其低频直流增益为Av0=-gmRL，主极点频率p=1/(RLCL)。",
+      "difficulty": 2,
+      "keywords": [
+        "单极点",
+        "传递函数",
+        "主极点"
+      ],
+      "formulas": [
+        "Av(s) = -Av0/(1+s/p)"
+      ],
+      "applications": [
+        "CS放大器频响分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路分析基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在理想电压源激励下，忽略Miller电容作用时，CS放大器的传递函数表现为单极点特性，其低频直流增益为Av0=-gmRL，主极点频率p=1/(RLCL)。"
+    },
+    {
+      "id": "bc_8_3_2",
+      "label": "单位增益带宽(GBW)",
+      "node_type": "basic_concept",
+      "summary": "GBW是电压放大电路频率特性的重要指标，表示电压放大倍数为1时对应的频率。对于CS放大器，GBW=gm/CL。",
+      "difficulty": 2,
+      "keywords": [
+        "GBW",
+        "带宽",
+        "频率特性"
+      ],
+      "formulas": [
+        "GBW = gm/CL"
+      ],
+      "applications": [
+        "放大器带宽设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频响分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "GBW是电压放大电路频率特性的重要指标，表示电压放大倍数为1时对应的频率。对于CS放大器，GBW=gm/CL。"
+    },
+    {
+      "id": "bc_8_3_3",
+      "label": "Miller电容效应",
+      "node_type": "basic_concept",
+      "summary": "跨接在输入和输出结点之间的电容(如CGD)会产生Miller效应，等效到输入端的电容会增大|Av|倍，而等效到输出端的电容基本不变。",
+      "difficulty": 3,
+      "keywords": [
+        "Miller效应",
+        "电容倍增",
+        "极点调制"
+      ],
+      "formulas": [
+        "Cin = (1-Av)CM ≈ |Av|CM",
+        "Cout ≈ CM"
+      ],
+      "applications": [
+        "频响补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "小信号模型"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨接在输入和输出结点之间的电容(如CGD)会产生Miller效应，等效到输入端的电容会增大|Av|倍，而等效到输出端的电容基本不变。"
+    },
+    {
+      "id": "bc_8_3_4",
+      "label": "RHP零点",
+      "node_type": "basic_concept",
+      "summary": "由Miller电容前馈引入的右半平面零点，会减小相位裕度，其位置为z=gm/CM。RHP零点对电路稳定性有负面影响。",
+      "difficulty": 3,
+      "keywords": [
+        "RHP零点",
+        "相位裕度",
+        "稳定性"
+      ],
+      "formulas": [
+        "z = gm/CM"
+      ],
+      "applications": [
+        "稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频响分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由Miller电容前馈引入的右半平面零点，会减小相位裕度，其位置为z=gm/CM。RHP零点对电路稳定性有负面影响。"
+    },
+    {
+      "id": "ct_8_3_1",
+      "label": "Miller电容等效分析",
+      "node_type": "core_technology",
+      "summary": "通过将跨接电容等效到输入和输出端，简化对极点的分析。输入极点被显著压缩，输出极点则主要由等效负载电容和变化后的输出阻抗决定。",
+      "difficulty": 3,
+      "keywords": [
+        "Miller等效",
+        "极点分析",
+        "频响补偿"
+      ],
+      "formulas": [
+        "p0 ≈ 1/(|Av|RSCM)",
+        "p ≈ gm/CL"
+      ],
+      "applications": [
+        "CS放大器频响设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过将跨接电容等效到输入和输出端，简化对极点的分析。输入极点被显著压缩，输出极点则主要由等效负载电容和变化后的输出阻抗决定。"
+    },
+    {
+      "id": "ct_8_3_2",
+      "label": "RHP零点抑制技术",
+      "node_type": "core_technology",
+      "summary": "两种主要方法：1)采用大串联电阻补偿负阻；2)使用Cascode结构消除前馈通道。可将RHP零点转换为LHP零点或将其推向高频。",
+      "difficulty": 4,
+      "keywords": [
+        "零点补偿",
+        "Cascode",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "z ≈ -1/(RCM)"
+      ],
+      "applications": [
+        "高稳定性放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两种主要方法：1)采用大串联电阻补偿负阻；2)使用Cascode结构消除前馈通道。可将RHP零点转换为LHP零点或将其推向高频。"
+    },
+    {
+      "id": "ct_8_3_3",
+      "label": "零极点参量化分析",
+      "node_type": "core_technology",
+      "summary": "通过建立极点与跨导gm、Miller电容CM等参数的定量关系，分析主极点和次极点的变化规律，为频响设计提供理论依据。",
+      "difficulty": 4,
+      "keywords": [
+        "参量化",
+        "极点分离",
+        "频响设计"
+      ],
+      "formulas": [
+        "pd = pd0/(1+gm/gmr)",
+        "pnd = pnd0(1+gm/gmr)"
+      ],
+      "applications": [
+        "精确频响设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过建立极点与跨导gm、Miller电容CM等参数的定量关系，分析主极点和次极点的变化规律，为频响设计提供理论依据。"
+    },
+    {
+      "id": "ca_8_3_1",
+      "label": "基本CS放大器",
+      "node_type": "circuit_application",
+      "summary": "理想电压源激励下的CS放大器，忽略Miller效应时表现为单极点特性，主极点由输出RC网络决定，GBW=gm/CL。",
+      "difficulty": 3,
+      "keywords": [
+        "CS放大器",
+        "单极点",
+        "理想频响"
+      ],
+      "formulas": [
+        "Av(s) = -gmRL/(1+sRLCL)"
+      ],
+      "applications": [
+        "基础放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "理想电压源激励下的CS放大器，忽略Miller效应时表现为单极点特性，主极点由输出RC网络决定，GBW=gm/CL。"
+    },
+    {
+      "id": "ca_8_3_2",
+      "label": "Miller补偿CS放大器",
+      "node_type": "circuit_application",
+      "summary": "考虑Miller电容效应的CS放大器，需分析输入输出极点的调制作用及RHP零点的影响，通常需要采用补偿技术。",
+      "difficulty": 4,
+      "keywords": [
+        "Miller补偿",
+        "极点调制",
+        "零点补偿"
+      ],
+      "formulas": [
+        "Cin ≈ |Av|CM"
+      ],
+      "applications": [
+        "稳定放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "考虑Miller电容效应的CS放大器，需分析输入输出极点的调制作用及RHP零点的影响，通常需要采用补偿技术。"
+    },
+    {
+      "id": "ca_8_3_3",
+      "label": "Cascode补偿CS放大器",
+      "node_type": "circuit_application",
+      "summary": "采用Cascode结构消除Miller电容前馈路径，将RHP零点转换为LHP零点，显著提高电路稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "LHP零点",
+        "高稳定性"
+      ],
+      "formulas": [
+        "z = -gmc/CM"
+      ],
+      "applications": [
+        "高频稳定放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用Cascode结构消除Miller电容前馈路径，将RHP零点转换为LHP零点，显著提高电路稳定性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_8_3_1",
+      "target_id": "ct_8_3_1",
+      "relationship": "enables",
+      "description": "单极点传递函数模型为Miller电容等效分析提供了理论基础",
+      "weight": 0.9,
+      "evidence": "通过单极点模型可以推导出Miller电容对极点的调制作用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_3_3",
+      "target_id": "ct_8_3_1",
+      "relationship": "supports",
+      "description": "Miller电容效应是Miller电容等效分析的核心内容",
+      "weight": 0.95,
+      "evidence": "等效分析直接基于Miller电容效应",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_3_4",
+      "target_id": "ct_8_3_2",
+      "relationship": "supports",
+      "description": "RHP零点的理解是设计抑制技术的基础",
+      "weight": 0.9,
+      "evidence": "抑制技术针对RHP零点的特性进行设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_3_1",
+      "target_id": "ca_8_3_2",
+      "relationship": "implements",
+      "description": "Miller电容等效分析方法应用于Miller补偿CS放大器的设计",
+      "weight": 0.85,
+      "evidence": "通过等效分析可以确定补偿电容的影响",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_3_2",
+      "target_id": "ca_8_3_3",
+      "relationship": "implements",
+      "description": "RHP零点抑制技术直接应用于Cascode补偿CS放大器",
+      "weight": 0.9,
+      "evidence": "Cascode结构是抑制RHP零点的有效方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_3_3",
+      "target_id": "ca_8_3_1",
+      "relationship": "applies_to",
+      "description": "零极点参量化分析可优化基本CS放大器的频响特性",
+      "weight": 0.8,
+      "evidence": "通过参量化分析可以优化gm和CL的选择",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_3_2",
+      "target_id": "bc_8_3_1",
+      "relationship": "extends",
+      "description": "GBW概念扩展了单极点模型的应用范围",
+      "weight": 0.7,
+      "evidence": "GBW是基于单极点模型推导出的重要指标",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_3_1",
+      "target_id": "ct_8_3_3",
+      "relationship": "complements",
+      "description": "Miller电容等效分析与零极点参量化分析相互补充",
+      "weight": 0.8,
+      "evidence": "两种方法从不同角度分析频响特性",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "8.3",
+  "title": "单级增益频响特性",
+  "extraction_timestamp": "2025-07-08T16:42:48.868118"
+}

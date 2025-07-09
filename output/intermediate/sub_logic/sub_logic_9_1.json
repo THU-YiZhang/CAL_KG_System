@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_1_1",
+      "label": "开环运放稳定性",
+      "node_type": "basic_concept",
+      "summary": "开环运放稳定性指的是运放在开环状态下所有极点都位于左半平面（LHP）的性质。这种性质保证了运放在开环状态下不会出现振荡或不稳定的情况。开环稳定性是构成闭环系统稳定性的基础。",
+      "difficulty": 2,
+      "keywords": [
+        "开环运放",
+        "LHP极点",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "极点分析",
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开环运放稳定性指的是运放在开环状态下所有极点都位于左半平面（LHP）的性质。这种性质保证了运放在开环状态下不会出现振荡或不稳定的情况。开环稳定性是构成闭环系统稳定性的基础。"
+    },
+    {
+      "id": "bc_9_1_2",
+      "label": "闭环系统稳定性",
+      "node_type": "basic_concept",
+      "summary": "闭环系统稳定性指的是运放在闭环反馈配置下的稳定性。闭环系统的稳定性由开环增益的频率特性决定，特别是与开环极点和零点的位置密切相关。闭环系统的极点可能从LHP移动到右半平面（RHP），导致不稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "闭环系统",
+        "稳定性",
+        "极点位置"
+      ],
+      "formulas": [],
+      "applications": [
+        "反馈电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论",
+        "极点分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环系统稳定性指的是运放在闭环反馈配置下的稳定性。闭环系统的稳定性由开环增益的频率特性决定，特别是与开环极点和零点的位置密切相关。闭环系统的极点可能从LHP移动到右半平面（RHP），导致不稳定。"
+    },
+    {
+      "id": "bc_9_1_3",
+      "label": "频率特性",
+      "node_type": "basic_concept",
+      "summary": "频率特性描述了电路或系统在不同频率下的响应特性，包括增益和相位的变化。开环运放的频率特性直接影响闭环系统的稳定性，因此是频率补偿设计的重要依据。",
+      "difficulty": 2,
+      "keywords": [
+        "频率响应",
+        "增益",
+        "相位"
+      ],
+      "formulas": [],
+      "applications": [
+        "频率补偿设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频域分析",
+        "Bode图"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率特性描述了电路或系统在不同频率下的响应特性，包括增益和相位的变化。开环运放的频率特性直接影响闭环系统的稳定性，因此是频率补偿设计的重要依据。"
+    },
+    {
+      "id": "ct_9_1_1",
+      "label": "频率补偿技术",
+      "node_type": "core_technology",
+      "summary": "频率补偿技术是通过调整运放的频率特性（如极点和零点的位置）来实现闭环系统稳定性的控制方法。其目的是在带宽、速度和精度等指标之间达到平衡，满足不同应用的需求。具体方法包括极点分离、零点引入等。",
+      "difficulty": 3,
+      "keywords": [
+        "频率补偿",
+        "极点分离",
+        "零点引入"
+      ],
+      "formulas": [],
+      "applications": [
+        "两级放大器",
+        "三级增益系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿技术是通过调整运放的频率特性（如极点和零点的位置）来实现闭环系统稳定性的控制方法。其目的是在带宽、速度和精度等指标之间达到平衡，满足不同应用的需求。具体方法包括极点分离、零点引入等。"
+    },
+    {
+      "id": "ct_9_1_2",
+      "label": "稳定性分析方法",
+      "node_type": "core_technology",
+      "summary": "稳定性分析方法用于评估闭环系统的稳定性，通常基于开环增益的频率特性（如相位裕度和增益裕度）。通过分析极点和零点的位置，可以预测闭环系统的稳定性，并指导频率补偿设计。",
+      "difficulty": 3,
+      "keywords": [
+        "相位裕度",
+        "增益裕度",
+        "稳定性判据"
+      ],
+      "formulas": [
+        "相位裕度公式",
+        "增益裕度公式"
+      ],
+      "applications": [
+        "闭环系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "稳定性分析方法用于评估闭环系统的稳定性，通常基于开环增益的频率特性（如相位裕度和增益裕度）。通过分析极点和零点的位置，可以预测闭环系统的稳定性，并指导频率补偿设计。"
+    },
+    {
+      "id": "ca_9_1_1",
+      "label": "两级放大器频率补偿",
+      "node_type": "circuit_application",
+      "summary": "两级放大器频率补偿是一种常见的频率补偿结构，通过引入补偿电容或电阻来调整极点和零点的位置，从而改善闭环稳定性。这种结构广泛应用于运算放大器和反馈电路中。",
+      "difficulty": 4,
+      "keywords": [
+        "两级放大器",
+        "补偿电容",
+        "极点分离"
+      ],
+      "formulas": [
+        "极点分离公式"
+      ],
+      "applications": [
+        "运算放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两级放大器频率补偿是一种常见的频率补偿结构，通过引入补偿电容或电阻来调整极点和零点的位置，从而改善闭环稳定性。这种结构广泛应用于运算放大器和反馈电路中。"
+    },
+    {
+      "id": "ca_9_1_2",
+      "label": "三级增益系统频率补偿",
+      "node_type": "circuit_application",
+      "summary": "三级增益系统频率补偿是针对高增益运放的补偿方法，通过多级补偿技术（如嵌套米勒补偿）实现稳定性控制。这种结构适用于需要高增益和高带宽的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "三级增益",
+        "嵌套米勒补偿",
+        "高带宽"
+      ],
+      "formulas": [
+        "嵌套米勒补偿公式"
+      ],
+      "applications": [
+        "高增益运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三级增益系统频率补偿是针对高增益运放的补偿方法，通过多级补偿技术（如嵌套米勒补偿）实现稳定性控制。这种结构适用于需要高增益和高带宽的应用场景。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_1_1",
+      "target_id": "ct_9_1_1",
+      "relationship": "enables",
+      "description": "开环运放的稳定性是频率补偿技术的基础，只有理解了开环稳定性，才能设计有效的频率补偿方法。",
+      "weight": 0.9,
+      "evidence": "开环运放的稳定性是构成闭环系统稳定性的基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_1_2",
+      "target_id": "ct_9_1_1",
+      "relationship": "supports",
+      "description": "闭环系统稳定性的分析为频率补偿技术提供了设计目标和依据。",
+      "weight": 0.8,
+      "evidence": "闭环系统的稳定性由开环增益的频率特性所决定。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_1_3",
+      "target_id": "ct_9_1_1",
+      "relationship": "supports",
+      "description": "频率特性分析是频率补偿技术的核心依据，通过调整频率特性可以实现稳定性控制。",
+      "weight": 0.85,
+      "evidence": "闭环系统的稳定性由开环增益的频率特性所决定。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_1_1",
+      "target_id": "ca_9_1_1",
+      "relationship": "implements",
+      "description": "频率补偿技术通过两级放大器频率补偿结构实现闭环稳定性控制。",
+      "weight": 0.9,
+      "evidence": "本章首先讨论系统稳定设计的基本原理和设计方法，其次讨论两级放大器频率补偿的各种可行结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_1_1",
+      "target_id": "ca_9_1_2",
+      "relationship": "implements",
+      "description": "频率补偿技术通过三级增益系统频率补偿结构实现高增益运放的稳定性控制。",
+      "weight": 0.9,
+      "evidence": "进而推进到三级增益系统的频率补偿设计。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_1_2",
+      "target_id": "ca_9_1_1",
+      "relationship": "applies_to",
+      "description": "稳定性分析方法用于评估两级放大器频率补偿设计的性能。",
+      "weight": 0.8,
+      "evidence": "对开环运放频率补偿的目的在于实现闭环电路的稳定性控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_1_2",
+      "target_id": "ca_9_1_2",
+      "relationship": "applies_to",
+      "description": "稳定性分析方法用于评估三级增益系统频率补偿设计的性能。",
+      "weight": 0.8,
+      "evidence": "对开环运放频率补偿的目的在于实现闭环电路的稳定性控制。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "9.1",
+  "title": "概述",
+  "extraction_timestamp": "2025-07-08T16:43:30.313318"
+}

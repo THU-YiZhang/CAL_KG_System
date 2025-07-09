@@ -1,0 +1,146 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_2_1_1",
+      "label": "奈奎斯特判据",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特判据是判断线性时不变系统稳定性的图形方法。它通过分析开环传递函数的奈奎斯特图与(-1, 0)点的相对位置关系来判断闭环系统的稳定性。判据指出：当且仅当奈奎斯特图不包围(-1, 0)点时，闭环系统是稳定的。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性判据",
+        "奈奎斯特图",
+        "开环传递函数"
+      ],
+      "formulas": [
+        "G(s)H(s)"
+      ],
+      "applications": [
+        "控制系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "控制理论基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特判据是判断线性时不变系统稳定性的图形方法。它通过分析开环传递函数的奈奎斯特图与(-1, 0)点的相对位置关系来判断闭环系统的稳定性。判据指出：当且仅当奈奎斯特图不包围(-1, 0)点时，闭环系统是稳定的。"
+    },
+    {
+      "id": "bc_4_2_1_2",
+      "label": "奈奎斯特图",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特图是开环传递函数G(s)H(s)在复平面上的极坐标图，表示当频率ω从-∞变化到+∞时，G(jω)H(jω)的轨迹。图中(-1, 0)点具有特殊意义，称为临界点。",
+      "difficulty": 2,
+      "keywords": [
+        "极坐标图",
+        "频率响应",
+        "复平面"
+      ],
+      "formulas": [
+        "G(jω)H(jω)"
+      ],
+      "applications": [
+        "频域分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复数运算",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特图是开环传递函数G(s)H(s)在复平面上的极坐标图，表示当频率ω从-∞变化到+∞时，G(jω)H(jω)的轨迹。图中(-1, 0)点具有特殊意义，称为临界点。"
+    },
+    {
+      "id": "ct_4_2_1_1",
+      "label": "奈奎斯特稳定性分析",
+      "node_type": "core_technology",
+      "summary": "通过绘制开环系统的奈奎斯特图，计算其包围(-1, 0)点的次数N，并与开环传递函数在右半平面的极点数P比较。稳定性判据为：Z = P - N = 0时系统稳定，其中Z是闭环极点在右半平面的数量。分析步骤包括：1) 绘制奈奎斯特图 2) 计算包围次数 3) 比较N和P",
+      "difficulty": 4,
+      "keywords": [
+        "稳定性分析",
+        "包围次数",
+        "极点数"
+      ],
+      "formulas": [
+        "Z = P - N"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过绘制开环系统的奈奎斯特图，计算其包围(-1, 0)点的次数N，并与开环传递函数在右半平面的极点数P比较。稳定性判据为：Z = P - N = 0时系统稳定，其中Z是闭环极点在右半平面的数量。分析步骤包括：1) 绘制奈奎斯特图 2) 计算包围次数 3) 比较N和P"
+    },
+    {
+      "id": "ca_4_2_1_1",
+      "label": "反馈控制系统稳定性设计",
+      "node_type": "circuit_application",
+      "summary": "在反馈控制系统设计中应用奈奎斯特判据来确保系统稳定性。典型应用包括：1) 运算放大器补偿网络设计 2) 电源反馈环路设计 3) 伺服系统稳定性分析。设计时需要绘制开环传递函数的奈奎斯特图，并通过调整补偿网络参数确保不包围(-1, 0)点。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈控制",
+        "补偿网络",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "相位裕度计算"
+      ],
+      "applications": [
+        "运算放大器电路",
+        "开关电源",
+        "伺服系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在反馈控制系统设计中应用奈奎斯特判据来确保系统稳定性。典型应用包括：1) 运算放大器补偿网络设计 2) 电源反馈环路设计 3) 伺服系统稳定性分析。设计时需要绘制开环传递函数的奈奎斯特图，并通过调整补偿网络参数确保不包围(-1, 0)点。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_2_1_1",
+      "target_id": "ct_4_2_1_1",
+      "relationship": "enables",
+      "description": "奈奎斯特判据理论为奈奎斯特稳定性分析方法提供了理论基础",
+      "weight": 0.9,
+      "evidence": "系统稳定的条件是奈奎斯特图不包围(-1, 0)点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_2_1_2",
+      "target_id": "ct_4_2_1_1",
+      "relationship": "supports",
+      "description": "奈奎斯特图的绘制和理解是实施奈奎斯特稳定性分析的前提条件",
+      "weight": 0.8,
+      "evidence": "通过分析开环传递函数的奈奎斯特图",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_2_1_1",
+      "target_id": "ca_4_2_1_1",
+      "relationship": "implements",
+      "description": "奈奎斯特稳定性分析方法被具体实现为反馈控制系统的稳定性设计技术",
+      "weight": 0.85,
+      "evidence": "在反馈控制系统设计中应用奈奎斯特判据",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_2_1_1",
+      "target_id": "bc_4_2_1_2",
+      "relationship": "depends_on",
+      "description": "奈奎斯特判据的应用依赖于对奈奎斯特图的理解",
+      "weight": 0.7,
+      "evidence": "通过分析开环传递函数的奈奎斯特图",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.2.1",
+  "title": "奈奎斯特判据",
+  "extraction_timestamp": "2025-07-08T15:31:27.081712",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

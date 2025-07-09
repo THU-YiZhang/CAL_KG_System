@@ -1,0 +1,9 @@
+{
+  "total_nodes": 695,
+  "total_edges": 2242,
+  "main_logic_nodes": 6,
+  "basic_concept_nodes": 257,
+  "core_technology_nodes": 235,
+  "circuit_application_nodes": 212,
+  "cross_section_edges": 722
+}

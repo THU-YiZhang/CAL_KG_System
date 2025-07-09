@@ -1,0 +1,276 @@
+{
+  "nodes": [
+    {
+      "id": "bc_8__1",
+      "label": "频响特性",
+      "node_type": "basic_concept",
+      "summary": "频响特性是指电路或系统在不同频率下的响应特性，通常通过传递函数来描述。频响特性决定了系统的稳定性和性能。",
+      "difficulty": 2,
+      "keywords": [
+        "频率响应",
+        "传递函数",
+        "稳定性"
+      ],
+      "formulas": [
+        "H(s)"
+      ],
+      "applications": [
+        "放大器设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路理论",
+        "信号与系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频响特性是指电路或系统在不同频率下的响应特性，通常通过传递函数来描述。频响特性决定了系统的稳定性和性能。"
+    },
+    {
+      "id": "bc_8__2",
+      "label": "系统稳定性",
+      "node_type": "basic_concept",
+      "summary": "系统稳定性是指系统在有界输入下产生有界输出（BIBO）的性质。稳定性可以通过极点在s域的位置来判断，所有极点必须位于左半平面（LHP）。",
+      "difficulty": 2,
+      "keywords": [
+        "BIBO",
+        "极点",
+        "LHP"
+      ],
+      "formulas": [],
+      "applications": [
+        "反馈系统设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "线性系统理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "系统稳定性是指系统在有界输入下产生有界输出（BIBO）的性质。稳定性可以通过极点在s域的位置来判断，所有极点必须位于左半平面（LHP）。"
+    },
+    {
+      "id": "bc_8__3",
+      "label": "极点",
+      "node_type": "basic_concept",
+      "summary": "极点是传递函数分母多项式的根，决定了系统的瞬态响应特性。极点的位置直接影响系统的稳定性和频响特性。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "瞬态响应",
+        "稳定性"
+      ],
+      "formulas": [
+        "s = σ + jω"
+      ],
+      "applications": [
+        "放大器设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点是传递函数分母多项式的根，决定了系统的瞬态响应特性。极点的位置直接影响系统的稳定性和频响特性。"
+    },
+    {
+      "id": "ct_8__1",
+      "label": "RC网络分析方法",
+      "node_type": "core_technology",
+      "summary": "RC网络分析方法包括开路时间常数法（低频主极点分析）和短路时间常数法（高频次极点分析），用于分析电路的频响特性。",
+      "difficulty": 3,
+      "keywords": [
+        "开路时间常数",
+        "短路时间常数",
+        "频响分析"
+      ],
+      "formulas": [
+        "τ = RC"
+      ],
+      "applications": [
+        "放大器设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "RC网络分析方法包括开路时间常数法（低频主极点分析）和短路时间常数法（高频次极点分析），用于分析电路的频响特性。"
+    },
+    {
+      "id": "ct_8__2",
+      "label": "多级放大器设计",
+      "node_type": "core_technology",
+      "summary": "多级放大器设计涉及多个增益级的组合，不同的组合模式会影响极点的位置和频响特性。常见的结构包括CS、CD和CG结构。",
+      "difficulty": 3,
+      "keywords": [
+        "CS结构",
+        "CD结构",
+        "CG结构",
+        "极点分离"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计",
+        "高频电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多级放大器设计涉及多个增益级的组合，不同的组合模式会影响极点的位置和频响特性。常见的结构包括CS、CD和CG结构。"
+    },
+    {
+      "id": "ct_8__3",
+      "label": "频率补偿",
+      "node_type": "core_technology",
+      "summary": "频率补偿是通过调整电路的极点位置来改善系统的稳定性和频响特性。常见的补偿方法包括极点分离和Miller补偿。",
+      "difficulty": 3,
+      "keywords": [
+        "极点分离",
+        "Miller补偿",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计",
+        "反馈系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿是通过调整电路的极点位置来改善系统的稳定性和频响特性。常见的补偿方法包括极点分离和Miller补偿。"
+    },
+    {
+      "id": "ca_8__1",
+      "label": "两级放大器",
+      "node_type": "circuit_application",
+      "summary": "两级放大器由两个增益级组成，通常包括一个CS级和一个CD级。其频响特性受极点位置和补偿方法的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "CS级",
+        "CD级",
+        "频响特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两级放大器由两个增益级组成，通常包括一个CS级和一个CD级。其频响特性受极点位置和补偿方法的影响。"
+    },
+    {
+      "id": "ca_8__2",
+      "label": "Cascode结构",
+      "node_type": "circuit_application",
+      "summary": "Cascode结构通过垂直级联增益级来实现极点分离，从而提高频响特性和稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "垂直级联",
+        "极点分离",
+        "频响特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频放大器",
+        "低噪声放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode结构通过垂直级联增益级来实现极点分离，从而提高频响特性和稳定性。"
+    },
+    {
+      "id": "ca_8__3",
+      "label": "反馈系统",
+      "node_type": "circuit_application",
+      "summary": "反馈系统通过将输出信号反馈到输入端来改善系统的性能和稳定性。反馈网络会影响运放的输出阻抗和极点位置。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "输出阻抗",
+        "极点位置"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈系统通过将输出信号反馈到输入端来改善系统的性能和稳定性。反馈网络会影响运放的输出阻抗和极点位置。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_8__1",
+      "target_id": "ct_8__1",
+      "relationship": "enables",
+      "description": "频响特性的概念使能了RC网络分析方法的应用。",
+      "weight": 0.8,
+      "evidence": "频响特性决定了系统的稳定性和性能，RC网络分析方法用于分析电路的频响特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8__2",
+      "target_id": "ct_8__3",
+      "relationship": "supports",
+      "description": "系统稳定性的概念支撑了频率补偿技术的应用。",
+      "weight": 0.9,
+      "evidence": "频率补偿通过调整极点位置来改善系统的稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8__2",
+      "target_id": "ca_8__1",
+      "relationship": "implements",
+      "description": "多级放大器设计技术实现了两级放大器的电路应用。",
+      "weight": 0.85,
+      "evidence": "两级放大器由多个增益级组成，其设计依赖于多级放大器设计技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8__3",
+      "target_id": "ca_8__3",
+      "relationship": "applies_to",
+      "description": "频率补偿技术应用于反馈系统的设计中。",
+      "weight": 0.75,
+      "evidence": "反馈系统的稳定性依赖于频率补偿技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8__3",
+      "target_id": "bc_8__2",
+      "relationship": "depends_on",
+      "description": "系统稳定性的判断依赖于极点的位置。",
+      "weight": 0.95,
+      "evidence": "所有极点必须位于左半平面（LHP）才能保证系统稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8__1",
+      "target_id": "ct_8__2",
+      "relationship": "relates_to",
+      "description": "RC网络分析方法与多级放大器设计技术相关。",
+      "weight": 0.7,
+      "evidence": "多级放大器的频响特性分析依赖于RC网络分析方法。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "8.",
+  "title": "6 小结",
+  "extraction_timestamp": "2025-07-08T16:43:14.312714"
+}

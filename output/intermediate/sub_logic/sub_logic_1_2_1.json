@@ -1,0 +1,101 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_2_1_1",
+      "label": "基尔霍夫电流定律(KCL)",
+      "node_type": "basic_concept",
+      "summary": "基尔霍夫电流定律(KCL)是电路分析中的基本定律之一，它指出在任何节点上，流入的电流之和等于流出的电流之和，即∑I_in = ∑I_out。这一定律基于电荷守恒原理，适用于任何电路节点，无论电路是线性还是非线性，时变还是时不变。",
+      "difficulty": 2,
+      "keywords": [
+        "KCL",
+        "电流守恒",
+        "节点分析"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "电路分析",
+        "节点电压法"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基尔霍夫电流定律(KCL)是电路分析中的基本定律之一，它指出在任何节点上，流入的电流之和等于流出的电流之和，即∑I_in = ∑I_out。这一定律基于电荷守恒原理，适用于任何电路节点，无论电路是线性还是非线性，时变还是时不变。"
+    },
+    {
+      "id": "ct_1_2_1_1",
+      "label": "节点电压法",
+      "node_type": "core_technology",
+      "summary": "节点电压法是一种基于KCL的电路分析方法，通过选择参考节点并应用KCL方程来求解各节点的电压。该方法适用于复杂电路的分析，能够简化计算过程。具体步骤包括：1) 选择一个参考节点；2) 对每个非参考节点应用KCL；3) 解方程组求节点电压。",
+      "difficulty": 3,
+      "keywords": [
+        "节点电压法",
+        "KCL方程",
+        "电路分析"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "复杂电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "节点电压法是一种基于KCL的电路分析方法，通过选择参考节点并应用KCL方程来求解各节点的电压。该方法适用于复杂电路的分析，能够简化计算过程。具体步骤包括：1) 选择一个参考节点；2) 对每个非参考节点应用KCL；3) 解方程组求节点电压。"
+    },
+    {
+      "id": "ca_1_2_1_1",
+      "label": "多节点电路分析",
+      "node_type": "circuit_application",
+      "summary": "多节点电路分析是KCL和节点电压法的典型应用场景。通过应用KCL，可以建立多个节点的电流方程，进而求解各节点的电压和支路电流。这种分析方法广泛应用于电子电路设计、电力系统分析等领域。",
+      "difficulty": 4,
+      "keywords": [
+        "多节点电路",
+        "KCL应用",
+        "电路设计"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "电子电路设计",
+        "电力系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多节点电路分析是KCL和节点电压法的典型应用场景。通过应用KCL，可以建立多个节点的电流方程，进而求解各节点的电压和支路电流。这种分析方法广泛应用于电子电路设计、电力系统分析等领域。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_2_1_1",
+      "target_id": "ct_1_2_1_1",
+      "relationship": "enables",
+      "description": "基尔霍夫电流定律(KCL)是节点电压法的基础，节点电压法通过应用KCL方程来求解电路节点电压。",
+      "weight": 0.9,
+      "evidence": "节点电压法基于KCL方程∑I_in = ∑I_out",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_2_1_1",
+      "target_id": "ca_1_2_1_1",
+      "relationship": "implements",
+      "description": "节点电压法通过应用KCL方程实现了多节点电路分析，简化了复杂电路的计算过程。",
+      "weight": 0.8,
+      "evidence": "多节点电路分析使用节点电压法求解各节点电压",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "1.2.1",
+  "title": "基尔霍夫电流定律(KCL)",
+  "extraction_timestamp": "2025-07-08T15:29:19.836303",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

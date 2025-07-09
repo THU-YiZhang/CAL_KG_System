@@ -1,0 +1,260 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_1_1",
+      "label": "开环运放电路",
+      "node_type": "basic_concept",
+      "summary": "开环运放电路是指运放在没有反馈网络的情况下工作的电路。由于增益稳定性、线性范围和带宽等方面的限制，开环运放电路一般无法在实际电路系统中直接应用。",
+      "difficulty": 2,
+      "keywords": [
+        "增益稳定性",
+        "线性范围",
+        "带宽"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开环运放电路是指运放在没有反馈网络的情况下工作的电路。由于增益稳定性、线性范围和带宽等方面的限制，开环运放电路一般无法在实际电路系统中直接应用。"
+    },
+    {
+      "id": "bc_7_1_2",
+      "label": "闭环系统",
+      "node_type": "basic_concept",
+      "summary": "闭环系统是通过反馈网络将开环增益电路构成的系统。闭环系统能够解决运放电路实际应用中的诸多问题，如提高稳定性和改善系统性能。",
+      "difficulty": 2,
+      "keywords": [
+        "反馈网络",
+        "稳定性",
+        "系统性能"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环系统是通过反馈网络将开环增益电路构成的系统。闭环系统能够解决运放电路实际应用中的诸多问题，如提高稳定性和改善系统性能。"
+    },
+    {
+      "id": "bc_7_1_3",
+      "label": "正向通路",
+      "node_type": "basic_concept",
+      "summary": "正向通路是指信号由输入端经过有源或无源器件的传输到达输出的通路。在复杂电路系统中，正向通路可能包含多条并行的通路，每条通路内的元件数目与类型可能不同。",
+      "difficulty": 2,
+      "keywords": [
+        "信号传输",
+        "有源器件",
+        "无源器件"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号传输原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正向通路是指信号由输入端经过有源或无源器件的传输到达输出的通路。在复杂电路系统中，正向通路可能包含多条并行的通路，每条通路内的元件数目与类型可能不同。"
+    },
+    {
+      "id": "bc_7_1_4",
+      "label": "反馈通路",
+      "node_type": "basic_concept",
+      "summary": "反馈通路是指信号由输出通过某种方式反馈到输入，或由局部的输出反馈到前级的输入的通路。反馈通路与前向通路共同构成完整的闭环系统。",
+      "difficulty": 2,
+      "keywords": [
+        "信号反馈",
+        "闭环系统",
+        "前级输入"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈通路是指信号由输出通过某种方式反馈到输入，或由局部的输出反馈到前级的输入的通路。反馈通路与前向通路共同构成完整的闭环系统。"
+    },
+    {
+      "id": "ct_7_1_1",
+      "label": "闭环结构设计",
+      "node_type": "core_technology",
+      "summary": "闭环结构设计是指选择合适的闭环结构并优化其总体性能的方法。闭环系统的性能与开环增益电路性能和反馈电路性能紧密关联。",
+      "difficulty": 3,
+      "keywords": [
+        "闭环结构",
+        "性能优化",
+        "反馈电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环结构设计是指选择合适的闭环结构并优化其总体性能的方法。闭环系统的性能与开环增益电路性能和反馈电路性能紧密关联。"
+    },
+    {
+      "id": "ct_7_1_2",
+      "label": "静态低频特性分析",
+      "node_type": "core_technology",
+      "summary": "静态低频特性分析主要分析4种双端口等效电路在构造闭环运放系统中的应用，以及实现不同类型放大器所应采取的闭环结构设计方法。",
+      "difficulty": 3,
+      "keywords": [
+        "双端口等效电路",
+        "闭环结构",
+        "放大器设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "静态低频特性分析主要分析4种双端口等效电路在构造闭环运放系统中的应用，以及实现不同类型放大器所应采取的闭环结构设计方法。"
+    },
+    {
+      "id": "ct_7_1_3",
+      "label": "高频动态特性分析",
+      "node_type": "core_technology",
+      "summary": "高频动态特性分析主要针对CMOS高输入电阻开环电压增益结构，分析单位负反馈闭环系统的不同分析与设计方法。",
+      "difficulty": 3,
+      "keywords": [
+        "CMOS",
+        "高输入电阻",
+        "单位负反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高频动态特性分析主要针对CMOS高输入电阻开环电压增益结构，分析单位负反馈闭环系统的不同分析与设计方法。"
+    },
+    {
+      "id": "ca_7_1_1",
+      "label": "闭环运放电路",
+      "node_type": "circuit_application",
+      "summary": "闭环运放电路是通过反馈网络将开环增益电路构成的闭环系统。这种电路在实际应用中具有较高的稳定性和良好的系统性能。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈网络",
+        "开环增益",
+        "系统性能"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭环运放电路是通过反馈网络将开环增益电路构成的闭环系统。这种电路在实际应用中具有较高的稳定性和良好的系统性能。"
+    },
+    {
+      "id": "ca_7_1_2",
+      "label": "单位负反馈闭环系统",
+      "node_type": "circuit_application",
+      "summary": "单位负反馈闭环系统是一种特殊的闭环结构，主要用于CMOS高输入电阻开环电压增益结构的高频动态特性分析。",
+      "difficulty": 4,
+      "keywords": [
+        "单位负反馈",
+        "CMOS",
+        "高频动态特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单位负反馈闭环系统是一种特殊的闭环结构，主要用于CMOS高输入电阻开环电压增益结构的高频动态特性分析。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_1_1",
+      "target_id": "ct_7_1_1",
+      "relationship": "enables",
+      "description": "开环运放电路的局限性促使了闭环结构设计的发展。",
+      "weight": 0.8,
+      "evidence": "由于增益稳定性、线性范围和带宽等方面的限制,各类开环运放电路一般无法在实际电路系统中直接应用。只有将开环增益电路通过反馈网络构成闭环系统后,才能解决运放电路实际应用所面临的诸多问题。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_1_2",
+      "target_id": "ct_7_1_1",
+      "relationship": "supports",
+      "description": "闭环系统的概念为闭环结构设计提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "从提高稳定性和改善系统性能的角度出发, 模拟信号处理系统中的运放电路通常工作在闭环负反馈状态下。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_1_3",
+      "target_id": "ct_7_1_2",
+      "relationship": "supports",
+      "description": "正向通路的概念为静态低频特性分析提供了分析对象。",
+      "weight": 0.7,
+      "evidence": "在闭环系统中,信号在电路中的传递具有明显的方向性,通常信号由输入端经过有源或无源器件的传输到达输出, 这种由输入向输出传递所经历的通路称为正向通路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_1_4",
+      "target_id": "ct_7_1_3",
+      "relationship": "supports",
+      "description": "反馈通路的概念为高频动态特性分析提供了分析对象。",
+      "weight": 0.7,
+      "evidence": "与前向传输相反,信号由输出通过某种方式反馈到输入, 或由局部的输出反馈到前级的输入, 均构成电路系统信号的反馈通路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_1_1",
+      "target_id": "ca_7_1_1",
+      "relationship": "implements",
+      "description": "闭环结构设计方法实现了闭环运放电路的设计。",
+      "weight": 0.9,
+      "evidence": "由开环增益电路所组成的闭环电路结构种类繁多, 性能变化多样, 如何选择合适的闭环结构并优化其总体性能,成为运放电路设计与应用需要解决的一个重要问题。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_1_3",
+      "target_id": "ca_7_1_2",
+      "relationship": "implements",
+      "description": "高频动态特性分析方法实现了单位负反馈闭环系统的设计。",
+      "weight": 0.9,
+      "evidence": "在高频动态特性方面, 主要针对 CMOS 高输入电阻开环电压增益结构,分析单位负反馈闭环系统的不同分析与设计方法。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "7.1",
+  "title": "概述",
+  "extraction_timestamp": "2025-07-08T16:40:39.287546"
+}

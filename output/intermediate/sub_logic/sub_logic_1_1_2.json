@@ -1,0 +1,237 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_1_2_1",
+      "label": "电容器",
+      "node_type": "basic_concept",
+      "summary": "电容器是一种能够储存电荷的被动电子元件，由两个导体和中间的绝缘介质组成。当施加电压时，正负电荷会在两个导体上积累，形成电场储存能量。",
+      "difficulty": 1,
+      "keywords": [
+        "电荷储存",
+        "被动元件",
+        "绝缘介质"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波电路",
+        "能量存储",
+        "信号耦合"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器是一种能够储存电荷的被动电子元件，由两个导体和中间的绝缘介质组成。当施加电压时，正负电荷会在两个导体上积累，形成电场储存能量。"
+    },
+    {
+      "id": "bc_1_1_2_2",
+      "label": "电压-电流关系",
+      "node_type": "basic_concept",
+      "summary": "电容器的电压-电流关系由微分方程描述：i = C(dv/dt)，其中i是电流，C是电容值，v是电压，t是时间。这表明电容电流与电压变化率成正比。",
+      "difficulty": 2,
+      "keywords": [
+        "微分关系",
+        "动态特性",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "i = C(dv/dt)"
+      ],
+      "applications": [
+        "瞬态分析",
+        "交流电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "微积分基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器的电压-电流关系由微分方程描述：i = C(dv/dt)，其中i是电流，C是电容值，v是电压，t是时间。这表明电容电流与电压变化率成正比。"
+    },
+    {
+      "id": "bc_1_1_2_3",
+      "label": "电容储能",
+      "node_type": "basic_concept",
+      "summary": "电容器储存的能量公式为W = ½CV²，其中W是储存的能量，C是电容值，V是电压。这表明储存能量与电容值和电压平方成正比。",
+      "difficulty": 2,
+      "keywords": [
+        "能量存储",
+        "电场能量",
+        "能量密度"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "能量缓冲",
+        "脉冲功率"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "能量守恒定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器储存的能量公式为W = ½CV²，其中W是储存的能量，C是电容值，V是电压。这表明储存能量与电容值和电压平方成正比。"
+    },
+    {
+      "id": "ct_1_1_2_1",
+      "label": "电容瞬态分析",
+      "node_type": "core_technology",
+      "summary": "利用电压-电流关系i = C(dv/dt)分析电容在电路中的瞬态响应，包括充放电过程和时间常数计算。分析步骤：1)建立电路方程；2)求解微分方程；3)分析时间响应特性。",
+      "difficulty": 3,
+      "keywords": [
+        "瞬态分析",
+        "充放电",
+        "时间常数"
+      ],
+      "formulas": [
+        "τ = RC"
+      ],
+      "applications": [
+        "开关电路分析",
+        "电源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电压-电流关系i = C(dv/dt)分析电容在电路中的瞬态响应，包括充放电过程和时间常数计算。分析步骤：1)建立电路方程；2)求解微分方程；3)分析时间响应特性。"
+    },
+    {
+      "id": "ct_1_1_2_2",
+      "label": "电容能量计算",
+      "node_type": "core_technology",
+      "summary": "基于能量公式W = ½CV²计算电容器储存的能量，评估其在电路中的能量缓冲能力。计算步骤：1)测量或计算电容两端电压；2)代入公式计算；3)评估能量是否满足应用需求。",
+      "difficulty": 2,
+      "keywords": [
+        "能量计算",
+        "功率评估",
+        "能量管理"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "储能系统设计",
+        "功率电子"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于能量公式W = ½CV²计算电容器储存的能量，评估其在电路中的能量缓冲能力。计算步骤：1)测量或计算电容两端电压；2)代入公式计算；3)评估能量是否满足应用需求。"
+    },
+    {
+      "id": "ca_1_1_2_1",
+      "label": "RC充放电电路",
+      "node_type": "circuit_application",
+      "summary": "由电阻和电容组成的基本充放电电路，利用电容的电压-电流关系实现时间延迟、波形整形等功能。电路结构：电源串联电阻后并联电容。时间常数τ=RC决定充放电速度。",
+      "difficulty": 3,
+      "keywords": [
+        "时间延迟",
+        "波形整形",
+        "低通滤波"
+      ],
+      "formulas": [
+        "τ = RC"
+      ],
+      "applications": [
+        "定时电路",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电阻和电容组成的基本充放电电路，利用电容的电压-电流关系实现时间延迟、波形整形等功能。电路结构：电源串联电阻后并联电容。时间常数τ=RC决定充放电速度。"
+    },
+    {
+      "id": "ca_1_1_2_2",
+      "label": "电容储能电路",
+      "node_type": "circuit_application",
+      "summary": "利用电容器储存能量的特性构建的储能电路，用于短时供电或能量缓冲。典型结构：充电电路连接大容量电容，放电时通过开关控制能量释放。设计需考虑电容耐压和容量。",
+      "difficulty": 4,
+      "keywords": [
+        "能量缓冲",
+        "脉冲功率",
+        "备用电源"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "相机闪光灯",
+        "断电保护"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电容器储存能量的特性构建的储能电路，用于短时供电或能量缓冲。典型结构：充电电路连接大容量电容，放电时通过开关控制能量释放。设计需考虑电容耐压和容量。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_1_2_1",
+      "target_id": "ct_1_1_2_1",
+      "relationship": "enables",
+      "description": "电容器的基本定义和特性使能了瞬态分析技术的实现",
+      "weight": 0.9,
+      "evidence": "电容器的电荷储存特性是瞬态分析的基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_2_2",
+      "target_id": "ct_1_1_2_1",
+      "relationship": "supports",
+      "description": "电压-电流关系为瞬态分析提供了数学基础",
+      "weight": 1.0,
+      "evidence": "i = C(dv/dt)是瞬态分析的核心方程",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_2_3",
+      "target_id": "ct_1_1_2_2",
+      "relationship": "supports",
+      "description": "能量计算公式是能量计算技术的理论基础",
+      "weight": 1.0,
+      "evidence": "W = ½CV²直接用于能量计算",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_2_1",
+      "target_id": "ca_1_1_2_1",
+      "relationship": "implements",
+      "description": "瞬态分析技术实现了RC充放电电路的设计和分析",
+      "weight": 0.8,
+      "evidence": "RC电路分析依赖于瞬态分析方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_2_2",
+      "target_id": "ca_1_1_2_2",
+      "relationship": "implements",
+      "description": "能量计算技术实现了电容储能电路的设计",
+      "weight": 0.9,
+      "evidence": "储能电路设计需要精确的能量计算",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_2_2",
+      "target_id": "bc_1_1_2_3",
+      "relationship": "relates_to",
+      "description": "电压-电流关系和能量公式都描述了电容的动态特性",
+      "weight": 0.7,
+      "evidence": "两者都涉及电压与电容的关系",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "1.1.2",
+  "title": "电容元件",
+  "extraction_timestamp": "2025-07-08T15:29:53.917252",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

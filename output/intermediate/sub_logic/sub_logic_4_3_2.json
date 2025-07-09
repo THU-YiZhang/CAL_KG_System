@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_3_2_1",
+      "label": "稳态误差",
+      "node_type": "basic_concept",
+      "summary": "稳态误差是指系统在稳定状态下，输出与期望值之间的差异。它是衡量控制系统精度的重要指标。",
+      "difficulty": 2,
+      "keywords": [
+        "误差",
+        "稳定状态",
+        "精度"
+      ],
+      "formulas": [
+        "稳态误差 = 期望值 - 实际值"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "控制系统基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "稳态误差是指系统在稳定状态下，输出与期望值之间的差异。它是衡量控制系统精度的重要指标。"
+    },
+    {
+      "id": "bc_4_3_2_2",
+      "label": "响应速度",
+      "node_type": "basic_concept",
+      "summary": "响应速度是指系统对输入信号变化的反应快慢。它是衡量控制系统动态性能的重要指标。",
+      "difficulty": 2,
+      "keywords": [
+        "动态性能",
+        "反应时间",
+        "速度"
+      ],
+      "formulas": [
+        "响应时间 = 达到稳定状态所需时间"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "控制系统基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "响应速度是指系统对输入信号变化的反应快慢。它是衡量控制系统动态性能的重要指标。"
+    },
+    {
+      "id": "ct_4_3_2_1",
+      "label": "滞后补偿",
+      "node_type": "core_technology",
+      "summary": "滞后补偿是一种通过引入相位滞后来减少稳态误差的控制技术。它通常通过增加一个滞后环节来实现，但可能会降低系统的响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "相位滞后",
+        "补偿",
+        "控制技术"
+      ],
+      "formulas": [
+        "滞后补偿传递函数 = (1 + T1s) / (1 + T2s), 其中 T1 > T2"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滞后补偿是一种通过引入相位滞后来减少稳态误差的控制技术。它通常通过增加一个滞后环节来实现，但可能会降低系统的响应速度。"
+    },
+    {
+      "id": "ca_4_3_2_1",
+      "label": "滞后补偿电路",
+      "node_type": "circuit_application",
+      "summary": "滞后补偿电路是一种用于控制系统的电路，通过引入滞后环节来减少稳态误差。典型的滞后补偿电路包括电阻、电容和运算放大器等元件。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻",
+        "电容",
+        "运算放大器"
+      ],
+      "formulas": [
+        "滞后补偿电路传递函数"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滞后补偿电路是一种用于控制系统的电路，通过引入滞后环节来减少稳态误差。典型的滞后补偿电路包括电阻、电容和运算放大器等元件。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_3_2_1",
+      "target_id": "ct_4_3_2_1",
+      "relationship": "enables",
+      "description": "稳态误差的概念使能了滞后补偿技术的应用，因为滞后补偿的主要目的是减少稳态误差。",
+      "weight": 0.9,
+      "evidence": "滞后补偿减少稳态误差",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_3_2_2",
+      "target_id": "ct_4_3_2_1",
+      "relationship": "supports",
+      "description": "响应速度的概念支撑了滞后补偿技术的设计，因为滞后补偿可能会降低系统的响应速度。",
+      "weight": 0.8,
+      "evidence": "滞后补偿可能降低响应速度",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_3_2_1",
+      "target_id": "ca_4_3_2_1",
+      "relationship": "implements",
+      "description": "滞后补偿技术通过滞后补偿电路来实现，具体电路结构包括电阻、电容和运算放大器等元件。",
+      "weight": 0.9,
+      "evidence": "滞后补偿电路是一种用于控制系统的电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_3_2_1",
+      "target_id": "bc_4_3_2_2",
+      "relationship": "relates_to",
+      "description": "稳态误差和响应速度是控制系统性能的两个重要指标，它们之间存在一定的权衡关系。",
+      "weight": 0.7,
+      "evidence": "滞后补偿减少稳态误差，但可能降低响应速度",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "4.3.2",
+  "title": "滞后补偿",
+  "extraction_timestamp": "2025-07-08T15:31:29.814127",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

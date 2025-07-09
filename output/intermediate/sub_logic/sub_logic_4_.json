@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4__1",
+      "label": "基准电路",
+      "node_type": "basic_concept",
+      "summary": "基准电路是电源芯片中的关键单元，用于提供稳定的电压或电流参考。其设计需满足与电源电压、温度和工艺无关的基本要求。基准电路建立在高性能偏置电路的基础上，能够降低电源电压对偏置电压和电流的影响。",
+      "difficulty": 2,
+      "keywords": [
+        "基准电路",
+        "偏置电路",
+        "电源无关性"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟IP电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "偏置电路原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基准电路是电源芯片中的关键单元，用于提供稳定的电压或电流参考。其设计需满足与电源电压、温度和工艺无关的基本要求。基准电路建立在高性能偏置电路的基础上，能够降低电源电压对偏置电压和电流的影响。"
+    },
+    {
+      "id": "bc_4__2",
+      "label": "温度补偿技术",
+      "node_type": "basic_concept",
+      "summary": "温度补偿技术用于实现基准电路的温度无关性。通过正温度系数（PTAT）电压与负温度系数电压（如V_BE）的相互补偿，获得接近零温度系数的基准电压输出。PTAT电压的正温度系数较小（约0.08mV/°C），而V_BE的负温度系数较稳定（约-2mV/°C）。",
+      "difficulty": 3,
+      "keywords": [
+        "温度补偿",
+        "PTAT",
+        "V_BE"
+      ],
+      "formulas": [
+        "V_T = kT/q"
+      ],
+      "applications": [
+        "带隙基准源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "温度补偿技术用于实现基准电路的温度无关性。通过正温度系数（PTAT）电压与负温度系数电压（如V_BE）的相互补偿，获得接近零温度系数的基准电压输出。PTAT电压的正温度系数较小（约0.08mV/°C），而V_BE的负温度系数较稳定（约-2mV/°C）。"
+    },
+    {
+      "id": "bc_4__3",
+      "label": "带隙基准源",
+      "node_type": "basic_concept",
+      "summary": "带隙基准源是一种通过PN结补偿实现的基准电路，其输出电压接近硅材料的能隙宽度（E_g/q = 1.2V）。带隙基准源具有与温度和电源电压无关的特性，且工艺一致性好，适合高性能应用。",
+      "difficulty": 3,
+      "keywords": [
+        "带隙基准",
+        "PN结",
+        "能隙宽度"
+      ],
+      "formulas": [
+        "V_ref = 0.65 + 22.5 × 26mV ≈ 1.2V"
+      ],
+      "applications": [
+        "低漂移基准设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "温度补偿技术"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带隙基准源是一种通过PN结补偿实现的基准电路，其输出电压接近硅材料的能隙宽度（E_g/q = 1.2V）。带隙基准源具有与温度和电源电压无关的特性，且工艺一致性好，适合高性能应用。"
+    },
+    {
+      "id": "ct_4__1",
+      "label": "自偏置基准电路设计",
+      "node_type": "core_technology",
+      "summary": "自偏置基准电路通过内部反馈机制实现稳定的偏置电流，基本与电源电压无关。其输出偏置电流与支路中定义电流大小的电阻密切相关。采用阈值电压V_TH基准电路时，输出电压仅与MOSFET的V_TH有关，但随工艺和温度的漂移较大。",
+      "difficulty": 3,
+      "keywords": [
+        "自偏置",
+        "V_TH基准",
+        "电源无关性"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗基准设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "自偏置基准电路通过内部反馈机制实现稳定的偏置电流，基本与电源电压无关。其输出偏置电流与支路中定义电流大小的电阻密切相关。采用阈值电压V_TH基准电路时，输出电压仅与MOSFET的V_TH有关，但随工艺和温度的漂移较大。"
+    },
+    {
+      "id": "ct_4__2",
+      "label": "PTAT电压生成",
+      "node_type": "core_technology",
+      "summary": "PTAT（正比于绝对温度）电压的生成方法包括：利用两个饱和状态的PN结电压差ΔV_BE，或利用亚阈状态下两个MOS管的V_GS电压差ΔV_GS。PTAT电压的正温度系数较小（约0.08mV/°C），且温度系数不够稳定，难以直接用于温度补偿。",
+      "difficulty": 4,
+      "keywords": [
+        "PTAT",
+        "ΔV_BE",
+        "ΔV_GS"
+      ],
+      "formulas": [
+        "ΔV_BE = V_T ln(n)"
+      ],
+      "applications": [
+        "温度补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PTAT（正比于绝对温度）电压的生成方法包括：利用两个饱和状态的PN结电压差ΔV_BE，或利用亚阈状态下两个MOS管的V_GS电压差ΔV_GS。PTAT电压的正温度系数较小（约0.08mV/°C），且温度系数不够稳定，难以直接用于温度补偿。"
+    },
+    {
+      "id": "ct_4__3",
+      "label": "低电压基准设计",
+      "node_type": "core_technology",
+      "summary": "低电压基准设计需解决MOS管阈值电压无法按比例缩小的问题。在V_CC=1.5V的电源供电下，一条电流支路上仅可使2个0.7V开启电压的MOS管饱和导通，导致Cascode等高性能结构难以使用。设计时需权衡动态范围、性能和功耗。",
+      "difficulty": 4,
+      "keywords": [
+        "低电压",
+        "阈值电压",
+        "Cascode"
+      ],
+      "formulas": [],
+      "applications": [
+        "手持设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压基准设计需解决MOS管阈值电压无法按比例缩小的问题。在V_CC=1.5V的电源供电下，一条电流支路上仅可使2个0.7V开启电压的MOS管饱和导通，导致Cascode等高性能结构难以使用。设计时需权衡动态范围、性能和功耗。"
+    },
+    {
+      "id": "ca_4__1",
+      "label": "高性能带隙基准电路",
+      "node_type": "circuit_application",
+      "summary": "高性能带隙基准电路由PN结、运放和复杂恒流源等模块组成，具有高精度和低温漂特性。其电路结构复杂，功耗较大，适合静态功耗要求不高的高性能应用。输出电压接近1.2V，与温度和电源电压无关。",
+      "difficulty": 4,
+      "keywords": [
+        "带隙基准",
+        "运放",
+        "恒流源"
+      ],
+      "formulas": [],
+      "applications": [
+        "精密参考源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高性能带隙基准电路由PN结、运放和复杂恒流源等模块组成，具有高精度和低温漂特性。其电路结构复杂，功耗较大，适合静态功耗要求不高的高性能应用。输出电压接近1.2V，与温度和电源电压无关。"
+    },
+    {
+      "id": "ca_4__2",
+      "label": "极低功耗基准电路",
+      "node_type": "circuit_application",
+      "summary": "极低功耗基准电路采用MOS亚阈工作状态，利用ΔV_TH代替ΔV_BE构成。其电路结构简单，工作在亚阈区，适合1μA以内的电源电流功耗要求。但工艺一致性较差，与工艺的相关性明显上升。",
+      "difficulty": 3,
+      "keywords": [
+        "亚阈区",
+        "ΔV_TH",
+        "低功耗"
+      ],
+      "formulas": [],
+      "applications": [
+        "手持设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极低功耗基准电路采用MOS亚阈工作状态，利用ΔV_TH代替ΔV_BE构成。其电路结构简单，工作在亚阈区，适合1μA以内的电源电流功耗要求。但工艺一致性较差，与工艺的相关性明显上升。"
+    },
+    {
+      "id": "ca_4__3",
+      "label": "双阱CMOS基准电路",
+      "node_type": "circuit_application",
+      "summary": "双阱CMOS基准电路采用双阱工艺消除衬底偏置效应。在N阱工艺中，P衬底上制作独立的N阱，每个N阱制备一个PMOS管，其源端与N阱相连以消除衬偏效应。该工艺成本较高，但能有效提高基准电压的稳定性。",
+      "difficulty": 3,
+      "keywords": [
+        "双阱",
+        "衬偏效应",
+        "N阱工艺"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "双阱CMOS基准电路采用双阱工艺消除衬底偏置效应。在N阱工艺中，P衬底上制作独立的N阱，每个N阱制备一个PMOS管，其源端与N阱相连以消除衬偏效应。该工艺成本较高，但能有效提高基准电压的稳定性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4__1",
+      "target_id": "ct_4__1",
+      "relationship": "enables",
+      "description": "基准电路的基本定义和原理使能了自偏置基准电路的设计方法。",
+      "weight": 0.9,
+      "evidence": "基准电路建立在高性能偏置电路的基础上。偏置电路已能解决电路中偏置电压、偏置电流与电源电压的敏感性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4__2",
+      "target_id": "ct_4__2",
+      "relationship": "supports",
+      "description": "温度补偿技术的原理支撑了PTAT电压生成的具体实现方法。",
+      "weight": 0.8,
+      "evidence": "稳定的正温度系数电压或电流依靠对正比于热电压V_T = kT/q的控制而获得。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4__2",
+      "target_id": "ca_4__1",
+      "relationship": "implements",
+      "description": "PTAT电压生成技术实现了高性能带隙基准电路的温度补偿功能。",
+      "weight": 0.7,
+      "evidence": "输出电压中需要一个正比于绝对温度T的电压量即温度特性PTAT电压。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4__3",
+      "target_id": "ca_4__1",
+      "relationship": "applies_to",
+      "description": "带隙基准源的概念直接应用于高性能带隙基准电路的设计。",
+      "weight": 0.9,
+      "evidence": "对于以上采用PN结补偿的带隙基准源，因V_BE的工艺一致性好，基准源的工艺一致性可以得到保证。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4__1",
+      "target_id": "ca_4__2",
+      "relationship": "implements",
+      "description": "自偏置基准电路设计方法实现了极低功耗基准电路的简单结构。",
+      "weight": 0.7,
+      "evidence": "采用MOS亚阈工作状态，利用ΔV_TH代替ΔV_BE而构成的基准电路，电路结构非常简单。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4__2",
+      "target_id": "bc_4__3",
+      "relationship": "complements",
+      "description": "温度补偿技术与带隙基准源的概念互补，共同实现低温漂基准设计。",
+      "weight": 0.8,
+      "evidence": "PTAT电压的正温度系数与V_BE的负温度系数相互补偿，即可获得接近零温度系数的基准电压输出。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "4.",
+  "title": "1 概述",
+  "extraction_timestamp": "2025-07-08T16:35:53.637444"
+}

@@ -1,0 +1,10 @@
+2025-07-08 15:54:55,212 - CAL_KG - INFO - 文档分割器初始化完成 (并发数: 8)
+2025-07-08 15:54:56,008 - CAL_KG - INFO - 主逻辑图谱生成器初始化完成 (并发数: 8)
+2025-07-08 15:54:56,830 - CAL_KG - INFO - 子逻辑图谱生成器初始化完成 (并发数: 8)
+2025-07-08 15:54:57,602 - CAL_KG - INFO - 连接分析器初始化完成 (并发数: 8)
+2025-07-08 15:54:57,602 - CAL_KG - INFO - 可视化器初始化完成
+2025-07-08 15:54:57,603 - CAL_KG - INFO - CAL-KG系统初始化完成 (并发数: 8)
+2025-07-08 15:56:29,236 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:57:55,029 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:58:54,668 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:58:54,946 - CAL_KG - INFO - 步骤 document_split 成功完成

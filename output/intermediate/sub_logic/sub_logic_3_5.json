@@ -1,0 +1,371 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_5_1",
+      "label": "自偏置电路",
+      "node_type": "basic_concept",
+      "summary": "自偏置电路是一种通过内部反馈机制自动建立稳定工作点的电路结构。其核心特点是两支路相互提供偏置，形成稳定的工作点。自偏置电路通常由非线性电流源和线性电流源组合而成，以确保工作点的唯一性和稳定性。",
+      "difficulty": 3,
+      "keywords": [
+        "自偏置",
+        "反馈机制",
+        "工作点"
+      ],
+      "formulas": [],
+      "applications": [
+        "电压偏置",
+        "电流偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈控制",
+        "电流镜"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "自偏置电路是一种通过内部反馈机制自动建立稳定工作点的电路结构。其核心特点是两支路相互提供偏置，形成稳定的工作点。自偏置电路通常由非线性电流源和线性电流源组合而成，以确保工作点的唯一性和稳定性。"
+    },
+    {
+      "id": "bc_3_5_2",
+      "label": "非线性电流源",
+      "node_type": "basic_concept",
+      "summary": "非线性电流源是指输出电流与输入电压或电流呈非线性关系的电流源。在自偏置电路中，非线性电流源是实现稳定工作点的关键元件。非线性电流源通常通过MOS管源极串联电阻或改变MOS管尺寸来实现。",
+      "difficulty": 3,
+      "keywords": [
+        "非线性",
+        "电流源",
+        "MOS管"
+      ],
+      "formulas": [],
+      "applications": [
+        "自偏置电路",
+        "电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性",
+        "电流镜"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "非线性电流源是指输出电流与输入电压或电流呈非线性关系的电流源。在自偏置电路中，非线性电流源是实现稳定工作点的关键元件。非线性电流源通常通过MOS管源极串联电阻或改变MOS管尺寸来实现。"
+    },
+    {
+      "id": "bc_3_5_3",
+      "label": "PTAT电流",
+      "node_type": "basic_concept",
+      "summary": "PTAT（Proportional To Absolute Temperature）电流是指与绝对温度成正比的电流。PTAT电流通常通过ΔVBE电压和电阻的组合实现，具有稳定的温度特性。",
+      "difficulty": 3,
+      "keywords": [
+        "PTAT",
+        "温度系数",
+        "ΔVBE"
+      ],
+      "formulas": [
+        "I_o = (V_T / R) * ln(M)"
+      ],
+      "applications": [
+        "温度补偿",
+        "基准电流"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "BJT特性",
+        "电阻温度系数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PTAT（Proportional To Absolute Temperature）电流是指与绝对温度成正比的电流。PTAT电流通常通过ΔVBE电压和电阻的组合实现，具有稳定的温度特性。"
+    },
+    {
+      "id": "ct_3_5_1",
+      "label": "非线性电流镜设计",
+      "node_type": "core_technology",
+      "summary": "非线性电流镜设计是通过在MOS管源极串联电阻或改变MOS管尺寸，使电流镜的输出电流与输入电流呈非线性关系。这种设计方法可以确保自偏置电路的工作点唯一且稳定。",
+      "difficulty": 4,
+      "keywords": [
+        "非线性电流镜",
+        "源极电阻",
+        "尺寸比"
+      ],
+      "formulas": [
+        "V_R = V_GS3 - V_GS4",
+        "I_o = (V_R / R)"
+      ],
+      "applications": [
+        "自偏置电路",
+        "电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "非线性电流镜设计是通过在MOS管源极串联电阻或改变MOS管尺寸，使电流镜的输出电流与输入电流呈非线性关系。这种设计方法可以确保自偏置电路的工作点唯一且稳定。"
+    },
+    {
+      "id": "ct_3_5_2",
+      "label": "CMOS自偏置电路设计",
+      "node_type": "core_technology",
+      "summary": "CMOS自偏置电路设计是利用MOS管的线性电阻特性取代传统电阻，实现自偏置电路的全CMOS化。这种设计方法符合CMOS工艺的发展方向，有利于控制温度系数和面积。",
+      "difficulty": 4,
+      "keywords": [
+        "CMOS",
+        "线性电阻",
+        "温度系数"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗电路",
+        "集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CMOS自偏置电路设计是利用MOS管的线性电阻特性取代传统电阻，实现自偏置电路的全CMOS化。这种设计方法符合CMOS工艺的发展方向，有利于控制温度系数和面积。"
+    },
+    {
+      "id": "ct_3_5_3",
+      "label": "多路自偏置结构设计",
+      "node_type": "core_technology",
+      "summary": "多路自偏置结构设计是通过引入多支路互偏置和负反馈控制，提高偏置电路的稳定性和精度。这种设计方法可以显著降低电源电压对偏置电流的影响，并提高电流镜的匹配精度。",
+      "difficulty": 5,
+      "keywords": [
+        "多路自偏置",
+        "负反馈",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能偏置",
+        "宽摆幅电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多路自偏置结构设计是通过引入多支路互偏置和负反馈控制，提高偏置电路的稳定性和精度。这种设计方法可以显著降低电源电压对偏置电流的影响，并提高电流镜的匹配精度。"
+    },
+    {
+      "id": "ca_3_5_1",
+      "label": "二极管/VBE自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "二极管/VBE自偏置电路是一种利用BJT二极管的非线性特性实现的自偏置电路。其核心结构包括PMOS电流镜和寄生PNP二极管，通过二极管的非线性导通电阻特性实现稳定的工作点。",
+      "difficulty": 4,
+      "keywords": [
+        "二极管",
+        "VBE",
+        "自偏置"
+      ],
+      "formulas": [
+        "I_R = V_BE / R",
+        "R = V_T / I_D * ln(I_D / I_S)"
+      ],
+      "applications": [
+        "基准电流",
+        "启动电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二极管/VBE自偏置电路是一种利用BJT二极管的非线性特性实现的自偏置电路。其核心结构包括PMOS电流镜和寄生PNP二极管，通过二极管的非线性导通电阻特性实现稳定的工作点。"
+    },
+    {
+      "id": "ca_3_5_2",
+      "label": "ΔVBE/PTAT偏置电路",
+      "node_type": "circuit_application",
+      "summary": "ΔVBE/PTAT偏置电路是在VBE自偏置电路的基础上，通过增加放大倍数的BJT二极管实现PTAT电流输出。这种电路结构可以提供稳定的正温度系数电流，适用于温度补偿应用。",
+      "difficulty": 4,
+      "keywords": [
+        "ΔVBE",
+        "PTAT",
+        "温度补偿"
+      ],
+      "formulas": [
+        "ΔV_BE = V_T * ln(M)",
+        "R = V_T / I_D2 * ln(M)"
+      ],
+      "applications": [
+        "基准电流",
+        "温度传感器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "ΔVBE/PTAT偏置电路是在VBE自偏置电路的基础上，通过增加放大倍数的BJT二极管实现PTAT电流输出。这种电路结构可以提供稳定的正温度系数电流，适用于温度补偿应用。"
+    },
+    {
+      "id": "ca_3_5_3",
+      "label": "k因子倍增单调型自偏置结构",
+      "node_type": "circuit_application",
+      "summary": "k因子倍增单调型自偏置结构是一种通过MOS管尺寸比和电阻组合实现的自偏置电路。其特点是输出电流与电源电压无关，温度特性由电阻和MOS管尺寸比决定。",
+      "difficulty": 5,
+      "keywords": [
+        "k因子",
+        "单调型",
+        "自偏置"
+      ],
+      "formulas": [
+        "I_o = 2*(sqrt(N)-1)^2 / (N*k_3*R^2)",
+        "g_m = 2/R * (sqrt(N)-1)/sqrt(N)"
+      ],
+      "applications": [
+        "跨导控制",
+        "基准电流"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "k因子倍增单调型自偏置结构是一种通过MOS管尺寸比和电阻组合实现的自偏置电路。其特点是输出电流与电源电压无关，温度特性由电阻和MOS管尺寸比决定。"
+    },
+    {
+      "id": "ca_3_5_4",
+      "label": "CMOS单调型自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "CMOS单调型自偏置电路是一种全CMOS实现的自偏置电路，利用MOS管的线性电阻特性取代传统电阻。这种电路结构符合CMOS工艺发展方向，有利于控制温度系数和面积。",
+      "difficulty": 5,
+      "keywords": [
+        "CMOS",
+        "单调型",
+        "自偏置"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗电路",
+        "集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CMOS单调型自偏置电路是一种全CMOS实现的自偏置电路，利用MOS管的线性电阻特性取代传统电阻。这种电路结构符合CMOS工艺发展方向，有利于控制温度系数和面积。"
+    },
+    {
+      "id": "ca_3_5_5",
+      "label": "峰值型自偏置结构",
+      "node_type": "circuit_application",
+      "summary": "峰值型自偏置结构是一种通过非线性电流源和电阻组合实现的自偏置电路，其输出电流在输入电流变化过程中存在一个峰值。这种结构可以提供稳定的偏置电流，适用于高性能应用。",
+      "difficulty": 5,
+      "keywords": [
+        "峰值型",
+        "非线性",
+        "自偏置"
+      ],
+      "formulas": [
+        "I_o = 2*(sqrt(M)-1)^2 / (k_3*M*R^2)",
+        "g_m = k*Δ = sqrt(2*k*I) = 2*I/Δ"
+      ],
+      "applications": [
+        "高性能偏置",
+        "跨导控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "峰值型自偏置结构是一种通过非线性电流源和电阻组合实现的自偏置电路，其输出电流在输入电流变化过程中存在一个峰值。这种结构可以提供稳定的偏置电流，适用于高性能应用。"
+    },
+    {
+      "id": "ca_3_5_6",
+      "label": "三路互偏置电路",
+      "node_type": "circuit_application",
+      "summary": "三路互偏置电路是通过引入第三支路和负反馈控制，提高偏置电路的稳定性和精度的自偏置结构。这种电路结构可以显著降低电源电压对偏置电流的影响，并提高电流镜的匹配精度。",
+      "difficulty": 5,
+      "keywords": [
+        "三路互偏置",
+        "负反馈",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能偏置",
+        "宽摆幅电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三路互偏置电路是通过引入第三支路和负反馈控制，提高偏置电路的稳定性和精度的自偏置结构。这种电路结构可以显著降低电源电压对偏置电流的影响，并提高电流镜的匹配精度。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_5_1",
+      "target_id": "ct_3_5_1",
+      "relationship": "enables",
+      "description": "自偏置电路的基本原理使能了非线性电流镜的设计方法。",
+      "weight": 0.9,
+      "evidence": "自偏置电路通常由非线性电流源和线性电流源组合而成，以确保工作点的唯一性和稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_5_2",
+      "target_id": "ct_3_5_1",
+      "relationship": "supports",
+      "description": "非线性电流源的概念支撑了非线性电流镜的设计方法。",
+      "weight": 0.8,
+      "evidence": "非线性电流镜设计是通过在MOS管源极串联电阻或改变MOS管尺寸，使电流镜的输出电流与输入电流呈非线性关系。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_5_1",
+      "target_id": "ca_3_5_1",
+      "relationship": "implements",
+      "description": "非线性电流镜设计方法实现了二极管/VBE自偏置电路的具体应用。",
+      "weight": 0.8,
+      "evidence": "二极管/VBE自偏置电路是一种利用BJT二极管的非线性特性实现的自偏置电路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_5_2",
+      "target_id": "ca_3_5_4",
+      "relationship": "implements",
+      "description": "CMOS自偏置电路设计方法实现了CMOS单调型自偏置电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "CMOS单调型自偏置电路是一种全CMOS实现的自偏置电路，利用MOS管的线性电阻特性取代传统电阻。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_5_3",
+      "target_id": "ca_3_5_6",
+      "relationship": "implements",
+      "description": "多路自偏置结构设计方法实现了三路互偏置电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "三路互偏置电路是通过引入第三支路和负反馈控制，提高偏置电路的稳定性和精度的自偏置结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_5_3",
+      "target_id": "ca_3_5_2",
+      "relationship": "applies_to",
+      "description": "PTAT电流的概念应用于ΔVBE/PTAT偏置电路的设计。",
+      "weight": 0.8,
+      "evidence": "ΔVBE/PTAT偏置电路是在VBE自偏置电路的基础上，通过增加放大倍数的BJT二极管实现PTAT电流输出。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_3_5_1",
+      "target_id": "ca_3_5_2",
+      "relationship": "extends",
+      "description": "二极管/VBE自偏置电路扩展为ΔVBE/PTAT偏置电路。",
+      "weight": 0.7,
+      "evidence": "ΔVBE/PTAT偏置电路是在VBE自偏置电路的基础上，通过增加放大倍数的BJT二极管实现PTAT电流输出。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_3_5_3",
+      "target_id": "ca_3_5_5",
+      "relationship": "relates_to",
+      "description": "k因子倍增单调型自偏置结构与峰值型自偏置结构在静态结构和输出电流控制机制上相似。",
+      "weight": 0.7,
+      "evidence": "峰值型与单调型自偏置电路的静态结构和输出电流控制机制基本相同，R为支路电流定义电阻。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "3.5",
+  "title": "有源非线性自偏置电路",
+  "extraction_timestamp": "2025-07-08T16:35:42.907445"
+}

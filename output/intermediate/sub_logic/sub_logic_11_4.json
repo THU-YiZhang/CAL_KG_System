@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_4_1",
+      "label": "非本征噪声",
+      "node_type": "basic_concept",
+      "summary": "指由外部因素（如电源纹波）引起的噪声，在SoC系统中主要表现为数字电路高频开关元件状态切换产生的瞬态电流冲击导致的电源/地电位波动。相比本征噪声，在低电压设计中影响更显著。",
+      "difficulty": 2,
+      "keywords": [
+        "电源纹波",
+        "瞬态电流",
+        "电位波动"
+      ],
+      "formulas": [],
+      "applications": [
+        "SoC设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "本征噪声"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "指由外部因素（如电源纹波）引起的噪声，在SoC系统中主要表现为数字电路高频开关元件状态切换产生的瞬态电流冲击导致的电源/地电位波动。相比本征噪声，在低电压设计中影响更显著。"
+    },
+    {
+      "id": "bc_11_4_2",
+      "label": "PSRR",
+      "node_type": "basic_concept",
+      "summary": "电源抑制比(Power Supply Rejection Ratio)，定义为有效信号增益与电源噪声增益的比值（公式11-55），反映电路抑制电源噪声的能力。分为PSRR_Vcc和PSRR_Vss两种类型。",
+      "difficulty": 3,
+      "keywords": [
+        "电源抑制",
+        "噪声增益",
+        "信号增益"
+      ],
+      "formulas": [
+        "PSRR = 20log(Av/Ap)",
+        "PSR = 20log(1/Ap)"
+      ],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "小信号模型"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制比(Power Supply Rejection Ratio)，定义为有效信号增益与电源噪声增益的比值（公式11-55），反映电路抑制电源噪声的能力。分为PSRR_Vcc和PSRR_Vss两种类型。"
+    },
+    {
+      "id": "bc_11_4_3",
+      "label": "噪声传输函数",
+      "node_type": "basic_concept",
+      "summary": "描述电源噪声到输出的传递特性，包括直接传输路径和通过增益级的间接传输路径。其零极点分布与PSRR频率特性相关（公式11-62）。",
+      "difficulty": 3,
+      "keywords": [
+        "传递函数",
+        "零极点",
+        "频率响应"
+      ],
+      "formulas": [
+        "Ap = Vo/Vp",
+        "PSRR = Av/Ap"
+      ],
+      "applications": [
+        "稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "控制理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "描述电源噪声到输出的传递特性，包括直接传输路径和通过增益级的间接传输路径。其零极点分布与PSRR频率特性相关（公式11-62）。"
+    },
+    {
+      "id": "ct_11_4_1",
+      "label": "PSRR分析方法",
+      "node_type": "core_technology",
+      "summary": "基于小信号等效电路的分析方法：1)建立电源噪声传输等效电路 2)计算Ap和Av 3)根据定义求PSRR。可采用单级分解法简化多级系统分析（公式11-66）。",
+      "difficulty": 4,
+      "keywords": [
+        "等效电路",
+        "单级分解",
+        "阻抗比"
+      ],
+      "formulas": [
+        "1/PSRR = Ap2/(Av1Av2) + Ap1/Av1"
+      ],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于小信号等效电路的分析方法：1)建立电源噪声传输等效电路 2)计算Ap和Av 3)根据定义求PSRR。可采用单级分解法简化多级系统分析（公式11-66）。"
+    },
+    {
+      "id": "ct_11_4_2",
+      "label": "闭环噪声抑制",
+      "node_type": "core_technology",
+      "summary": "通过负反馈降低噪声输出：1)构建单位负反馈 2)测量Vo/Vp得到PSR 3)利用反馈系数调节抑制效果（公式11-58）。开环与闭环PSR特性存在显著差异。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "输出阻抗",
+        "带宽扩展"
+      ],
+      "formulas": [
+        "Vo = (Ap/(1+FAv))Vp + (Av/(1+FAv))Vin"
+      ],
+      "applications": [
+        "稳压电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过负反馈降低噪声输出：1)构建单位负反馈 2)测量Vo/Vp得到PSR 3)利用反馈系数调节抑制效果（公式11-58）。开环与闭环PSR特性存在显著差异。"
+    },
+    {
+      "id": "ct_11_4_3",
+      "label": "晶体管匹配技术",
+      "node_type": "core_technology",
+      "summary": "根据噪声类型选择驱动管类型：Vcc噪声驱动PMOS管时PSRR更优（1-Api系数），Vss噪声驱动NMOS管时PSRR更优（公式11-69）。",
+      "difficulty": 3,
+      "keywords": [
+        "PMOS/NMOS",
+        "噪声极性",
+        "增益匹配"
+      ],
+      "formulas": [
+        "1/PSRR = 1/Av1 - 1/PSRR1 + 1/(Av1PSRR2)"
+      ],
+      "applications": [
+        "差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根据噪声类型选择驱动管类型：Vcc噪声驱动PMOS管时PSRR更优（1-Api系数），Vss噪声驱动NMOS管时PSRR更优（公式11-69）。"
+    },
+    {
+      "id": "ca_11_4_1",
+      "label": "两级运放PSRR设计",
+      "node_type": "circuit_application",
+      "summary": "采用Miller补偿的两级结构（图11-28），通过分析输出支路阻抗比（ro,Vcc和ro,Vss）确定最大噪声传输Ap,max（公式11-61），需优化各级PSRRi对系统贡献。",
+      "difficulty": 5,
+      "keywords": [
+        "Miller补偿",
+        "输出级",
+        "阻抗匹配"
+      ],
+      "formulas": [
+        "Ap,Vcc,max = ro,Vss/(ro,Vcc+ro,Vss)"
+      ],
+      "applications": [
+        "ADC驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用Miller补偿的两级结构（图11-28），通过分析输出支路阻抗比（ro,Vcc和ro,Vss）确定最大噪声传输Ap,max（公式11-61），需优化各级PSRRi对系统贡献。"
+    },
+    {
+      "id": "ca_11_4_2",
+      "label": "NMOS OTA噪声抑制",
+      "node_type": "circuit_application",
+      "summary": "单级差分OTA（图11-29）采用简化交流模型：用ro1/ro2代替输入对管，尾电流源视为开路，通过耦合电容Cp3/Cp4分析高频噪声传输。",
+      "difficulty": 4,
+      "keywords": [
+        "差分对",
+        "电流镜",
+        "寄生电容"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单级差分OTA（图11-29）采用简化交流模型：用ro1/ro2代替输入对管，尾电流源视为开路，通过耦合电容Cp3/Cp4分析高频噪声传输。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_4_2",
+      "target_id": "ct_11_4_1",
+      "relationship": "enables",
+      "description": "PSRR定义提供了分析方法的理论基础",
+      "weight": 0.9,
+      "evidence": "公式11-55定义的PSRR是分析方法的核心计算目标",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_4_3",
+      "target_id": "ct_11_4_1",
+      "relationship": "supports",
+      "description": "噪声传输函数分析是PSRR计算的关键步骤",
+      "weight": 0.8,
+      "evidence": "公式11-62展示了Ap与PSRR的数学关系",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_11_4_1",
+      "target_id": "ca_11_4_1",
+      "relationship": "implements",
+      "description": "PSRR分析方法应用于两级运放设计",
+      "weight": 0.85,
+      "evidence": "公式11-66展示了两级系统的PSRR分解计算",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_4_3",
+      "target_id": "ca_11_4_1",
+      "relationship": "applies_to",
+      "description": "晶体管匹配技术优化两级运放PSRR",
+      "weight": 0.75,
+      "evidence": "公式11-69说明PMOS驱动对Vcc噪声的抑制优势",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_4_1",
+      "target_id": "bc_11_4_2",
+      "relationship": "relates_to",
+      "description": "非本征噪声概念与PSRR指标直接相关",
+      "weight": 0.7,
+      "evidence": "章节开篇说明电源噪声是主要非本征噪声",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_11_4_2",
+      "target_id": "ct_11_4_1",
+      "relationship": "complements",
+      "description": "闭环分析与开环分析形成完整PSRR评估体系",
+      "weight": 0.8,
+      "evidence": "公式11-58对比了闭环与开环噪声输出",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "11.4",
+  "title": "非本征噪声",
+  "extraction_timestamp": "2025-07-08T16:46:14.067203"
+}

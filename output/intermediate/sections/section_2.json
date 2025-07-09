@@ -1,0 +1,7 @@
+{
+  "section_num": "2",
+  "title": ")线性区",
+  "level": 1,
+  "content": "${V}_{\\mathrm{D}} > {V}_{\\mathrm{S}}$ 时, ${V}_{\\mathrm{D}} < {V}_{\\mathrm{P}}$ ,且 ${V}_{\\mathrm{{DS}}}$ 很小时, ${I}_{\\mathrm{{DS}}} = {I}_{\\mathrm{F}} - {I}_{\\mathrm{R}}$ 可模拟线性电流,在强反型下,有\n\n$$\n{I}_{\\mathrm{{DS}}} = {I}_{\\mathrm{F}} - {I}_{\\mathrm{R}} = {I}_{\\mathrm{S}}{\\left( \\frac{{V}_{\\mathrm{p}} - {V}_{\\mathrm{S}}}{2{V}_{\\mathrm{T}}}\\right) }^{2} - {I}_{\\mathrm{S}}{\\left( \\frac{{V}_{\\mathrm{p}} - {V}_{\\mathrm{D}}}{2{V}_{\\mathrm{T}}}\\right) }^{2}\n$$\n\n$$\n= {I}_{\\mathrm{S}}\\frac{2{V}_{\\mathrm{p}} - {V}_{\\mathrm{S}} - {V}_{\\mathrm{D}}}{2{V}_{\\mathrm{T}}}\\frac{{V}_{\\mathrm{{DS}}}}{2{V}_{\\mathrm{T}}} \\tag{2 - 55}\n$$\n\n代入 ${V}_{\\mathrm{S}} = {V}_{\\mathrm{{GND}}}$ ,在 ${V}_{\\mathrm{D}} = {V}_{\\mathrm{{DS}}}$ 的条件,可得\n\n$$\n{I}_{\\mathrm{{DS}}} = {2nk}{V}_{\\mathrm{T}}^{2}\\left( {\\frac{{V}_{\\mathrm{p}}}{{V}_{\\mathrm{T}}} - \\frac{{V}_{\\mathrm{D}}}{2{V}_{\\mathrm{T}}}}\\right) \\frac{{V}_{\\mathrm{{DS}}}}{2{V}_{\\mathrm{T}}} = {nk}\\left( {{V}_{\\mathrm{p}} - \\frac{1}{2}{V}_{\\mathrm{{DS}}}}\\right) {V}_{\\mathrm{{DS}}} \\tag{2 - 56}\n$$\n\n进而,代入 $n{V}_{\\mathrm{p}} = {V}_{\\mathrm{{GS}}} - {V}_{\\mathrm{{TH}}}$ 的条件,最终得到与物理模型完全相同的线性电流关系\n\n$$\n{I}_{\\mathrm{{DS}}} = k\\left\\lbrack  {\\left( {{V}_{\\mathrm{{GS}}} - {V}_{\\mathrm{{TH}}}}\\right) {V}_{\\mathrm{{DS}}} - \\frac{n}{2}{V}_{\\mathrm{{DS}}}^{2}}\\right\\rbrack   \\tag{2 - 57}\n$$\n\n显然,以上统一模型对 MOS 管强反型和弱反型的饱和及线性输出电流均普遍适用,实现了对 MOS 管输出电流的统一模型模拟。",
+  "subsections": []
+}

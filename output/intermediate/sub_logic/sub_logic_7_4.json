@@ -1,0 +1,291 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_4_1",
+      "label": "根轨迹",
+      "node_type": "basic_concept",
+      "summary": "根轨迹是指在复平面上，闭环系统极点随开环增益变化而移动的轨迹。根轨迹的绘制基于开环传递函数的零极点分布，通过相位和幅值条件确定闭环极点的可能位置。根轨迹法是一种图解分析方法，适用于高阶系统的稳定性和瞬态响应特性分析。",
+      "difficulty": 2,
+      "keywords": [
+        "根轨迹",
+        "闭环极点",
+        "开环增益"
+      ],
+      "formulas": [
+        "T(s) = A(s)F(s) = -1 + 0j"
+      ],
+      "applications": [
+        "系统稳定性分析",
+        "瞬态响应优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "控制理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根轨迹是指在复平面上，闭环系统极点随开环增益变化而移动的轨迹。根轨迹的绘制基于开环传递函数的零极点分布，通过相位和幅值条件确定闭环极点的可能位置。根轨迹法是一种图解分析方法，适用于高阶系统的稳定性和瞬态响应特性分析。"
+    },
+    {
+      "id": "bc_7_4_2",
+      "label": "相位条件和幅值条件",
+      "node_type": "basic_concept",
+      "summary": "根轨迹的相位条件要求闭环极点的相位为π的奇数倍，即∠T(s) = (2k-1)π；幅值条件要求|T(s)| = 1。这两个条件是判断根轨迹范围的关键依据。",
+      "difficulty": 2,
+      "keywords": [
+        "相位条件",
+        "幅值条件",
+        "根轨迹范围"
+      ],
+      "formulas": [
+        "∠T(s) = (2k-1)π",
+        "|T(s)| = 1"
+      ],
+      "applications": [
+        "根轨迹绘制",
+        "稳定性判定"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复数运算",
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根轨迹的相位条件要求闭环极点的相位为π的奇数倍，即∠T(s) = (2k-1)π；幅值条件要求|T(s)| = 1。这两个条件是判断根轨迹范围的关键依据。"
+    },
+    {
+      "id": "bc_7_4_3",
+      "label": "Butterworth响应",
+      "node_type": "basic_concept",
+      "summary": "Butterworth响应是一种最大平坦度响应，其幅度随频率的变化具有平坦的通带和陡峭的过渡带。Butterworth传递函数的极点均匀分布在复平面的单位圆上，且全部位于左半平面，保证了系统的稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "Butterworth响应",
+        "最大平坦度",
+        "极点分布"
+      ],
+      "formulas": [
+        "M²(ω) = 1 / (1 + (ω/ω₀)^(2n))"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "系统带宽优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "极点配置"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Butterworth响应是一种最大平坦度响应，其幅度随频率的变化具有平坦的通带和陡峭的过渡带。Butterworth传递函数的极点均匀分布在复平面的单位圆上，且全部位于左半平面，保证了系统的稳定性。"
+    },
+    {
+      "id": "ct_7_4_1",
+      "label": "根轨迹绘制方法",
+      "node_type": "core_technology",
+      "summary": "根轨迹的绘制方法包括：1) 确定实轴上的根轨迹范围，基于相位条件判断；2) 计算分离点和汇合点，通过求解N'(s)D(s) - N(s)D'(s) = 0；3) 确定根轨迹的渐进线夹角和交点；4) 计算根轨迹的出射角和入射角；5) 利用劳斯判据求根轨迹与虚轴的交点。",
+      "difficulty": 3,
+      "keywords": [
+        "根轨迹绘制",
+        "分离点",
+        "渐进线"
+      ],
+      "formulas": [
+        "N'(s)D(s) - N(s)D'(s) = 0",
+        "σₐ = (∑pᵢ - ∑zᵢ) / (N - m)"
+      ],
+      "applications": [
+        "高阶系统分析",
+        "稳定性判定"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根轨迹的绘制方法包括：1) 确定实轴上的根轨迹范围，基于相位条件判断；2) 计算分离点和汇合点，通过求解N'(s)D(s) - N(s)D'(s) = 0；3) 确定根轨迹的渐进线夹角和交点；4) 计算根轨迹的出射角和入射角；5) 利用劳斯判据求根轨迹与虚轴的交点。"
+    },
+    {
+      "id": "ct_7_4_2",
+      "label": "根轨迹设计",
+      "node_type": "core_technology",
+      "summary": "根轨迹设计是通过调节开环零极点的数量和位置，改变闭环根轨迹的分布，以实现系统的稳定性和瞬态响应优化。具体步骤包括：1) 判定系统稳定性；2) 调节开环零极点；3) 计算阻尼因子和相位裕度；4) 优化根轨迹分布。",
+      "difficulty": 3,
+      "keywords": [
+        "根轨迹设计",
+        "稳定性优化",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "ζ = cosβ",
+        "Mₚ = exp(-πζ / √(1-ζ²))"
+      ],
+      "applications": [
+        "反馈系统设计",
+        "瞬态响应优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根轨迹设计是通过调节开环零极点的数量和位置，改变闭环根轨迹的分布，以实现系统的稳定性和瞬态响应优化。具体步骤包括：1) 判定系统稳定性；2) 调节开环零极点；3) 计算阻尼因子和相位裕度；4) 优化根轨迹分布。"
+    },
+    {
+      "id": "ct_7_4_3",
+      "label": "Butterworth极点配置",
+      "node_type": "core_technology",
+      "summary": "Butterworth极点配置是通过将闭环极点均匀分布在复平面的单位圆上，且全部位于左半平面，以实现最大平坦度响应。具体步骤包括：1) 确定系统阶数n；2) 计算极点位置sₖ = ω₀[-sin((2k-1)π/2n) + jcos((2k-1)π/2n)]；3) 构造特征多项式D(s)。",
+      "difficulty": 3,
+      "keywords": [
+        "Butterworth极点",
+        "最大平坦度",
+        "极点配置"
+      ],
+      "formulas": [
+        "sₖ = ω₀[-sin((2k-1)π/2n) + jcos((2k-1)π/2n)]"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "系统带宽优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Butterworth极点配置是通过将闭环极点均匀分布在复平面的单位圆上，且全部位于左半平面，以实现最大平坦度响应。具体步骤包括：1) 确定系统阶数n；2) 计算极点位置sₖ = ω₀[-sin((2k-1)π/2n) + jcos((2k-1)π/2n)]；3) 构造特征多项式D(s)。"
+    },
+    {
+      "id": "ca_7_4_1",
+      "label": "两极点系统",
+      "node_type": "circuit_application",
+      "summary": "两极点系统是一种简单的闭环反馈系统，其根轨迹分析相对简单。实轴上的根轨迹为两开环极点之间的区域，随着开环增益的增加，闭环极点由开环极点趋向开环零点或无穷远零点。两极点系统的根轨迹全部位于左半平面，保证了系统的稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "两极点系统",
+        "根轨迹",
+        "稳定性"
+      ],
+      "formulas": [
+        "T(s) = T₀N(s)/D(s)"
+      ],
+      "applications": [
+        "反馈放大器设计",
+        "稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两极点系统是一种简单的闭环反馈系统，其根轨迹分析相对简单。实轴上的根轨迹为两开环极点之间的区域，随着开环增益的增加，闭环极点由开环极点趋向开环零点或无穷远零点。两极点系统的根轨迹全部位于左半平面，保证了系统的稳定性。"
+    },
+    {
+      "id": "ca_7_4_2",
+      "label": "三极点一零点系统",
+      "node_type": "circuit_application",
+      "summary": "三极点一零点系统通过在开环系统中增加一个LHP零点，改变闭环根轨迹的分布，提高系统的稳定性。零点的位置影响根轨迹的渐进线夹角和交点，当零点接近高频极点时，可以有效抑制根轨迹进入右半平面。",
+      "difficulty": 4,
+      "keywords": [
+        "三极点一零点",
+        "根轨迹",
+        "稳定性补偿"
+      ],
+      "formulas": [
+        "σ = -z ± √(z² + p₁p₂ - z(p₁ + p₂))"
+      ],
+      "applications": [
+        "多极点系统设计",
+        "稳定性补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三极点一零点系统通过在开环系统中增加一个LHP零点，改变闭环根轨迹的分布，提高系统的稳定性。零点的位置影响根轨迹的渐进线夹角和交点，当零点接近高频极点时，可以有效抑制根轨迹进入右半平面。"
+    },
+    {
+      "id": "ca_7_4_3",
+      "label": "Butterworth低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Butterworth低通滤波器是一种基于Butterworth响应特性的电路，其传递函数的极点均匀分布在复平面的单位圆上，且全部位于左半平面，实现了最大平坦度的通带和陡峭的过渡带。Butterworth滤波器的设计包括极点配置和特征多项式构造。",
+      "difficulty": 4,
+      "keywords": [
+        "Butterworth滤波器",
+        "低通",
+        "极点配置"
+      ],
+      "formulas": [
+        "D(s) = s² + √2ω₀s + ω₀²"
+      ],
+      "applications": [
+        "信号处理",
+        "带宽优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Butterworth低通滤波器是一种基于Butterworth响应特性的电路，其传递函数的极点均匀分布在复平面的单位圆上，且全部位于左半平面，实现了最大平坦度的通带和陡峭的过渡带。Butterworth滤波器的设计包括极点配置和特征多项式构造。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_4_1",
+      "target_id": "ct_7_4_1",
+      "relationship": "enables",
+      "description": "根轨迹的定义和原理使能了根轨迹的绘制方法，通过相位和幅值条件可以确定根轨迹的范围和形状。",
+      "weight": 0.9,
+      "evidence": "根轨迹的绘制方法基于相位和幅值条件，这些条件是根轨迹定义的核心内容。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_4_2",
+      "target_id": "ct_7_4_1",
+      "relationship": "supports",
+      "description": "相位条件和幅值条件是根轨迹绘制的基础，支撑了根轨迹绘制方法的实现。",
+      "weight": 0.8,
+      "evidence": "根轨迹的绘制方法依赖于相位和幅值条件的判断。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_4_1",
+      "target_id": "ca_7_4_1",
+      "relationship": "implements",
+      "description": "根轨迹绘制方法实现了两极点系统的根轨迹分析，为系统稳定性判定提供了工具。",
+      "weight": 0.7,
+      "evidence": "两极点系统的根轨迹分析依赖于根轨迹绘制方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_4_2",
+      "target_id": "ca_7_4_2",
+      "relationship": "applies_to",
+      "description": "根轨迹设计方法应用于三极点一零点系统，通过调节零点位置优化系统稳定性。",
+      "weight": 0.8,
+      "evidence": "三极点一零点系统的稳定性补偿依赖于根轨迹设计方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_4_3",
+      "target_id": "ct_7_4_3",
+      "relationship": "enables",
+      "description": "Butterworth响应的定义和特性使能了Butterworth极点配置方法的实现。",
+      "weight": 0.9,
+      "evidence": "Butterworth极点配置方法基于Butterworth响应的极点分布特性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_4_3",
+      "target_id": "ca_7_4_3",
+      "relationship": "implements",
+      "description": "Butterworth极点配置方法实现了Butterworth低通滤波器的设计，通过极点配置实现最大平坦度响应。",
+      "weight": 0.8,
+      "evidence": "Butterworth低通滤波器的设计依赖于Butterworth极点配置方法。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "7.4",
+  "title": "根轨迹分析法",
+  "extraction_timestamp": "2025-07-08T16:42:15.189193"
+}

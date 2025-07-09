@@ -1,0 +1,37 @@
+2025-07-08 15:28:32,967 - CAL_KG - INFO - 文档分割器初始化完成 (并发数: 8)
+2025-07-08 15:28:33,839 - CAL_KG - INFO - 主逻辑图谱生成器初始化完成 (并发数: 8)
+2025-07-08 15:28:34,545 - CAL_KG - INFO - 子逻辑图谱生成器初始化完成 (并发数: 8)
+2025-07-08 15:28:35,279 - CAL_KG - INFO - 连接分析器初始化完成 (并发数: 8)
+2025-07-08 15:28:35,280 - CAL_KG - INFO - 可视化器初始化完成
+2025-07-08 15:28:35,280 - CAL_KG - INFO - CAL-KG系统初始化完成 (并发数: 8)
+2025-07-08 15:29:19,831 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:27,885 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:33,662 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:45,192 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:46,313 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:53,916 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:29:55,364 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:10,358 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:22,311 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:32,344 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:39,558 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:40,971 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:42,253 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:30:51,741 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:15,865 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:22,541 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:26,627 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:27,079 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:29,813 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:33,031 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:31:35,775 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:11,477 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:11,760 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:14,943 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:18,195 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:28,275 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:46,996 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:50,525 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:52,818 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:54,286 - httpx - INFO - HTTP Request: POST https://www.dmxapi.cn/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-08 15:32:54,366 - CAL_KG - INFO - 步骤 sub_logic 成功完成

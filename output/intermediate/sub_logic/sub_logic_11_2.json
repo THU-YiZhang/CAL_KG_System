@@ -1,0 +1,269 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_2_1",
+      "label": "噪声电压",
+      "node_type": "basic_concept",
+      "summary": "噪声电压是一种随机变量，无法预期其特定时刻的值，只能通过统计值进行定量描述。噪声电压的平均值为零，通常通过噪声功率的平均值进行描述。噪声电压的均方根值（V_RMS）是噪声电压平方值的开方。",
+      "difficulty": 2,
+      "keywords": [
+        "噪声电压",
+        "均方根值",
+        "统计值"
+      ],
+      "formulas": [
+        "V_RMS = (V_N^2)^(1/2)"
+      ],
+      "applications": [
+        "运放电路噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "概率统计"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声电压是一种随机变量，无法预期其特定时刻的值，只能通过统计值进行定量描述。噪声电压的平均值为零，通常通过噪声功率的平均值进行描述。噪声电压的均方根值（V_RMS）是噪声电压平方值的开方。"
+    },
+    {
+      "id": "bc_11_2_2",
+      "label": "噪声功率谱密度",
+      "node_type": "basic_concept",
+      "summary": "噪声功率谱密度（PSD）是频域中单位带宽内的噪声功率。对于白噪声，PSD为常数；对于1/f噪声，PSD反比于频率。噪声功率谱密度可以通过积分计算得到总的噪声功率。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声功率谱密度",
+        "PSD",
+        "频域"
+      ],
+      "formulas": [
+        "PSD(f) = lim(Δf→0) (V_N^2(f)/Δf)"
+      ],
+      "applications": [
+        "噪声频谱分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声功率谱密度（PSD）是频域中单位带宽内的噪声功率。对于白噪声，PSD为常数；对于1/f噪声，PSD反比于频率。噪声功率谱密度可以通过积分计算得到总的噪声功率。"
+    },
+    {
+      "id": "bc_11_2_3",
+      "label": "高斯分布",
+      "node_type": "basic_concept",
+      "summary": "随机噪声电压的概率密度函数（PDF）通常满足高斯分布，即正态分布。高斯分布由平均值和标准偏差（均方根值）描述，其PDF函数为P(V_N) = (1/(√(2π)σ)) * exp[-(V_N - V_m)^2/(2σ^2)]。",
+      "difficulty": 2,
+      "keywords": [
+        "高斯分布",
+        "PDF",
+        "正态分布"
+      ],
+      "formulas": [
+        "P(V_N) = (1/(√(2π)σ)) * exp[-(V_N - V_m)^2/(2σ^2)]"
+      ],
+      "applications": [
+        "噪声统计描述"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "概率论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "随机噪声电压的概率密度函数（PDF）通常满足高斯分布，即正态分布。高斯分布由平均值和标准偏差（均方根值）描述，其PDF函数为P(V_N) = (1/(√(2π)σ)) * exp[-(V_N - V_m)^2/(2σ^2)]。"
+    },
+    {
+      "id": "ct_11_2_1",
+      "label": "噪声功率计算",
+      "node_type": "core_technology",
+      "summary": "噪声功率可以通过时域或频域方法计算。在时域中，噪声功率是噪声电压平方的平均值；在频域中，噪声功率是噪声功率谱密度的积分。对于白噪声，噪声功率等于PSD乘以噪声带宽。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声功率",
+        "时域",
+        "频域"
+      ],
+      "formulas": [
+        "V_N0^2 = ∫_0^∞ PSD_Ni(f) |H(j2πf)|^2 df = V_N * B_N"
+      ],
+      "applications": [
+        "运放电路噪声分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声功率可以通过时域或频域方法计算。在时域中，噪声功率是噪声电压平方的平均值；在频域中，噪声功率是噪声功率谱密度的积分。对于白噪声，噪声功率等于PSD乘以噪声带宽。"
+    },
+    {
+      "id": "ct_11_2_2",
+      "label": "噪声带宽计算",
+      "node_type": "core_technology",
+      "summary": "噪声带宽是噪声功率谱密度积分后的等效带宽。对于单极点低通滤波器，噪声带宽为π/2倍的-3dB带宽。噪声带宽的计算可以通过传递函数的平方积分得到。",
+      "difficulty": 3,
+      "keywords": [
+        "噪声带宽",
+        "低通滤波器",
+        "积分"
+      ],
+      "formulas": [
+        "B_N = ∫_0^∞ |H(j2πf)|^2 df = (π/2) f_0"
+      ],
+      "applications": [
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声带宽是噪声功率谱密度积分后的等效带宽。对于单极点低通滤波器，噪声带宽为π/2倍的-3dB带宽。噪声带宽的计算可以通过传递函数的平方积分得到。"
+    },
+    {
+      "id": "ct_11_2_3",
+      "label": "噪声叠加原理",
+      "node_type": "core_technology",
+      "summary": "当电路中存在多个噪声源时，各噪声源的叠加取决于其相关性。对于线性无关的噪声源，输出噪声功率为各噪声源功率之和。噪声叠加可以通过噪声功率谱密度的加权和计算。",
+      "difficulty": 4,
+      "keywords": [
+        "噪声叠加",
+        "相关性",
+        "功率谱密度"
+      ],
+      "formulas": [
+        "PSD_No2(f) = |H1(j2πf)|^2 PSD_Ni1 + |H2(j2πf)|^2 PSD_Ni2 + |H3(j2πf)|^2 PSD_Ni3"
+      ],
+      "applications": [
+        "多噪声源电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "当电路中存在多个噪声源时，各噪声源的叠加取决于其相关性。对于线性无关的噪声源，输出噪声功率为各噪声源功率之和。噪声叠加可以通过噪声功率谱密度的加权和计算。"
+    },
+    {
+      "id": "ca_11_2_1",
+      "label": "电阻噪声模型",
+      "node_type": "circuit_application",
+      "summary": "电阻噪声主要由热噪声和1/f噪声组成。热噪声的功率谱密度为4kTR，是白噪声；1/f噪声的功率谱密度反比于频率。电阻噪声可以通过低通滤波器进行滤波，总噪声功率与滤波电容成反比。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻噪声",
+        "热噪声",
+        "1/f噪声"
+      ],
+      "formulas": [
+        "dV_R^2 = 4kTR",
+        "dV_Rf^2 = V_R^2 (k_fR R / A_R) (1/f)"
+      ],
+      "applications": [
+        "低噪声电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻噪声主要由热噪声和1/f噪声组成。热噪声的功率谱密度为4kTR，是白噪声；1/f噪声的功率谱密度反比于频率。电阻噪声可以通过低通滤波器进行滤波，总噪声功率与滤波电容成反比。"
+    },
+    {
+      "id": "ca_11_2_2",
+      "label": "二极管噪声模型",
+      "node_type": "circuit_application",
+      "summary": "二极管噪声主要由热噪声和1/f噪声组成。热噪声的功率谱密度为2qI_D，是白噪声；1/f噪声的功率谱密度反比于频率。二极管的1/f噪声系数与材料和面积有关。",
+      "difficulty": 4,
+      "keywords": [
+        "二极管噪声",
+        "热噪声",
+        "1/f噪声"
+      ],
+      "formulas": [
+        "dI_D^2 = 2qI_D",
+        "dI_Df^2 = I_D (k_fD / A_D) (1/f)"
+      ],
+      "applications": [
+        "低噪声二极管电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二极管噪声主要由热噪声和1/f噪声组成。热噪声的功率谱密度为2qI_D，是白噪声；1/f噪声的功率谱密度反比于频率。二极管的1/f噪声系数与材料和面积有关。"
+    },
+    {
+      "id": "ca_11_2_3",
+      "label": "MOS管噪声模型",
+      "node_type": "circuit_application",
+      "summary": "MOS管噪声主要由栅电阻噪声、沟道电阻噪声和1/f噪声组成。沟道电阻噪声的功率谱密度为4kTγg_m，1/f噪声的功率谱密度反比于频率。MOS管的噪声可以通过等效输入噪声电阻描述。",
+      "difficulty": 5,
+      "keywords": [
+        "MOS管噪声",
+        "沟道电阻",
+        "1/f噪声"
+      ],
+      "formulas": [
+        "dV_ieq^2 = 4kT(R_G + γ/g_m + R_S + (n-1)^2 R_B) + (k_IF / (WL C_ox)) (1/f)"
+      ],
+      "applications": [
+        "低噪声MOS电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管噪声主要由栅电阻噪声、沟道电阻噪声和1/f噪声组成。沟道电阻噪声的功率谱密度为4kTγg_m，1/f噪声的功率谱密度反比于频率。MOS管的噪声可以通过等效输入噪声电阻描述。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_2_1",
+      "target_id": "ct_11_2_1",
+      "relationship": "enables",
+      "description": "噪声电压的定义和统计描述为噪声功率的计算提供了理论基础。",
+      "weight": 0.9,
+      "evidence": "噪声电压的平均值为零，只能通过噪声功率的平均值进行描述。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_2_2",
+      "target_id": "ct_11_2_1",
+      "relationship": "supports",
+      "description": "噪声功率谱密度的定义为频域噪声功率计算提供了方法。",
+      "weight": 0.8,
+      "evidence": "噪声功率可以通过噪声功率谱密度的积分计算得到。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_2_1",
+      "target_id": "ca_11_2_1",
+      "relationship": "applies_to",
+      "description": "噪声功率计算方法应用于电阻噪声模型的分析。",
+      "weight": 0.7,
+      "evidence": "电阻噪声功率可以通过热噪声和1/f噪声的功率谱密度计算。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_2_2",
+      "target_id": "ca_11_2_1",
+      "relationship": "applies_to",
+      "description": "噪声带宽计算方法应用于电阻噪声滤波设计。",
+      "weight": 0.7,
+      "evidence": "电阻噪声可以通过低通滤波器进行滤波，噪声带宽影响总噪声功率。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_2_3",
+      "target_id": "ca_11_2_3",
+      "relationship": "applies_to",
+      "description": "噪声叠加原理应用于MOS管多噪声源的分析。",
+      "weight": 0.8,
+      "evidence": "MOS管噪声由多个噪声源组成，其总噪声功率可以通过叠加原理计算。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "11.2",
+  "title": "本征噪声模型",
+  "extraction_timestamp": "2025-07-08T16:46:16.103867"
+}

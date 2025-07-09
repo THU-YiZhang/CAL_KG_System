@@ -1,0 +1,205 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_3_1_1",
+      "label": "有源滤波器",
+      "node_type": "basic_concept",
+      "summary": "有源滤波器是使用有源元件（如运算放大器）和无源元件（如电阻、电容）构成的滤波器，能够提供增益并改善频率响应特性。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "频率响应",
+        "增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "音频处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器原理",
+        "滤波器基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源滤波器是使用有源元件（如运算放大器）和无源元件（如电阻、电容）构成的滤波器，能够提供增益并改善频率响应特性。"
+    },
+    {
+      "id": "bc_3_3_1_2",
+      "label": "二阶滤波器",
+      "node_type": "basic_concept",
+      "summary": "二阶滤波器是指传递函数中最高阶数为2的滤波器，能够提供更陡峭的滚降特性，适用于需要更高选择性的应用。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "滚降特性",
+        "选择性"
+      ],
+      "formulas": [
+        "H(s) = 1 / (s^2 + (ω0/Q)s + ω0^2)"
+      ],
+      "applications": [
+        "低通滤波",
+        "高通滤波",
+        "带通滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "传递函数",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二阶滤波器是指传递函数中最高阶数为2的滤波器，能够提供更陡峭的滚降特性，适用于需要更高选择性的应用。"
+    },
+    {
+      "id": "ct_3_3_1_1",
+      "label": "Sallen-Key拓扑",
+      "node_type": "core_technology",
+      "summary": "Sallen-Key拓扑是一种常用的二阶有源滤波器实现方法，通过使用运算放大器、电阻和电容构成反馈网络，能够实现低通、高通和带通滤波器。其特点是结构简单、易于调整，且运算放大器工作在电压跟随器模式下，增益稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "反馈网络",
+        "电压跟随器",
+        "增益稳定"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "高通滤波器设计",
+        "带通滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key拓扑是一种常用的二阶有源滤波器实现方法，通过使用运算放大器、电阻和电容构成反馈网络，能够实现低通、高通和带通滤波器。其特点是结构简单、易于调整，且运算放大器工作在电压跟随器模式下，增益稳定。"
+    },
+    {
+      "id": "ca_3_3_1_1",
+      "label": "Sallen-Key低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key低通滤波器是一种基于Sallen-Key拓扑的二阶低通滤波器，通过合理选择电阻和电容值，可以实现所需的截止频率和Q值。其电路结构包括两个电阻、两个电容和一个运算放大器，运算放大器作为电压跟随器提供单位增益。",
+      "difficulty": 4,
+      "keywords": [
+        "截止频率",
+        "Q值",
+        "单位增益"
+      ],
+      "formulas": [
+        "Q = √(R1R2C1C2) / (R1C1 + R2C1)"
+      ],
+      "applications": [
+        "音频信号处理",
+        "抗混叠滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key低通滤波器是一种基于Sallen-Key拓扑的二阶低通滤波器，通过合理选择电阻和电容值，可以实现所需的截止频率和Q值。其电路结构包括两个电阻、两个电容和一个运算放大器，运算放大器作为电压跟随器提供单位增益。"
+    },
+    {
+      "id": "ca_3_3_1_2",
+      "label": "Sallen-Key高通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key高通滤波器是一种基于Sallen-Key拓扑的二阶高通滤波器，通过交换低通滤波器中的电阻和电容位置实现。其电路结构包括两个电阻、两个电容和一个运算放大器，能够有效滤除低频信号。",
+      "difficulty": 4,
+      "keywords": [
+        "高频通过",
+        "低频滤除",
+        "单位增益"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "高频信号提取",
+        "噪声滤除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key高通滤波器是一种基于Sallen-Key拓扑的二阶高通滤波器，通过交换低通滤波器中的电阻和电容位置实现。其电路结构包括两个电阻、两个电容和一个运算放大器，能够有效滤除低频信号。"
+    },
+    {
+      "id": "ca_3_3_1_3",
+      "label": "Sallen-Key带通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key带通滤波器是一种基于Sallen-Key拓扑的二阶带通滤波器，通过组合低通和高通滤波器的特性，能够选择性地通过某一频段的信号。其电路结构较为复杂，通常需要多个运算放大器和无源元件。",
+      "difficulty": 4,
+      "keywords": [
+        "频段选择",
+        "选择性",
+        "多级滤波"
+      ],
+      "formulas": [
+        "中心频率公式: f_0 = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "通信系统",
+        "频谱分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key带通滤波器是一种基于Sallen-Key拓扑的二阶带通滤波器，通过组合低通和高通滤波器的特性，能够选择性地通过某一频段的信号。其电路结构较为复杂，通常需要多个运算放大器和无源元件。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_3_1_1",
+      "target_id": "ct_3_3_1_1",
+      "relationship": "enables",
+      "description": "有源滤波器的概念使能了Sallen-Key拓扑的设计，因为有源滤波器需要使用运算放大器等有源元件。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key是一种常用的有源滤波器拓扑",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_3_1_2",
+      "target_id": "ct_3_3_1_1",
+      "relationship": "supports",
+      "description": "二阶滤波器的理论支撑了Sallen-Key拓扑的实现，因为Sallen-Key拓扑用于设计二阶滤波器。",
+      "weight": 0.8,
+      "evidence": "可以实现二阶低通、高通和带通滤波器",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_1",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key低通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶低通滤波器",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_2",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key高通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶高通滤波器",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_3",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key带通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶带通滤波器",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.3.1",
+  "title": "Sallen-Key拓扑",
+  "extraction_timestamp": "2025-07-08T15:31:22.543362",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

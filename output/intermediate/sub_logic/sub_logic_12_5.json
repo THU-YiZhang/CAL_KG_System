@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_5_1",
+      "label": "MOS管开启电压(V_TH)",
+      "node_type": "basic_concept",
+      "summary": "MOS管的开启电压是使MOS管导通所需的最小栅源电压。在低压CMOS电路中，V_TH限制了电路的最低工作电压，且难以随电源电压V_CC按比例降低。",
+      "difficulty": 2,
+      "keywords": [
+        "开启电压",
+        "阈值电压",
+        "MOS管"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压CMOS电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管的开启电压是使MOS管导通所需的最小栅源电压。在低压CMOS电路中，V_TH限制了电路的最低工作电压，且难以随电源电压V_CC按比例降低。"
+    },
+    {
+      "id": "bc_12_5_2",
+      "label": "亚阈工作区",
+      "node_type": "basic_concept",
+      "summary": "亚阈工作区是指MOS管在栅源电压低于开启电压时的工作状态。在此区域，MOS管仍能产生微弱的电流，适用于低压电路设计。",
+      "difficulty": 2,
+      "keywords": [
+        "亚阈区",
+        "弱反型区",
+        "低压工作"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压CMOS电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "亚阈工作区是指MOS管在栅源电压低于开启电压时的工作状态。在此区域，MOS管仍能产生微弱的电流，适用于低压电路设计。"
+    },
+    {
+      "id": "bc_12_5_3",
+      "label": "Class AB静态工作点",
+      "node_type": "basic_concept",
+      "summary": "Class AB静态工作点是输出级偏置在介于Class A和Class B之间的工作状态，既能提高电流驱动能力，又能降低静态非线性失真。",
+      "difficulty": 2,
+      "keywords": [
+        "Class AB",
+        "静态工作点",
+        "输出级"
+      ],
+      "formulas": [],
+      "applications": [
+        "轨到轨运放输出级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器分类"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB静态工作点是输出级偏置在介于Class A和Class B之间的工作状态，既能提高电流驱动能力，又能降低静态非线性失真。"
+    },
+    {
+      "id": "ct_12_5_1",
+      "label": "轨到轨差分运放设计",
+      "node_type": "core_technology",
+      "summary": "轨到轨差分运放通过复杂的电路结构和控制方法实现宽输入及输出摆幅。输入轨到轨特性依靠N型和P型互补并联的差分对实现，输出轨到轨特性依靠共源CS结构的宽摆幅实现。",
+      "difficulty": 3,
+      "keywords": [
+        "轨到轨",
+        "差分运放",
+        "宽摆幅"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨到轨差分运放通过复杂的电路结构和控制方法实现宽输入及输出摆幅。输入轨到轨特性依靠N型和P型互补并联的差分对实现，输出轨到轨特性依靠共源CS结构的宽摆幅实现。"
+    },
+    {
+      "id": "ct_12_5_2",
+      "label": "TL线性环路结构",
+      "node_type": "core_technology",
+      "summary": "TL线性环路结构用于实现差分输入恒定跨导以及近似恒定增益的控制，保证系统稳定性。这是实现轨到轨输入特性的关键技术。",
+      "difficulty": 3,
+      "keywords": [
+        "TL结构",
+        "恒定跨导",
+        "系统稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "轨到轨运放输入级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "TL线性环路结构用于实现差分输入恒定跨导以及近似恒定增益的控制，保证系统稳定性。这是实现轨到轨输入特性的关键技术。"
+    },
+    {
+      "id": "ct_12_5_3",
+      "label": "前馈及反馈控制",
+      "node_type": "core_technology",
+      "summary": "不同的前馈及反馈控制方式对低压电路的输出驱动和响应速度等性能产生不同影响。需要根据具体应用选择适当的控制结构。",
+      "difficulty": 3,
+      "keywords": [
+        "前馈",
+        "反馈",
+        "控制方式"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压电路性能优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "不同的前馈及反馈控制方式对低压电路的输出驱动和响应速度等性能产生不同影响。需要根据具体应用选择适当的控制结构。"
+    },
+    {
+      "id": "ca_12_5_1",
+      "label": "轨到轨差分运放",
+      "node_type": "circuit_application",
+      "summary": "具有输入和输出轨到轨特性的差分运放，采用N型和P型互补并联的差分对实现输入轨到轨，共源CS结构实现输出轨到轨，输出级偏置在Class AB静态工作点。适用于低压和宽摆幅驱动的应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "轨到轨运放",
+        "差分对",
+        "CS结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压模拟电路",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "具有输入和输出轨到轨特性的差分运放，采用N型和P型互补并联的差分对实现输入轨到轨，共源CS结构实现输出轨到轨，输出级偏置在Class AB静态工作点。适用于低压和宽摆幅驱动的应用场景。"
+    },
+    {
+      "id": "ca_12_5_2",
+      "label": "新型低压电路结构",
+      "node_type": "circuit_application",
+      "summary": "包括亚阈工作区、衬底微弱正偏、背栅驱动和浮栅结构等新型电路结构，这些结构正逐渐成为低压电路设计的有效选择。",
+      "difficulty": 4,
+      "keywords": [
+        "亚阈工作",
+        "背栅驱动",
+        "浮栅结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "超低压CMOS电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "包括亚阈工作区、衬底微弱正偏、背栅驱动和浮栅结构等新型电路结构，这些结构正逐渐成为低压电路设计的有效选择。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_5_1",
+      "target_id": "ct_12_5_1",
+      "relationship": "enables",
+      "description": "MOS管开启电压V_TH的限制促使了轨到轨差分运放设计技术的发展",
+      "weight": 0.9,
+      "evidence": "由于V_TH电压难以跟随电源电压V_CC按比例降低，使得低压电路通常需要采用新的工艺和电路结构",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_5_2",
+      "target_id": "ca_12_5_2",
+      "relationship": "supports",
+      "description": "亚阈工作区概念支持新型低压电路结构的设计",
+      "weight": 0.8,
+      "evidence": "亚阈工作区等新型电路正逐渐成为低压电路设计的有效选择",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_5_3",
+      "target_id": "ca_12_5_1",
+      "relationship": "supports",
+      "description": "Class AB静态工作点支持轨到轨运放输出级的设计",
+      "weight": 0.8,
+      "evidence": "输出级通常偏置在Class AB的静态工作点下",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_5_1",
+      "target_id": "ca_12_5_1",
+      "relationship": "implements",
+      "description": "轨到轨差分运放设计技术实现了轨到轨差分运放电路",
+      "weight": 0.9,
+      "evidence": "选择不同的控制结构以兼容输入与输出的轨至轨要求，最终可实现具有输入和输出轨至轨特性的差分运放",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_5_2",
+      "target_id": "ca_12_5_1",
+      "relationship": "supports",
+      "description": "TL线性环路结构支持轨到轨运放的输入级设计",
+      "weight": 0.8,
+      "evidence": "需要采用TL线性环路结构实现差分输入恒定跨导以及近似恒定增益的控制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_5_3",
+      "target_id": "ca_12_5_1",
+      "relationship": "applies_to",
+      "description": "前馈及反馈控制技术应用于轨到轨运放的性能优化",
+      "weight": 0.7,
+      "evidence": "各类前馈及反馈、截止与无截止的不同控制方式，对低压电路的输出驱动和响应速度等性能均产生不同的影响",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_5_1",
+      "target_id": "ct_12_5_2",
+      "relationship": "depends_on",
+      "description": "轨到轨差分运放设计依赖于TL线性环路结构",
+      "weight": 0.8,
+      "evidence": "需要采用TL线性环路结构实现差分输入恒定跨导以及近似恒定增益的控制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_5_1",
+      "target_id": "ct_12_5_3",
+      "relationship": "relates_to",
+      "description": "轨到轨差分运放设计与前馈及反馈控制技术相关",
+      "weight": 0.7,
+      "evidence": "各类前馈及反馈、截止与无截止的不同控制方式...对低压电路的输出驱动和响应速度等性能均产生不同的影响",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "12.5",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:48:08.226497"
+}

@@ -1,0 +1,516 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_4_1",
+      "label": "全差分结构",
+      "node_type": "basic_concept",
+      "summary": "全差分结构是一种差分输入、差分输出的电路结构，具有抗噪声能力强、共模抑制比高的优点。其静态工作点完全匹配，系统失调可忽略，适合高精度信号处理。根据输出阻抗的不同，分为低阻低增益和高阻高增益两种结构类型。",
+      "difficulty": 2,
+      "keywords": [
+        "差分输入",
+        "差分输出",
+        "共模抑制比"
+      ],
+      "formulas": [
+        "A_dm = -g_ml/g_m3",
+        "A_CM ≈ -α/(2g_m3r_ds5)"
+      ],
+      "applications": [
+        "高精度信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大器"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分结构是一种差分输入、差分输出的电路结构，具有抗噪声能力强、共模抑制比高的优点。其静态工作点完全匹配，系统失调可忽略，适合高精度信号处理。根据输出阻抗的不同，分为低阻低增益和高阻高增益两种结构类型。"
+    },
+    {
+      "id": "bc_6_4_2",
+      "label": "共模抑制比(CMRR)",
+      "node_type": "basic_concept",
+      "summary": "共模抑制比(CMRR)是衡量差分放大器抑制共模信号能力的指标，定义为差模增益与共模增益的比值。在全差分结构中，CMRR由负载跨导与尾电流电阻决定，高CMRR意味着更好的抗噪声性能。",
+      "difficulty": 2,
+      "keywords": [
+        "差模增益",
+        "共模增益",
+        "抗噪声"
+      ],
+      "formulas": [
+        "CMRR = 2g_m3r_ds5/α ≈ g_m3(2R_S)"
+      ],
+      "applications": [
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大器"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模抑制比(CMRR)是衡量差分放大器抑制共模信号能力的指标，定义为差模增益与共模增益的比值。在全差分结构中，CMRR由负载跨导与尾电流电阻决定，高CMRR意味着更好的抗噪声性能。"
+    },
+    {
+      "id": "bc_6_4_3",
+      "label": "共模负反馈(CMFB)",
+      "node_type": "basic_concept",
+      "summary": "共模负反馈(CMFB)是一种用于高增益全差分电路的反馈控制电路，用于检测和调节输出共模信号，确保共模点稳定。CMFB通常包括共模信号检测模块和控制信号产生模块。",
+      "difficulty": 3,
+      "keywords": [
+        "共模信号",
+        "负反馈",
+        "静态点"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益全差分运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "负反馈"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模负反馈(CMFB)是一种用于高增益全差分电路的反馈控制电路，用于检测和调节输出共模信号，确保共模点稳定。CMFB通常包括共模信号检测模块和控制信号产生模块。"
+    },
+    {
+      "id": "ct_6_4_1",
+      "label": "低阻低增益全差分结构设计",
+      "node_type": "core_technology",
+      "summary": "低阻低增益全差分结构采用MOS二极管低阻负载，差分增益较低但可控性强，输出信号的共模电平可由MOS二极管的钳位稳定设置和控制，无需CMFB电路。适用于对增益要求不高的应用场景。",
+      "difficulty": 3,
+      "keywords": [
+        "MOS二极管",
+        "低阻负载",
+        "可控性"
+      ],
+      "formulas": [
+        "A_dm = -g_ml/g_m3"
+      ],
+      "applications": [
+        "低增益信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低阻低增益全差分结构采用MOS二极管低阻负载，差分增益较低但可控性强，输出信号的共模电平可由MOS二极管的钳位稳定设置和控制，无需CMFB电路。适用于对增益要求不高的应用场景。"
+    },
+    {
+      "id": "ct_6_4_2",
+      "label": "高阻高增益全差分结构设计",
+      "node_type": "core_technology",
+      "summary": "高阻高增益全差分结构采用恒流负载，差模与共模增益近似按相同速率增加，需要CMFB电路控制输出共模点。适用于高增益应用，但电路结构相对复杂。",
+      "difficulty": 4,
+      "keywords": [
+        "恒流负载",
+        "高增益",
+        "CMFB"
+      ],
+      "formulas": [
+        "A_dm = -g_ml(r_dsl//r_ds3)",
+        "A_CM ≈ -α/(2r_ds5)(r_ds3//g_mlr_ds1r_ds5)"
+      ],
+      "applications": [
+        "高增益信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高阻高增益全差分结构采用恒流负载，差模与共模增益近似按相同速率增加，需要CMFB电路控制输出共模点。适用于高增益应用，但电路结构相对复杂。"
+    },
+    {
+      "id": "ct_6_4_3",
+      "label": "兼容负载全差分结构设计",
+      "node_type": "core_technology",
+      "summary": "兼容负载全差分结构采用恒流源与MOS二极管并联的负载结构，兼顾低阻和高阻负载的优点，克服各自的不足。设计中使恒流源偏置电流较大而MOS二极管偏置电流较小，可有效提高全差分增益。",
+      "difficulty": 4,
+      "keywords": [
+        "兼容负载",
+        "并联结构",
+        "增益控制"
+      ],
+      "formulas": [],
+      "applications": [
+        "中等增益信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "兼容负载全差分结构采用恒流源与MOS二极管并联的负载结构，兼顾低阻和高阻负载的优点，克服各自的不足。设计中使恒流源偏置电流较大而MOS二极管偏置电流较小，可有效提高全差分增益。"
+    },
+    {
+      "id": "ct_6_4_4",
+      "label": "电阻检测型CMFB设计",
+      "node_type": "core_technology",
+      "summary": "电阻检测型CMFB采用平衡电阻检测共模信号，结构简单但对差模增益有影响。需采用大共模检测电阻以抑制不利影响。适用于低频应用。",
+      "difficulty": 3,
+      "keywords": [
+        "电阻检测",
+        "共模信号",
+        "低频"
+      ],
+      "formulas": [
+        "V_CM = (V_o1 + V_o2)/2"
+      ],
+      "applications": [
+        "低频CMFB"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻检测型CMFB采用平衡电阻检测共模信号，结构简单但对差模增益有影响。需采用大共模检测电阻以抑制不利影响。适用于低频应用。"
+    },
+    {
+      "id": "ct_6_4_5",
+      "label": "电容反馈型CMFB设计",
+      "node_type": "core_technology",
+      "summary": "电容反馈型CMFB采用串联电容代替电阻检测共模信号，对低频差模增益影响小，但反馈速度较慢。适用于对速度要求不高的应用。",
+      "difficulty": 4,
+      "keywords": [
+        "电容反馈",
+        "共模信号",
+        "速度限制"
+      ],
+      "formulas": [
+        "V_M = (V_o1 + V_o2)/2"
+      ],
+      "applications": [
+        "中频CMFB"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容反馈型CMFB采用串联电容代替电阻检测共模信号，对低频差模增益影响小，但反馈速度较慢。适用于对速度要求不高的应用。"
+    },
+    {
+      "id": "ct_6_4_6",
+      "label": "开关电容CMFB设计",
+      "node_type": "core_technology",
+      "summary": "开关电容CMFB利用开关电容等效开关电阻实现CMFB控制，解决电阻型CMFB的低频功耗与增益损失问题。适用于开关电容电路中的全差分运放。",
+      "difficulty": 5,
+      "keywords": [
+        "开关电容",
+        "等效电阻",
+        "低功耗"
+      ],
+      "formulas": [],
+      "applications": [
+        "开关电容电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开关电容CMFB利用开关电容等效开关电阻实现CMFB控制，解决电阻型CMFB的低频功耗与增益损失问题。适用于开关电容电路中的全差分运放。"
+    },
+    {
+      "id": "ct_6_4_7",
+      "label": "CS增益控制CMFB设计",
+      "node_type": "core_technology",
+      "summary": "CS增益控制CMFB采用CS(共源)增益结构实现对共模信号的感应和放大，通过负反馈调节输出共模点。适用于高增益全差分运放。",
+      "difficulty": 5,
+      "keywords": [
+        "CS增益",
+        "共模感应",
+        "负反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益CMFB"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CS增益控制CMFB采用CS(共源)增益结构实现对共模信号的感应和放大，通过负反馈调节输出共模点。适用于高增益全差分运放。"
+    },
+    {
+      "id": "ca_6_4_1",
+      "label": "低阻低增益全差分电路",
+      "node_type": "circuit_application",
+      "summary": "低阻低增益全差分电路采用MOS二极管低阻负载，结构简单，CMRR较高，但差模增益较小。适用于对增益要求不高的高精度信号处理场景。",
+      "difficulty": 3,
+      "keywords": [
+        "低阻负载",
+        "简单结构",
+        "高CMRR"
+      ],
+      "formulas": [
+        "A_dm = -g_ml/g_m3"
+      ],
+      "applications": [
+        "低增益信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低阻低增益全差分电路采用MOS二极管低阻负载，结构简单，CMRR较高，但差模增益较小。适用于对增益要求不高的高精度信号处理场景。"
+    },
+    {
+      "id": "ca_6_4_2",
+      "label": "高阻高增益全差分电路",
+      "node_type": "circuit_application",
+      "summary": "高阻高增益全差分电路采用恒流负载，差模增益高，但需要CMFB电路控制共模点。适用于高增益信号处理，但设计复杂度较高。",
+      "difficulty": 5,
+      "keywords": [
+        "恒流负载",
+        "高增益",
+        "CMFB"
+      ],
+      "formulas": [
+        "A_dm = -g_ml(r_dsl//r_ds3)"
+      ],
+      "applications": [
+        "高增益信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高阻高增益全差分电路采用恒流负载，差模增益高，但需要CMFB电路控制共模点。适用于高增益信号处理，但设计复杂度较高。"
+    },
+    {
+      "id": "ca_6_4_3",
+      "label": "N型折叠式Cascode全差分电路",
+      "node_type": "circuit_application",
+      "summary": "N型折叠式Cascode全差分电路采用N型差分输入，结合折叠式Cascode结构实现高增益和良好的共模抑制性能。CMFB电路提供尾电流及Cascode恒流源偏置。",
+      "difficulty": 5,
+      "keywords": [
+        "N型输入",
+        "折叠式Cascode",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "N型折叠式Cascode全差分电路采用N型差分输入，结合折叠式Cascode结构实现高增益和良好的共模抑制性能。CMFB电路提供尾电流及Cascode恒流源偏置。"
+    },
+    {
+      "id": "ca_6_4_4",
+      "label": "P型折叠式Cascode全差分电路",
+      "node_type": "circuit_application",
+      "summary": "P型折叠式Cascode全差分电路采用P型差分输入，结合折叠式Cascode结构实现高增益和良好的共模抑制性能。CMFB电路提供尾电流及Cascode恒流源偏置。",
+      "difficulty": 5,
+      "keywords": [
+        "P型输入",
+        "折叠式Cascode",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "P型折叠式Cascode全差分电路采用P型差分输入，结合折叠式Cascode结构实现高增益和良好的共模抑制性能。CMFB电路提供尾电流及Cascode恒流源偏置。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_4_1",
+      "target_id": "ct_6_4_1",
+      "relationship": "enables",
+      "description": "全差分结构的基本原理使能低阻低增益全差分结构的设计。",
+      "weight": 0.9,
+      "evidence": "低阻低增益全差分结构基于全差分结构的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_1",
+      "target_id": "ct_6_4_2",
+      "relationship": "enables",
+      "description": "全差分结构的基本原理使能高阻高增益全差分结构的设计。",
+      "weight": 0.9,
+      "evidence": "高阻高增益全差分结构基于全差分结构的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_2",
+      "target_id": "ct_6_4_1",
+      "relationship": "supports",
+      "description": "共模抑制比(CMRR)的概念支撑低阻低增益全差分结构的设计。",
+      "weight": 0.8,
+      "evidence": "低阻低增益全差分结构的设计需要考虑CMRR性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_2",
+      "target_id": "ct_6_4_2",
+      "relationship": "supports",
+      "description": "共模抑制比(CMRR)的概念支撑高阻高增益全差分结构的设计。",
+      "weight": 0.8,
+      "evidence": "高阻高增益全差分结构的设计需要考虑CMRR性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_3",
+      "target_id": "ct_6_4_2",
+      "relationship": "supports",
+      "description": "共模负反馈(CMFB)的概念支撑高阻高增益全差分结构的设计。",
+      "weight": 0.9,
+      "evidence": "高阻高增益全差分结构需要CMFB电路控制共模点。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_3",
+      "target_id": "ct_6_4_4",
+      "relationship": "enables",
+      "description": "共模负反馈(CMFB)的概念使能电阻检测型CMFB的设计。",
+      "weight": 0.8,
+      "evidence": "电阻检测型CMFB基于共模负反馈的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_3",
+      "target_id": "ct_6_4_5",
+      "relationship": "enables",
+      "description": "共模负反馈(CMFB)的概念使能电容反馈型CMFB的设计。",
+      "weight": 0.8,
+      "evidence": "电容反馈型CMFB基于共模负反馈的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_3",
+      "target_id": "ct_6_4_6",
+      "relationship": "enables",
+      "description": "共模负反馈(CMFB)的概念使能开关电容CMFB的设计。",
+      "weight": 0.8,
+      "evidence": "开关电容CMFB基于共模负反馈的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_4_3",
+      "target_id": "ct_6_4_7",
+      "relationship": "enables",
+      "description": "共模负反馈(CMFB)的概念使能CS增益控制CMFB的设计。",
+      "weight": 0.8,
+      "evidence": "CS增益控制CMFB基于共模负反馈的基本原理实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_1",
+      "target_id": "ca_6_4_1",
+      "relationship": "implements",
+      "description": "低阻低增益全差分结构设计实现低阻低增益全差分电路。",
+      "weight": 0.9,
+      "evidence": "低阻低增益全差分电路基于低阻低增益全差分结构设计实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_2",
+      "target_id": "ca_6_4_2",
+      "relationship": "implements",
+      "description": "高阻高增益全差分结构设计实现高阻高增益全差分电路。",
+      "weight": 0.9,
+      "evidence": "高阻高增益全差分电路基于高阻高增益全差分结构设计实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_3",
+      "target_id": "ca_6_4_1",
+      "relationship": "complements",
+      "description": "兼容负载全差分结构设计补充低阻低增益全差分电路的设计。",
+      "weight": 0.7,
+      "evidence": "兼容负载结构可应用于低阻低增益全差分电路的设计优化。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_3",
+      "target_id": "ca_6_4_2",
+      "relationship": "complements",
+      "description": "兼容负载全差分结构设计补充高阻高增益全差分电路的设计。",
+      "weight": 0.7,
+      "evidence": "兼容负载结构可应用于高阻高增益全差分电路的设计优化。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_4",
+      "target_id": "ca_6_4_2",
+      "relationship": "applies_to",
+      "description": "电阻检测型CMFB设计应用于高阻高增益全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "高阻高增益全差分电路可采用电阻检测型CMFB进行共模控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_5",
+      "target_id": "ca_6_4_2",
+      "relationship": "applies_to",
+      "description": "电容反馈型CMFB设计应用于高阻高增益全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "高阻高增益全差分电路可采用电容反馈型CMFB进行共模控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_6",
+      "target_id": "ca_6_4_2",
+      "relationship": "applies_to",
+      "description": "开关电容CMFB设计应用于高阻高增益全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "高阻高增益全差分电路可采用开关电容CMFB进行共模控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_7",
+      "target_id": "ca_6_4_2",
+      "relationship": "applies_to",
+      "description": "CS增益控制CMFB设计应用于高阻高增益全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "高阻高增益全差分电路可采用CS增益控制CMFB进行共模控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_2",
+      "target_id": "ca_6_4_3",
+      "relationship": "implements",
+      "description": "高阻高增益全差分结构设计实现N型折叠式Cascode全差分电路。",
+      "weight": 0.9,
+      "evidence": "N型折叠式Cascode全差分电路基于高阻高增益全差分结构设计实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_2",
+      "target_id": "ca_6_4_4",
+      "relationship": "implements",
+      "description": "高阻高增益全差分结构设计实现P型折叠式Cascode全差分电路。",
+      "weight": 0.9,
+      "evidence": "P型折叠式Cascode全差分电路基于高阻高增益全差分结构设计实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_7",
+      "target_id": "ca_6_4_3",
+      "relationship": "applies_to",
+      "description": "CS增益控制CMFB设计应用于N型折叠式Cascode全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "N型折叠式Cascode全差分电路可采用CS增益控制CMFB进行共模控制。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_4_7",
+      "target_id": "ca_6_4_4",
+      "relationship": "applies_to",
+      "description": "CS增益控制CMFB设计应用于P型折叠式Cascode全差分电路的共模控制。",
+      "weight": 0.8,
+      "evidence": "P型折叠式Cascode全差分电路可采用CS增益控制CMFB进行共模控制。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.4",
+  "title": "全差分输入级 14",
+  "extraction_timestamp": "2025-07-08T16:41:01.980901"
+}

@@ -1,0 +1,7 @@
+{
+  "section_num": "10.6",
+  "title": "参考文献",
+  "start_line": 8853,
+  "end_line": 8870,
+  "content": "### 10.6 参考文献\n[ 1 ] Bult K, Geelen G. A Fast-Settling CMOS Op Amp for SC Circuits with 90 dB DC Gain. IEEE J. Solid-State Circuits,1990,25(6): ${1379} \\sim  {1384}$\n[2] Gulati K, Lee H-s. A High-Swing CMOS Telescopic Operational Amplifier. IEEE J. Solid-State Circuits, ${1998},{33}\\left( {12}\\right)  : {2010} \\sim  {2019}$\n[3] Ahmadi M M, Sharif-Bakhtiar M. On the Optimum Design of Gain-Boosting Amplifier for High-Speed and Low-Voltage Applications. The 2004 47th Midwest Symposium on Circuits and Systems, 2004, $1 : 1 \\sim  4$\n[ 4 ] Ahmadi M M. A New Modeling and Optimization Gain Boosted Cascode Amplifier for High Speed and Low-Voltage Applications. IEEE Trans. Circuits and Systems, 2006, 55(5):169~173\n[ 5 ] Flandre D, Viviani A. Improved Synthesis of Gain-Boosted Regulated-Cascode CMOS Stages Using Symbolic Analysis and gm/ID-Methodology. J. Solid-State Circuits,1997,32(7) : 1006~1012\n[ 6 ] Das M. Improved Design Criteria of Gain-Boosted CMOS OTA With High-Speed Optimizations IEEE Trans. Circuits and systems-II,2002, ${49}\\left( 3\\right)  : {204} \\sim  {207}$\n[ 7 ] Yavari M, Shoaei O. Low-Voltage Low-Power Fast-Settling CMOS Operational Transconductance Amplifiers for Switched-Capacitor Applications. IEE Proc. Circuit Devices and System, 2004, 151 (6): ${573} \\sim  {578}$\n## 第 11 章 电 路 噪 声"
+}

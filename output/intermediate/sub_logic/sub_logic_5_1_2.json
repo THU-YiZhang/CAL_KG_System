@@ -1,0 +1,320 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_1_2_1",
+      "label": "功率MOSFET",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET是一种电压控制型半导体器件，通过栅极电压控制导通与截止。具有高输入阻抗、快速开关速度和低导通电阻的特点。主要用于功率放大和开关电路中。",
+      "difficulty": 2,
+      "keywords": [
+        "MOSFET",
+        "电压控制",
+        "半导体"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大",
+        "开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET是一种电压控制型半导体器件，通过栅极电压控制导通与截止。具有高输入阻抗、快速开关速度和低导通电阻的特点。主要用于功率放大和开关电路中。"
+    },
+    {
+      "id": "bc_5_1_2_2",
+      "label": "输入阻抗",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的输入阻抗是指栅极与源极之间的阻抗，通常很高，可以达到兆欧姆级别。高输入阻抗意味着驱动电路只需要很小的电流即可控制MOSFET。",
+      "difficulty": 2,
+      "keywords": [
+        "阻抗",
+        "栅极",
+        "驱动电流"
+      ],
+      "formulas": [
+        "Zin = Vgs/Ig"
+      ],
+      "applications": [
+        "驱动电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的输入阻抗是指栅极与源极之间的阻抗，通常很高，可以达到兆欧姆级别。高输入阻抗意味着驱动电路只需要很小的电流即可控制MOSFET。"
+    },
+    {
+      "id": "bc_5_1_2_3",
+      "label": "开关速度",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的开关速度是指器件从导通到截止或从截止到导通的转换速度，通常很快，可以达到纳秒级别。快速开关速度使得功率MOSFET适合高频开关应用。",
+      "difficulty": 2,
+      "keywords": [
+        "开关时间",
+        "转换速度",
+        "高频"
+      ],
+      "formulas": [
+        "t_sw = t_on + t_off"
+      ],
+      "applications": [
+        "高频开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "开关电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的开关速度是指器件从导通到截止或从截止到导通的转换速度，通常很快，可以达到纳秒级别。快速开关速度使得功率MOSFET适合高频开关应用。"
+    },
+    {
+      "id": "bc_5_1_2_4",
+      "label": "导通电阻",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的导通电阻(Rds(on))是指器件在导通状态下漏极与源极之间的电阻，通常很低。低导通电阻意味着导通时的功率损耗小，效率高。",
+      "difficulty": 2,
+      "keywords": [
+        "Rds(on)",
+        "功率损耗",
+        "效率"
+      ],
+      "formulas": [
+        "P_loss = I^2 * Rds(on)"
+      ],
+      "applications": [
+        "功率转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的导通电阻(Rds(on))是指器件在导通状态下漏极与源极之间的电阻，通常很低。低导通电阻意味着导通时的功率损耗小，效率高。"
+    },
+    {
+      "id": "ct_5_1_2_1",
+      "label": "功率MOSFET驱动技术",
+      "node_type": "core_technology",
+      "summary": "利用功率MOSFET的高输入阻抗特性设计驱动电路，通常使用栅极驱动IC或分立元件构成的驱动电路。需要考虑驱动电压、驱动电流和开关速度的匹配。",
+      "difficulty": 3,
+      "keywords": [
+        "栅极驱动",
+        "驱动IC",
+        "匹配设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "开关电源驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的高输入阻抗特性设计驱动电路，通常使用栅极驱动IC或分立元件构成的驱动电路。需要考虑驱动电压、驱动电流和开关速度的匹配。"
+    },
+    {
+      "id": "ct_5_1_2_2",
+      "label": "功率MOSFET开关优化",
+      "node_type": "core_technology",
+      "summary": "通过优化栅极驱动电阻和布局设计来最大化功率MOSFET的开关速度，同时最小化开关损耗。需要考虑米勒效应和寄生参数的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "开关优化",
+        "米勒效应",
+        "寄生参数"
+      ],
+      "formulas": [
+        "P_sw = 0.5 * Vds * Id * (t_on + t_off) * f_sw"
+      ],
+      "applications": [
+        "高频开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过优化栅极驱动电阻和布局设计来最大化功率MOSFET的开关速度，同时最小化开关损耗。需要考虑米勒效应和寄生参数的影响。"
+    },
+    {
+      "id": "ct_5_1_2_3",
+      "label": "功率MOSFET热管理",
+      "node_type": "core_technology",
+      "summary": "针对功率MOSFET的低导通电阻特性设计散热方案，通过计算功率损耗和热阻来选择合适的散热器和布局方式，确保器件工作在安全温度范围内。",
+      "difficulty": 3,
+      "keywords": [
+        "热管理",
+        "散热器",
+        "热阻"
+      ],
+      "formulas": [
+        "Tj = Ta + P * Rth"
+      ],
+      "applications": [
+        "大功率应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对功率MOSFET的低导通电阻特性设计散热方案，通过计算功率损耗和热阻来选择合适的散热器和布局方式，确保器件工作在安全温度范围内。"
+    },
+    {
+      "id": "ca_5_1_2_1",
+      "label": "开关电源",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的快速开关特性和低导通电阻设计高效率开关电源。典型拓扑包括Buck、Boost和Buck-Boost转换器，工作频率可达数百kHz。",
+      "difficulty": 4,
+      "keywords": [
+        "DC-DC转换器",
+        "PWM控制",
+        "拓扑结构"
+      ],
+      "formulas": [
+        "Vout = D * Vin"
+      ],
+      "applications": [
+        "电源适配器",
+        "LED驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的快速开关特性和低导通电阻设计高效率开关电源。典型拓扑包括Buck、Boost和Buck-Boost转换器，工作频率可达数百kHz。"
+    },
+    {
+      "id": "ca_5_1_2_2",
+      "label": "电机驱动",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的高输入阻抗和快速开关特性设计电机驱动电路，实现PWM调速控制。典型应用包括H桥电路，可驱动直流电机或步进电机。",
+      "difficulty": 4,
+      "keywords": [
+        "H桥",
+        "PWM调速",
+        "电机控制"
+      ],
+      "formulas": [
+        "Speed ∝ Duty Cycle"
+      ],
+      "applications": [
+        "机器人",
+        "电动车"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的高输入阻抗和快速开关特性设计电机驱动电路，实现PWM调速控制。典型应用包括H桥电路，可驱动直流电机或步进电机。"
+    },
+    {
+      "id": "ca_5_1_2_3",
+      "label": "高频逆变器",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的快速开关特性设计高频逆变器，将直流电转换为高频交流电。典型应用包括感应加热和无线电力传输系统。",
+      "difficulty": 4,
+      "keywords": [
+        "谐振转换",
+        "高频交流",
+        "ZVS/ZCS"
+      ],
+      "formulas": [
+        "f_res = 1/(2π√(LC))"
+      ],
+      "applications": [
+        "电磁炉",
+        "无线充电"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的快速开关特性设计高频逆变器，将直流电转换为高频交流电。典型应用包括感应加热和无线电力传输系统。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_1_2_1",
+      "target_id": "ct_5_1_2_1",
+      "relationship": "enables",
+      "description": "功率MOSFET的高输入阻抗特性使能了专门的驱动电路设计",
+      "weight": 0.9,
+      "evidence": "功率MOSFET是电压控制器件，具有高输入阻抗",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_2_3",
+      "target_id": "ct_5_1_2_2",
+      "relationship": "supports",
+      "description": "快速开关速度特性支持了开关优化的实现",
+      "weight": 0.8,
+      "evidence": "具有快速开关速度",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_2_4",
+      "target_id": "ct_5_1_2_3",
+      "relationship": "supports",
+      "description": "低导通电阻特性支持了热管理技术的应用",
+      "weight": 0.7,
+      "evidence": "具有低导通电阻",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_2_1",
+      "target_id": "ca_5_1_2_1",
+      "relationship": "implements",
+      "description": "驱动技术实现了开关电源的设计",
+      "weight": 0.8,
+      "evidence": "开关电源需要专门的驱动电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_2_2",
+      "target_id": "ca_5_1_2_3",
+      "relationship": "implements",
+      "description": "开关优化技术实现了高频逆变器的设计",
+      "weight": 0.9,
+      "evidence": "高频逆变器需要优化的开关性能",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_2_3",
+      "target_id": "ca_5_1_2_2",
+      "relationship": "applies_to",
+      "description": "热管理技术应用于电机驱动电路",
+      "weight": 0.7,
+      "evidence": "电机驱动需要良好的热管理",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_2_2",
+      "target_id": "bc_5_1_2_3",
+      "relationship": "relates_to",
+      "description": "输入阻抗与开关速度相关，共同影响驱动设计",
+      "weight": 0.6,
+      "evidence": "都是功率MOSFET的重要特性",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_5_1_2_1",
+      "target_id": "ca_5_1_2_2",
+      "relationship": "relates_to",
+      "description": "开关电源和电机驱动都利用功率MOSFET的开关特性",
+      "weight": 0.5,
+      "evidence": "都是功率MOSFET的典型应用",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "5.1.2",
+  "title": "功率MOSFET",
+  "extraction_timestamp": "2025-07-08T15:32:52.820203",
+  "validation_timestamp": "2025-07-08T15:32:54.291649"
+}

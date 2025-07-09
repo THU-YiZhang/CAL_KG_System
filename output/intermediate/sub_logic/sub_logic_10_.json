@@ -1,0 +1,233 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_1",
+      "label": "低频直流增益",
+      "node_type": "basic_concept",
+      "summary": "低频直流增益是指在低频信号下，运算放大器的输出电压与输入电压的比值。它是衡量运放放大能力的重要指标，直接影响运放的精度和稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "增益",
+        "低频",
+        "直流"
+      ],
+      "formulas": [
+        "A_v = V_out / V_in"
+      ],
+      "applications": [
+        "运放设计",
+        "闭环系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低频直流增益是指在低频信号下，运算放大器的输出电压与输入电压的比值。它是衡量运放放大能力的重要指标，直接影响运放的精度和稳定性。"
+    },
+    {
+      "id": "bc_10_2",
+      "label": "带宽",
+      "node_type": "basic_concept",
+      "summary": "带宽是指运算放大器能够有效放大信号的频率范围。带宽与运放的速度性能密切相关，高频应用下带宽反映了运放的速度与精度（即失真）的关系。",
+      "difficulty": 2,
+      "keywords": [
+        "频率范围",
+        "速度",
+        "失真"
+      ],
+      "formulas": [
+        "BW = f_high - f_low"
+      ],
+      "applications": [
+        "高频信号处理",
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带宽是指运算放大器能够有效放大信号的频率范围。带宽与运放的速度性能密切相关，高频应用下带宽反映了运放的速度与精度（即失真）的关系。"
+    },
+    {
+      "id": "bc_10_3",
+      "label": "频率补偿技术",
+      "node_type": "basic_concept",
+      "summary": "频率补偿技术是通过调整运放的频率响应特性，以保证闭环系统稳定的技术。多级放大电路中常用的频率补偿技术包括极点补偿、零点补偿等。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性",
+        "极点",
+        "零点"
+      ],
+      "formulas": [
+        "相位裕度 > 45°"
+      ],
+      "applications": [
+        "多级放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿技术是通过调整运放的频率响应特性，以保证闭环系统稳定的技术。多级放大电路中常用的频率补偿技术包括极点补偿、零点补偿等。"
+    },
+    {
+      "id": "ct_10_1",
+      "label": "交流小信号分析",
+      "node_type": "core_technology",
+      "summary": "交流小信号分析是通过线性化方法分析运放在小信号条件下的频率响应和瞬态响应。它是运放设计的基础，用于评估运放的增益、带宽和稳定性。",
+      "difficulty": 3,
+      "keywords": [
+        "线性化",
+        "频率响应",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "小信号模型"
+      ],
+      "applications": [
+        "运放性能评估"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "交流小信号分析是通过线性化方法分析运放在小信号条件下的频率响应和瞬态响应。它是运放设计的基础，用于评估运放的增益、带宽和稳定性。"
+    },
+    {
+      "id": "ct_10_2",
+      "label": "统一瞬态特性分析模型",
+      "node_type": "core_technology",
+      "summary": "统一瞬态特性分析模型是一种能够同时处理交流小信号瞬态响应和大信号瞬态响应的模型。它通过建立适应范围广、精度高的分析框架，为高速高精度运放设计提供理论支持。",
+      "difficulty": 4,
+      "keywords": [
+        "瞬态响应",
+        "大信号",
+        "小信号"
+      ],
+      "formulas": [
+        "非线性微分方程"
+      ],
+      "applications": [
+        "高速运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "统一瞬态特性分析模型是一种能够同时处理交流小信号瞬态响应和大信号瞬态响应的模型。它通过建立适应范围广、精度高的分析框架，为高速高精度运放设计提供理论支持。"
+    },
+    {
+      "id": "ct_10_3",
+      "label": "电压倍增型 Cascode 技术",
+      "node_type": "core_technology",
+      "summary": "电压倍增型 Cascode 技术是一种通过 Cascode 结构提高运放增益和带宽的技术。它通过堆叠晶体管实现电压倍增，显著提升运放的高速和高精度性能。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "电压倍增",
+        "高速"
+      ],
+      "formulas": [
+        "增益公式 A_v = g_m * R_out"
+      ],
+      "applications": [
+        "高精度运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压倍增型 Cascode 技术是一种通过 Cascode 结构提高运放增益和带宽的技术。它通过堆叠晶体管实现电压倍增，显著提升运放的高速和高精度性能。"
+    },
+    {
+      "id": "ca_10_1",
+      "label": "电压倍增型 Cascode 高速高精度运放",
+      "node_type": "circuit_application",
+      "summary": "电压倍增型 Cascode 高速高精度运放是一种采用 Cascode 结构和电压倍增技术的运放设计。它通过堆叠晶体管实现高增益和宽带宽，适用于高速信号处理和高精度应用。",
+      "difficulty": 5,
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高精度"
+      ],
+      "formulas": [
+        "带宽增益积 GBW = A_v * BW"
+      ],
+      "applications": [
+        "ADC/DAC接口",
+        "射频前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压倍增型 Cascode 高速高精度运放是一种采用 Cascode 结构和电压倍增技术的运放设计。它通过堆叠晶体管实现高增益和宽带宽，适用于高速信号处理和高精度应用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_1",
+      "target_id": "ct_10_1",
+      "relationship": "enables",
+      "description": "低频直流增益是交流小信号分析的重要指标，通过分析增益可以评估运放的放大能力和稳定性。",
+      "weight": 0.8,
+      "evidence": "前面章节分析了单级和基本集成运放的交直流特性,以低频直流增益和带宽为重点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_2",
+      "target_id": "ct_10_1",
+      "relationship": "enables",
+      "description": "带宽是交流小信号分析的核心参数，通过分析带宽可以评估运放的速度性能。",
+      "weight": 0.8,
+      "evidence": "带宽与增益是制约运放电路性能的两个重要指标",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_3",
+      "target_id": "ct_10_1",
+      "relationship": "supports",
+      "description": "频率补偿技术为交流小信号分析提供了稳定性保障，确保分析结果的可靠性。",
+      "weight": 0.7,
+      "evidence": "讨论了在保证闭环系统稳定的前提下,提高增益、扩展带宽的基本原理和有效方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_1",
+      "target_id": "ct_10_2",
+      "relationship": "extends",
+      "description": "统一瞬态特性分析模型扩展了交流小信号分析的范围，使其能够处理大信号瞬态响应。",
+      "weight": 0.9,
+      "evidence": "区分对待交流小信号瞬态响应与大信号瞬态响应之间的差异,建立适应范围广、精度高的统一瞬态特性分析模型",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_2",
+      "target_id": "ca_10_1",
+      "relationship": "implements",
+      "description": "统一瞬态特性分析模型为电压倍增型 Cascode 高速高精度运放的设计提供了理论支持。",
+      "weight": 0.9,
+      "evidence": "并重点完成一种电压倍增型 Cascode 高速高精度运放的分析和设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_3",
+      "target_id": "ca_10_1",
+      "relationship": "applies_to",
+      "description": "电压倍增型 Cascode 技术直接应用于电压倍增型 Cascode 高速高精度运放的设计中。",
+      "weight": 1.0,
+      "evidence": "重点完成一种电压倍增型 Cascode 高速高精度运放的分析和设计",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "10.",
+  "title": "1 概述",
+  "extraction_timestamp": "2025-07-08T16:44:29.085208"
+}

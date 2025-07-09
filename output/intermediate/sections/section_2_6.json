@@ -1,0 +1,7 @@
+{
+  "section_num": "2.6",
+  "title": "参考文献",
+  "start_line": 1159,
+  "end_line": 1176,
+  "content": "### 2.6 参考文献\n[1] Lake K R, Sansen W. Design of Analog Integrated Circuits and System. McGraw-Hill, Inc., 1994\n[ 2 ] Enz C C, Krummenacher F, Vittoz E A. An Analytical MOS Transistor Model Valid in All Regions of Operation and Dedicated to Low-Voltage and Low-Current Applications. Special Issue of the Analog Integrated Circuits and Signal Processing Journal on Low-Voltage and Low Power Design, 1995\n[ 3 ] Baker R J, Li H W, Boyce D E. CMOS: Circuit Design, Layout and Simulation. Wiley, 1998\n[ 4 ] Sakurai, Newton A R. A Simple MOSFET Model for Circuit Analysis. IEEE Trans. Electronic Devices, 1991,38(4): 887~894\n[ 5 ] Toh K Y, Ko P K, Meyer R G. An Engineering Model for Short-Channel MOS Device. IEEE J. Solid-State Circuits,1988,23(8): ${950} \\sim  {958}$\n[ 6 ] Samavati H, Hajimiri A, Shabani A R, Nasserbakht G N, Lee T H. Fractal Capacitors. Solid-State Circuits, 1998, 33(12):2035-2041\n[ 7 ] Christian C Enz, Eric A Vittoz. CMOS Low-Power Analog Circnit Design. In: Ralph K Cavin, eds. Emrtging Technologies: Designing Low Power Digital Systems. 1996:86~95\n## 第 3 章 电压电流偏置"
+}

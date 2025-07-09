@@ -1,0 +1,273 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_9_1",
+      "label": "Wilson电流镜",
+      "node_type": "basic_concept",
+      "summary": "Wilson电流镜是一种改进的电流镜结构，通过负反馈方法提高电流匹配精度和输出阻抗。其基本原理是利用负反馈来稳定输出电流，减少工艺和温度变化的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "电流镜",
+        "负反馈",
+        "输出阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "电流源",
+        "电流复制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOSFET工作原理",
+        "负反馈原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Wilson电流镜是一种改进的电流镜结构，通过负反馈方法提高电流匹配精度和输出阻抗。其基本原理是利用负反馈来稳定输出电流，减少工艺和温度变化的影响。"
+    },
+    {
+      "id": "bc_3_9_2",
+      "label": "低电压技术",
+      "node_type": "basic_concept",
+      "summary": "低电压技术是指在低电源电压下工作的电路设计方法，旨在减少功耗并提高电路在低电压环境下的性能。其核心是通过优化偏置电路和器件尺寸来实现低电压操作。",
+      "difficulty": 3,
+      "keywords": [
+        "低电压",
+        "功耗优化",
+        "偏置电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "低功耗电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOSFET特性",
+        "电源管理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压技术是指在低电源电压下工作的电路设计方法，旨在减少功耗并提高电路在低电压环境下的性能。其核心是通过优化偏置电路和器件尺寸来实现低电压操作。"
+    },
+    {
+      "id": "bc_3_9_3",
+      "label": "温度参考电路",
+      "node_type": "basic_concept",
+      "summary": "温度参考电路是一种能够产生与温度成比例或反比例的参考电压或电流的电路。其基本原理是利用器件的温度特性（如PN结或MOSFET的阈值电压）来生成温度相关的参考信号。",
+      "difficulty": 3,
+      "keywords": [
+        "温度参考",
+        "PTAT",
+        "CTAT"
+      ],
+      "formulas": [],
+      "applications": [
+        "温度传感器",
+        "补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "温度特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "温度参考电路是一种能够产生与温度成比例或反比例的参考电压或电流的电路。其基本原理是利用器件的温度特性（如PN结或MOSFET的阈值电压）来生成温度相关的参考信号。"
+    },
+    {
+      "id": "ct_3_9_1",
+      "label": "负反馈方法",
+      "node_type": "core_technology",
+      "summary": "负反馈方法是一种通过引入反馈环路来稳定电路性能的技术。在Wilson电流镜中，负反馈用于提高电流匹配精度和输出阻抗。具体步骤包括：1) 设计反馈环路；2) 选择合适的反馈元件；3) 优化环路增益。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "环路增益",
+        "稳定性"
+      ],
+      "formulas": [
+        "环路增益公式"
+      ],
+      "applications": [
+        "Wilson电流镜",
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈方法是一种通过引入反馈环路来稳定电路性能的技术。在Wilson电流镜中，负反馈用于提高电流匹配精度和输出阻抗。具体步骤包括：1) 设计反馈环路；2) 选择合适的反馈元件；3) 优化环路增益。"
+    },
+    {
+      "id": "ct_3_9_2",
+      "label": "低电压偏置设计",
+      "node_type": "core_technology",
+      "summary": "低电压偏置设计是一种在低电源电压下生成稳定偏置电压或电流的技术。其核心步骤包括：1) 选择低阈值器件；2) 使用级联或自偏置结构；3) 优化偏置点以最小功耗。",
+      "difficulty": 4,
+      "keywords": [
+        "偏置设计",
+        "级联结构",
+        "自偏置"
+      ],
+      "formulas": [
+        "偏置电压计算公式"
+      ],
+      "applications": [
+        "低功耗电路",
+        "便携式设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压偏置设计是一种在低电源电压下生成稳定偏置电压或电流的技术。其核心步骤包括：1) 选择低阈值器件；2) 使用级联或自偏置结构；3) 优化偏置点以最小功耗。"
+    },
+    {
+      "id": "ct_3_9_3",
+      "label": "高精度电流镜设计",
+      "node_type": "core_technology",
+      "summary": "高精度电流镜设计是一种通过优化器件匹配和反馈环路来提高电流复制精度的技术。具体步骤包括：1) 选择匹配良好的器件；2) 引入反馈或校准电路；3) 优化布局以减少工艺偏差。",
+      "difficulty": 4,
+      "keywords": [
+        "电流匹配",
+        "反馈校准",
+        "布局优化"
+      ],
+      "formulas": [
+        "匹配误差公式"
+      ],
+      "applications": [
+        "高精度电流源",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高精度电流镜设计是一种通过优化器件匹配和反馈环路来提高电流复制精度的技术。具体步骤包括：1) 选择匹配良好的器件；2) 引入反馈或校准电路；3) 优化布局以减少工艺偏差。"
+    },
+    {
+      "id": "ca_3_9_1",
+      "label": "Wilson电流镜电路",
+      "node_type": "circuit_application",
+      "summary": "Wilson电流镜电路是一种基于负反馈的高精度电流镜，其结构包括三个MOSFET和一个反馈环路。该电路具有高输出阻抗和良好的电流匹配特性，适用于需要高精度电流复制的应用。",
+      "difficulty": 4,
+      "keywords": [
+        "Wilson结构",
+        "高输出阻抗",
+        "电流复制"
+      ],
+      "formulas": [
+        "输出阻抗公式"
+      ],
+      "applications": [
+        "电流源",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Wilson电流镜电路是一种基于负反馈的高精度电流镜，其结构包括三个MOSFET和一个反馈环路。该电路具有高输出阻抗和良好的电流匹配特性，适用于需要高精度电流复制的应用。"
+    },
+    {
+      "id": "ca_3_9_2",
+      "label": "低电压MOS级联偏置电路",
+      "node_type": "circuit_application",
+      "summary": "低电压MOS级联偏置电路是一种在低电源电压下生成稳定偏置电压的电路。其结构包括级联MOSFET和自偏置网络，能够在低电压下提供高摆幅和稳定的偏置。",
+      "difficulty": 4,
+      "keywords": [
+        "级联结构",
+        "自偏置",
+        "低电压"
+      ],
+      "formulas": [
+        "偏置电压公式"
+      ],
+      "applications": [
+        "低功耗电路",
+        "便携式设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压MOS级联偏置电路是一种在低电源电压下生成稳定偏置电压的电路。其结构包括级联MOSFET和自偏置网络，能够在低电压下提供高摆幅和稳定的偏置。"
+    },
+    {
+      "id": "ca_3_9_3",
+      "label": "Sub-1-V CMOS温度参考电路",
+      "node_type": "circuit_application",
+      "summary": "Sub-1-V CMOS温度参考电路是一种在低于1V电源电压下工作的温度参考电路。其结构利用MOSFET的阈值电压温度特性生成PTAT或CTAT参考信号，适用于低功耗温度传感器。",
+      "difficulty": 4,
+      "keywords": [
+        "Sub-1-V",
+        "温度参考",
+        "PTAT/CTAT"
+      ],
+      "formulas": [
+        "温度系数公式"
+      ],
+      "applications": [
+        "温度传感器",
+        "补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sub-1-V CMOS温度参考电路是一种在低于1V电源电压下工作的温度参考电路。其结构利用MOSFET的阈值电压温度特性生成PTAT或CTAT参考信号，适用于低功耗温度传感器。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_9_1",
+      "target_id": "ct_3_9_1",
+      "relationship": "enables",
+      "description": "Wilson电流镜的基本原理依赖于负反馈方法来提高性能，负反馈技术是实现高精度电流镜的关键。",
+      "weight": 0.9,
+      "evidence": "Understanding Wilson Current Mirror via The Negative Feedback Approach",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_9_2",
+      "target_id": "ct_3_9_2",
+      "relationship": "supports",
+      "description": "低电压技术为低电压偏置设计提供了理论基础，支持其在低电源电压下的实现。",
+      "weight": 0.8,
+      "evidence": "Low Voltage Technique for Bias Circuits",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_9_1",
+      "target_id": "ca_3_9_1",
+      "relationship": "implements",
+      "description": "负反馈方法被应用于Wilson电流镜电路的设计中，实现了高精度电流复制。",
+      "weight": 0.9,
+      "evidence": "Understanding Wilson Current Mirror via The Negative Feedback Approach",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_9_2",
+      "target_id": "ca_3_9_2",
+      "relationship": "implements",
+      "description": "低电压偏置设计技术被用于实现低电压MOS级联偏置电路，提供了稳定的偏置电压。",
+      "weight": 0.8,
+      "evidence": "A High-Swing MOS Cascode Bias Circuit for Operation at Any Current Level",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_9_3",
+      "target_id": "ca_3_9_3",
+      "relationship": "applies_to",
+      "description": "温度参考电路的基本原理被应用于Sub-1-V CMOS温度参考电路的设计中，生成温度相关的参考信号。",
+      "weight": 0.8,
+      "evidence": "Sub-1-V CMOS Proportional-to-Absolute Temperature References",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.9",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:35:43.598889"
+}

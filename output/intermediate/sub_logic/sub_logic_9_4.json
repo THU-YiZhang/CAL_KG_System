@@ -1,0 +1,318 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_4_1",
+      "label": "Miller补偿",
+      "node_type": "basic_concept",
+      "summary": "Miller补偿是一种通过连接输出端与输入端之间的电容来压缩主极点频率的技术。在三级放大器中，Miller电容(Cm)通过反馈作用压缩第一级输出极点，使其成为系统主极点。",
+      "difficulty": 3,
+      "keywords": [
+        "极点压缩",
+        "反馈电容",
+        "频率补偿"
+      ],
+      "formulas": [
+        "p = Av2 * gm3/CL"
+      ],
+      "applications": [
+        "多级放大器稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论",
+        "极点分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Miller补偿是一种通过连接输出端与输入端之间的电容来压缩主极点频率的技术。在三级放大器中，Miller电容(Cm)通过反馈作用压缩第一级输出极点，使其成为系统主极点。"
+    },
+    {
+      "id": "bc_9_4_2",
+      "label": "极点分离",
+      "node_type": "basic_concept",
+      "summary": "极点分离是指通过补偿技术使系统极点频率相互远离，避免极点聚集导致系统不稳定的现象。在三级放大器中，需要满足ω1≪ω2的条件才能实现有效的极点分离。",
+      "difficulty": 3,
+      "keywords": [
+        "极点频率",
+        "稳定性",
+        "补偿设计"
+      ],
+      "formulas": [
+        "ω1ω2 = 2ω0²"
+      ],
+      "applications": [
+        "放大器频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "极点分析",
+        "系统稳定性判据"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点分离是指通过补偿技术使系统极点频率相互远离，避免极点聚集导致系统不稳定的现象。在三级放大器中，需要满足ω1≪ω2的条件才能实现有效的极点分离。"
+    },
+    {
+      "id": "bc_9_4_3",
+      "label": "RHP零点",
+      "node_type": "basic_concept",
+      "summary": "右半平面零点(RHP)是由前馈通路产生的零点，会降低系统相位裕度。在三级放大器中，补偿电容的前馈作用会产生RHP零点，需要通过特殊技术消除或移动其位置。",
+      "difficulty": 4,
+      "keywords": [
+        "前馈通路",
+        "相位裕度",
+        "系统稳定性"
+      ],
+      "formulas": [
+        "D(s) = 1 - sCm/gm3,eff"
+      ],
+      "applications": [
+        "频率补偿设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "零点分析",
+        "相位裕度计算"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "右半平面零点(RHP)是由前馈通路产生的零点，会降低系统相位裕度。在三级放大器中，补偿电容的前馈作用会产生RHP零点，需要通过特殊技术消除或移动其位置。"
+    },
+    {
+      "id": "ct_9_4_1",
+      "label": "UMC补偿技术",
+      "node_type": "core_technology",
+      "summary": "单电容Miller补偿(UMC)是将两级放大器的SMC结构扩展到三级系统的补偿方法。通过在输出级和第一级之间连接单个Miller电容Cm来实现极点压缩，但存在对次极点控制不足的问题。",
+      "difficulty": 4,
+      "keywords": [
+        "单环补偿",
+        "极点控制",
+        "三级系统"
+      ],
+      "formulas": [
+        "Cm = 2 * (1/Av2(0)) * (gm1/gm3) * CL",
+        "CL = 2 * (gm3R2) * (gm2R2) * C2"
+      ],
+      "applications": [
+        "三级放大器补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单电容Miller补偿(UMC)是将两级放大器的SMC结构扩展到三级系统的补偿方法。通过在输出级和第一级之间连接单个Miller电容Cm来实现极点压缩，但存在对次极点控制不足的问题。"
+    },
+    {
+      "id": "ct_9_4_2",
+      "label": "NMC补偿技术",
+      "node_type": "core_technology",
+      "summary": "嵌套型Miller补偿(NMC)在UMC基础上增加第二个补偿电容Cm2，形成内外双重反馈环路。Cm1压缩主极点，Cm2控制次极点性质，可产生分离的实极点或共轭复极点，提高系统稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "双重反馈",
+        "极点分离",
+        "稳定性控制"
+      ],
+      "formulas": [
+        "Cm1 = 4 * (gm1/gmL) * CL",
+        "Cm2 = 2 * (gm2/gmL) * CL"
+      ],
+      "applications": [
+        "高性能三级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "嵌套型Miller补偿(NMC)在UMC基础上增加第二个补偿电容Cm2，形成内外双重反馈环路。Cm1压缩主极点，Cm2控制次极点性质，可产生分离的实极点或共轭复极点，提高系统稳定性。"
+    },
+    {
+      "id": "ct_9_4_3",
+      "label": "NMCNR补偿技术",
+      "node_type": "core_technology",
+      "summary": "消除RHP零点的嵌套型Miller补偿(NMCNR)通过在补偿电容路径中串联调节电阻Rm，改变前馈相位，将RHP零点转变为LHP零点，同时控制电阻对原有极点的调制作用，显著改善相位裕度。",
+      "difficulty": 5,
+      "keywords": [
+        "零点消除",
+        "相位优化",
+        "电阻补偿"
+      ],
+      "formulas": [
+        "D(s) = 1 + s[Cm1Rm + Cm2(Rm - 1/gmL)] - s²[Cm1Cm2(1 - gmL Rm)/(gm2gmL)]"
+      ],
+      "applications": [
+        "高稳定性三级放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "消除RHP零点的嵌套型Miller补偿(NMCNR)通过在补偿电容路径中串联调节电阻Rm，改变前馈相位，将RHP零点转变为LHP零点，同时控制电阻对原有极点的调制作用，显著改善相位裕度。"
+    },
+    {
+      "id": "ca_9_4_1",
+      "label": "UMC补偿结构",
+      "node_type": "circuit_application",
+      "summary": "UMC补偿结构采用单电容连接系统输出和第一级输出，适用于驱动大负载电容CL的情况。电路结构简单但带宽受限，需要较大的补偿电容，且对中间级增益Av2有严格限制。",
+      "difficulty": 4,
+      "keywords": [
+        "单电容补偿",
+        "大负载驱动",
+        "增益限制"
+      ],
+      "formulas": [
+        "Av2(0) = 2 * (gm1/gm2) * (C2/Cm) * (Av2,HF/Av3,HF)"
+      ],
+      "applications": [
+        "大电容负载放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "UMC补偿结构采用单电容连接系统输出和第一级输出，适用于驱动大负载电容CL的情况。电路结构简单但带宽受限，需要较大的补偿电容，且对中间级增益Av2有严格限制。"
+    },
+    {
+      "id": "ca_9_4_2",
+      "label": "NMC补偿结构",
+      "node_type": "circuit_application",
+      "summary": "NMC补偿结构在UMC基础上增加第二个补偿电容Cm2，形成嵌套反馈环路。外环Cm1压缩主极点，内环Cm2控制次极点，可实现约60°的相位裕度，但存在高频正反馈风险。",
+      "difficulty": 5,
+      "keywords": [
+        "双重补偿",
+        "嵌套反馈",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "p2,3 = (1/2)(gmL/CL)(1±j)",
+        "GBW = (1/2)ω0 = gm1/Cm1"
+      ],
+      "applications": [
+        "高稳定性三级放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "NMC补偿结构在UMC基础上增加第二个补偿电容Cm2，形成嵌套反馈环路。外环Cm1压缩主极点，内环Cm2控制次极点，可实现约60°的相位裕度，但存在高频正反馈风险。"
+    },
+    {
+      "id": "ca_9_4_3",
+      "label": "NMCNR补偿结构",
+      "node_type": "circuit_application",
+      "summary": "NMCNR补偿结构在NMC基础上增加补偿电阻Rm，有效消除RHP零点。通过精心设计Rm值，可将RHP零点转变为LHP零点，同时保持对极点的控制能力，实现更好的频率响应特性。",
+      "difficulty": 5,
+      "keywords": [
+        "零点消除",
+        "电阻补偿",
+        "相位优化"
+      ],
+      "formulas": [
+        "Rm = 1/gmL"
+      ],
+      "applications": [
+        "精密放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "NMCNR补偿结构在NMC基础上增加补偿电阻Rm，有效消除RHP零点。通过精心设计Rm值，可将RHP零点转变为LHP零点，同时保持对极点的控制能力，实现更好的频率响应特性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_4_1",
+      "target_id": "ct_9_4_1",
+      "relationship": "enables",
+      "description": "Miller补偿原理使能UMC补偿技术的实现",
+      "weight": 0.9,
+      "evidence": "UMC补偿是基于Miller电容的极点压缩原理设计的",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_4_2",
+      "target_id": "ct_9_4_2",
+      "relationship": "supports",
+      "description": "极点分离理论支撑NMC补偿技术的设计方法",
+      "weight": 0.85,
+      "evidence": "NMC通过双重补偿实现有效的极点分离",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_4_3",
+      "target_id": "ct_9_4_3",
+      "relationship": "supports",
+      "description": "RHP零点分析支持NMCNR补偿技术的开发",
+      "weight": 0.9,
+      "evidence": "NMCNR专门针对消除RHP零点的问题设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_4_1",
+      "target_id": "ca_9_4_1",
+      "relationship": "implements",
+      "description": "UMC技术实现UMC补偿电路结构",
+      "weight": 0.95,
+      "evidence": "UMC电路是UMC技术的具体实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_4_2",
+      "target_id": "ca_9_4_2",
+      "relationship": "implements",
+      "description": "NMC技术实现NMC补偿电路结构",
+      "weight": 0.95,
+      "evidence": "NMC电路是NMC技术的具体实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_4_3",
+      "target_id": "ca_9_4_3",
+      "relationship": "implements",
+      "description": "NMCNR技术实现NMCNR补偿电路结构",
+      "weight": 0.95,
+      "evidence": "NMCNR电路是NMCNR技术的具体实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_4_1",
+      "target_id": "ct_9_4_2",
+      "relationship": "extends",
+      "description": "NMC技术扩展了UMC技术",
+      "weight": 0.85,
+      "evidence": "NMC在UMC基础上增加第二个补偿电容",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_4_2",
+      "target_id": "ct_9_4_3",
+      "relationship": "extends",
+      "description": "NMCNR技术扩展了NMC技术",
+      "weight": 0.9,
+      "evidence": "NMCNR在NMC基础上增加补偿电阻",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_9_4_1",
+      "target_id": "ca_9_4_2",
+      "relationship": "complements",
+      "description": "NMC电路弥补了UMC电路的不足",
+      "weight": 0.8,
+      "evidence": "NMC解决了UMC对次极点控制不足的问题",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_9_4_2",
+      "target_id": "ca_9_4_3",
+      "relationship": "complements",
+      "description": "NMCNR电路弥补了NMC电路的不足",
+      "weight": 0.85,
+      "evidence": "NMCNR解决了NMC存在RHP零点的问题",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "9.4",
+  "title": "三级放大器频率补偿结构",
+  "extraction_timestamp": "2025-07-08T16:44:47.948530"
+}

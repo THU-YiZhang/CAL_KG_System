@@ -1,0 +1,377 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_2_1",
+      "label": "Cascode结构",
+      "node_type": "basic_concept",
+      "summary": "Cascode结构是一种将共源(CS)和共栅(CG)晶体管级联的放大器结构，能显著提高电压增益。其基本工作原理是利用CG级的电流缓冲特性，将CS级的输出电流高效传递到负载，同时提供高输出阻抗。主要类型包括套筒式和折叠式两种。",
+      "difficulty": 3,
+      "keywords": [
+        "共源共栅",
+        "高增益",
+        "输出阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益放大器",
+        "宽带放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理",
+        "小信号模型"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode结构是一种将共源(CS)和共栅(CG)晶体管级联的放大器结构，能显著提高电压增益。其基本工作原理是利用CG级的电流缓冲特性，将CS级的输出电流高效传递到负载，同时提供高输出阻抗。主要类型包括套筒式和折叠式两种。"
+    },
+    {
+      "id": "bc_6_2_2",
+      "label": "差分对",
+      "node_type": "basic_concept",
+      "summary": "差分对是由两个对称的放大管组成的电路结构，能有效抑制共模干扰。其核心特性包括差分增益、共模抑制比(CMRR)和输入共模范围。在Cascode结构中，差分对可以显著提高整体增益性能。",
+      "difficulty": 2,
+      "keywords": [
+        "对称结构",
+        "共模抑制",
+        "差分增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分放大器",
+        "运算放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分信号原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分对是由两个对称的放大管组成的电路结构，能有效抑制共模干扰。其核心特性包括差分增益、共模抑制比(CMRR)和输入共模范围。在Cascode结构中，差分对可以显著提高整体增益性能。"
+    },
+    {
+      "id": "bc_6_2_3",
+      "label": "动态范围",
+      "node_type": "basic_concept",
+      "summary": "动态范围指电路能正常工作的输入/输出信号范围。在Cascode差分放大器中，输入共模范围和输出摆幅是关键的动态范围指标。两者往往存在矛盾关系，需要通过偏置设计和结构优化来平衡。",
+      "difficulty": 3,
+      "keywords": [
+        "输入范围",
+        "输出摆幅",
+        "饱和区"
+      ],
+      "formulas": [
+        "V_CM < V_be - Δ",
+        "V_o,min ≥ V_bn - V_TN"
+      ],
+      "applications": [
+        "放大器设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作区"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "动态范围指电路能正常工作的输入/输出信号范围。在Cascode差分放大器中，输入共模范围和输出摆幅是关键的动态范围指标。两者往往存在矛盾关系，需要通过偏置设计和结构优化来平衡。"
+    },
+    {
+      "id": "ct_6_2_1",
+      "label": "套筒式Cascode设计",
+      "node_type": "core_technology",
+      "summary": "套筒式Cascode采用CS-CG相同类型MOS管级联，结构紧凑但动态范围受限。关键技术包括：1) 固定偏置设计需权衡输入共模范围和输出摆幅；2) 采用自适应动态偏置可扩展输入范围；3) 源跟随器可实现电平移位，改善后级驱动。",
+      "difficulty": 4,
+      "keywords": [
+        "NMOS差分对",
+        "恒流负载",
+        "电平移位"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "套筒式Cascode采用CS-CG相同类型MOS管级联，结构紧凑但动态范围受限。关键技术包括：1) 固定偏置设计需权衡输入共模范围和输出摆幅；2) 采用自适应动态偏置可扩展输入范围；3) 源跟随器可实现电平移位，改善后级驱动。"
+    },
+    {
+      "id": "ct_6_2_2",
+      "label": "折叠式Cascode设计",
+      "node_type": "core_technology",
+      "summary": "折叠式Cascode采用CS-CG不同类型MOS管，通过增加偏置电流解决套筒式的动态范围矛盾。关键技术包括：1) 独立偏置设计使输入输出范围解耦；2) 输出级仅损失2(Δn+Δp)的摆幅；3) 可直接驱动下级无需电平移位。",
+      "difficulty": 4,
+      "keywords": [
+        "PMOS电流源",
+        "宽共模范围",
+        "直接耦合"
+      ],
+      "formulas": [
+        "V_CM ≤ V_CC + V_TN - Δp",
+        "V_CM ≥ V_TN + 2Δn"
+      ],
+      "applications": [
+        "宽范围放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "折叠式Cascode采用CS-CG不同类型MOS管，通过增加偏置电流解决套筒式的动态范围矛盾。关键技术包括：1) 独立偏置设计使输入输出范围解耦；2) 输出级仅损失2(Δn+Δp)的摆幅；3) 可直接驱动下级无需电平移位。"
+    },
+    {
+      "id": "ct_6_2_3",
+      "label": "正反馈负载控制",
+      "node_type": "core_technology",
+      "summary": "在OTA结构中采用交叉耦合的正反馈负载可显著提高增益。关键技术包括：1) 弱正反馈设计(g_mf < g_mD)确保线性放大；2) 强正反馈(g_mf > g_mD)可用于迟滞比较器；3) 电流极性分析确保稳定性。增益公式为Av = g_m/(g_mD - g_mf)·g_mo·R_o。",
+      "difficulty": 5,
+      "keywords": [
+        "交叉耦合",
+        "弱正反馈",
+        "迟滞特性"
+      ],
+      "formulas": [
+        "Av = g_m/(g_mD - g_mf)·g_mo·R_o"
+      ],
+      "applications": [
+        "高增益OTA",
+        "比较器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在OTA结构中采用交叉耦合的正反馈负载可显著提高增益。关键技术包括：1) 弱正反馈设计(g_mf < g_mD)确保线性放大；2) 强正反馈(g_mf > g_mD)可用于迟滞比较器；3) 电流极性分析确保稳定性。增益公式为Av = g_m/(g_mD - g_mf)·g_mo·R_o。"
+    },
+    {
+      "id": "ct_6_2_4",
+      "label": "动态尾电流调制",
+      "node_type": "core_technology",
+      "summary": "通过感应差分电流动态调整尾电流，实现静态低功耗和动态高驱动能力。关键技术包括：1) 静态时I1=I2，无额外功耗；2) 动态时(I1-I2)或(I2-I1)电流注入尾电流源；3) 显著改善负载驱动速度和带宽。",
+      "difficulty": 4,
+      "keywords": [
+        "电流镜",
+        "动态调整",
+        "带宽提升"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过感应差分电流动态调整尾电流，实现静态低功耗和动态高驱动能力。关键技术包括：1) 静态时I1=I2，无额外功耗；2) 动态时(I1-I2)或(I2-I1)电流注入尾电流源；3) 显著改善负载驱动速度和带宽。"
+    },
+    {
+      "id": "ca_6_2_1",
+      "label": "套筒式Cascode差分放大器",
+      "node_type": "circuit_application",
+      "summary": "采用NMOS差分对和Cascode恒流负载的全差分结构。特点：1) M5/M6保持CG结构形成CS-CG级联；2) 输入级为套筒式Cascode；3) 输出可采用单端或全差分。主要限制是固定偏置下输入输出范围矛盾。",
+      "difficulty": 4,
+      "keywords": [
+        "全差分",
+        "恒流负载",
+        "增益提升"
+      ],
+      "formulas": [],
+      "applications": [
+        "高增益前置放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用NMOS差分对和Cascode恒流负载的全差分结构。特点：1) M5/M6保持CG结构形成CS-CG级联；2) 输入级为套筒式Cascode；3) 输出可采用单端或全差分。主要限制是固定偏置下输入输出范围矛盾。"
+    },
+    {
+      "id": "ca_6_2_2",
+      "label": "自适应偏置套筒式结构",
+      "node_type": "circuit_application",
+      "summary": "改进的套筒式结构采用MD管实现动态偏置：1) Vbn随VS电位自适应调整；2) 解决高共模输入问题；3) 但输出动态范围问题仍未完全解决。需配合源跟随器(M11/M12)进行电平移位。",
+      "difficulty": 5,
+      "keywords": [
+        "动态偏置",
+        "源跟随器",
+        "共模扩展"
+      ],
+      "formulas": [],
+      "applications": [
+        "宽共模输入放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "改进的套筒式结构采用MD管实现动态偏置：1) Vbn随VS电位自适应调整；2) 解决高共模输入问题；3) 但输出动态范围问题仍未完全解决。需配合源跟随器(M11/M12)进行电平移位。"
+    },
+    {
+      "id": "ca_6_2_3",
+      "label": "OTA Cascode结构",
+      "node_type": "circuit_application",
+      "summary": "将Cascode转移到输出级的OTA设计：1) 保留高增益特性；2) 输出仅比CS级多损失2个过驱动电压；3) 消除输入共模上限限制；4) M12管提高电流匹配度。适合驱动容性负载。",
+      "difficulty": 4,
+      "keywords": [
+        "跨导放大器",
+        "容性驱动",
+        "失调抑制"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器",
+        "数据转换器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将Cascode转移到输出级的OTA设计：1) 保留高增益特性；2) 输出仅比CS级多损失2个过驱动电压；3) 消除输入共模上限限制；4) M12管提高电流匹配度。适合驱动容性负载。"
+    },
+    {
+      "id": "ca_6_2_4",
+      "label": "正反馈OTA差分输入级",
+      "node_type": "circuit_application",
+      "summary": "在M3/M4二极管负载基础上增加M5/M6交叉耦合正反馈：1) 静态时分流降低静态电流；2) 动态时电流极性相反增强输出幅度；3) 弱正反馈下保持线性放大；4) 强正反馈形成迟滞特性。",
+      "difficulty": 5,
+      "keywords": [
+        "交叉耦合",
+        "增益增强",
+        "迟滞比较"
+      ],
+      "formulas": [
+        "Av ≈ (g_m·R_o)/(1 - g_mf/g_mD)"
+      ],
+      "applications": [
+        "可编程增益放大",
+        "比较器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在M3/M4二极管负载基础上增加M5/M6交叉耦合正反馈：1) 静态时分流降低静态电流；2) 动态时电流极性相反增强输出幅度；3) 弱正反馈下保持线性放大；4) 强正反馈形成迟滞特性。"
+    },
+    {
+      "id": "ca_6_2_5",
+      "label": "折叠式Cascode差分放大器",
+      "node_type": "circuit_application",
+      "summary": "采用额外偏置电流的改进结构：1) 输入共模范围上限达V_CC+V_TN-Δp；2) 输出摆幅仅损失2(Δn+Δp)；3) 可直接驱动下级无需电平移位；4) 功耗较套筒式更高。",
+      "difficulty": 4,
+      "keywords": [
+        "宽动态范围",
+        "直接耦合",
+        "高功耗"
+      ],
+      "formulas": [
+        "V_BP1 = V_CC - 2Δp - V_TP"
+      ],
+      "applications": [
+        "多级放大",
+        "ADC前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用额外偏置电流的改进结构：1) 输入共模范围上限达V_CC+V_TN-Δp；2) 输出摆幅仅损失2(Δn+Δp)；3) 可直接驱动下级无需电平移位；4) 功耗较套筒式更高。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_2_1",
+      "target_id": "ct_6_2_1",
+      "relationship": "enables",
+      "description": "Cascode结构的高增益特性使能了套筒式差分放大器的设计",
+      "weight": 0.9,
+      "evidence": "Cascode差分放大器的基本出发点在于进一步提高差分电压增益",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_2",
+      "target_id": "ct_6_2_1",
+      "relationship": "supports",
+      "description": "差分对的对称特性支持套筒式Cascode的实现",
+      "weight": 0.8,
+      "evidence": "NMOS差分对保留M5/M6的CG结构，形成CS-CG级联",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_2_3",
+      "target_id": "ct_6_2_1",
+      "relationship": "supports",
+      "description": "动态范围分析是套筒式设计的关键支撑",
+      "weight": 0.85,
+      "evidence": "必须考虑输入共模信号大范围变化对偏置和输出动态范围的影响",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_1",
+      "target_id": "ca_6_2_1",
+      "relationship": "implements",
+      "description": "套筒式设计方法实现了基本差分放大器电路",
+      "weight": 0.9,
+      "evidence": "构成套筒式Cascode差分输入级，差分对增益显著提高",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_1",
+      "target_id": "ca_6_2_2",
+      "relationship": "implements",
+      "description": "自适应偏置技术改进了基本套筒式结构",
+      "weight": 0.85,
+      "evidence": "采用自适应即动态偏置才能解决此类问题",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_3",
+      "target_id": "ca_6_2_4",
+      "relationship": "implements",
+      "description": "正反馈控制技术实现了高增益OTA设计",
+      "weight": 0.9,
+      "evidence": "带正反馈的负载控制的跨导运算放大器差分输入级",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_2",
+      "target_id": "ca_6_2_5",
+      "relationship": "implements",
+      "description": "折叠式设计方法实现了宽动态范围放大器",
+      "weight": 0.9,
+      "evidence": "折叠式Cascode差分对则有效解决了套筒式差分对中输入和输出动态范围无法兼顾的矛盾",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_2_4",
+      "target_id": "ca_6_2_3",
+      "relationship": "applies_to",
+      "description": "动态尾电流调制技术应用于OTA设计",
+      "weight": 0.8,
+      "evidence": "动态尾电流调制的OTA差分输入级显著地改善了电路负载驱动的高速特性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_6_2_1",
+      "target_id": "ca_6_2_2",
+      "relationship": "extends",
+      "description": "自适应偏置结构扩展了基本套筒式的应用范围",
+      "weight": 0.85,
+      "evidence": "解决了扩展共模输入范围的问题",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_6_2_4",
+      "target_id": "ca_6_2_3",
+      "relationship": "complements",
+      "description": "正反馈OTA与传统OTA在增益和速度上互补",
+      "weight": 0.75,
+      "evidence": "正反馈控制下的增益关系通常只在弱正反馈状态下成立",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "6.2",
+  "title": "高增益差分输入级",
+  "extraction_timestamp": "2025-07-08T16:39:50.910438"
+}

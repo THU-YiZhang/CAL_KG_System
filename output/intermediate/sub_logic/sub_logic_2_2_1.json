@@ -1,0 +1,174 @@
+{
+  "nodes": [
+    {
+      "id": "bc_2_2_1_1",
+      "label": "反相放大器",
+      "node_type": "basic_concept",
+      "summary": "一种基本运算放大器电路配置，输入信号通过输入电阻连接到反相输入端，输出信号与输入信号相位相反。其增益由反馈电阻和输入电阻的比值决定。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "反相输入",
+        "增益"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "信号放大",
+        "信号反相"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一种基本运算放大器电路配置，输入信号通过输入电阻连接到反相输入端，输出信号与输入信号相位相反。其增益由反馈电阻和输入电阻的比值决定。"
+    },
+    {
+      "id": "bc_2_2_1_2",
+      "label": "反馈电阻(Rf)",
+      "node_type": "basic_concept",
+      "summary": "连接运算放大器输出端和反相输入端的电阻，决定放大器增益的关键元件之一。其阻值与输入电阻共同决定放大器的闭环增益。",
+      "difficulty": 2,
+      "keywords": [
+        "负反馈",
+        "增益控制",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "增益调节"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电阻特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "连接运算放大器输出端和反相输入端的电阻，决定放大器增益的关键元件之一。其阻值与输入电阻共同决定放大器的闭环增益。"
+    },
+    {
+      "id": "bc_2_2_1_3",
+      "label": "输入电阻(Rin)",
+      "node_type": "basic_concept",
+      "summary": "连接信号源和运算放大器反相输入端的电阻，决定输入电流大小和放大器输入阻抗的关键元件。其阻值与反馈电阻共同决定放大器的闭环增益。",
+      "difficulty": 2,
+      "keywords": [
+        "输入阻抗",
+        "信号耦合",
+        "电流限制"
+      ],
+      "formulas": [],
+      "applications": [
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电阻特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "连接信号源和运算放大器反相输入端的电阻，决定输入电流大小和放大器输入阻抗的关键元件。其阻值与反馈电阻共同决定放大器的闭环增益。"
+    },
+    {
+      "id": "ct_2_2_1_1",
+      "label": "反相放大器增益计算",
+      "node_type": "core_technology",
+      "summary": "通过反馈电阻和输入电阻的比值计算反相放大器的电压增益。计算公式为Av = -Rf/Rin，其中负号表示输出信号与输入信号相位相反。",
+      "difficulty": 3,
+      "keywords": [
+        "增益公式",
+        "负号表示反相",
+        "电阻比值"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过反馈电阻和输入电阻的比值计算反相放大器的电压增益。计算公式为Av = -Rf/Rin，其中负号表示输出信号与输入信号相位相反。"
+    },
+    {
+      "id": "ca_2_2_1_1",
+      "label": "基本反相放大器电路",
+      "node_type": "circuit_application",
+      "summary": "由运算放大器、反馈电阻和输入电阻构成的基本放大电路。输入信号通过输入电阻连接到反相输入端，反馈电阻连接输出端和反相输入端，实现信号放大和反相功能。",
+      "difficulty": 4,
+      "keywords": [
+        "运算放大器电路",
+        "负反馈配置",
+        "信号处理"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "音频放大",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由运算放大器、反馈电阻和输入电阻构成的基本放大电路。输入信号通过输入电阻连接到反相输入端，反馈电阻连接输出端和反相输入端，实现信号放大和反相功能。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_2_1_1",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "enables",
+      "description": "反相放大器的基本概念使能了其增益计算技术的实现",
+      "weight": 0.9,
+      "evidence": "反相放大器的定义是增益计算的基础",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_1_2",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "supports",
+      "description": "反馈电阻的概念支撑了增益计算技术的实现",
+      "weight": 0.8,
+      "evidence": "增益公式中直接使用反馈电阻参数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_1_3",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "supports",
+      "description": "输入电阻的概念支撑了增益计算技术的实现",
+      "weight": 0.8,
+      "evidence": "增益公式中直接使用输入电阻参数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_2_2_1_1",
+      "target_id": "ca_2_2_1_1",
+      "relationship": "implements",
+      "description": "增益计算技术实现了基本反相放大器电路的设计",
+      "weight": 0.9,
+      "evidence": "电路设计中需要应用增益计算公式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_2_2_1_2",
+      "target_id": "bc_2_2_1_3",
+      "relationship": "relates_to",
+      "description": "反馈电阻和输入电阻在增益计算中具有相关性",
+      "weight": 0.7,
+      "evidence": "两者共同决定放大器增益",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "2.2.1",
+  "title": "反相放大器",
+  "extraction_timestamp": "2025-07-08T15:29:33.663224",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

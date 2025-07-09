@@ -1,0 +1,7 @@
+{
+  "section_num": "1.1.1",
+  "title": "电阻元件",
+  "level": 3,
+  "content": "电阻是最基本的电路元件，遵循欧姆定律：V = IR。其中V是电压，I是电流，R是电阻值。\n\n电阻的功率消耗为：P = I²R = V²/R = VI",
+  "subsections": []
+}

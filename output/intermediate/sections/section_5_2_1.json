@@ -1,0 +1,7 @@
+{
+  "section_num": "5.2.1",
+  "title": "Buck变换器",
+  "level": 3,
+  "content": "Buck变换器是降压型DC-DC变换器：\nVout = D × Vin\n\n其中D是占空比。",
+  "subsections": []
+}

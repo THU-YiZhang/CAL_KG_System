@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_6_1",
+      "label": "反馈放大器配置",
+      "node_type": "basic_concept",
+      "summary": "反馈放大器是一种通过将输出信号的一部分反馈到输入端来改善性能的放大器。不同的配置会影响放大器的增益、带宽和稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "反馈",
+        "放大器",
+        "配置"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈放大器是一种通过将输出信号的一部分反馈到输入端来改善性能的放大器。不同的配置会影响放大器的增益、带宽和稳定性。"
+    },
+    {
+      "id": "bc_7_6_2",
+      "label": "输入阻抗和输出阻抗",
+      "node_type": "basic_concept",
+      "summary": "输入阻抗是放大器输入端对信号源的阻抗，输出阻抗是放大器输出端对负载的阻抗。反馈可以显著影响这些阻抗。",
+      "difficulty": 2,
+      "keywords": [
+        "输入阻抗",
+        "输出阻抗",
+        "反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "阻抗匹配",
+        "信号传输"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入阻抗是放大器输入端对信号源的阻抗，输出阻抗是放大器输出端对负载的阻抗。反馈可以显著影响这些阻抗。"
+    },
+    {
+      "id": "bc_7_6_3",
+      "label": "频率特性",
+      "node_type": "basic_concept",
+      "summary": "频率特性描述了放大器在不同频率下的响应，包括增益和相位的变化。反馈会影响频率响应。",
+      "difficulty": 2,
+      "keywords": [
+        "频率响应",
+        "带宽",
+        "相位"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率特性描述了放大器在不同频率下的响应，包括增益和相位的变化。反馈会影响频率响应。"
+    },
+    {
+      "id": "ct_7_6_1",
+      "label": "反馈放大器分析",
+      "node_type": "core_technology",
+      "summary": "通过信号流分析和经典反馈理论，可以系统地分析反馈放大器的性能，包括增益、阻抗和稳定性。",
+      "difficulty": 3,
+      "keywords": [
+        "信号流分析",
+        "反馈理论",
+        "性能分析"
+      ],
+      "formulas": [
+        "经典反馈理论"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过信号流分析和经典反馈理论，可以系统地分析反馈放大器的性能，包括增益、阻抗和稳定性。"
+    },
+    {
+      "id": "ct_7_6_2",
+      "label": "频率域分析",
+      "node_type": "core_technology",
+      "summary": "在频率域中分析反馈放大器的响应，可以评估其带宽和稳定性，特别是在反馈电阻位置变化时的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "频率域",
+        "带宽",
+        "稳定性"
+      ],
+      "formulas": [
+        "频率响应公式"
+      ],
+      "applications": [
+        "高频电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在频率域中分析反馈放大器的响应，可以评估其带宽和稳定性，特别是在反馈电阻位置变化时的影响。"
+    },
+    {
+      "id": "ct_7_6_3",
+      "label": "补偿技术",
+      "node_type": "core_technology",
+      "summary": "通过简单的补偿技术，如正反馈频率补偿，可以改善反馈放大器的性能，特别是在低电压低功耗应用中。",
+      "difficulty": 3,
+      "keywords": [
+        "补偿技术",
+        "正反馈",
+        "低功耗"
+      ],
+      "formulas": [
+        "补偿网络设计"
+      ],
+      "applications": [
+        "低功耗放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过简单的补偿技术，如正反馈频率补偿，可以改善反馈放大器的性能，特别是在低电压低功耗应用中。"
+    },
+    {
+      "id": "ca_7_6_1",
+      "label": "电流反馈运算放大器",
+      "node_type": "circuit_application",
+      "summary": "电流反馈运算放大器（CFOA）是一种高性能放大器，通过反馈电阻的位置优化可以实现宽带宽和高稳定性。",
+      "difficulty": 4,
+      "keywords": [
+        "CFOA",
+        "宽带宽",
+        "高稳定性"
+      ],
+      "formulas": [
+        "带宽计算公式"
+      ],
+      "applications": [
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流反馈运算放大器（CFOA）是一种高性能放大器，通过反馈电阻的位置优化可以实现宽带宽和高稳定性。"
+    },
+    {
+      "id": "ca_7_6_2",
+      "label": "低电压低功耗三级放大器",
+      "node_type": "circuit_application",
+      "summary": "通过正反馈频率补偿技术，设计低电压低功耗的三级放大器，适用于便携式设备。",
+      "difficulty": 4,
+      "keywords": [
+        "低电压",
+        "低功耗",
+        "三级放大器"
+      ],
+      "formulas": [
+        "功耗计算公式"
+      ],
+      "applications": [
+        "便携式设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过正反馈频率补偿技术，设计低电压低功耗的三级放大器，适用于便携式设备。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_6_1",
+      "target_id": "ct_7_6_1",
+      "relationship": "enables",
+      "description": "反馈放大器配置的基本概念使能了反馈放大器的分析方法。",
+      "weight": 0.8,
+      "evidence": "参考文献[1]和[8]讨论了反馈放大器的配置和分析方法。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_6_2",
+      "target_id": "ct_7_6_1",
+      "relationship": "supports",
+      "description": "输入输出阻抗的概念支撑了反馈放大器的性能分析。",
+      "weight": 0.7,
+      "evidence": "参考文献[2]和[9]分析了反馈对阻抗的影响。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_6_3",
+      "target_id": "ct_7_6_2",
+      "relationship": "enables",
+      "description": "频率特性的基本概念使能了频率域分析方法。",
+      "weight": 0.8,
+      "evidence": "参考文献[5]和[9]讨论了频率特性的分析。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_6_1",
+      "target_id": "ca_7_6_1",
+      "relationship": "implements",
+      "description": "反馈放大器的分析方法实现了电流反馈运算放大器的设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[5]和[6]讨论了CFOA的设计和分析。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_6_3",
+      "target_id": "ca_7_6_2",
+      "relationship": "implements",
+      "description": "补偿技术实现了低电压低功耗三级放大器的设计。",
+      "weight": 0.9,
+      "evidence": "参考文献[7]讨论了正反馈频率补偿的应用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_6_1",
+      "target_id": "ct_7_6_2",
+      "relationship": "complements",
+      "description": "反馈放大器分析和频率域分析是互补的分析方法。",
+      "weight": 0.7,
+      "evidence": "参考文献[10]和[11]讨论了两种分析方法的结合。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "7.6",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:41:44.504542"
+}

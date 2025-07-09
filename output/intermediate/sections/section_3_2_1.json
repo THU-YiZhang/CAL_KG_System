@@ -1,0 +1,7 @@
+{
+  "section_num": "3.2.1",
+  "title": "一阶低通滤波器",
+  "level": 3,
+  "content": "传递函数：H(s) = 1/(1 + sRC)\n\n截止频率：fc = 1/(2πRC)",
+  "subsections": []
+}

@@ -1,0 +1,295 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_4_1",
+      "label": "恒流源",
+      "node_type": "basic_concept",
+      "summary": "恒流源是一种在输出电压变化时保持输出电流不变的电路元件。其等效直流阻抗随输出电压变化而变化，从而在电源电压改变时通过调节直流电阻的分压比保持输出电压恒定。恒流源在饱和区的特性使其支路电流与电源电压近似无关。",
+      "difficulty": 2,
+      "keywords": [
+        "恒流特性",
+        "直流阻抗",
+        "饱和区"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路",
+        "电流镜"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管饱和区特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒流源是一种在输出电压变化时保持输出电流不变的电路元件。其等效直流阻抗随输出电压变化而变化，从而在电源电压改变时通过调节直流电阻的分压比保持输出电压恒定。恒流源在饱和区的特性使其支路电流与电源电压近似无关。"
+    },
+    {
+      "id": "bc_3_4_2",
+      "label": "PSRR",
+      "node_type": "basic_concept",
+      "summary": "电源抑制比（PSRR）是衡量电路对电源电压变化抑制能力的指标。高PSRR意味着电路对电源噪声的抑制能力强，支路电流更稳定。在偏置电路中，PSRR的提高依赖于高阻与低阻的相互配合控制结构。",
+      "difficulty": 2,
+      "keywords": [
+        "电源抑制比",
+        "噪声抑制",
+        "高阻低阻"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路",
+        "电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "小信号分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制比（PSRR）是衡量电路对电源电压变化抑制能力的指标。高PSRR意味着电路对电源噪声的抑制能力强，支路电流更稳定。在偏置电路中，PSRR的提高依赖于高阻与低阻的相互配合控制结构。"
+    },
+    {
+      "id": "bc_3_4_3",
+      "label": "输出阻抗倍增效应",
+      "node_type": "basic_concept",
+      "summary": "输出阻抗倍增效应是通过CG MOS管的电压转换作用实现的。电阻R的一端接地，另一端接CG NMOS管的源端，其电位变化通过本征增益关系放大，使得输出阻抗近似为电阻R的CG增益倍。这种效应显著提高了电流源的输出阻抗和PSRR。",
+      "difficulty": 3,
+      "keywords": [
+        "输出阻抗",
+        "CG管",
+        "本征增益"
+      ],
+      "formulas": [
+        "R_o = g_m r_o R = A_v-CG R"
+      ],
+      "applications": [
+        "电流源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "CG放大器"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出阻抗倍增效应是通过CG MOS管的电压转换作用实现的。电阻R的一端接地，另一端接CG NMOS管的源端，其电位变化通过本征增益关系放大，使得输出阻抗近似为电阻R的CG增益倍。这种效应显著提高了电流源的输出阻抗和PSRR。"
+    },
+    {
+      "id": "ct_3_4_1",
+      "label": "电流镜互偏结构",
+      "node_type": "core_technology",
+      "summary": "电流镜互偏结构通过上下两个线性与非线性电流镜的互锁或互偏构成。每条支路中都有一个恒流源高阻与一个MOS二极管低阻的串联匹配结构，电源电压的变化主要降落在恒流MOS管的V_DS上。这种结构实现了与电源电压无关的偏置电流，提高了PSRR性能。",
+      "difficulty": 3,
+      "keywords": [
+        "电流镜",
+        "互偏置",
+        "高阻低阻"
+      ],
+      "formulas": [],
+      "applications": [
+        "V_TH偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流镜互偏结构通过上下两个线性与非线性电流镜的互锁或互偏构成。每条支路中都有一个恒流源高阻与一个MOS二极管低阻的串联匹配结构，电源电压的变化主要降落在恒流MOS管的V_DS上。这种结构实现了与电源电压无关的偏置电流，提高了PSRR性能。"
+    },
+    {
+      "id": "ct_3_4_2",
+      "label": "Cascode输出阻抗倍增",
+      "node_type": "core_technology",
+      "summary": "Cascode结构通过多级MOS管串联实现输出阻抗的倍增。采用辅助放大电路的反馈控制可以进一步增加Cascode管的有效跨导，达到与多级Cascode相同的增益倍增效果。输出阻抗的倍增使电流源的PSRR和稳定性进一步提高。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "输出阻抗",
+        "反馈控制"
+      ],
+      "formulas": [
+        "r_o ≈ (1+A) g_m r_ds1 r_ds2"
+      ],
+      "applications": [
+        "高精度电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode结构通过多级MOS管串联实现输出阻抗的倍增。采用辅助放大电路的反馈控制可以进一步增加Cascode管的有效跨导，达到与多级Cascode相同的增益倍增效果。输出阻抗的倍增使电流源的PSRR和稳定性进一步提高。"
+    },
+    {
+      "id": "ct_3_4_3",
+      "label": "Wilson电流镜",
+      "node_type": "core_technology",
+      "summary": "Wilson电流镜通过引入附加的MOS管降低V_DS压降的不匹配，提高电流源的匹配精度。其动态反馈控制过程在启动阶段为正反馈以激励启动，在稳定阶段为负反馈以稳定平衡点。Wilson结构通过反馈控制实现了输出阻抗的倍增。",
+      "difficulty": 4,
+      "keywords": [
+        "Wilson电流镜",
+        "反馈控制",
+        "输出阻抗"
+      ],
+      "formulas": [
+        "r_o ≈ A_v3 r_o5"
+      ],
+      "applications": [
+        "高匹配精度电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Wilson电流镜通过引入附加的MOS管降低V_DS压降的不匹配，提高电流源的匹配精度。其动态反馈控制过程在启动阶段为正反馈以激励启动，在稳定阶段为负反馈以稳定平衡点。Wilson结构通过反馈控制实现了输出阻抗的倍增。"
+    },
+    {
+      "id": "ca_3_4_1",
+      "label": "V_TH互偏置电路",
+      "node_type": "circuit_application",
+      "summary": "V_TH互偏置电路由PMOS与NMOS上下两个电流镜相互耦合构成。其中一个为线性电流源，另一个为非线性电流源，通过互偏置结构实现与电源电压无关的偏置电流。电路设计需考虑动态过程，包括上电启动的正反馈控制和平衡点的负反馈稳定。",
+      "difficulty": 4,
+      "keywords": [
+        "V_TH偏置",
+        "互偏置",
+        "正反馈负反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成电路偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "V_TH互偏置电路由PMOS与NMOS上下两个电流镜相互耦合构成。其中一个为线性电流源，另一个为非线性电流源，通过互偏置结构实现与电源电压无关的偏置电流。电路设计需考虑动态过程，包括上电启动的正反馈控制和平衡点的负反馈稳定。"
+    },
+    {
+      "id": "ca_3_4_2",
+      "label": "含启动电路的V_TH互偏置电路",
+      "node_type": "circuit_application",
+      "summary": "含启动电路的V_TH互偏置电路通过非线性结构的引入，实现了不同范围和条件下的反馈控制机制。初始为正反馈以利于激励启动，稳定阶段为负反馈以利于平衡点的稳定，最终达到并稳定在具有额定电流和电压输出的唯一静态工作点。",
+      "difficulty": 4,
+      "keywords": [
+        "启动电路",
+        "非线性结构",
+        "反馈控制"
+      ],
+      "formulas": [],
+      "applications": [
+        "高稳定性偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "含启动电路的V_TH互偏置电路通过非线性结构的引入，实现了不同范围和条件下的反馈控制机制。初始为正反馈以利于激励启动，稳定阶段为负反馈以利于平衡点的稳定，最终达到并稳定在具有额定电流和电压输出的唯一静态工作点。"
+    },
+    {
+      "id": "ca_3_4_3",
+      "label": "改进的Wilson偏置电路",
+      "node_type": "circuit_application",
+      "summary": "改进的Wilson偏置电路通过引入移位电平MOS管，使工作点匹配，提高了电流源的匹配精度。其动态反馈控制过程与基本的Wilson电流镜相同，但通过反馈控制极大地提高了输出阻抗，适用于高精度电流源设计。",
+      "difficulty": 4,
+      "keywords": [
+        "Wilson改进",
+        "匹配精度",
+        "反馈控制"
+      ],
+      "formulas": [
+        "r_o ≈ A_v3 r_o5"
+      ],
+      "applications": [
+        "高精度电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "改进的Wilson偏置电路通过引入移位电平MOS管，使工作点匹配，提高了电流源的匹配精度。其动态反馈控制过程与基本的Wilson电流镜相同，但通过反馈控制极大地提高了输出阻抗，适用于高精度电流源设计。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_4_1",
+      "target_id": "ct_3_4_1",
+      "relationship": "enables",
+      "description": "恒流源的特性使能了电流镜互偏结构的实现，通过恒流源的高阻特性实现了与电源电压无关的偏置电流。",
+      "weight": 0.9,
+      "evidence": "采用恒流源代替R_1是一种必然的选择。从静态特性看，当恒流源两端的输出电压V_DS变化时，输出电流I_DS保持不变，等效于输出直流阻抗变化。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_4_2",
+      "target_id": "ct_3_4_1",
+      "relationship": "supports",
+      "description": "PSRR的概念支撑了电流镜互偏结构的设计目标，即提高偏置电路的电源抑制比。",
+      "weight": 0.8,
+      "evidence": "偏置电路正是用来产生与V_CC无关的电流偏置，而在偏置电路稳定之前，无法由外界提供独立的恒流源。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_4_3",
+      "target_id": "ct_3_4_2",
+      "relationship": "enables",
+      "description": "输出阻抗倍增效应的原理使能了Cascode输出阻抗倍增技术的实现。",
+      "weight": 0.9,
+      "evidence": "输出阻抗R_o为电流定义电阻R的CG增益A_v-CG倍。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_4_1",
+      "target_id": "ca_3_4_1",
+      "relationship": "implements",
+      "description": "电流镜互偏结构实现了V_TH互偏置电路的设计，提供了与电源电压无关的偏置电流。",
+      "weight": 0.9,
+      "evidence": "基于与MOS管恒流控制机制的类比，得到图3-6所示的两电流镜相互作用的偏置结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_4_2",
+      "target_id": "ca_3_4_3",
+      "relationship": "applies_to",
+      "description": "Cascode输出阻抗倍增技术应用于改进的Wilson偏置电路，提高了其输出阻抗和匹配精度。",
+      "weight": 0.8,
+      "evidence": "改进的Wilson电流源通过使工作点匹配，提高了电流源的匹配精度。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_4_3",
+      "target_id": "ca_3_4_2",
+      "relationship": "applies_to",
+      "description": "Wilson电流镜技术应用于含启动电路的V_TH互偏置电路，实现了动态反馈控制。",
+      "weight": 0.8,
+      "evidence": "初始为正反馈，平衡点下为负反馈，最后达到并稳定在具有额定电流和电压输出的唯一静态工作点。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_4_1",
+      "target_id": "bc_3_4_3",
+      "relationship": "relates_to",
+      "description": "恒流源与输出阻抗倍增效应相关，两者都涉及电流的稳定性和阻抗特性。",
+      "weight": 0.7,
+      "evidence": "恒流源直流阻抗的变化，使得当直流电源电压改变时，通过恒流源直流电阻相应的变化调节直流电阻的分压比，保持输出电压恒定。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_3_4_1",
+      "target_id": "ct_3_4_3",
+      "relationship": "complements",
+      "description": "电流镜互偏结构与Wilson电流镜互补，前者提供基本结构，后者提供改进方法。",
+      "weight": 0.8,
+      "evidence": "基本的Wilson电流镜解决了输出阻抗的问题，但同样没有解决输入一输出电流源严格匹配的问题。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_3_4_1",
+      "target_id": "ca_3_4_2",
+      "relationship": "extends",
+      "description": "V_TH互偏置电路扩展为含启动电路的版本，增加了动态反馈控制功能。",
+      "weight": 0.9,
+      "evidence": "正是由于非线性结构的引入，才导致了不同范围和条件下系统不同的反馈控制机制。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.4",
+  "title": "电流镜互偏结构",
+  "extraction_timestamp": "2025-07-08T16:34:40.527643"
+}

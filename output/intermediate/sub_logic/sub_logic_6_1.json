@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_1_1",
+      "label": "奈奎斯特采样定理",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特采样定理是信号处理中的基本定理，指出为了准确重建一个连续时间信号，采样频率必须大于信号最高频率的两倍。这个频率称为奈奎斯特频率。定理确保了信号在采样过程中不会丢失信息，避免了混叠现象的发生。",
+      "difficulty": 2,
+      "keywords": [
+        "采样定理",
+        "奈奎斯特频率",
+        "混叠"
+      ],
+      "formulas": [
+        "fs > 2 * fmax"
+      ],
+      "applications": [
+        "信号采样",
+        "模数转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统",
+        "傅里叶变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特采样定理是信号处理中的基本定理，指出为了准确重建一个连续时间信号，采样频率必须大于信号最高频率的两倍。这个频率称为奈奎斯特频率。定理确保了信号在采样过程中不会丢失信息，避免了混叠现象的发生。"
+    },
+    {
+      "id": "ct_6_1_1",
+      "label": "采样频率选择",
+      "node_type": "core_technology",
+      "summary": "采样频率选择是实现信号采样的核心技术。根据奈奎斯特采样定理，采样频率必须大于信号最高频率的两倍。在实际应用中，通常选择更高的采样频率（如2.5倍或更高）以提供额外的保护带宽，防止混叠并考虑滤波器的不理想特性。",
+      "difficulty": 3,
+      "keywords": [
+        "采样频率",
+        "保护带宽",
+        "抗混叠"
+      ],
+      "formulas": [
+        "fs = k * fmax, k > 2"
+      ],
+      "applications": [
+        "模数转换器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采样频率选择是实现信号采样的核心技术。根据奈奎斯特采样定理，采样频率必须大于信号最高频率的两倍。在实际应用中，通常选择更高的采样频率（如2.5倍或更高）以提供额外的保护带宽，防止混叠并考虑滤波器的不理想特性。"
+    },
+    {
+      "id": "ca_6_1_1",
+      "label": "模数转换器前端设计",
+      "node_type": "circuit_application",
+      "summary": "模数转换器前端设计中必须考虑采样定理的应用。典型设计包括抗混叠滤波器（低通滤波器）和采样保持电路。抗混叠滤波器用于限制输入信号的最高频率，确保满足奈奎斯特采样条件；采样保持电路则实现信号的精确采样。",
+      "difficulty": 4,
+      "keywords": [
+        "ADC",
+        "抗混叠滤波器",
+        "采样保持"
+      ],
+      "formulas": [
+        "截止频率 = fs/2.5"
+      ],
+      "applications": [
+        "数据采集系统",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模数转换器前端设计中必须考虑采样定理的应用。典型设计包括抗混叠滤波器（低通滤波器）和采样保持电路。抗混叠滤波器用于限制输入信号的最高频率，确保满足奈奎斯特采样条件；采样保持电路则实现信号的精确采样。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_1_1",
+      "target_id": "ct_6_1_1",
+      "relationship": "enables",
+      "description": "奈奎斯特采样定理为采样频率选择提供了理论基础",
+      "weight": 0.9,
+      "evidence": "采样频率必须大于信号最高频率的两倍",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_1_1",
+      "target_id": "ca_6_1_1",
+      "relationship": "implements",
+      "description": "采样频率选择技术直接应用于模数转换器前端设计",
+      "weight": 0.8,
+      "evidence": "实际应用中通常选择更高的采样频率",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_1_1",
+      "target_id": "ca_6_1_1",
+      "relationship": "supports",
+      "description": "奈奎斯特采样定理支撑模数转换器设计的理论基础",
+      "weight": 0.7,
+      "evidence": "确保信号在采样过程中不会丢失信息",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.1",
+  "title": "采样定理",
+  "extraction_timestamp": "2025-07-08T15:32:11.478656",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

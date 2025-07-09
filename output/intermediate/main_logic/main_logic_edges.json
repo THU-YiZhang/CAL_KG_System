@@ -1,0 +1,34 @@
+[
+  {
+    "source_id": "main_2",
+    "target_id": "main_3",
+    "relationship": "depends_on",
+    "description": "电流镜设计需要精确的MOS管模型参数",
+    "weight": 0.9,
+    "reasoning": "器件特性决定偏置电路精度"
+  },
+  {
+    "source_id": "main_3",
+    "target_id": "main_4",
+    "relationship": "builds_on",
+    "description": "差分对需要高精度电流源作为尾电流",
+    "weight": 0.85,
+    "reasoning": "偏置电路为放大电路提供工作点"
+  },
+  {
+    "source_id": "main_4",
+    "target_id": "main_5",
+    "relationship": "applies_to",
+    "description": "差分放大器是运放的核心输入级",
+    "weight": 0.95,
+    "reasoning": "稳定性分析需基于具体放大电路"
+  },
+  {
+    "source_id": "main_5",
+    "target_id": "main_6",
+    "relationship": "complements",
+    "description": "噪声分析与稳定性设计共同决定系统鲁棒性",
+    "weight": 0.75,
+    "reasoning": "PSRR影响闭环稳定性"
+  }
+]

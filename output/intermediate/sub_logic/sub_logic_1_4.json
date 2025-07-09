@@ -1,0 +1,388 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_4_1",
+      "label": "MOS管饱和I-V方程",
+      "node_type": "basic_concept",
+      "summary": "MOS管在饱和条件下的电流-电压方程，描述了MOS管的静态特性，是CMOS电路设计的基础模型。方程表明输出电流受栅源电压V_GS和源漏电压V_DS的控制，其中V_GS为主控电压，V_DS为辅控电压。",
+      "difficulty": 2,
+      "keywords": [
+        "MOS管",
+        "饱和条件",
+        "I-V方程",
+        "V_GS",
+        "V_DS"
+      ],
+      "formulas": [
+        "I_D = (1/2)μ_nC_ox(W/L)(V_GS - V_th)^2(1 + λV_DS)"
+      ],
+      "applications": [
+        "静态工作点设计",
+        "偏置电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "MOS管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管在饱和条件下的电流-电压方程，描述了MOS管的静态特性，是CMOS电路设计的基础模型。方程表明输出电流受栅源电压V_GS和源漏电压V_DS的控制，其中V_GS为主控电压，V_DS为辅控电压。"
+    },
+    {
+      "id": "bc_1_4_2",
+      "label": "跨导g_m",
+      "node_type": "basic_concept",
+      "summary": "跨导g_m表示栅源电压V_GS对输出电流I_D的控制能力，定义为输出电流变化量与栅源电压变化量的比值，反映了MOS管的放大能力。",
+      "difficulty": 2,
+      "keywords": [
+        "跨导",
+        "g_m",
+        "放大能力",
+        "V_GS"
+      ],
+      "formulas": [
+        "g_m = ∂I_D/∂V_GS = μ_nC_ox(W/L)(V_GS - V_th)"
+      ],
+      "applications": [
+        "小信号放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管I-V方程"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨导g_m表示栅源电压V_GS对输出电流I_D的控制能力，定义为输出电流变化量与栅源电压变化量的比值，反映了MOS管的放大能力。"
+    },
+    {
+      "id": "bc_1_4_3",
+      "label": "输出导纳g_d",
+      "node_type": "basic_concept",
+      "summary": "输出导纳g_d表示源漏电压V_DS对输出电流I_D的调制能力，定义为输出电流变化量与源漏电压变化量的比值，反映了MOS管的输出阻抗特性。",
+      "difficulty": 2,
+      "keywords": [
+        "输出导纳",
+        "g_d",
+        "输出阻抗",
+        "V_DS"
+      ],
+      "formulas": [
+        "g_d = ∂I_D/∂V_DS = λI_D"
+      ],
+      "applications": [
+        "小信号放大电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管I-V方程"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出导纳g_d表示源漏电压V_DS对输出电流I_D的调制能力，定义为输出电流变化量与源漏电压变化量的比值，反映了MOS管的输出阻抗特性。"
+    },
+    {
+      "id": "bc_1_4_4",
+      "label": "支路电流连续性条件",
+      "node_type": "basic_concept",
+      "summary": "电路分析中的基本约束条件，指在任何时刻（静态或动态），流入和流出电路节点的电流必须保持平衡，即总电流变化量守恒。",
+      "difficulty": 1,
+      "keywords": [
+        "电流连续性",
+        "基尔霍夫电流定律",
+        "电路约束"
+      ],
+      "formulas": [
+        "ΣI_in = ΣI_out"
+      ],
+      "applications": [
+        "静态分析",
+        "动态分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电路分析中的基本约束条件，指在任何时刻（静态或动态），流入和流出电路节点的电流必须保持平衡，即总电流变化量守恒。"
+    },
+    {
+      "id": "ct_1_4_1",
+      "label": "静态直流分析法",
+      "node_type": "core_technology",
+      "summary": "利用MOS管的I-V直流方程和支路电流连续性条件，列出方程求解电路的直流工作点和交流特性。该方法直观简单，适用于静态工作点设计和偏置电路分析。",
+      "difficulty": 3,
+      "keywords": [
+        "静态分析",
+        "直流工作点",
+        "偏置电路"
+      ],
+      "formulas": [
+        "I_D = (1/2)μ_nC_ox(W/L)(V_GS - V_th)^2(1 + λV_DS)"
+      ],
+      "applications": [
+        "偏置电路设计",
+        "静态工作点确定"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用MOS管的I-V直流方程和支路电流连续性条件，列出方程求解电路的直流工作点和交流特性。该方法直观简单，适用于静态工作点设计和偏置电路分析。"
+    },
+    {
+      "id": "ct_1_4_2",
+      "label": "交流小信号等效电路法",
+      "node_type": "core_technology",
+      "summary": "忽略静态工作点信息，通过建立小信号等效电路模型，分析电路的交流特性。该方法利用跨导g_m和输出导纳g_d等参数，计算电路的增益和频率响应。",
+      "difficulty": 3,
+      "keywords": [
+        "小信号分析",
+        "等效电路",
+        "交流特性"
+      ],
+      "formulas": [
+        "g_m = ∂I_D/∂V_GS",
+        "g_d = ∂I_D/∂V_DS"
+      ],
+      "applications": [
+        "放大电路设计",
+        "频率响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "忽略静态工作点信息，通过建立小信号等效电路模型，分析电路的交流特性。该方法利用跨导g_m和输出导纳g_d等参数，计算电路的增益和频率响应。"
+    },
+    {
+      "id": "ct_1_4_3",
+      "label": "类比电路技术",
+      "node_type": "core_technology",
+      "summary": "在不同电路结构和对象之间寻找关联与差异的技术，通过类比已有电路的设计原则和方法，推广到新的电路设计中。例如，将MOS管恒流策略推广到互补自偏置电路设计。",
+      "difficulty": 4,
+      "keywords": [
+        "类比",
+        "电路关联",
+        "设计推广"
+      ],
+      "formulas": [],
+      "applications": [
+        "互补自偏置电路",
+        "差分电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在不同电路结构和对象之间寻找关联与差异的技术，通过类比已有电路的设计原则和方法，推广到新的电路设计中。例如，将MOS管恒流策略推广到互补自偏置电路设计。"
+    },
+    {
+      "id": "ct_1_4_4",
+      "label": "PVT无关性设计",
+      "node_type": "core_technology",
+      "summary": "通过电路设计技术，使电路性能对工艺（Process）、电压（Voltage）和温度（Temperature）的变化不敏感，提高电路的稳定性和健壮性。",
+      "difficulty": 4,
+      "keywords": [
+        "PVT无关",
+        "稳定性",
+        "健壮性"
+      ],
+      "formulas": [],
+      "applications": [
+        "基准电路设计",
+        "高性能模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过电路设计技术，使电路性能对工艺（Process）、电压（Voltage）和温度（Temperature）的变化不敏感，提高电路的稳定性和健壮性。"
+    },
+    {
+      "id": "ca_1_4_1",
+      "label": "偏置电路",
+      "node_type": "circuit_application",
+      "summary": "为放大电路提供稳定静态工作点的电路，利用MOS管的I-V方程和支路电流连续性条件设计。设计时需兼顾静态工作点和动态启动特性，确保电路在PVT变化下稳定工作。",
+      "difficulty": 4,
+      "keywords": [
+        "偏置",
+        "静态工作点",
+        "稳定性"
+      ],
+      "formulas": [
+        "I_D = (1/2)μ_nC_ox(W/L)(V_GS - V_th)^2(1 + λV_DS)"
+      ],
+      "applications": [
+        "放大电路",
+        "基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "为放大电路提供稳定静态工作点的电路，利用MOS管的I-V方程和支路电流连续性条件设计。设计时需兼顾静态工作点和动态启动特性，确保电路在PVT变化下稳定工作。"
+    },
+    {
+      "id": "ca_1_4_2",
+      "label": "差分放大电路",
+      "node_type": "circuit_application",
+      "summary": "利用差分对管结构放大差分信号的电路，通过对差分和共模信号的不同响应特性，实现高共模抑制比（CMRR）。设计时需平衡交直流特性，确保静态工作点和交流增益的优化。",
+      "difficulty": 5,
+      "keywords": [
+        "差分放大",
+        "CMRR",
+        "交直流平衡"
+      ],
+      "formulas": [
+        "A_d = g_mR_D",
+        "CMRR = A_d/A_c"
+      ],
+      "applications": [
+        "模拟信号处理",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用差分对管结构放大差分信号的电路，通过对差分和共模信号的不同响应特性，实现高共模抑制比（CMRR）。设计时需平衡交直流特性，确保静态工作点和交流增益的优化。"
+    },
+    {
+      "id": "ca_1_4_3",
+      "label": "互补自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "通过类比MOS管恒流策略设计的自偏置电路，利用互补器件实现稳定的偏置电压或电流。设计时需考虑PVT无关性和动态响应特性。",
+      "difficulty": 5,
+      "keywords": [
+        "自偏置",
+        "互补器件",
+        "PVT无关"
+      ],
+      "formulas": [],
+      "applications": [
+        "基准源",
+        "电源管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过类比MOS管恒流策略设计的自偏置电路，利用互补器件实现稳定的偏置电压或电流。设计时需考虑PVT无关性和动态响应特性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_4_1",
+      "target_id": "ct_1_4_1",
+      "relationship": "enables",
+      "description": "MOS管I-V方程是静态直流分析法的基础，通过该方程可以列出电路方程求解静态工作点。",
+      "weight": 0.9,
+      "evidence": "饱和I-V方程直接用于描述MOS管静态特性，因此成为指导静态电路即提供静态工作点的偏置电路设计的主要依据。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_4_2",
+      "target_id": "ct_1_4_2",
+      "relationship": "enables",
+      "description": "跨导g_m是交流小信号等效电路法中的关键参数，用于计算电路的增益和频率响应。",
+      "weight": 0.8,
+      "evidence": "在输入V_i和输出V_o条件下，g_mV_i和g_dV_o分别反映了主控和辅控电压对输出电流变化即交流电流的控制和调制作用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_4_3",
+      "target_id": "ct_1_4_2",
+      "relationship": "enables",
+      "description": "输出导纳g_d是交流小信号等效电路法中的关键参数，用于计算电路的输出阻抗和频率响应。",
+      "weight": 0.7,
+      "evidence": "g_dV_o反映了辅控电压对输出电流变化的调制作用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_4_4",
+      "target_id": "ct_1_4_1",
+      "relationship": "supports",
+      "description": "支路电流连续性条件是静态直流分析法的基本约束条件，确保电流平衡。",
+      "weight": 0.8,
+      "evidence": "电路最基本约束条件即支路电流连续性条件，不仅在静态下成立，在交流小信号以及瞬态变化下同样成立。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_4_1",
+      "target_id": "ca_1_4_1",
+      "relationship": "implements",
+      "description": "静态直流分析法用于设计和分析偏置电路的静态工作点。",
+      "weight": 0.9,
+      "evidence": "偏置电路设计利用MOS管的I-V方程和支路电流连续性条件。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_4_2",
+      "target_id": "ca_1_4_2",
+      "relationship": "implements",
+      "description": "交流小信号等效电路法用于设计和分析差分放大电路的交流特性。",
+      "weight": 0.8,
+      "evidence": "差分放大电路设计需平衡交直流特性，确保静态工作点和交流增益的优化。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_4_3",
+      "target_id": "ca_1_4_3",
+      "relationship": "implements",
+      "description": "类比电路技术用于推广MOS管恒流策略到互补自偏置电路设计。",
+      "weight": 0.7,
+      "evidence": "对饱和条件下MOS管通过耗尽区高阻承担多余V_DS电压这种恒流策略的推广，得到了互补自偏置电路设计的基本指导原则。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_4_4",
+      "target_id": "ca_1_4_1",
+      "relationship": "applies_to",
+      "description": "PVT无关性设计原则应用于偏置电路设计，提高其稳定性和健壮性。",
+      "weight": 0.8,
+      "evidence": "设计的健壮性与可配置性的有机结合，一方面需要引入基准电路中普遍采用的PVT无关性设计原则和理念。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_4_1",
+      "target_id": "bc_1_4_2",
+      "relationship": "relates_to",
+      "description": "MOS管I-V方程是跨导g_m的基础，通过对I-V方程求偏导数得到g_m。",
+      "weight": 0.7,
+      "evidence": "通过对I-V直流方程求偏导数求出相应的跨导和输出导纳值。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_4_1",
+      "target_id": "bc_1_4_3",
+      "relationship": "relates_to",
+      "description": "MOS管I-V方程是输出导纳g_d的基础，通过对I-V方程求偏导数得到g_d。",
+      "weight": 0.7,
+      "evidence": "通过对I-V直流方程求偏导数求出相应的跨导和输出导纳值。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_4_1",
+      "target_id": "ct_1_4_2",
+      "relationship": "complements",
+      "description": "静态直流分析法和交流小信号等效电路法互补，分别用于分析电路的直流和交流特性。",
+      "weight": 0.8,
+      "evidence": "电路的设计必须兼顾直流和交流、静态和瞬态特性。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_1_4_1",
+      "target_id": "ca_1_4_2",
+      "relationship": "extends",
+      "description": "偏置电路为差分放大电路提供稳定的静态工作点，扩展了其应用范围。",
+      "weight": 0.7,
+      "evidence": "对于放大电路的设计，除了首先考虑小信号增益等交流问题外，还必须考虑电路稳定的静态工作点问题。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "1.4",
+  "title": "模拟电路设计艺术",
+  "extraction_timestamp": "2025-07-08T16:33:31.278838"
+}

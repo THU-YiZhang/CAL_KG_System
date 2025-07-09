@@ -1,0 +1,249 @@
+{
+  "nodes": [
+    {
+      "id": "bc_9_5_1",
+      "label": "开环运放收敛性",
+      "node_type": "basic_concept",
+      "summary": "开环运放的系统收敛性通常能得到保证，其特征多项式中s各项常系数均为正数，确保开环运放各极点的LHP(左半平面)性质。这是开环运放稳定工作的基础。",
+      "difficulty": 2,
+      "keywords": [
+        "开环运放",
+        "收敛性",
+        "LHP极点"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开环运放的系统收敛性通常能得到保证，其特征多项式中s各项常系数均为正数，确保开环运放各极点的LHP(左半平面)性质。这是开环运放稳定工作的基础。"
+    },
+    {
+      "id": "bc_9_5_2",
+      "label": "RHP零点",
+      "node_type": "basic_concept",
+      "summary": "RHP(右半平面)零点是导致系统发散的根源之一，它会影响闭环系统的稳定性。在Miller电容补偿结构中，Miller电容的前馈通路会形成RHP零点。",
+      "difficulty": 2,
+      "keywords": [
+        "RHP零点",
+        "系统发散",
+        "稳定性"
+      ],
+      "formulas": [
+        "g_mL/C_m"
+      ],
+      "applications": [
+        "频率补偿设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "零点分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "RHP(右半平面)零点是导致系统发散的根源之一，它会影响闭环系统的稳定性。在Miller电容补偿结构中，Miller电容的前馈通路会形成RHP零点。"
+    },
+    {
+      "id": "bc_9_5_3",
+      "label": "相位裕度(PM)",
+      "node_type": "basic_concept",
+      "summary": "相位裕度(PM)是衡量闭环系统稳定性的重要指标，理想的相位裕度在60°附近。PM过小会导致系统瞬态输出的过冲量过大，PM过大则会影响系统的响应速度。",
+      "difficulty": 2,
+      "keywords": [
+        "相位裕度",
+        "稳定性",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "PM = arctan(NDP)"
+      ],
+      "applications": [
+        "稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度(PM)是衡量闭环系统稳定性的重要指标，理想的相位裕度在60°附近。PM过小会导致系统瞬态输出的过冲量过大，PM过大则会影响系统的响应速度。"
+    },
+    {
+      "id": "ct_9_5_1",
+      "label": "频率补偿技术",
+      "node_type": "core_technology",
+      "summary": "频率补偿的主要任务是扩展RHP零点到高频段以降低其影响，或将RHP零点转变为LHP零点。具体方法包括：增加Miller补偿增益级的跨导、采用串联调节电阻改变前馈通路电流的相位特性、利用单向信号传输特性隔离前馈电流通道、或采用并联的前馈通路反向电流补偿。",
+      "difficulty": 3,
+      "keywords": [
+        "频率补偿",
+        "RHP零点",
+        "Miller补偿"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿的主要任务是扩展RHP零点到高频段以降低其影响，或将RHP零点转变为LHP零点。具体方法包括：增加Miller补偿增益级的跨导、采用串联调节电阻改变前馈通路电流的相位特性、利用单向信号传输特性隔离前馈电流通道、或采用并联的前馈通路反向电流补偿。"
+    },
+    {
+      "id": "ct_9_5_2",
+      "label": "Miller电容补偿",
+      "node_type": "core_technology",
+      "summary": "基本的Miller电容补偿结构通过压缩开环主极点p1，扩展次极点p2，并设置p2 = NDP × GBW = NDP × A0p1，使NDP ≥ 2以满足稳定性要求。在补偿过程中需要消除RHP零点的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "Miller补偿",
+        "极点控制",
+        "稳定性"
+      ],
+      "formulas": [
+        "p2 = NDP × GBW"
+      ],
+      "applications": [
+        "运放补偿设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基本的Miller电容补偿结构通过压缩开环主极点p1，扩展次极点p2，并设置p2 = NDP × GBW = NDP × A0p1，使NDP ≥ 2以满足稳定性要求。在补偿过程中需要消除RHP零点的影响。"
+    },
+    {
+      "id": "ct_9_5_3",
+      "label": "嵌套式Miller补偿(NMC)",
+      "node_type": "core_technology",
+      "summary": "对于三级运放系统，当p2、p3充分靠近甚至为一对共轭复极点时，采用嵌套式Miller补偿结构对开环及闭环运放的共轭复极点进行控制，使闭环的Q = ζ = 1/√2，且GWB = ωn/2，满足巴特沃思PM=60°的频率响应特性。",
+      "difficulty": 3,
+      "keywords": [
+        "NMC",
+        "多级运放",
+        "共轭极点"
+      ],
+      "formulas": [
+        "GWB = ωn/2"
+      ],
+      "applications": [
+        "多级运放补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "对于三级运放系统，当p2、p3充分靠近甚至为一对共轭复极点时，采用嵌套式Miller补偿结构对开环及闭环运放的共轭复极点进行控制，使闭环的Q = ζ = 1/√2，且GWB = ωn/2，满足巴特沃思PM=60°的频率响应特性。"
+    },
+    {
+      "id": "ca_9_5_1",
+      "label": "基本Miller补偿运放",
+      "node_type": "circuit_application",
+      "summary": "采用基本的Miller电容SMC补偿结构的运放，通过压缩开环主极点p1，扩展次极点p2，并设置p2 = NDP × GBW，使NDP ≥ 2以满足稳定性要求。同时采用各种方法消除Miller电容形成的RHP零点。",
+      "difficulty": 4,
+      "keywords": [
+        "SMC",
+        "运放设计",
+        "极点控制"
+      ],
+      "formulas": [
+        "GBW = A0p1"
+      ],
+      "applications": [
+        "通用运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用基本的Miller电容SMC补偿结构的运放，通过压缩开环主极点p1，扩展次极点p2，并设置p2 = NDP × GBW，使NDP ≥ 2以满足稳定性要求。同时采用各种方法消除Miller电容形成的RHP零点。"
+    },
+    {
+      "id": "ca_9_5_2",
+      "label": "三级运放NMC补偿设计",
+      "node_type": "circuit_application",
+      "summary": "三级运放采用嵌套式Miller补偿(NMC)结构，对开环及闭环运放的共轭复极点进行控制，使闭环的Q = ζ = 1/√2，且GWB = ωn/2，满足巴特沃思PM=60°的频率响应特性。同时采用类似于SMC中的方法消除Miller电容形成的零点。",
+      "difficulty": 4,
+      "keywords": [
+        "三级运放",
+        "NMC",
+        "高阶补偿"
+      ],
+      "formulas": [
+        "Q = 1/√2"
+      ],
+      "applications": [
+        "高性能运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "三级运放采用嵌套式Miller补偿(NMC)结构，对开环及闭环运放的共轭复极点进行控制，使闭环的Q = ζ = 1/√2，且GWB = ωn/2，满足巴特沃思PM=60°的频率响应特性。同时采用类似于SMC中的方法消除Miller电容形成的零点。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_9_5_1",
+      "target_id": "ct_9_5_1",
+      "relationship": "enables",
+      "description": "开环运放的收敛性分析为频率补偿技术提供了理论基础",
+      "weight": 0.8,
+      "evidence": "开环运放的系统收敛性通常都能得到有效保证，即其特征多项式中s各项常系数均为正数，并可确保开环运放各极点的LHP性质",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_5_2",
+      "target_id": "ct_9_5_1",
+      "relationship": "supports",
+      "description": "RHP零点的理解是设计频率补偿技术的关键",
+      "weight": 0.9,
+      "evidence": "RHP零点是导致系统发散的根源之一。因此，频率补偿的任务之一，就是需要扩展RHP零点到高频段以降低其影响，或将RHP零点转变为LHP零点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_5_1",
+      "target_id": "ca_9_5_1",
+      "relationship": "implements",
+      "description": "频率补偿技术在基本Miller补偿运放中得到具体实现",
+      "weight": 0.85,
+      "evidence": "在基本的Miller电容补偿结构中...增加Miller补偿增益级的跨导将其外推到高频段可抑制其影响",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_5_3",
+      "target_id": "ca_9_5_2",
+      "relationship": "implements",
+      "description": "嵌套式Miller补偿技术在三极运放设计中得到具体实现",
+      "weight": 0.9,
+      "evidence": "采用嵌套式的Miller补偿结构对开环及闭环运放的共轭复极点进行控制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_9_5_3",
+      "target_id": "ca_9_5_1",
+      "relationship": "applies_to",
+      "description": "相位裕度概念直接应用于运放稳定性设计",
+      "weight": 0.8,
+      "evidence": "考虑PM的要求后，二阶增益系统同样存在稳定性补偿设计的问题",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_9_5_2",
+      "target_id": "ct_9_5_3",
+      "relationship": "extends",
+      "description": "嵌套式Miller补偿是基本Miller补偿的扩展",
+      "weight": 0.75,
+      "evidence": "采用类似于SMC中的各种方法，消除Miller电容形成的零点，由此形成基于NMC的各类高阶运放系统的补偿结构设计",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "9.5",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:44:38.025082"
+}

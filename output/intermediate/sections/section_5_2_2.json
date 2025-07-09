@@ -1,0 +1,7 @@
+{
+  "section_num": "5.2.2",
+  "title": "Boost变换器",
+  "level": 3,
+  "content": "Boost变换器是升压型DC-DC变换器：\nVout = Vin/(1-D)",
+  "subsections": []
+}

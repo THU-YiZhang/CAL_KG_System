@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "bc_8_4_1",
+      "label": "极点频率",
+      "node_type": "basic_concept",
+      "summary": "极点频率是电路频率响应中增益下降3dB的频率点，决定了电路的带宽和稳定性。在多级放大器中，多个极点频率的分布关系直接影响系统的相位裕度。",
+      "difficulty": 3,
+      "keywords": [
+        "极点",
+        "频率响应",
+        "3dB带宽"
+      ],
+      "formulas": [
+        "f1 = -go1/(2πC1)",
+        "f2 = -go2/(2πC2)"
+      ],
+      "applications": [
+        "放大器稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路理论",
+        "复数分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点频率是电路频率响应中增益下降3dB的频率点，决定了电路的带宽和稳定性。在多级放大器中，多个极点频率的分布关系直接影响系统的相位裕度。"
+    },
+    {
+      "id": "bc_8_4_2",
+      "label": "Miller效应",
+      "node_type": "basic_concept",
+      "summary": "Miller效应描述了跨接在放大器输入输出端之间的电容由于电压增益而产生的等效输入电容倍增现象，是放大器频率补偿的重要理论基础。",
+      "difficulty": 3,
+      "keywords": [
+        "电容倍增",
+        "频率补偿",
+        "等效电容"
+      ],
+      "formulas": [
+        "Cin = CM(1+|A2|)"
+      ],
+      "applications": [
+        "放大器频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器原理",
+        "电容特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Miller效应描述了跨接在放大器输入输出端之间的电容由于电压增益而产生的等效输入电容倍增现象，是放大器频率补偿的重要理论基础。"
+    },
+    {
+      "id": "bc_8_4_3",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指单位增益频率处相位与-180°的差值，是衡量放大器稳定性的重要指标。通常要求相位裕度大于45°才能保证系统稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "相位延迟",
+        "系统响应"
+      ],
+      "formulas": [
+        "PM = 180° - |φ(GBW)|"
+      ],
+      "applications": [
+        "放大器稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "复数分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指单位增益频率处相位与-180°的差值，是衡量放大器稳定性的重要指标。通常要求相位裕度大于45°才能保证系统稳定。"
+    },
+    {
+      "id": "ct_8_4_1",
+      "label": "Miller电容补偿",
+      "node_type": "core_technology",
+      "summary": "Miller电容补偿是通过在放大器级间添加补偿电容CM，利用Miller效应压缩主极点频率同时扩展次极点频率，实现极点分离的技术。该方法能有效提高放大器的相位裕度。",
+      "difficulty": 4,
+      "keywords": [
+        "频率补偿",
+        "极点分离",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "p1 ≈ 1/(gm2ro1ro2CM)",
+        "p2 = gm/CL"
+      ],
+      "applications": [
+        "多级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Miller电容补偿是通过在放大器级间添加补偿电容CM，利用Miller效应压缩主极点频率同时扩展次极点频率，实现极点分离的技术。该方法能有效提高放大器的相位裕度。"
+    },
+    {
+      "id": "ct_8_4_2",
+      "label": "极点分离分析",
+      "node_type": "core_technology",
+      "summary": "极点分离分析是通过计算和调整电路中的极点位置，使主极点和次极点保持足够的频率间隔，从而确保系统稳定性的分析方法。",
+      "difficulty": 4,
+      "keywords": [
+        "稳定性分析",
+        "极点位置",
+        "频率响应"
+      ],
+      "formulas": [
+        "p1AV0 ≫ f2",
+        "GBW ≫ f2"
+      ],
+      "applications": [
+        "多级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点分离分析是通过计算和调整电路中的极点位置，使主极点和次极点保持足够的频率间隔，从而确保系统稳定性的分析方法。"
+    },
+    {
+      "id": "ct_8_4_3",
+      "label": "三级频段分析法",
+      "node_type": "core_technology",
+      "summary": "将放大器的频率响应分为低频段、中频段和高频段三个区域分别分析，每个频段考虑不同的主导因素和补偿机制，是分析复杂放大器频率特性的有效方法。",
+      "difficulty": 3,
+      "keywords": [
+        "频段分析",
+        "频率补偿",
+        "系统响应"
+      ],
+      "formulas": [],
+      "applications": [
+        "多级放大器分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将放大器的频率响应分为低频段、中频段和高频段三个区域分别分析，每个频段考虑不同的主导因素和补偿机制，是分析复杂放大器频率特性的有效方法。"
+    },
+    {
+      "id": "ca_8_4_1",
+      "label": "两级CS电压放大器",
+      "node_type": "circuit_application",
+      "summary": "由两级共源放大器级联构成的电压放大器，第一级采用高阻抗设计以提高增益，第二级采用大电流设计以提高摆率。典型参数为gm1=50μS，gm2=500μS，C1=1pF，C2=3pF。",
+      "difficulty": 4,
+      "keywords": [
+        "共源放大器",
+        "级联结构",
+        "电压增益"
+      ],
+      "formulas": [
+        "AV0 = A1A2 ≈ 88dB"
+      ],
+      "applications": [
+        "运算放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由两级共源放大器级联构成的电压放大器，第一级采用高阻抗设计以提高增益，第二级采用大电流设计以提高摆率。典型参数为gm1=50μS，gm2=500μS，C1=1pF，C2=3pF。"
+    },
+    {
+      "id": "ca_8_4_2",
+      "label": "增益倍增型Cascode",
+      "node_type": "circuit_application",
+      "summary": "在传统Cascode结构基础上增加辅助增益级AV3，进一步提高输出阻抗和总体增益，同时保持GBW基本不变的特殊放大器结构。",
+      "difficulty": 5,
+      "keywords": [
+        "Cascode",
+        "增益提升",
+        "频率特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在传统Cascode结构基础上增加辅助增益级AV3，进一步提高输出阻抗和总体增益，同时保持GBW基本不变的特殊放大器结构。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_8_4_1",
+      "target_id": "ct_8_4_1",
+      "relationship": "enables",
+      "description": "极点频率概念是Miller电容补偿技术的基础，理解极点分布才能有效设计补偿方案",
+      "weight": 0.9,
+      "evidence": "文中详细分析了极点位置对稳定性的影响，并基于此提出补偿策略",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_4_2",
+      "target_id": "ct_8_4_1",
+      "relationship": "supports",
+      "description": "Miller效应理论为Miller电容补偿提供了物理基础",
+      "weight": 0.8,
+      "evidence": "文中解释了CM电容如何通过Miller效应产生等效输入电容",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_4_1",
+      "target_id": "ca_8_4_1",
+      "relationship": "implements",
+      "description": "Miller电容补偿技术应用于两级CS放大器设计中",
+      "weight": 0.9,
+      "evidence": "文中详细描述了在两级CS放大器中如何应用Miller补偿",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_4_2",
+      "target_id": "ca_8_4_1",
+      "relationship": "applies_to",
+      "description": "极点分离分析方法用于评估两级CS放大器的稳定性",
+      "weight": 0.8,
+      "evidence": "文中通过极点分离分析评估了补偿前后的稳定性",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_4_3",
+      "target_id": "ct_8_4_2",
+      "relationship": "supports",
+      "description": "相位裕度概念是极点分离分析的目标参数",
+      "weight": 0.7,
+      "evidence": "文中指出极点分离的目的是确保足够的相位裕度",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_4_3",
+      "target_id": "ca_8_4_1",
+      "relationship": "applies_to",
+      "description": "三级频段分析法用于分析两级CS放大器的频率响应",
+      "weight": 0.8,
+      "evidence": "文中将分析分为低频、中频和高频三个频段",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_4_1",
+      "target_id": "ca_8_4_2",
+      "relationship": "extends",
+      "description": "Miller补偿原理被扩展应用到增益倍增型Cascode结构中",
+      "weight": 0.7,
+      "evidence": "文中提到增益倍增型Cascode保持了类似Miller补偿的频率特性",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "8.4",
+  "title": "两级共源放大器频响特性",
+  "extraction_timestamp": "2025-07-08T16:43:14.025114"
+}

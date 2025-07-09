@@ -1,0 +1,331 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_5_1",
+      "label": "小信号瞬态特性",
+      "node_type": "basic_concept",
+      "summary": "小信号瞬态特性描述了运放在稳定的静态工作点条件下，输出响应输入小信号变化的速度特性。它与单位增益带宽、次极点和偶对的位置有关。",
+      "difficulty": 2,
+      "keywords": [
+        "小信号",
+        "单位增益带宽",
+        "次极点",
+        "偶对"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "小信号瞬态特性描述了运放在稳定的静态工作点条件下，输出响应输入小信号变化的速度特性。它与单位增益带宽、次极点和偶对的位置有关。"
+    },
+    {
+      "id": "bc_10_5_2",
+      "label": "大信号瞬态特性",
+      "node_type": "basic_concept",
+      "summary": "大信号瞬态特性描述了运放在输入大信号条件下，输出响应的速度特性。它由压摆率（SR）决定，即输出峰值电流对负载电容的充放电速度。",
+      "difficulty": 2,
+      "keywords": [
+        "大信号",
+        "压摆率",
+        "负载电容"
+      ],
+      "formulas": [
+        "SR = I_max / C_L"
+      ],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "大信号瞬态特性描述了运放在输入大信号条件下，输出响应的速度特性。它由压摆率（SR）决定，即输出峰值电流对负载电容的充放电速度。"
+    },
+    {
+      "id": "bc_10_5_3",
+      "label": "单位增益带宽（GBW）",
+      "node_type": "basic_concept",
+      "summary": "单位增益带宽是运放在单位增益配置下的带宽，是衡量运放小信号响应速度的重要参数。",
+      "difficulty": 2,
+      "keywords": [
+        "单位增益带宽",
+        "带宽"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单位增益带宽是运放在单位增益配置下的带宽，是衡量运放小信号响应速度的重要参数。"
+    },
+    {
+      "id": "bc_10_5_4",
+      "label": "次极点",
+      "node_type": "basic_concept",
+      "summary": "次极点是运放频率响应中的第二个极点，其位置对运放的稳定性和瞬态响应速度有重要影响。",
+      "difficulty": 2,
+      "keywords": [
+        "次极点",
+        "频率响应"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "次极点是运放频率响应中的第二个极点，其位置对运放的稳定性和瞬态响应速度有重要影响。"
+    },
+    {
+      "id": "bc_10_5_5",
+      "label": "压摆率（SR）",
+      "node_type": "basic_concept",
+      "summary": "压摆率是运放在大信号条件下输出电压的最大变化速率，由输出峰值电流对负载电容的充放电速度决定。",
+      "difficulty": 2,
+      "keywords": [
+        "压摆率",
+        "大信号"
+      ],
+      "formulas": [
+        "SR = I_max / C_L"
+      ],
+      "applications": [
+        "运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放大信号响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "压摆率是运放在大信号条件下输出电压的最大变化速率，由输出峰值电流对负载电容的充放电速度决定。"
+    },
+    {
+      "id": "ct_10_5_1",
+      "label": "大信号延时折算",
+      "node_type": "core_technology",
+      "summary": "将大信号的延时折算成小信号的延时，使整个建立过程可以全部由小信号瞬态模型等效。这种方法简化了瞬态响应的分析和设计。",
+      "difficulty": 3,
+      "keywords": [
+        "大信号",
+        "小信号",
+        "延时折算"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放瞬态响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将大信号的延时折算成小信号的延时，使整个建立过程可以全部由小信号瞬态模型等效。这种方法简化了瞬态响应的分析和设计。"
+    },
+    {
+      "id": "ct_10_5_2",
+      "label": "提高大信号响应速度",
+      "node_type": "core_technology",
+      "summary": "通过牺牲功耗特性，采用大电流或动态电流的充放电流技术，同时尽可能地降低负载电容，以提高大信号响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "大信号响应",
+        "动态电流",
+        "负载电容"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过牺牲功耗特性，采用大电流或动态电流的充放电流技术，同时尽可能地降低负载电容，以提高大信号响应速度。"
+    },
+    {
+      "id": "ct_10_5_3",
+      "label": "扩展单位增益带宽",
+      "node_type": "core_technology",
+      "summary": "通过优化电路设计，扩展单位增益带宽，以提高运放的小信号响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "单位增益带宽",
+        "小信号响应"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过优化电路设计，扩展单位增益带宽，以提高运放的小信号响应速度。"
+    },
+    {
+      "id": "ct_10_5_4",
+      "label": "提高次极点频率",
+      "node_type": "core_technology",
+      "summary": "通过优化电路设计，提高次极点频率，以改善运放的稳定性和瞬态响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "次极点",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过优化电路设计，提高次极点频率，以改善运放的稳定性和瞬态响应速度。"
+    },
+    {
+      "id": "ca_10_5_1",
+      "label": "单级Cascode运放",
+      "node_type": "circuit_application",
+      "summary": "单级Cascode运放是一种高速高增益运放的主流结构，具有最少的增益级和极点数，适用于高速应用。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单级Cascode运放是一种高速高增益运放的主流结构，具有最少的增益级和极点数，适用于高速应用。"
+    },
+    {
+      "id": "ca_10_5_2",
+      "label": "增益提高型GBCA",
+      "node_type": "circuit_application",
+      "summary": "增益提高型GBCA是在单级Cascode结构基础上发展得到的，能够在基本保持运放系统高速响应的条件下，进一步提高系统的增益，适用于深亚微米CMOS工艺的高速高精度运放系统。",
+      "difficulty": 4,
+      "keywords": [
+        "GBCA",
+        "增益提高",
+        "高速高精度"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速高精度运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益提高型GBCA是在单级Cascode结构基础上发展得到的，能够在基本保持运放系统高速响应的条件下，进一步提高系统的增益，适用于深亚微米CMOS工艺的高速高精度运放系统。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_5_1",
+      "target_id": "ct_10_5_1",
+      "relationship": "enables",
+      "description": "小信号瞬态特性的理解使能了大信号延时折算技术的应用。",
+      "weight": 0.8,
+      "evidence": "大信号的延时可以折算成小信号的延时,这样整个建立过程可以全部由小信号瞬态模型等效。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_5_2",
+      "target_id": "ct_10_5_2",
+      "relationship": "enables",
+      "description": "大信号瞬态特性的理解使能了提高大信号响应速度技术的应用。",
+      "weight": 0.8,
+      "evidence": "提高大信号响应速度的关键,在于牺牲功耗特性,采用大电流或动态电流的充放电流技术,同时尽可能地降低负载电容。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_5_3",
+      "target_id": "ct_10_5_3",
+      "relationship": "enables",
+      "description": "单位增益带宽的理解使能了扩展单位增益带宽技术的应用。",
+      "weight": 0.8,
+      "evidence": "提高电路输出响应速度的关键在于扩展单位增益带宽, 提高次极点频率。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_5_4",
+      "target_id": "ct_10_5_4",
+      "relationship": "enables",
+      "description": "次极点的理解使能了提高次极点频率技术的应用。",
+      "weight": 0.8,
+      "evidence": "提高电路输出响应速度的关键在于扩展单位增益带宽, 提高次极点频率。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_5_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "implements",
+      "description": "扩展单位增益带宽技术实现了单级Cascode运放的设计。",
+      "weight": 0.9,
+      "evidence": "高速运放需要最少的增益级和极点数, 因此具有多级增益性质的单极点 Cascode 运放成为高速高增益运放的主流结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_5_4",
+      "target_id": "ca_10_5_1",
+      "relationship": "implements",
+      "description": "提高次极点频率技术实现了单级Cascode运放的设计。",
+      "weight": 0.9,
+      "evidence": "高速运放需要最少的增益级和极点数, 因此具有多级增益性质的单极点 Cascode 运放成为高速高增益运放的主流结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_5_3",
+      "target_id": "ca_10_5_2",
+      "relationship": "implements",
+      "description": "扩展单位增益带宽技术实现了增益提高型GBCA的设计。",
+      "weight": 0.9,
+      "evidence": "在此基础上发展得到的增益提高型 GBCA 能够在基本保持运放系统高速响应的条件下, 进一步提高系统的增益。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_5_4",
+      "target_id": "ca_10_5_2",
+      "relationship": "implements",
+      "description": "提高次极点频率技术实现了增益提高型GBCA的设计。",
+      "weight": 0.9,
+      "evidence": "在此基础上发展得到的增益提高型 GBCA 能够在基本保持运放系统高速响应的条件下, 进一步提高系统的增益。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_10_5_2",
+      "relationship": "extends",
+      "description": "增益提高型GBCA扩展了单级Cascode运放的功能。",
+      "weight": 0.9,
+      "evidence": "在此基础上发展得到的增益提高型 GBCA 能够在基本保持运放系统高速响应的条件下, 进一步提高系统的增益。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "10.5",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:46:11.165852"
+}

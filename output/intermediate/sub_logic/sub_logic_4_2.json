@@ -1,0 +1,266 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_2_1",
+      "label": "V_BE电压",
+      "node_type": "basic_concept",
+      "summary": "V_BE是BJT管的基极-发射极电压，具有天然的负温度系数特性。在带隙基准设计中，V_BE提供稳定的负温度系数电压源，是温度补偿的基础。",
+      "difficulty": 2,
+      "keywords": [
+        "负温度系数",
+        "BJT",
+        "电压源"
+      ],
+      "formulas": [
+        "V_BE(T) = V_g + V_T0*(T/T0)[ln(I_C/C0) + (n-4)lnT]"
+      ],
+      "applications": [
+        "带隙基准",
+        "温度传感器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "BJT工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "V_BE是BJT管的基极-发射极电压，具有天然的负温度系数特性。在带隙基准设计中，V_BE提供稳定的负温度系数电压源，是温度补偿的基础。"
+    },
+    {
+      "id": "bc_4_2_2",
+      "label": "PTAT电流",
+      "node_type": "basic_concept",
+      "summary": "PTAT(Proportional To Absolute Temperature)电流是与绝对温度成正比的电流，通常由ΔV_BE电压在电阻上产生。PTAT电流用于补偿V_BE的负温度系数。",
+      "difficulty": 3,
+      "keywords": [
+        "正温度系数",
+        "ΔV_BE",
+        "温度补偿"
+      ],
+      "formulas": [
+        "I_PTAT = ΔV_BE/R",
+        "ΔV_BE = V_T*ln(N)"
+      ],
+      "applications": [
+        "带隙基准",
+        "温度补偿电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "BJT特性",
+        "电阻温度系数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PTAT(Proportional To Absolute Temperature)电流是与绝对温度成正比的电流，通常由ΔV_BE电压在电阻上产生。PTAT电流用于补偿V_BE的负温度系数。"
+    },
+    {
+      "id": "bc_4_2_3",
+      "label": "电阻温度系数",
+      "node_type": "basic_concept",
+      "summary": "电阻值随温度变化的特性，用TCR(Temperature Coefficient of Resistance)表示。在带隙基准设计中，电阻温度系数会影响PTAT电流的温度特性。",
+      "difficulty": 2,
+      "keywords": [
+        "TCR",
+        "温度特性",
+        "工艺影响"
+      ],
+      "formulas": [
+        "R(T) = R0[1 + TCR*(T-T0)]"
+      ],
+      "applications": [
+        "带隙基准",
+        "精密电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电阻特性",
+        "半导体工艺"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻值随温度变化的特性，用TCR(Temperature Coefficient of Resistance)表示。在带隙基准设计中，电阻温度系数会影响PTAT电流的温度特性。"
+    },
+    {
+      "id": "ct_4_2_1",
+      "label": "线性温度补偿",
+      "node_type": "core_technology",
+      "summary": "通过将V_BE的负温度系数与PTAT电压的正温度系数线性叠加，实现一阶温度补偿。补偿的关键是确定适当的比例系数k_m，使在参考温度T0处温度系数为零。",
+      "difficulty": 4,
+      "keywords": [
+        "一阶补偿",
+        "温度系数",
+        "V_PTAT"
+      ],
+      "formulas": [
+        "V_ref = V_BE + k_m*V_T",
+        "k_m*V_T0 = (V_g0-V_BE0) + (γ-α)*V_T0"
+      ],
+      "applications": [
+        "宽温区带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过将V_BE的负温度系数与PTAT电压的正温度系数线性叠加，实现一阶温度补偿。补偿的关键是确定适当的比例系数k_m，使在参考温度T0处温度系数为零。"
+    },
+    {
+      "id": "ct_4_2_2",
+      "label": "高阶温度补偿",
+      "node_type": "core_technology",
+      "summary": "针对线性补偿后残余的非线性温度特性进行的补偿。通过分析V_BE的高阶温度项，设计高阶PTAT电流(如PTAT^2、PTAT^3)来补偿非线性温度系数。",
+      "difficulty": 5,
+      "keywords": [
+        "非线性补偿",
+        "高阶项",
+        "宽温区"
+      ],
+      "formulas": [
+        "V_ref(T) = V_g + (γ-α)*V_T[1-ln(T/T0)]"
+      ],
+      "applications": [
+        "高精度带隙基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对线性补偿后残余的非线性温度特性进行的补偿。通过分析V_BE的高阶温度项，设计高阶PTAT电流(如PTAT^2、PTAT^3)来补偿非线性温度系数。"
+    },
+    {
+      "id": "ct_4_2_3",
+      "label": "运放虚短控制",
+      "node_type": "core_technology",
+      "summary": "利用运算放大器的虚短特性控制支路电流匹配的技术。通过运放强制两个关键节点电压相等，确保PTAT电流的精确产生和匹配。",
+      "difficulty": 3,
+      "keywords": [
+        "虚短",
+        "电流匹配",
+        "反馈控制"
+      ],
+      "formulas": [],
+      "applications": [
+        "带隙基准电流产生"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用运算放大器的虚短特性控制支路电流匹配的技术。通过运放强制两个关键节点电压相等，确保PTAT电流的精确产生和匹配。"
+    },
+    {
+      "id": "ca_4_2_1",
+      "label": "电压模带隙基准基本结构",
+      "node_type": "circuit_application",
+      "summary": "基于运放虚短控制的电压模带隙基准基本电路结构。包含PTAT电流产生支路、V_BE支路和输出求和电路。输出基准电压为V_BE与PTAT电压的加权和。",
+      "difficulty": 4,
+      "keywords": [
+        "运放控制",
+        "双极型",
+        "电压求和"
+      ],
+      "formulas": [
+        "V_ref = V_BE2 + (ΔV_BE/R1)*R2"
+      ],
+      "applications": [
+        "基准电压源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于运放虚短控制的电压模带隙基准基本电路结构。包含PTAT电流产生支路、V_BE支路和输出求和电路。输出基准电压为V_BE与PTAT电压的加权和。"
+    },
+    {
+      "id": "ca_4_2_2",
+      "label": "改进型带隙基准结构",
+      "node_type": "circuit_application",
+      "summary": "针对基本结构的改进，包括优化运放负载驱动、改进工作点匹配、减少失调影响等措施。通过电路结构调整提高基准精度和稳定性。",
+      "difficulty": 5,
+      "keywords": [
+        "失调补偿",
+        "电流镜优化",
+        "电阻匹配"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对基本结构的改进，包括优化运放负载驱动、改进工作点匹配、减少失调影响等措施。通过电路结构调整提高基准精度和稳定性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_2_1",
+      "target_id": "ct_4_2_1",
+      "relationship": "enables",
+      "description": "V_BE的负温度系数特性使能了线性温度补偿技术的实现",
+      "weight": 0.9,
+      "evidence": "产生BGR所需要的正负温度系数电流和电压，利用相关偏置电路产生。其中V_BE提供天然的高稳定负温度系数电压",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_2_2",
+      "target_id": "ct_4_2_1",
+      "relationship": "supports",
+      "description": "PTAT电流的正温度特性支持线性补偿中正温度系数的产生",
+      "weight": 0.8,
+      "evidence": "PTAT量，则可由ΔV_BE产生，其中与电阻R串联的BJT二极管应具有更大的发射区面积",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_2_1",
+      "target_id": "ca_4_2_1",
+      "relationship": "implements",
+      "description": "线性温度补偿技术在电压模带隙基准基本结构中实现",
+      "weight": 0.85,
+      "evidence": "基于V_ref = V_BE + V_PTAT = V_BE + k_m*V_T传统电压求和的线性补偿模式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_2_3",
+      "target_id": "ca_4_2_1",
+      "relationship": "applies_to",
+      "description": "运放虚短控制技术应用于电压模带隙基准的电流匹配",
+      "weight": 0.7,
+      "evidence": "利用运放虚短特性控制电流匹配和支路电流定义，可以得到如图4-3所示的带隙基准原型结构",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_2_3",
+      "target_id": "ct_4_2_2",
+      "relationship": "relates_to",
+      "description": "电阻温度系数与高阶补偿设计密切相关",
+      "weight": 0.6,
+      "evidence": "只有T_CR < 0的负温度系数且数值很大时，才能有效提高α的数值",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_4_2_1",
+      "target_id": "ct_4_2_2",
+      "relationship": "extends",
+      "description": "高阶温度补偿扩展了线性补偿的能力",
+      "weight": 0.75,
+      "evidence": "对非线性函数在平衡点附近泰勒展开，可考察各阶次非线性温度的大小，从中寻找高阶温度补偿的方法",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_4_2_1",
+      "target_id": "ca_4_2_2",
+      "relationship": "complements",
+      "description": "改进型结构对基本结构的性能进行了补充和增强",
+      "weight": 0.8,
+      "evidence": "针对基本结构的改进，包括优化运放负载驱动、改进工作点匹配、减少失调影响等措施",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.2",
+  "title": "电压模带隙基准",
+  "extraction_timestamp": "2025-07-08T16:36:19.983776"
+}

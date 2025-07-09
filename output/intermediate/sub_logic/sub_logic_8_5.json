@@ -1,0 +1,258 @@
+{
+  "nodes": [
+    {
+      "id": "bc_8_5_1",
+      "label": "多极点系统",
+      "node_type": "basic_concept",
+      "summary": "多极点系统是指包含多个极点的电路系统，其频率特性由多个极点共同决定。多极点系统的传递函数通常包含多个极点频率，每个极点频率对应一个RC网络的时间常数。多极点系统的频率响应特性复杂，需要考虑主极点和次极点的相互影响。",
+      "difficulty": 2,
+      "keywords": [
+        "多极点",
+        "频率特性",
+        "传递函数"
+      ],
+      "formulas": [
+        "A(s) = A_V0 / (1 + s/p_1)(1 + s/p_2)...(1 + s/p_n)"
+      ],
+      "applications": [
+        "多级放大器",
+        "反馈系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路原理",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多极点系统是指包含多个极点的电路系统，其频率特性由多个极点共同决定。多极点系统的传递函数通常包含多个极点频率，每个极点频率对应一个RC网络的时间常数。多极点系统的频率响应特性复杂，需要考虑主极点和次极点的相互影响。"
+    },
+    {
+      "id": "bc_8_5_2",
+      "label": "等效阻抗",
+      "node_type": "basic_concept",
+      "summary": "等效阻抗是指在电路分析中，将复杂电路简化为等效的阻抗模型。对于多级驱动电路，可以采用电流激励阻抗并联的等效电路或电压激励阻抗串联的等效电路。这两种等效方式在负载上产生的电压相同，输出阻抗相等。",
+      "difficulty": 2,
+      "keywords": [
+        "等效阻抗",
+        "电流激励",
+        "电压激励"
+      ],
+      "formulas": [
+        "V_RL(V) = V_S * R_L / (R_S + R_L)",
+        "V_RL(I) = -I_S * (r_o // R_L)"
+      ],
+      "applications": [
+        "多级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路等效原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "等效阻抗是指在电路分析中，将复杂电路简化为等效的阻抗模型。对于多级驱动电路，可以采用电流激励阻抗并联的等效电路或电压激励阻抗串联的等效电路。这两种等效方式在负载上产生的电压相同，输出阻抗相等。"
+    },
+    {
+      "id": "bc_8_5_3",
+      "label": "传递函数",
+      "node_type": "basic_concept",
+      "summary": "传递函数是描述线性时不变系统输入输出关系的数学表达式。对于多极点系统，传递函数通常表示为分母多项式的高阶方程，其根即为系统的极点。传递函数的极点和零点决定了系统的频率响应特性。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "极点",
+        "零点"
+      ],
+      "formulas": [
+        "A(s) = A_V0 * (1 - s/z_1)...(1 - s/z_m) / (1 + s/p_1)...(1 + s/p_n)"
+      ],
+      "applications": [
+        "系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "线性系统理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "传递函数是描述线性时不变系统输入输出关系的数学表达式。对于多极点系统，传递函数通常表示为分母多项式的高阶方程，其根即为系统的极点。传递函数的极点和零点决定了系统的频率响应特性。"
+    },
+    {
+      "id": "ct_8_5_1",
+      "label": "极点分离法",
+      "node_type": "core_technology",
+      "summary": "极点分离法是一种用于分析多极点系统的近似方法，其基本要求是系统的主极点与次极点之间的距离足够远。通过极点分离法，可以将高阶传递函数简化为多个一阶传递函数的乘积，从而简化分析过程。极点分离法的关键在于满足b_1^2 >> b_2和b_2^2 >> b_1*b_3的条件。",
+      "difficulty": 3,
+      "keywords": [
+        "极点分离",
+        "近似方法",
+        "高阶系统"
+      ],
+      "formulas": [
+        "p_1 = 1/b_1",
+        "p_2 = b_1/b_2",
+        "p_3 = b_2/b_3"
+      ],
+      "applications": [
+        "多级放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "极点分离法是一种用于分析多极点系统的近似方法，其基本要求是系统的主极点与次极点之间的距离足够远。通过极点分离法，可以将高阶传递函数简化为多个一阶传递函数的乘积，从而简化分析过程。极点分离法的关键在于满足b_1^2 >> b_2和b_2^2 >> b_1*b_3的条件。"
+    },
+    {
+      "id": "ct_8_5_2",
+      "label": "主极点法",
+      "node_type": "core_technology",
+      "summary": "主极点法是一种特殊的极点分离法，仅要求主极点远离所有次极点，而不考虑次极点之间的相互关系。主极点法的优势在于简化了高阶系统的分析，适用于主极点明显低于其他极点的情况。主极点法的关键条件是b_n << b_1^n。",
+      "difficulty": 3,
+      "keywords": [
+        "主极点",
+        "近似分析",
+        "频率响应"
+      ],
+      "formulas": [
+        "A(s) ≈ A_V0 / (1 + s/p_1)"
+      ],
+      "applications": [
+        "反馈系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "主极点法是一种特殊的极点分离法，仅要求主极点远离所有次极点，而不考虑次极点之间的相互关系。主极点法的优势在于简化了高阶系统的分析，适用于主极点明显低于其他极点的情况。主极点法的关键条件是b_n << b_1^n。"
+    },
+    {
+      "id": "ct_8_5_3",
+      "label": "降阶法/升阶法",
+      "node_type": "core_technology",
+      "summary": "降阶法是通过忽略高频极点的影响，将高阶系统简化为低阶系统的方法。升阶法则相反，通过考虑高频寄生电容效应，增加系统的阶数。降阶法的本质是忽略大于GBW的高频极点，而升阶法的本质是考虑GBW以外的高频极点的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "降阶法",
+        "升阶法",
+        "高阶系统"
+      ],
+      "formulas": [
+        "b_3 << b_2^(3/2)"
+      ],
+      "applications": [
+        "高频电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "降阶法是通过忽略高频极点的影响，将高阶系统简化为低阶系统的方法。升阶法则相反，通过考虑高频寄生电容效应，增加系统的阶数。降阶法的本质是忽略大于GBW的高频极点，而升阶法的本质是考虑GBW以外的高频极点的影响。"
+    },
+    {
+      "id": "ca_8_5_1",
+      "label": "两级放大多极点电路",
+      "node_type": "circuit_application",
+      "summary": "两级放大多极点电路是一种常见的多极点系统，其传递函数包含输入、中间增益级和输出三个极点。该电路的非理想特性包括非零输出阻抗和有限的低频增益。通过电压源等效模型，可以分析其频率响应特性，并采用极点分离法或主极点法进行简化分析。",
+      "difficulty": 4,
+      "keywords": [
+        "两级放大",
+        "多极点",
+        "频率响应"
+      ],
+      "formulas": [
+        "A_v(s) = A_V1(s) * A_V2(s) * A_V3(s)"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两级放大多极点电路是一种常见的多极点系统，其传递函数包含输入、中间增益级和输出三个极点。该电路的非理想特性包括非零输出阻抗和有限的低频增益。通过电压源等效模型，可以分析其频率响应特性，并采用极点分离法或主极点法进行简化分析。"
+    },
+    {
+      "id": "ca_8_5_2",
+      "label": "多级运放",
+      "node_type": "circuit_application",
+      "summary": "多级运放是一种包含多个增益级的运算放大器，其频率特性由多个极点决定。多级运放的稳定性分析需要考虑相位裕度和增益裕度，通常采用极点分离法或主极点法进行设计。多级运放的频率响应特性复杂，需要综合考虑极点和零点的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "多级运放",
+        "稳定性",
+        "频率响应"
+      ],
+      "formulas": [
+        "A_OL(ω) ≈ A_OL(0) / (1 + jω/p_1)(1 + jω/p_2)(1 + jω/p_3)"
+      ],
+      "applications": [
+        "反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多级运放是一种包含多个增益级的运算放大器，其频率特性由多个极点决定。多级运放的稳定性分析需要考虑相位裕度和增益裕度，通常采用极点分离法或主极点法进行设计。多级运放的频率响应特性复杂，需要综合考虑极点和零点的影响。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_8_5_1",
+      "target_id": "ct_8_5_1",
+      "relationship": "enables",
+      "description": "多极点系统的概念使能了极点分离法的应用，因为极点分离法正是针对多极点系统的特性设计的。",
+      "weight": 0.9,
+      "evidence": "多极点系统的传递函数通常包含多个极点频率，极点分离法通过简化高阶传递函数来分析多极点系统。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_5_2",
+      "target_id": "ca_8_5_1",
+      "relationship": "supports",
+      "description": "等效阻抗的概念支撑了两级放大多极点电路的分析，因为电路的非理想特性需要通过等效阻抗模型来描述。",
+      "weight": 0.8,
+      "evidence": "两级放大多极点电路的非理想特性包括非零输出阻抗，等效阻抗模型用于分析其频率响应。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_5_1",
+      "target_id": "ca_8_5_2",
+      "relationship": "implements",
+      "description": "极点分离法实现了多级运放的稳定性分析，通过简化高阶传递函数来评估系统的相位裕度和增益裕度。",
+      "weight": 0.85,
+      "evidence": "多级运放的稳定性分析通常采用极点分离法来简化高阶系统的分析。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_5_2",
+      "target_id": "ca_8_5_2",
+      "relationship": "applies_to",
+      "description": "主极点法应用于多级运放的设计，通过识别主极点来简化频率响应分析。",
+      "weight": 0.8,
+      "evidence": "多级运放的频率响应分析中，主极点法用于简化高阶系统的分析。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_8_5_3",
+      "target_id": "ct_8_5_1",
+      "relationship": "supports",
+      "description": "传递函数的概念支撑了极点分离法的应用，因为极点分离法正是基于传递函数的极点分析。",
+      "weight": 0.85,
+      "evidence": "极点分离法通过分析传递函数的极点来简化高阶系统的分析。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_8_5_3",
+      "target_id": "ca_8_5_1",
+      "relationship": "applies_to",
+      "description": "降阶法/升阶法应用于两级放大多极点电路的分析，通过忽略或考虑高频极点来简化或增加系统阶数。",
+      "weight": 0.75,
+      "evidence": "两级放大多极点电路的分析中，降阶法用于忽略高频极点的影响。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "8.5",
+  "title": "多极点系统频率特性",
+  "extraction_timestamp": "2025-07-08T16:43:33.891949"
+}

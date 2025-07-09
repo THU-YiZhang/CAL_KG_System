@@ -1,0 +1,331 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_5_1",
+      "label": "非线性失真",
+      "node_type": "basic_concept",
+      "summary": "非线性失真是指电路输出信号中产生输入信号中没有的新频率分量，主要由器件的非线性工作状态引起。非线性失真包括谐波失真和互调失真等，是限制电路精度的重要因素。",
+      "difficulty": 3,
+      "keywords": [
+        "谐波失真",
+        "互调失真",
+        "非线性响应"
+      ],
+      "formulas": [
+        "y = ∑a_i x^i(t)"
+      ],
+      "applications": [
+        "运放设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶分析",
+        "器件物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "非线性失真是指电路输出信号中产生输入信号中没有的新频率分量，主要由器件的非线性工作状态引起。非线性失真包括谐波失真和互调失真等，是限制电路精度的重要因素。"
+    },
+    {
+      "id": "bc_6_5_2",
+      "label": "线性失真",
+      "node_type": "basic_concept",
+      "summary": "线性失真是指电路输出信号中不产生新的频率分量，主要是信号幅度或形状的改变，由信号增益的变化引起。线性失真可以通过频率响应分析来描述。",
+      "difficulty": 2,
+      "keywords": [
+        "幅度失真",
+        "相位失真",
+        "频率响应"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "线性系统理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "线性失真是指电路输出信号中不产生新的频率分量，主要是信号幅度或形状的改变，由信号增益的变化引起。线性失真可以通过频率响应分析来描述。"
+    },
+    {
+      "id": "bc_6_5_3",
+      "label": "THD（总谐波失真）",
+      "node_type": "basic_concept",
+      "summary": "总谐波失真（THD）是衡量电路非线性失真的重要指标，定义为各次谐波失真的总和。THD越小，电路的线性度越好。在THD<0.1%的要求下，电路增益至少应大于60dB。",
+      "difficulty": 3,
+      "keywords": [
+        "谐波失真",
+        "线性度",
+        "增益"
+      ],
+      "formulas": [
+        "THD = √[(a_2 A^2/2)^2 + (3a_3 A^3/4)^2] / √[(a_1 A + 3a_3 A^3/4)^2]"
+      ],
+      "applications": [
+        "音频放大器",
+        "ADC设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶分析",
+        "非线性系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "总谐波失真（THD）是衡量电路非线性失真的重要指标，定义为各次谐波失真的总和。THD越小，电路的线性度越好。在THD<0.1%的要求下，电路增益至少应大于60dB。"
+    },
+    {
+      "id": "bc_6_5_4",
+      "label": "差分对",
+      "node_type": "basic_concept",
+      "summary": "差分对是一种对称的电路结构，由两个匹配的晶体管组成，能够有效抑制偶次谐波失真和共模干扰。差分对的线性范围和共模范围是其主要性能指标。",
+      "difficulty": 3,
+      "keywords": [
+        "对称结构",
+        "偶次谐波抑制",
+        "共模抑制"
+      ],
+      "formulas": [
+        "V_id,max = √(4NL) √(2I_SS/k_n)"
+      ],
+      "applications": [
+        "运放输入级",
+        "混频器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管模型",
+        "对称设计"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分对是一种对称的电路结构，由两个匹配的晶体管组成，能够有效抑制偶次谐波失真和共模干扰。差分对的线性范围和共模范围是其主要性能指标。"
+    },
+    {
+      "id": "ct_6_5_1",
+      "label": "增益降低技术",
+      "node_type": "core_technology",
+      "summary": "增益降低技术是通过负反馈控制方式降低电路的开环增益，从而提高线性范围和抑制非线性失真。具体方法包括全局负反馈、局部负反馈和源电阻负反馈等。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "开环增益",
+        "线性度"
+      ],
+      "formulas": [
+        "A_v,closed ≈ 1/F",
+        "ε ≈ -1/(F(1+F A_v))"
+      ],
+      "applications": [
+        "运放设计",
+        "线性放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益降低技术是通过负反馈控制方式降低电路的开环增益，从而提高线性范围和抑制非线性失真。具体方法包括全局负反馈、局部负反馈和源电阻负反馈等。"
+    },
+    {
+      "id": "ct_6_5_2",
+      "label": "辅助源耦对负反馈",
+      "node_type": "core_technology",
+      "summary": "辅助源耦对负反馈是通过引入额外的差分对分担部分输入差分电压，从而扩展线性范围。该方法通过调整辅助差分对的增益因子和静态电流比例因子来实现线性范围的扩展。",
+      "difficulty": 4,
+      "keywords": [
+        "辅助差分对",
+        "电压分担",
+        "线性范围"
+      ],
+      "formulas": [
+        "V_1/V_id = 1/(1+A)",
+        "A = √(n k_1/k_2)"
+      ],
+      "applications": [
+        "宽线性运放",
+        "ADC前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "辅助源耦对负反馈是通过引入额外的差分对分担部分输入差分电压，从而扩展线性范围。该方法通过调整辅助差分对的增益因子和静态电流比例因子来实现线性范围的扩展。"
+    },
+    {
+      "id": "ct_6_5_3",
+      "label": "自适应补偿",
+      "node_type": "core_technology",
+      "summary": "自适应补偿是通过动态调整尾电流使其随输入差分电压变化，从而抵消非线性失真。该方法通过设计特定的尾电流控制电路，使输出电流与输入电压呈线性关系。",
+      "difficulty": 5,
+      "keywords": [
+        "动态尾电流",
+        "非线性抵消",
+        "线性范围"
+      ],
+      "formulas": [
+        "I_SS = I_DC + k' V_id^2",
+        "k' = k/4"
+      ],
+      "applications": [
+        "高线性运放",
+        "射频前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "自适应补偿是通过动态调整尾电流使其随输入差分电压变化，从而抵消非线性失真。该方法通过设计特定的尾电流控制电路，使输出电流与输入电压呈线性关系。"
+    },
+    {
+      "id": "ca_6_5_1",
+      "label": "局部源电阻差模负反馈电路",
+      "node_type": "circuit_application",
+      "summary": "该电路通过在差分对管的源极引入差模信号负反馈电阻，实现差模增益的降低和线性范围的扩展。改进后的电路将尾电流源分裂为两个并联的尾电流源，避免共模信号对反馈电阻的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "差模负反馈",
+        "源极电阻",
+        "线性范围"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放输入级",
+        "线性放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路通过在差分对管的源极引入差模信号负反馈电阻，实现差模增益的降低和线性范围的扩展。改进后的电路将尾电流源分裂为两个并联的尾电流源，避免共模信号对反馈电阻的影响。"
+    },
+    {
+      "id": "ca_6_5_2",
+      "label": "六管自适应补偿结构",
+      "node_type": "circuit_application",
+      "summary": "该电路通过六管结构实现动态尾电流控制，使尾电流随输入差分电压变化，从而完全抵消非线性失真。电路中的电平移位管确保在输入信号动态范围内保持饱和恒流状态。",
+      "difficulty": 5,
+      "keywords": [
+        "动态尾电流",
+        "电平移位",
+        "非线性抵消"
+      ],
+      "formulas": [
+        "I_SS = I_DC + k' V_id^2"
+      ],
+      "applications": [
+        "高精度运放",
+        "射频前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路通过六管结构实现动态尾电流控制，使尾电流随输入差分电压变化，从而完全抵消非线性失真。电路中的电平移位管确保在输入信号动态范围内保持饱和恒流状态。"
+    },
+    {
+      "id": "ca_6_5_3",
+      "label": "交叉耦合差分对电平移位结构",
+      "node_type": "circuit_application",
+      "summary": "该电路通过交叉耦合差分对和电平移位结构，实现非线性失真的抵消。电路中的辅助差分对通过高静态电流偏置降低差分电压对电平移位电压的调制作用。",
+      "difficulty": 5,
+      "keywords": [
+        "交叉耦合",
+        "电平移位",
+        "非线性抵消"
+      ],
+      "formulas": [
+        "I_o = α x √(1-β x^2) I"
+      ],
+      "applications": [
+        "高线性混频器",
+        "射频前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路通过交叉耦合差分对和电平移位结构，实现非线性失真的抵消。电路中的辅助差分对通过高静态电流偏置降低差分电压对电平移位电压的调制作用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_5_1",
+      "target_id": "ct_6_5_1",
+      "relationship": "enables",
+      "description": "非线性失真的分析为增益降低技术的设计提供了理论基础，明确了需要抑制的失真类型和程度。",
+      "weight": 0.9,
+      "evidence": "实际运放的信号处理精度最终由电路噪声决定, 而在噪声起主导作用前, 电路失真已成为限制精度提高的主要因素。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_5_3",
+      "target_id": "ct_6_5_1",
+      "relationship": "supports",
+      "description": "THD指标为增益降低技术的设计目标提供了量化标准，指导反馈网络的设计。",
+      "weight": 0.8,
+      "evidence": "在 THD < 0.1% 的要求下,电路增益至少应大于 60dB。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_5_4",
+      "target_id": "ct_6_5_2",
+      "relationship": "enables",
+      "description": "差分对的对称结构特性为辅助源耦对负反馈的设计提供了基础，确保偶次谐波被有效抑制。",
+      "weight": 0.9,
+      "evidence": "在全差分对称结构中,直流失调和各偶次项失真被有效抑制,电路失真主要由 3 次以上的奇次谐波分量决定。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_5_1",
+      "target_id": "ca_6_5_1",
+      "relationship": "implements",
+      "description": "增益降低技术通过局部源电阻差模负反馈电路实现，具体表现为在差分对管的源极引入反馈电阻。",
+      "weight": 0.9,
+      "evidence": "图 6-20(a) 所示的差分电路, 通过在差分对管的源极引入差模信号负反馈电阻 R ,实现差模增益的降低。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_5_3",
+      "target_id": "ca_6_5_2",
+      "relationship": "implements",
+      "description": "自适应补偿技术通过六管结构实现，动态调整尾电流以抵消非线性失真。",
+      "weight": 0.9,
+      "evidence": "图 6-22 给出了一种六管自适应的尾电流动态补偿结构,所有 MOS 管均相互匹配。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_5_2",
+      "target_id": "ca_6_5_3",
+      "relationship": "applies_to",
+      "description": "辅助源耦对负反馈技术应用于交叉耦合差分对电平移位结构，通过分担差分电压扩展线性范围。",
+      "weight": 0.8,
+      "evidence": "图 6-24(a) 给出了基于交叉耦合差分对电平移位结构的具体实现方式。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_5_4",
+      "target_id": "bc_6_5_1",
+      "relationship": "complements",
+      "description": "差分对的结构特性与非线性失真分析相互补充，前者抑制偶次谐波，后者分析奇次谐波。",
+      "weight": 0.7,
+      "evidence": "在全差分对称结构中,直流失调和各偶次项失真被有效抑制,电路失真主要由 3 次以上的奇次谐波分量决定。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_6_5_1",
+      "target_id": "ct_6_5_3",
+      "relationship": "extends",
+      "description": "自适应补偿技术扩展了增益降低技术的应用范围，通过动态尾电流控制实现更优的线性度。",
+      "weight": 0.8,
+      "evidence": "降低开环增益成为改善线性范围最直接有效的方法。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.5",
+  "title": "宽线性范围差分输入级",
+  "extraction_timestamp": "2025-07-08T16:40:28.468617"
+}

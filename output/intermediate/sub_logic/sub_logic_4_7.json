@@ -1,0 +1,186 @@
+{
+  "nodes": [
+    {
+      "id": "bc_4_7_1",
+      "label": "带隙电压基准",
+      "node_type": "basic_concept",
+      "summary": "利用半导体材料的带隙电压特性产生稳定参考电压的电路，通常具有低温度系数特性。基本原理是将两个具有相反温度系数的电压相加，实现温度补偿。",
+      "difficulty": 3,
+      "keywords": [
+        "带隙电压",
+        "温度系数",
+        "补偿"
+      ],
+      "formulas": [
+        "Vref = VBE + K*VT"
+      ],
+      "applications": [
+        "ADC/DAC参考",
+        "LDO基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "温度特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用半导体材料的带隙电压特性产生稳定参考电压的电路，通常具有低温度系数特性。基本原理是将两个具有相反温度系数的电压相加，实现温度补偿。"
+    },
+    {
+      "id": "bc_4_7_2",
+      "label": "亚阈值工作区",
+      "node_type": "basic_concept",
+      "summary": "MOSFET在栅源电压低于阈值电压时的工作区域，此时器件呈现指数型电流-电压特性，可用于低功耗电路设计。",
+      "difficulty": 3,
+      "keywords": [
+        "亚阈值",
+        "低功耗",
+        "指数特性"
+      ],
+      "formulas": [
+        "IDS = I0*exp((VGS-VTH)/nVT)"
+      ],
+      "applications": [
+        "低电压基准",
+        "电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOSFET特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOSFET在栅源电压低于阈值电压时的工作区域，此时器件呈现指数型电流-电压特性，可用于低功耗电路设计。"
+    },
+    {
+      "id": "ct_4_7_1",
+      "label": "曲率补偿技术",
+      "node_type": "core_technology",
+      "summary": "通过非线性补偿电路消除带隙基准中VBE的高阶温度非线性项，实现更宽温度范围内的稳定输出。典型方法包括使用温度依赖的电流镜或分段补偿。",
+      "difficulty": 4,
+      "keywords": [
+        "曲率补偿",
+        "非线性补偿",
+        "温度稳定性"
+      ],
+      "formulas": [
+        "Vcomp = aT + bT^2"
+      ],
+      "applications": [
+        "精密基准源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过非线性补偿电路消除带隙基准中VBE的高阶温度非线性项，实现更宽温度范围内的稳定输出。典型方法包括使用温度依赖的电流镜或分段补偿。"
+    },
+    {
+      "id": "ct_4_7_2",
+      "label": "ΔVGS基准技术",
+      "node_type": "core_technology",
+      "summary": "利用不同尺寸MOSFET在亚阈值区产生的ΔVGS作为温度敏感电压，通过加权求和实现基准电压。适用于超低电压应用。",
+      "difficulty": 4,
+      "keywords": [
+        "ΔVGS",
+        "亚阈值",
+        "低电压"
+      ],
+      "formulas": [
+        "ΔVGS = VT*ln(N)"
+      ],
+      "applications": [
+        "1V以下基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用不同尺寸MOSFET在亚阈值区产生的ΔVGS作为温度敏感电压，通过加权求和实现基准电压。适用于超低电压应用。"
+    },
+    {
+      "id": "ca_4_7_1",
+      "label": "2V 23μA带隙基准",
+      "node_type": "circuit_application",
+      "summary": "Leung等人设计的低功耗带隙基准电路，采用曲率补偿技术实现5.3ppm/°C的温度系数，工作电压2V，静态电流仅23μA。",
+      "difficulty": 4,
+      "keywords": [
+        "低功耗",
+        "曲率补偿",
+        "CMOS"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Leung等人设计的低功耗带隙基准电路，采用曲率补偿技术实现5.3ppm/°C的温度系数，工作电压2V，静态电流仅23μA。"
+    },
+    {
+      "id": "ca_4_7_2",
+      "label": "1V BiCMOS带隙基准",
+      "node_type": "circuit_application",
+      "summary": "",
+      "difficulty": 4,
+      "keywords": [
+        "BiCMOS",
+        "1V",
+        "混合工艺"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": ""
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_4_7_1",
+      "target_id": "ct_4_7_1",
+      "relationship": "enables",
+      "description": "带隙电压基准原理为曲率补偿技术提供了理论基础",
+      "weight": 0.9,
+      "evidence": "参考文献[1][5]中曲率补偿技术都应用于带隙基准设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_4_7_2",
+      "target_id": "ct_4_7_2",
+      "relationship": "supports",
+      "description": "亚阈值工作区特性为ΔVGS基准技术提供了物理基础",
+      "weight": 0.8,
+      "evidence": "参考文献[7]明确使用亚阈值区ΔVGS",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_7_1",
+      "target_id": "ca_4_7_1",
+      "relationship": "implements",
+      "description": "曲率补偿技术在2V基准中得到具体实现",
+      "weight": 0.85,
+      "evidence": "文献[1]标题明确提到curvature-compensated",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_4_7_2",
+      "target_id": "ca_4_7_2",
+      "relationship": "applies_to",
+      "description": "ΔVGS技术可应用于1V以下基准设计",
+      "weight": 0.7,
+      "evidence": "文献[7]研究1V以下基准",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "4.7",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:36:45.476076"
+}

@@ -1,0 +1,193 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_6_1",
+      "label": "CMOS运算放大器",
+      "node_type": "basic_concept",
+      "summary": "CMOS运算放大器是一种基于CMOS工艺的运算放大器，具有高增益、低功耗和良好的线性特性。广泛应用于模拟信号处理、数据转换和滤波等电路中。",
+      "difficulty": 2,
+      "keywords": [
+        "CMOS",
+        "运算放大器",
+        "高增益"
+      ],
+      "formulas": [
+        "增益公式: Av = gm * Ro"
+      ],
+      "applications": [
+        "模拟信号处理",
+        "数据转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "CMOS工艺",
+        "运算放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "CMOS运算放大器是一种基于CMOS工艺的运算放大器，具有高增益、低功耗和良好的线性特性。广泛应用于模拟信号处理、数据转换和滤波等电路中。"
+    },
+    {
+      "id": "bc_10_6_2",
+      "label": "增益提升技术",
+      "node_type": "basic_concept",
+      "summary": "增益提升技术通过增加额外的增益级来提高主放大器的增益，常见的增益提升技术包括增益提升级和增益提升级联结构。",
+      "difficulty": 3,
+      "keywords": [
+        "增益提升",
+        "级联结构",
+        "高增益"
+      ],
+      "formulas": [
+        "总增益公式: Av_total = Av_main * Av_boost"
+      ],
+      "applications": [
+        "高增益放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器增益原理",
+        "级联结构"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益提升技术通过增加额外的增益级来提高主放大器的增益，常见的增益提升技术包括增益提升级和增益提升级联结构。"
+    },
+    {
+      "id": "ct_10_6_1",
+      "label": "快速建立CMOS运算放大器设计",
+      "node_type": "core_technology",
+      "summary": "快速建立CMOS运算放大器设计技术通过优化放大器的频率响应和相位裕度，实现快速建立时间，适用于开关电容电路等需要快速响应的应用。",
+      "difficulty": 4,
+      "keywords": [
+        "快速建立",
+        "CMOS运算放大器",
+        "开关电容电路"
+      ],
+      "formulas": [
+        "建立时间公式: t_settling = 1/(BW * PM)"
+      ],
+      "applications": [
+        "开关电容电路",
+        "数据转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "快速建立CMOS运算放大器设计技术通过优化放大器的频率响应和相位裕度，实现快速建立时间，适用于开关电容电路等需要快速响应的应用。"
+    },
+    {
+      "id": "ct_10_6_2",
+      "label": "增益提升级联放大器优化",
+      "node_type": "core_technology",
+      "summary": "增益提升级联放大器优化技术通过优化增益提升级的偏置和尺寸，实现高增益和高带宽的平衡，适用于高速和低电压应用。",
+      "difficulty": 4,
+      "keywords": [
+        "增益提升",
+        "级联放大器",
+        "高速应用"
+      ],
+      "formulas": [
+        "优化目标函数: max(Av * BW)"
+      ],
+      "applications": [
+        "高速放大器",
+        "低电压应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益提升级联放大器优化技术通过优化增益提升级的偏置和尺寸，实现高增益和高带宽的平衡，适用于高速和低电压应用。"
+    },
+    {
+      "id": "ca_10_6_1",
+      "label": "高摆幅CMOS望远镜运算放大器",
+      "node_type": "circuit_application",
+      "summary": "高摆幅CMOS望远镜运算放大器采用级联结构和高摆幅输出级，实现高增益和高输出摆幅，适用于高精度模拟信号处理。",
+      "difficulty": 4,
+      "keywords": [
+        "高摆幅",
+        "望远镜结构",
+        "高增益"
+      ],
+      "formulas": [
+        "输出摆幅公式: Vout_max = Vdd - Vdsat"
+      ],
+      "applications": [
+        "高精度模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高摆幅CMOS望远镜运算放大器采用级联结构和高摆幅输出级，实现高增益和高输出摆幅，适用于高精度模拟信号处理。"
+    },
+    {
+      "id": "ca_10_6_2",
+      "label": "低电压低功耗快速建立CMOS运算跨导放大器",
+      "node_type": "circuit_application",
+      "summary": "低电压低功耗快速建立CMOS运算跨导放大器通过优化跨导和负载结构，实现低电压和低功耗下的快速建立，适用于开关电容应用。",
+      "difficulty": 5,
+      "keywords": [
+        "低电压",
+        "低功耗",
+        "快速建立"
+      ],
+      "formulas": [
+        "跨导公式: gm = 2 * Id / Vov"
+      ],
+      "applications": [
+        "开关电容应用",
+        "数据转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低电压低功耗快速建立CMOS运算跨导放大器通过优化跨导和负载结构，实现低电压和低功耗下的快速建立，适用于开关电容应用。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_6_1",
+      "target_id": "ct_10_6_1",
+      "relationship": "enables",
+      "description": "CMOS运算放大器的基本原理使能了快速建立CMOS运算放大器的设计技术。",
+      "weight": 0.9,
+      "evidence": "参考文献[1]中提到的快速建立CMOS运算放大器设计基于CMOS运算放大器的基本原理。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_6_2",
+      "target_id": "ct_10_6_2",
+      "relationship": "supports",
+      "description": "增益提升技术支撑了增益提升级联放大器的优化技术。",
+      "weight": 0.8,
+      "evidence": "参考文献[4]中提到的增益提升级联放大器优化技术基于增益提升技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_6_1",
+      "target_id": "ca_10_6_1",
+      "relationship": "implements",
+      "description": "快速建立CMOS运算放大器设计技术实现了高摆幅CMOS望远镜运算放大器的设计。",
+      "weight": 0.7,
+      "evidence": "参考文献[2]中提到的望远镜运算放大器设计采用了快速建立技术。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_6_2",
+      "target_id": "ca_10_6_2",
+      "relationship": "applies_to",
+      "description": "增益提升级联放大器优化技术应用于低电压低功耗快速建立CMOS运算跨导放大器的设计。",
+      "weight": 0.8,
+      "evidence": "参考文献[7]中提到的低电压低功耗放大器设计采用了增益提升优化技术。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "10.6",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:45:30.595026"
+}

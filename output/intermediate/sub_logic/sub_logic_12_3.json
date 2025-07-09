@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_3_1",
+      "label": "轨至轨运放",
+      "node_type": "basic_concept",
+      "summary": "轨至轨运放是一种通过电路结构设计实现宽摆幅动态范围的技术，能够在低电源电压下工作。它不仅实现输出信号的全摆幅范围，还实现输入信号的全电压摆幅特性。轨至轨运放的设计通常分解为输入级轨至轨和输出级轨至轨两个部分。",
+      "difficulty": 3,
+      "keywords": [
+        "宽摆幅",
+        "低电源电压",
+        "全摆幅"
+      ],
+      "formulas": [],
+      "applications": [
+        "低压运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性",
+        "差分对结构"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "轨至轨运放是一种通过电路结构设计实现宽摆幅动态范围的技术，能够在低电源电压下工作。它不仅实现输出信号的全摆幅范围，还实现输入信号的全电压摆幅特性。轨至轨运放的设计通常分解为输入级轨至轨和输出级轨至轨两个部分。"
+    },
+    {
+      "id": "bc_12_3_2",
+      "label": "共模输入范围",
+      "node_type": "basic_concept",
+      "summary": "共模输入范围是指差分对能够正常工作的共模信号范围。在低电源电压下，为了得到全摆幅的共模输入范围，可以采用N型差分对和P型差分对并联结构、内置升压电路或特殊MOS器件构成的差分对。",
+      "difficulty": 3,
+      "keywords": [
+        "共模信号",
+        "差分对",
+        "全摆幅"
+      ],
+      "formulas": [
+        "V_SS ≤ V_CM < V_CC - V_DSp,sat - V_GSP",
+        "V_SS + V_DSn,sat + V_GSN < V_CM ≤ V_CC"
+      ],
+      "applications": [
+        "轨至轨输入级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管饱和区特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模输入范围是指差分对能够正常工作的共模信号范围。在低电源电压下，为了得到全摆幅的共模输入范围，可以采用N型差分对和P型差分对并联结构、内置升压电路或特殊MOS器件构成的差分对。"
+    },
+    {
+      "id": "bc_12_3_3",
+      "label": "跨导（gm）",
+      "node_type": "basic_concept",
+      "summary": "跨导是衡量差分对增益的重要参数，定义为输出电流变化与输入电压变化的比值。在轨至轨输入级中，跨导随输入共模电平的变化而变化，导致运放的增益带宽积（GBW）和相位裕度不稳定。因此，恒定跨导控制是轨至轨输入级设计的关键。",
+      "difficulty": 3,
+      "keywords": [
+        "跨导",
+        "增益带宽积",
+        "相位裕度"
+      ],
+      "formulas": [
+        "g_mT = √(2k_n I_n) + √(2k_p I_p) = k_n Δ_n + k_p Δ_P"
+      ],
+      "applications": [
+        "运放稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分对增益"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "跨导是衡量差分对增益的重要参数，定义为输出电流变化与输入电压变化的比值。在轨至轨输入级中，跨导随输入共模电平的变化而变化，导致运放的增益带宽积（GBW）和相位裕度不稳定。因此，恒定跨导控制是轨至轨输入级设计的关键。"
+    },
+    {
+      "id": "ct_12_3_1",
+      "label": "互补差分对并联结构",
+      "node_type": "core_technology",
+      "summary": "采用N型差分对和P型差分对并联结构是实现轨至轨输入级的常用方法。N型差分对在低共模电平下工作，P型差分对在高共模电平下工作，两者并联可以覆盖全电源摆幅的共模输入范围。设计时需要确保两差分对的共模范围有足够的交叠区域。",
+      "difficulty": 4,
+      "keywords": [
+        "N型差分对",
+        "P型差分对",
+        "并联结构"
+      ],
+      "formulas": [
+        "V_CC,min = V_GSN + V_GSP + V_DSn,sat + V_DSp,sat ≈ V_TN + V_TP + 4Δ"
+      ],
+      "applications": [
+        "轨至轨输入级设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用N型差分对和P型差分对并联结构是实现轨至轨输入级的常用方法。N型差分对在低共模电平下工作，P型差分对在高共模电平下工作，两者并联可以覆盖全电源摆幅的共模输入范围。设计时需要确保两差分对的共模范围有足够的交叠区域。"
+    },
+    {
+      "id": "ct_12_3_2",
+      "label": "反馈型恒定跨导控制",
+      "node_type": "core_technology",
+      "summary": "反馈型恒定跨导控制通过反馈环路自动调节N型和P型差分对的尾电流，使得总跨导保持恒定。反馈环路根据输入共模信号的范围动态调整尾电流，确保在共模信号变化时跨导不变。这种方法适用于饱和状态下的MOS差分对。",
+      "difficulty": 5,
+      "keywords": [
+        "反馈环路",
+        "尾电流控制",
+        "恒定跨导"
+      ],
+      "formulas": [
+        "√(I_p) + √(I_n) = √(I_ref)"
+      ],
+      "applications": [
+        "轨至轨运放设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈型恒定跨导控制通过反馈环路自动调节N型和P型差分对的尾电流，使得总跨导保持恒定。反馈环路根据输入共模信号的范围动态调整尾电流，确保在共模信号变化时跨导不变。这种方法适用于饱和状态下的MOS差分对。"
+    },
+    {
+      "id": "ct_12_3_3",
+      "label": "非匹配型恒定跨导控制",
+      "node_type": "core_technology",
+      "summary": "非匹配型恒定跨导控制适用于N型和P型差分对的k因子不匹配的情况。通过TL环路设计，确保在k因子失配时仍能实现跨导恒定。这种方法比匹配型设计更健壮，适用于工艺参数变化较大的场景。",
+      "difficulty": 5,
+      "keywords": [
+        "k因子失配",
+        "TL环路",
+        "健壮设计"
+      ],
+      "formulas": [
+        "√(k_n I_n) + √(k_p I_p) = √(k_n I_n,max) = √(k_p I_p,max)"
+      ],
+      "applications": [
+        "工艺鲁棒性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "非匹配型恒定跨导控制适用于N型和P型差分对的k因子不匹配的情况。通过TL环路设计，确保在k因子失配时仍能实现跨导恒定。这种方法比匹配型设计更健壮，适用于工艺参数变化较大的场景。"
+    },
+    {
+      "id": "ca_12_3_1",
+      "label": "轨至轨折叠型Cascode差分输入结构",
+      "node_type": "circuit_application",
+      "summary": "该电路采用N型和P型MOS差分对并联结构，尾电流由外部独立偏置提供，并随输入共模范围变化。通过折叠式Cascode结构提高增益和带宽，适用于高精度轨至轨运放设计。",
+      "difficulty": 5,
+      "keywords": [
+        "折叠式Cascode",
+        "差分输入",
+        "高精度"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路采用N型和P型MOS差分对并联结构，尾电流由外部独立偏置提供，并随输入共模范围变化。通过折叠式Cascode结构提高增益和带宽，适用于高精度轨至轨运放设计。"
+    },
+    {
+      "id": "ca_12_3_2",
+      "label": "三倍尾电流控制电路",
+      "node_type": "circuit_application",
+      "summary": "该电路通过三倍尾电流控制实现跨导和增益的恒定。采用恒定电流源固定偏置尾电流管和负载管，同时通过比例电流镜和固定偏置并联控制尾电流。这种方法简化了反馈环路设计，适用于中等精度运放。",
+      "difficulty": 4,
+      "keywords": [
+        "三倍尾电流",
+        "恒定增益",
+        "简化设计"
+      ],
+      "formulas": [
+        "g_mT = √(k_n I_ref) + √(k_p I_ref)"
+      ],
+      "applications": [
+        "中等精度运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路通过三倍尾电流控制实现跨导和增益的恒定。采用恒定电流源固定偏置尾电流管和负载管，同时通过比例电流镜和固定偏置并联控制尾电流。这种方法简化了反馈环路设计，适用于中等精度运放。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_3_1",
+      "target_id": "ct_12_3_1",
+      "relationship": "enables",
+      "description": "轨至轨运放的基本概念使能了互补差分对并联结构的设计方法。",
+      "weight": 0.9,
+      "evidence": "轨至轨运放的设计通常分解为输入级轨至轨和输出级轨至轨两个部分。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_3_2",
+      "target_id": "ct_12_3_1",
+      "relationship": "supports",
+      "description": "共模输入范围的设计要求支撑了互补差分对并联结构的实现。",
+      "weight": 0.8,
+      "evidence": "N型差分对和P型差分对并联可以覆盖全电源摆幅的共模输入范围。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_3_3",
+      "target_id": "ct_12_3_2",
+      "relationship": "enables",
+      "description": "跨导的概念使能了反馈型恒定跨导控制技术的设计。",
+      "weight": 0.9,
+      "evidence": "恒定跨导控制是轨至轨输入级设计的关键。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_3_1",
+      "target_id": "ca_12_3_1",
+      "relationship": "implements",
+      "description": "互补差分对并联结构实现了轨至轨折叠型Cascode差分输入电路。",
+      "weight": 0.8,
+      "evidence": "该电路采用N型和P型MOS差分对并联结构。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_3_2",
+      "target_id": "ca_12_3_1",
+      "relationship": "applies_to",
+      "description": "反馈型恒定跨导控制技术应用于轨至轨折叠型Cascode差分输入电路。",
+      "weight": 0.7,
+      "evidence": "反馈环路根据输入共模信号的范围动态调整尾电流。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_3_3",
+      "target_id": "ca_12_3_2",
+      "relationship": "applies_to",
+      "description": "非匹配型恒定跨导控制技术应用于三倍尾电流控制电路。",
+      "weight": 0.7,
+      "evidence": "该方法适用于工艺参数变化较大的场景。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "12.3",
+  "title": "轨至轨输入级",
+  "extraction_timestamp": "2025-07-08T16:47:48.829453"
+}

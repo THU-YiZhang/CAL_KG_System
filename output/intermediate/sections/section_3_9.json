@@ -1,0 +1,7 @@
+{
+  "section_num": "3.9",
+  "title": "参考文献",
+  "start_line": 2005,
+  "end_line": 2030,
+  "content": "### 3.9 参考文献\n[1] Mahattanakul J, Pookaiyaudom S, Toumazou C. Understanding Wilson Current Mirror via The Negative Feedback Approach. IEEE ISCAS, 2001, 532~535\n[ 2 ] Minch B A, Franklin W. Low-Voltage Wilson Current Mirrors in CMOS. IEEE ISCAS, 2007, 2220 ~2223\n[3] Kimura K. Low Voltage Technique for Bias Circuits. IEEE Trans. Circuits and Systems-I, 1997, ${44}\\left( 5\\right)  : {459} \\sim  {465}$\n[4] Kerns D V. Enhanced Peaking Current Reference. IEEE J. Solid-State Circuits, 1988, 23(3): 869 ~872\n[ 5 ] Cheng K H, Chen T S, Kuo C W. High Accuracy Current Mirror with Low Settling Time. IEEE MWSCAS: Midwest Symposium on Circuits and Systems, 2003, 189~192\n[ 6 ] Kimura K. Low Voltage Techniques for Bias Circuit. IEEE Trans. Circuits and Systems-I, 1997, 5 (11):459~465\n[ 7 ] Graells F S, Huertas J L. Sub-1-V CMOS Proportional-to-Absolute Temperature References. IEEE J. Solid-State Circuits,2003,38(1):84~88\n[ 8 ] Vincence V C, Montoro C G, Schneider M C. A High-Swing MOS Cascode Bias Circuit for Operation at Any Current Level. IEEE ISCAS, 2000, 5:489~452\n[ 9 ] Coelho V V, Montoro C G, Schneider M C. A High-Swing MOS Cascode Bias Circuit. IEEE J. Circuits and Systems II, 2000, 11(47):1325~1328\n[10] Galeano E M C, Montoro C G, Schneider M C. A 2-nW 1. 1-V Self-Biased Current Reference in CMOS Technology. IEEE Trans. Circuits and Systems-II, 2005, 52(2):61~65\n[11] 庞坚, 吴金, 闰良海. 高可靠启动电路的分析与设计. 电子器件, 2005, 28(12):390~393\n## 第 4 章 电压与电流基准"
+}

@@ -1,0 +1,216 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_7_1",
+      "label": "电流偏置",
+      "node_type": "basic_concept",
+      "summary": "电流偏置是决定电路系统稳定与可靠工作的关键因素之一。偏置电路中的MOS管失效通常会导致整个电路系统的失效，因此必须提高电压、电流偏置电路的可靠性。冗余设计是一种可行的解决方案，通过将两种相同的自偏置电路共用源电阻，输出电流在源电阻上叠加，从而提高可靠性。",
+      "difficulty": 2,
+      "keywords": [
+        "电流偏置",
+        "冗余设计",
+        "源电阻"
+      ],
+      "formulas": [
+        "ΔV_GS/2R_S",
+        "V_Tln(N)/2R_S"
+      ],
+      "applications": [
+        "模拟电路",
+        "数字电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理",
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流偏置是决定电路系统稳定与可靠工作的关键因素之一。偏置电路中的MOS管失效通常会导致整个电路系统的失效，因此必须提高电压、电流偏置电路的可靠性。冗余设计是一种可行的解决方案，通过将两种相同的自偏置电路共用源电阻，输出电流在源电阻上叠加，从而提高可靠性。"
+    },
+    {
+      "id": "bc_3_7_2",
+      "label": "瞬态启动原理",
+      "node_type": "basic_concept",
+      "summary": "瞬态启动原理是指在电源上电瞬间，通过低阻通路形成稳定的电流，为系统提供偏置。低阻通路主要包括无源电阻、有源MOS或BJT二极管饱和电阻、大信号控制下的有源线性电阻等。MOS器件可通过栅压或尺寸的设计调节其电阻的大小，从而改变提供的偏压。",
+      "difficulty": 2,
+      "keywords": [
+        "瞬态启动",
+        "低阻通路",
+        "MOS器件"
+      ],
+      "formulas": [],
+      "applications": [
+        "启动电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理",
+        "电阻分压原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "瞬态启动原理是指在电源上电瞬间，通过低阻通路形成稳定的电流，为系统提供偏置。低阻通路主要包括无源电阻、有源MOS或BJT二极管饱和电阻、大信号控制下的有源线性电阻等。MOS器件可通过栅压或尺寸的设计调节其电阻的大小，从而改变提供的偏压。"
+    },
+    {
+      "id": "ct_3_7_1",
+      "label": "冗余设计方法",
+      "node_type": "core_technology",
+      "summary": "冗余设计方法通过将两种相同的自偏置电路共用源电阻，输出电流在源电阻上叠加。这两种电流的性质和大小完全相同，由于两条支路都有电流流过，电阻折算到单独一个支路中变为两倍，则定义的支路电流为ΔV_GS/2R_S。在亚阈区支路电流为V_Tln(N)/2R_S，则两条支路输出的电流总和增加为原来的两倍。当一条支路失效时，剩余的有效偏置电路中的源限流电阻保持为R_S，总的输出电流减小一半，但其性质与原两块偏置电路同时工作提供的输出电流完全相同。",
+      "difficulty": 3,
+      "keywords": [
+        "冗余设计",
+        "源电阻",
+        "支路电流"
+      ],
+      "formulas": [
+        "ΔV_GS/2R_S",
+        "V_Tln(N)/2R_S"
+      ],
+      "applications": [
+        "提高偏置电路可靠性"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "冗余设计方法通过将两种相同的自偏置电路共用源电阻，输出电流在源电阻上叠加。这两种电流的性质和大小完全相同，由于两条支路都有电流流过，电阻折算到单独一个支路中变为两倍，则定义的支路电流为ΔV_GS/2R_S。在亚阈区支路电流为V_Tln(N)/2R_S，则两条支路输出的电流总和增加为原来的两倍。当一条支路失效时，剩余的有效偏置电路中的源限流电阻保持为R_S，总的输出电流减小一半，但其性质与原两块偏置"
+    },
+    {
+      "id": "ct_3_7_2",
+      "label": "启动电路设计",
+      "node_type": "core_technology",
+      "summary": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。设计启动电路的参数时应使启动电路能够满足以下三点要求：首先能向偏置电路灌入电流，实现启动功能；其次，偏置电路启动后必须能关断启动电路与偏置电路的联系；最后，电路启动后，启动电路应当保持很低的功耗，或者没有功耗。",
+      "difficulty": 3,
+      "keywords": [
+        "启动电路",
+        "瞬态电流注入",
+        "低功耗"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路",
+        "数字电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。设计启动电路的参数时应使启动电路能够满足以下三点要求：首先能向偏置电路灌入电流，实现启动功能；其次，偏置电路启动后必须能关断启动电路与偏置电路的联系；最后，电路启动后，启动电路应当保持很低的功耗，或者没有功耗。"
+    },
+    {
+      "id": "ca_3_7_1",
+      "label": "NMOS启动电路",
+      "node_type": "circuit_application",
+      "summary": "NMOS启动电路的基本结构包括电阻R_S和控制管M_I。在上电瞬间，V_C上跳到高电平，而M_I在上电瞬间V_S保持为0，电路因为V_GS=V_CC而导通，给NMOS管提供注入电流，可等效地视为V_N_start启动信号将后级NMOS的栅电压上拉到所需要的偏置电位。当NMOS未完成启动时，支路电流极小，内部支路的PMOS也不导通，其V_bp保持为高电平，因此启动模块中的PMOS保持截止状态，使V_S保持低电位，从而V_N_start始终保持高电平充电状态。随着启动的持续进行，内部支路电流增加后，V_bp电位下降，PMOS开始导通，V_S电位上升，启动能力减弱，直至V_S>V_CC-V_TP时，M_I完全关断，对电路正常状态的影响最小。",
+      "difficulty": 4,
+      "keywords": [
+        "NMOS启动电路",
+        "电阻R_S",
+        "控制管M_I"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路",
+        "数字电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "NMOS启动电路的基本结构包括电阻R_S和控制管M_I。在上电瞬间，V_C上跳到高电平，而M_I在上电瞬间V_S保持为0，电路因为V_GS=V_CC而导通，给NMOS管提供注入电流，可等效地视为V_N_start启动信号将后级NMOS的栅电压上拉到所需要的偏置电位。当NMOS未完成启动时，支路电流极小，内部支路的PMOS也不导通，其V_bp保持为高电平，因此启动模块中的PMOS保持截止状态，使V_"
+    },
+    {
+      "id": "ca_3_7_2",
+      "label": "零静态功耗NMOS启动电路",
+      "node_type": "circuit_application",
+      "summary": "零静态功耗NMOS启动电路将电阻用启动电容C_S取代，其稳态下的静态偏置电流为零，并能彻底关闭M_I。信号V_bp有两种接法，一是接内部PMOS管的栅，一是直接连接GND。由于启动过程是瞬时的，在上电完成后，如注入的电流过小，负载电路则无法启动，电容C_S因充满高电位而使启动失效。因此，该结构只适合于启动上电相对简单的非嵌套的电路系统。",
+      "difficulty": 4,
+      "keywords": [
+        "零静态功耗",
+        "启动电容C_S",
+        "NMOS启动电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "零静态功耗NMOS启动电路将电阻用启动电容C_S取代，其稳态下的静态偏置电流为零，并能彻底关闭M_I。信号V_bp有两种接法，一是接内部PMOS管的栅，一是直接连接GND。由于启动过程是瞬时的，在上电完成后，如注入的电流过小，负载电路则无法启动，电容C_S因充满高电位而使启动失效。因此，该结构只适合于启动上电相对简单的非嵌套的电路系统。"
+    },
+    {
+      "id": "ca_3_7_3",
+      "label": "OP控制型基准启动电路",
+      "node_type": "circuit_application",
+      "summary": "OP控制型基准启动电路由M_6-M_9组成。M_6、M_7组成倒相器，当电路没有启动时M_1的栅极V_bp为高，倒相器输出为0，使得M_8、M_9导通，向BGR注入电流以启动电路。当工作点建立后，M_6栅极降低，关闭启动电路。该启动电路设计的关键是M_6和M_7的宽长比，即倒相器的翻转电压。",
+      "difficulty": 4,
+      "keywords": [
+        "OP控制型",
+        "基准启动电路",
+        "倒相器"
+      ],
+      "formulas": [],
+      "applications": [
+        "带隙基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "OP控制型基准启动电路由M_6-M_9组成。M_6、M_7组成倒相器，当电路没有启动时M_1的栅极V_bp为高，倒相器输出为0，使得M_8、M_9导通，向BGR注入电流以启动电路。当工作点建立后，M_6栅极降低，关闭启动电路。该启动电路设计的关键是M_6和M_7的宽长比，即倒相器的翻转电压。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_7_1",
+      "target_id": "ct_3_7_1",
+      "relationship": "enables",
+      "description": "电流偏置的基本概念使能了冗余设计方法的实现，通过理解电流偏置的重要性，可以设计出更可靠的冗余偏置电路。",
+      "weight": 0.8,
+      "evidence": "冗余设计是一种可行的解决方案，将两种相同的自偏置电路共用源电阻，输出电流在源电阻上叠加。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_7_2",
+      "target_id": "ct_3_7_2",
+      "relationship": "enables",
+      "description": "瞬态启动原理的理解使能了启动电路设计方法的实现，通过理解低阻通路和MOS器件的工作原理，可以设计出有效的启动电路。",
+      "weight": 0.8,
+      "evidence": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_7_1",
+      "target_id": "ca_3_7_1",
+      "relationship": "implements",
+      "description": "冗余设计方法实现了NMOS启动电路的设计，通过共用源电阻和叠加电流，提高了电路的可靠性。",
+      "weight": 0.7,
+      "evidence": "NMOS启动电路的基本结构包括电阻R_S和控制管M_I，通过冗余设计提高了电路的可靠性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_7_2",
+      "target_id": "ca_3_7_2",
+      "relationship": "implements",
+      "description": "启动电路设计方法实现了零静态功耗NMOS启动电路的设计，通过使用启动电容C_S，实现了零静态功耗的目标。",
+      "weight": 0.7,
+      "evidence": "零静态功耗NMOS启动电路将电阻用启动电容C_S取代，其稳态下的静态偏置电流为零。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_7_2",
+      "target_id": "ca_3_7_3",
+      "relationship": "implements",
+      "description": "启动电路设计方法实现了OP控制型基准启动电路的设计，通过倒相器和MOS管的组合，实现了启动和关闭的功能。",
+      "weight": 0.7,
+      "evidence": "OP控制型基准启动电路由M_6-M_9组成，通过倒相器和MOS管的组合实现了启动和关闭的功能。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.7",
+  "title": "偏置启动电路",
+  "extraction_timestamp": "2025-07-08T16:35:14.119717"
+}

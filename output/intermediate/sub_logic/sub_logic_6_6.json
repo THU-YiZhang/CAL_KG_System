@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_6_1",
+      "label": "多级运放",
+      "node_type": "basic_concept",
+      "summary": "多级运放是通过将多个放大电路级联以提高开环增益的运放结构。在低压系统中，由于高增益的Cascode结构无法适用，多级级联显得尤为重要。多级运放通常包括输入级（差分输入级）、中间级和输出级，中间级和输出级除了实现增益外，还负责直流电平转换、电流传输和电流电压转换等功能。",
+      "difficulty": 3,
+      "keywords": [
+        "级联",
+        "开环增益",
+        "差分输入级"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理系统",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "单级运放",
+        "差分放大电路"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多级运放是通过将多个放大电路级联以提高开环增益的运放结构。在低压系统中，由于高增益的Cascode结构无法适用，多级级联显得尤为重要。多级运放通常包括输入级（差分输入级）、中间级和输出级，中间级和输出级除了实现增益外，还负责直流电平转换、电流传输和电流电压转换等功能。"
+    },
+    {
+      "id": "bc_6_6_2",
+      "label": "Class A/AB/B模式",
+      "node_type": "basic_concept",
+      "summary": "Class A、AB和B是放大器的不同工作模式。Class A模式下，晶体管在整个信号周期内导通，失真小但效率低；Class B模式下，晶体管仅在半个信号周期内导通，效率高但存在交越失真；Class AB是A和B的折中，晶体管在大于半个周期但小于整个周期内导通，兼顾效率和失真。",
+      "difficulty": 2,
+      "keywords": [
+        "工作模式",
+        "效率",
+        "失真"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管放大原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class A、AB和B是放大器的不同工作模式。Class A模式下，晶体管在整个信号周期内导通，失真小但效率低；Class B模式下，晶体管仅在半个信号周期内导通，效率高但存在交越失真；Class AB是A和B的折中，晶体管在大于半个周期但小于整个周期内导通，兼顾效率和失真。"
+    },
+    {
+      "id": "bc_6_6_3",
+      "label": "BTL差动模式",
+      "node_type": "basic_concept",
+      "summary": "BTL（Bridge-Tied Load）差动模式是一种功率放大电路结构，通过两个对称的放大器驱动负载的两端，使负载两端的静态工作点相同，静态电流为零，从而降低静态功耗。BTL模式下的交流峰值电压较单端模式增加一倍，功率变为单端驱动的4倍。",
+      "difficulty": 3,
+      "keywords": [
+        "差动驱动",
+        "静态功耗",
+        "功率放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频功放",
+        "电机驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差动放大电路"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BTL（Bridge-Tied Load）差动模式是一种功率放大电路结构，通过两个对称的放大器驱动负载的两端，使负载两端的静态工作点相同，静态电流为零，从而降低静态功耗。BTL模式下的交流峰值电压较单端模式增加一倍，功率变为单端驱动的4倍。"
+    },
+    {
+      "id": "ct_6_6_1",
+      "label": "多级运放设计",
+      "node_type": "core_technology",
+      "summary": "多级运放的设计需要考虑前后增益级的直流电位工作点匹配，以降低系统失配。通常要求相邻两增益级的类型相反（如NMOS输入级配PMOS后级，PMOS输入级配NMOS后级）。在偏置合适的条件下，后级可采用互补推挽的Class A/AB/B等驱动模式，以改善输出驱动性能。",
+      "difficulty": 4,
+      "keywords": [
+        "工作点匹配",
+        "互补推挽",
+        "驱动模式"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放",
+        "低压运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多级运放的设计需要考虑前后增益级的直流电位工作点匹配，以降低系统失配。通常要求相邻两增益级的类型相反（如NMOS输入级配PMOS后级，PMOS输入级配NMOS后级）。在偏置合适的条件下，后级可采用互补推挽的Class A/AB/B等驱动模式，以改善输出驱动性能。"
+    },
+    {
+      "id": "ct_6_6_2",
+      "label": "Class AB输出级设计",
+      "node_type": "core_technology",
+      "summary": "Class AB输出级的设计通过降低互补驱动管的静态电流，将输出级偏置在Class AB甚至Class B的互补推挽驱动模式下。这种设计可以兼顾效率和失真，适用于功率放大应用。具体实现包括独立设定互补放大管的偏置和驱动电压，以及通过失调控制实现Class B模式。",
+      "difficulty": 4,
+      "keywords": [
+        "静态电流",
+        "互补推挽",
+        "失调控制"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB输出级的设计通过降低互补驱动管的静态电流，将输出级偏置在Class AB甚至Class B的互补推挽驱动模式下。这种设计可以兼顾效率和失真，适用于功率放大应用。具体实现包括独立设定互补放大管的偏置和驱动电压，以及通过失调控制实现Class B模式。"
+    },
+    {
+      "id": "ct_6_6_3",
+      "label": "BTL功放设计",
+      "node_type": "core_technology",
+      "summary": "BTL功放设计采用分步分级处理的策略，由前级预放大完成电压放大，输出级完成电流驱动。通过调节电阻比，可在电流驱动级设置大于1的电压增益，控制输出功率。BTL模式下的开环运放采用共漏电压跟随和Class AB共源放大并联组合，实现高速驱动和低失真。",
+      "difficulty": 5,
+      "keywords": [
+        "电压放大",
+        "电流驱动",
+        "共漏共源并联"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频功放",
+        "电机驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "BTL功放设计采用分步分级处理的策略，由前级预放大完成电压放大，输出级完成电流驱动。通过调节电阻比，可在电流驱动级设置大于1的电压增益，控制输出功率。BTL模式下的开环运放采用共漏电压跟随和Class AB共源放大并联组合，实现高速驱动和低失真。"
+    },
+    {
+      "id": "ca_6_6_1",
+      "label": "Class A/AB两级互补推挽运放",
+      "node_type": "circuit_application",
+      "summary": "该运放结构输入级为NMOS差分对，经过一个NMOS CD交流电压跟随及直流电平移位后，驱动Class A互补CS电压增益的输出级。另一种实现方式输入级为PMOS差分输入的对称跨导放大器OTA，利用OTA中MOS二极管提供的互补极性输出信号，构成CS增益级的互补推挽驱动，通常工作在Class A模式下。",
+      "difficulty": 4,
+      "keywords": [
+        "差分对",
+        "CD跟随器",
+        "CS增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该运放结构输入级为NMOS差分对，经过一个NMOS CD交流电压跟随及直流电平移位后，驱动Class A互补CS电压增益的输出级。另一种实现方式输入级为PMOS差分输入的对称跨导放大器OTA，利用OTA中MOS二极管提供的互补极性输出信号，构成CS增益级的互补推挽驱动，通常工作在Class A模式下。"
+    },
+    {
+      "id": "ca_6_6_2",
+      "label": "折叠式Cascode Class AB三级运放",
+      "node_type": "circuit_application",
+      "summary": "该运放结构输入级为折叠式Cascode差分对，中间级为两个相互对立的CD电压跟随器，分别将差分输出向上移动一个V_GSP电平驱动PMOS放大管，向下移动一个V_GSN电平驱动NMOS放大管。输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。",
+      "difficulty": 5,
+      "keywords": [
+        "折叠式Cascode",
+        "CD跟随器",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放",
+        "功率放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该运放结构输入级为折叠式Cascode差分对，中间级为两个相互对立的CD电压跟随器，分别将差分输出向上移动一个V_GSP电平驱动PMOS放大管，向下移动一个V_GSN电平驱动NMOS放大管。输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。"
+    },
+    {
+      "id": "ca_6_6_3",
+      "label": "单通道BTL功率放大电路",
+      "node_type": "circuit_application",
+      "summary": "该电路采用全桥BTL差动模式驱动，电压增益由前级预放大电路完成，输出级主要完成对负载的电流驱动。通过调节电阻比，可在电流驱动级设置大于1的电压增益，控制输出功率。BTL模式下的交流峰值电压较单端模式增加1倍，功率变为单端驱动的4倍。",
+      "difficulty": 5,
+      "keywords": [
+        "BTL",
+        "差动驱动",
+        "功率放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频功放",
+        "电机驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "该电路采用全桥BTL差动模式驱动，电压增益由前级预放大电路完成，输出级主要完成对负载的电流驱动。通过调节电阻比，可在电流驱动级设置大于1的电压增益，控制输出功率。BTL模式下的交流峰值电压较单端模式增加1倍，功率变为单端驱动的4倍。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_6_1",
+      "target_id": "ct_6_6_1",
+      "relationship": "enables",
+      "description": "多级运放的基本概念使能了多级运放的设计技术，理解多级运放的结构和功能是设计多级运放的基础。",
+      "weight": 0.9,
+      "evidence": "多级运放通常包括输入级（差分输入级）、中间级和输出级，中间级和输出级除了实现增益外，还负责直流电平转换、电流传输和电流电压转换等功能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_6_2",
+      "target_id": "ct_6_6_2",
+      "relationship": "supports",
+      "description": "Class A/AB/B模式的基本概念支撑了Class AB输出级的设计技术，理解不同工作模式的特点有助于优化输出级设计。",
+      "weight": 0.8,
+      "evidence": "Class AB是A和B的折中，晶体管在大于半个周期但小于整个周期内导通，兼顾效率和失真。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_6_3",
+      "target_id": "ct_6_6_3",
+      "relationship": "supports",
+      "description": "BTL差动模式的基本概念支撑了BTL功放的设计技术，理解BTL模式的工作原理有助于实现高效功率放大。",
+      "weight": 0.8,
+      "evidence": "BTL模式下的交流峰值电压较单端模式增加一倍，功率变为单端驱动的4倍。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_6_1",
+      "target_id": "ca_6_6_1",
+      "relationship": "implements",
+      "description": "多级运放设计技术实现了Class A/AB两级互补推挽运放的电路应用，通过优化前后级匹配和驱动模式，实现高性能运放。",
+      "weight": 0.9,
+      "evidence": "通常要求相邻两增益级的类型相反（如NMOS输入级配PMOS后级，PMOS输入级配NMOS后级）。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_6_2",
+      "target_id": "ca_6_6_2",
+      "relationship": "implements",
+      "description": "Class AB输出级设计技术实现了折叠式Cascode Class AB三级运放的电路应用，通过独立设定偏置和驱动电压，优化输出级性能。",
+      "weight": 0.9,
+      "evidence": "输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_6_3",
+      "target_id": "ca_6_6_3",
+      "relationship": "implements",
+      "description": "BTL功放设计技术实现了单通道BTL功率放大电路的电路应用，通过分步分级处理和差动驱动，实现高效功率放大。",
+      "weight": 0.9,
+      "evidence": "电压增益由前级预放大电路完成，输出级主要完成对负载的电流驱动。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_6_6_1",
+      "target_id": "ca_6_6_2",
+      "relationship": "extends",
+      "description": "Class A/AB两级互补推挽运放扩展为折叠式Cascode Class AB三级运放，通过增加中间级和优化输出级，提升性能。",
+      "weight": 0.7,
+      "evidence": "中间级为两个相互对立的CD电压跟随器，分别将差分输出向上移动一个V_GSP电平驱动PMOS放大管，向下移动一个V_GSN电平驱动NMOS放大管。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_6_6_3",
+      "relationship": "relates_to",
+      "description": "折叠式Cascode Class AB三级运放与单通道BTL功率放大电路相关，两者均涉及Class AB驱动和功率放大。",
+      "weight": 0.6,
+      "evidence": "输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "6.6",
+  "title": "多级运放",
+  "extraction_timestamp": "2025-07-08T16:40:34.883336"
+}

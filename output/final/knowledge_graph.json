@@ -1,0 +1,6068 @@
+{
+  "title": "CAL-KG电路领域自适应逻辑知识图谱",
+  "timestamp": "2025-07-08T19:05:27.244937",
+  "total_sections": 30,
+  "total_nodes": 167,
+  "total_edges": 149,
+  "total_connections": 0,
+  "nodes": [
+    {
+      "id": "bc_1_2_1_1",
+      "label": "基尔霍夫电流定律(KCL)",
+      "node_type": "basic_concept",
+      "summary": "基尔霍夫电流定律(KCL)是电路分析中的基本定律之一，它指出在任何节点上，流入的电流之和等于流出的电流之和，即∑I_in = ∑I_out。这一定律基于电荷守恒原理，适用于任何电路节点，无论电路是线性还是非线性，时变还是时不变。",
+      "difficulty": 2,
+      "keywords": [
+        "KCL",
+        "电流守恒",
+        "节点分析"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "电路分析",
+        "节点电压法"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基尔霍夫电流定律(KCL)是电路分析中的基本定律之一，它指出在任何节点上，流入的电流之和等于流出的电流之和，即∑I_in = ∑I_out。这一定律基于电荷守恒原理，适用于任何电路节点，无论电路是线性还是非线性，时变还是时不变。",
+      "source_section": "1.2.1",
+      "source_title": "基尔霍夫电流定律(KCL)"
+    },
+    {
+      "id": "ct_1_2_1_1",
+      "label": "节点电压法",
+      "node_type": "core_technology",
+      "summary": "节点电压法是一种基于KCL的电路分析方法，通过选择参考节点并应用KCL方程来求解各节点的电压。该方法适用于复杂电路的分析，能够简化计算过程。具体步骤包括：1) 选择一个参考节点；2) 对每个非参考节点应用KCL；3) 解方程组求节点电压。",
+      "difficulty": 3,
+      "keywords": [
+        "节点电压法",
+        "KCL方程",
+        "电路分析"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "复杂电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "节点电压法是一种基于KCL的电路分析方法，通过选择参考节点并应用KCL方程来求解各节点的电压。该方法适用于复杂电路的分析，能够简化计算过程。具体步骤包括：1) 选择一个参考节点；2) 对每个非参考节点应用KCL；3) 解方程组求节点电压。",
+      "source_section": "1.2.1",
+      "source_title": "基尔霍夫电流定律(KCL)"
+    },
+    {
+      "id": "ca_1_2_1_1",
+      "label": "多节点电路分析",
+      "node_type": "circuit_application",
+      "summary": "多节点电路分析是KCL和节点电压法的典型应用场景。通过应用KCL，可以建立多个节点的电流方程，进而求解各节点的电压和支路电流。这种分析方法广泛应用于电子电路设计、电力系统分析等领域。",
+      "difficulty": 4,
+      "keywords": [
+        "多节点电路",
+        "KCL应用",
+        "电路设计"
+      ],
+      "formulas": [
+        "∑I_in = ∑I_out"
+      ],
+      "applications": [
+        "电子电路设计",
+        "电力系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多节点电路分析是KCL和节点电压法的典型应用场景。通过应用KCL，可以建立多个节点的电流方程，进而求解各节点的电压和支路电流。这种分析方法广泛应用于电子电路设计、电力系统分析等领域。",
+      "source_section": "1.2.1",
+      "source_title": "基尔霍夫电流定律(KCL)"
+    },
+    {
+      "id": "bc_1_2_2_1",
+      "label": "基尔霍夫电压定律",
+      "node_type": "basic_concept",
+      "summary": "基尔霍夫电压定律(Kirchhoff's Voltage Law, KVL)是电路分析的基本定律之一，指出在任何闭合回路中，所有电压降的代数和等于所有电压升的代数和。数学表达式为∑V_drop = ∑V_rise。该定律基于能量守恒原理，适用于任何集总参数电路。",
+      "difficulty": 2,
+      "keywords": [
+        "KVL",
+        "电压守恒",
+        "闭合回路"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "电路分析",
+        "网络定理推导"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "电压概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基尔霍夫电压定律(Kirchhoff's Voltage Law, KVL)是电路分析的基本定律之一，指出在任何闭合回路中，所有电压降的代数和等于所有电压升的代数和。数学表达式为∑V_drop = ∑V_rise。该定律基于能量守恒原理，适用于任何集总参数电路。",
+      "source_section": "1.2.2",
+      "source_title": "基尔霍夫电压定律(KVL)"
+    },
+    {
+      "id": "bc_1_2_2_2",
+      "label": "闭合回路",
+      "node_type": "basic_concept",
+      "summary": "闭合回路是指电路中从某一点出发，经过若干元件后回到起点的路径。在KVL分析中，闭合回路是应用电压定律的基本单元，回路中的电压源和元件电压降必须满足KVL关系。",
+      "difficulty": 1,
+      "keywords": [
+        "回路",
+        "闭合路径",
+        "电路拓扑"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路分析",
+        "网络定理应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基本概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "闭合回路是指电路中从某一点出发，经过若干元件后回到起点的路径。在KVL分析中，闭合回路是应用电压定律的基本单元，回路中的电压源和元件电压降必须满足KVL关系。",
+      "source_section": "1.2.2",
+      "source_title": "基尔霍夫电压定律(KVL)"
+    },
+    {
+      "id": "ct_1_2_2_1",
+      "label": "KVL回路分析法",
+      "node_type": "core_technology",
+      "summary": "使用基尔霍夫电压定律进行电路分析的标准方法。步骤包括：1) 识别电路中的所有独立闭合回路；2) 为每个回路指定参考方向；3) 沿回路方向列出电压方程；4) 解方程组求未知量。该方法特别适用于多网孔电路分析。",
+      "difficulty": 3,
+      "keywords": [
+        "回路分析",
+        "电压方程",
+        "电路求解"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "直流电路分析",
+        "交流电路稳态分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用基尔霍夫电压定律进行电路分析的标准方法。步骤包括：1) 识别电路中的所有独立闭合回路；2) 为每个回路指定参考方向；3) 沿回路方向列出电压方程；4) 解方程组求未知量。该方法特别适用于多网孔电路分析。",
+      "source_section": "1.2.2",
+      "source_title": "基尔霍夫电压定律(KVL)"
+    },
+    {
+      "id": "ca_1_2_2_1",
+      "label": "多网孔电路分析",
+      "node_type": "circuit_application",
+      "summary": "应用KVL分析具有多个独立回路的复杂电路。典型电路结构包含多个电压源、电阻和其他元件形成的交叉网孔。通过为每个网孔建立KVL方程，可以求解各支路电流和电压。这是电路设计中最常见的KVL应用场景。",
+      "difficulty": 4,
+      "keywords": [
+        "网孔分析",
+        "复杂电路",
+        "多回路"
+      ],
+      "formulas": [
+        "∑V_drop = ∑V_rise"
+      ],
+      "applications": [
+        "电源设计",
+        "滤波器分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "应用KVL分析具有多个独立回路的复杂电路。典型电路结构包含多个电压源、电阻和其他元件形成的交叉网孔。通过为每个网孔建立KVL方程，可以求解各支路电流和电压。这是电路设计中最常见的KVL应用场景。",
+      "source_section": "1.2.2",
+      "source_title": "基尔霍夫电压定律(KVL)"
+    },
+    {
+      "id": "bc_2_2_1_1",
+      "label": "反相放大器",
+      "node_type": "basic_concept",
+      "summary": "一种基本运算放大器电路配置，输入信号通过输入电阻连接到反相输入端，输出信号与输入信号相位相反。其增益由反馈电阻和输入电阻的比值决定。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "反相输入",
+        "增益"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "信号放大",
+        "信号反相"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一种基本运算放大器电路配置，输入信号通过输入电阻连接到反相输入端，输出信号与输入信号相位相反。其增益由反馈电阻和输入电阻的比值决定。",
+      "source_section": "2.2.1",
+      "source_title": "反相放大器"
+    },
+    {
+      "id": "bc_2_2_1_2",
+      "label": "反馈电阻(Rf)",
+      "node_type": "basic_concept",
+      "summary": "连接运算放大器输出端和反相输入端的电阻，决定放大器增益的关键元件之一。其阻值与输入电阻共同决定放大器的闭环增益。",
+      "difficulty": 2,
+      "keywords": [
+        "负反馈",
+        "增益控制",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "增益调节"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电阻特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "连接运算放大器输出端和反相输入端的电阻，决定放大器增益的关键元件之一。其阻值与输入电阻共同决定放大器的闭环增益。",
+      "source_section": "2.2.1",
+      "source_title": "反相放大器"
+    },
+    {
+      "id": "bc_2_2_1_3",
+      "label": "输入电阻(Rin)",
+      "node_type": "basic_concept",
+      "summary": "连接信号源和运算放大器反相输入端的电阻，决定输入电流大小和放大器输入阻抗的关键元件。其阻值与反馈电阻共同决定放大器的闭环增益。",
+      "difficulty": 2,
+      "keywords": [
+        "输入阻抗",
+        "信号耦合",
+        "电流限制"
+      ],
+      "formulas": [],
+      "applications": [
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电阻特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "连接信号源和运算放大器反相输入端的电阻，决定输入电流大小和放大器输入阻抗的关键元件。其阻值与反馈电阻共同决定放大器的闭环增益。",
+      "source_section": "2.2.1",
+      "source_title": "反相放大器"
+    },
+    {
+      "id": "ct_2_2_1_1",
+      "label": "反相放大器增益计算",
+      "node_type": "core_technology",
+      "summary": "通过反馈电阻和输入电阻的比值计算反相放大器的电压增益。计算公式为Av = -Rf/Rin，其中负号表示输出信号与输入信号相位相反。",
+      "difficulty": 3,
+      "keywords": [
+        "增益公式",
+        "负号表示反相",
+        "电阻比值"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过反馈电阻和输入电阻的比值计算反相放大器的电压增益。计算公式为Av = -Rf/Rin，其中负号表示输出信号与输入信号相位相反。",
+      "source_section": "2.2.1",
+      "source_title": "反相放大器"
+    },
+    {
+      "id": "ca_2_2_1_1",
+      "label": "基本反相放大器电路",
+      "node_type": "circuit_application",
+      "summary": "由运算放大器、反馈电阻和输入电阻构成的基本放大电路。输入信号通过输入电阻连接到反相输入端，反馈电阻连接输出端和反相输入端，实现信号放大和反相功能。",
+      "difficulty": 4,
+      "keywords": [
+        "运算放大器电路",
+        "负反馈配置",
+        "信号处理"
+      ],
+      "formulas": [
+        "Av = -Rf/Rin"
+      ],
+      "applications": [
+        "音频放大",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由运算放大器、反馈电阻和输入电阻构成的基本放大电路。输入信号通过输入电阻连接到反相输入端，反馈电阻连接输出端和反相输入端，实现信号放大和反相功能。",
+      "source_section": "2.2.1",
+      "source_title": "反相放大器"
+    },
+    {
+      "id": "bc_2_1_1",
+      "label": "开环增益",
+      "node_type": "basic_concept",
+      "summary": "开环增益是指运算放大器在无反馈情况下的电压放大倍数。理想运算放大器的开环增益为无限大，意味着极小的输入电压差就能产生极大的输出电压。",
+      "difficulty": 2,
+      "keywords": [
+        "增益",
+        "放大倍数",
+        "开环"
+      ],
+      "formulas": [
+        "A_OL = ∞"
+      ],
+      "applications": [
+        "信号放大",
+        "比较器电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本放大电路"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "开环增益是指运算放大器在无反馈情况下的电压放大倍数。理想运算放大器的开环增益为无限大，意味着极小的输入电压差就能产生极大的输出电压。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "bc_2_1_2",
+      "label": "输入阻抗",
+      "node_type": "basic_concept",
+      "summary": "输入阻抗是指运算放大器输入端对信号源呈现的阻抗。理想运算放大器的输入阻抗为无限大，意味着不会从信号源汲取电流。",
+      "difficulty": 2,
+      "keywords": [
+        "阻抗",
+        "输入",
+        "高阻抗"
+      ],
+      "formulas": [
+        "Z_in = ∞"
+      ],
+      "applications": [
+        "传感器接口",
+        "高精度测量"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入阻抗是指运算放大器输入端对信号源呈现的阻抗。理想运算放大器的输入阻抗为无限大，意味着不会从信号源汲取电流。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "bc_2_1_3",
+      "label": "输出阻抗",
+      "node_type": "basic_concept",
+      "summary": "输出阻抗是指运算放大器输出端对负载呈现的阻抗。理想运算放大器的输出阻抗为零，意味着输出电压不受负载影响。",
+      "difficulty": 2,
+      "keywords": [
+        "阻抗",
+        "输出",
+        "低阻抗"
+      ],
+      "formulas": [
+        "Z_out = 0"
+      ],
+      "applications": [
+        "驱动低阻抗负载",
+        "电压跟随器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "输出驱动能力"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出阻抗是指运算放大器输出端对负载呈现的阻抗。理想运算放大器的输出阻抗为零，意味着输出电压不受负载影响。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "bc_2_1_4",
+      "label": "带宽",
+      "node_type": "basic_concept",
+      "summary": "带宽是指运算放大器能够有效工作的频率范围。理想运算放大器的带宽为无限大，意味着对所有频率信号都能完美放大。",
+      "difficulty": 2,
+      "keywords": [
+        "频率响应",
+        "带宽",
+        "高频"
+      ],
+      "formulas": [
+        "BW = ∞"
+      ],
+      "applications": [
+        "宽带信号处理",
+        "射频电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带宽是指运算放大器能够有效工作的频率范围。理想运算放大器的带宽为无限大，意味着对所有频率信号都能完美放大。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "bc_2_1_5",
+      "label": "失调电压",
+      "node_type": "basic_concept",
+      "summary": "失调电压是指运算放大器输入为零时输出的非零电压。理想运算放大器的失调电压为零，意味着完美的直流特性。",
+      "difficulty": 2,
+      "keywords": [
+        "直流误差",
+        "偏移",
+        "精度"
+      ],
+      "formulas": [
+        "V_os = 0"
+      ],
+      "applications": [
+        "精密测量",
+        "直流放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "直流电路分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "失调电压是指运算放大器输入为零时输出的非零电压。理想运算放大器的失调电压为零，意味着完美的直流特性。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "ct_2_1_1",
+      "label": "理想运算放大器分析",
+      "node_type": "core_technology",
+      "summary": "基于理想运算放大器特性的电路分析方法，利用无限大开环增益、无限大输入阻抗等特性简化电路计算。",
+      "difficulty": 3,
+      "keywords": [
+        "电路分析",
+        "简化模型",
+        "虚短虚断"
+      ],
+      "formulas": [
+        "虚短原理",
+        "虚断原理"
+      ],
+      "applications": [
+        "反馈电路分析",
+        "运算电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于理想运算放大器特性的电路分析方法，利用无限大开环增益、无限大输入阻抗等特性简化电路计算。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "ca_2_1_1",
+      "label": "理想反相放大器",
+      "node_type": "circuit_application",
+      "summary": "基于理想运算放大器设计的反相放大电路，利用虚短和虚断原理实现精确的电压放大功能。",
+      "difficulty": 4,
+      "keywords": [
+        "反相放大",
+        "反馈电路",
+        "增益控制"
+      ],
+      "formulas": [
+        "A_v = -R_f/R_in"
+      ],
+      "applications": [
+        "信号调理",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于理想运算放大器设计的反相放大电路，利用虚短和虚断原理实现精确的电压放大功能。",
+      "source_section": "2.1",
+      "source_title": "理想运算放大器"
+    },
+    {
+      "id": "bc_1_1_3_1",
+      "label": "电感器",
+      "node_type": "basic_concept",
+      "summary": "电感器是一种能够储存磁场能量的被动电子元件，由导线绕制而成，通常具有线圈结构。其核心特性是抵抗电流变化，通过产生感应电动势来维持电流的连续性。",
+      "difficulty": 2,
+      "keywords": [
+        "磁场能量",
+        "被动元件",
+        "线圈"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波电路",
+        "能量存储"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电磁学基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器是一种能够储存磁场能量的被动电子元件，由导线绕制而成，通常具有线圈结构。其核心特性是抵抗电流变化，通过产生感应电动势来维持电流的连续性。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "bc_1_1_3_2",
+      "label": "电压-电流关系",
+      "node_type": "basic_concept",
+      "summary": "电感器的电压与电流变化率成正比，数学表达式为v = L(di/dt)，其中v是电压，L是电感值，di/dt是电流随时间的变化率。这个关系体现了电感器抵抗电流变化的特性。",
+      "difficulty": 3,
+      "keywords": [
+        "微分关系",
+        "感应电动势",
+        "时间导数"
+      ],
+      "formulas": [
+        "v = L(di/dt)"
+      ],
+      "applications": [
+        "瞬态分析",
+        "电路建模"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "微积分基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器的电压与电流变化率成正比，数学表达式为v = L(di/dt)，其中v是电压，L是电感值，di/dt是电流随时间的变化率。这个关系体现了电感器抵抗电流变化的特性。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "bc_1_1_3_3",
+      "label": "能量储存",
+      "node_type": "basic_concept",
+      "summary": "电感器储存的能量与电感值和电流平方成正比，表达式为W = ½LI²。这个能量以磁场形式储存在电感器中，可以在电流减小时释放。",
+      "difficulty": 2,
+      "keywords": [
+        "磁场能量",
+        "能量公式",
+        "储能元件"
+      ],
+      "formulas": [
+        "W = ½LI²"
+      ],
+      "applications": [
+        "能量转换",
+        "功率调节"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "能量守恒"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感器储存的能量与电感值和电流平方成正比，表达式为W = ½LI²。这个能量以磁场形式储存在电感器中，可以在电流减小时释放。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "ct_1_1_3_1",
+      "label": "电感值计算",
+      "node_type": "core_technology",
+      "summary": "通过测量或计算确定电感器的电感值L，这是分析电感电路的基础。可以通过电压-电流关系推导或使用专用仪器测量。",
+      "difficulty": 3,
+      "keywords": [
+        "参数提取",
+        "特性分析",
+        "测量技术"
+      ],
+      "formulas": [
+        "L = v/(di/dt)"
+      ],
+      "applications": [
+        "电路设计",
+        "元件选型"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过测量或计算确定电感器的电感值L，这是分析电感电路的基础。可以通过电压-电流关系推导或使用专用仪器测量。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "ct_1_1_3_2",
+      "label": "瞬态分析",
+      "node_type": "core_technology",
+      "summary": "利用电压-电流微分关系分析电感电路在开关切换等瞬态条件下的响应特性，需要求解微分方程。",
+      "difficulty": 4,
+      "keywords": [
+        "时间响应",
+        "暂态分析",
+        "微分方程"
+      ],
+      "formulas": [
+        "v = L(di/dt)"
+      ],
+      "applications": [
+        "开关电路",
+        "电源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电压-电流微分关系分析电感电路在开关切换等瞬态条件下的响应特性，需要求解微分方程。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "ca_1_1_3_1",
+      "label": "LC滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电感和电容组成的滤波电路，利用电感阻止高频信号、电容旁路高频信号的特性实现滤波功能。",
+      "difficulty": 4,
+      "keywords": [
+        "无源滤波",
+        "频率选择",
+        "谐振电路"
+      ],
+      "formulas": [
+        "谐振频率公式"
+      ],
+      "applications": [
+        "射频电路",
+        "电源滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电感和电容组成的滤波电路，利用电感阻止高频信号、电容旁路高频信号的特性实现滤波功能。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "ca_1_1_3_2",
+      "label": "开关电源储能",
+      "node_type": "circuit_application",
+      "summary": "利用电感储能特性，在开关电源中实现能量的临时存储和转换，提高电源效率。",
+      "difficulty": 5,
+      "keywords": [
+        "DC-DC转换",
+        "功率调节",
+        "能量缓冲"
+      ],
+      "formulas": [
+        "W = ½LI²"
+      ],
+      "applications": [
+        "电源管理",
+        "电压转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电感储能特性，在开关电源中实现能量的临时存储和转换，提高电源效率。",
+      "source_section": "1.1.3",
+      "source_title": "电感元件"
+    },
+    {
+      "id": "bc_1_1_2_1",
+      "label": "电容器",
+      "node_type": "basic_concept",
+      "summary": "电容器是一种能够储存电荷的被动电子元件，由两个导体和中间的绝缘介质组成。当施加电压时，正负电荷会在两个导体上积累，形成电场储存能量。",
+      "difficulty": 1,
+      "keywords": [
+        "电荷储存",
+        "被动元件",
+        "绝缘介质"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波电路",
+        "能量存储",
+        "信号耦合"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器是一种能够储存电荷的被动电子元件，由两个导体和中间的绝缘介质组成。当施加电压时，正负电荷会在两个导体上积累，形成电场储存能量。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "bc_1_1_2_2",
+      "label": "电压-电流关系",
+      "node_type": "basic_concept",
+      "summary": "电容器的电压-电流关系由微分方程描述：i = C(dv/dt)，其中i是电流，C是电容值，v是电压，t是时间。这表明电容电流与电压变化率成正比。",
+      "difficulty": 2,
+      "keywords": [
+        "微分关系",
+        "动态特性",
+        "瞬态响应"
+      ],
+      "formulas": [
+        "i = C(dv/dt)"
+      ],
+      "applications": [
+        "瞬态分析",
+        "交流电路分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "微积分基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器的电压-电流关系由微分方程描述：i = C(dv/dt)，其中i是电流，C是电容值，v是电压，t是时间。这表明电容电流与电压变化率成正比。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "bc_1_1_2_3",
+      "label": "电容储能",
+      "node_type": "basic_concept",
+      "summary": "电容器储存的能量公式为W = ½CV²，其中W是储存的能量，C是电容值，V是电压。这表明储存能量与电容值和电压平方成正比。",
+      "difficulty": 2,
+      "keywords": [
+        "能量存储",
+        "电场能量",
+        "能量密度"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "能量缓冲",
+        "脉冲功率"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "能量守恒定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容器储存的能量公式为W = ½CV²，其中W是储存的能量，C是电容值，V是电压。这表明储存能量与电容值和电压平方成正比。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "ct_1_1_2_1",
+      "label": "电容瞬态分析",
+      "node_type": "core_technology",
+      "summary": "利用电压-电流关系i = C(dv/dt)分析电容在电路中的瞬态响应，包括充放电过程和时间常数计算。分析步骤：1)建立电路方程；2)求解微分方程；3)分析时间响应特性。",
+      "difficulty": 3,
+      "keywords": [
+        "瞬态分析",
+        "充放电",
+        "时间常数"
+      ],
+      "formulas": [
+        "τ = RC"
+      ],
+      "applications": [
+        "开关电路分析",
+        "电源设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电压-电流关系i = C(dv/dt)分析电容在电路中的瞬态响应，包括充放电过程和时间常数计算。分析步骤：1)建立电路方程；2)求解微分方程；3)分析时间响应特性。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "ct_1_1_2_2",
+      "label": "电容能量计算",
+      "node_type": "core_technology",
+      "summary": "基于能量公式W = ½CV²计算电容器储存的能量，评估其在电路中的能量缓冲能力。计算步骤：1)测量或计算电容两端电压；2)代入公式计算；3)评估能量是否满足应用需求。",
+      "difficulty": 2,
+      "keywords": [
+        "能量计算",
+        "功率评估",
+        "能量管理"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "储能系统设计",
+        "功率电子"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于能量公式W = ½CV²计算电容器储存的能量，评估其在电路中的能量缓冲能力。计算步骤：1)测量或计算电容两端电压；2)代入公式计算；3)评估能量是否满足应用需求。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "ca_1_1_2_1",
+      "label": "RC充放电电路",
+      "node_type": "circuit_application",
+      "summary": "由电阻和电容组成的基本充放电电路，利用电容的电压-电流关系实现时间延迟、波形整形等功能。电路结构：电源串联电阻后并联电容。时间常数τ=RC决定充放电速度。",
+      "difficulty": 3,
+      "keywords": [
+        "时间延迟",
+        "波形整形",
+        "低通滤波"
+      ],
+      "formulas": [
+        "τ = RC"
+      ],
+      "applications": [
+        "定时电路",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电阻和电容组成的基本充放电电路，利用电容的电压-电流关系实现时间延迟、波形整形等功能。电路结构：电源串联电阻后并联电容。时间常数τ=RC决定充放电速度。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "ca_1_1_2_2",
+      "label": "电容储能电路",
+      "node_type": "circuit_application",
+      "summary": "利用电容器储存能量的特性构建的储能电路，用于短时供电或能量缓冲。典型结构：充电电路连接大容量电容，放电时通过开关控制能量释放。设计需考虑电容耐压和容量。",
+      "difficulty": 4,
+      "keywords": [
+        "能量缓冲",
+        "脉冲功率",
+        "备用电源"
+      ],
+      "formulas": [
+        "W = ½CV²"
+      ],
+      "applications": [
+        "相机闪光灯",
+        "断电保护"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电容器储存能量的特性构建的储能电路，用于短时供电或能量缓冲。典型结构：充电电路连接大容量电容，放电时通过开关控制能量释放。设计需考虑电容耐压和容量。",
+      "source_section": "1.1.2",
+      "source_title": "电容元件"
+    },
+    {
+      "id": "bc_1_1_1_1",
+      "label": "电阻",
+      "node_type": "basic_concept",
+      "summary": "电阻是电路中最基本的元件之一，用于限制电流流动。其特性由欧姆定律描述，即电压与电流成正比，比例常数为电阻值。电阻的单位是欧姆(Ω)。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻",
+        "欧姆定律",
+        "基本元件"
+      ],
+      "formulas": [
+        "V = IR"
+      ],
+      "applications": [
+        "限流",
+        "分压"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻是电路中最基本的元件之一，用于限制电流流动。其特性由欧姆定律描述，即电压与电流成正比，比例常数为电阻值。电阻的单位是欧姆(Ω)。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "bc_1_1_1_2",
+      "label": "欧姆定律",
+      "node_type": "basic_concept",
+      "summary": "欧姆定律描述了电阻元件中电压、电流和电阻之间的关系。定律表明，通过电阻的电流与施加的电压成正比，与电阻值成反比。这是分析线性电阻电路的基础。",
+      "difficulty": 2,
+      "keywords": [
+        "欧姆定律",
+        "电压",
+        "电流",
+        "电阻"
+      ],
+      "formulas": [
+        "V = IR"
+      ],
+      "applications": [
+        "电路分析",
+        "元件特性描述"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电学概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "欧姆定律描述了电阻元件中电压、电流和电阻之间的关系。定律表明，通过电阻的电流与施加的电压成正比，与电阻值成反比。这是分析线性电阻电路的基础。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "bc_1_1_1_3",
+      "label": "功率消耗",
+      "node_type": "basic_concept",
+      "summary": "电阻在工作时会消耗电能并将其转化为热能。功率消耗描述了电阻将电能转化为热能的速率。功率计算有多种等效形式，取决于已知参数。",
+      "difficulty": 3,
+      "keywords": [
+        "功率",
+        "能量消耗",
+        "热效应"
+      ],
+      "formulas": [
+        "P = I²R",
+        "P = V²/R",
+        "P = VI"
+      ],
+      "applications": [
+        "热设计",
+        "功率管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "功率概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻在工作时会消耗电能并将其转化为热能。功率消耗描述了电阻将电能转化为热能的速率。功率计算有多种等效形式，取决于已知参数。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "ct_1_1_1_1",
+      "label": "电阻电路分析",
+      "node_type": "core_technology",
+      "summary": "基于欧姆定律和功率公式，可以分析包含电阻的电路。分析方法包括计算电压、电流、功率等参数，评估电路性能。这是设计更复杂电路的基础技术。",
+      "difficulty": 3,
+      "keywords": [
+        "电路分析",
+        "参数计算",
+        "性能评估"
+      ],
+      "formulas": [
+        "V = IR",
+        "P = I²R"
+      ],
+      "applications": [
+        "电路设计",
+        "故障诊断"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于欧姆定律和功率公式，可以分析包含电阻的电路。分析方法包括计算电压、电流、功率等参数，评估电路性能。这是设计更复杂电路的基础技术。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "ct_1_1_1_2",
+      "label": "功率计算技术",
+      "node_type": "core_technology",
+      "summary": "根据电路中的已知参数，选择适当的功率计算公式来评估电阻的功率消耗。需要考虑电压、电流和电阻值的测量或计算精度，以确保结果的准确性。",
+      "difficulty": 3,
+      "keywords": [
+        "功率计算",
+        "能量评估",
+        "热管理"
+      ],
+      "formulas": [
+        "P = I²R",
+        "P = V²/R",
+        "P = VI"
+      ],
+      "applications": [
+        "热设计",
+        "功率预算"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根据电路中的已知参数，选择适当的功率计算公式来评估电阻的功率消耗。需要考虑电压、电流和电阻值的测量或计算精度，以确保结果的准确性。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "ca_1_1_1_1",
+      "label": "限流电路",
+      "node_type": "circuit_application",
+      "summary": "利用电阻限制电路中的电流，保护敏感元件免受过大电流损坏。设计时需要考虑电阻的功率承受能力，确保不会因功率过大而烧毁。",
+      "difficulty": 4,
+      "keywords": [
+        "电流限制",
+        "保护电路",
+        "安全设计"
+      ],
+      "formulas": [
+        "I = V/R"
+      ],
+      "applications": [
+        "LED驱动",
+        "电源保护"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电阻限制电路中的电流，保护敏感元件免受过大电流损坏。设计时需要考虑电阻的功率承受能力，确保不会因功率过大而烧毁。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "ca_1_1_1_2",
+      "label": "分压电路",
+      "node_type": "circuit_application",
+      "summary": "使用电阻网络将输入电压分成所需的输出电压比例。设计需要考虑电阻的精度和温度稳定性，以确保分压比的准确性。",
+      "difficulty": 4,
+      "keywords": [
+        "电压分配",
+        "信号调节",
+        "参考电压"
+      ],
+      "formulas": [
+        "Vout = Vin*(R2/(R1+R2))"
+      ],
+      "applications": [
+        "传感器接口",
+        "ADC前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用电阻网络将输入电压分成所需的输出电压比例。设计需要考虑电阻的精度和温度稳定性，以确保分压比的准确性。",
+      "source_section": "1.1.1",
+      "source_title": "电阻元件"
+    },
+    {
+      "id": "bc_2_2_2_1",
+      "label": "同相放大器",
+      "node_type": "basic_concept",
+      "summary": "同相放大器是一种运算放大器电路配置，输入信号施加到运算放大器的同相输入端，输出信号与输入信号同相。其特点是输入阻抗高，输出阻抗低。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "同相输入",
+        "电压增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器基本原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器是一种运算放大器电路配置，输入信号施加到运算放大器的同相输入端，输出信号与输入信号同相。其特点是输入阻抗高，输出阻抗低。",
+      "source_section": "2.2.2",
+      "source_title": "同相放大器"
+    },
+    {
+      "id": "bc_2_2_2_2",
+      "label": "电压增益",
+      "node_type": "basic_concept",
+      "summary": "电压增益是指放大器输出电压与输入电压的比值，表示信号放大的程度。在同相放大器中，增益由反馈电阻和输入电阻决定。",
+      "difficulty": 2,
+      "keywords": [
+        "放大倍数",
+        "电压比",
+        "信号放大"
+      ],
+      "formulas": [
+        "Av = Vout/Vin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压增益是指放大器输出电压与输入电压的比值，表示信号放大的程度。在同相放大器中，增益由反馈电阻和输入电阻决定。",
+      "source_section": "2.2.2",
+      "source_title": "同相放大器"
+    },
+    {
+      "id": "ct_2_2_2_1",
+      "label": "同相放大器增益计算",
+      "node_type": "core_technology",
+      "summary": "同相放大器的增益计算公式为Av = 1 + Rf/Rin，其中Rf是反馈电阻，Rin是输入电阻。通过调整这两个电阻的比值可以精确控制放大器的增益。",
+      "difficulty": 3,
+      "keywords": [
+        "增益公式",
+        "电阻比",
+        "反馈网络"
+      ],
+      "formulas": [
+        "Av = 1 + Rf/Rin"
+      ],
+      "applications": [
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器的增益计算公式为Av = 1 + Rf/Rin，其中Rf是反馈电阻，Rin是输入电阻。通过调整这两个电阻的比值可以精确控制放大器的增益。",
+      "source_section": "2.2.2",
+      "source_title": "同相放大器"
+    },
+    {
+      "id": "ca_2_2_2_1",
+      "label": "同相放大器电路",
+      "node_type": "circuit_application",
+      "summary": "典型的同相放大器电路由运算放大器、反馈电阻Rf和输入电阻Rin组成。输入信号连接到同相输入端，输出信号通过Rf反馈到反相输入端。",
+      "difficulty": 4,
+      "keywords": [
+        "运算放大器电路",
+        "反馈网络",
+        "信号放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的同相放大器电路由运算放大器、反馈电阻Rf和输入电阻Rin组成。输入信号连接到同相输入端，输出信号通过Rf反馈到反相输入端。",
+      "source_section": "2.2.2",
+      "source_title": "同相放大器"
+    },
+    {
+      "id": "bc_1_1_1",
+      "label": "电阻",
+      "node_type": "basic_concept",
+      "summary": "电阻是阻碍电流流动的元件，其阻值由欧姆定律定义：R=V/I，其中R为电阻值，V为电压，I为电流。电阻的单位是欧姆(Ω)。",
+      "difficulty": 2,
+      "keywords": [
+        "欧姆定律",
+        "阻值",
+        "电流"
+      ],
+      "formulas": [
+        "R=V/I"
+      ],
+      "applications": [
+        "限流",
+        "分压"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻是阻碍电流流动的元件，其阻值由欧姆定律定义：R=V/I，其中R为电阻值，V为电压，I为电流。电阻的单位是欧姆(Ω)。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "bc_1_1_2",
+      "label": "电容",
+      "node_type": "basic_concept",
+      "summary": "电容是存储电荷的元件，其容值由公式C=Q/V定义，其中C为电容值，Q为电荷量，V为电压。电容的单位是法拉(F)。电容具有隔直流通交流的特性。",
+      "difficulty": 2,
+      "keywords": [
+        "电荷存储",
+        "容值",
+        "交流特性"
+      ],
+      "formulas": [
+        "C=Q/V"
+      ],
+      "applications": [
+        "滤波",
+        "耦合"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电荷理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电容是存储电荷的元件，其容值由公式C=Q/V定义，其中C为电容值，Q为电荷量，V为电压。电容的单位是法拉(F)。电容具有隔直流通交流的特性。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "bc_1_1_3",
+      "label": "电感",
+      "node_type": "basic_concept",
+      "summary": "电感是存储磁场能量的元件，其电感值由公式L=Φ/I定义，其中L为电感值，Φ为磁通量，I为电流。电感的单位是亨利(H)。电感具有通直流阻交流的特性。",
+      "difficulty": 2,
+      "keywords": [
+        "磁场能量",
+        "电感值",
+        "交流特性"
+      ],
+      "formulas": [
+        "L=Φ/I"
+      ],
+      "applications": [
+        "滤波",
+        "储能"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电磁学基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电感是存储磁场能量的元件，其电感值由公式L=Φ/I定义，其中L为电感值，Φ为磁通量，I为电流。电感的单位是亨利(H)。电感具有通直流阻交流的特性。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "bc_1_1_4",
+      "label": "电压源",
+      "node_type": "basic_concept",
+      "summary": "电压源是提供恒定电压的元件，其输出电压不随负载变化而变化。理想电压源的内阻为零。",
+      "difficulty": 2,
+      "keywords": [
+        "恒定电压",
+        "内阻",
+        "理想元件"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源供应"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压源是提供恒定电压的元件，其输出电压不随负载变化而变化。理想电压源的内阻为零。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "bc_1_1_5",
+      "label": "电流源",
+      "node_type": "basic_concept",
+      "summary": "电流源是提供恒定电流的元件，其输出电流不随负载变化而变化。理想电流源的内阻为无穷大。",
+      "difficulty": 2,
+      "keywords": [
+        "恒定电流",
+        "内阻",
+        "理想元件"
+      ],
+      "formulas": [],
+      "applications": [
+        "电流驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流源是提供恒定电流的元件，其输出电流不随负载变化而变化。理想电流源的内阻为无穷大。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ct_1_1_1",
+      "label": "欧姆定律应用",
+      "node_type": "core_technology",
+      "summary": "欧姆定律是电路分析的基础，用于计算电阻、电压和电流之间的关系。应用步骤包括：1) 确定电路中的电阻值；2) 测量或计算电压或电流；3) 使用R=V/I公式求解未知量。",
+      "difficulty": 3,
+      "keywords": [
+        "欧姆定律",
+        "电路分析",
+        "计算"
+      ],
+      "formulas": [
+        "R=V/I"
+      ],
+      "applications": [
+        "电路设计",
+        "故障诊断"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "欧姆定律是电路分析的基础，用于计算电阻、电压和电流之间的关系。应用步骤包括：1) 确定电路中的电阻值；2) 测量或计算电压或电流；3) 使用R=V/I公式求解未知量。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ct_1_1_2",
+      "label": "RC电路分析",
+      "node_type": "core_technology",
+      "summary": "RC电路由电阻和电容组成，用于分析充放电过程。分析方法包括：1) 确定时间常数τ=RC；2) 计算充电或放电曲线；3) 分析频率响应。",
+      "difficulty": 3,
+      "keywords": [
+        "时间常数",
+        "充放电",
+        "频率响应"
+      ],
+      "formulas": [
+        "τ=RC"
+      ],
+      "applications": [
+        "滤波电路",
+        "定时电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "RC电路由电阻和电容组成，用于分析充放电过程。分析方法包括：1) 确定时间常数τ=RC；2) 计算充电或放电曲线；3) 分析频率响应。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ct_1_1_3",
+      "label": "RL电路分析",
+      "node_type": "core_technology",
+      "summary": "RL电路由电阻和电感组成，用于分析磁场能量的存储和释放。分析方法包括：1) 确定时间常数τ=L/R；2) 计算电流变化曲线；3) 分析瞬态响应。",
+      "difficulty": 3,
+      "keywords": [
+        "时间常数",
+        "瞬态响应",
+        "磁场能量"
+      ],
+      "formulas": [
+        "τ=L/R"
+      ],
+      "applications": [
+        "储能电路",
+        "滤波电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "RL电路由电阻和电感组成，用于分析磁场能量的存储和释放。分析方法包括：1) 确定时间常数τ=L/R；2) 计算电流变化曲线；3) 分析瞬态响应。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ca_1_1_1",
+      "label": "分压电路",
+      "node_type": "circuit_application",
+      "summary": "分压电路由两个或多个电阻串联组成，用于将输入电压分成所需的输出电压。电路结构简单，输出电压由电阻比例决定：Vout=Vin*(R2/(R1+R2))。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻串联",
+        "电压分配",
+        "比例控制"
+      ],
+      "formulas": [
+        "Vout=Vin*(R2/(R1+R2))"
+      ],
+      "applications": [
+        "传感器接口",
+        "信号调节"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "分压电路由两个或多个电阻串联组成，用于将输入电压分成所需的输出电压。电路结构简单，输出电压由电阻比例决定：Vout=Vin*(R2/(R1+R2))。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ca_1_1_2",
+      "label": "低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "低通滤波器由电阻和电容组成，用于允许低频信号通过而衰减高频信号。电路结构为RC串联，截止频率由fc=1/(2πRC)决定。",
+      "difficulty": 4,
+      "keywords": [
+        "频率选择",
+        "信号处理",
+        "截止频率"
+      ],
+      "formulas": [
+        "fc=1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "噪声抑制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "低通滤波器由电阻和电容组成，用于允许低频信号通过而衰减高频信号。电路结构为RC串联，截止频率由fc=1/(2πRC)决定。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "ca_1_1_3",
+      "label": "电源电路",
+      "node_type": "circuit_application",
+      "summary": "电源电路由电压源和滤波元件组成，用于提供稳定的直流电压。典型结构包括整流、滤波和稳压部分，使用电容和电感进行滤波。",
+      "difficulty": 4,
+      "keywords": [
+        "电压稳定",
+        "滤波",
+        "整流"
+      ],
+      "formulas": [],
+      "applications": [
+        "电子设备供电",
+        "电源管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源电路由电压源和滤波元件组成，用于提供稳定的直流电压。典型结构包括整流、滤波和稳压部分，使用电容和电感进行滤波。",
+      "source_section": "1.1",
+      "source_title": "基本电路元件"
+    },
+    {
+      "id": "bc_2_2_3_1",
+      "label": "电压跟随器",
+      "node_type": "basic_concept",
+      "summary": "电压跟随器是一种增益为1的同相放大器电路，其主要功能是提供高输入阻抗和低输出阻抗，用于隔离前后级电路，防止负载效应。",
+      "difficulty": 2,
+      "keywords": [
+        "电压跟随器",
+        "同相放大器",
+        "增益"
+      ],
+      "formulas": [
+        "增益 = 1"
+      ],
+      "applications": [
+        "信号隔离",
+        "阻抗匹配"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压跟随器是一种增益为1的同相放大器电路，其主要功能是提供高输入阻抗和低输出阻抗，用于隔离前后级电路，防止负载效应。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "bc_2_2_3_2",
+      "label": "输入阻抗",
+      "node_type": "basic_concept",
+      "summary": "输入阻抗是指电路输入端对信号源呈现的阻抗，高输入阻抗可以减少对信号源的负载效应，提高信号传输效率。",
+      "difficulty": 2,
+      "keywords": [
+        "输入阻抗",
+        "高阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号传输"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入阻抗是指电路输入端对信号源呈现的阻抗，高输入阻抗可以减少对信号源的负载效应，提高信号传输效率。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "bc_2_2_3_3",
+      "label": "输出阻抗",
+      "node_type": "basic_concept",
+      "summary": "输出阻抗是指电路输出端对负载呈现的阻抗，低输出阻抗可以提高驱动能力，减少信号衰减。",
+      "difficulty": 2,
+      "keywords": [
+        "输出阻抗",
+        "低阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出阻抗是指电路输出端对负载呈现的阻抗，低输出阻抗可以提高驱动能力，减少信号衰减。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "ct_2_2_3_1",
+      "label": "同相放大器设计",
+      "node_type": "core_technology",
+      "summary": "同相放大器是一种放大器电路，其输出信号与输入信号同相，通过调整反馈电阻可以实现不同的增益。电压跟随器是增益为1的同相放大器。",
+      "difficulty": 3,
+      "keywords": [
+        "同相放大器",
+        "反馈电阻",
+        "增益调整"
+      ],
+      "formulas": [
+        "增益 = 1 + (Rf/R1)"
+      ],
+      "applications": [
+        "信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "同相放大器是一种放大器电路，其输出信号与输入信号同相，通过调整反馈电阻可以实现不同的增益。电压跟随器是增益为1的同相放大器。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "ct_2_2_3_2",
+      "label": "阻抗匹配技术",
+      "node_type": "core_technology",
+      "summary": "阻抗匹配技术用于优化信号传输，通过调整电路的输入输出阻抗，减少信号反射和衰减，提高信号完整性。",
+      "difficulty": 3,
+      "keywords": [
+        "阻抗匹配",
+        "信号完整性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阻抗匹配技术用于优化信号传输，通过调整电路的输入输出阻抗，减少信号反射和衰减，提高信号完整性。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "ca_2_2_3_1",
+      "label": "信号缓冲器",
+      "node_type": "circuit_application",
+      "summary": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性，隔离前后级电路，防止负载效应，确保信号稳定传输。",
+      "difficulty": 4,
+      "keywords": [
+        "信号缓冲器",
+        "隔离"
+      ],
+      "formulas": [],
+      "applications": [
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性，隔离前后级电路，防止负载效应，确保信号稳定传输。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "ca_2_2_3_2",
+      "label": "阻抗变换器",
+      "node_type": "circuit_application",
+      "summary": "阻抗变换器利用电压跟随器实现阻抗转换，将高阻抗信号源转换为低阻抗输出，提高驱动能力。",
+      "difficulty": 4,
+      "keywords": [
+        "阻抗变换器",
+        "驱动能力"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "阻抗变换器利用电压跟随器实现阻抗转换，将高阻抗信号源转换为低阻抗输出，提高驱动能力。",
+      "source_section": "2.2.3",
+      "source_title": "电压跟随器"
+    },
+    {
+      "id": "bc_3_3_1",
+      "label": "有源滤波器",
+      "node_type": "basic_concept",
+      "summary": "有源滤波器是一种使用有源元件（如运算放大器）的滤波器，能够提供增益并且不需要电感器。其工作原理是通过运算放大器对输入信号进行放大和滤波处理。",
+      "difficulty": 2,
+      "keywords": [
+        "有源滤波器",
+        "运算放大器",
+        "增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "音频设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "滤波器基础",
+        "运算放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源滤波器是一种使用有源元件（如运算放大器）的滤波器，能够提供增益并且不需要电感器。其工作原理是通过运算放大器对输入信号进行放大和滤波处理。",
+      "source_section": "3.3",
+      "source_title": "有源滤波器"
+    },
+    {
+      "id": "bc_3_3_2",
+      "label": "运算放大器",
+      "node_type": "basic_concept",
+      "summary": "运算放大器是一种高增益的电压放大器，具有差分输入和单端输出。在有源滤波器中，运算放大器用于提供增益和实现滤波功能。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "高增益",
+        "差分输入"
+      ],
+      "formulas": [],
+      "applications": [
+        "有源滤波器",
+        "信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运算放大器是一种高增益的电压放大器，具有差分输入和单端输出。在有源滤波器中，运算放大器用于提供增益和实现滤波功能。",
+      "source_section": "3.3",
+      "source_title": "有源滤波器"
+    },
+    {
+      "id": "ct_3_3_1",
+      "label": "有源滤波器设计",
+      "node_type": "core_technology",
+      "summary": "有源滤波器设计是通过选择合适的运算放大器和外围电路元件（如电阻和电容）来实现特定的滤波特性。设计步骤包括确定滤波器类型（如低通、高通、带通等）、计算元件参数和验证性能。",
+      "difficulty": 3,
+      "keywords": [
+        "滤波器设计",
+        "运算放大器",
+        "元件参数"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源滤波器设计是通过选择合适的运算放大器和外围电路元件（如电阻和电容）来实现特定的滤波特性。设计步骤包括确定滤波器类型（如低通、高通、带通等）、计算元件参数和验证性能。",
+      "source_section": "3.3",
+      "source_title": "有源滤波器"
+    },
+    {
+      "id": "ca_3_3_1",
+      "label": "有源低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "有源低通滤波器是一种使用运算放大器的电路，用于允许低频信号通过而衰减高频信号。其典型电路结构包括运算放大器、电阻和电容，通过调整这些元件的参数可以实现不同的截止频率。",
+      "difficulty": 4,
+      "keywords": [
+        "低通滤波器",
+        "运算放大器",
+        "截止频率"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频信号处理",
+        "噪声抑制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源低通滤波器是一种使用运算放大器的电路，用于允许低频信号通过而衰减高频信号。其典型电路结构包括运算放大器、电阻和电容，通过调整这些元件的参数可以实现不同的截止频率。",
+      "source_section": "3.3",
+      "source_title": "有源滤波器"
+    },
+    {
+      "id": "bc_2_3_1",
+      "label": "运放频率响应",
+      "node_type": "basic_concept",
+      "summary": "运算放大器的增益随频率变化的特性。实际运放的增益不是恒定的，会随着输入信号频率的增加而下降。这是由运放内部电容和晶体管特性决定的。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "频率响应",
+        "增益变化"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本运放原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运算放大器的增益随频率变化的特性。实际运放的增益不是恒定的，会随着输入信号频率的增加而下降。这是由运放内部电容和晶体管特性决定的。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "bc_2_3_2",
+      "label": "增益带宽积(GBW)",
+      "node_type": "basic_concept",
+      "summary": "描述运放频率响应的重要参数，定义为运放的直流增益(A₀)与3dB带宽(f₃dB)的乘积。GBW是一个常数，表示运放的增益-带宽特性。",
+      "difficulty": 3,
+      "keywords": [
+        "增益带宽积",
+        "GBW",
+        "带宽"
+      ],
+      "formulas": [
+        "GBW = A₀ × f₃dB"
+      ],
+      "applications": [
+        "运放选型",
+        "电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运放频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "描述运放频率响应的重要参数，定义为运放的直流增益(A₀)与3dB带宽(f₃dB)的乘积。GBW是一个常数，表示运放的增益-带宽特性。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "bc_2_3_3",
+      "label": "直流增益(A₀)",
+      "node_type": "basic_concept",
+      "summary": "运放在直流或低频条件下的电压增益，是频率为零时的增益值。理想运放的直流增益为无限大，实际运放则为一个有限值。",
+      "difficulty": 2,
+      "keywords": [
+        "直流增益",
+        "低频增益",
+        "开环增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放参数规格"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本运放原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运放在直流或低频条件下的电压增益，是频率为零时的增益值。理想运放的直流增益为无限大，实际运放则为一个有限值。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "bc_2_3_4",
+      "label": "3dB带宽(f₃dB)",
+      "node_type": "basic_concept",
+      "summary": "运放增益下降到直流增益的0.707倍(即-3dB)时的频率点。这个参数表示运放的有效工作带宽。",
+      "difficulty": 2,
+      "keywords": [
+        "3dB带宽",
+        "截止频率",
+        "带宽"
+      ],
+      "formulas": [],
+      "applications": [
+        "频率响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运放增益下降到直流增益的0.707倍(即-3dB)时的频率点。这个参数表示运放的有效工作带宽。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "ct_2_3_1",
+      "label": "GBW计算方法",
+      "node_type": "core_technology",
+      "summary": "通过测量或计算运放的直流增益和3dB带宽，然后相乘得到增益带宽积。这是评估运放频率响应特性的基本方法。",
+      "difficulty": 3,
+      "keywords": [
+        "GBW计算",
+        "频率响应分析",
+        "参数测量"
+      ],
+      "formulas": [
+        "GBW = A₀ × f₃dB"
+      ],
+      "applications": [
+        "运放特性评估"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过测量或计算运放的直流增益和3dB带宽，然后相乘得到增益带宽积。这是评估运放频率响应特性的基本方法。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "ca_2_3_1",
+      "label": "宽带运放设计",
+      "node_type": "circuit_application",
+      "summary": "利用GBW参数选择适合的运放，设计能够在较宽频率范围内保持稳定增益的放大电路。需要考虑GBW与闭环增益的关系。",
+      "difficulty": 4,
+      "keywords": [
+        "宽带放大",
+        "运放选型",
+        "频率补偿"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频电路",
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用GBW参数选择适合的运放，设计能够在较宽频率范围内保持稳定增益的放大电路。需要考虑GBW与闭环增益的关系。",
+      "source_section": "2.3",
+      "source_title": "运放的频率响应"
+    },
+    {
+      "id": "bc_3_2_1_1",
+      "label": "传递函数",
+      "node_type": "basic_concept",
+      "summary": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶低通滤波器，传递函数为H(s) = 1/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "频域分析",
+        "系统响应"
+      ],
+      "formulas": [
+        "H(s) = 1/(1 + sRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换",
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶低通滤波器，传递函数为H(s) = 1/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。",
+      "source_section": "3.2.1",
+      "source_title": "一阶低通滤波器"
+    },
+    {
+      "id": "bc_3_2_1_2",
+      "label": "截止频率",
+      "node_type": "basic_concept",
+      "summary": "截止频率是滤波器频率响应中信号幅度下降3dB时的频率点，表示滤波器开始显著衰减信号的频率。对于一阶低通滤波器，截止频率计算公式为fc = 1/(2πRC)，其中R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "截止频率",
+        "3dB点",
+        "频率响应"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "分贝概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "截止频率是滤波器频率响应中信号幅度下降3dB时的频率点，表示滤波器开始显著衰减信号的频率。对于一阶低通滤波器，截止频率计算公式为fc = 1/(2πRC)，其中R是电阻值，C是电容值。",
+      "source_section": "3.2.1",
+      "source_title": "一阶低通滤波器"
+    },
+    {
+      "id": "ct_3_2_1_1",
+      "label": "一阶低通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "一阶低通滤波器的设计方法基于RC电路，通过选择合适的电阻R和电容C值来实现所需的截止频率。设计步骤包括：1) 确定目标截止频率fc；2) 根据公式fc = 1/(2πRC)计算RC乘积；3) 选择合适的R和C值组合；4) 验证频率响应特性。",
+      "difficulty": 3,
+      "keywords": [
+        "滤波器设计",
+        "RC电路",
+        "参数选择"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一阶低通滤波器的设计方法基于RC电路，通过选择合适的电阻R和电容C值来实现所需的截止频率。设计步骤包括：1) 确定目标截止频率fc；2) 根据公式fc = 1/(2πRC)计算RC乘积；3) 选择合适的R和C值组合；4) 验证频率响应特性。",
+      "source_section": "3.2.1",
+      "source_title": "一阶低通滤波器"
+    },
+    {
+      "id": "ca_3_2_1_1",
+      "label": "RC低通滤波器电路",
+      "node_type": "circuit_application",
+      "summary": "基本的一阶RC低通滤波器电路由一个电阻和一个电容组成，电阻串联在输入信号路径上，电容并联在输出端与地之间。该电路结构简单，能有效衰减高频信号，保留低频信号。典型应用包括音频信号处理、抗混叠滤波和噪声抑制等。",
+      "difficulty": 4,
+      "keywords": [
+        "RC电路",
+        "低通滤波",
+        "信号处理"
+      ],
+      "formulas": [
+        "H(s) = 1/(1 + sRC)",
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频设备",
+        "传感器信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基本的一阶RC低通滤波器电路由一个电阻和一个电容组成，电阻串联在输入信号路径上，电容并联在输出端与地之间。该电路结构简单，能有效衰减高频信号，保留低频信号。典型应用包括音频信号处理、抗混叠滤波和噪声抑制等。",
+      "source_section": "3.2.1",
+      "source_title": "一阶低通滤波器"
+    },
+    {
+      "id": "bc_3_2_2_1",
+      "label": "传递函数",
+      "node_type": "basic_concept",
+      "summary": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶高通滤波器，传递函数为H(s) = sRC/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "频域",
+        "频率响应"
+      ],
+      "formulas": [
+        "H(s) = sRC/(1 + sRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换",
+        "电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "传递函数是描述线性时不变系统输入输出关系的数学表达式，在频域中表示系统的频率响应特性。对于一阶高通滤波器，传递函数为H(s) = sRC/(1 + sRC)，其中s是复频率变量，R是电阻值，C是电容值。",
+      "source_section": "3.2.2",
+      "source_title": "一阶高通滤波器"
+    },
+    {
+      "id": "bc_3_2_2_2",
+      "label": "截止频率",
+      "node_type": "basic_concept",
+      "summary": "截止频率是滤波器频率响应中信号幅度下降至-3dB（即0.707倍）时的频率点。对于一阶高通滤波器，截止频率fc = 1/(2πRC)，其中R是电阻值，C是电容值。",
+      "difficulty": 2,
+      "keywords": [
+        "截止频率",
+        "-3dB",
+        "频率响应"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "滤波器设计",
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "分贝概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "截止频率是滤波器频率响应中信号幅度下降至-3dB（即0.707倍）时的频率点。对于一阶高通滤波器，截止频率fc = 1/(2πRC)，其中R是电阻值，C是电容值。",
+      "source_section": "3.2.2",
+      "source_title": "一阶高通滤波器"
+    },
+    {
+      "id": "ct_3_2_2_1",
+      "label": "一阶高通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "一阶高通滤波器的设计方法基于传递函数H(s) = sRC/(1 + sRC)，通过选择合适的电阻R和电容C值来实现所需的截止频率fc = 1/(2πRC)。设计步骤包括：1) 确定截止频率需求；2) 选择R或C中的一个值；3) 计算另一个元件的值；4) 验证频率响应。",
+      "difficulty": 3,
+      "keywords": [
+        "滤波器设计",
+        "RC电路",
+        "频率响应"
+      ],
+      "formulas": [
+        "H(s) = sRC/(1 + sRC)",
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "信号调理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一阶高通滤波器的设计方法基于传递函数H(s) = sRC/(1 + sRC)，通过选择合适的电阻R和电容C值来实现所需的截止频率fc = 1/(2πRC)。设计步骤包括：1) 确定截止频率需求；2) 选择R或C中的一个值；3) 计算另一个元件的值；4) 验证频率响应。",
+      "source_section": "3.2.2",
+      "source_title": "一阶高通滤波器"
+    },
+    {
+      "id": "ca_3_2_2_1",
+      "label": "一阶高通滤波器电路",
+      "node_type": "circuit_application",
+      "summary": "一阶高通滤波器电路由一个电阻R和一个电容C组成，电容串联在信号路径上，电阻并联到地。该电路允许高频信号通过而衰减低频信号，其截止频率由fc = 1/(2πRC)决定。",
+      "difficulty": 4,
+      "keywords": [
+        "RC电路",
+        "高通滤波",
+        "信号处理"
+      ],
+      "formulas": [
+        "fc = 1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "直流隔离"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一阶高通滤波器电路由一个电阻R和一个电容C组成，电容串联在信号路径上，电阻并联到地。该电路允许高频信号通过而衰减低频信号，其截止频率由fc = 1/(2πRC)决定。",
+      "source_section": "3.2.2",
+      "source_title": "一阶高通滤波器"
+    },
+    {
+      "id": "bc_3_1_1",
+      "label": "滤波器",
+      "node_type": "basic_concept",
+      "summary": "滤波器是一种电子电路或信号处理系统，用于选择性地通过或阻止特定频率范围内的信号。其核心功能是根据频率对信号进行选择性处理。",
+      "difficulty": 2,
+      "keywords": [
+        "频率选择",
+        "信号处理",
+        "电子电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "通信系统",
+        "音频处理",
+        "图像处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统",
+        "傅里叶分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器是一种电子电路或信号处理系统，用于选择性地通过或阻止特定频率范围内的信号。其核心功能是根据频率对信号进行选择性处理。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "bc_3_1_2",
+      "label": "截止频率",
+      "node_type": "basic_concept",
+      "summary": "滤波器的重要参数，指滤波器响应从通带过渡到阻带的边界频率点。对于低通和高通滤波器，通常定义为幅度响应下降3dB时的频率。",
+      "difficulty": 2,
+      "keywords": [
+        "3dB点",
+        "过渡区",
+        "边界频率"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "系统分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "分贝概念",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器的重要参数，指滤波器响应从通带过渡到阻带的边界频率点。对于低通和高通滤波器，通常定义为幅度响应下降3dB时的频率。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ct_3_1_1",
+      "label": "低通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许低频信号通过而衰减高频信号的电路。关键参数包括截止频率、滚降速率和通带纹波。常用实现方法包括RC电路、LC电路和有源滤波器。",
+      "difficulty": 3,
+      "keywords": [
+        "RC电路",
+        "滚降速率",
+        "巴特沃斯"
+      ],
+      "formulas": [
+        "截止频率公式：fc=1/(2πRC)"
+      ],
+      "applications": [
+        "音频处理",
+        "抗混叠"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许低频信号通过而衰减高频信号的电路。关键参数包括截止频率、滚降速率和通带纹波。常用实现方法包括RC电路、LC电路和有源滤波器。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ct_3_1_2",
+      "label": "高通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许高频信号通过而衰减低频信号的电路。与低通滤波器类似但频率特性相反，常用CR电路或LC电路实现。需要考虑低频截止特性和高频响应平坦度。",
+      "difficulty": 3,
+      "keywords": [
+        "CR电路",
+        "截止特性",
+        "切比雪夫"
+      ],
+      "formulas": [
+        "截止频率公式：fc=1/(2πRC)"
+      ],
+      "applications": [
+        "直流隔离",
+        "噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许高频信号通过而衰减低频信号的电路。与低通滤波器类似但频率特性相反，常用CR电路或LC电路实现。需要考虑低频截止特性和高频响应平坦度。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ct_3_1_3",
+      "label": "带通滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计允许特定频带信号通过而衰减其他频率的电路。需要确定中心频率和带宽两个关键参数。实现方法包括串联低通和高通滤波器，或使用LC谐振电路。",
+      "difficulty": 4,
+      "keywords": [
+        "中心频率",
+        "带宽",
+        "品质因数"
+      ],
+      "formulas": [
+        "中心频率公式：f0=1/(2π√(LC))"
+      ],
+      "applications": [
+        "无线通信",
+        "频谱分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计允许特定频带信号通过而衰减其他频率的电路。需要确定中心频率和带宽两个关键参数。实现方法包括串联低通和高通滤波器，或使用LC谐振电路。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ct_3_1_4",
+      "label": "带阻滤波器设计",
+      "node_type": "core_technology",
+      "summary": "设计阻止特定频带信号而允许其他频率通过的电路。也称为陷波滤波器，常用于消除特定干扰频率。实现方法包括并联谐振电路或双T网络。",
+      "difficulty": 4,
+      "keywords": [
+        "陷波",
+        "双T网络",
+        "干扰抑制"
+      ],
+      "formulas": [
+        "陷波频率公式：fn=1/(2πRC)"
+      ],
+      "applications": [
+        "电源滤波",
+        "噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "设计阻止特定频带信号而允许其他频率通过的电路。也称为陷波滤波器，常用于消除特定干扰频率。实现方法包括并联谐振电路或双T网络。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ca_3_1_1",
+      "label": "RC低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电阻和电容组成的最简单低通滤波器电路。电阻串联在信号路径中，电容并联到地。截止频率由RC时间常数决定，具有-20dB/十倍频的滚降特性。",
+      "difficulty": 3,
+      "keywords": [
+        "一阶滤波器",
+        "无源滤波器",
+        "RC时间常数"
+      ],
+      "formulas": [
+        "fc=1/(2πRC)"
+      ],
+      "applications": [
+        "信号调理",
+        "抗混叠"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电阻和电容组成的最简单低通滤波器电路。电阻串联在信号路径中，电容并联到地。截止频率由RC时间常数决定，具有-20dB/十倍频的滚降特性。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ca_3_1_2",
+      "label": "CR高通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电容和电阻组成的基本高通滤波器电路。电容串联在信号路径中，电阻并联到地。与RC低通滤波器结构对称但元件位置互换，频率特性相反。",
+      "difficulty": 3,
+      "keywords": [
+        "耦合电容",
+        "直流隔离",
+        "CR电路"
+      ],
+      "formulas": [
+        "fc=1/(2πRC)"
+      ],
+      "applications": [
+        "交流耦合",
+        "低频噪声消除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电容和电阻组成的基本高通滤波器电路。电容串联在信号路径中，电阻并联到地。与RC低通滤波器结构对称但元件位置互换，频率特性相反。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "ca_3_1_3",
+      "label": "LC带通滤波器",
+      "node_type": "circuit_application",
+      "summary": "由电感和电容组成的谐振电路实现的带通滤波器。LC并联谐振在中心频率呈现高阻抗，串联谐振呈现低阻抗。品质因数Q值决定带宽选择性。",
+      "difficulty": 4,
+      "keywords": [
+        "谐振电路",
+        "Q值",
+        "阻抗变换"
+      ],
+      "formulas": [
+        "Q=2πfL/R"
+      ],
+      "applications": [
+        "射频接收",
+        "频率选择"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由电感和电容组成的谐振电路实现的带通滤波器。LC并联谐振在中心频率呈现高阻抗，串联谐振呈现低阻抗。品质因数Q值决定带宽选择性。",
+      "source_section": "3.1",
+      "source_title": "滤波器基础"
+    },
+    {
+      "id": "bc_3_3_1_1",
+      "label": "有源滤波器",
+      "node_type": "basic_concept",
+      "summary": "有源滤波器是使用有源元件（如运算放大器）和无源元件（如电阻、电容）构成的滤波器，能够提供增益并改善频率响应特性。",
+      "difficulty": 2,
+      "keywords": [
+        "运算放大器",
+        "频率响应",
+        "增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "音频处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "运算放大器原理",
+        "滤波器基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "有源滤波器是使用有源元件（如运算放大器）和无源元件（如电阻、电容）构成的滤波器，能够提供增益并改善频率响应特性。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "bc_3_3_1_2",
+      "label": "二阶滤波器",
+      "node_type": "basic_concept",
+      "summary": "二阶滤波器是指传递函数中最高阶数为2的滤波器，能够提供更陡峭的滚降特性，适用于需要更高选择性的应用。",
+      "difficulty": 2,
+      "keywords": [
+        "传递函数",
+        "滚降特性",
+        "选择性"
+      ],
+      "formulas": [
+        "H(s) = 1 / (s^2 + (ω0/Q)s + ω0^2)"
+      ],
+      "applications": [
+        "低通滤波",
+        "高通滤波",
+        "带通滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "传递函数",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二阶滤波器是指传递函数中最高阶数为2的滤波器，能够提供更陡峭的滚降特性，适用于需要更高选择性的应用。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "ct_3_3_1_1",
+      "label": "Sallen-Key拓扑",
+      "node_type": "core_technology",
+      "summary": "Sallen-Key拓扑是一种常用的二阶有源滤波器实现方法，通过使用运算放大器、电阻和电容构成反馈网络，能够实现低通、高通和带通滤波器。其特点是结构简单、易于调整，且运算放大器工作在电压跟随器模式下，增益稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "反馈网络",
+        "电压跟随器",
+        "增益稳定"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "高通滤波器设计",
+        "带通滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key拓扑是一种常用的二阶有源滤波器实现方法，通过使用运算放大器、电阻和电容构成反馈网络，能够实现低通、高通和带通滤波器。其特点是结构简单、易于调整，且运算放大器工作在电压跟随器模式下，增益稳定。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "ca_3_3_1_1",
+      "label": "Sallen-Key低通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key低通滤波器是一种基于Sallen-Key拓扑的二阶低通滤波器，通过合理选择电阻和电容值，可以实现所需的截止频率和Q值。其电路结构包括两个电阻、两个电容和一个运算放大器，运算放大器作为电压跟随器提供单位增益。",
+      "difficulty": 4,
+      "keywords": [
+        "截止频率",
+        "Q值",
+        "单位增益"
+      ],
+      "formulas": [
+        "Q = √(R1R2C1C2) / (R1C1 + R2C1)"
+      ],
+      "applications": [
+        "音频信号处理",
+        "抗混叠滤波"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key低通滤波器是一种基于Sallen-Key拓扑的二阶低通滤波器，通过合理选择电阻和电容值，可以实现所需的截止频率和Q值。其电路结构包括两个电阻、两个电容和一个运算放大器，运算放大器作为电压跟随器提供单位增益。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "ca_3_3_1_2",
+      "label": "Sallen-Key高通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key高通滤波器是一种基于Sallen-Key拓扑的二阶高通滤波器，通过交换低通滤波器中的电阻和电容位置实现。其电路结构包括两个电阻、两个电容和一个运算放大器，能够有效滤除低频信号。",
+      "difficulty": 4,
+      "keywords": [
+        "高频通过",
+        "低频滤除",
+        "单位增益"
+      ],
+      "formulas": [
+        "截止频率公式: f_c = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "高频信号提取",
+        "噪声滤除"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key高通滤波器是一种基于Sallen-Key拓扑的二阶高通滤波器，通过交换低通滤波器中的电阻和电容位置实现。其电路结构包括两个电阻、两个电容和一个运算放大器，能够有效滤除低频信号。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "ca_3_3_1_3",
+      "label": "Sallen-Key带通滤波器",
+      "node_type": "circuit_application",
+      "summary": "Sallen-Key带通滤波器是一种基于Sallen-Key拓扑的二阶带通滤波器，通过组合低通和高通滤波器的特性，能够选择性地通过某一频段的信号。其电路结构较为复杂，通常需要多个运算放大器和无源元件。",
+      "difficulty": 4,
+      "keywords": [
+        "频段选择",
+        "选择性",
+        "多级滤波"
+      ],
+      "formulas": [
+        "中心频率公式: f_0 = 1 / (2π√(R1R2C1C2))"
+      ],
+      "applications": [
+        "通信系统",
+        "频谱分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Sallen-Key带通滤波器是一种基于Sallen-Key拓扑的二阶带通滤波器，通过组合低通和高通滤波器的特性，能够选择性地通过某一频段的信号。其电路结构较为复杂，通常需要多个运算放大器和无源元件。",
+      "source_section": "3.3.1",
+      "source_title": "Sallen-Key拓扑"
+    },
+    {
+      "id": "bc_4_3_1_1",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指系统开环传递函数在增益交越频率处的相位与-180°之间的差值，是衡量系统稳定性的重要指标。较大的相位裕度意味着系统具有更好的稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "稳定性",
+        "增益交越频率",
+        "相位差"
+      ],
+      "formulas": [
+        "Phase Margin = φ - (-180°)"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "传递函数",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指系统开环传递函数在增益交越频率处的相位与-180°之间的差值，是衡量系统稳定性的重要指标。较大的相位裕度意味着系统具有更好的稳定性。",
+      "source_section": "4.3.1",
+      "source_title": "超前补偿"
+    },
+    {
+      "id": "bc_4_3_1_2",
+      "label": "瞬态响应",
+      "node_type": "basic_concept",
+      "summary": "瞬态响应是指系统在输入信号突变时的输出响应特性，包括上升时间、超调量和调节时间等指标。良好的瞬态响应意味着系统能快速且平稳地达到稳态。",
+      "difficulty": 2,
+      "keywords": [
+        "上升时间",
+        "超调量",
+        "调节时间"
+      ],
+      "formulas": [],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "时域分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "瞬态响应是指系统在输入信号突变时的输出响应特性，包括上升时间、超调量和调节时间等指标。良好的瞬态响应意味着系统能快速且平稳地达到稳态。",
+      "source_section": "4.3.1",
+      "source_title": "超前补偿"
+    },
+    {
+      "id": "ct_4_3_1_1",
+      "label": "超前补偿",
+      "node_type": "core_technology",
+      "summary": "超前补偿是一种通过在系统中引入超前网络（通常由电阻和电容组成）来增加相位裕度的技术。它通过在特定频率范围内提供相位超前，从而改善系统的稳定性和瞬态响应。",
+      "difficulty": 3,
+      "keywords": [
+        "超前网络",
+        "相位超前",
+        "补偿"
+      ],
+      "formulas": [
+        "G_c(s) = (1 + αTs)/(1 + Ts), α > 1"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "超前补偿是一种通过在系统中引入超前网络（通常由电阻和电容组成）来增加相位裕度的技术。它通过在特定频率范围内提供相位超前，从而改善系统的稳定性和瞬态响应。",
+      "source_section": "4.3.1",
+      "source_title": "超前补偿"
+    },
+    {
+      "id": "ca_4_3_1_1",
+      "label": "超前补偿电路",
+      "node_type": "circuit_application",
+      "summary": "典型的超前补偿电路由一个电阻和一个电容组成，形成RC网络。该电路在特定频率范围内提供相位超前，用于改善控制系统的稳定性和瞬态响应。",
+      "difficulty": 4,
+      "keywords": [
+        "RC网络",
+        "相位超前",
+        "补偿电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "反馈控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的超前补偿电路由一个电阻和一个电容组成，形成RC网络。该电路在特定频率范围内提供相位超前，用于改善控制系统的稳定性和瞬态响应。",
+      "source_section": "4.3.1",
+      "source_title": "超前补偿"
+    },
+    {
+      "id": "bc_4_2_1_1",
+      "label": "奈奎斯特判据",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特判据是判断线性时不变系统稳定性的图形方法。它通过分析开环传递函数的奈奎斯特图与(-1, 0)点的相对位置关系来判断闭环系统的稳定性。判据指出：当且仅当奈奎斯特图不包围(-1, 0)点时，闭环系统是稳定的。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性判据",
+        "奈奎斯特图",
+        "开环传递函数"
+      ],
+      "formulas": [
+        "G(s)H(s)"
+      ],
+      "applications": [
+        "控制系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "控制理论基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特判据是判断线性时不变系统稳定性的图形方法。它通过分析开环传递函数的奈奎斯特图与(-1, 0)点的相对位置关系来判断闭环系统的稳定性。判据指出：当且仅当奈奎斯特图不包围(-1, 0)点时，闭环系统是稳定的。",
+      "source_section": "4.2.1",
+      "source_title": "奈奎斯特判据"
+    },
+    {
+      "id": "bc_4_2_1_2",
+      "label": "奈奎斯特图",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特图是开环传递函数G(s)H(s)在复平面上的极坐标图，表示当频率ω从-∞变化到+∞时，G(jω)H(jω)的轨迹。图中(-1, 0)点具有特殊意义，称为临界点。",
+      "difficulty": 2,
+      "keywords": [
+        "极坐标图",
+        "频率响应",
+        "复平面"
+      ],
+      "formulas": [
+        "G(jω)H(jω)"
+      ],
+      "applications": [
+        "频域分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复数运算",
+        "频率响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特图是开环传递函数G(s)H(s)在复平面上的极坐标图，表示当频率ω从-∞变化到+∞时，G(jω)H(jω)的轨迹。图中(-1, 0)点具有特殊意义，称为临界点。",
+      "source_section": "4.2.1",
+      "source_title": "奈奎斯特判据"
+    },
+    {
+      "id": "ct_4_2_1_1",
+      "label": "奈奎斯特稳定性分析",
+      "node_type": "core_technology",
+      "summary": "通过绘制开环系统的奈奎斯特图，计算其包围(-1, 0)点的次数N，并与开环传递函数在右半平面的极点数P比较。稳定性判据为：Z = P - N = 0时系统稳定，其中Z是闭环极点在右半平面的数量。分析步骤包括：1) 绘制奈奎斯特图 2) 计算包围次数 3) 比较N和P",
+      "difficulty": 4,
+      "keywords": [
+        "稳定性分析",
+        "包围次数",
+        "极点数"
+      ],
+      "formulas": [
+        "Z = P - N"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过绘制开环系统的奈奎斯特图，计算其包围(-1, 0)点的次数N，并与开环传递函数在右半平面的极点数P比较。稳定性判据为：Z = P - N = 0时系统稳定，其中Z是闭环极点在右半平面的数量。分析步骤包括：1) 绘制奈奎斯特图 2) 计算包围次数 3) 比较N和P",
+      "source_section": "4.2.1",
+      "source_title": "奈奎斯特判据"
+    },
+    {
+      "id": "ca_4_2_1_1",
+      "label": "反馈控制系统稳定性设计",
+      "node_type": "circuit_application",
+      "summary": "在反馈控制系统设计中应用奈奎斯特判据来确保系统稳定性。典型应用包括：1) 运算放大器补偿网络设计 2) 电源反馈环路设计 3) 伺服系统稳定性分析。设计时需要绘制开环传递函数的奈奎斯特图，并通过调整补偿网络参数确保不包围(-1, 0)点。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈控制",
+        "补偿网络",
+        "稳定性设计"
+      ],
+      "formulas": [
+        "相位裕度计算"
+      ],
+      "applications": [
+        "运算放大器电路",
+        "开关电源",
+        "伺服系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在反馈控制系统设计中应用奈奎斯特判据来确保系统稳定性。典型应用包括：1) 运算放大器补偿网络设计 2) 电源反馈环路设计 3) 伺服系统稳定性分析。设计时需要绘制开环传递函数的奈奎斯特图，并通过调整补偿网络参数确保不包围(-1, 0)点。",
+      "source_section": "4.2.1",
+      "source_title": "奈奎斯特判据"
+    },
+    {
+      "id": "bc_4_3_2_1",
+      "label": "稳态误差",
+      "node_type": "basic_concept",
+      "summary": "稳态误差是指系统在稳定状态下，输出与期望值之间的差异。它是衡量控制系统精度的重要指标。",
+      "difficulty": 2,
+      "keywords": [
+        "误差",
+        "稳定状态",
+        "精度"
+      ],
+      "formulas": [
+        "稳态误差 = 期望值 - 实际值"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "控制系统基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "稳态误差是指系统在稳定状态下，输出与期望值之间的差异。它是衡量控制系统精度的重要指标。",
+      "source_section": "4.3.2",
+      "source_title": "滞后补偿"
+    },
+    {
+      "id": "bc_4_3_2_2",
+      "label": "响应速度",
+      "node_type": "basic_concept",
+      "summary": "响应速度是指系统对输入信号变化的反应快慢。它是衡量控制系统动态性能的重要指标。",
+      "difficulty": 2,
+      "keywords": [
+        "动态性能",
+        "反应时间",
+        "速度"
+      ],
+      "formulas": [
+        "响应时间 = 达到稳定状态所需时间"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "控制系统基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "响应速度是指系统对输入信号变化的反应快慢。它是衡量控制系统动态性能的重要指标。",
+      "source_section": "4.3.2",
+      "source_title": "滞后补偿"
+    },
+    {
+      "id": "ct_4_3_2_1",
+      "label": "滞后补偿",
+      "node_type": "core_technology",
+      "summary": "滞后补偿是一种通过引入相位滞后来减少稳态误差的控制技术。它通常通过增加一个滞后环节来实现，但可能会降低系统的响应速度。",
+      "difficulty": 3,
+      "keywords": [
+        "相位滞后",
+        "补偿",
+        "控制技术"
+      ],
+      "formulas": [
+        "滞后补偿传递函数 = (1 + T1s) / (1 + T2s), 其中 T1 > T2"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滞后补偿是一种通过引入相位滞后来减少稳态误差的控制技术。它通常通过增加一个滞后环节来实现，但可能会降低系统的响应速度。",
+      "source_section": "4.3.2",
+      "source_title": "滞后补偿"
+    },
+    {
+      "id": "ca_4_3_2_1",
+      "label": "滞后补偿电路",
+      "node_type": "circuit_application",
+      "summary": "滞后补偿电路是一种用于控制系统的电路，通过引入滞后环节来减少稳态误差。典型的滞后补偿电路包括电阻、电容和运算放大器等元件。",
+      "difficulty": 4,
+      "keywords": [
+        "电阻",
+        "电容",
+        "运算放大器"
+      ],
+      "formulas": [
+        "滞后补偿电路传递函数"
+      ],
+      "applications": [
+        "控制系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滞后补偿电路是一种用于控制系统的电路，通过引入滞后环节来减少稳态误差。典型的滞后补偿电路包括电阻、电容和运算放大器等元件。",
+      "source_section": "4.3.2",
+      "source_title": "滞后补偿"
+    },
+    {
+      "id": "bc_4_2_2_1",
+      "label": "增益裕度",
+      "node_type": "basic_concept",
+      "summary": "增益裕度是指系统在相位交叉频率处的增益与0 dB之间的差值，用于衡量系统的稳定性。增益裕度大于0 dB表示系统稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "增益裕度",
+        "稳定性",
+        "dB"
+      ],
+      "formulas": [
+        "Gain Margin = 0 dB - |G(jω)| at phase crossover frequency"
+      ],
+      "applications": [
+        "反馈控制系统",
+        "放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益裕度是指系统在相位交叉频率处的增益与0 dB之间的差值，用于衡量系统的稳定性。增益裕度大于0 dB表示系统稳定。",
+      "source_section": "4.2.2",
+      "source_title": "波德图分析"
+    },
+    {
+      "id": "bc_4_2_2_2",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是指系统在增益交叉频率处的相位与-180°之间的差值，用于衡量系统的稳定性。相位裕度大于0°表示系统稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "相位裕度",
+        "稳定性",
+        "度"
+      ],
+      "formulas": [
+        "Phase Margin = ∠G(jω) - (-180°) at gain crossover frequency"
+      ],
+      "applications": [
+        "反馈控制系统",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应",
+        "传递函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是指系统在增益交叉频率处的相位与-180°之间的差值，用于衡量系统的稳定性。相位裕度大于0°表示系统稳定。",
+      "source_section": "4.2.2",
+      "source_title": "波德图分析"
+    },
+    {
+      "id": "ct_4_2_2_1",
+      "label": "波德图分析",
+      "node_type": "core_technology",
+      "summary": "波德图分析是一种通过绘制系统的幅频特性和相频特性曲线来分析系统稳定性的方法。通过观察增益裕度和相位裕度来判断系统是否稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "波德图",
+        "稳定性分析",
+        "频率响应"
+      ],
+      "formulas": [
+        "Bode Plot = Magnitude Plot + Phase Plot"
+      ],
+      "applications": [
+        "控制系统设计",
+        "电路稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "波德图分析是一种通过绘制系统的幅频特性和相频特性曲线来分析系统稳定性的方法。通过观察增益裕度和相位裕度来判断系统是否稳定。",
+      "source_section": "4.2.2",
+      "source_title": "波德图分析"
+    },
+    {
+      "id": "ca_4_2_2_1",
+      "label": "反馈放大器稳定性分析",
+      "node_type": "circuit_application",
+      "summary": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度来确保放大器在闭环工作时不会产生振荡或不稳定现象。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈放大器",
+        "稳定性",
+        "波德图"
+      ],
+      "formulas": [
+        "Loop Gain T(s) = A(s)β(s)"
+      ],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度来确保放大器在闭环工作时不会产生振荡或不稳定现象。",
+      "source_section": "4.2.2",
+      "source_title": "波德图分析"
+    },
+    {
+      "id": "bc_4_1_1",
+      "label": "反馈",
+      "node_type": "basic_concept",
+      "summary": "反馈是将输出信号的一部分返回到输入端的技术，用于调节系统的性能。反馈可以分为负反馈和正反馈两种类型。",
+      "difficulty": 2,
+      "keywords": [
+        "反馈",
+        "输出信号",
+        "输入端"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "振荡器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号处理基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反馈是将输出信号的一部分返回到输入端的技术，用于调节系统的性能。反馈可以分为负反馈和正反馈两种类型。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "bc_4_1_2",
+      "label": "负反馈",
+      "node_type": "basic_concept",
+      "summary": "负反馈是将输出信号的一部分以相反相位返回到输入端，用于减少误差和提高系统的稳定性。",
+      "difficulty": 2,
+      "keywords": [
+        "负反馈",
+        "误差减少",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈是将输出信号的一部分以相反相位返回到输入端，用于减少误差和提高系统的稳定性。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "bc_4_1_3",
+      "label": "正反馈",
+      "node_type": "basic_concept",
+      "summary": "正反馈是将输出信号的一部分以相同相位返回到输入端，可能导致系统振荡或不稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "正反馈",
+        "振荡",
+        "不稳定"
+      ],
+      "formulas": [],
+      "applications": [
+        "振荡器",
+        "触发器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正反馈是将输出信号的一部分以相同相位返回到输入端，可能导致系统振荡或不稳定。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "ct_4_1_1",
+      "label": "负反馈技术",
+      "node_type": "core_technology",
+      "summary": "负反馈技术通过将输出信号的一部分以相反相位返回到输入端，减少系统误差并提高稳定性。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试系统响应。",
+      "difficulty": 3,
+      "keywords": [
+        "负反馈",
+        "误差减少",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器设计",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈技术通过将输出信号的一部分以相反相位返回到输入端，减少系统误差并提高稳定性。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试系统响应。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "ct_4_1_2",
+      "label": "正反馈技术",
+      "node_type": "core_technology",
+      "summary": "正反馈技术通过将输出信号的一部分以相同相位返回到输入端，用于产生振荡或触发特定状态。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试振荡频率。",
+      "difficulty": 3,
+      "keywords": [
+        "正反馈",
+        "振荡",
+        "触发器"
+      ],
+      "formulas": [],
+      "applications": [
+        "振荡器设计",
+        "触发器电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正反馈技术通过将输出信号的一部分以相同相位返回到输入端，用于产生振荡或触发特定状态。实现步骤包括：1) 设计反馈网络；2) 调整反馈系数；3) 测试振荡频率。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "ca_4_1_1",
+      "label": "负反馈放大器",
+      "node_type": "circuit_application",
+      "summary": "负反馈放大器利用负反馈技术减少失真并提高稳定性。电路结构包括：1) 放大器核心；2) 反馈网络；3) 输入输出匹配网络。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "放大器",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈放大器利用负反馈技术减少失真并提高稳定性。电路结构包括：1) 放大器核心；2) 反馈网络；3) 输入输出匹配网络。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "ca_4_1_2",
+      "label": "LC振荡器",
+      "node_type": "circuit_application",
+      "summary": "LC振荡器利用正反馈技术产生高频振荡信号。电路结构包括：1) LC谐振回路；2) 放大器；3) 正反馈网络。",
+      "difficulty": 4,
+      "keywords": [
+        "正反馈",
+        "振荡器",
+        "LC谐振"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频信号源",
+        "时钟发生器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "LC振荡器利用正反馈技术产生高频振荡信号。电路结构包括：1) LC谐振回路；2) 放大器；3) 正反馈网络。",
+      "source_section": "4.1",
+      "source_title": "反馈基础"
+    },
+    {
+      "id": "bc_6_1_1",
+      "label": "奈奎斯特采样定理",
+      "node_type": "basic_concept",
+      "summary": "奈奎斯特采样定理是信号处理中的基本定理，指出为了准确重建一个连续时间信号，采样频率必须大于信号最高频率的两倍。这个频率称为奈奎斯特频率。定理确保了信号在采样过程中不会丢失信息，避免了混叠现象的发生。",
+      "difficulty": 2,
+      "keywords": [
+        "采样定理",
+        "奈奎斯特频率",
+        "混叠"
+      ],
+      "formulas": [
+        "fs > 2 * fmax"
+      ],
+      "applications": [
+        "信号采样",
+        "模数转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统",
+        "傅里叶变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "奈奎斯特采样定理是信号处理中的基本定理，指出为了准确重建一个连续时间信号，采样频率必须大于信号最高频率的两倍。这个频率称为奈奎斯特频率。定理确保了信号在采样过程中不会丢失信息，避免了混叠现象的发生。",
+      "source_section": "6.1",
+      "source_title": "采样定理"
+    },
+    {
+      "id": "ct_6_1_1",
+      "label": "采样频率选择",
+      "node_type": "core_technology",
+      "summary": "采样频率选择是实现信号采样的核心技术。根据奈奎斯特采样定理，采样频率必须大于信号最高频率的两倍。在实际应用中，通常选择更高的采样频率（如2.5倍或更高）以提供额外的保护带宽，防止混叠并考虑滤波器的不理想特性。",
+      "difficulty": 3,
+      "keywords": [
+        "采样频率",
+        "保护带宽",
+        "抗混叠"
+      ],
+      "formulas": [
+        "fs = k * fmax, k > 2"
+      ],
+      "applications": [
+        "模数转换器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采样频率选择是实现信号采样的核心技术。根据奈奎斯特采样定理，采样频率必须大于信号最高频率的两倍。在实际应用中，通常选择更高的采样频率（如2.5倍或更高）以提供额外的保护带宽，防止混叠并考虑滤波器的不理想特性。",
+      "source_section": "6.1",
+      "source_title": "采样定理"
+    },
+    {
+      "id": "ca_6_1_1",
+      "label": "模数转换器前端设计",
+      "node_type": "circuit_application",
+      "summary": "模数转换器前端设计中必须考虑采样定理的应用。典型设计包括抗混叠滤波器（低通滤波器）和采样保持电路。抗混叠滤波器用于限制输入信号的最高频率，确保满足奈奎斯特采样条件；采样保持电路则实现信号的精确采样。",
+      "difficulty": 4,
+      "keywords": [
+        "ADC",
+        "抗混叠滤波器",
+        "采样保持"
+      ],
+      "formulas": [
+        "截止频率 = fs/2.5"
+      ],
+      "applications": [
+        "数据采集系统",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "模数转换器前端设计中必须考虑采样定理的应用。典型设计包括抗混叠滤波器（低通滤波器）和采样保持电路。抗混叠滤波器用于限制输入信号的最高频率，确保满足奈奎斯特采样条件；采样保持电路则实现信号的精确采样。",
+      "source_section": "6.1",
+      "source_title": "采样定理"
+    },
+    {
+      "id": "bc_5_2_1_1",
+      "label": "Buck变换器",
+      "node_type": "basic_concept",
+      "summary": "Buck变换器是一种降压型DC-DC变换器，能够将输入直流电压转换为较低的输出直流电压。其工作原理基于开关管的周期性导通和关断，通过电感和电容的储能和释能实现电压转换。",
+      "difficulty": 2,
+      "keywords": [
+        "降压",
+        "DC-DC",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "电源管理",
+        "电压转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础",
+        "开关电源原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Buck变换器是一种降压型DC-DC变换器，能够将输入直流电压转换为较低的输出直流电压。其工作原理基于开关管的周期性导通和关断，通过电感和电容的储能和释能实现电压转换。",
+      "source_section": "5.2.1",
+      "source_title": "Buck变换器"
+    },
+    {
+      "id": "bc_5_2_1_2",
+      "label": "占空比(D)",
+      "node_type": "basic_concept",
+      "summary": "占空比是指开关管导通时间与开关周期的比值，用于控制Buck变换器的输出电压。在Buck变换器中，输出电压与输入电压和占空比成正比关系。",
+      "difficulty": 2,
+      "keywords": [
+        "PWM",
+        "开关控制",
+        "导通时间"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "电压调节",
+        "功率控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PWM原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "占空比是指开关管导通时间与开关周期的比值，用于控制Buck变换器的输出电压。在Buck变换器中，输出电压与输入电压和占空比成正比关系。",
+      "source_section": "5.2.1",
+      "source_title": "Buck变换器"
+    },
+    {
+      "id": "ct_5_2_1_1",
+      "label": "PWM控制技术",
+      "node_type": "core_technology",
+      "summary": "通过调节PWM信号的占空比来控制Buck变换器的输出电压。具体实现步骤包括：1) 产生固定频率的PWM信号；2) 根据输出电压反馈调节占空比；3) 驱动开关管工作。",
+      "difficulty": 3,
+      "keywords": [
+        "脉宽调制",
+        "反馈控制",
+        "电压调节"
+      ],
+      "formulas": [],
+      "applications": [
+        "闭环控制",
+        "稳压输出"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过调节PWM信号的占空比来控制Buck变换器的输出电压。具体实现步骤包括：1) 产生固定频率的PWM信号；2) 根据输出电压反馈调节占空比；3) 驱动开关管工作。",
+      "source_section": "5.2.1",
+      "source_title": "Buck变换器"
+    },
+    {
+      "id": "ca_5_2_1_1",
+      "label": "降压电源电路",
+      "node_type": "circuit_application",
+      "summary": "典型的Buck变换器应用电路，包含开关管(MOSFET)、续流二极管、电感和输出电容等元件。电路工作时，通过控制开关管的导通和关断，在输出端得到稳定的降压直流电压。",
+      "difficulty": 4,
+      "keywords": [
+        "功率电路",
+        "降压设计",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "电子设备供电",
+        "电池充电"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的Buck变换器应用电路，包含开关管(MOSFET)、续流二极管、电感和输出电容等元件。电路工作时，通过控制开关管的导通和关断，在输出端得到稳定的降压直流电压。",
+      "source_section": "5.2.1",
+      "source_title": "Buck变换器"
+    },
+    {
+      "id": "bc_5_2_2_1",
+      "label": "Boost变换器",
+      "node_type": "basic_concept",
+      "summary": "Boost变换器是一种升压型DC-DC变换器，能够将输入直流电压升高到所需的输出电压。其基本原理是通过控制开关管的导通和关断时间来调节输出电压。",
+      "difficulty": 2,
+      "keywords": [
+        "DC-DC变换器",
+        "升压变换器",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电源管理",
+        "可再生能源系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电力电子",
+        "开关电源"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器是一种升压型DC-DC变换器，能够将输入直流电压升高到所需的输出电压。其基本原理是通过控制开关管的导通和关断时间来调节输出电压。",
+      "source_section": "5.2.2",
+      "source_title": "Boost变换器"
+    },
+    {
+      "id": "bc_5_2_2_2",
+      "label": "占空比D",
+      "node_type": "basic_concept",
+      "summary": "占空比D是开关管导通时间与开关周期的比值，用于控制Boost变换器的输出电压。占空比D的范围在0到1之间，D越大，输出电压越高。",
+      "difficulty": 2,
+      "keywords": [
+        "占空比",
+        "开关控制",
+        "PWM"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "开关电源控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PWM控制"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "占空比D是开关管导通时间与开关周期的比值，用于控制Boost变换器的输出电压。占空比D的范围在0到1之间，D越大，输出电压越高。",
+      "source_section": "5.2.2",
+      "source_title": "Boost变换器"
+    },
+    {
+      "id": "ct_5_2_2_1",
+      "label": "Boost变换器控制方法",
+      "node_type": "core_technology",
+      "summary": "Boost变换器的控制方法主要包括PWM控制和电压反馈控制。通过调节占空比D来控制输出电压，使其稳定在设定值。电压反馈控制通常采用PID控制器来实现。",
+      "difficulty": 3,
+      "keywords": [
+        "PWM控制",
+        "电压反馈",
+        "PID控制"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电源稳压",
+        "动态负载调整"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器的控制方法主要包括PWM控制和电压反馈控制。通过调节占空比D来控制输出电压，使其稳定在设定值。电压反馈控制通常采用PID控制器来实现。",
+      "source_section": "5.2.2",
+      "source_title": "Boost变换器"
+    },
+    {
+      "id": "ca_5_2_2_1",
+      "label": "Boost变换器电路",
+      "node_type": "circuit_application",
+      "summary": "Boost变换器电路由开关管（MOSFET或IGBT）、电感、二极管和输出电容组成。通过控制开关管的导通和关断，电感储能和释放能量，实现升压功能。输出电压由占空比D决定。",
+      "difficulty": 4,
+      "keywords": [
+        "开关管",
+        "电感",
+        "二极管",
+        "输出电容"
+      ],
+      "formulas": [
+        "Vout = Vin/(1-D)"
+      ],
+      "applications": [
+        "电池供电系统",
+        "LED驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Boost变换器电路由开关管（MOSFET或IGBT）、电感、二极管和输出电容组成。通过控制开关管的导通和关断，电感储能和释放能量，实现升压功能。输出电压由占空比D决定。",
+      "source_section": "5.2.2",
+      "source_title": "Boost变换器"
+    },
+    {
+      "id": "bc_5_3_1",
+      "label": "脉宽调制(PWM)",
+      "node_type": "basic_concept",
+      "summary": "脉宽调制是一种通过调节脉冲信号的宽度(占空比)来控制输出电压的技术。其基本原理是保持脉冲频率不变，通过改变高电平持续时间与周期的比值(占空比)来等效改变输出电压的平均值。",
+      "difficulty": 2,
+      "keywords": [
+        "PWM",
+        "脉冲宽度",
+        "调制"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "电压调节",
+        "电机控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "模拟电路基础",
+        "数字信号处理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "脉宽调制是一种通过调节脉冲信号的宽度(占空比)来控制输出电压的技术。其基本原理是保持脉冲频率不变，通过改变高电平持续时间与周期的比值(占空比)来等效改变输出电压的平均值。",
+      "source_section": "5.3",
+      "source_title": "PWM控制"
+    },
+    {
+      "id": "bc_5_3_2",
+      "label": "占空比",
+      "node_type": "basic_concept",
+      "summary": "占空比是指在一个脉冲周期内，高电平持续时间与整个周期的比值。它是PWM控制中的关键参数，直接影响输出电压的平均值。数学表达式为D = Ton/T，其中Ton为高电平时间，T为周期。",
+      "difficulty": 2,
+      "keywords": [
+        "占空比",
+        "Duty Cycle",
+        "Ton/T"
+      ],
+      "formulas": [
+        "D = Ton/T"
+      ],
+      "applications": [
+        "PWM控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号与系统"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "占空比是指在一个脉冲周期内，高电平持续时间与整个周期的比值。它是PWM控制中的关键参数，直接影响输出电压的平均值。数学表达式为D = Ton/T，其中Ton为高电平时间，T为周期。",
+      "source_section": "5.3",
+      "source_title": "PWM控制"
+    },
+    {
+      "id": "ct_5_3_1",
+      "label": "PWM控制技术",
+      "node_type": "core_technology",
+      "summary": "PWM控制技术是通过调节开关器件的导通时间(占空比)来实现输出电压精确控制的方法。具体实现步骤包括：1) 确定目标输出电压；2) 计算所需占空比；3) 生成对应PWM信号；4) 驱动开关器件；5) 滤波输出。",
+      "difficulty": 3,
+      "keywords": [
+        "PWM控制",
+        "占空比调节",
+        "开关控制"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "DC-DC转换器",
+        "逆变器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PWM控制技术是通过调节开关器件的导通时间(占空比)来实现输出电压精确控制的方法。具体实现步骤包括：1) 确定目标输出电压；2) 计算所需占空比；3) 生成对应PWM信号；4) 驱动开关器件；5) 滤波输出。",
+      "source_section": "5.3",
+      "source_title": "PWM控制"
+    },
+    {
+      "id": "ca_5_3_1",
+      "label": "PWM电压调节电路",
+      "node_type": "circuit_application",
+      "summary": "典型的PWM电压调节电路由PWM信号发生器、功率开关器件(如MOSFET)、电感和滤波电容组成。电路工作时，PWM信号控制开关的通断，通过LC滤波器将脉冲信号转换为平滑的直流输出电压。输出电压Vout = D × Vin，其中D为占空比，Vin为输入电压。",
+      "difficulty": 4,
+      "keywords": [
+        "电压调节",
+        "Buck电路",
+        "开关电源"
+      ],
+      "formulas": [
+        "Vout = D × Vin"
+      ],
+      "applications": [
+        "电源管理",
+        "LED调光"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的PWM电压调节电路由PWM信号发生器、功率开关器件(如MOSFET)、电感和滤波电容组成。电路工作时，PWM信号控制开关的通断，通过LC滤波器将脉冲信号转换为平滑的直流输出电压。输出电压Vout = D × Vin，其中D为占空比，Vin为输入电压。",
+      "source_section": "5.3",
+      "source_title": "PWM控制"
+    },
+    {
+      "id": "bc_5_1_1_1",
+      "label": "功率二极管",
+      "node_type": "basic_concept",
+      "summary": "功率二极管是一种用于处理高功率电子信号的半导体器件，主要用于整流和续流功能。它能够将交流电转换为直流电（整流），并在开关电路中提供续流路径以防止电压尖峰。",
+      "difficulty": 2,
+      "keywords": [
+        "整流",
+        "续流",
+        "半导体"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源转换",
+        "电机驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率二极管是一种用于处理高功率电子信号的半导体器件，主要用于整流和续流功能。它能够将交流电转换为直流电（整流），并在开关电路中提供续流路径以防止电压尖峰。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "bc_5_1_1_2",
+      "label": "正向电流额定值",
+      "node_type": "basic_concept",
+      "summary": "正向电流额定值是指功率二极管在正常工作条件下能够持续通过的最大正向电流。超过此值可能导致器件过热损坏。",
+      "difficulty": 2,
+      "keywords": [
+        "正向电流",
+        "额定值",
+        "热管理"
+      ],
+      "formulas": [],
+      "applications": [
+        "器件选型",
+        "热设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "正向电流额定值是指功率二极管在正常工作条件下能够持续通过的最大正向电流。超过此值可能导致器件过热损坏。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "bc_5_1_1_3",
+      "label": "反向耐压",
+      "node_type": "basic_concept",
+      "summary": "反向耐压是指功率二极管在反向偏置时能够承受的最大电压。超过此值可能导致器件击穿损坏。",
+      "difficulty": 2,
+      "keywords": [
+        "反向电压",
+        "耐压",
+        "击穿"
+      ],
+      "formulas": [],
+      "applications": [
+        "高压电路设计",
+        "保护电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "PN结特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反向耐压是指功率二极管在反向偏置时能够承受的最大电压。超过此值可能导致器件击穿损坏。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "bc_5_1_1_4",
+      "label": "反向恢复时间",
+      "node_type": "basic_concept",
+      "summary": "反向恢复时间是指功率二极管从导通状态切换到截止状态所需的时间。这个参数影响开关电路的效率和EMI性能。",
+      "difficulty": 3,
+      "keywords": [
+        "开关速度",
+        "恢复时间",
+        "EMI"
+      ],
+      "formulas": [],
+      "applications": [
+        "高频开关电路",
+        "功率转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "开关电路原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "反向恢复时间是指功率二极管从导通状态切换到截止状态所需的时间。这个参数影响开关电路的效率和EMI性能。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "ct_5_1_1_1",
+      "label": "功率二极管选型方法",
+      "node_type": "core_technology",
+      "summary": "根据应用需求选择合适功率二极管的技术方法，包括：1) 确定电路最大正向电流；2) 评估最大反向电压；3) 考虑开关频率需求；4) 评估热管理要求。",
+      "difficulty": 3,
+      "keywords": [
+        "器件选型",
+        "参数匹配",
+        "热设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源设计",
+        "功率电子系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根据应用需求选择合适功率二极管的技术方法，包括：1) 确定电路最大正向电流；2) 评估最大反向电压；3) 考虑开关频率需求；4) 评估热管理要求。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "ct_5_1_1_2",
+      "label": "功率二极管热设计",
+      "node_type": "core_technology",
+      "summary": "确保功率二极管在安全工作温度范围内运行的技术，包括：1) 计算功率损耗；2) 选择适当散热器；3) 优化PCB布局；4) 考虑环境温度影响。",
+      "difficulty": 4,
+      "keywords": [
+        "热管理",
+        "散热",
+        "可靠性"
+      ],
+      "formulas": [
+        "P_loss = I_F × V_F"
+      ],
+      "applications": [
+        "高功率应用",
+        "高温环境"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "确保功率二极管在安全工作温度范围内运行的技术，包括：1) 计算功率损耗；2) 选择适当散热器；3) 优化PCB布局；4) 考虑环境温度影响。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "ca_5_1_1_1",
+      "label": "桥式整流电路",
+      "node_type": "circuit_application",
+      "summary": "使用四个功率二极管组成的全波整流电路，将交流输入转换为直流输出。关键设计考虑包括：二极管耐压值、正向电流能力、散热设计和EMI滤波。",
+      "difficulty": 4,
+      "keywords": [
+        "整流",
+        "AC-DC转换",
+        "电源"
+      ],
+      "formulas": [
+        "V_out = V_peak - 2×V_F"
+      ],
+      "applications": [
+        "电源适配器",
+        "电机驱动电源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用四个功率二极管组成的全波整流电路，将交流输入转换为直流输出。关键设计考虑包括：二极管耐压值、正向电流能力、散热设计和EMI滤波。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "ca_5_1_1_2",
+      "label": "续流二极管应用",
+      "node_type": "circuit_application",
+      "summary": "在感性负载开关电路中，功率二极管用于提供电流续流路径，防止开关断开时产生的高压尖峰损坏其他元件。关键参数包括反向恢复时间和正向电流能力。",
+      "difficulty": 4,
+      "keywords": [
+        "续流",
+        "感性负载",
+        "保护"
+      ],
+      "formulas": [
+        "V_spike = L × di/dt"
+      ],
+      "applications": [
+        "继电器驱动",
+        "电机控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在感性负载开关电路中，功率二极管用于提供电流续流路径，防止开关断开时产生的高压尖峰损坏其他元件。关键参数包括反向恢复时间和正向电流能力。",
+      "source_section": "5.1.1",
+      "source_title": "功率二极管"
+    },
+    {
+      "id": "bc_6_2_1_1",
+      "label": "有限冲激响应滤波器",
+      "node_type": "basic_concept",
+      "summary": "FIR(Finite Impulse Response)滤波器是一种数字滤波器，其特点是冲激响应在有限时间内衰减为零。其系统函数仅包含零点，没有极点，因此总是稳定的。FIR滤波器的输出仅取决于当前和过去的输入值，与输出值无关。",
+      "difficulty": 2,
+      "keywords": [
+        "FIR",
+        "数字滤波器",
+        "冲激响应"
+      ],
+      "formulas": [
+        "y[n] = Σb[k]x[n-k] (k=0 to N-1)"
+      ],
+      "applications": [
+        "数字信号处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "离散时间信号",
+        "卷积运算"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR(Finite Impulse Response)滤波器是一种数字滤波器，其特点是冲激响应在有限时间内衰减为零。其系统函数仅包含零点，没有极点，因此总是稳定的。FIR滤波器的输出仅取决于当前和过去的输入值，与输出值无关。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "bc_6_2_1_2",
+      "label": "线性相位特性",
+      "node_type": "basic_concept",
+      "summary": "FIR滤波器的一个重要特性是能够实现严格的线性相位响应。这意味着信号通过滤波器时，所有频率分量都会经历相同的群延迟，从而保持信号的波形形状不变。线性相位特性对于需要保持信号形状的应用至关重要。",
+      "difficulty": 3,
+      "keywords": [
+        "相位响应",
+        "群延迟",
+        "波形保持"
+      ],
+      "formulas": [
+        "θ(ω) = -kω"
+      ],
+      "applications": [
+        "音频处理",
+        "图像处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶变换",
+        "相位响应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器的一个重要特性是能够实现严格的线性相位响应。这意味着信号通过滤波器时，所有频率分量都会经历相同的群延迟，从而保持信号的波形形状不变。线性相位特性对于需要保持信号形状的应用至关重要。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "ct_6_2_1_1",
+      "label": "窗函数设计法",
+      "node_type": "core_technology",
+      "summary": "FIR滤波器的一种基本设计方法，通过截断理想滤波器的无限长冲激响应并使用窗函数来减少吉布斯现象。常用窗函数包括矩形窗、汉宁窗、汉明窗和布莱克曼窗等。设计步骤包括：1)确定理想滤波器响应；2)选择窗函数类型；3)确定滤波器阶数；4)计算滤波器系数。",
+      "difficulty": 3,
+      "keywords": [
+        "窗函数",
+        "吉布斯现象",
+        "滤波器设计"
+      ],
+      "formulas": [
+        "h[n] = hd[n]·w[n]"
+      ],
+      "applications": [
+        "低通滤波器设计",
+        "带通滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器的一种基本设计方法，通过截断理想滤波器的无限长冲激响应并使用窗函数来减少吉布斯现象。常用窗函数包括矩形窗、汉宁窗、汉明窗和布莱克曼窗等。设计步骤包括：1)确定理想滤波器响应；2)选择窗函数类型；3)确定滤波器阶数；4)计算滤波器系数。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "ct_6_2_1_2",
+      "label": "频率采样法",
+      "node_type": "core_technology",
+      "summary": "另一种FIR滤波器设计方法，通过在频域采样理想滤波器的频率响应，然后通过离散傅里叶逆变换得到滤波器系数。这种方法特别适用于需要精确控制特定频率点响应的应用。设计步骤包括：1)确定频率采样点；2)计算理想频率响应；3)进行IDFT得到冲激响应。",
+      "difficulty": 4,
+      "keywords": [
+        "频率采样",
+        "IDFT",
+        "精确控制"
+      ],
+      "formulas": [
+        "H(k) = Hd(e^(j2πk/N))"
+      ],
+      "applications": [
+        "多频带滤波器",
+        "任意幅度响应设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "另一种FIR滤波器设计方法，通过在频域采样理想滤波器的频率响应，然后通过离散傅里叶逆变换得到滤波器系数。这种方法特别适用于需要精确控制特定频率点响应的应用。设计步骤包括：1)确定频率采样点；2)计算理想频率响应；3)进行IDFT得到冲激响应。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "ca_6_2_1_1",
+      "label": "FIR数字滤波器实现",
+      "node_type": "circuit_application",
+      "summary": "典型的FIR滤波器电路实现包括：1)移位寄存器链用于存储输入序列；2)乘法器阵列用于实现系数乘法；3)加法器树用于累加部分积。结构上可分为直接型、转置型和对称型等。关键设计参数包括字长选择、舍入方式、流水线级数等。",
+      "difficulty": 4,
+      "keywords": [
+        "移位寄存器",
+        "乘法器",
+        "加法器树"
+      ],
+      "formulas": [
+        "硬件复杂度 ≈ N×(乘法器+加法器)"
+      ],
+      "applications": [
+        "实时信号处理",
+        "数字通信接收机"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的FIR滤波器电路实现包括：1)移位寄存器链用于存储输入序列；2)乘法器阵列用于实现系数乘法；3)加法器树用于累加部分积。结构上可分为直接型、转置型和对称型等。关键设计参数包括字长选择、舍入方式、流水线级数等。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "ca_6_2_1_2",
+      "label": "多速率信号处理系统",
+      "node_type": "circuit_application",
+      "summary": "FIR滤波器在多速率系统中作为抗混叠滤波器和重构滤波器使用。典型应用包括抽取器和内插器，通过级联多个FIR滤波器实现高效的采样率转换。系统设计需要考虑过渡带宽度、阻带衰减和计算复杂度之间的平衡。",
+      "difficulty": 5,
+      "keywords": [
+        "抽取",
+        "内插",
+        "多相分解"
+      ],
+      "formulas": [
+        "高效实现：H(z) = ΣE_k(z^M)z^(-k)"
+      ],
+      "applications": [
+        "软件无线电",
+        "音频编解码"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "FIR滤波器在多速率系统中作为抗混叠滤波器和重构滤波器使用。典型应用包括抽取器和内插器，通过级联多个FIR滤波器实现高效的采样率转换。系统设计需要考虑过渡带宽度、阻带衰减和计算复杂度之间的平衡。",
+      "source_section": "6.2.1",
+      "source_title": "FIR滤波器"
+    },
+    {
+      "id": "bc_6_2_2_1",
+      "label": "无限冲激响应滤波器",
+      "node_type": "basic_concept",
+      "summary": "无限冲激响应滤波器（IIR滤波器）是一种数字滤波器，其输出不仅依赖于当前和过去的输入，还依赖于过去的输出。这种递归特性使得IIR滤波器具有无限长的冲激响应。IIR滤波器通常具有较高的计算效率，但可能因为递归结构而存在稳定性问题。",
+      "difficulty": 3,
+      "keywords": [
+        "IIR滤波器",
+        "递归",
+        "冲激响应"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + ... + bMz^-M) / (1 + a1z^-1 + ... + aNz^-N)"
+      ],
+      "applications": [
+        "音频处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "数字信号处理",
+        "Z变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "无限冲激响应滤波器（IIR滤波器）是一种数字滤波器，其输出不仅依赖于当前和过去的输入，还依赖于过去的输出。这种递归特性使得IIR滤波器具有无限长的冲激响应。IIR滤波器通常具有较高的计算效率，但可能因为递归结构而存在稳定性问题。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "bc_6_2_2_2",
+      "label": "滤波器稳定性",
+      "node_type": "basic_concept",
+      "summary": "滤波器稳定性是指滤波器在输入有界时，输出也是有界的。对于IIR滤波器，稳定性取决于其极点是否位于单位圆内。如果极点位于单位圆内，滤波器是稳定的；否则，滤波器可能不稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "稳定性",
+        "极点",
+        "单位圆"
+      ],
+      "formulas": [
+        "|p_i| < 1, 其中p_i是极点"
+      ],
+      "applications": [
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复变函数",
+        "系统稳定性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "滤波器稳定性是指滤波器在输入有界时，输出也是有界的。对于IIR滤波器，稳定性取决于其极点是否位于单位圆内。如果极点位于单位圆内，滤波器是稳定的；否则，滤波器可能不稳定。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "ct_6_2_2_1",
+      "label": "IIR滤波器设计方法",
+      "node_type": "core_technology",
+      "summary": "IIR滤波器的设计通常基于模拟滤波器的设计方法，通过双线性变换或脉冲响应不变法将模拟滤波器转换为数字滤波器。设计过程中需要考虑滤波器的稳定性、频率响应和计算复杂度。",
+      "difficulty": 4,
+      "keywords": [
+        "双线性变换",
+        "脉冲响应不变法",
+        "频率响应"
+      ],
+      "formulas": [
+        "s = (2/T)(1 - z^-1)/(1 + z^-1)"
+      ],
+      "applications": [
+        "数字滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "IIR滤波器的设计通常基于模拟滤波器的设计方法，通过双线性变换或脉冲响应不变法将模拟滤波器转换为数字滤波器。设计过程中需要考虑滤波器的稳定性、频率响应和计算复杂度。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "ct_6_2_2_2",
+      "label": "稳定性分析",
+      "node_type": "core_technology",
+      "summary": "稳定性分析是IIR滤波器设计中的关键步骤，通过分析滤波器的极点位置来判断其稳定性。常用的方法包括极点图分析和稳定性判据（如Routh-Hurwitz判据的数字化版本）。",
+      "difficulty": 4,
+      "keywords": [
+        "极点图",
+        "Routh-Hurwitz判据",
+        "稳定性判据"
+      ],
+      "formulas": [
+        "|p_i| < 1"
+      ],
+      "applications": [
+        "滤波器验证"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "稳定性分析是IIR滤波器设计中的关键步骤，通过分析滤波器的极点位置来判断其稳定性。常用的方法包括极点图分析和稳定性判据（如Routh-Hurwitz判据的数字化版本）。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "ca_6_2_2_1",
+      "label": "音频均衡器",
+      "node_type": "circuit_application",
+      "summary": "音频均衡器是一种常见的IIR滤波器应用，用于调整音频信号的频率响应。通过设计多个IIR滤波器（如低通、高通、带通滤波器），可以实现对不同频段的增益控制。",
+      "difficulty": 4,
+      "keywords": [
+        "音频处理",
+        "均衡器",
+        "频段控制"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + b2z^-2) / (1 + a1z^-1 + a2z^-2)"
+      ],
+      "applications": [
+        "音乐制作",
+        "音响系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "音频均衡器是一种常见的IIR滤波器应用，用于调整音频信号的频率响应。通过设计多个IIR滤波器（如低通、高通、带通滤波器），可以实现对不同频段的增益控制。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "ca_6_2_2_2",
+      "label": "通信系统中的信道滤波器",
+      "node_type": "circuit_application",
+      "summary": "在通信系统中，IIR滤波器常用于信道滤波，以去除噪声和干扰。由于其高效的计算性能，IIR滤波器特别适合实时信号处理应用。",
+      "difficulty": 4,
+      "keywords": [
+        "通信系统",
+        "信道滤波",
+        "实时处理"
+      ],
+      "formulas": [
+        "H(z) = (b0 + b1z^-1 + ... + bMz^-M) / (1 + a1z^-1 + ... + aNz^-N)"
+      ],
+      "applications": [
+        "无线通信",
+        "数字广播"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在通信系统中，IIR滤波器常用于信道滤波，以去除噪声和干扰。由于其高效的计算性能，IIR滤波器特别适合实时信号处理应用。",
+      "source_section": "6.2.2",
+      "source_title": "IIR滤波器"
+    },
+    {
+      "id": "bc_5_1_2_1",
+      "label": "功率MOSFET",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET是一种电压控制型半导体器件，通过栅极电压控制导通与截止。具有高输入阻抗、快速开关速度和低导通电阻的特点。主要用于功率放大和开关电路中。",
+      "difficulty": 2,
+      "keywords": [
+        "MOSFET",
+        "电压控制",
+        "半导体"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大",
+        "开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET是一种电压控制型半导体器件，通过栅极电压控制导通与截止。具有高输入阻抗、快速开关速度和低导通电阻的特点。主要用于功率放大和开关电路中。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "bc_5_1_2_2",
+      "label": "输入阻抗",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的输入阻抗是指栅极与源极之间的阻抗，通常很高，可以达到兆欧姆级别。高输入阻抗意味着驱动电路只需要很小的电流即可控制MOSFET。",
+      "difficulty": 2,
+      "keywords": [
+        "阻抗",
+        "栅极",
+        "驱动电流"
+      ],
+      "formulas": [
+        "Zin = Vgs/Ig"
+      ],
+      "applications": [
+        "驱动电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的输入阻抗是指栅极与源极之间的阻抗，通常很高，可以达到兆欧姆级别。高输入阻抗意味着驱动电路只需要很小的电流即可控制MOSFET。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "bc_5_1_2_3",
+      "label": "开关速度",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的开关速度是指器件从导通到截止或从截止到导通的转换速度，通常很快，可以达到纳秒级别。快速开关速度使得功率MOSFET适合高频开关应用。",
+      "difficulty": 2,
+      "keywords": [
+        "开关时间",
+        "转换速度",
+        "高频"
+      ],
+      "formulas": [
+        "t_sw = t_on + t_off"
+      ],
+      "applications": [
+        "高频开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "开关电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的开关速度是指器件从导通到截止或从截止到导通的转换速度，通常很快，可以达到纳秒级别。快速开关速度使得功率MOSFET适合高频开关应用。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "bc_5_1_2_4",
+      "label": "导通电阻",
+      "node_type": "basic_concept",
+      "summary": "功率MOSFET的导通电阻(Rds(on))是指器件在导通状态下漏极与源极之间的电阻，通常很低。低导通电阻意味着导通时的功率损耗小，效率高。",
+      "difficulty": 2,
+      "keywords": [
+        "Rds(on)",
+        "功率损耗",
+        "效率"
+      ],
+      "formulas": [
+        "P_loss = I^2 * Rds(on)"
+      ],
+      "applications": [
+        "功率转换"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "功率MOSFET的导通电阻(Rds(on))是指器件在导通状态下漏极与源极之间的电阻，通常很低。低导通电阻意味着导通时的功率损耗小，效率高。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ct_5_1_2_1",
+      "label": "功率MOSFET驱动技术",
+      "node_type": "core_technology",
+      "summary": "利用功率MOSFET的高输入阻抗特性设计驱动电路，通常使用栅极驱动IC或分立元件构成的驱动电路。需要考虑驱动电压、驱动电流和开关速度的匹配。",
+      "difficulty": 3,
+      "keywords": [
+        "栅极驱动",
+        "驱动IC",
+        "匹配设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "开关电源驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的高输入阻抗特性设计驱动电路，通常使用栅极驱动IC或分立元件构成的驱动电路。需要考虑驱动电压、驱动电流和开关速度的匹配。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ct_5_1_2_2",
+      "label": "功率MOSFET开关优化",
+      "node_type": "core_technology",
+      "summary": "通过优化栅极驱动电阻和布局设计来最大化功率MOSFET的开关速度，同时最小化开关损耗。需要考虑米勒效应和寄生参数的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "开关优化",
+        "米勒效应",
+        "寄生参数"
+      ],
+      "formulas": [
+        "P_sw = 0.5 * Vds * Id * (t_on + t_off) * f_sw"
+      ],
+      "applications": [
+        "高频开关电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过优化栅极驱动电阻和布局设计来最大化功率MOSFET的开关速度，同时最小化开关损耗。需要考虑米勒效应和寄生参数的影响。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ct_5_1_2_3",
+      "label": "功率MOSFET热管理",
+      "node_type": "core_technology",
+      "summary": "针对功率MOSFET的低导通电阻特性设计散热方案，通过计算功率损耗和热阻来选择合适的散热器和布局方式，确保器件工作在安全温度范围内。",
+      "difficulty": 3,
+      "keywords": [
+        "热管理",
+        "散热器",
+        "热阻"
+      ],
+      "formulas": [
+        "Tj = Ta + P * Rth"
+      ],
+      "applications": [
+        "大功率应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对功率MOSFET的低导通电阻特性设计散热方案，通过计算功率损耗和热阻来选择合适的散热器和布局方式，确保器件工作在安全温度范围内。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ca_5_1_2_1",
+      "label": "开关电源",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的快速开关特性和低导通电阻设计高效率开关电源。典型拓扑包括Buck、Boost和Buck-Boost转换器，工作频率可达数百kHz。",
+      "difficulty": 4,
+      "keywords": [
+        "DC-DC转换器",
+        "PWM控制",
+        "拓扑结构"
+      ],
+      "formulas": [
+        "Vout = D * Vin"
+      ],
+      "applications": [
+        "电源适配器",
+        "LED驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的快速开关特性和低导通电阻设计高效率开关电源。典型拓扑包括Buck、Boost和Buck-Boost转换器，工作频率可达数百kHz。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ca_5_1_2_2",
+      "label": "电机驱动",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的高输入阻抗和快速开关特性设计电机驱动电路，实现PWM调速控制。典型应用包括H桥电路，可驱动直流电机或步进电机。",
+      "difficulty": 4,
+      "keywords": [
+        "H桥",
+        "PWM调速",
+        "电机控制"
+      ],
+      "formulas": [
+        "Speed ∝ Duty Cycle"
+      ],
+      "applications": [
+        "机器人",
+        "电动车"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的高输入阻抗和快速开关特性设计电机驱动电路，实现PWM调速控制。典型应用包括H桥电路，可驱动直流电机或步进电机。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "ca_5_1_2_3",
+      "label": "高频逆变器",
+      "node_type": "circuit_application",
+      "summary": "利用功率MOSFET的快速开关特性设计高频逆变器，将直流电转换为高频交流电。典型应用包括感应加热和无线电力传输系统。",
+      "difficulty": 4,
+      "keywords": [
+        "谐振转换",
+        "高频交流",
+        "ZVS/ZCS"
+      ],
+      "formulas": [
+        "f_res = 1/(2π√(LC))"
+      ],
+      "applications": [
+        "电磁炉",
+        "无线充电"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用功率MOSFET的快速开关特性设计高频逆变器，将直流电转换为高频交流电。典型应用包括感应加热和无线电力传输系统。",
+      "source_section": "5.1.2",
+      "source_title": "功率MOSFET"
+    },
+    {
+      "id": "bc_6_3_1",
+      "label": "傅里叶变换",
+      "node_type": "basic_concept",
+      "summary": "将时域信号转换为频域表示的数学变换，揭示了信号在不同频率上的组成成分",
+      "difficulty": 2,
+      "keywords": [
+        "时频转换",
+        "频谱分析"
+      ],
+      "formulas": [
+        "X(k) = Σx(n)e^(-j2πkn/N)"
+      ],
+      "applications": [
+        "信号处理",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "复数运算",
+        "积分变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将时域信号转换为频域表示的数学变换，揭示了信号在不同频率上的组成成分",
+      "source_section": "6.3",
+      "source_title": "FFT算法"
+    },
+    {
+      "id": "bc_6_3_2",
+      "label": "频域分析",
+      "node_type": "basic_concept",
+      "summary": "在频率维度上分析信号特性的方法，可以揭示信号的频率组成和能量分布",
+      "difficulty": 2,
+      "keywords": [
+        "频谱",
+        "频率响应"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器设计",
+        "信号识别"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "傅里叶变换"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在频率维度上分析信号特性的方法，可以揭示信号的频率组成和能量分布",
+      "source_section": "6.3",
+      "source_title": "FFT算法"
+    },
+    {
+      "id": "ct_6_3_1",
+      "label": "快速傅里叶变换(FFT)",
+      "node_type": "core_technology",
+      "summary": "高效计算离散傅里叶变换(DFT)的算法，通过分治策略将计算复杂度从O(N^2)降低到O(N log N)",
+      "difficulty": 3,
+      "keywords": [
+        "蝶形运算",
+        "分治法"
+      ],
+      "formulas": [
+        "分解公式：X(k) = X_even(k) + W_N^k X_odd(k)"
+      ],
+      "applications": [
+        "实时信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高效计算离散傅里叶变换(DFT)的算法，通过分治策略将计算复杂度从O(N^2)降低到O(N log N)",
+      "source_section": "6.3",
+      "source_title": "FFT算法"
+    },
+    {
+      "id": "ca_6_3_1",
+      "label": "频谱分析电路",
+      "node_type": "circuit_application",
+      "summary": "基于FFT算法的硬件实现电路，用于实时分析输入信号的频谱特性",
+      "difficulty": 4,
+      "keywords": [
+        "ADC",
+        "DSP"
+      ],
+      "formulas": [
+        "采样定理：f_s > 2f_max"
+      ],
+      "applications": [
+        "无线通信接收机"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于FFT算法的硬件实现电路，用于实时分析输入信号的频谱特性",
+      "source_section": "6.3",
+      "source_title": "FFT算法"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_2_1_1",
+      "target_id": "ct_1_2_1_1",
+      "relationship": "enables",
+      "description": "基尔霍夫电流定律(KCL)是节点电压法的基础，节点电压法通过应用KCL方程来求解电路节点电压。",
+      "weight": 0.9,
+      "evidence": "节点电压法基于KCL方程∑I_in = ∑I_out",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.1"
+    },
+    {
+      "source_id": "ct_1_2_1_1",
+      "target_id": "ca_1_2_1_1",
+      "relationship": "implements",
+      "description": "节点电压法通过应用KCL方程实现了多节点电路分析，简化了复杂电路的计算过程。",
+      "weight": 0.8,
+      "evidence": "多节点电路分析使用节点电压法求解各节点电压",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.1"
+    },
+    {
+      "source_id": "bc_1_2_2_1",
+      "target_id": "ct_1_2_2_1",
+      "relationship": "enables",
+      "description": "基尔霍夫电压定律为回路分析法提供了理论基础和数学依据",
+      "weight": 0.9,
+      "evidence": "KVL回路分析法直接基于基尔霍夫电压定律的数学表达式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.2"
+    },
+    {
+      "source_id": "bc_1_2_2_2",
+      "target_id": "ct_1_2_2_1",
+      "relationship": "supports",
+      "description": "闭合回路概念是应用KVL分析法的前提条件",
+      "weight": 0.8,
+      "evidence": "KVL回路分析法必须首先识别电路中的闭合回路",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.2"
+    },
+    {
+      "source_id": "ct_1_2_2_1",
+      "target_id": "ca_1_2_2_1",
+      "relationship": "implements",
+      "description": "KVL回路分析法是实现多网孔电路分析的具体方法",
+      "weight": 0.85,
+      "evidence": "多网孔电路分析需要应用KVL回路分析法的步骤和技巧",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.2"
+    },
+    {
+      "source_id": "bc_1_2_2_1",
+      "target_id": "ca_1_2_2_1",
+      "relationship": "applies_to",
+      "description": "基尔霍夫电压定律直接应用于多网孔电路分析场景",
+      "weight": 0.8,
+      "evidence": "多网孔电路分析中每个网孔都必须满足KVL",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.2.2"
+    },
+    {
+      "source_id": "bc_2_2_1_1",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "enables",
+      "description": "反相放大器的基本概念使能了其增益计算技术的实现",
+      "weight": 0.9,
+      "evidence": "反相放大器的定义是增益计算的基础",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.1"
+    },
+    {
+      "source_id": "bc_2_2_1_2",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "supports",
+      "description": "反馈电阻的概念支撑了增益计算技术的实现",
+      "weight": 0.8,
+      "evidence": "增益公式中直接使用反馈电阻参数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.1"
+    },
+    {
+      "source_id": "bc_2_2_1_3",
+      "target_id": "ct_2_2_1_1",
+      "relationship": "supports",
+      "description": "输入电阻的概念支撑了增益计算技术的实现",
+      "weight": 0.8,
+      "evidence": "增益公式中直接使用输入电阻参数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.1"
+    },
+    {
+      "source_id": "ct_2_2_1_1",
+      "target_id": "ca_2_2_1_1",
+      "relationship": "implements",
+      "description": "增益计算技术实现了基本反相放大器电路的设计",
+      "weight": 0.9,
+      "evidence": "电路设计中需要应用增益计算公式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.1"
+    },
+    {
+      "source_id": "bc_2_2_1_2",
+      "target_id": "bc_2_2_1_3",
+      "relationship": "relates_to",
+      "description": "反馈电阻和输入电阻在增益计算中具有相关性",
+      "weight": 0.7,
+      "evidence": "两者共同决定放大器增益",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "2.2.1"
+    },
+    {
+      "source_id": "bc_2_1_1",
+      "target_id": "ct_2_1_1",
+      "relationship": "enables",
+      "description": "无限大开环增益特性使能虚短原理的应用",
+      "weight": 0.9,
+      "evidence": "无限大开环增益是虚短原理成立的前提条件",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "bc_2_1_2",
+      "target_id": "ct_2_1_1",
+      "relationship": "enables",
+      "description": "无限大输入阻抗特性使能虚断原理的应用",
+      "weight": 0.9,
+      "evidence": "无限大输入阻抗是虚断原理成立的前提条件",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "bc_2_1_3",
+      "target_id": "ca_2_1_1",
+      "relationship": "supports",
+      "description": "零输出阻抗特性支持反相放大器的负载驱动能力",
+      "weight": 0.7,
+      "evidence": "零输出阻抗确保放大器增益不受负载影响",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "ct_2_1_1",
+      "target_id": "ca_2_1_1",
+      "relationship": "implements",
+      "description": "理想运算放大器分析方法实现反相放大器的设计",
+      "weight": 0.8,
+      "evidence": "虚短虚断原理直接用于反相放大器的增益计算",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "bc_2_1_4",
+      "target_id": "ca_2_1_1",
+      "relationship": "supports",
+      "description": "无限大带宽特性支持反相放大器的宽带应用",
+      "weight": 0.6,
+      "evidence": "无限大带宽确保放大器在所有频率下保持相同增益",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "bc_2_1_5",
+      "target_id": "ca_2_1_1",
+      "relationship": "supports",
+      "description": "零失调电压特性支持反相放大器的直流精度",
+      "weight": 0.7,
+      "evidence": "零失调电压确保放大器在直流应用中的准确性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.1"
+    },
+    {
+      "source_id": "bc_1_1_3_1",
+      "target_id": "ct_1_1_3_1",
+      "relationship": "enables",
+      "description": "电感器的基本定义使能了电感值计算技术的实现",
+      "weight": 0.9,
+      "evidence": "必须先理解电感器是什么，才能进行其参数计算",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.3"
+    },
+    {
+      "source_id": "bc_1_1_3_2",
+      "target_id": "ct_1_1_3_2",
+      "relationship": "supports",
+      "description": "电压-电流关系支撑了瞬态分析技术的理论基础",
+      "weight": 0.95,
+      "evidence": "瞬态分析直接基于电压-电流微分关系",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.3"
+    },
+    {
+      "source_id": "bc_1_1_3_3",
+      "target_id": "ca_1_1_3_2",
+      "relationship": "applies_to",
+      "description": "能量储存公式直接应用于开关电源储能电路设计",
+      "weight": 0.85,
+      "evidence": "开关电源设计需要计算电感储能能力",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.3"
+    },
+    {
+      "source_id": "ct_1_1_3_1",
+      "target_id": "ca_1_1_3_1",
+      "relationship": "implements",
+      "description": "电感值计算技术实现了LC滤波器的精确设计",
+      "weight": 0.8,
+      "evidence": "滤波器设计需要准确知道电感参数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.3"
+    },
+    {
+      "source_id": "bc_1_1_3_2",
+      "target_id": "bc_1_1_3_3",
+      "relationship": "relates_to",
+      "description": "电压-电流关系与能量储存公式密切相关",
+      "weight": 0.7,
+      "evidence": "两者都是描述电感器特性的基本方程",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1.3"
+    },
+    {
+      "source_id": "bc_1_1_2_1",
+      "target_id": "ct_1_1_2_1",
+      "relationship": "enables",
+      "description": "电容器的基本定义和特性使能了瞬态分析技术的实现",
+      "weight": 0.9,
+      "evidence": "电容器的电荷储存特性是瞬态分析的基础",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "bc_1_1_2_2",
+      "target_id": "ct_1_1_2_1",
+      "relationship": "supports",
+      "description": "电压-电流关系为瞬态分析提供了数学基础",
+      "weight": 1.0,
+      "evidence": "i = C(dv/dt)是瞬态分析的核心方程",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "bc_1_1_2_3",
+      "target_id": "ct_1_1_2_2",
+      "relationship": "supports",
+      "description": "能量计算公式是能量计算技术的理论基础",
+      "weight": 1.0,
+      "evidence": "W = ½CV²直接用于能量计算",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "ct_1_1_2_1",
+      "target_id": "ca_1_1_2_1",
+      "relationship": "implements",
+      "description": "瞬态分析技术实现了RC充放电电路的设计和分析",
+      "weight": 0.8,
+      "evidence": "RC电路分析依赖于瞬态分析方法",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "ct_1_1_2_2",
+      "target_id": "ca_1_1_2_2",
+      "relationship": "implements",
+      "description": "能量计算技术实现了电容储能电路的设计",
+      "weight": 0.9,
+      "evidence": "储能电路设计需要精确的能量计算",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "bc_1_1_2_2",
+      "target_id": "bc_1_1_2_3",
+      "relationship": "relates_to",
+      "description": "电压-电流关系和能量公式都描述了电容的动态特性",
+      "weight": 0.7,
+      "evidence": "两者都涉及电压与电容的关系",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1.2"
+    },
+    {
+      "source_id": "bc_1_1_1_1",
+      "target_id": "ct_1_1_1_1",
+      "relationship": "enables",
+      "description": "电阻的基本概念使能了电阻电路分析技术",
+      "weight": 0.9,
+      "evidence": "电阻是电路分析的基本对象",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "bc_1_1_1_2",
+      "target_id": "ct_1_1_1_1",
+      "relationship": "supports",
+      "description": "欧姆定律为电阻电路分析提供了理论基础",
+      "weight": 0.95,
+      "evidence": "电路分析基于欧姆定律",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "bc_1_1_1_3",
+      "target_id": "ct_1_1_1_2",
+      "relationship": "supports",
+      "description": "功率消耗原理支撑了功率计算技术",
+      "weight": 0.9,
+      "evidence": "功率计算基于功率消耗公式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ca_1_1_1_1",
+      "relationship": "implements",
+      "description": "电阻电路分析技术实现了限流电路设计",
+      "weight": 0.85,
+      "evidence": "限流设计需要电路分析技术",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ca_1_1_1_2",
+      "relationship": "implements",
+      "description": "电阻电路分析技术实现了分压电路设计",
+      "weight": 0.85,
+      "evidence": "分压设计需要电路分析技术",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "bc_1_1_1_2",
+      "target_id": "bc_1_1_1_3",
+      "relationship": "relates_to",
+      "description": "欧姆定律与功率消耗密切相关",
+      "weight": 0.8,
+      "evidence": "功率公式可由欧姆定律推导",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ct_1_1_1_2",
+      "relationship": "complements",
+      "description": "电路分析与功率计算相互补充",
+      "weight": 0.75,
+      "evidence": "完整电路分析需要同时考虑电压、电流和功率",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1.1"
+    },
+    {
+      "source_id": "bc_2_2_2_1",
+      "target_id": "ct_2_2_2_1",
+      "relationship": "enables",
+      "description": "同相放大器的基本概念使能了其增益计算方法的建立",
+      "weight": 0.9,
+      "evidence": "章节内容直接给出了基于同相放大器概念的增益公式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.2"
+    },
+    {
+      "source_id": "bc_2_2_2_2",
+      "target_id": "ct_2_2_2_1",
+      "relationship": "supports",
+      "description": "电压增益的概念支撑了增益计算公式的建立",
+      "weight": 0.8,
+      "evidence": "公式Av = 1 + Rf/Rin直接体现了电压增益的计算方法",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.2"
+    },
+    {
+      "source_id": "ct_2_2_2_1",
+      "target_id": "ca_2_2_2_1",
+      "relationship": "implements",
+      "description": "增益计算方法实现了同相放大器电路的设计",
+      "weight": 0.85,
+      "evidence": "公式用于实际电路设计中确定电阻值",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.2"
+    },
+    {
+      "source_id": "bc_2_2_2_1",
+      "target_id": "ca_2_2_2_1",
+      "relationship": "applies_to",
+      "description": "同相放大器的基本概念应用于具体电路实现",
+      "weight": 0.7,
+      "evidence": "电路应用体现了同相放大器的基本特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.2"
+    },
+    {
+      "source_id": "bc_1_1_1",
+      "target_id": "ct_1_1_1",
+      "relationship": "enables",
+      "description": "电阻的定义和特性使能了欧姆定律的应用",
+      "weight": 0.9,
+      "evidence": "欧姆定律直接基于电阻的特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "bc_1_1_2",
+      "target_id": "ct_1_1_2",
+      "relationship": "enables",
+      "description": "电容的定义和特性使能了RC电路分析",
+      "weight": 0.8,
+      "evidence": "RC电路分析依赖于电容的充放电特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "bc_1_1_3",
+      "target_id": "ct_1_1_3",
+      "relationship": "enables",
+      "description": "电感的定义和特性使能了RL电路分析",
+      "weight": 0.8,
+      "evidence": "RL电路分析依赖于电感的磁场能量存储特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "ct_1_1_1",
+      "target_id": "ca_1_1_1",
+      "relationship": "implements",
+      "description": "欧姆定律应用实现了分压电路的设计",
+      "weight": 0.7,
+      "evidence": "分压电路设计直接应用欧姆定律",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "ct_1_1_2",
+      "target_id": "ca_1_1_2",
+      "relationship": "implements",
+      "description": "RC电路分析实现了低通滤波器的设计",
+      "weight": 0.8,
+      "evidence": "低通滤波器设计基于RC电路分析",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "bc_1_1_4",
+      "target_id": "ca_1_1_3",
+      "relationship": "supports",
+      "description": "电压源的概念支撑了电源电路的设计",
+      "weight": 0.7,
+      "evidence": "电源电路需要电压源提供能量",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "bc_1_1_1",
+      "target_id": "bc_1_1_2",
+      "relationship": "relates_to",
+      "description": "电阻和电容都是基本电路元件",
+      "weight": 0.6,
+      "evidence": "两者都是电路分析的基础元件",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "ct_1_1_2",
+      "target_id": "ct_1_1_3",
+      "relationship": "complements",
+      "description": "RC电路分析和RL电路分析是互补的分析方法",
+      "weight": 0.7,
+      "evidence": "两者分别分析电容和电感的特性",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "1.1"
+    },
+    {
+      "source_id": "bc_2_2_3_1",
+      "target_id": "ct_2_2_3_1",
+      "relationship": "enables",
+      "description": "电压跟随器的定义和特性使能了同相放大器的设计",
+      "weight": 0.9,
+      "evidence": "电压跟随器是增益为1的同相放大器",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.3"
+    },
+    {
+      "source_id": "bc_2_2_3_2",
+      "target_id": "ct_2_2_3_2",
+      "relationship": "supports",
+      "description": "高输入阻抗的特性支撑了阻抗匹配技术的实现",
+      "weight": 0.8,
+      "evidence": "高输入阻抗可以减少对信号源的负载效应",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.3"
+    },
+    {
+      "source_id": "bc_2_2_3_3",
+      "target_id": "ct_2_2_3_2",
+      "relationship": "supports",
+      "description": "低输出阻抗的特性支撑了阻抗匹配技术的实现",
+      "weight": 0.8,
+      "evidence": "低输出阻抗可以提高驱动能力",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.3"
+    },
+    {
+      "source_id": "ct_2_2_3_1",
+      "target_id": "ca_2_2_3_1",
+      "relationship": "implements",
+      "description": "同相放大器设计实现了信号缓冲器的电路应用",
+      "weight": 0.9,
+      "evidence": "信号缓冲器利用电压跟随器的高输入阻抗和低输出阻抗特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.3"
+    },
+    {
+      "source_id": "ct_2_2_3_2",
+      "target_id": "ca_2_2_3_2",
+      "relationship": "applies_to",
+      "description": "阻抗匹配技术应用于阻抗变换器的电路设计",
+      "weight": 0.8,
+      "evidence": "阻抗变换器利用电压跟随器实现阻抗转换",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.2.3"
+    },
+    {
+      "source_id": "bc_3_3_1",
+      "target_id": "ct_3_3_1",
+      "relationship": "enables",
+      "description": "有源滤波器的基本概念使能了有源滤波器的设计技术。",
+      "weight": 0.8,
+      "evidence": "有源滤波器使用运算放大器，可以提供增益并且不需要电感器。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3"
+    },
+    {
+      "source_id": "bc_3_3_2",
+      "target_id": "ct_3_3_1",
+      "relationship": "supports",
+      "description": "运算放大器的原理支撑了有源滤波器的设计技术。",
+      "weight": 0.9,
+      "evidence": "运算放大器在有源滤波器中用于提供增益和实现滤波功能。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3"
+    },
+    {
+      "source_id": "ct_3_3_1",
+      "target_id": "ca_3_3_1",
+      "relationship": "implements",
+      "description": "有源滤波器设计技术实现了有源低通滤波器的具体电路应用。",
+      "weight": 0.85,
+      "evidence": "有源低通滤波器是通过有源滤波器设计技术实现的典型应用。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3"
+    },
+    {
+      "source_id": "bc_2_3_1",
+      "target_id": "bc_2_3_2",
+      "relationship": "supports",
+      "description": "运放频率响应特性是理解增益带宽积的基础",
+      "weight": 0.9,
+      "evidence": "实际运放的增益随频率变化，通常用增益带宽积(GBW)来描述",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.3"
+    },
+    {
+      "source_id": "bc_2_3_3",
+      "target_id": "bc_2_3_2",
+      "relationship": "depends_on",
+      "description": "增益带宽积的计算需要直流增益参数",
+      "weight": 0.8,
+      "evidence": "GBW = A₀ × f₃dB",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.3"
+    },
+    {
+      "source_id": "bc_2_3_4",
+      "target_id": "bc_2_3_2",
+      "relationship": "depends_on",
+      "description": "增益带宽积的计算需要3dB带宽参数",
+      "weight": 0.8,
+      "evidence": "GBW = A₀ × f₃dB",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.3"
+    },
+    {
+      "source_id": "bc_2_3_2",
+      "target_id": "ct_2_3_1",
+      "relationship": "enables",
+      "description": "增益带宽积概念使能了GBW计算方法",
+      "weight": 0.9,
+      "evidence": "通过测量或计算运放的直流增益和3dB带宽，然后相乘得到增益带宽积",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.3"
+    },
+    {
+      "source_id": "ct_2_3_1",
+      "target_id": "ca_2_3_1",
+      "relationship": "applies_to",
+      "description": "GBW计算方法应用于宽带运放设计",
+      "weight": 0.8,
+      "evidence": "利用GBW参数选择适合的运放，设计宽带放大电路",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "2.3"
+    },
+    {
+      "source_id": "bc_3_2_1_1",
+      "target_id": "ct_3_2_1_1",
+      "relationship": "enables",
+      "description": "传递函数的概念使能了一阶低通滤波器的设计方法",
+      "weight": 0.9,
+      "evidence": "传递函数H(s) = 1/(1 + sRC)是滤波器设计的基础",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.1"
+    },
+    {
+      "source_id": "bc_3_2_1_2",
+      "target_id": "ct_3_2_1_1",
+      "relationship": "supports",
+      "description": "截止频率的概念支撑了滤波器设计中的参数选择",
+      "weight": 0.8,
+      "evidence": "截止频率公式fc = 1/(2πRC)直接用于设计计算",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.1"
+    },
+    {
+      "source_id": "ct_3_2_1_1",
+      "target_id": "ca_3_2_1_1",
+      "relationship": "implements",
+      "description": "一阶低通滤波器设计方法实现了RC低通滤波器电路",
+      "weight": 0.85,
+      "evidence": "设计方法指导了RC电路的具体实现",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.1"
+    },
+    {
+      "source_id": "bc_3_2_1_1",
+      "target_id": "bc_3_2_1_2",
+      "relationship": "relates_to",
+      "description": "传递函数与截止频率密切相关",
+      "weight": 0.7,
+      "evidence": "截止频率可以从传递函数的极点位置推导出来",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "3.2.1"
+    },
+    {
+      "source_id": "bc_3_2_2_1",
+      "target_id": "ct_3_2_2_1",
+      "relationship": "enables",
+      "description": "传递函数的概念使能了一阶高通滤波器的设计方法",
+      "weight": 0.9,
+      "evidence": "传递函数H(s) = sRC/(1 + sRC)是设计滤波器的基础",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.2"
+    },
+    {
+      "source_id": "bc_3_2_2_2",
+      "target_id": "ct_3_2_2_1",
+      "relationship": "supports",
+      "description": "截止频率的概念支撑了一阶高通滤波器的设计方法",
+      "weight": 0.8,
+      "evidence": "截止频率公式fc = 1/(2πRC)是设计过程中的关键参数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.2"
+    },
+    {
+      "source_id": "ct_3_2_2_1",
+      "target_id": "ca_3_2_2_1",
+      "relationship": "implements",
+      "description": "一阶高通滤波器设计方法实现了具体的电路应用",
+      "weight": 0.9,
+      "evidence": "设计方法直接指导了RC电路的实现",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.2.2"
+    },
+    {
+      "source_id": "bc_3_2_2_1",
+      "target_id": "bc_3_2_2_2",
+      "relationship": "relates_to",
+      "description": "传递函数与截止频率密切相关",
+      "weight": 0.7,
+      "evidence": "传递函数中的sRC项直接决定了截止频率",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "3.2.2"
+    },
+    {
+      "source_id": "bc_3_1_1",
+      "target_id": "ct_3_1_1",
+      "relationship": "enables",
+      "description": "滤波器基本概念为低通滤波器设计提供理论基础",
+      "weight": 0.9,
+      "evidence": "滤波器定义中提到的频率选择特性是低通滤波器设计的核心目标",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "bc_3_1_2",
+      "target_id": "ct_3_1_1",
+      "relationship": "supports",
+      "description": "截止频率概念直接应用于低通滤波器设计参数",
+      "weight": 0.95,
+      "evidence": "低通滤波器设计必须明确指定截止频率参数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "ct_3_1_1",
+      "target_id": "ca_3_1_1",
+      "relationship": "implements",
+      "description": "低通滤波器设计方法具体实现为RC低通滤波器电路",
+      "weight": 0.9,
+      "evidence": "RC电路是低通滤波器设计的最基本实现方式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "ct_3_1_2",
+      "target_id": "ca_3_1_2",
+      "relationship": "implements",
+      "description": "高通滤波器设计方法具体实现为CR高通滤波器电路",
+      "weight": 0.9,
+      "evidence": "CR电路是高通滤波器设计的最基本实现方式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "ct_3_1_3",
+      "target_id": "ca_3_1_3",
+      "relationship": "implements",
+      "description": "带通滤波器设计方法具体实现为LC带通滤波器电路",
+      "weight": 0.85,
+      "evidence": "LC谐振是带通滤波器设计的典型实现方式",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "ct_3_1_1",
+      "target_id": "ct_3_1_3",
+      "relationship": "relates_to",
+      "description": "低通和高通滤波器设计方法可组合实现带通滤波器",
+      "weight": 0.8,
+      "evidence": "带通滤波器可通过串联低通和高通滤波器实现",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "3.1"
+    },
+    {
+      "source_id": "bc_3_3_1_1",
+      "target_id": "ct_3_3_1_1",
+      "relationship": "enables",
+      "description": "有源滤波器的概念使能了Sallen-Key拓扑的设计，因为有源滤波器需要使用运算放大器等有源元件。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key是一种常用的有源滤波器拓扑",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3.1"
+    },
+    {
+      "source_id": "bc_3_3_1_2",
+      "target_id": "ct_3_3_1_1",
+      "relationship": "supports",
+      "description": "二阶滤波器的理论支撑了Sallen-Key拓扑的实现，因为Sallen-Key拓扑用于设计二阶滤波器。",
+      "weight": 0.8,
+      "evidence": "可以实现二阶低通、高通和带通滤波器",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3.1"
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_1",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key低通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶低通滤波器",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3.1"
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_2",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key高通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶高通滤波器",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3.1"
+    },
+    {
+      "source_id": "ct_3_3_1_1",
+      "target_id": "ca_3_3_1_3",
+      "relationship": "implements",
+      "description": "Sallen-Key拓扑实现了Sallen-Key带通滤波器的设计。",
+      "weight": 0.9,
+      "evidence": "Sallen-Key拓扑可以实现二阶带通滤波器",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "3.3.1"
+    },
+    {
+      "source_id": "bc_4_3_1_1",
+      "target_id": "ct_4_3_1_1",
+      "relationship": "enables",
+      "description": "相位裕度的概念使能了超前补偿技术的应用",
+      "weight": 0.9,
+      "evidence": "超前补偿增加相位裕度",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.1"
+    },
+    {
+      "source_id": "bc_4_3_1_2",
+      "target_id": "ct_4_3_1_1",
+      "relationship": "supports",
+      "description": "瞬态响应的概念支撑了超前补偿技术的设计目标",
+      "weight": 0.8,
+      "evidence": "超前补偿改善瞬态响应",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.1"
+    },
+    {
+      "source_id": "ct_4_3_1_1",
+      "target_id": "ca_4_3_1_1",
+      "relationship": "implements",
+      "description": "超前补偿技术通过RC网络电路实现",
+      "weight": 0.9,
+      "evidence": "超前补偿增加相位裕度，改善瞬态响应",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.1"
+    },
+    {
+      "source_id": "bc_4_2_1_1",
+      "target_id": "ct_4_2_1_1",
+      "relationship": "enables",
+      "description": "奈奎斯特判据理论为奈奎斯特稳定性分析方法提供了理论基础",
+      "weight": 0.9,
+      "evidence": "系统稳定的条件是奈奎斯特图不包围(-1, 0)点",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.1"
+    },
+    {
+      "source_id": "bc_4_2_1_2",
+      "target_id": "ct_4_2_1_1",
+      "relationship": "supports",
+      "description": "奈奎斯特图的绘制和理解是实施奈奎斯特稳定性分析的前提条件",
+      "weight": 0.8,
+      "evidence": "通过分析开环传递函数的奈奎斯特图",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.1"
+    },
+    {
+      "source_id": "ct_4_2_1_1",
+      "target_id": "ca_4_2_1_1",
+      "relationship": "implements",
+      "description": "奈奎斯特稳定性分析方法被具体实现为反馈控制系统的稳定性设计技术",
+      "weight": 0.85,
+      "evidence": "在反馈控制系统设计中应用奈奎斯特判据",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.1"
+    },
+    {
+      "source_id": "bc_4_2_1_1",
+      "target_id": "bc_4_2_1_2",
+      "relationship": "depends_on",
+      "description": "奈奎斯特判据的应用依赖于对奈奎斯特图的理解",
+      "weight": 0.7,
+      "evidence": "通过分析开环传递函数的奈奎斯特图",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.1"
+    },
+    {
+      "source_id": "bc_4_3_2_1",
+      "target_id": "ct_4_3_2_1",
+      "relationship": "enables",
+      "description": "稳态误差的概念使能了滞后补偿技术的应用，因为滞后补偿的主要目的是减少稳态误差。",
+      "weight": 0.9,
+      "evidence": "滞后补偿减少稳态误差",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.2"
+    },
+    {
+      "source_id": "bc_4_3_2_2",
+      "target_id": "ct_4_3_2_1",
+      "relationship": "supports",
+      "description": "响应速度的概念支撑了滞后补偿技术的设计，因为滞后补偿可能会降低系统的响应速度。",
+      "weight": 0.8,
+      "evidence": "滞后补偿可能降低响应速度",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.2"
+    },
+    {
+      "source_id": "ct_4_3_2_1",
+      "target_id": "ca_4_3_2_1",
+      "relationship": "implements",
+      "description": "滞后补偿技术通过滞后补偿电路来实现，具体电路结构包括电阻、电容和运算放大器等元件。",
+      "weight": 0.9,
+      "evidence": "滞后补偿电路是一种用于控制系统的电路",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.3.2"
+    },
+    {
+      "source_id": "bc_4_3_2_1",
+      "target_id": "bc_4_3_2_2",
+      "relationship": "relates_to",
+      "description": "稳态误差和响应速度是控制系统性能的两个重要指标，它们之间存在一定的权衡关系。",
+      "weight": 0.7,
+      "evidence": "滞后补偿减少稳态误差，但可能降低响应速度",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "4.3.2"
+    },
+    {
+      "source_id": "bc_4_2_2_1",
+      "target_id": "ct_4_2_2_1",
+      "relationship": "enables",
+      "description": "增益裕度的概念使能了波德图分析技术，通过增益裕度可以定量评估系统稳定性。",
+      "weight": 0.9,
+      "evidence": "通过增益裕度来判断系统稳定性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.2"
+    },
+    {
+      "source_id": "bc_4_2_2_2",
+      "target_id": "ct_4_2_2_1",
+      "relationship": "enables",
+      "description": "相位裕度的概念使能了波德图分析技术，通过相位裕度可以定量评估系统稳定性。",
+      "weight": 0.9,
+      "evidence": "通过相位裕度来判断系统稳定性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.2"
+    },
+    {
+      "source_id": "ct_4_2_2_1",
+      "target_id": "ca_4_2_2_1",
+      "relationship": "implements",
+      "description": "波德图分析技术实现了反馈放大器稳定性分析，通过绘制波德图来评估放大器的稳定性。",
+      "weight": 0.8,
+      "evidence": "在反馈放大器设计中，通过波德图分析增益裕度和相位裕度",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.2.2"
+    },
+    {
+      "source_id": "bc_4_1_1",
+      "target_id": "ct_4_1_1",
+      "relationship": "enables",
+      "description": "反馈的基本概念使能了负反馈技术的实现。",
+      "weight": 0.8,
+      "evidence": "反馈是将输出信号的一部分返回到输入端的技术。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "bc_4_1_1",
+      "target_id": "ct_4_1_2",
+      "relationship": "enables",
+      "description": "反馈的基本概念使能了正反馈技术的实现。",
+      "weight": 0.8,
+      "evidence": "反馈是将输出信号的一部分返回到输入端的技术。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "bc_4_1_2",
+      "target_id": "ct_4_1_1",
+      "relationship": "supports",
+      "description": "负反馈的定义支撑了负反馈技术的实现。",
+      "weight": 0.9,
+      "evidence": "负反馈：减少误差，提高稳定性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "bc_4_1_3",
+      "target_id": "ct_4_1_2",
+      "relationship": "supports",
+      "description": "正反馈的定义支撑了正反馈技术的实现。",
+      "weight": 0.9,
+      "evidence": "正反馈：可能导致振荡",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "ct_4_1_1",
+      "target_id": "ca_4_1_1",
+      "relationship": "implements",
+      "description": "负反馈技术实现了负反馈放大器的设计。",
+      "weight": 0.85,
+      "evidence": "负反馈放大器利用负反馈技术减少失真并提高稳定性。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "ct_4_1_2",
+      "target_id": "ca_4_1_2",
+      "relationship": "implements",
+      "description": "正反馈技术实现了LC振荡器的设计。",
+      "weight": 0.85,
+      "evidence": "LC振荡器利用正反馈技术产生高频振荡信号。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "bc_4_1_2",
+      "target_id": "bc_4_1_3",
+      "relationship": "complements",
+      "description": "负反馈和正反馈是反馈的两种互补类型。",
+      "weight": 0.7,
+      "evidence": "分为：负反馈：减少误差，提高稳定性；正反馈：可能导致振荡",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "4.1"
+    },
+    {
+      "source_id": "bc_6_1_1",
+      "target_id": "ct_6_1_1",
+      "relationship": "enables",
+      "description": "奈奎斯特采样定理为采样频率选择提供了理论基础",
+      "weight": 0.9,
+      "evidence": "采样频率必须大于信号最高频率的两倍",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.1"
+    },
+    {
+      "source_id": "ct_6_1_1",
+      "target_id": "ca_6_1_1",
+      "relationship": "implements",
+      "description": "采样频率选择技术直接应用于模数转换器前端设计",
+      "weight": 0.8,
+      "evidence": "实际应用中通常选择更高的采样频率",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.1"
+    },
+    {
+      "source_id": "bc_6_1_1",
+      "target_id": "ca_6_1_1",
+      "relationship": "supports",
+      "description": "奈奎斯特采样定理支撑模数转换器设计的理论基础",
+      "weight": 0.7,
+      "evidence": "确保信号在采样过程中不会丢失信息",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.1"
+    },
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "ct_5_2_1_1",
+      "relationship": "enables",
+      "description": "Buck变换器的基本工作原理使能了PWM控制技术的应用",
+      "weight": 0.9,
+      "evidence": "Buck变换器的输出电压调节需要PWM控制技术",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.1"
+    },
+    {
+      "source_id": "bc_5_2_1_2",
+      "target_id": "ct_5_2_1_1",
+      "relationship": "supports",
+      "description": "占空比概念为PWM控制技术提供了理论基础",
+      "weight": 0.8,
+      "evidence": "PWM控制技术通过调节占空比来实现电压控制",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.1"
+    },
+    {
+      "source_id": "ct_5_2_1_1",
+      "target_id": "ca_5_2_1_1",
+      "relationship": "implements",
+      "description": "PWM控制技术实现了降压电源电路的电压调节功能",
+      "weight": 0.85,
+      "evidence": "降压电源电路需要PWM控制来稳定输出电压",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.1"
+    },
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "ca_5_2_1_1",
+      "relationship": "applies_to",
+      "description": "Buck变换器原理直接应用于降压电源电路设计",
+      "weight": 0.9,
+      "evidence": "降压电源电路基于Buck变换器拓扑",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.1"
+    },
+    {
+      "source_id": "bc_5_2_1_1",
+      "target_id": "bc_5_2_1_2",
+      "relationship": "depends_on",
+      "description": "Buck变换器的工作依赖于占空比参数",
+      "weight": 0.7,
+      "evidence": "输出电压公式Vout = D × Vin表明这种依赖关系",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.1"
+    },
+    {
+      "source_id": "bc_5_2_2_1",
+      "target_id": "ct_5_2_2_1",
+      "relationship": "enables",
+      "description": "Boost变换器的基本工作原理使能了其控制方法的设计",
+      "weight": 0.9,
+      "evidence": "Boost变换器的输出电压公式Vout = Vin/(1-D)是控制方法的基础",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.2"
+    },
+    {
+      "source_id": "bc_5_2_2_2",
+      "target_id": "ct_5_2_2_1",
+      "relationship": "supports",
+      "description": "占空比D的概念支撑了Boost变换器的控制方法",
+      "weight": 0.8,
+      "evidence": "控制方法通过调节占空比D来实现输出电压的调节",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.2"
+    },
+    {
+      "source_id": "ct_5_2_2_1",
+      "target_id": "ca_5_2_2_1",
+      "relationship": "implements",
+      "description": "Boost变换器的控制方法实现了具体的电路应用",
+      "weight": 0.9,
+      "evidence": "控制方法通过调节开关管的占空比来控制电路的实际输出电压",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.2"
+    },
+    {
+      "source_id": "bc_5_2_2_1",
+      "target_id": "ca_5_2_2_1",
+      "relationship": "applies_to",
+      "description": "Boost变换器的基本概念应用于具体的电路设计",
+      "weight": 0.8,
+      "evidence": "电路设计基于Boost变换器的升压原理",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.2.2"
+    },
+    {
+      "source_id": "bc_5_3_1",
+      "target_id": "ct_5_3_1",
+      "relationship": "enables",
+      "description": "脉宽调制原理为PWM控制技术提供了理论基础",
+      "weight": 0.9,
+      "evidence": "章节明确指出PWM通过改变占空比来控制输出电压",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.3"
+    },
+    {
+      "source_id": "bc_5_3_2",
+      "target_id": "ct_5_3_1",
+      "relationship": "supports",
+      "description": "占空比概念是PWM控制技术的核心参数",
+      "weight": 0.95,
+      "evidence": "章节内容直接关联占空比与输出电压控制",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.3"
+    },
+    {
+      "source_id": "ct_5_3_1",
+      "target_id": "ca_5_3_1",
+      "relationship": "implements",
+      "description": "PWM控制技术在电压调节电路中得到具体实现",
+      "weight": 0.85,
+      "evidence": "章节内容表明PWM控制应用于输出电压调节",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.3"
+    },
+    {
+      "source_id": "bc_5_3_1",
+      "target_id": "bc_5_3_2",
+      "relationship": "relates_to",
+      "description": "脉宽调制与占空比概念密切相关",
+      "weight": 0.8,
+      "evidence": "章节内容将两者作为PWM控制的基础概念",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "5.3"
+    },
+    {
+      "source_id": "bc_5_1_1_1",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "enables",
+      "description": "功率二极管的基本功能理解是进行正确选型的基础",
+      "weight": 0.9,
+      "evidence": "功率二极管用于整流和续流",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_2",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "正向电流额定值是选型的关键参数之一",
+      "weight": 0.8,
+      "evidence": "主要参数包括正向电流额定值",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_3",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "反向耐压是选型的关键参数之一",
+      "weight": 0.8,
+      "evidence": "主要参数包括反向耐压",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_4",
+      "target_id": "ct_5_1_1_1",
+      "relationship": "supports",
+      "description": "反向恢复时间是高频应用选型的关键参数",
+      "weight": 0.7,
+      "evidence": "主要参数包括反向恢复时间",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "ct_5_1_1_1",
+      "target_id": "ca_5_1_1_1",
+      "relationship": "implements",
+      "description": "正确的选型方法确保桥式整流电路的可靠工作",
+      "weight": 0.9,
+      "evidence": "桥式整流电路需要选择合适的功率二极管",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "ct_5_1_1_2",
+      "target_id": "ca_5_1_1_1",
+      "relationship": "applies_to",
+      "description": "热设计方法应用于高功率整流电路",
+      "weight": 0.8,
+      "evidence": "桥式整流电路需要考虑散热设计",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_1",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "enables",
+      "description": "功率二极管的续流功能是保护电路的基础",
+      "weight": 0.9,
+      "evidence": "功率二极管用于续流",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_4",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "supports",
+      "description": "反向恢复时间影响续流电路的性能",
+      "weight": 0.8,
+      "evidence": "续流应用需要考虑反向恢复时间",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_5_1_1_2",
+      "target_id": "bc_5_1_1_3",
+      "relationship": "relates_to",
+      "description": "正向电流和反向耐压都是功率二极管的关键参数",
+      "weight": 0.6,
+      "evidence": "两者都是主要参数",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "ca_5_1_1_1",
+      "target_id": "ca_5_1_1_2",
+      "relationship": "complements",
+      "description": "整流和续流是功率二极管的两大主要应用",
+      "weight": 0.7,
+      "evidence": "功率二极管用于整流和续流",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "5.1.1"
+    },
+    {
+      "source_id": "bc_6_2_1_1",
+      "target_id": "ct_6_2_1_1",
+      "relationship": "enables",
+      "description": "FIR滤波器的定义和基本特性为窗函数设计法提供了理论基础",
+      "weight": 0.9,
+      "evidence": "窗函数设计法基于FIR滤波器的冲激响应特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "bc_6_2_1_2",
+      "target_id": "ct_6_2_1_1",
+      "relationship": "supports",
+      "description": "线性相位特性指导窗函数设计法中对称系数的选择",
+      "weight": 0.8,
+      "evidence": "为获得线性相位，窗函数设计法需要设计对称系数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "ct_6_2_1_1",
+      "target_id": "ca_6_2_1_1",
+      "relationship": "implements",
+      "description": "窗函数设计法产生的滤波器系数直接用于FIR数字滤波器实现",
+      "weight": 0.95,
+      "evidence": "电路实现需要具体的滤波器系数",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "ct_6_2_1_2",
+      "target_id": "ca_6_2_1_2",
+      "relationship": "applies_to",
+      "description": "频率采样法特别适合多速率系统中精确控制频响的需求",
+      "weight": 0.85,
+      "evidence": "多速率系统需要精确控制过渡带特性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "bc_6_2_1_1",
+      "target_id": "bc_6_2_1_2",
+      "relationship": "relates_to",
+      "description": "FIR滤波器的定义与其线性相位特性密切相关",
+      "weight": 0.7,
+      "evidence": "FIR结构天然支持线性相位实现",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "ct_6_2_1_1",
+      "target_id": "ct_6_2_1_2",
+      "relationship": "complements",
+      "description": "窗函数法和频率采样法互为补充，适用于不同设计需求",
+      "weight": 0.6,
+      "evidence": "两种方法各有优势，常结合使用",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "6.2.1"
+    },
+    {
+      "source_id": "bc_6_2_2_1",
+      "target_id": "ct_6_2_2_1",
+      "relationship": "enables",
+      "description": "无限冲激响应滤波器的基本概念使能了IIR滤波器的设计方法。",
+      "weight": 0.9,
+      "evidence": "IIR滤波器的递归特性是其设计方法的基础。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.2"
+    },
+    {
+      "source_id": "bc_6_2_2_2",
+      "target_id": "ct_6_2_2_2",
+      "relationship": "supports",
+      "description": "滤波器稳定性的概念支撑了稳定性分析方法。",
+      "weight": 0.8,
+      "evidence": "稳定性分析依赖于极点的位置判断。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.2"
+    },
+    {
+      "source_id": "ct_6_2_2_1",
+      "target_id": "ca_6_2_2_1",
+      "relationship": "implements",
+      "description": "IIR滤波器设计方法实现了音频均衡器的具体应用。",
+      "weight": 0.85,
+      "evidence": "音频均衡器通过IIR滤波器设计方法实现频段控制。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.2"
+    },
+    {
+      "source_id": "ct_6_2_2_1",
+      "target_id": "ca_6_2_2_2",
+      "relationship": "applies_to",
+      "description": "IIR滤波器设计方法应用于通信系统中的信道滤波器。",
+      "weight": 0.85,
+      "evidence": "信道滤波器利用IIR滤波器的高效计算性能。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.2.2"
+    },
+    {
+      "source_id": "bc_6_2_2_1",
+      "target_id": "bc_6_2_2_2",
+      "relationship": "relates_to",
+      "description": "无限冲激响应滤波器与滤波器稳定性密切相关。",
+      "weight": 0.7,
+      "evidence": "IIR滤波器的递归特性可能导致稳定性问题。",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "6.2.2"
+    },
+    {
+      "source_id": "bc_5_1_2_1",
+      "target_id": "ct_5_1_2_1",
+      "relationship": "enables",
+      "description": "功率MOSFET的高输入阻抗特性使能了专门的驱动电路设计",
+      "weight": 0.9,
+      "evidence": "功率MOSFET是电压控制器件，具有高输入阻抗",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "bc_5_1_2_3",
+      "target_id": "ct_5_1_2_2",
+      "relationship": "supports",
+      "description": "快速开关速度特性支持了开关优化的实现",
+      "weight": 0.8,
+      "evidence": "具有快速开关速度",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "bc_5_1_2_4",
+      "target_id": "ct_5_1_2_3",
+      "relationship": "supports",
+      "description": "低导通电阻特性支持了热管理技术的应用",
+      "weight": 0.7,
+      "evidence": "具有低导通电阻",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "ct_5_1_2_1",
+      "target_id": "ca_5_1_2_1",
+      "relationship": "implements",
+      "description": "驱动技术实现了开关电源的设计",
+      "weight": 0.8,
+      "evidence": "开关电源需要专门的驱动电路",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "ct_5_1_2_2",
+      "target_id": "ca_5_1_2_3",
+      "relationship": "implements",
+      "description": "开关优化技术实现了高频逆变器的设计",
+      "weight": 0.9,
+      "evidence": "高频逆变器需要优化的开关性能",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "ct_5_1_2_3",
+      "target_id": "ca_5_1_2_2",
+      "relationship": "applies_to",
+      "description": "热管理技术应用于电机驱动电路",
+      "weight": 0.7,
+      "evidence": "电机驱动需要良好的热管理",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "bc_5_1_2_2",
+      "target_id": "bc_5_1_2_3",
+      "relationship": "relates_to",
+      "description": "输入阻抗与开关速度相关，共同影响驱动设计",
+      "weight": 0.6,
+      "evidence": "都是功率MOSFET的重要特性",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "ca_5_1_2_1",
+      "target_id": "ca_5_1_2_2",
+      "relationship": "relates_to",
+      "description": "开关电源和电机驱动都利用功率MOSFET的开关特性",
+      "weight": 0.5,
+      "evidence": "都是功率MOSFET的典型应用",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "5.1.2"
+    },
+    {
+      "source_id": "bc_6_3_1",
+      "target_id": "ct_6_3_1",
+      "relationship": "enables",
+      "description": "傅里叶变换理论为FFT算法提供了数学基础",
+      "weight": 0.9,
+      "evidence": "FFT是DFT的高效实现算法",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.3"
+    },
+    {
+      "source_id": "bc_6_3_2",
+      "target_id": "ct_6_3_1",
+      "relationship": "supports",
+      "description": "频域分析需求推动了FFT算法的发展",
+      "weight": 0.8,
+      "evidence": "FFT用于频域分析",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.3"
+    },
+    {
+      "source_id": "ct_6_3_1",
+      "target_id": "ca_6_3_1",
+      "relationship": "implements",
+      "description": "FFT算法在硬件电路中实现频谱分析功能",
+      "weight": 0.95,
+      "evidence": "频谱分析电路采用FFT算法",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source_section": "6.3"
+    },
+    {
+      "source_id": "bc_6_3_1",
+      "target_id": "bc_6_3_2",
+      "relationship": "relates_to",
+      "description": "傅里叶变换与频域分析密切相关",
+      "weight": 0.85,
+      "evidence": "傅里叶变换是频域分析的基础工具",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source_section": "6.3"
+    }
+  ],
+  "connections": [],
+  "metadata": {
+    "node_type_distribution": {
+      "basic_concept": 76,
+      "core_technology": 45,
+      "circuit_application": 46
+    },
+    "edge_type_distribution": {
+      "enables": 36,
+      "implements": 38,
+      "supports": 39,
+      "applies_to": 11,
+      "relates_to": 16,
+      "complements": 5,
+      "depends_on": 4
+    },
+    "connection_type_distribution": {}
+  }
+}

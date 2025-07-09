@@ -1,0 +1,12 @@
+{
+  "title": "电路应用跨章节连接分析",
+  "timestamp": "2025-07-08T15:08:49.157532",
+  "total_connections": 0,
+  "connection_types": {},
+  "connections": [],
+  "metadata": {
+    "analysis_method": "circuit_application_centered",
+    "workers": 4,
+    "strength_distribution": {}
+  }
+}

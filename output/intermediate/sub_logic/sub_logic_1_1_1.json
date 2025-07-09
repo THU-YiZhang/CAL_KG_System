@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "id": "bc_1_1_1_1",
+      "label": "电阻",
+      "node_type": "basic_concept",
+      "summary": "电阻是电路中最基本的元件之一，用于限制电流流动。其特性由欧姆定律描述，即电压与电流成正比，比例常数为电阻值。电阻的单位是欧姆(Ω)。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻",
+        "欧姆定律",
+        "基本元件"
+      ],
+      "formulas": [
+        "V = IR"
+      ],
+      "applications": [
+        "限流",
+        "分压"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电路理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻是电路中最基本的元件之一，用于限制电流流动。其特性由欧姆定律描述，即电压与电流成正比，比例常数为电阻值。电阻的单位是欧姆(Ω)。"
+    },
+    {
+      "id": "bc_1_1_1_2",
+      "label": "欧姆定律",
+      "node_type": "basic_concept",
+      "summary": "欧姆定律描述了电阻元件中电压、电流和电阻之间的关系。定律表明，通过电阻的电流与施加的电压成正比，与电阻值成反比。这是分析线性电阻电路的基础。",
+      "difficulty": 2,
+      "keywords": [
+        "欧姆定律",
+        "电压",
+        "电流",
+        "电阻"
+      ],
+      "formulas": [
+        "V = IR"
+      ],
+      "applications": [
+        "电路分析",
+        "元件特性描述"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "基本电学概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "欧姆定律描述了电阻元件中电压、电流和电阻之间的关系。定律表明，通过电阻的电流与施加的电压成正比，与电阻值成反比。这是分析线性电阻电路的基础。"
+    },
+    {
+      "id": "bc_1_1_1_3",
+      "label": "功率消耗",
+      "node_type": "basic_concept",
+      "summary": "电阻在工作时会消耗电能并将其转化为热能。功率消耗描述了电阻将电能转化为热能的速率。功率计算有多种等效形式，取决于已知参数。",
+      "difficulty": 3,
+      "keywords": [
+        "功率",
+        "能量消耗",
+        "热效应"
+      ],
+      "formulas": [
+        "P = I²R",
+        "P = V²/R",
+        "P = VI"
+      ],
+      "applications": [
+        "热设计",
+        "功率管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "功率概念"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻在工作时会消耗电能并将其转化为热能。功率消耗描述了电阻将电能转化为热能的速率。功率计算有多种等效形式，取决于已知参数。"
+    },
+    {
+      "id": "ct_1_1_1_1",
+      "label": "电阻电路分析",
+      "node_type": "core_technology",
+      "summary": "基于欧姆定律和功率公式，可以分析包含电阻的电路。分析方法包括计算电压、电流、功率等参数，评估电路性能。这是设计更复杂电路的基础技术。",
+      "difficulty": 3,
+      "keywords": [
+        "电路分析",
+        "参数计算",
+        "性能评估"
+      ],
+      "formulas": [
+        "V = IR",
+        "P = I²R"
+      ],
+      "applications": [
+        "电路设计",
+        "故障诊断"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于欧姆定律和功率公式，可以分析包含电阻的电路。分析方法包括计算电压、电流、功率等参数，评估电路性能。这是设计更复杂电路的基础技术。"
+    },
+    {
+      "id": "ct_1_1_1_2",
+      "label": "功率计算技术",
+      "node_type": "core_technology",
+      "summary": "根据电路中的已知参数，选择适当的功率计算公式来评估电阻的功率消耗。需要考虑电压、电流和电阻值的测量或计算精度，以确保结果的准确性。",
+      "difficulty": 3,
+      "keywords": [
+        "功率计算",
+        "能量评估",
+        "热管理"
+      ],
+      "formulas": [
+        "P = I²R",
+        "P = V²/R",
+        "P = VI"
+      ],
+      "applications": [
+        "热设计",
+        "功率预算"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "根据电路中的已知参数，选择适当的功率计算公式来评估电阻的功率消耗。需要考虑电压、电流和电阻值的测量或计算精度，以确保结果的准确性。"
+    },
+    {
+      "id": "ca_1_1_1_1",
+      "label": "限流电路",
+      "node_type": "circuit_application",
+      "summary": "利用电阻限制电路中的电流，保护敏感元件免受过大电流损坏。设计时需要考虑电阻的功率承受能力，确保不会因功率过大而烧毁。",
+      "difficulty": 4,
+      "keywords": [
+        "电流限制",
+        "保护电路",
+        "安全设计"
+      ],
+      "formulas": [
+        "I = V/R"
+      ],
+      "applications": [
+        "LED驱动",
+        "电源保护"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用电阻限制电路中的电流，保护敏感元件免受过大电流损坏。设计时需要考虑电阻的功率承受能力，确保不会因功率过大而烧毁。"
+    },
+    {
+      "id": "ca_1_1_1_2",
+      "label": "分压电路",
+      "node_type": "circuit_application",
+      "summary": "使用电阻网络将输入电压分成所需的输出电压比例。设计需要考虑电阻的精度和温度稳定性，以确保分压比的准确性。",
+      "difficulty": 4,
+      "keywords": [
+        "电压分配",
+        "信号调节",
+        "参考电压"
+      ],
+      "formulas": [
+        "Vout = Vin*(R2/(R1+R2))"
+      ],
+      "applications": [
+        "传感器接口",
+        "ADC前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "使用电阻网络将输入电压分成所需的输出电压比例。设计需要考虑电阻的精度和温度稳定性，以确保分压比的准确性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_1_1_1",
+      "target_id": "ct_1_1_1_1",
+      "relationship": "enables",
+      "description": "电阻的基本概念使能了电阻电路分析技术",
+      "weight": 0.9,
+      "evidence": "电阻是电路分析的基本对象",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_1_2",
+      "target_id": "ct_1_1_1_1",
+      "relationship": "supports",
+      "description": "欧姆定律为电阻电路分析提供了理论基础",
+      "weight": 0.95,
+      "evidence": "电路分析基于欧姆定律",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_1_3",
+      "target_id": "ct_1_1_1_2",
+      "relationship": "supports",
+      "description": "功率消耗原理支撑了功率计算技术",
+      "weight": 0.9,
+      "evidence": "功率计算基于功率消耗公式",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ca_1_1_1_1",
+      "relationship": "implements",
+      "description": "电阻电路分析技术实现了限流电路设计",
+      "weight": 0.85,
+      "evidence": "限流设计需要电路分析技术",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ca_1_1_1_2",
+      "relationship": "implements",
+      "description": "电阻电路分析技术实现了分压电路设计",
+      "weight": 0.85,
+      "evidence": "分压设计需要电路分析技术",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_1_1_1_2",
+      "target_id": "bc_1_1_1_3",
+      "relationship": "relates_to",
+      "description": "欧姆定律与功率消耗密切相关",
+      "weight": 0.8,
+      "evidence": "功率公式可由欧姆定律推导",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_1_1_1_1",
+      "target_id": "ct_1_1_1_2",
+      "relationship": "complements",
+      "description": "电路分析与功率计算相互补充",
+      "weight": 0.75,
+      "evidence": "完整电路分析需要同时考虑电压、电流和功率",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "1.1.1",
+  "title": "电阻元件",
+  "extraction_timestamp": "2025-07-08T15:29:55.366258",
+  "validation_timestamp": "2025-07-08T15:32:54.290654"
+}

@@ -1,0 +1,7 @@
+{
+  "section_num": "4.3.2",
+  "title": "滞后补偿",
+  "level": 3,
+  "content": "滞后补偿减少稳态误差，但可能降低响应速度。",
+  "subsections": []
+}

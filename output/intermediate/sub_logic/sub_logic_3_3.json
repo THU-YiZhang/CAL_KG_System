@@ -1,0 +1,338 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_3_1",
+      "label": "简单电阻分压偏置",
+      "node_type": "basic_concept",
+      "summary": "基本偏置电路仅由单一支路通常是电阻支路或等效电阻支路构成，即电源到地之间表现为低阻通道。电阻偏置组成结构简单，但偏置的稳定性能较差。输出电压和支路电流均随电源电压而变化，变化的系数由电阻比决定。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻分压",
+        "低阻通道",
+        "稳定性差"
+      ],
+      "formulas": [
+        "V_b = (R2 / (R1 + R2)) * V_cc"
+      ],
+      "applications": [
+        "基本偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "分压原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基本偏置电路仅由单一支路通常是电阻支路或等效电阻支路构成，即电源到地之间表现为低阻通道。电阻偏置组成结构简单，但偏置的稳定性能较差。输出电压和支路电流均随电源电压而变化，变化的系数由电阻比决定。"
+    },
+    {
+      "id": "bc_3_3_2",
+      "label": "MOS二极管偏置",
+      "node_type": "basic_concept",
+      "summary": "MOS二极管偏置是一种非线性电路结构，利用MOS管的饱和电流特性来提供偏置电压。由于MOS管的I-V特性的平方率关系，即使过驱动电压的变化很小，引起的电流变化也很大。",
+      "difficulty": 3,
+      "keywords": [
+        "非线性",
+        "饱和电流",
+        "平方率关系"
+      ],
+      "formulas": [
+        "I_ds = (1/2)k(V_GS - V_TH)^2"
+      ],
+      "applications": [
+        "高性能偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性",
+        "饱和区工作"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS二极管偏置是一种非线性电路结构，利用MOS管的饱和电流特性来提供偏置电压。由于MOS管的I-V特性的平方率关系，即使过驱动电压的变化很小，引起的电流变化也很大。"
+    },
+    {
+      "id": "bc_3_3_3",
+      "label": "耗尽管偏置",
+      "node_type": "basic_concept",
+      "summary": "耗尽MOS管的重要特点在于当V_GS=0时，导电沟道已经存在并参与导电，因此只要V_DS≠0就有导通电流。在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。",
+      "difficulty": 3,
+      "keywords": [
+        "耗尽MOS管",
+        "自偏置",
+        "恒流特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "耗尽MOS管特性",
+        "恒流源"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "耗尽MOS管的重要特点在于当V_GS=0时，导电沟道已经存在并参与导电，因此只要V_DS≠0就有导通电流。在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。"
+    },
+    {
+      "id": "ct_3_3_1",
+      "label": "局部负反馈",
+      "node_type": "core_technology",
+      "summary": "局部负反馈是一种改善偏置电路性能的技术，通过引入反馈机制来稳定输出电压和电流。虽然偏置性能不高，但采用局部负反馈可适当改善电路性能，并用于高性能偏置电路的设计。",
+      "difficulty": 3,
+      "keywords": [
+        "负反馈",
+        "稳定性",
+        "性能改善"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "局部负反馈是一种改善偏置电路性能的技术，通过引入反馈机制来稳定输出电压和电流。虽然偏置性能不高，但采用局部负反馈可适当改善电路性能，并用于高性能偏置电路的设计。"
+    },
+    {
+      "id": "ct_3_3_2",
+      "label": "MOS二极管分裂技术",
+      "node_type": "core_technology",
+      "summary": "将MOS二极管分裂成两管串联，利用分裂MOS管在线性电阻区对两MOS二极管偏置的反馈控制作用，有效提高了此类电压偏置的稳定性。还可以得到提供Cascode MOS管偏置的设计限制条件。",
+      "difficulty": 4,
+      "keywords": [
+        "分裂结构",
+        "反馈控制",
+        "Cascode偏置"
+      ],
+      "formulas": [],
+      "applications": [
+        "宽动态范围偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将MOS二极管分裂成两管串联，利用分裂MOS管在线性电阻区对两MOS二极管偏置的反馈控制作用，有效提高了此类电压偏置的稳定性。还可以得到提供Cascode MOS管偏置的设计限制条件。"
+    },
+    {
+      "id": "ct_3_3_3",
+      "label": "V_GS倍增偏置",
+      "node_type": "core_technology",
+      "summary": "利用V_GS的钳位作用，并采用电阻串联的倍增效应，提供与V_GS成比例关系的偏置电压。提高R1和R2电阻，一方面是低功耗的要求，另一方面可减小电阻分流的影响，确保MOS管流过相对恒定的电流。",
+      "difficulty": 3,
+      "keywords": [
+        "V_GS钳位",
+        "电阻倍增",
+        "低功耗"
+      ],
+      "formulas": [
+        "V_b = V_GS(1 + R1/R2)"
+      ],
+      "applications": [
+        "低功耗偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用V_GS的钳位作用，并采用电阻串联的倍增效应，提供与V_GS成比例关系的偏置电压。提高R1和R2电阻，一方面是低功耗的要求，另一方面可减小电阻分流的影响，确保MOS管流过相对恒定的电流。"
+    },
+    {
+      "id": "ca_3_3_1",
+      "label": "简单电阻分压偏置电路",
+      "node_type": "circuit_application",
+      "summary": "基本偏置电路仅由单一支路通常是电阻支路或等效电阻支路构成，即电源到地之间表现为低阻通道。电阻偏置组成结构简单，但偏置的稳定性能较差。已有的几种简单偏置结构如图3-3所示。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻支路",
+        "低阻通道",
+        "简单结构"
+      ],
+      "formulas": [
+        "V_b = (R2 / (R1 + R2)) * V_cc"
+      ],
+      "applications": [
+        "基本偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基本偏置电路仅由单一支路通常是电阻支路或等效电阻支路构成，即电源到地之间表现为低阻通道。电阻偏置组成结构简单，但偏置的稳定性能较差。已有的几种简单偏置结构如图3-3所示。"
+    },
+    {
+      "id": "ca_3_3_2",
+      "label": "R+MOS二极管偏置电路",
+      "node_type": "circuit_application",
+      "summary": "单支路同样为低阻串联通路，结构简单，电流恒定性同样较差，并且没有解决静态电流的电源无关特性。根据电路静态电流连续性条件，列出方程并解得V_b。",
+      "difficulty": 3,
+      "keywords": [
+        "低阻串联",
+        "静态电流",
+        "非线性"
+      ],
+      "formulas": [
+        "(1/2)k(V_b - V_TH)^2 = (V_CC - V_b)/R1"
+      ],
+      "applications": [
+        "非线性偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单支路同样为低阻串联通路，结构简单，电流恒定性同样较差，并且没有解决静态电流的电源无关特性。根据电路静态电流连续性条件，列出方程并解得V_b。"
+    },
+    {
+      "id": "ca_3_3_3",
+      "label": "两异性MOS二极管串联分压偏置电路",
+      "node_type": "circuit_application",
+      "summary": "对于PMOS和NMOS二极管，由其饱和电流I_dsn=I_dsp的条件，得到V_b的表达式。串联的NMOS或PMOS管的个数是可以任意改变的，都可等效为两异性MOS管的串联，并由V_cc和开启电压得到V_b。",
+      "difficulty": 4,
+      "keywords": [
+        "PMOS/NMOS",
+        "串联分压",
+        "衬偏效应"
+      ],
+      "formulas": [
+        "V_b = (V_TN + sqrt(k_p/k_n)(V_CC - V_TP))/(1 + sqrt(k_p/k_n))"
+      ],
+      "applications": [
+        "高性能偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "对于PMOS和NMOS二极管，由其饱和电流I_dsn=I_dsp的条件，得到V_b的表达式。串联的NMOS或PMOS管的个数是可以任意改变的，都可等效为两异性MOS管的串联，并由V_cc和开启电压得到V_b。"
+    },
+    {
+      "id": "ca_3_3_4",
+      "label": "MOS二极管分裂的偏置电路",
+      "node_type": "circuit_application",
+      "summary": "将前一种结构中的某一MOS二极管管分裂成两管串联。已经证明，在电流导通的条件下，串联在上的MOS管连接成二极管结构，始终处于饱和工作区；而串联在下的MOS管无论其W/L如何，总是处于线性区。",
+      "difficulty": 4,
+      "keywords": [
+        "分裂结构",
+        "饱和区",
+        "线性区"
+      ],
+      "formulas": [],
+      "applications": [
+        "宽动态范围偏置"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将前一种结构中的某一MOS二极管管分裂成两管串联。已经证明，在电流导通的条件下，串联在上的MOS管连接成二极管结构，始终处于饱和工作区；而串联在下的MOS管无论其W/L如何，总是处于线性区。"
+    },
+    {
+      "id": "ca_3_3_5",
+      "label": "V_GS倍增偏置电路",
+      "node_type": "circuit_application",
+      "summary": "对于图3-3(d)结构，由于R1电阻的偏压作用，M1始终位于饱和恒流区，同时串联电阻上的电流连续，则有V_b = V_GS(1 + R1/R2)。利用V_GS的钳位作用，并采用电阻串联的倍增效应，提供与V_GS成比例关系的偏置电压。",
+      "difficulty": 3,
+      "keywords": [
+        "V_GS钳位",
+        "电阻倍增",
+        "饱和恒流"
+      ],
+      "formulas": [
+        "V_b = V_GS(1 + R1/R2)"
+      ],
+      "applications": [
+        "低功耗偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "对于图3-3(d)结构，由于R1电阻的偏压作用，M1始终位于饱和恒流区，同时串联电阻上的电流连续，则有V_b = V_GS(1 + R1/R2)。利用V_GS的钳位作用，并采用电阻串联的倍增效应，提供与V_GS成比例关系的偏置电压。"
+    },
+    {
+      "id": "ca_3_3_6",
+      "label": "耗尽管偏置电路",
+      "node_type": "circuit_application",
+      "summary": "耗尽MOS管的重要特点在于当V_GS=0时，导电沟道已经存在并参与导电，因此只要V_DS≠0就有导通电流。在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。",
+      "difficulty": 3,
+      "keywords": [
+        "耗尽MOS",
+        "自偏置",
+        "恒流特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗偏置电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "耗尽MOS管的重要特点在于当V_GS=0时，导电沟道已经存在并参与导电，因此只要V_DS≠0就有导通电流。在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_3_1",
+      "target_id": "ct_3_3_1",
+      "relationship": "enables",
+      "description": "简单电阻分压偏置的基本原理为局部负反馈技术的应用提供了基础。",
+      "weight": 0.7,
+      "evidence": "虽然偏置性能不高，但采用局部负反馈可适当改善电路性能，并用于高性能偏置电路的设计。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_3_2",
+      "target_id": "ct_3_3_2",
+      "relationship": "enables",
+      "description": "MOS二极管偏置的非线性特性为MOS二极管分裂技术的应用提供了理论基础。",
+      "weight": 0.8,
+      "evidence": "将前一种结构中的某一MOS二极管管分裂成两管串联，利用分裂MOS管在线性电阻区对两MOS二极管偏置的反馈控制作用。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_1",
+      "target_id": "ca_3_3_3",
+      "relationship": "implements",
+      "description": "局部负反馈技术在两异性MOS二极管串联分压偏置电路中得到了具体应用。",
+      "weight": 0.7,
+      "evidence": "通过细致分析，可以引出更高性能自偏值电路设计的核心思路。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_2",
+      "target_id": "ca_3_3_4",
+      "relationship": "implements",
+      "description": "MOS二极管分裂技术在MOS二极管分裂的偏置电路中得到了具体实现。",
+      "weight": 0.9,
+      "evidence": "利用MOS管分裂结构，还可得到提供Cascode MOS管偏置的设计限制条件。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_3_3",
+      "target_id": "ca_3_3_5",
+      "relationship": "implements",
+      "description": "V_GS倍增偏置技术在V_GS倍增偏置电路中得到了具体实现。",
+      "weight": 0.8,
+      "evidence": "利用V_GS的钳位作用，并采用电阻串联的倍增效应，提供与V_GS成比例关系的偏置电压。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_3_3",
+      "target_id": "ca_3_3_6",
+      "relationship": "applies_to",
+      "description": "耗尽管偏置的基本原理在耗尽管偏置电路中得到了具体应用。",
+      "weight": 0.9,
+      "evidence": "在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "3.3",
+  "title": "基本电压偏置结构",
+  "extraction_timestamp": "2025-07-08T16:34:36.230501"
+}

@@ -1,0 +1,338 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_6_1",
+      "label": "线性放大电路",
+      "node_type": "basic_concept",
+      "summary": "线性放大电路实现对输入电压或电流的交流小信号进行线性处理，包括线性放大和线性跟随。其基本单元结构包括共源(CS)、共漏(CD)和共栅(CG)结构。",
+      "difficulty": 2,
+      "keywords": [
+        "线性放大",
+        "线性跟随",
+        "共源",
+        "共漏",
+        "共栅"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "线性放大电路实现对输入电压或电流的交流小信号进行线性处理，包括线性放大和线性跟随。其基本单元结构包括共源(CS)、共漏(CD)和共栅(CG)结构。"
+    },
+    {
+      "id": "bc_5_6_2",
+      "label": "Class A模式",
+      "node_type": "basic_concept",
+      "summary": "Class A模式是线性放大电路的一种工作模式，具有最高的线性度，但静态工作电流较高。",
+      "difficulty": 2,
+      "keywords": [
+        "Class A",
+        "静态电流",
+        "线性度"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大电路"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class A模式是线性放大电路的一种工作模式，具有最高的线性度，但静态工作电流较高。"
+    },
+    {
+      "id": "bc_5_6_3",
+      "label": "共模信号与差模信号",
+      "node_type": "basic_concept",
+      "summary": "共模信号是输入信号中的相同部分，差模信号是输入信号中的差异部分。普通放大电路无法区分两者，导致共模范围增大时电路性能下降。",
+      "difficulty": 2,
+      "keywords": [
+        "共模信号",
+        "差模信号",
+        "增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号处理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模信号是输入信号中的相同部分，差模信号是输入信号中的差异部分。普通放大电路无法区分两者，导致共模范围增大时电路性能下降。"
+    },
+    {
+      "id": "bc_5_6_4",
+      "label": "输入跨导",
+      "node_type": "basic_concept",
+      "summary": "输入跨导(g_m)是将输入电压转换为电流的关键参数，提高输入跨导和输出阻抗是提高电压增益的主要技术措施。",
+      "difficulty": 2,
+      "keywords": [
+        "输入跨导",
+        "g_m",
+        "电压增益"
+      ],
+      "formulas": [
+        "g_m"
+      ],
+      "applications": [
+        "电压放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管模型"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输入跨导(g_m)是将输入电压转换为电流的关键参数，提高输入跨导和输出阻抗是提高电压增益的主要技术措施。"
+    },
+    {
+      "id": "ct_5_6_1",
+      "label": "互补推挽放大电路",
+      "node_type": "core_technology",
+      "summary": "互补推挽放大电路由互补类型的双管构成，具有负载电流驱动能力强的特点。根据静态工作点的不同，可分为Class A、Class B和Class AB等多种工作模式。",
+      "difficulty": 3,
+      "keywords": [
+        "互补推挽",
+        "Class A",
+        "Class B",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "功率放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "互补推挽放大电路由互补类型的双管构成，具有负载电流驱动能力强的特点。根据静态工作点的不同，可分为Class A、Class B和Class AB等多种工作模式。"
+    },
+    {
+      "id": "ct_5_6_2",
+      "label": "差分输入级",
+      "node_type": "core_technology",
+      "summary": "在CS电路基础上，通过源端接入尾电流电阻的共模负反馈控制结构，实现对共模与差分信号的区分，从而构造差分输入级。该结构具有宽共模输入范围和宽输出动态范围的特性。",
+      "difficulty": 3,
+      "keywords": [
+        "差分输入级",
+        "共模负反馈",
+        "尾电流电阻"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在CS电路基础上，通过源端接入尾电流电阻的共模负反馈控制结构，实现对共模与差分信号的区分，从而构造差分输入级。该结构具有宽共模输入范围和宽输出动态范围的特性。"
+    },
+    {
+      "id": "ct_5_6_3",
+      "label": "电压放大技术",
+      "node_type": "core_technology",
+      "summary": "电压放大的基本过程包括输入跨导将输入电压转换为电流，电流在负载电阻上转换为电压输出。提高输入跨导和输出阻抗是提高电压增益的主要技术措施。",
+      "difficulty": 3,
+      "keywords": [
+        "电压放大",
+        "输入跨导",
+        "输出阻抗"
+      ],
+      "formulas": [
+        "g_m"
+      ],
+      "applications": [
+        "电压放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压放大的基本过程包括输入跨导将输入电压转换为电流，电流在负载电阻上转换为电压输出。提高输入跨导和输出阻抗是提高电压增益的主要技术措施。"
+    },
+    {
+      "id": "ca_5_6_1",
+      "label": "共源(CS)结构",
+      "node_type": "circuit_application",
+      "summary": "共源结构是一种基本的电压放大电路单元，通过输入跨导将输入电压转换为电流，并在负载电阻上转换为电压输出。",
+      "difficulty": 4,
+      "keywords": [
+        "共源",
+        "电压放大",
+        "CS结构"
+      ],
+      "formulas": [
+        "g_m"
+      ],
+      "applications": [
+        "信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共源结构是一种基本的电压放大电路单元，通过输入跨导将输入电压转换为电流，并在负载电阻上转换为电压输出。"
+    },
+    {
+      "id": "ca_5_6_2",
+      "label": "共漏(CD)结构",
+      "node_type": "circuit_application",
+      "summary": "共漏结构是一种电压跟随电流放大的电路单元，具有高输入阻抗和低输出阻抗的特点。",
+      "difficulty": 4,
+      "keywords": [
+        "共漏",
+        "电压跟随",
+        "CD结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "缓冲放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共漏结构是一种电压跟随电流放大的电路单元，具有高输入阻抗和低输出阻抗的特点。"
+    },
+    {
+      "id": "ca_5_6_3",
+      "label": "共栅(CG)结构",
+      "node_type": "circuit_application",
+      "summary": "共栅结构是一种电压放大电流跟随的电路单元，具有低输入阻抗和高输出阻抗的特点。",
+      "difficulty": 4,
+      "keywords": [
+        "共栅",
+        "电流跟随",
+        "CG结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "电流放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共栅结构是一种电压放大电流跟随的电路单元，具有低输入阻抗和高输出阻抗的特点。"
+    },
+    {
+      "id": "ca_5_6_4",
+      "label": "Class AB互补推挽放大电路",
+      "node_type": "circuit_application",
+      "summary": "Class AB互补推挽放大电路结合了Class A和Class B的优点，具有效率高、失真小、功耗低的特点，广泛应用于功率放大。",
+      "difficulty": 4,
+      "keywords": [
+        "Class AB",
+        "互补推挽",
+        "功率放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class AB互补推挽放大电路结合了Class A和Class B的优点，具有效率高、失真小、功耗低的特点，广泛应用于功率放大。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_6_1",
+      "target_id": "ct_5_6_1",
+      "relationship": "enables",
+      "description": "线性放大电路的基本概念使能了互补推挽放大电路的设计。",
+      "weight": 0.8,
+      "evidence": "线性放大电路的基本单元结构包括共源、共漏和共栅结构，这些结构为互补推挽放大电路的设计提供了基础。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_6_2",
+      "target_id": "ct_5_6_1",
+      "relationship": "supports",
+      "description": "Class A模式的概念支撑了互补推挽放大电路的工作模式设计。",
+      "weight": 0.7,
+      "evidence": "互补推挽放大电路根据静态工作点的不同，可分为Class A、Class B和Class AB等多种工作模式。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_6_3",
+      "target_id": "ct_5_6_2",
+      "relationship": "enables",
+      "description": "共模信号与差模信号的概念使能了差分输入级的设计。",
+      "weight": 0.9,
+      "evidence": "差分输入级通过共模负反馈控制结构实现对共模与差分信号的区分。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_6_4",
+      "target_id": "ct_5_6_3",
+      "relationship": "supports",
+      "description": "输入跨导的概念支撑了电压放大技术的实现。",
+      "weight": 0.8,
+      "evidence": "电压放大的基本过程包括输入跨导将输入电压转换为电流。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_6_1",
+      "target_id": "ca_5_6_4",
+      "relationship": "implements",
+      "description": "互补推挽放大电路技术实现了Class AB互补推挽放大电路的应用。",
+      "weight": 0.9,
+      "evidence": "Class AB互补推挽放大电路是互补推挽放大电路的一种具体实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_6_2",
+      "target_id": "ca_5_6_1",
+      "relationship": "applies_to",
+      "description": "差分输入级技术应用于共源结构的设计。",
+      "weight": 0.7,
+      "evidence": "差分输入级在CS电路基础上通过共模负反馈控制结构实现。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_6_3",
+      "target_id": "ca_5_6_1",
+      "relationship": "applies_to",
+      "description": "电压放大技术应用于共源结构的设计。",
+      "weight": 0.8,
+      "evidence": "共源结构通过输入跨导将输入电压转换为电流，并在负载电阻上转换为电压输出。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_5_6_1",
+      "target_id": "ca_5_6_2",
+      "relationship": "complements",
+      "description": "共源结构与共漏结构在功能上互补，前者用于电压放大，后者用于电压跟随。",
+      "weight": 0.6,
+      "evidence": "共源结构用于电压放大，共漏结构用于电压跟随，两者在信号处理中互补使用。",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ca_5_6_1",
+      "target_id": "ca_5_6_3",
+      "relationship": "relates_to",
+      "description": "共源结构与共栅结构在信号处理中相关，前者用于电压放大，后者用于电流跟随。",
+      "weight": 0.5,
+      "evidence": "共源结构用于电压放大，共栅结构用于电流跟随，两者在信号处理中相关。",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "5.6",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:38:29.938285"
+}

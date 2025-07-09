@@ -1,0 +1,248 @@
+{
+  "nodes": [
+    {
+      "id": "bc_12_1",
+      "label": "恒定电场MOS管可靠性",
+      "node_type": "basic_concept",
+      "summary": "在半导体特征尺寸减小的过程中，保持MOS管在恒定电场下的可靠性是一个基本约束条件。这要求电源电压随尺寸减小而降低，以维持电场强度不变，从而保证器件的长期可靠性。",
+      "difficulty": 2,
+      "keywords": [
+        "MOS管",
+        "可靠性",
+        "恒定电场"
+      ],
+      "formulas": [],
+      "applications": [
+        "半导体器件设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在半导体特征尺寸减小的过程中，保持MOS管在恒定电场下的可靠性是一个基本约束条件。这要求电源电压随尺寸减小而降低，以维持电场强度不变，从而保证器件的长期可靠性。"
+    },
+    {
+      "id": "bc_12_2",
+      "label": "电源电压降低的影响",
+      "node_type": "basic_concept",
+      "summary": "电源电压降低对模拟电路性能产生多方面影响，包括信号摆幅降低导致噪声影响增加、跨导下降导致直流增益下降、PN结反向偏置电压降低导致瞬态响应变差等。",
+      "difficulty": 2,
+      "keywords": [
+        "电源电压",
+        "噪声",
+        "跨导"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "模拟电路基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源电压降低对模拟电路性能产生多方面影响，包括信号摆幅降低导致噪声影响增加、跨导下降导致直流增益下降、PN结反向偏置电压降低导致瞬态响应变差等。"
+    },
+    {
+      "id": "bc_12_3",
+      "label": "Cascode结构",
+      "node_type": "basic_concept",
+      "summary": "Cascode结构是一种常用的高增益放大器结构，但在电源电压低于1V时无法继续使用，导致直流增益、带宽、PSRR和瞬态响应等性能退化。",
+      "difficulty": 3,
+      "keywords": [
+        "Cascode",
+        "高增益",
+        "放大器"
+      ],
+      "formulas": [],
+      "applications": [
+        "运算放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器设计"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode结构是一种常用的高增益放大器结构，但在电源电压低于1V时无法继续使用，导致直流增益、带宽、PSRR和瞬态响应等性能退化。"
+    },
+    {
+      "id": "ct_12_1",
+      "label": "低压电路设计技术",
+      "node_type": "core_technology",
+      "summary": "从工艺、器件结构和设计技术等方面综合考虑解决低压模拟电路设计难题。设计角度需首先解决电路正常工作问题，其次解决性能指标实现问题。",
+      "difficulty": 3,
+      "keywords": [
+        "低压设计",
+        "工艺",
+        "器件结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "从工艺、器件结构和设计技术等方面综合考虑解决低压模拟电路设计难题。设计角度需首先解决电路正常工作问题，其次解决性能指标实现问题。"
+    },
+    {
+      "id": "ct_12_2",
+      "label": "增益级联技术",
+      "node_type": "core_technology",
+      "summary": "在低压运放设计中，为维持原有增益指标，需增加横向级联的增益级数。但级数增加会带来系统稳定性问题，成为低压模拟运放系统设计的核心问题。",
+      "difficulty": 4,
+      "keywords": [
+        "增益级联",
+        "稳定性",
+        "运放设计"
+      ],
+      "formulas": [],
+      "applications": [
+        "运算放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在低压运放设计中，为维持原有增益指标，需增加横向级联的增益级数。但级数增加会带来系统稳定性问题，成为低压模拟运放系统设计的核心问题。"
+    },
+    {
+      "id": "ct_12_3",
+      "label": "基本低压单元结构设计",
+      "node_type": "core_technology",
+      "summary": "由于MOS器件阈值电压无法按比例随电源电压降低，依赖新器件新工艺的基本低压单元结构变得日益重要，这是解决最低工作电压受工艺条件限制的关键技术。",
+      "difficulty": 4,
+      "keywords": [
+        "低压单元",
+        "阈值电压",
+        "新工艺"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "由于MOS器件阈值电压无法按比例随电源电压降低，依赖新器件新工艺的基本低压单元结构变得日益重要，这是解决最低工作电压受工艺条件限制的关键技术。"
+    },
+    {
+      "id": "ca_12_1",
+      "label": "低压运算放大器",
+      "node_type": "circuit_application",
+      "summary": "在1V以下电源电压条件下设计的运算放大器，面临Cascode结构无法使用、增益下降、瞬态响应变差等问题，需要通过增益级联等特殊设计技术实现。",
+      "difficulty": 4,
+      "keywords": [
+        "低压运放",
+        "1V电源",
+        "增益级联"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "SoC"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在1V以下电源电压条件下设计的运算放大器，面临Cascode结构无法使用、增益下降、瞬态响应变差等问题，需要通过增益级联等特殊设计技术实现。"
+    },
+    {
+      "id": "ca_12_2",
+      "label": "轨至轨运算放大器",
+      "node_type": "circuit_application",
+      "summary": "高性能轨至轨类型运放系统是低压模拟电路的重要应用，能够在极低电源电压下工作并保持较大信号摆幅，是本章重点介绍的设计技术。",
+      "difficulty": 5,
+      "keywords": [
+        "轨至轨",
+        "低压",
+        "信号摆幅"
+      ],
+      "formulas": [],
+      "applications": [
+        "电池驱动设备",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高性能轨至轨类型运放系统是低压模拟电路的重要应用，能够在极低电源电压下工作并保持较大信号摆幅，是本章重点介绍的设计技术。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_12_1",
+      "target_id": "ct_12_1",
+      "relationship": "enables",
+      "description": "恒定电场MOS管可靠性约束使能了低压电路设计技术的发展",
+      "weight": 0.9,
+      "evidence": "在保持恒定电场 MOS 管可靠性的约束下, 伴随着电池驱动低功耗手持电子设备的广泛应用, 电路系统中的电源电压正在不断降低",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_2",
+      "target_id": "ct_12_1",
+      "relationship": "supports",
+      "description": "电源电压降低的影响分析支撑了低压电路设计技术的需求",
+      "weight": 0.8,
+      "evidence": "电源电压的降低通常导致模拟电路诸多性能明显衰退,如信号摆幅的大幅降低导致噪声的影响显著增加等",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_3",
+      "target_id": "ct_12_2",
+      "relationship": "enables",
+      "description": "Cascode结构的限制使能了增益级联技术的发展",
+      "weight": 0.85,
+      "evidence": "提供高增益的 Cascode 结构已无法继续使用, 并由此导致直流增益、带宽、PSRR 和瞬态响应等性能的退化",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_1",
+      "target_id": "ca_12_1",
+      "relationship": "implements",
+      "description": "低压电路设计技术实现了低压运算放大器的设计",
+      "weight": 0.9,
+      "evidence": "低压模拟电路设计难题的解决,可以从工艺、器件结构、设计技术等方面综合考虑",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_2",
+      "target_id": "ca_12_1",
+      "relationship": "applies_to",
+      "description": "增益级联技术应用于低压运算放大器设计",
+      "weight": 0.95,
+      "evidence": "为使低压运放维持原有的增益指标, 只能增加横向级联的增益级数",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_12_3",
+      "target_id": "ca_12_2",
+      "relationship": "implements",
+      "description": "基本低压单元结构设计实现了轨至轨运算放大器",
+      "weight": 0.85,
+      "evidence": "依赖新器件新工艺的基本低压单元结构显得日益重要",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_12_2",
+      "target_id": "ca_12_1",
+      "relationship": "supports",
+      "description": "电源电压降低的影响分析支撑了低压运算放大器的设计需求",
+      "weight": 0.8,
+      "evidence": "电源电压降至 $1\\mathrm{\\;V}$ 以内后,将对模拟电路设计带来更大的挑战",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "12.",
+  "title": "1 概述",
+  "extraction_timestamp": "2025-07-08T16:47:24.626990"
+}

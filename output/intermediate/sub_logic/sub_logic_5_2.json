@@ -1,0 +1,270 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_2_1",
+      "label": "跨导(gm)",
+      "node_type": "basic_concept",
+      "summary": "MOS管的跨导gm表示栅源电压变化对漏极电流的控制能力，定义为gm = ∂ID/∂VGS。它是电压放大电路的核心参数，直接影响增益大小。在饱和区，gm = √(2knID)，其中kn为工艺参数，ID为漏极电流。",
+      "difficulty": 2,
+      "keywords": [
+        "跨导",
+        "小信号参数",
+        "增益控制"
+      ],
+      "formulas": [
+        "gm = √(2knID)"
+      ],
+      "applications": [
+        "CS/CG/CD放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管的跨导gm表示栅源电压变化对漏极电流的控制能力，定义为gm = ∂ID/∂VGS。它是电压放大电路的核心参数，直接影响增益大小。在饱和区，gm = √(2knID)，其中kn为工艺参数，ID为漏极电流。"
+    },
+    {
+      "id": "bc_5_2_2",
+      "label": "输出阻抗(ro)",
+      "node_type": "basic_concept",
+      "summary": "MOS管的输出阻抗ro反映漏源电压变化对漏极电流的影响，定义为ro = ∂VDS/∂ID = 1/(λID)，其中λ为沟道长度调制系数。输出阻抗与增益直接相关，高ro有利于提高电压增益。",
+      "difficulty": 2,
+      "keywords": [
+        "输出阻抗",
+        "沟道调制效应",
+        "增益"
+      ],
+      "formulas": [
+        "ro = 1/(λID)"
+      ],
+      "applications": [
+        "放大器负载设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管二级效应"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "MOS管的输出阻抗ro反映漏源电压变化对漏极电流的影响，定义为ro = ∂VDS/∂ID = 1/(λID)，其中λ为沟道长度调制系数。输出阻抗与增益直接相关，高ro有利于提高电压增益。"
+    },
+    {
+      "id": "bc_5_2_3",
+      "label": "电压增益(Av)",
+      "node_type": "basic_concept",
+      "summary": "电压增益定义为输出电压变化与输入电压变化的比值Av = Vo/Vin。对于CS结构，Av = -gm(RL//ro)，负号表示反相放大；对于CG结构，Av = gm(RL//ro)，为正相放大。增益大小取决于跨导和等效负载阻抗。",
+      "difficulty": 2,
+      "keywords": [
+        "电压增益",
+        "小信号模型",
+        "放大器特性"
+      ],
+      "formulas": [
+        "Av = -gm(RL//ro)",
+        "Av = gm(RL//ro)"
+      ],
+      "applications": [
+        "放大器性能评估"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "小信号分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电压增益定义为输出电压变化与输入电压变化的比值Av = Vo/Vin。对于CS结构，Av = -gm(RL//ro)，负号表示反相放大；对于CG结构，Av = gm(RL//ro)，为正相放大。增益大小取决于跨导和等效负载阻抗。"
+    },
+    {
+      "id": "ct_5_2_1",
+      "label": "静态分析法",
+      "node_type": "core_technology",
+      "summary": "通过分析电路的直流工作点来推导小信号增益的方法。首先建立静态电流方程，然后对输入电压求偏导得到增益表达式。该方法能精确考虑沟道长度调制效应等非线性因素，但数学推导较复杂。",
+      "difficulty": 3,
+      "keywords": [
+        "静态分析",
+        "偏微分",
+        "精确建模"
+      ],
+      "formulas": [
+        "∂Vo/∂Vin(1+λIDRL/(1+λVo)) = -gmRL(1+λVo)"
+      ],
+      "applications": [
+        "CS/CG放大器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过分析电路的直流工作点来推导小信号增益的方法。首先建立静态电流方程，然后对输入电压求偏导得到增益表达式。该方法能精确考虑沟道长度调制效应等非线性因素，但数学推导较复杂。"
+    },
+    {
+      "id": "ct_5_2_2",
+      "label": "交流小信号等效电路法",
+      "node_type": "core_technology",
+      "summary": "将MOS管用跨导电流源和输出电阻等效，通过电路分析直接求解增益。该方法物理概念清晰，适合快速估算，但可能忽略某些二级效应。等效电路中固定电位交流接地，仅分析信号变化量。",
+      "difficulty": 3,
+      "keywords": [
+        "小信号模型",
+        "等效电路",
+        "快速分析"
+      ],
+      "formulas": [
+        "Vo = -gmVin(RL//ro)"
+      ],
+      "applications": [
+        "放大器频率响应分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将MOS管用跨导电流源和输出电阻等效，通过电路分析直接求解增益。该方法物理概念清晰，适合快速估算，但可能忽略某些二级效应。等效电路中固定电位交流接地，仅分析信号变化量。"
+    },
+    {
+      "id": "ct_5_2_3",
+      "label": "源极反馈技术",
+      "node_type": "core_technology",
+      "summary": "在源极引入电阻RS形成局部负反馈，通过抑制VGS变化来稳定工作点和控制增益。有效跨导变为Gm = gm/(1+gmRS)，增益公式变为Av = -Gm(RL//ro)。RS可以是正电阻或负电阻，分别用于降低或提高增益。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "增益控制",
+        "稳定性"
+      ],
+      "formulas": [
+        "Gm = gm/(1+gmRS)",
+        "Av = -RL/(1/gm±RS)"
+      ],
+      "applications": [
+        "增益精确控制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "在源极引入电阻RS形成局部负反馈，通过抑制VGS变化来稳定工作点和控制增益。有效跨导变为Gm = gm/(1+gmRS)，增益公式变为Av = -Gm(RL//ro)。RS可以是正电阻或负电阻，分别用于降低或提高增益。"
+    },
+    {
+      "id": "ca_5_2_1",
+      "label": "电阻负载CS放大器",
+      "node_type": "circuit_application",
+      "summary": "最基本的CS结构，采用无源电阻RL作为负载。优点：结构简单；缺点：增益与偏置矛盾（高RL导致工作点下降），大电阻占用面积大。典型增益Av = -gmRL，实际受ro影响为Av = -gm(RL//ro)。",
+      "difficulty": 3,
+      "keywords": [
+        "共源极",
+        "电阻负载",
+        "基本放大器"
+      ],
+      "formulas": [
+        "Av = -gm(RL//ro)"
+      ],
+      "applications": [
+        "低频小信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "最基本的CS结构，采用无源电阻RL作为负载。优点：结构简单；缺点：增益与偏置矛盾（高RL导致工作点下降），大电阻占用面积大。典型增益Av = -gmRL，实际受ro影响为Av = -gm(RL//ro)。"
+    },
+    {
+      "id": "ca_5_2_2",
+      "label": "PMOS有源负载CS放大器",
+      "node_type": "circuit_application",
+      "summary": "采用PMOS管作为有源负载的CS结构。优点：节省面积，增益可控（Av = -gm1/gm2）；缺点：输出摆幅受限（损失VTP），存在衬偏效应导致非线性。需确保两管均工作在饱和区。",
+      "difficulty": 4,
+      "keywords": [
+        "有源负载",
+        "互补MOS",
+        "增益控制"
+      ],
+      "formulas": [
+        "Av = -gm1/(gd1+gd2)"
+      ],
+      "applications": [
+        "集成电路放大级"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "采用PMOS管作为有源负载的CS结构。优点：节省面积，增益可控（Av = -gm1/gm2）；缺点：输出摆幅受限（损失VTP），存在衬偏效应导致非线性。需确保两管均工作在饱和区。"
+    },
+    {
+      "id": "ca_5_2_3",
+      "label": "互补推挽Class AB放大器",
+      "node_type": "circuit_application",
+      "summary": "NMOS和PMOS管同时作为放大管，静态偏置在弱开启状态。优点：高效率、低失真；缺点：偏置复杂。通过消除死区实现全波放大，适合功率应用。增益由两管gm共同决定。",
+      "difficulty": 5,
+      "keywords": [
+        "推挽结构",
+        "功率放大",
+        "Class AB"
+      ],
+      "formulas": [
+        "Av = (gmn+gmp)RL"
+      ],
+      "applications": [
+        "音频功放",
+        "输出驱动"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "NMOS和PMOS管同时作为放大管，静态偏置在弱开启状态。优点：高效率、低失真；缺点：偏置复杂。通过消除死区实现全波放大，适合功率应用。增益由两管gm共同决定。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_2_1",
+      "target_id": "ct_5_2_1",
+      "relationship": "enables",
+      "description": "跨导gm是静态分析法中推导增益的核心参数，通过gm将输入电压变化转换为电流变化",
+      "weight": 0.9,
+      "evidence": "方程(5-2)中直接包含gm项",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_2",
+      "target_id": "ca_5_2_1",
+      "relationship": "supports",
+      "description": "输出阻抗ro影响电阻负载CS放大器的实际增益，与RL形成并联决定有效负载",
+      "weight": 0.8,
+      "evidence": "公式Av = -gm(RL//ro)明确显示ro作用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_2_3",
+      "target_id": "ca_5_2_1",
+      "relationship": "applies_to",
+      "description": "源极反馈技术可应用于电阻负载CS结构，通过RS实现增益精确控制和稳定性提升",
+      "weight": 0.7,
+      "evidence": "图5-3和公式(5-10)展示RS在CS中的应用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_2_3",
+      "target_id": "ca_5_2_2",
+      "relationship": "supports",
+      "description": "电压增益理论指导PMOS有源负载设计，通过调整gm1/gm2比实现精确增益控制",
+      "weight": 0.85,
+      "evidence": "公式Av = -gm1/gm2直接关联两管跨导",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_2_2",
+      "target_id": "ca_5_2_3",
+      "relationship": "implements",
+      "description": "交流小信号等效电路法用于分析互补推挽结构的增益特性，考虑两管并联贡献",
+      "weight": 0.75,
+      "evidence": "Class AB分析依赖小信号gm叠加",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.2",
+  "title": "单级放大电路",
+  "extraction_timestamp": "2025-07-08T16:37:31.396689"
+}

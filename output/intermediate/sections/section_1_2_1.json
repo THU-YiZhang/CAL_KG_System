@@ -1,0 +1,7 @@
+{
+  "section_num": "1.2.1",
+  "title": "基尔霍夫电流定律(KCL)",
+  "level": 3,
+  "content": "在任何节点，流入的电流之和等于流出的电流之和：∑I_in = ∑I_out",
+  "subsections": []
+}

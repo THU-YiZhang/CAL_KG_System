@@ -1,0 +1,275 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_5_1",
+      "label": "电源抑制比(PSR)",
+      "node_type": "basic_concept",
+      "summary": "电源抑制比反映的是电路系统中电源噪声在传输过程中相对有效信号处理的相对强弱关系。PSR是电压噪声传输函数的倒数，与信号跨导和电源跨导的相对关系有关。",
+      "difficulty": 3,
+      "keywords": [
+        "PSR",
+        "电源噪声",
+        "跨导"
+      ],
+      "formulas": [
+        "PSR = 1/Ap"
+      ],
+      "applications": [
+        "运放设计",
+        "电源管理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "跨导",
+        "传输函数"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制比反映的是电路系统中电源噪声在传输过程中相对有效信号处理的相对强弱关系。PSR是电压噪声传输函数的倒数，与信号跨导和电源跨导的相对关系有关。"
+    },
+    {
+      "id": "bc_11_5_2",
+      "label": "电源噪声传输函数(PSRR)",
+      "node_type": "basic_concept",
+      "summary": "PSRR描述的是电源噪声传输到输出的实际大小，与各级增益环节的电源跨导和各增益结点位置下的输出阻抗有关。PSRR与系统的开环或闭环结构近似无关。",
+      "difficulty": 3,
+      "keywords": [
+        "PSRR",
+        "噪声传输",
+        "输出阻抗"
+      ],
+      "formulas": [],
+      "applications": [
+        "噪声分析",
+        "电路稳定性"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "阻抗分析",
+        "反馈理论"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PSRR描述的是电源噪声传输到输出的实际大小，与各级增益环节的电源跨导和各增益结点位置下的输出阻抗有关。PSRR与系统的开环或闭环结构近似无关。"
+    },
+    {
+      "id": "bc_11_5_3",
+      "label": "厄利电压(VA)",
+      "node_type": "basic_concept",
+      "summary": "厄利电压是描述MOS管输出阻抗特性的参数，与沟道长度调制效应相关。单位沟长下的厄利电压VA0用于计算PMOS管的输出阻抗。",
+      "difficulty": 2,
+      "keywords": [
+        "厄利电压",
+        "输出阻抗",
+        "MOS管"
+      ],
+      "formulas": [
+        "rds,MP = VA0L/Io"
+      ],
+      "applications": [
+        "MOS管建模",
+        "阻抗计算"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "厄利电压是描述MOS管输出阻抗特性的参数，与沟道长度调制效应相关。单位沟长下的厄利电压VA0用于计算PMOS管的输出阻抗。"
+    },
+    {
+      "id": "ct_11_5_1",
+      "label": "开环PSR分析",
+      "node_type": "core_technology",
+      "summary": "通过建立PMOS放大管的等效电路模型，分析开环状态下电源噪声的传输特性。关键步骤包括计算输出阻抗、分析噪声传递路径，并考虑寄生电容的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "开环分析",
+        "等效电路",
+        "噪声传输"
+      ],
+      "formulas": [
+        "zos = (Rf1+Rf2)//(RESR+1/(sCL))//RL",
+        "zo = zos//zds"
+      ],
+      "applications": [
+        "运放设计",
+        "噪声抑制"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过建立PMOS放大管的等效电路模型，分析开环状态下电源噪声的传输特性。关键步骤包括计算输出阻抗、分析噪声传递路径，并考虑寄生电容的影响。"
+    },
+    {
+      "id": "ct_11_5_2",
+      "label": "闭环PSR优化",
+      "node_type": "core_technology",
+      "summary": "利用负反馈系统降低输出噪声和提高PSR。通过深度负反馈降低输出阻抗，增加输入阻抗，从而改善电源噪声抑制性能。需要计算闭环输出阻抗和环路增益的影响。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "闭环优化",
+        "环路增益"
+      ],
+      "formulas": [
+        "zoc = zo/(1+FAoL)"
+      ],
+      "applications": [
+        "反馈电路设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "利用负反馈系统降低输出噪声和提高PSR。通过深度负反馈降低输出阻抗，增加输入阻抗，从而改善电源噪声抑制性能。需要计算闭环输出阻抗和环路增益的影响。"
+    },
+    {
+      "id": "ct_11_5_3",
+      "label": "多频段PSR分析",
+      "node_type": "core_technology",
+      "summary": "将频率范围划分为五个特征频段(F1-F5)，分别分析不同频段下PSR的变化规律。考虑开环增益、负载电容、ESR等因素在不同频段的主导作用。",
+      "difficulty": 5,
+      "keywords": [
+        "频段分析",
+        "频率响应",
+        "阻抗特性"
+      ],
+      "formulas": [
+        "PSR = (1+m)AvF2+1",
+        "PSR = 1+srdsCL"
+      ],
+      "applications": [
+        "宽带设计",
+        "频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "将频率范围划分为五个特征频段(F1-F5)，分别分析不同频段下PSR的变化规律。考虑开环增益、负载电容、ESR等因素在不同频段的主导作用。"
+    },
+    {
+      "id": "ca_11_5_1",
+      "label": "PMOS单级增益电路",
+      "node_type": "circuit_application",
+      "summary": "以PMOS为放大管的单级增益电路，用于分析电源噪声传输特性。电路包含PMOS放大管、负载电阻RL、反馈网络Rf和负载电容CL等元件。",
+      "difficulty": 4,
+      "keywords": [
+        "PMOS放大器",
+        "单级增益",
+        "噪声分析"
+      ],
+      "formulas": [],
+      "applications": [
+        "噪声抑制电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "以PMOS为放大管的单级增益电路，用于分析电源噪声传输特性。电路包含PMOS放大管、负载电阻RL、反馈网络Rf和负载电容CL等元件。"
+    },
+    {
+      "id": "ca_11_5_2",
+      "label": "电压串联负反馈运放",
+      "node_type": "circuit_application",
+      "summary": "典型的电压串联负反馈闭环运放系统，在深度负反馈条件下可有效降低输出噪声和提高PSR。系统具有降低的输出阻抗和增加的输入阻抗特性。",
+      "difficulty": 5,
+      "keywords": [
+        "负反馈运放",
+        "闭环系统",
+        "噪声抑制"
+      ],
+      "formulas": [],
+      "applications": [
+        "精密放大",
+        "低噪声设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "典型的电压串联负反馈闭环运放系统，在深度负反馈条件下可有效降低输出噪声和提高PSR。系统具有降低的输出阻抗和增加的输入阻抗特性。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_5_1",
+      "target_id": "ct_11_5_1",
+      "relationship": "enables",
+      "description": "PSR概念为开环PSR分析提供了理论基础和性能指标",
+      "weight": 0.9,
+      "evidence": "电源抑制比反映的是电路系统中电源噪声在传输过程中相对有效信号处理的相对强弱关系",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_5_2",
+      "target_id": "ct_11_5_2",
+      "relationship": "supports",
+      "description": "PSRR特性分析需要闭环系统的优化方法",
+      "weight": 0.8,
+      "evidence": "单位闭环负反馈下的最大PSR即等同于电路的PSRR",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_5_3",
+      "target_id": "ct_11_5_1",
+      "relationship": "supports",
+      "description": "厄利电压用于计算PMOS管输出阻抗，是开环分析的关键参数",
+      "weight": 0.7,
+      "evidence": "PMOS调整管输出电阻rds,MP与负载电阻RL的关系由厄利电压决定",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_5_1",
+      "target_id": "ca_11_5_1",
+      "relationship": "applies_to",
+      "description": "开环PSR分析方法应用于PMOS单级增益电路的噪声分析",
+      "weight": 0.8,
+      "evidence": "以PMOS为放大管单级增益为例，分析其单输出支路对电源噪声的传输作用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_5_2",
+      "target_id": "ca_11_5_2",
+      "relationship": "implements",
+      "description": "闭环PSR优化技术在电压串联负反馈运放中实现",
+      "weight": 0.9,
+      "evidence": "以典型的电压串联负反馈闭环运放为例，在深度负反馈条件下运放系统的总输出阻抗减小",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_5_3",
+      "target_id": "ca_11_5_2",
+      "relationship": "applies_to",
+      "description": "多频段PSR分析方法用于评估反馈运放的频率特性",
+      "weight": 0.7,
+      "evidence": "根据不同频段下电压噪声分压阻抗比的变化，形成PSRR及Av随频率的不同变化",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_5_1",
+      "target_id": "bc_11_5_2",
+      "relationship": "relates_to",
+      "description": "PSR和PSRR都是描述电源噪声特性的指标，但侧重点不同",
+      "weight": 0.6,
+      "evidence": "PSR与PSRR两者之间显著的区别之一",
+      "bidirectional": true
+    },
+    {
+      "source_id": "ct_11_5_1",
+      "target_id": "ct_11_5_2",
+      "relationship": "complements",
+      "description": "开环和闭环PSR分析互为补充，完整描述系统噪声特性",
+      "weight": 0.7,
+      "evidence": "开环及开环所构成的闭环系统PSR的明显不同",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "11.5",
+  "title": "电源噪声",
+  "extraction_timestamp": "2025-07-08T16:46:34.445305"
+}

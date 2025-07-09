@@ -1,0 +1,361 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_6_1",
+      "label": "电流源",
+      "node_type": "basic_concept",
+      "summary": "电流源是一种能够提供恒定电流的电路元件，其核心特性是输出电阻高，能够在变化的负载条件下保持电流稳定。电流源通过有源器件（BJT或MOS管）的偏置和尺寸控制来实现恒流输出。",
+      "difficulty": 2,
+      "keywords": [
+        "恒流特性",
+        "输出电阻",
+        "有源器件"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路",
+        "模拟电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体物理",
+        "有源器件特性"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流源是一种能够提供恒定电流的电路元件，其核心特性是输出电阻高，能够在变化的负载条件下保持电流稳定。电流源通过有源器件（BJT或MOS管）的偏置和尺寸控制来实现恒流输出。"
+    },
+    {
+      "id": "bc_3_6_2",
+      "label": "电流镜",
+      "node_type": "basic_concept",
+      "summary": "电流镜是一种通过复制输入电流到输出端的电路结构，利用有源器件的匹配特性实现电流的线性传输。电流镜的核心是输入和输出管的尺寸和偏置电压匹配，以实现精确的电流复制。",
+      "difficulty": 3,
+      "keywords": [
+        "电流复制",
+        "尺寸匹配",
+        "偏置电压"
+      ],
+      "formulas": [
+        "I_o/I_ref = (W/L)_2/(W/L)_1 * (1 + λV_o)/(1 + λV_DSI)"
+      ],
+      "applications": [
+        "电流偏置",
+        "电流放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管特性",
+        "电流源原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电流镜是一种通过复制输入电流到输出端的电路结构，利用有源器件的匹配特性实现电流的线性传输。电流镜的核心是输入和输出管的尺寸和偏置电压匹配，以实现精确的电流复制。"
+    },
+    {
+      "id": "bc_3_6_3",
+      "label": "输出电阻",
+      "node_type": "basic_concept",
+      "summary": "输出电阻是衡量电流源性能的关键参数，输出电阻越高，电流源的恒流特性越好。提高输出电阻的方法包括降低静态电流、增加沟道长度或通过电路结构优化（如Cascode结构）。",
+      "difficulty": 3,
+      "keywords": [
+        "恒流特性",
+        "输出阻抗",
+        "r_o"
+      ],
+      "formulas": [
+        "R_o = g_m2 * r_o2 * r_o3"
+      ],
+      "applications": [
+        "电流源设计",
+        "性能优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "小信号模型",
+        "阻抗分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "输出电阻是衡量电流源性能的关键参数，输出电阻越高，电流源的恒流特性越好。提高输出电阻的方法包括降低静态电流、增加沟道长度或通过电路结构优化（如Cascode结构）。"
+    },
+    {
+      "id": "bc_3_6_4",
+      "label": "动态范围",
+      "node_type": "basic_concept",
+      "summary": "动态范围是指电流源在保持恒流特性的前提下，输出电压的可变化范围。动态范围受限于有源器件的饱和区工作条件，优化动态范围需要平衡输出电阻和电压摆幅。",
+      "difficulty": 3,
+      "keywords": [
+        "电压摆幅",
+        "饱和区",
+        "工作范围"
+      ],
+      "formulas": [
+        "V_o = V_DS1 + V_DS2 ≥ V_GS1 + V_DS2,min"
+      ],
+      "applications": [
+        "低压电路设计",
+        "宽范围电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "MOS管工作区",
+        "电压偏置"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "动态范围是指电流源在保持恒流特性的前提下，输出电压的可变化范围。动态范围受限于有源器件的饱和区工作条件，优化动态范围需要平衡输出电阻和电压摆幅。"
+    },
+    {
+      "id": "ct_3_6_1",
+      "label": "电流镜匹配技术",
+      "node_type": "core_technology",
+      "summary": "通过精确匹配输入和输出管的尺寸（W/L）和偏置电压（V_GS、V_DS），实现电流镜的高精度电流复制。主控电压（V_GS）匹配通过结构设计实现，辅控电压（V_DS）匹配通过电路优化（如Wilson结构）实现。",
+      "difficulty": 4,
+      "keywords": [
+        "尺寸匹配",
+        "电压匹配",
+        "电流精度"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度电流源",
+        "电流镜设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过精确匹配输入和输出管的尺寸（W/L）和偏置电压（V_GS、V_DS），实现电流镜的高精度电流复制。主控电压（V_GS）匹配通过结构设计实现，辅控电压（V_DS）匹配通过电路优化（如Wilson结构）实现。"
+    },
+    {
+      "id": "ct_3_6_2",
+      "label": "输出电阻提升技术",
+      "node_type": "core_technology",
+      "summary": "通过增加沟道长度（L）、降低静态电流或采用Cascode结构，显著提高电流源的输出电阻。Cascode结构通过叠加有源器件，利用其高输出阻抗特性实现输出电阻的倍增。",
+      "difficulty": 4,
+      "keywords": [
+        "Cascode",
+        "沟道长度",
+        "静态电流"
+      ],
+      "formulas": [
+        "R_o ≈ g_m * r_o2 * r_o1"
+      ],
+      "applications": [
+        "高性能电流源",
+        "电源抑制比优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过增加沟道长度（L）、降低静态电流或采用Cascode结构，显著提高电流源的输出电阻。Cascode结构通过叠加有源器件，利用其高输出阻抗特性实现输出电阻的倍增。"
+    },
+    {
+      "id": "ct_3_6_3",
+      "label": "动态范围扩展技术",
+      "node_type": "core_technology",
+      "summary": "通过改进偏置方式（如外偏置或自偏置）和电路结构（如宽动态范围Cascode），减小MOS管的饱和压降，扩展电流源的输出电压动态范围。牺牲面积或功耗以换取更大的工作电压范围。",
+      "difficulty": 4,
+      "keywords": [
+        "偏置优化",
+        "电压摆幅",
+        "Cascode改进"
+      ],
+      "formulas": [
+        "V_G2 = V_GS2 + V_DS1,min = V_TH2 + Δ1 + Δ2"
+      ],
+      "applications": [
+        "低压电流源",
+        "宽范围应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过改进偏置方式（如外偏置或自偏置）和电路结构（如宽动态范围Cascode），减小MOS管的饱和压降，扩展电流源的输出电压动态范围。牺牲面积或功耗以换取更大的工作电压范围。"
+    },
+    {
+      "id": "ca_3_6_1",
+      "label": "基本电流源",
+      "node_type": "circuit_application",
+      "summary": "基于简单电流镜结构的基本电流源，输入和输出管的V_GS相同，但V_DS不同，导致电流失配。通过增加沟道长度或降低静态电流可改善匹配性能，但输出阻抗有限。",
+      "difficulty": 3,
+      "keywords": [
+        "电流镜",
+        "失配",
+        "输出阻抗"
+      ],
+      "formulas": [
+        "I_o/I_ref = (W/L)_2/(W/L)_1 * (1 + λV_o)/(1 + λV_DSI)"
+      ],
+      "applications": [
+        "基础偏置电路",
+        "低精度电流源"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于简单电流镜结构的基本电流源，输入和输出管的V_GS相同，但V_DS不同，导致电流失配。通过增加沟道长度或降低静态电流可改善匹配性能，但输出阻抗有限。"
+    },
+    {
+      "id": "ca_3_6_2",
+      "label": "Wilson电流源",
+      "node_type": "circuit_application",
+      "summary": "通过增加反馈管（M4）实现V_DS的匹配，显著提高电流镜的精度。基本型Wilson结构存在V_DS失配，改进型通过电平移位实现V_DS匹配，输出阻抗约为g_m2*r_o2*r_o3。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈控制",
+        "电平移位",
+        "高输出阻抗"
+      ],
+      "formulas": [
+        "R_o = g_m2 * r_o2 * r_o3"
+      ],
+      "applications": [
+        "高精度电流源",
+        "电源抑制比优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过增加反馈管（M4）实现V_DS的匹配，显著提高电流镜的精度。基本型Wilson结构存在V_DS失配，改进型通过电平移位实现V_DS匹配，输出阻抗约为g_m2*r_o2*r_o3。"
+    },
+    {
+      "id": "ca_3_6_3",
+      "label": "Cascode电流源",
+      "node_type": "circuit_application",
+      "summary": "通过叠加MOS管（M1和M2）构成Cascode结构，输出阻抗显著提高（g_m*r_o^2），但动态范围受限于饱和压降（2Δ）。宽动态范围改进型通过外偏置或自偏置优化，扩展输出电压范围。",
+      "difficulty": 5,
+      "keywords": [
+        "高输出阻抗",
+        "动态范围",
+        "偏置优化"
+      ],
+      "formulas": [
+        "V_o = V_DS1 + V_DS2 ≥ V_TH + 2Δ",
+        "R_o ≈ g_m * r_o2 * r_o1"
+      ],
+      "applications": [
+        "高性能电流源",
+        "低压应用"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过叠加MOS管（M1和M2）构成Cascode结构，输出阻抗显著提高（g_m*r_o^2），但动态范围受限于饱和压降（2Δ）。宽动态范围改进型通过外偏置或自偏置优化，扩展输出电压范围。"
+    },
+    {
+      "id": "ca_3_6_4",
+      "label": "Wildar电流源",
+      "node_type": "circuit_application",
+      "summary": "一种非线性微电流源，通过ΔV_GS/R定义支路电流，适合低功耗微电流偏置。改进型结合电阻和MOS线性电阻，实现更灵活的电流控制，温度系数为正（PTAT）。",
+      "difficulty": 4,
+      "keywords": [
+        "微电流",
+        "非线性",
+        "温度系数"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗偏置",
+        "温度补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "一种非线性微电流源，通过ΔV_GS/R定义支路电流，适合低功耗微电流偏置。改进型结合电阻和MOS线性电阻，实现更灵活的电流控制，温度系数为正（PTAT）。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_6_1",
+      "target_id": "ct_3_6_1",
+      "relationship": "enables",
+      "description": "电流源的基本原理使能了电流镜匹配技术的实现，通过理解恒流特性和有源器件行为，才能设计高精度匹配方案。",
+      "weight": 0.9,
+      "evidence": "电流镜通过有源器件的匹配特性实现电流的线性传输",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_6_2",
+      "target_id": "ct_3_6_1",
+      "relationship": "supports",
+      "description": "电流镜的概念支撑了匹配技术的开发，明确尺寸和偏置电压的影响是技术实现的基础。",
+      "weight": 0.8,
+      "evidence": "通过精确匹配输入和输出管的尺寸和偏置电压实现高精度电流复制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_6_3",
+      "target_id": "ct_3_6_2",
+      "relationship": "enables",
+      "description": "输出电阻的理论分析使能了Cascode等输出电阻提升技术的设计，明确阻抗倍增原理是关键。",
+      "weight": 0.9,
+      "evidence": "Cascode结构通过叠加有源器件实现输出电阻的倍增",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_6_4",
+      "target_id": "ct_3_6_3",
+      "relationship": "supports",
+      "description": "动态范围的概念支撑了扩展技术的开发，理解饱和区限制是优化偏置和结构的前提。",
+      "weight": 0.8,
+      "evidence": "通过改进偏置方式和电路结构扩展动态范围",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_6_1",
+      "target_id": "ca_3_6_1",
+      "relationship": "implements",
+      "description": "电流镜匹配技术直接实现了基本电流源的设计，匹配精度决定了电路性能。",
+      "weight": 0.7,
+      "evidence": "基本电流源基于电流镜结构，依赖尺寸和偏置匹配",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_6_2",
+      "target_id": "ca_3_6_3",
+      "relationship": "implements",
+      "description": "输出电阻提升技术通过Cascode结构实现了高性能电流源，阻抗倍增是核心。",
+      "weight": 0.9,
+      "evidence": "Cascode电流源利用高输出阻抗特性实现恒流性能",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_6_3",
+      "target_id": "ca_3_6_3",
+      "relationship": "applies_to",
+      "description": "动态范围扩展技术应用于Cascode电流源的改进，优化偏置以平衡阻抗和摆幅。",
+      "weight": 0.8,
+      "evidence": "宽动态范围Cascode通过偏置改进扩展输出电压范围",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_3_6_1",
+      "target_id": "ca_3_6_2",
+      "relationship": "extends",
+      "description": "Wilson电流源是基本电流源的扩展，通过反馈控制提高匹配精度。",
+      "weight": 0.7,
+      "evidence": "Wilson结构通过增加反馈管改进基本电流镜",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_3_6_3",
+      "relationship": "complements",
+      "description": "Cascode电流源与Wilson结构互补，前者侧重高阻抗，后者侧重高匹配精度。",
+      "weight": 0.6,
+      "evidence": "两种结构分别优化输出电阻和电流匹配",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "3.6",
+  "title": "电流源",
+  "extraction_timestamp": "2025-07-08T16:35:46.202423"
+}

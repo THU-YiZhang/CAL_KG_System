@@ -1,0 +1,264 @@
+{
+  "nodes": [
+    {
+      "id": "bc_6_8_1",
+      "label": "Class-AB放大器",
+      "node_type": "basic_concept",
+      "summary": "Class-AB放大器是一种结合了Class-A和Class-B放大器优点的放大器类型，具有较高的效率和较低的失真。它通过偏置电路使输出晶体管在无信号时保持微导通状态，从而减小交越失真。",
+      "difficulty": 2,
+      "keywords": [
+        "效率",
+        "失真",
+        "偏置"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器",
+        "功率放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管工作原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class-AB放大器是一种结合了Class-A和Class-B放大器优点的放大器类型，具有较高的效率和较低的失真。它通过偏置电路使输出晶体管在无信号时保持微导通状态，从而减小交越失真。"
+    },
+    {
+      "id": "bc_6_8_2",
+      "label": "共模反馈电路",
+      "node_type": "basic_concept",
+      "summary": "共模反馈电路（CMFB）用于差分放大器中，通过检测和调整共模电压来稳定放大器的输出共模电平，确保差分信号的正确放大。",
+      "difficulty": 3,
+      "keywords": [
+        "差分放大器",
+        "共模电压",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分放大器",
+        "运算放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模反馈电路（CMFB）用于差分放大器中，通过检测和调整共模电压来稳定放大器的输出共模电平，确保差分信号的正确放大。"
+    },
+    {
+      "id": "bc_6_8_3",
+      "label": "运算放大器",
+      "node_type": "basic_concept",
+      "summary": "运算放大器是一种高增益、高输入阻抗、低输出阻抗的差分放大器，广泛用于模拟信号处理。其性能参数包括增益、带宽、压摆率等。",
+      "difficulty": 2,
+      "keywords": [
+        "高增益",
+        "差分输入",
+        "模拟信号"
+      ],
+      "formulas": [],
+      "applications": [
+        "滤波器",
+        "信号放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "运算放大器是一种高增益、高输入阻抗、低输出阻抗的差分放大器，广泛用于模拟信号处理。其性能参数包括增益、带宽、压摆率等。"
+    },
+    {
+      "id": "ct_6_8_1",
+      "label": "高摆幅CMOS功率放大器设计",
+      "node_type": "core_technology",
+      "summary": "高摆幅CMOS功率放大器设计技术通过优化输出级电路，实现接近电源电压的输出摆幅，提高功率效率。设计时需考虑晶体管的导通电阻和寄生电容。",
+      "difficulty": 4,
+      "keywords": [
+        "输出摆幅",
+        "功率效率",
+        "CMOS"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频功率放大器",
+        "音频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高摆幅CMOS功率放大器设计技术通过优化输出级电路，实现接近电源电压的输出摆幅，提高功率效率。设计时需考虑晶体管的导通电阻和寄生电容。"
+    },
+    {
+      "id": "ct_6_8_2",
+      "label": "差分差分放大器共模反馈",
+      "node_type": "core_technology",
+      "summary": "差分差分放大器共模反馈技术利用差分差分放大器（DDA）实现共模反馈，具有高共模抑制比和宽带宽的特点。设计时需平衡共模反馈环路的稳定性和速度。",
+      "difficulty": 4,
+      "keywords": [
+        "DDA",
+        "共模抑制",
+        "带宽"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速差分放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分差分放大器共模反馈技术利用差分差分放大器（DDA）实现共模反馈，具有高共模抑制比和宽带宽的特点。设计时需平衡共模反馈环路的稳定性和速度。"
+    },
+    {
+      "id": "ct_6_8_3",
+      "label": "两级CMOS运算放大器设计",
+      "node_type": "core_technology",
+      "summary": "两级CMOS运算放大器设计技术通过第一级提供高增益，第二级提供输出驱动能力，实现高增益和宽带宽。设计时需考虑米勒补偿和相位裕度。",
+      "difficulty": 4,
+      "keywords": [
+        "米勒补偿",
+        "相位裕度",
+        "增益带宽积"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "两级CMOS运算放大器设计技术通过第一级提供高增益，第二级提供输出驱动能力，实现高增益和宽带宽。设计时需考虑米勒补偿和相位裕度。"
+    },
+    {
+      "id": "ca_6_8_1",
+      "label": "Class-AB高摆幅CMOS功率放大器",
+      "node_type": "circuit_application",
+      "summary": "Class-AB高摆幅CMOS功率放大器采用Class-AB输出级设计，实现高效率和低失真的功率放大。输出级通常采用互补推挽结构，偏置电路确保晶体管微导通。",
+      "difficulty": 5,
+      "keywords": [
+        "推挽输出",
+        "偏置电路",
+        "高效率"
+      ],
+      "formulas": [],
+      "applications": [
+        "射频前端",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Class-AB高摆幅CMOS功率放大器采用Class-AB输出级设计，实现高效率和低失真的功率放大。输出级通常采用互补推挽结构，偏置电路确保晶体管微导通。"
+    },
+    {
+      "id": "ca_6_8_2",
+      "label": "带共模反馈的差分放大器",
+      "node_type": "circuit_application",
+      "summary": "带共模反馈的差分放大器通过共模反馈电路稳定输出共模电平，适用于高速差分信号处理。共模反馈电路通常采用电阻分压或电流镜结构。",
+      "difficulty": 5,
+      "keywords": [
+        "共模稳定",
+        "差分信号",
+        "高速"
+      ],
+      "formulas": [],
+      "applications": [
+        "ADC前端",
+        "通信系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "带共模反馈的差分放大器通过共模反馈电路稳定输出共模电平，适用于高速差分信号处理。共模反馈电路通常采用电阻分压或电流镜结构。"
+    },
+    {
+      "id": "ca_6_8_3",
+      "label": "伪Class-AB望远镜级联运算放大器",
+      "node_type": "circuit_application",
+      "summary": "伪Class-AB望远镜级联运算放大器结合望远镜级联结构和Class-AB输出级，实现高增益和高压摆率。输入级采用差分对，输出级采用Class-AB推挽结构。",
+      "difficulty": 5,
+      "keywords": [
+        "望远镜级联",
+        "高压摆率",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "伪Class-AB望远镜级联运算放大器结合望远镜级联结构和Class-AB输出级，实现高增益和高压摆率。输入级采用差分对，输出级采用Class-AB推挽结构。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_6_8_1",
+      "target_id": "ct_6_8_1",
+      "relationship": "enables",
+      "description": "Class-AB放大器的基本原理使能了高摆幅CMOS功率放大器的设计",
+      "weight": 0.9,
+      "evidence": "参考文献[1]中提出的Class-AB高摆幅CMOS功率放大器设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_8_2",
+      "target_id": "ct_6_8_2",
+      "relationship": "enables",
+      "description": "共模反馈电路的基本原理使能了差分差分放大器共模反馈技术的实现",
+      "weight": 0.9,
+      "evidence": "参考文献[2]中提出的差分差分放大器共模反馈电路",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_6_8_3",
+      "target_id": "ct_6_8_3",
+      "relationship": "enables",
+      "description": "运算放大器的基本原理使能了两级CMOS运算放大器的设计",
+      "weight": 0.9,
+      "evidence": "参考文献[5]中提出的两级CMOS运算放大器设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_8_1",
+      "target_id": "ca_6_8_1",
+      "relationship": "implements",
+      "description": "高摆幅CMOS功率放大器设计技术实现了Class-AB高摆幅CMOS功率放大器",
+      "weight": 0.9,
+      "evidence": "参考文献[1]中的具体电路实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_8_2",
+      "target_id": "ca_6_8_2",
+      "relationship": "implements",
+      "description": "差分差分放大器共模反馈技术实现了带共模反馈的差分放大器",
+      "weight": 0.9,
+      "evidence": "参考文献[2]中的具体电路实现",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_6_8_3",
+      "target_id": "ca_6_8_3",
+      "relationship": "implements",
+      "description": "两级CMOS运算放大器设计技术实现了伪Class-AB望远镜级联运算放大器",
+      "weight": 0.9,
+      "evidence": "参考文献[7]中的具体电路实现",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "6.8",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:40:12.609102"
+}

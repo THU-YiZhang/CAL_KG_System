@@ -1,0 +1,194 @@
+{
+  "nodes": [
+    {
+      "id": "bc_3_8_1",
+      "label": "电阻分压结构",
+      "node_type": "basic_concept",
+      "summary": "电阻分压结构是利用电阻网络将输入电压按比例分配到不同节点的电路结构。它是分析与设计偏置电路的基本出发点，通过合理配置电阻值可以实现特定的电压分配。",
+      "difficulty": 2,
+      "keywords": [
+        "电阻网络",
+        "电压分配",
+        "分压比"
+      ],
+      "formulas": [
+        "Vout = Vin * (R2/(R1+R2))"
+      ],
+      "applications": [
+        "偏置电路",
+        "电压基准"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "欧姆定律",
+        "基尔霍夫定律"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电阻分压结构是利用电阻网络将输入电压按比例分配到不同节点的电路结构。它是分析与设计偏置电路的基本出发点，通过合理配置电阻值可以实现特定的电压分配。"
+    },
+    {
+      "id": "bc_3_8_2",
+      "label": "工作点稳定性",
+      "node_type": "basic_concept",
+      "summary": "工作点稳定性指电路在受到扰动后能够维持或恢复到原工作状态的能力。在偏置电路中，稳定性直接影响电路的性能和可靠性，需要通过反馈机制和电路结构设计来保证。",
+      "difficulty": 3,
+      "keywords": [
+        "静态工作点",
+        "动态稳定性",
+        "反馈机制"
+      ],
+      "formulas": [],
+      "applications": [
+        "偏置电路",
+        "放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论",
+        "小信号模型"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "工作点稳定性指电路在受到扰动后能够维持或恢复到原工作状态的能力。在偏置电路中，稳定性直接影响电路的性能和可靠性，需要通过反馈机制和电路结构设计来保证。"
+    },
+    {
+      "id": "ct_3_8_1",
+      "label": "偏置电路设计方法",
+      "node_type": "core_technology",
+      "summary": "高性能偏置电路设计基于电阻分压原理，通过反馈或电路结构设计提高输出阻抗和有源器件电压匹配特性。设计时需要考虑电流精度、稳定性、线性度和PSRR等指标，同时权衡功耗和电路复杂度。",
+      "difficulty": 4,
+      "keywords": [
+        "反馈设计",
+        "阻抗提升",
+        "性能优化"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路",
+        "混合信号电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "高性能偏置电路设计基于电阻分压原理，通过反馈或电路结构设计提高输出阻抗和有源器件电压匹配特性。设计时需要考虑电流精度、稳定性、线性度和PSRR等指标，同时权衡功耗和电路复杂度。"
+    },
+    {
+      "id": "ct_3_8_2",
+      "label": "启动电路设计",
+      "node_type": "core_technology",
+      "summary": "启动电路设计需要解决偏置电路在瞬态过程中的不稳定问题。常用方法包括小电流和大电流注入两种方式，设计要点包括建立电源到地的低阻通路、合理选择电流注入点位置，以及平衡正负反馈的相互作用。",
+      "difficulty": 4,
+      "keywords": [
+        "瞬态启动",
+        "电流注入",
+        "反馈平衡"
+      ],
+      "formulas": [],
+      "applications": [
+        "电源管理",
+        "基准电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "启动电路设计需要解决偏置电路在瞬态过程中的不稳定问题。常用方法包括小电流和大电流注入两种方式，设计要点包括建立电源到地的低阻通路、合理选择电流注入点位置，以及平衡正负反馈的相互作用。"
+    },
+    {
+      "id": "ca_3_8_1",
+      "label": "放大器偏置电路",
+      "node_type": "circuit_application",
+      "summary": "放大器偏置电路为信号处理元件提供稳定的工作点，同时其结构本身也包含基本放大器的动态控制功能。设计时需要综合考虑静态工作点建立和动态扰动下的稳定性，对放大器的性能有决定性影响。",
+      "difficulty": 4,
+      "keywords": [
+        "工作点稳定",
+        "动态控制",
+        "放大器"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟信号处理",
+        "音频放大"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "放大器偏置电路为信号处理元件提供稳定的工作点，同时其结构本身也包含基本放大器的动态控制功能。设计时需要综合考虑静态工作点建立和动态扰动下的稳定性，对放大器的性能有决定性影响。"
+    },
+    {
+      "id": "ca_3_8_2",
+      "label": "电压/电流基准电路",
+      "node_type": "circuit_application",
+      "summary": "基于偏置电路原理设计的电压/电流基准电路，通过优化电阻分压结构和反馈机制，可以提供高精度、高稳定性的参考电压或电流。这类电路对温度变化和电源波动有较强的抑制能力。",
+      "difficulty": 5,
+      "keywords": [
+        "基准源",
+        "高精度",
+        "温度稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "ADC/DAC",
+        "传感器接口"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "基于偏置电路原理设计的电压/电流基准电路，通过优化电阻分压结构和反馈机制，可以提供高精度、高稳定性的参考电压或电流。这类电路对温度变化和电源波动有较强的抑制能力。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_8_1",
+      "target_id": "ct_3_8_1",
+      "relationship": "enables",
+      "description": "电阻分压结构为偏置电路设计提供了基本原理和设计出发点",
+      "weight": 0.9,
+      "evidence": "电阻分压结构概念是分析与设计偏置电路的基本出发点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_3_8_2",
+      "target_id": "ct_3_8_1",
+      "relationship": "supports",
+      "description": "工作点稳定性理论支撑了偏置电路的设计方法",
+      "weight": 0.8,
+      "evidence": "对偏置电路的深入分析，需要从静态稳定点和动态及瞬态变化两方面考虑",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_8_1",
+      "target_id": "ca_3_8_1",
+      "relationship": "implements",
+      "description": "偏置电路设计方法在放大器偏置电路中得到具体实现",
+      "weight": 0.85,
+      "evidence": "偏置电路提供放大器等信号处理功能元件稳定的工作点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_8_2",
+      "target_id": "ca_3_8_2",
+      "relationship": "applies_to",
+      "description": "启动电路设计技术应用于电压/电流基准电路",
+      "weight": 0.8,
+      "evidence": "偏置电路中的具体结构又包含了基本放大器的动态控制",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_3_8_1",
+      "target_id": "ct_3_8_2",
+      "relationship": "complements",
+      "description": "偏置电路设计与启动电路设计是互补的技术",
+      "weight": 0.7,
+      "evidence": "偏置电路性能的提高往往是以增加功耗和电路复杂程度为代价的",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "3.8",
+  "title": "小结",
+  "extraction_timestamp": "2025-07-08T16:34:55.248378"
+}

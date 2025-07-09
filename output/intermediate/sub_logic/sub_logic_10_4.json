@@ -1,0 +1,260 @@
+{
+  "nodes": [
+    {
+      "id": "bc_10_4_1",
+      "label": "Cascode结构",
+      "node_type": "basic_concept",
+      "summary": "Cascode结构是一种将共源（CS）和共栅（CG）晶体管级联的放大器结构，能够同时提供高增益和宽带宽。其特点是通过单级结构实现多级增益，具有低频主极点和高频次极点的频率特性。",
+      "difficulty": 3,
+      "keywords": [
+        "共源共栅",
+        "高增益",
+        "宽带宽"
+      ],
+      "formulas": [
+        "A_v = g_m1 * (g_m2 * r_o2) * r_o1"
+      ],
+      "applications": [
+        "高速运放",
+        "高精度模拟信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管小信号模型",
+        "频率响应分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Cascode结构是一种将共源（CS）和共栅（CG）晶体管级联的放大器结构，能够同时提供高增益和宽带宽。其特点是通过单级结构实现多级增益，具有低频主极点和高频次极点的频率特性。"
+    },
+    {
+      "id": "bc_10_4_2",
+      "label": "增益带宽积(GBW)",
+      "node_type": "basic_concept",
+      "summary": "增益带宽积是衡量放大器性能的重要指标，表示单位增益频率与低频增益的乘积。在Cascode结构中，GBW主要由输入晶体管的跨导和负载电容决定。",
+      "difficulty": 2,
+      "keywords": [
+        "频率特性",
+        "性能指标"
+      ],
+      "formulas": [
+        "GBW = g_m1 / C_L"
+      ],
+      "applications": [
+        "运放稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "频率响应分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益带宽积是衡量放大器性能的重要指标，表示单位增益频率与低频增益的乘积。在Cascode结构中，GBW主要由输入晶体管的跨导和负载电容决定。"
+    },
+    {
+      "id": "bc_10_4_3",
+      "label": "全差分结构",
+      "node_type": "basic_concept",
+      "summary": "全差分结构使用对称的差分输入和输出，具有高共模抑制比和抗干扰能力。在高速高精度运放中广泛应用，需要配合共模反馈(CMFB)电路来稳定输出共模电平。",
+      "difficulty": 3,
+      "keywords": [
+        "差分信号",
+        "共模抑制"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大器原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分结构使用对称的差分输入和输出，具有高共模抑制比和抗干扰能力。在高速高精度运放中广泛应用，需要配合共模反馈(CMFB)电路来稳定输出共模电平。"
+    },
+    {
+      "id": "ct_10_4_1",
+      "label": "增益提高型Cascode技术(GBCA)",
+      "node_type": "core_technology",
+      "summary": "通过在Cascode结构中引入辅助运放，显著提高输出阻抗从而倍增增益。该技术保持单级结构的频率特性，同时获得多级增益。关键设计包括辅助运放的选择和稳定性控制。",
+      "difficulty": 4,
+      "keywords": [
+        "增益倍增",
+        "辅助运放"
+      ],
+      "formulas": [
+        "A_v = |A_add| * g_m1 * r_o1 * g_m2 * r_o2"
+      ],
+      "applications": [
+        "高精度运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过在Cascode结构中引入辅助运放，显著提高输出阻抗从而倍增增益。该技术保持单级结构的频率特性，同时获得多级增益。关键设计包括辅助运放的选择和稳定性控制。"
+    },
+    {
+      "id": "ct_10_4_2",
+      "label": "频率补偿技术",
+      "node_type": "core_technology",
+      "summary": "针对多极点系统，采用Miller电容补偿等方法确保稳定性。在GBCA中需要特别关注辅助运放引入的极点对系统稳定性的影响。",
+      "difficulty": 3,
+      "keywords": [
+        "极点补偿",
+        "稳定性"
+      ],
+      "formulas": [
+        "p1 = 1/(g_m2*r_o2*r_o1*C_L)"
+      ],
+      "applications": [
+        "运放频率设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "针对多极点系统，采用Miller电容补偿等方法确保稳定性。在GBCA中需要特别关注辅助运放引入的极点对系统稳定性的影响。"
+    },
+    {
+      "id": "ct_10_4_3",
+      "label": "共模反馈(CMFB)设计",
+      "node_type": "core_technology",
+      "summary": "全差分运放中用于稳定输出共模电平的关键技术。通过负反馈调节偏置电流，确保输出工作点在合理范围内。设计需要考虑共模检测精度和反馈速度。",
+      "difficulty": 3,
+      "keywords": [
+        "共模稳定",
+        "负反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "全差分运放"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "全差分运放中用于稳定输出共模电平的关键技术。通过负反馈调节偏置电流，确保输出工作点在合理范围内。设计需要考虑共模检测精度和反馈速度。"
+    },
+    {
+      "id": "ca_10_4_1",
+      "label": "两级Folded Cascode全差分Class AB输出结构",
+      "node_type": "circuit_application",
+      "summary": "如图10-1所示，输入级采用PMOS差分输入的折叠式Cascode，输出级为Class AB推挽结构。使用串联电阻的Miller电容补偿实现稳定工作，具有高增益和宽输出摆幅。",
+      "difficulty": 4,
+      "keywords": [
+        "折叠式Cascode",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速信号处理"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "如图10-1所示，输入级采用PMOS差分输入的折叠式Cascode，输出级为Class AB推挽结构。使用串联电阻的Miller电容补偿实现稳定工作，具有高增益和宽输出摆幅。"
+    },
+    {
+      "id": "ca_10_4_2",
+      "label": "两层套筒式Cascode全差分放大电路",
+      "node_type": "circuit_application",
+      "summary": "如图10-2所示，输入级为NMOS差分对的套筒式Cascode，第二级为NMOS差分输入的CS增益级。采用两路并联的Cascode Miller电容补偿，需要CMFB控制两级静态工作点。",
+      "difficulty": 4,
+      "keywords": [
+        "套筒式",
+        "全差分"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度ADC"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "如图10-2所示，输入级为NMOS差分对的套筒式Cascode，第二级为NMOS差分输入的CS增益级。采用两路并联的Cascode Miller电容补偿，需要CMFB控制两级静态工作点。"
+    },
+    {
+      "id": "ca_10_4_3",
+      "label": "四辅助单级放大的GBCA结构",
+      "node_type": "circuit_application",
+      "summary": "如图10-7所示，采用4个独立辅助放大器的GBCA电路，主运放为套筒式Cascode结构。通过尾电流复制反馈技术提高输出摆幅，CMFB精确控制输出静态工作点。",
+      "difficulty": 5,
+      "keywords": [
+        "GBCA",
+        "增益提高"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度模拟前端"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "如图10-7所示，采用4个独立辅助放大器的GBCA电路，主运放为套筒式Cascode结构。通过尾电流复制反馈技术提高输出摆幅，CMFB精确控制输出静态工作点。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_10_4_1",
+      "target_id": "ct_10_4_1",
+      "relationship": "enables",
+      "description": "Cascode结构的基本原理为增益提高技术提供了基础结构",
+      "weight": 0.9,
+      "evidence": "Cascode是实现高速运放系统的首选结构...进一步提高增益还可采用多级或多层Cascode结构",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_4_2",
+      "target_id": "ct_10_4_2",
+      "relationship": "supports",
+      "description": "增益带宽积概念是频率补偿技术设计的理论基础",
+      "weight": 0.8,
+      "evidence": "GBCA运放系统的单位增益带宽GBW仍然保持为原主运放ω_u的结果不变",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_10_4_3",
+      "target_id": "ct_10_4_3",
+      "relationship": "supports",
+      "description": "全差分结构需要共模反馈技术来维持正常工作",
+      "weight": 0.9,
+      "evidence": "全差分运算放大器...需要共模反馈CMFB电路控制全差分运放输出的共模电平",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_4_1",
+      "target_id": "ca_10_4_3",
+      "relationship": "implements",
+      "description": "GBCA技术在四辅助单级放大结构中具体实现",
+      "weight": 0.95,
+      "evidence": "图10-7给出了采用4个独立辅助放大器的GBCA电路结构",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_10_4_3",
+      "target_id": "ca_10_4_2",
+      "relationship": "applies_to",
+      "description": "CMFB技术应用于两层套筒式Cascode电路",
+      "weight": 0.85,
+      "evidence": "应对第一级全差分输出采用CMFB控制其合适的静态工作点",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_10_4_2",
+      "relationship": "relates_to",
+      "description": "两种全差分结构在应用场景上互补",
+      "weight": 0.7,
+      "evidence": "与前一种两级全差分电路相比较...",
+      "bidirectional": true
+    }
+  ],
+  "section_num": "10.4",
+  "title": "高速高增益运放系统设计",
+  "extraction_timestamp": "2025-07-08T16:45:49.998917"
+}

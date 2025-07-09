@@ -1,0 +1,281 @@
+{
+  "nodes": [
+    {
+      "id": "bc_11_7_1",
+      "label": "电源抑制比(PSRR)",
+      "node_type": "basic_concept",
+      "summary": "电源抑制比(PSRR)是衡量放大器或电路对电源电压变化的抑制能力的参数，定义为输出信号变化与电源电压变化的比值，通常以分贝(dB)表示。高PSRR意味着电路对电源噪声的抑制能力更强。",
+      "difficulty": 3,
+      "keywords": [
+        "PSRR",
+        "电源噪声",
+        "抑制能力"
+      ],
+      "formulas": [
+        "PSRR = 20 * log10(ΔVout / ΔVdd)"
+      ],
+      "applications": [
+        "运算放大器",
+        "功率放大器",
+        "混合信号IC"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "放大器基础",
+        "噪声分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "电源抑制比(PSRR)是衡量放大器或电路对电源电压变化的抑制能力的参数，定义为输出信号变化与电源电压变化的比值，通常以分贝(dB)表示。高PSRR意味着电路对电源噪声的抑制能力更强。"
+    },
+    {
+      "id": "bc_11_7_2",
+      "label": "共模抑制比(CMRR)",
+      "node_type": "basic_concept",
+      "summary": "共模抑制比(CMRR)是衡量差分放大器对共模信号抑制能力的参数，定义为差分增益与共模增益的比值，通常以分贝(dB)表示。高CMRR意味着放大器对共模噪声的抑制能力更强。",
+      "difficulty": 3,
+      "keywords": [
+        "CMRR",
+        "差分放大器",
+        "共模噪声"
+      ],
+      "formulas": [
+        "CMRR = 20 * log10(Ad / Ac)"
+      ],
+      "applications": [
+        "差分放大器",
+        "仪表放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "差分放大器基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模抑制比(CMRR)是衡量差分放大器对共模信号抑制能力的参数，定义为差分增益与共模增益的比值，通常以分贝(dB)表示。高CMRR意味着放大器对共模噪声的抑制能力更强。"
+    },
+    {
+      "id": "bc_11_7_3",
+      "label": "二次谐波失真",
+      "node_type": "basic_concept",
+      "summary": "二次谐波失真是非线性电路或器件在输入信号作用下产生的二次谐波分量，通常由非线性传输特性引起。它是衡量电路线性度的重要指标。",
+      "difficulty": 3,
+      "keywords": [
+        "谐波失真",
+        "非线性",
+        "线性度"
+      ],
+      "formulas": [
+        "HD2 = (A2 / A1) * 100%"
+      ],
+      "applications": [
+        "放大器",
+        "功率放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "非线性电路",
+        "傅里叶分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "二次谐波失真是非线性电路或器件在输入信号作用下产生的二次谐波分量，通常由非线性传输特性引起。它是衡量电路线性度的重要指标。"
+    },
+    {
+      "id": "ct_11_7_1",
+      "label": "PSRR改进技术",
+      "node_type": "core_technology",
+      "summary": "PSRR改进技术包括使用级联结构、调节偏置、优化电源滤波等方法。这些技术通过减少电源噪声对电路关键节点的影响来提高PSRR。具体步骤包括：1) 分析电路中对PSRR敏感的关键节点；2) 设计级联或共源共栅结构以隔离噪声；3) 优化偏置网络以减少电源噪声耦合；4) 增加本地电源滤波。",
+      "difficulty": 4,
+      "keywords": [
+        "PSRR改进",
+        "级联结构",
+        "电源滤波"
+      ],
+      "formulas": [],
+      "applications": [
+        "运算放大器",
+        "功率放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "PSRR改进技术包括使用级联结构、调节偏置、优化电源滤波等方法。这些技术通过减少电源噪声对电路关键节点的影响来提高PSRR。具体步骤包括：1) 分析电路中对PSRR敏感的关键节点；2) 设计级联或共源共栅结构以隔离噪声；3) 优化偏置网络以减少电源噪声耦合；4) 增加本地电源滤波。"
+    },
+    {
+      "id": "ct_11_7_2",
+      "label": "子电路分析",
+      "node_type": "core_technology",
+      "summary": "子电路分析是一种将复杂电路分解为功能性子电路进行分析的方法。对于PSRR分析，可以分别分析偏置电路、增益级和输出级对PSRR的贡献，然后综合评估整体性能。步骤包括：1) 识别功能性子电路；2) 建立子电路模型；3) 分析各子电路的PSRR特性；4) 评估子电路间的相互作用。",
+      "difficulty": 4,
+      "keywords": [
+        "子电路分析",
+        "模块化设计",
+        "PSRR评估"
+      ],
+      "formulas": [],
+      "applications": [
+        "复杂放大器设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "子电路分析是一种将复杂电路分解为功能性子电路进行分析的方法。对于PSRR分析，可以分别分析偏置电路、增益级和输出级对PSRR的贡献，然后综合评估整体性能。步骤包括：1) 识别功能性子电路；2) 建立子电路模型；3) 分析各子电路的PSRR特性；4) 评估子电路间的相互作用。"
+    },
+    {
+      "id": "ct_11_7_3",
+      "label": "噪声建模",
+      "node_type": "core_technology",
+      "summary": "噪声建模是为MOSFET等有源器件建立紧凑噪声模型的技术，用于预测电路的噪声性能。包括热噪声、闪烁噪声等主要噪声源的建模。步骤包括：1) 识别主要噪声源；2) 建立噪声等效电路；3) 提取模型参数；4) 验证模型准确性。",
+      "difficulty": 4,
+      "keywords": [
+        "噪声模型",
+        "MOSFET",
+        "热噪声",
+        "闪烁噪声"
+      ],
+      "formulas": [
+        "热噪声电流谱密度: in^2 = 4kTγgmΔf"
+      ],
+      "applications": [
+        "低噪声放大器",
+        "射频电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "噪声建模是为MOSFET等有源器件建立紧凑噪声模型的技术，用于预测电路的噪声性能。包括热噪声、闪烁噪声等主要噪声源的建模。步骤包括：1) 识别主要噪声源；2) 建立噪声等效电路；3) 提取模型参数；4) 验证模型准确性。"
+    },
+    {
+      "id": "ca_11_7_1",
+      "label": "级联CMOS运算放大器",
+      "node_type": "circuit_application",
+      "summary": "级联CMOS运算放大器采用级联结构提高增益和PSRR。典型结构包括：差分输入级、级联增益级和输出级。通过级联结构隔离电源噪声，同时提供高增益。设计约束包括：共模输入范围、相位裕度和功耗。",
+      "difficulty": 5,
+      "keywords": [
+        "级联结构",
+        "CMOS运算放大器",
+        "高PSRR"
+      ],
+      "formulas": [],
+      "applications": [
+        "混合信号IC",
+        "数据转换器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "级联CMOS运算放大器采用级联结构提高增益和PSRR。典型结构包括：差分输入级、级联增益级和输出级。通过级联结构隔离电源噪声，同时提供高增益。设计约束包括：共模输入范围、相位裕度和功耗。"
+    },
+    {
+      "id": "ca_11_7_2",
+      "label": "单电源AB类功率放大器",
+      "node_type": "circuit_application",
+      "summary": "单电源AB类功率放大器设计用于低电压应用，通过改进的偏置方案提高PSRR。电路特点包括：1) 单电源供电；2) AB类输出级；3) 优化的偏置网络；4) 本地电源滤波。关键设计参数包括输出功率、效率和PSRR。",
+      "difficulty": 5,
+      "keywords": [
+        "AB类",
+        "功率放大器",
+        "单电源",
+        "高PSRR"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "音频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "单电源AB类功率放大器设计用于低电压应用，通过改进的偏置方案提高PSRR。电路特点包括：1) 单电源供电；2) AB类输出级；3) 优化的偏置网络；4) 本地电源滤波。关键设计参数包括输出功率、效率和PSRR。"
+    },
+    {
+      "id": "ca_11_7_3",
+      "label": "低开环增益高PSRR微功率CMOS放大器",
+      "node_type": "circuit_application",
+      "summary": "专为混合信号应用设计的微功率CMOS放大器，特点包括：1) 低开环增益；2) 高PSRR；3) 微功率操作；4) 优化的噪声性能。适用于需要低功耗和高电源噪声抑制的应用场景。",
+      "difficulty": 5,
+      "keywords": [
+        "微功率",
+        "CMOS放大器",
+        "低增益",
+        "高PSRR"
+      ],
+      "formulas": [],
+      "applications": [
+        "传感器接口",
+        "生物医学设备"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "专为混合信号应用设计的微功率CMOS放大器，特点包括：1) 低开环增益；2) 高PSRR；3) 微功率操作；4) 优化的噪声性能。适用于需要低功耗和高电源噪声抑制的应用场景。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_11_7_1",
+      "target_id": "ct_11_7_1",
+      "relationship": "enables",
+      "description": "PSRR的基本概念为PSRR改进技术提供了理论基础和性能指标",
+      "weight": 0.9,
+      "evidence": "参考文献[2][3][7]都讨论了基于PSRR概念的技术改进",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_7_2",
+      "target_id": "ct_11_7_1",
+      "relationship": "supports",
+      "description": "CMRR的理解有助于设计同时优化PSRR和CMRR的差分放大器",
+      "weight": 0.7,
+      "evidence": "参考文献[4]讨论了CMRR和PSRR的关系",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_7_1",
+      "target_id": "ca_11_7_1",
+      "relationship": "implements",
+      "description": "PSRR改进技术在级联CMOS运算放大器中得到具体实现",
+      "weight": 0.8,
+      "evidence": "参考文献[5]详细描述了级联结构的PSRR改进",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_7_2",
+      "target_id": "ca_11_7_1",
+      "relationship": "applies_to",
+      "description": "子电路分析方法应用于级联CMOS运算放大器的设计优化",
+      "weight": 0.7,
+      "evidence": "参考文献[8]讨论了子电路分析在级联放大器中的应用",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_11_7_3",
+      "target_id": "ca_11_7_3",
+      "relationship": "applies_to",
+      "description": "噪声建模技术应用于微功率CMOS放大器的低噪声设计",
+      "weight": 0.8,
+      "evidence": "参考文献[9]的噪声模型适用于低噪声放大器设计",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_11_7_3",
+      "target_id": "ct_11_7_1",
+      "relationship": "relates_to",
+      "description": "谐波失真分析与PSRR改进相关，因为非线性会影响电源噪声抑制",
+      "weight": 0.6,
+      "evidence": "参考文献[4]讨论了失真与PSRR的关系",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "11.7",
+  "title": "参考文献",
+  "extraction_timestamp": "2025-07-08T16:47:31.144528"
+}

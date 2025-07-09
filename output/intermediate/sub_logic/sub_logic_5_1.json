@@ -1,0 +1,262 @@
+{
+  "nodes": [
+    {
+      "id": "bc_5_1_1",
+      "label": "放大电路基本结构",
+      "node_type": "basic_concept",
+      "summary": "放大电路用于对微弱交流小信号的电压、电流或功率放大。BJT管的基本电路结构有共射(CE)、共基(CB)和共集(CC)三种；MOS管的基本电路结构有共源(CS)、共栅(CG)和共漏(CD)三种。BiCMOS电路结合了MOS管和BJT管的优点，以提高电路增益、改善动态范围和频率响应特性。",
+      "difficulty": 2,
+      "keywords": [
+        "BJT",
+        "MOS",
+        "BiCMOS",
+        "共射",
+        "共源"
+      ],
+      "formulas": [],
+      "applications": [
+        "线性放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "半导体器件原理"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "放大电路用于对微弱交流小信号的电压、电流或功率放大。BJT管的基本电路结构有共射(CE)、共基(CB)和共集(CC)三种；MOS管的基本电路结构有共源(CS)、共栅(CG)和共漏(CD)三种。BiCMOS电路结合了MOS管和BJT管的优点，以提高电路增益、改善动态范围和频率响应特性。"
+    },
+    {
+      "id": "bc_5_1_2",
+      "label": "共模信号与差模信号",
+      "node_type": "basic_concept",
+      "summary": "共模信号是叠加在交流小信号上的静态偏置信号，主要用于放大管和负载管的静态偏置。差模信号是待放大的交流小信号。电路需要放大差模信号而抑制共模信号，以保证电路状态的稳定。",
+      "difficulty": 2,
+      "keywords": [
+        "共模信号",
+        "差模信号",
+        "静态偏置"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成线性放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "信号处理基础"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "共模信号是叠加在交流小信号上的静态偏置信号，主要用于放大管和负载管的静态偏置。差模信号是待放大的交流小信号。电路需要放大差模信号而抑制共模信号，以保证电路状态的稳定。"
+    },
+    {
+      "id": "bc_5_1_3",
+      "label": "恒流源偏置与有源负载",
+      "node_type": "basic_concept",
+      "summary": "恒流源偏置用于提供稳定的偏置电流，有源负载结构用于替代传统的线性电阻负载。放大管和恒流源负载偏置管都工作在饱和区，区别在于放大管的栅源电压(V_GS)或基极发射极电压(V_BE)是变化的，而恒流源器件的V_GS或V_BE电压固定。",
+      "difficulty": 2,
+      "keywords": [
+        "恒流源",
+        "有源负载",
+        "饱和区"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "晶体管工作区"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒流源偏置用于提供稳定的偏置电流，有源负载结构用于替代传统的线性电阻负载。放大管和恒流源负载偏置管都工作在饱和区，区别在于放大管的栅源电压(V_GS)或基极发射极电压(V_BE)是变化的，而恒流源器件的V_GS或V_BE电压固定。"
+    },
+    {
+      "id": "ct_5_1_1",
+      "label": "差分放大电路设计",
+      "node_type": "core_technology",
+      "summary": "差分放大电路由对称的CE/CS增益耦合构成，具有高共模抑制比(CMRR)，能够有效区分共模信号和差模信号。通过电路结构和参数的完全对称以及可变源端负反馈电阻，可以抑制共模信号的影响。差分运放的改进结构在速度、带宽、精度、稳定性等方面均有显著提升。",
+      "difficulty": 3,
+      "keywords": [
+        "差分放大",
+        "共模抑制比",
+        "对称结构"
+      ],
+      "formulas": [
+        "CMRR = 20log(A_d/A_c)"
+      ],
+      "applications": [
+        "集成线性电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分放大电路由对称的CE/CS增益耦合构成，具有高共模抑制比(CMRR)，能够有效区分共模信号和差模信号。通过电路结构和参数的完全对称以及可变源端负反馈电阻，可以抑制共模信号的影响。差分运放的改进结构在速度、带宽、精度、稳定性等方面均有显著提升。"
+    },
+    {
+      "id": "ct_5_1_2",
+      "label": "直接耦合技术",
+      "node_type": "core_technology",
+      "summary": "集成线性电路采用直接耦合方式，取消级间隔直电容，实现直流信号的传输。这种技术需要全局偏置和级间直接耦合，电路级间影响显著增加，需考虑电平和阻抗匹配以及工作点稳定等因素。",
+      "difficulty": 3,
+      "keywords": [
+        "直接耦合",
+        "全局偏置",
+        "阻抗匹配"
+      ],
+      "formulas": [],
+      "applications": [
+        "集成放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "集成线性电路采用直接耦合方式，取消级间隔直电容，实现直流信号的传输。这种技术需要全局偏置和级间直接耦合，电路级间影响显著增加，需考虑电平和阻抗匹配以及工作点稳定等因素。"
+    },
+    {
+      "id": "ct_5_1_3",
+      "label": "共模信号抑制技术",
+      "node_type": "core_technology",
+      "summary": "通过电路系统结构和参数的完全对称以及采用可变源端负反馈电阻，可以有效抑制共模信号的影响。这种技术是差分放大电路的理论基础，能够保证电路对交流小信号的线性处理功能。",
+      "difficulty": 3,
+      "keywords": [
+        "共模抑制",
+        "对称结构",
+        "负反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "差分放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "通过电路系统结构和参数的完全对称以及采用可变源端负反馈电阻，可以有效抑制共模信号的影响。这种技术是差分放大电路的理论基础，能够保证电路对交流小信号的线性处理功能。"
+    },
+    {
+      "id": "ca_5_1_1",
+      "label": "集成线性放大电路",
+      "node_type": "circuit_application",
+      "summary": "集成线性放大电路采用全局偏置和级间直接耦合方式，大量使用有源负载结构。电路级间影响显著，需考虑电平和阻抗匹配以及工作点稳定等因素。共模信号用于静态偏置，电路需要抑制共模信号放大，仅放大差模信号。",
+      "difficulty": 4,
+      "keywords": [
+        "集成放大",
+        "直接耦合",
+        "有源负载"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "集成线性放大电路采用全局偏置和级间直接耦合方式，大量使用有源负载结构。电路级间影响显著，需考虑电平和阻抗匹配以及工作点稳定等因素。共模信号用于静态偏置，电路需要抑制共模信号放大，仅放大差模信号。"
+    },
+    {
+      "id": "ca_5_1_2",
+      "label": "差分运放电路",
+      "node_type": "circuit_application",
+      "summary": "差分运放电路采用对称的CE/CS增益耦合结构，具有高共模抑制比。通过改进结构，在速度、带宽、精度、稳定性、线性及动态范围等方面均有显著提升。适用于高性能模拟信号处理。",
+      "difficulty": 4,
+      "keywords": [
+        "差分运放",
+        "共模抑制",
+        "对称结构"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "差分运放电路采用对称的CE/CS增益耦合结构，具有高共模抑制比。通过改进结构，在速度、带宽、精度、稳定性、线性及动态范围等方面均有显著提升。适用于高性能模拟信号处理。"
+    },
+    {
+      "id": "ca_5_1_3",
+      "label": "恒流源偏置放大电路",
+      "node_type": "circuit_application",
+      "summary": "恒流源偏置放大电路采用恒流源提供稳定的偏置电流，有源负载替代线性电阻负载。放大管和恒流源负载偏置管均工作在饱和区，区别在于放大管的V_GS或V_BE是变化的，而恒流源器件的V_GS或V_BE固定。",
+      "difficulty": 4,
+      "keywords": [
+        "恒流源",
+        "有源负载",
+        "饱和区"
+      ],
+      "formulas": [],
+      "applications": [
+        "低噪声放大电路"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "恒流源偏置放大电路采用恒流源提供稳定的偏置电流，有源负载替代线性电阻负载。放大管和恒流源负载偏置管均工作在饱和区，区别在于放大管的V_GS或V_BE是变化的，而恒流源器件的V_GS或V_BE固定。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_5_1_1",
+      "target_id": "ct_5_1_1",
+      "relationship": "enables",
+      "description": "放大电路基本结构为差分放大电路设计提供了理论基础和实现可能。",
+      "weight": 0.9,
+      "evidence": "差分输入级由对称的CE/CS增益耦合得到，具有很高的共模抑制比。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_2",
+      "target_id": "ct_5_1_3",
+      "relationship": "supports",
+      "description": "共模信号与差模信号的概念是共模信号抑制技术的理论基础。",
+      "weight": 0.8,
+      "evidence": "电路系统结构和参数的完全对称和采用可变源端负反馈电阻成为抑制共模信号的有效方法和手段。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_5_1_3",
+      "target_id": "ca_5_1_3",
+      "relationship": "applies_to",
+      "description": "恒流源偏置与有源负载的概念直接应用于恒流源偏置放大电路的设计。",
+      "weight": 0.9,
+      "evidence": "放大电路的偏置和负载多采用恒流偏置和有源负载结构，而采用恒流源偏置可以显著提高电路的性能。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_1",
+      "target_id": "ca_5_1_2",
+      "relationship": "implements",
+      "description": "差分放大电路设计技术实现了差分运放电路的具体应用。",
+      "weight": 0.9,
+      "evidence": "差分运放的各种改进结构，在交流小信号处理的速度、带宽、精度、稳定性、线性及动态范围等交直流、静态和瞬态特性等方面均得到了有效改善和提高。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_2",
+      "target_id": "ca_5_1_1",
+      "relationship": "implements",
+      "description": "直接耦合技术是实现集成线性放大电路的关键技术。",
+      "weight": 0.8,
+      "evidence": "集成线性电路则完全不同，一般均采用全局偏置和级间直接耦合的系统组成方式。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_5_1_3",
+      "target_id": "ca_5_1_2",
+      "relationship": "applies_to",
+      "description": "共模信号抑制技术应用于差分运放电路的设计中。",
+      "weight": 0.8,
+      "evidence": "这也是在以上三类基本电路结构基础上引入差分放大电路的理论依据。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "5.1",
+  "title": "概述",
+  "extraction_timestamp": "2025-07-08T16:37:30.005276"
+}

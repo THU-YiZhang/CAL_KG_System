@@ -1,0 +1,293 @@
+{
+  "nodes": [
+    {
+      "id": "bc_7_3_1",
+      "label": "频率响应",
+      "node_type": "basic_concept",
+      "summary": "频率响应描述了电路系统对不同频率信号的放大能力。在低频下，增益通常保持常数，而在高频下增益会按特定规律衰减。带宽指标用于描述增益随频率变化的保持能力，其中-3dB带宽和单位增益带宽是重要参数。",
+      "difficulty": 2,
+      "keywords": [
+        "增益",
+        "带宽",
+        "-3dB带宽",
+        "单位增益带宽"
+      ],
+      "formulas": [
+        "ω_{-3dB}",
+        "GBW"
+      ],
+      "applications": [
+        "放大器设计",
+        "滤波器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "拉普拉斯变换",
+        "复数频率"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率响应描述了电路系统对不同频率信号的放大能力。在低频下，增益通常保持常数，而在高频下增益会按特定规律衰减。带宽指标用于描述增益随频率变化的保持能力，其中-3dB带宽和单位增益带宽是重要参数。"
+    },
+    {
+      "id": "bc_7_3_2",
+      "label": "系统稳定性",
+      "node_type": "basic_concept",
+      "summary": "系统稳定性定义为有界输入导致有界输出。实际电路中，无界输出表现为轨边界（VCC或VGND）或振荡。稳定性由闭环反馈性质决定，低频负反馈保证稳定，高频下相位变化可能导致正反馈，引发不稳定。",
+      "difficulty": 3,
+      "keywords": [
+        "有界输入",
+        "有界输出",
+        "闭环反馈",
+        "正反馈"
+      ],
+      "formulas": [],
+      "applications": [
+        "反馈系统设计",
+        "振荡器设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "反馈理论",
+        "相位分析"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "系统稳定性定义为有界输入导致有界输出。实际电路中，无界输出表现为轨边界（VCC或VGND）或振荡。稳定性由闭环反馈性质决定，低频负反馈保证稳定，高频下相位变化可能导致正反馈，引发不稳定。"
+    },
+    {
+      "id": "bc_7_3_3",
+      "label": "相位裕度",
+      "node_type": "basic_concept",
+      "summary": "相位裕度是单位增益带宽频率下总相位滞后与-180°的距离。相位裕度越高，系统稳定性越好。通常要求相位裕度至少为45°，一般在60°以上。相位裕度影响系统的动态性能，裕度越大，响应速度越慢。",
+      "difficulty": 3,
+      "keywords": [
+        "相位滞后",
+        "单位增益带宽",
+        "稳定性"
+      ],
+      "formulas": [
+        "φ(ω_C) - (-180°)"
+      ],
+      "applications": [
+        "稳定性设计",
+        "瞬态响应优化"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "Bode图",
+        "Nyquist图"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "相位裕度是单位增益带宽频率下总相位滞后与-180°的距离。相位裕度越高，系统稳定性越好。通常要求相位裕度至少为45°，一般在60°以上。相位裕度影响系统的动态性能，裕度越大，响应速度越慢。"
+    },
+    {
+      "id": "bc_7_3_4",
+      "label": "增益裕度",
+      "node_type": "basic_concept",
+      "summary": "增益裕度是相位达到-180°时环路增益与0dB的距离。增益裕度越大，系统稳定性越高。通常要求增益裕度在10dB以上。增益裕度与相位裕度共同确保系统稳定，尤其在频率特性非单调变化时。",
+      "difficulty": 3,
+      "keywords": [
+        "环路增益",
+        "0dB",
+        "稳定性"
+      ],
+      "formulas": [
+        "20log|M(ω)| dB"
+      ],
+      "applications": [
+        "稳定性设计",
+        "频率补偿"
+      ],
+      "related_sections": [],
+      "prerequisites": [
+        "Bode图",
+        "Nyquist图"
+      ],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "增益裕度是相位达到-180°时环路增益与0dB的距离。增益裕度越大，系统稳定性越高。通常要求增益裕度在10dB以上。增益裕度与相位裕度共同确保系统稳定，尤其在频率特性非单调变化时。"
+    },
+    {
+      "id": "ct_7_3_1",
+      "label": "Nyquist定理",
+      "node_type": "core_technology",
+      "summary": "Nyquist定理通过分析开环传递函数在Nyquist图上的轨迹判断闭环系统的稳定性。若轨迹不包含(-1, j0)点，则系统稳定。Nyquist定理将闭环极点的性质判断转化为开环频率响应的分析，简化了稳定性判据。",
+      "difficulty": 4,
+      "keywords": [
+        "Nyquist图",
+        "稳定性判据",
+        "(-1, j0)点"
+      ],
+      "formulas": [
+        "P(s) = A(s)F(s)"
+      ],
+      "applications": [
+        "闭环系统稳定性分析"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Nyquist定理通过分析开环传递函数在Nyquist图上的轨迹判断闭环系统的稳定性。若轨迹不包含(-1, j0)点，则系统稳定。Nyquist定理将闭环极点的性质判断转化为开环频率响应的分析，简化了稳定性判据。"
+    },
+    {
+      "id": "ct_7_3_2",
+      "label": "Bode图分析",
+      "node_type": "core_technology",
+      "summary": "Bode图将幅频特性和相频特性分开表示，用于分析系统的频率响应和稳定性。通过幅频和相频曲线的交点，可以确定相位裕度和增益裕度，从而评估系统稳定性。Bode图是Nyquist图的另一种表现形式。",
+      "difficulty": 3,
+      "keywords": [
+        "幅频特性",
+        "相频特性",
+        "相位裕度",
+        "增益裕度"
+      ],
+      "formulas": [
+        "20log|M(ω)| dB",
+        "φ(ω)"
+      ],
+      "applications": [
+        "频率响应分析",
+        "稳定性设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "Bode图将幅频特性和相频特性分开表示，用于分析系统的频率响应和稳定性。通过幅频和相频曲线的交点，可以确定相位裕度和增益裕度，从而评估系统稳定性。Bode图是Nyquist图的另一种表现形式。"
+    },
+    {
+      "id": "ct_7_3_3",
+      "label": "频率补偿设计",
+      "node_type": "core_technology",
+      "summary": "频率补偿通过调整系统的零极点位置，改善频率响应和稳定性。常用的补偿方法包括极点分裂、零点引入等。频率补偿的目标是确保系统在所需带宽内具有足够的相位裕度和增益裕度。",
+      "difficulty": 4,
+      "keywords": [
+        "极点分裂",
+        "零点引入",
+        "相位裕度"
+      ],
+      "formulas": [
+        "G(s) = k(1 + b1s + ...)/(1 + a1s + ...)"
+      ],
+      "applications": [
+        "放大器设计",
+        "反馈系统设计"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "频率补偿通过调整系统的零极点位置，改善频率响应和稳定性。常用的补偿方法包括极点分裂、零点引入等。频率补偿的目标是确保系统在所需带宽内具有足够的相位裕度和增益裕度。"
+    },
+    {
+      "id": "ca_7_3_1",
+      "label": "多级放大器稳定性设计",
+      "node_type": "circuit_application",
+      "summary": "多级放大器在高频下可能因相位滞后导致正反馈，引发不稳定。通过频率补偿和相位裕度设计，可以确保多级放大器在所需带宽内稳定工作。设计时需考虑开环增益、极点位置和反馈系数的影响。",
+      "difficulty": 5,
+      "keywords": [
+        "多级放大器",
+        "相位滞后",
+        "频率补偿"
+      ],
+      "formulas": [
+        "A(s) = k/(s(τ1s + 1)(τ2s + 1))"
+      ],
+      "applications": [
+        "音频放大器",
+        "射频放大器"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "多级放大器在高频下可能因相位滞后导致正反馈，引发不稳定。通过频率补偿和相位裕度设计，可以确保多级放大器在所需带宽内稳定工作。设计时需考虑开环增益、极点位置和反馈系数的影响。"
+    },
+    {
+      "id": "ca_7_3_2",
+      "label": "负反馈闭环系统",
+      "node_type": "circuit_application",
+      "summary": "负反馈闭环系统通过反馈网络调整系统性能，提高稳定性和线性度。低频下负反馈保证稳定，高频下需通过相位裕度和增益裕度设计避免正反馈。设计时需分析环路增益和极点位置。",
+      "difficulty": 4,
+      "keywords": [
+        "负反馈",
+        "闭环系统",
+        "环路增益"
+      ],
+      "formulas": [
+        "G(s) = A(s)/(1 + A(s)F(s))"
+      ],
+      "applications": [
+        "运算放大器",
+        "控制系统"
+      ],
+      "related_sections": [],
+      "prerequisites": [],
+      "derived_concepts": [],
+      "practical_examples": [],
+      "technical_details": "负反馈闭环系统通过反馈网络调整系统性能，提高稳定性和线性度。低频下负反馈保证稳定，高频下需通过相位裕度和增益裕度设计避免正反馈。设计时需分析环路增益和极点位置。"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_7_3_1",
+      "target_id": "ct_7_3_1",
+      "relationship": "enables",
+      "description": "频率响应的定义和分析方法是Nyquist定理的基础，通过频率响应可以绘制Nyquist图，进而应用Nyquist定理判断系统稳定性。",
+      "weight": 0.9,
+      "evidence": "Nyquist定理利用开环频率响应的轨迹判断闭环稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_3_2",
+      "target_id": "ct_7_3_2",
+      "relationship": "supports",
+      "description": "系统稳定性的定义和判据需要通过Bode图分析实现，Bode图提供了幅频和相频特性的直观表示，便于评估稳定性。",
+      "weight": 0.8,
+      "evidence": "Bode图用于分析相位裕度和增益裕度，直接关联系统稳定性。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_3_3",
+      "target_id": "ct_7_3_3",
+      "relationship": "supports",
+      "description": "相位裕度的概念是频率补偿设计的重要目标，通过调整零极点位置可以提高相位裕度，确保系统稳定。",
+      "weight": 0.85,
+      "evidence": "频率补偿设计的目标之一是满足相位裕度要求。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_3_1",
+      "target_id": "ca_7_3_1",
+      "relationship": "applies_to",
+      "description": "Nyquist定理应用于多级放大器的稳定性分析，通过Nyquist图判断闭环极点的性质，指导稳定性设计。",
+      "weight": 0.75,
+      "evidence": "多级放大器的稳定性分析需要Nyquist定理支持。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "ct_7_3_3",
+      "target_id": "ca_7_3_2",
+      "relationship": "implements",
+      "description": "频率补偿设计方法用于负反馈闭环系统，通过调整零极点位置改善相位裕度和增益裕度，确保系统稳定。",
+      "weight": 0.8,
+      "evidence": "负反馈闭环系统的稳定性设计依赖频率补偿。",
+      "bidirectional": false
+    },
+    {
+      "source_id": "bc_7_3_4",
+      "target_id": "ct_7_3_2",
+      "relationship": "supports",
+      "description": "增益裕度的定义和分析需要通过Bode图实现，Bode图提供了增益随频率变化的直观表示，便于评估增益裕度。",
+      "weight": 0.7,
+      "evidence": "Bode图用于分析增益裕度，直接关联系统稳定性。",
+      "bidirectional": false
+    }
+  ],
+  "section_num": "7.3",
+  "title": "系统的频率特性与稳定性",
+  "extraction_timestamp": "2025-07-08T16:42:01.734034"
+}
