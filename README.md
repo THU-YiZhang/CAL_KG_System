@@ -871,9 +871,9 @@ python test_complete_pipeline.py
 [![GitHub stars](https://img.shields.io/github/stars/your-repo/CAL-KG-System.svg?style=social&label=Star)](https://github.com/your-repo/CAL-KG-System)
 [![GitHub forks](https://img.shields.io/github/forks/your-repo/CAL-KG-System.svg?style=social&label=Fork)](https://github.com/your-repo/CAL-KG-System)
 
-**🔬 知识图谱构建**: 695节点+2242边的专业电路知识网络
+**🔬 知识图谱构建**: 专业电路知识网络
 
-**🤖 思维链生成**: Logic(109字符)+Think(813字符)+Answer(933字符)的完整推理链
+**🤖 思维链生成**: Logic+Think+Answer的完整推理链
 
 **⚡ 高性能架构**: 8并发处理+99%任务完成率+3倍效率提升
 
