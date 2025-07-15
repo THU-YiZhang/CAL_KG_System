@@ -1,0 +1,243 @@
+{
+  "application_node_id": "ca_1_3_1",
+  "application_label": "模拟集成运放电路",
+  "nodes": [
+    {
+      "id": "ca_1_3_1",
+      "label": "模拟集成运放电路",
+      "node_type": "circuit_application",
+      "summary": "模拟集成线性运放电路是模拟电路设计的核心内容之一。其设计需要从多侧面对电路结构进行重点讨论，包括系统应用和定义、功能单元实现、基本电路结构特点、器件与工艺等。",
+      "difficulty": 4,
+      "section_num": "1.3",
+      "keywords": [
+        "线性运放",
+        "多层面设计",
+        "结构特点"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号放大",
+        "滤波"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_1_3_5",
+      "label": "无源元件",
+      "node_type": "basic_concept",
+      "summary": "无源（被动 Passive）元件包含电阻 R、电容 C 和电感 L，不能提供能量放大功能。",
+      "difficulty": 2,
+      "section_num": "1.3",
+      "keywords": [
+        "电阻",
+        "电容",
+        "电感",
+        "无源"
+      ],
+      "formulas": [],
+      "applications": [
+        "各类电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ct_1_3_2",
+      "label": "电路参数设计",
+      "node_type": "core_technology",
+      "summary": "在电路体系结构确定的条件下，设计电路中各元器件或功能单元的具体参数。这是一个局部优化的过程，需要保证电路工作在限定条件下的稳定范围之内，并尽可能提高电路性能。",
+      "difficulty": 3,
+      "section_num": "1.3",
+      "keywords": [
+        "参数优化",
+        "稳定性",
+        "性能提升"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_1_3_1",
+      "label": "模拟信号",
+      "node_type": "basic_concept",
+      "summary": "模拟信号是指时间连续、幅度连续的电信号。模拟信号在时域和频域都可以用幅度或增益来表示其强弱。模拟信号处理的功能电路称为模拟电路。",
+      "difficulty": 2,
+      "section_num": "1.3",
+      "keywords": [
+        "时间连续",
+        "幅度连续",
+        "时域",
+        "频域"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ct_1_3_1",
+      "label": "电路结构选择",
+      "node_type": "core_technology",
+      "summary": "电路设计的第一步是选择电路系统架构或结构。不同的结构具有不同的特点，没有一种结构能够满足所有应用的需求。设计者需要根据应用需求选择最合适的结构。",
+      "difficulty": 3,
+      "section_num": "1.3",
+      "keywords": [
+        "架构选择",
+        "结构特点",
+        "应用需求"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_1_3_4",
+      "label": "有源元件",
+      "node_type": "basic_concept",
+      "summary": "有源（主动 Active）元件包含 BJT、MOS 管、JFET 等，能够提供能量放大或控制功能。",
+      "difficulty": 2,
+      "section_num": "1.3",
+      "keywords": [
+        "BJT",
+        "MOS管",
+        "JFET",
+        "能量放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "各类电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "ct_1_3_1",
+      "target_id": "ca_1_3_1",
+      "relationship": "implements",
+      "description": "核心技术电路结构选择实现电路应用模拟集成运放电路",
+      "weight": 0.8,
+      "evidence": "基于关键词相似性的层次连接",
+      "bidirectional": false,
+      "edge_type": "hierarchical",
+      "source": "hierarchical_connection"
+    },
+    {
+      "source_id": "bc_1_3_1",
+      "target_id": "ca_1_3_1",
+      "relationship": "applies_to",
+      "description": "模拟信号是模拟集成运放电路处理的主要信号类型。",
+      "weight": 0.9,
+      "evidence": "模拟信号是指时间连续、幅度连续的电信号，实现模拟信号处理的功能电路称为模拟电路。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_1_3_4",
+      "target_id": "ct_1_3_1",
+      "relationship": "supports",
+      "description": "有源元件是电路结构选择的基础元件之一。",
+      "weight": 0.8,
+      "evidence": "电路中采用的有源（主动 Active）元件包含 BJT、MOS 管、JFET 等。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_1_3_5",
+      "target_id": "ct_1_3_1",
+      "relationship": "supports",
+      "description": "无源元件是电路结构选择的基础元件之一。",
+      "weight": 0.8,
+      "evidence": "无源（被动 Passive）元件则有电阻 R、电容 C 和电感 L。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ct_1_3_2",
+      "target_id": "ca_1_3_1",
+      "relationship": "implements",
+      "description": "电路参数设计是实现模拟集成运放电路性能优化的关键步骤。",
+      "weight": 0.9,
+      "evidence": "在电路体系结构确定的条件下，设计电路中各元器件或功能单元的具体参数。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [
+      {
+        "id": "bc_1_3_5",
+        "label": "无源元件",
+        "summary": "无源（被动 Passive）元件包含电阻 R、电容 C 和电感 L，不能提供能量放大功能。"
+      },
+      {
+        "id": "bc_1_3_1",
+        "label": "模拟信号",
+        "summary": "模拟信号是指时间连续、幅度连续的电信号。模拟信号在时域和频域都可以用幅度或增益来表示其强弱。模拟信号处理的功能电路称为模拟电路。"
+      },
+      {
+        "id": "bc_1_3_4",
+        "label": "有源元件",
+        "summary": "有源（主动 Active）元件包含 BJT、MOS 管、JFET 等，能够提供能量放大或控制功能。"
+      }
+    ],
+    "core_technologies": [
+      {
+        "id": "ct_1_3_2",
+        "label": "电路参数设计",
+        "summary": "在电路体系结构确定的条件下，设计电路中各元器件或功能单元的具体参数。这是一个局部优化的过程，需要保证电路工作在限定条件下的稳定范围之内，并尽可能提高电路性能。"
+      },
+      {
+        "id": "ct_1_3_1",
+        "label": "电路结构选择",
+        "summary": "电路设计的第一步是选择电路系统架构或结构。不同的结构具有不同的特点，没有一种结构能够满足所有应用的需求。设计者需要根据应用需求选择最合适的结构。"
+      }
+    ],
+    "logical_path": [
+      {
+        "id": "bc_1_3_1",
+        "label": "模拟信号",
+        "type": "basic_concept",
+        "summary": "模拟信号是指时间连续、幅度连续的电信号。模拟信号在时域和频域都可以用幅度或增益来表示其强弱。模拟信号处理的功能电路称为模拟电路。"
+      },
+      {
+        "id": "ca_1_3_1",
+        "label": "模拟集成运放电路",
+        "type": "circuit_application",
+        "summary": "模拟集成线性运放电路是模拟电路设计的核心内容之一。其设计需要从多侧面对电路结构进行重点讨论，包括系统应用和定义、功能单元实现、基本电路结构特点、器件与工艺等。"
+      }
+    ],
+    "key_bottleneck": "实现模拟集成运放电路的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 6,
+    "total_edges": 5,
+    "node_types": {
+      "circuit_application": 1,
+      "basic_concept": 3,
+      "core_technology": 2
+    },
+    "max_depth": 2
+  }
+}

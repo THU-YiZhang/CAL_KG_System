@@ -1,0 +1,1137 @@
+{
+  "application_node_id": "ca_2_4_1",
+  "application_label": "电阻串联分压结构",
+  "nodes": [
+    {
+      "id": "ca_2_2_1",
+      "label": "PN结偏置电路",
+      "node_type": "circuit_application",
+      "summary": "利用PN结的正偏特性实现直流电平移位、电压钳位和交流短路等功能。正偏PN结在模拟电路中主要起偏置作用，反偏PN结用于反向隔离和稳压。",
+      "difficulty": 4,
+      "section_num": "2.2",
+      "keywords": [
+        "偏置",
+        "电平移位",
+        "电压钳位"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路设计"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_8__3",
+      "label": "反馈系统",
+      "node_type": "circuit_application",
+      "summary": "反馈系统通过将输出信号反馈到输入端来改善系统的性能和稳定性。反馈网络会影响运放的输出阻抗和极点位置。",
+      "difficulty": 4,
+      "section_num": "8.",
+      "keywords": [
+        "负反馈",
+        "输出阻抗",
+        "极点位置"
+      ],
+      "formulas": [],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_6_2",
+      "label": "Wilson电流源",
+      "node_type": "circuit_application",
+      "summary": "通过增加反馈管（M4）实现V_DS的匹配，显著提高电流镜的精度。基本型Wilson结构存在V_DS失配，改进型通过电平移位实现V_DS匹配，输出阻抗约为g_m2*r_o2*r_o3。",
+      "difficulty": 4,
+      "section_num": "3.6",
+      "keywords": [
+        "反馈控制",
+        "电平移位",
+        "高输出阻抗"
+      ],
+      "formulas": [
+        "R_o = g_m2 * r_o2 * r_o3"
+      ],
+      "applications": [
+        "高精度电流源",
+        "电源抑制比优化"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_5_6",
+      "label": "三路互偏置电路",
+      "node_type": "circuit_application",
+      "summary": "三路互偏置电路是通过引入第三支路和负反馈控制，提高偏置电路的稳定性和精度的自偏置结构。这种电路结构可以显著降低电源电压对偏置电流的影响，并提高电流镜的匹配精度。",
+      "difficulty": 5,
+      "section_num": "3.5",
+      "keywords": [
+        "三路互偏置",
+        "负反馈",
+        "稳定性"
+      ],
+      "formulas": [],
+      "applications": [
+        "高性能偏置",
+        "宽摆幅电流镜"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_12_4_4",
+      "label": "反馈型Class AB控制电路",
+      "node_type": "circuit_application",
+      "summary": "反馈型Class AB控制电路通过反馈环路实现静态工作点的精确控制，包括截止型和非截止型两种结构。非截止型结构通过最小电流选择电路确保输出管的最小电流不为零，提高动态响应速度并降低高频失真。",
+      "difficulty": 5,
+      "section_num": "12.4",
+      "keywords": [
+        "反馈控制",
+        "Class AB",
+        "非截止型"
+      ],
+      "formulas": [
+        "√I3 = 2√Im - √I11",
+        "√I4 = 2√Im - √I12"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_6_1",
+      "label": "基本电流源",
+      "node_type": "circuit_application",
+      "summary": "基于简单电流镜结构的基本电流源，输入和输出管的V_GS相同，但V_DS不同，导致电流失配。通过增加沟道长度或降低静态电流可改善匹配性能，但输出阻抗有限。",
+      "difficulty": 3,
+      "section_num": "3.6",
+      "keywords": [
+        "电流镜",
+        "失配",
+        "输出阻抗"
+      ],
+      "formulas": [
+        "I_o/I_ref = (W/L)_2/(W/L)_1 * (1 + λV_o)/(1 + λV_DSI)"
+      ],
+      "applications": [
+        "基础偏置电路",
+        "低精度电流源"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_6_4",
+      "label": "Class AB互补推挽放大电路",
+      "node_type": "circuit_application",
+      "summary": "Class AB互补推挽放大电路结合了Class A和Class B的优点，具有效率高、失真小、功耗低的特点，广泛应用于功率放大。",
+      "difficulty": 4,
+      "section_num": "5.6",
+      "keywords": [
+        "Class AB",
+        "互补推挽",
+        "功率放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_3_3",
+      "label": "CD-CG-CS组合放大电路",
+      "node_type": "circuit_application",
+      "summary": "CD-CG-CS是一种三级组合放大电路，通过CD电压缓冲级将输入电压转变为电流信号，再通过CG电流跟随将电流信号转变为输出电压信号。CD和CG的放大管类型必须相反，可用于Class AB模式的CMOS差分输入对，也可作为电平移位结构。",
+      "difficulty": 5,
+      "section_num": "5.3",
+      "keywords": [
+        "CD-CG-CS",
+        "Class AB",
+        "电平移位"
+      ],
+      "formulas": [
+        "V_GSN + V_GSP (固定偏压)"
+      ],
+      "applications": [
+        "差分放大器",
+        "电平移位电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_3_4",
+      "label": "Telescope Cascode放大电路",
+      "node_type": "circuit_application",
+      "summary": "Telescope Cascode放大电路采用同类型MOS管垂直级联，通过提高输出阻抗实现高增益。其电压增益公式为A_v = -g_m * R_o，其中R_o = g_m * r_o^2 / (2α)。该结构具有优异的频率响应特性，但需要较高的电源电压且输出摆幅较小。",
+      "difficulty": 5,
+      "section_num": "5.3",
+      "keywords": [
+        "Telescope Cascode",
+        "高输出阻抗",
+        "高增益"
+      ],
+      "formulas": [
+        "A_v = -g_m * R_o",
+        "R_o = g_m * r_o^2 / (2α)"
+      ],
+      "applications": [
+        "高增益放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_11_5_2",
+      "label": "电压串联负反馈运放",
+      "node_type": "circuit_application",
+      "summary": "典型的电压串联负反馈闭环运放系统，在深度负反馈条件下可有效降低输出噪声和提高PSR。系统具有降低的输出阻抗和增加的输入阻抗特性。",
+      "difficulty": 5,
+      "section_num": "11.5",
+      "keywords": [
+        "负反馈运放",
+        "闭环系统",
+        "噪声抑制"
+      ],
+      "formulas": [],
+      "applications": [
+        "精密放大",
+        "低噪声设计"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_4_1",
+      "label": "偏置电路",
+      "node_type": "circuit_application",
+      "summary": "为放大电路提供稳定静态工作点的电路，利用MOS管的I-V方程和支路电流连续性条件设计。设计时需兼顾静态工作点和动态启动特性，确保电路在PVT变化下稳定工作。",
+      "difficulty": 4,
+      "section_num": "1.4",
+      "keywords": [
+        "偏置",
+        "静态工作点",
+        "稳定性"
+      ],
+      "formulas": [
+        "I_D = (1/2)μ_nC_ox(W/L)(V_GS - V_th)^2(1 + λV_DS)"
+      ],
+      "applications": [
+        "放大电路",
+        "基准电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_7_3_2",
+      "label": "负反馈闭环系统",
+      "node_type": "circuit_application",
+      "summary": "负反馈闭环系统通过反馈网络调整系统性能，提高稳定性和线性度。低频下负反馈保证稳定，高频下需通过相位裕度和增益裕度设计避免正反馈。设计时需分析环路增益和极点位置。",
+      "difficulty": 4,
+      "section_num": "7.3",
+      "keywords": [
+        "负反馈",
+        "闭环系统",
+        "环路增益"
+      ],
+      "formulas": [
+        "G(s) = A(s)/(1 + A(s)F(s))"
+      ],
+      "applications": [
+        "运算放大器",
+        "控制系统"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_2",
+      "label": "高性能自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "高性能自偏置电路通过内部反馈机制实现稳定的偏置电压或电流，克服了电阻分压偏置的缺点。具有高电源抑制比和低噪声特性，广泛应用于模拟集成电路中。",
+      "difficulty": 4,
+      "section_num": "3.",
+      "keywords": [
+        "自偏置",
+        "反馈机制",
+        "高电源抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_1_2",
+      "label": "全差分型运放",
+      "node_type": "circuit_application",
+      "summary": "采用全差分结构的运放，有利于消除以共模信号出现的各类噪声，但需要通过共模负反馈(CMFB)电路解决输出共模静态点难以定义的问题。",
+      "difficulty": 4,
+      "section_num": "6.",
+      "keywords": [
+        "全差分",
+        "CMFB",
+        "噪声消除"
+      ],
+      "formulas": [],
+      "applications": [
+        "低噪声应用"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6__3",
+      "label": "Class AB输出级",
+      "node_type": "circuit_application",
+      "summary": "采用Class AB互补推挽结构的输出级电路，具有高驱动能力和良好线性度。",
+      "difficulty": 4,
+      "section_num": "6.",
+      "keywords": [
+        "输出级",
+        "Class AB",
+        "推挽"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_2_4_1",
+      "label": "电阻串联分压结构",
+      "node_type": "circuit_application",
+      "summary": "电阻串联分压结构用于电压设定与移位，通过串联电阻的分压作用实现电压的精确控制。这种结构在模拟电路中广泛应用，如电平变换和偏置电路。",
+      "difficulty": 4,
+      "section_num": "2.4",
+      "keywords": [
+        "串联分压",
+        "电压设定",
+        "电平变换"
+      ],
+      "formulas": [
+        "Vout=Vin*R2/(R1+R2)"
+      ],
+      "applications": [
+        "偏置电路",
+        "电平变换"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_5_1",
+      "label": "CMOS运算放大器",
+      "node_type": "circuit_application",
+      "summary": "Baker等人的著作提供了CMOS运算放大器的详细设计实例，包括电路结构、版图考虑和性能优化。",
+      "difficulty": 5,
+      "section_num": "1.5",
+      "keywords": [
+        "差分对",
+        "输出级",
+        "补偿网络"
+      ],
+      "formulas": [
+        "转换速率",
+        "输入失调电压"
+      ],
+      "applications": [
+        "数据采集系统",
+        "模拟信号处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_2_2",
+      "label": "带分流MOS的偏置电路",
+      "node_type": "circuit_application",
+      "summary": "带分流MOS的偏置电路在MOS分裂二极管电路的基础上增加了一个并联的MOS管（M3），通过分流作用进一步稳定偏置电流。M3管通常工作在饱和区，M2管仍保留线性电阻的工作状态，通过负反馈控制实现稳定的工作点。",
+      "difficulty": 4,
+      "section_num": "3.2",
+      "keywords": [
+        "分流",
+        "负反馈",
+        "工作点稳定"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度偏置"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_9_1",
+      "label": "Wilson电流镜电路",
+      "node_type": "circuit_application",
+      "summary": "Wilson电流镜电路是一种基于负反馈的高精度电流镜，其结构包括三个MOSFET和一个反馈环路。该电路具有高输出阻抗和良好的电流匹配特性，适用于需要高精度电流复制的应用。",
+      "difficulty": 4,
+      "section_num": "3.9",
+      "keywords": [
+        "Wilson结构",
+        "高输出阻抗",
+        "电流复制"
+      ],
+      "formulas": [
+        "输出阻抗公式"
+      ],
+      "applications": [
+        "电流源",
+        "模拟电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_1_3",
+      "label": "恒流源偏置放大电路",
+      "node_type": "circuit_application",
+      "summary": "恒流源偏置放大电路采用恒流源提供稳定的偏置电流，有源负载替代线性电阻负载。放大管和恒流源负载偏置管均工作在饱和区，区别在于放大管的V_GS或V_BE是变化的，而恒流源器件的V_GS或V_BE固定。",
+      "difficulty": 4,
+      "section_num": "5.1",
+      "keywords": [
+        "恒流源",
+        "有源负载",
+        "饱和区"
+      ],
+      "formulas": [],
+      "applications": [
+        "低噪声放大电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_8_1_1",
+      "label": "单级放大器",
+      "node_type": "circuit_application",
+      "summary": "只包含一个放大级的简单放大器结构。通常只存在一个高阻极点，在理想电压源驱动下具有高频极点，相位裕度大于90°，稳定性好。",
+      "difficulty": 2,
+      "section_num": "8.",
+      "keywords": [
+        "简单结构",
+        "高稳定性",
+        "单极点"
+      ],
+      "formulas": [],
+      "applications": [
+        "低复杂度应用",
+        "基础放大电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "ca_3_6_1",
+      "target_id": "ca_3_6_2",
+      "relationship": "extends",
+      "description": "Wilson电流源是基本电流源的扩展，通过反馈控制提高匹配精度。",
+      "weight": 0.7,
+      "evidence": "Wilson结构通过增加反馈管改进基本电流镜",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ca_1_5_1",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS运算放大器与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_2_1",
+      "target_id": "ca_1_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用PN结偏置电路与偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_2_1",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用PN结偏置电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_2_1",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用PN结偏置电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_1",
+      "target_id": "ca_2_2_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用偏置电路与PN结偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_1",
+      "target_id": "ca_3_5_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用偏置电路与三路互偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2_2",
+      "target_id": "ca_3_5_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用带分流MOS的偏置电路与三路互偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2_2",
+      "target_id": "ca_7_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用带分流MOS的偏置电路与负反馈闭环系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2_2",
+      "target_id": "ca_8__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用带分流MOS的偏置电路与反馈系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_6",
+      "target_id": "ca_1_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用三路互偏置电路与偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_6",
+      "target_id": "ca_3_2_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用三路互偏置电路与带分流MOS的偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_6",
+      "target_id": "ca_7_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用三路互偏置电路与负反馈闭环系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_6",
+      "target_id": "ca_8__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用三路互偏置电路与反馈系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_1",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流镜电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_1",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流镜电路与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_1",
+      "target_id": "ca_8__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用基本电流源与反馈系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_2_2_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与PN结偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_3_9_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与Wilson电流镜电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_2_2_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与PN结偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_3_9_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与Wilson电流镜电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_1_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_7_3_2",
+      "target_id": "ca_3_2_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用负反馈闭环系统与带分流MOS的偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_7_3_2",
+      "target_id": "ca_3_5_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用负反馈闭环系统与三路互偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_7_3_2",
+      "target_id": "ca_8__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用负反馈闭环系统与反馈系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_7_3_2",
+      "target_id": "ca_11_5_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用负反馈闭环系统与电压串联负反馈运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8__3",
+      "target_id": "ca_3_2_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈系统与带分流MOS的偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8__3",
+      "target_id": "ca_3_5_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈系统与三路互偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8__3",
+      "target_id": "ca_3_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈系统与基本电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8__3",
+      "target_id": "ca_7_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈系统与负反馈闭环系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_5_2",
+      "target_id": "ca_7_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压串联负反馈运放与负反馈闭环系统技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_1",
+      "target_id": "ca_3_9_1",
+      "relationship": "功能组合",
+      "description": "偏置电路可以为Wilson电流镜电路提供稳定的偏置电流，确保其高精度电流复制功能的实现。",
+      "weight": 0.8,
+      "evidence": "Wilson电流镜电路需要稳定的偏置电流来保证其高输出阻抗和良好的电流匹配特性，而偏置电路正是为这类需要稳定静态工作点的电路设计的。偏置电路利用MOS管的I-V方程和支路电流连续性条件，可以为Wilson电流镜提供稳定的工作点。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_7_3_2",
+      "relationship": "功能组合",
+      "description": "Class AB互补推挽放大电路可以与负反馈闭环系统组合使用，以提高放大电路的线性度和稳定性。负反馈技术可以显著降低Class AB放大电路的失真，并改善其频率响应。",
+      "weight": 0.8,
+      "evidence": "在音频放大器中，Class AB互补推挽放大电路常用于功率放大阶段，而负反馈闭环系统则用于控制放大器的整体性能。通过引入负反馈，可以减小非线性失真，提高放大器的稳定性和带宽。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_1_4_1",
+      "target_id": "ca_2_4_1",
+      "relationship": "技术依赖",
+      "description": "偏置电路的设计通常依赖于电阻串联分压结构来提供稳定的参考电压或偏置电压。电阻串联分压结构为偏置电路提供了精确的电压设定，确保放大电路或其他模拟电路能够获得稳定的静态工作点。",
+      "weight": 0.9,
+      "evidence": "在模拟电路设计中，偏置电路的核心任务是为放大电路提供稳定的静态工作点。这一任务通常通过电阻串联分压结构来实现，因为电阻串联分压能够提供精确且稳定的电压参考。MOS管的I-V方程和支路电流连续性条件在设计偏置电路时，往往需要结合电阻串联分压结构来确保电路在PVT（工艺、电压、温度）变化下的稳定性。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_11_5_2",
+      "relationship": "功能组合",
+      "description": "CD-CG-CS组合放大电路可以作为电压串联负反馈运放的前置放大级，提供高输入阻抗和电平移位功能，而电压串联负反馈运放可以提供稳定的闭环增益和低噪声输出。",
+      "weight": 0.7,
+      "evidence": "CD-CG-CS电路的高输入阻抗特性与电压串联负反馈运放的高输入阻抗要求相匹配，且CD-CG-CS的电平移位功能可以为运放提供合适的输入电平。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_9_1",
+      "target_id": "ca_7_3_2",
+      "relationship": "技术依赖",
+      "description": "Wilson电流镜电路依赖于负反馈闭环系统的技术来实现其高精度电流复制和高输出阻抗特性。负反馈闭环系统的设计原则直接应用于Wilson电流镜的反馈环路中。",
+      "weight": 0.8,
+      "evidence": "Wilson电流镜电路通过其反馈环路实现负反馈，这与负反馈闭环系统中的基本原理一致。负反馈闭环系统的设计方法，如环路增益分析和稳定性设计，直接应用于Wilson电流镜的反馈环路设计中。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_1_2",
+      "target_id": "ca_7_3_2",
+      "relationship": "技术依赖",
+      "description": "全差分型运放的设计依赖于负反馈闭环系统的技术来实现共模负反馈(CMFB)功能，确保输出共模静态点的稳定。",
+      "weight": 0.9,
+      "evidence": "全差分型运放需要通过共模负反馈(CMFB)电路来解决输出共模静态点难以定义的问题，而CMFB本质上是一种负反馈闭环系统。负反馈闭环系统的设计原则和技术直接应用于CMFB电路的设计中。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_2_4_1",
+      "target_id": "ca_6_1_2",
+      "relationship": "功能组合",
+      "description": "电阻串联分压结构可以用于全差分型运放的偏置电路或共模反馈(CMFB)电路中的电压设定，从而帮助定义输出共模静态点。",
+      "weight": 0.7,
+      "evidence": "全差分型运放需要精确的共模电压设定，而电阻串联分压结构能够提供稳定的参考电压，这在CMFB电路中是关键技术之一。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_2_2_1",
+      "target_id": "ca_7_3_2",
+      "relationship": "技术依赖",
+      "description": "PN结偏置电路在负反馈闭环系统中常用于提供稳定的直流偏置点，确保运算放大器或其他有源器件工作在合适的线性区域。负反馈系统的稳定性设计需要建立在正确的偏置基础上。",
+      "weight": 0.7,
+      "evidence": "1) 运算放大器内部差分输入级需要PN结偏置电路提供工作点 2) 负反馈系统的直流工作点稳定性依赖于偏置电路的温度稳定性 3) 电压钳位功能可防止反馈环路中的过驱动",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_3_6_1",
+      "relationship": "功能组合",
+      "description": "高性能自偏置电路可以为基本电流源提供稳定的偏置电压或电流，从而改善基本电流源的性能。自偏置电路的高电源抑制比和低噪声特性可以补偿基本电流源在失配和输出阻抗方面的不足。",
+      "weight": 0.7,
+      "evidence": "自偏置电路通过内部反馈机制提供稳定的偏置，这正是基本电流源所需要的。基本电流源的失配问题可以通过自偏置电路的稳定输出得到一定程度的改善。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_2_2",
+      "target_id": "ca_5_1_3",
+      "relationship": "技术依赖",
+      "description": "带分流MOS的偏置电路为恒流源偏置放大电路提供了稳定的偏置电流基础。恒流源偏置放大电路中的恒流源可以看作是带分流MOS的偏置电路的进一步应用和扩展。",
+      "weight": 0.7,
+      "evidence": "带分流MOS的偏置电路通过负反馈控制实现稳定的工作点，这与恒流源偏置放大电路中需要稳定偏置电流的要求一致。恒流源偏置放大电路中的恒流源可以视为带分流MOS的偏置电路的一种实现方式，两者都工作在饱和区以实现稳定的电流输出。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_2_2_1",
+      "target_id": "ca_3_9_1",
+      "relationship": "技术依赖",
+      "description": "Wilson电流镜电路需要稳定的偏置电压来确保其高精度电流复制功能，而PN结偏置电路可以提供这种稳定的偏置电压。PN结的正偏特性可用于为Wilson电流镜中的MOSFET提供必要的栅极偏置电压。",
+      "weight": 0.7,
+      "evidence": "Wilson电流镜中的MOSFET需要精确的栅极偏置电压来维持恒定的电流复制。PN结偏置电路的正偏特性（约0.7V的固定压降）常被用作基准电压源，可为Wilson电流镜提供稳定的偏置点。特别是在需要温度稳定性的应用中，PN结的正偏电压温度系数（约-2mV/°C）可以与电阻网络配合实现温度补偿。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [],
+    "core_technologies": [],
+    "logical_path": [],
+    "key_bottleneck": "实现电阻串联分压结构的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 21,
+    "total_edges": 60,
+    "node_types": {
+      "circuit_application": 21
+    },
+    "max_depth": 0
+  }
+}

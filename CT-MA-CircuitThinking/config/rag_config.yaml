@@ -1,0 +1,122 @@
+# RAG Configuration for CT-MA System
+
+# Vector Store Configuration
+vector_store:
+  type: "chroma"
+  collection_name: "circuit_knowledge"
+  persist_directory: "./data/chroma_db"
+  distance_function: "cosine"
+  
+# Embedding Configuration
+embedding:
+  model: "text-embedding-3-small"
+  dimensions: 1536
+  batch_size: 100
+  normalize: true
+
+# Document Processing
+document_processing:
+  chunk_size: 512
+  chunk_overlap: 50
+  separator: "\n\n"
+  min_chunk_size: 100
+  max_chunk_size: 1000
+  
+  # Document types to process
+  supported_formats: ["pdf", "txt", "md", "docx"]
+  
+  # Text preprocessing
+  preprocessing:
+    remove_extra_whitespace: true
+    normalize_unicode: true
+    remove_special_chars: false
+    lowercase: false
+
+# Retrieval Configuration
+retrieval:
+  # Basic retrieval settings
+  top_k: 10
+  score_threshold: 0.7
+  search_type: "hybrid"  # semantic, keyword, hybrid
+  
+  # Hybrid search weights
+  semantic_weight: 0.7
+  keyword_weight: 0.3
+  
+  # Reranking
+  enable_reranking: true
+  rerank_top_k: 20
+  final_top_k: 10
+  
+  # Query expansion
+  enable_query_expansion: true
+  expansion_terms: 3
+
+# Knowledge Enhancement
+knowledge_enhancement:
+  # Node enhancement settings
+  enhance_basic_concepts: true
+  enhance_core_technologies: true
+  enhance_circuit_applications: true
+  
+  # Enhancement strategies
+  strategies:
+    - "definition_lookup"
+    - "formula_extraction"
+    - "example_retrieval"
+    - "related_concepts"
+  
+  # Context building
+  context_window: 2048
+  max_contexts_per_node: 5
+  include_metadata: true
+
+# Search Strategies
+search_strategies:
+  semantic_search:
+    enabled: true
+    weight: 0.7
+    
+  keyword_search:
+    enabled: true
+    weight: 0.3
+    algorithms: ["bm25", "tfidf"]
+    
+  graph_search:
+    enabled: false
+    max_hops: 2
+    weight: 0.2
+
+# Caching
+caching:
+  enable_cache: true
+  cache_type: "memory"  # memory, redis, file
+  cache_ttl: 3600  # seconds
+  max_cache_size: 1000
+
+# Performance
+performance:
+  batch_retrieval: true
+  async_processing: true
+  max_concurrent_requests: 10
+  timeout: 30
+
+# Quality Control
+quality_control:
+  min_relevance_score: 0.5
+  max_results_per_query: 50
+  deduplicate_results: true
+  filter_low_quality: true
+  
+  # Content filtering
+  content_filters:
+    min_content_length: 50
+    max_content_length: 2000
+    exclude_patterns: ["^Table", "^Figure", "^Equation"]
+
+# Monitoring
+monitoring:
+  log_queries: true
+  log_results: true
+  track_performance: true
+  save_retrieval_stats: true

@@ -1,0 +1,1211 @@
+{
+  "total_subgraphs": 201,
+  "applications": [
+    {
+      "id": "ca_1_5_1",
+      "label": "CMOS运算放大器",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_1_1_1",
+      "label": "BGR电路",
+      "nodes": 21,
+      "edges": 114
+    },
+    {
+      "id": "ca_2_3_1",
+      "label": "MOS管恒流源",
+      "nodes": 21,
+      "edges": 118
+    },
+    {
+      "id": "ca_2_1_1",
+      "label": "模拟放大器",
+      "nodes": 5,
+      "edges": 4
+    },
+    {
+      "id": "ca_1_3_1",
+      "label": "模拟集成运放电路",
+      "nodes": 6,
+      "edges": 5
+    },
+    {
+      "id": "ca_2_2_1",
+      "label": "PN结偏置电路",
+      "nodes": 21,
+      "edges": 140
+    },
+    {
+      "id": "ca_2_2_2",
+      "label": "BJT放大电路",
+      "nodes": 21,
+      "edges": 99
+    },
+    {
+      "id": "ca_1_2_1",
+      "label": "电压比较器",
+      "nodes": 20,
+      "edges": 77
+    },
+    {
+      "id": "ca_1_2_2",
+      "label": "振荡器",
+      "nodes": 6,
+      "edges": 6
+    },
+    {
+      "id": "ca_1_4_1",
+      "label": "偏置电路",
+      "nodes": 21,
+      "edges": 117
+    },
+    {
+      "id": "ca_1_4_2",
+      "label": "差分放大电路",
+      "nodes": 21,
+      "edges": 113
+    },
+    {
+      "id": "ca_1_4_3",
+      "label": "互补自偏置电路",
+      "nodes": 20,
+      "edges": 87
+    },
+    {
+      "id": "ca_3_2",
+      "label": "高性能自偏置电路",
+      "nodes": 20,
+      "edges": 125
+    },
+    {
+      "id": "ca_2_6_1",
+      "label": "低电压低电流应用电路",
+      "nodes": 21,
+      "edges": 143
+    },
+    {
+      "id": "ca_2_4_1",
+      "label": "电阻串联分压结构",
+      "nodes": 21,
+      "edges": 60
+    },
+    {
+      "id": "ca_2_4_3",
+      "label": "运放频率补偿",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_2_4_4",
+      "label": "动态频率补偿",
+      "nodes": 20,
+      "edges": 77
+    },
+    {
+      "id": "ca_3_2_1",
+      "label": "MOS分裂二极管电路",
+      "nodes": 21,
+      "edges": 84
+    },
+    {
+      "id": "ca_3_2_2",
+      "label": "带分流MOS的偏置电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_2_5_1",
+      "label": "二极管应用电路",
+      "nodes": 21,
+      "edges": 92
+    },
+    {
+      "id": "ca_2_5_2",
+      "label": "BJT放大电路",
+      "nodes": 21,
+      "edges": 99
+    },
+    {
+      "id": "ca_2_5_3",
+      "label": "MOS管开关电路",
+      "nodes": 5,
+      "edges": 5
+    },
+    {
+      "id": "ca_3_3_1",
+      "label": "简单电阻分压偏置电路",
+      "nodes": 21,
+      "edges": 85
+    },
+    {
+      "id": "ca_3_3_2",
+      "label": "R+MOS二极管偏置电路",
+      "nodes": 20,
+      "edges": 77
+    },
+    {
+      "id": "ca_3_3_3",
+      "label": "两异性MOS二极管串联分压偏置电路",
+      "nodes": 21,
+      "edges": 78
+    },
+    {
+      "id": "ca_3_3_4",
+      "label": "MOS二极管分裂的偏置电路",
+      "nodes": 21,
+      "edges": 91
+    },
+    {
+      "id": "ca_3_3_6",
+      "label": "耗尽管偏置电路",
+      "nodes": 20,
+      "edges": 102
+    },
+    {
+      "id": "ca_3_4_1",
+      "label": "V_TH互偏置电路",
+      "nodes": 20,
+      "edges": 76
+    },
+    {
+      "id": "ca_3_4_2",
+      "label": "含启动电路的V_TH互偏置电路",
+      "nodes": 21,
+      "edges": 125
+    },
+    {
+      "id": "ca_3_4_3",
+      "label": "改进的Wilson偏置电路",
+      "nodes": 21,
+      "edges": 126
+    },
+    {
+      "id": "ca_3_8_1",
+      "label": "放大器偏置电路",
+      "nodes": 21,
+      "edges": 130
+    },
+    {
+      "id": "ca_3_8_2",
+      "label": "电压/电流基准电路",
+      "nodes": 21,
+      "edges": 139
+    },
+    {
+      "id": "ca_3_7_1",
+      "label": "NMOS启动电路",
+      "nodes": 21,
+      "edges": 109
+    },
+    {
+      "id": "ca_3_7_2",
+      "label": "零静态功耗NMOS启动电路",
+      "nodes": 21,
+      "edges": 108
+    },
+    {
+      "id": "ca_3_7_3",
+      "label": "OP控制型基准启动电路",
+      "nodes": 3,
+      "edges": 2
+    },
+    {
+      "id": "ca_3_5_1",
+      "label": "二极管/VBE自偏置电路",
+      "nodes": 21,
+      "edges": 109
+    },
+    {
+      "id": "ca_3_5_2",
+      "label": "ΔVBE/PTAT偏置电路",
+      "nodes": 21,
+      "edges": 75
+    },
+    {
+      "id": "ca_3_5_3",
+      "label": "k因子倍增单调型自偏置结构",
+      "nodes": 21,
+      "edges": 116
+    },
+    {
+      "id": "ca_3_5_4",
+      "label": "CMOS单调型自偏置电路",
+      "nodes": 21,
+      "edges": 133
+    },
+    {
+      "id": "ca_3_5_5",
+      "label": "峰值型自偏置结构",
+      "nodes": 20,
+      "edges": 122
+    },
+    {
+      "id": "ca_3_5_6",
+      "label": "三路互偏置电路",
+      "nodes": 21,
+      "edges": 133
+    },
+    {
+      "id": "ca_3_9_1",
+      "label": "Wilson电流镜电路",
+      "nodes": 21,
+      "edges": 128
+    },
+    {
+      "id": "ca_3_9_2",
+      "label": "低电压MOS级联偏置电路",
+      "nodes": 20,
+      "edges": 141
+    },
+    {
+      "id": "ca_3_9_3",
+      "label": "Sub-1-V CMOS温度参考电路",
+      "nodes": 21,
+      "edges": 73
+    },
+    {
+      "id": "ca_3_6_1",
+      "label": "基本电流源",
+      "nodes": 21,
+      "edges": 107
+    },
+    {
+      "id": "ca_3_6_2",
+      "label": "Wilson电流源",
+      "nodes": 20,
+      "edges": 133
+    },
+    {
+      "id": "ca_3_6_3",
+      "label": "Cascode电流源",
+      "nodes": 21,
+      "edges": 125
+    },
+    {
+      "id": "ca_3_6_4",
+      "label": "Wildar电流源",
+      "nodes": 21,
+      "edges": 127
+    },
+    {
+      "id": "ca_4__1",
+      "label": "高性能带隙基准电路",
+      "nodes": 21,
+      "edges": 125
+    },
+    {
+      "id": "ca_4__2",
+      "label": "极低功耗基准电路",
+      "nodes": 21,
+      "edges": 114
+    },
+    {
+      "id": "ca_4__3",
+      "label": "双阱CMOS基准电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_4_2_1",
+      "label": "电压模带隙基准基本结构",
+      "nodes": 21,
+      "edges": 77
+    },
+    {
+      "id": "ca_4_2_2",
+      "label": "改进型带隙基准结构",
+      "nodes": 21,
+      "edges": 93
+    },
+    {
+      "id": "ca_4_3_1",
+      "label": "简单电流求和基准电路",
+      "nodes": 21,
+      "edges": 92
+    },
+    {
+      "id": "ca_4_3_2",
+      "label": "合并式电流求和基准电路",
+      "nodes": 21,
+      "edges": 117
+    },
+    {
+      "id": "ca_4_3_3",
+      "label": "高阶补偿基准电路",
+      "nodes": 21,
+      "edges": 107
+    },
+    {
+      "id": "ca_4_3_4",
+      "label": "低共模电压基准电路",
+      "nodes": 21,
+      "edges": 90
+    },
+    {
+      "id": "ca_4_4_1",
+      "label": "基于亚阈电流控制的电压带隙基准",
+      "nodes": 21,
+      "edges": 133
+    },
+    {
+      "id": "ca_4_4_2",
+      "label": "运放控制的电压模带隙基准",
+      "nodes": 21,
+      "edges": 81
+    },
+    {
+      "id": "ca_4_4_3",
+      "label": "全CMOS电流模带隙基准",
+      "nodes": 21,
+      "edges": 88
+    },
+    {
+      "id": "ca_4_7_1",
+      "label": "2V 23μA带隙基准",
+      "nodes": 21,
+      "edges": 124
+    },
+    {
+      "id": "ca_4_7_2",
+      "label": "1V BiCMOS带隙基准",
+      "nodes": 21,
+      "edges": 102
+    },
+    {
+      "id": "ca_4_5_1",
+      "label": "基于V-I转换的电流基准电路",
+      "nodes": 21,
+      "edges": 143
+    },
+    {
+      "id": "ca_4_5_2",
+      "label": "零温度系数电流源电路",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_5_1_1",
+      "label": "集成线性放大电路",
+      "nodes": 21,
+      "edges": 96
+    },
+    {
+      "id": "ca_5_1_2",
+      "label": "差分运放电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_5_1_3",
+      "label": "恒流源偏置放大电路",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_5_2_1",
+      "label": "电阻负载CS放大器",
+      "nodes": 21,
+      "edges": 125
+    },
+    {
+      "id": "ca_5_2_2",
+      "label": "PMOS有源负载CS放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_5_2_3",
+      "label": "互补推挽Class AB放大器",
+      "nodes": 20,
+      "edges": 119
+    },
+    {
+      "id": "ca_5_7_1",
+      "label": "CMOS差分放大器",
+      "nodes": 21,
+      "edges": 139
+    },
+    {
+      "id": "ca_5_7_2",
+      "label": "超Class AB OTA",
+      "nodes": 21,
+      "edges": 141
+    },
+    {
+      "id": "ca_5_5_1",
+      "label": "MOS TL差分信号线性电流镜",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_5_5_2",
+      "label": "TL非线性控制电路",
+      "nodes": 21,
+      "edges": 127
+    },
+    {
+      "id": "ca_5_5_3",
+      "label": "CG输入差分电流放大器",
+      "nodes": 21,
+      "edges": 114
+    },
+    {
+      "id": "ca_5_6_1",
+      "label": "共源(CS)结构",
+      "nodes": 21,
+      "edges": 123
+    },
+    {
+      "id": "ca_5_6_2",
+      "label": "共漏(CD)结构",
+      "nodes": 21,
+      "edges": 120
+    },
+    {
+      "id": "ca_5_6_3",
+      "label": "共栅(CG)结构",
+      "nodes": 21,
+      "edges": 98
+    },
+    {
+      "id": "ca_5_6_4",
+      "label": "Class AB互补推挽放大电路",
+      "nodes": 20,
+      "edges": 121
+    },
+    {
+      "id": "ca_5_4_1",
+      "label": "NMOS差分输入级",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_5_4_2",
+      "label": "单端输出N/P型差分输入对",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_5_4_3",
+      "label": "OTA(跨导放大器)",
+      "nodes": 21,
+      "edges": 143
+    },
+    {
+      "id": "ca_5_3_1",
+      "label": "CS-CS组合放大电路",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_5_3_2",
+      "label": "CS-CD组合放大电路",
+      "nodes": 21,
+      "edges": 123
+    },
+    {
+      "id": "ca_5_3_3",
+      "label": "CD-CG-CS组合放大电路",
+      "nodes": 20,
+      "edges": 111
+    },
+    {
+      "id": "ca_5_3_4",
+      "label": "Telescope Cascode放大电路",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_5_3_5",
+      "label": "Folded Cascode放大电路",
+      "nodes": 21,
+      "edges": 132
+    },
+    {
+      "id": "ca_6_1_1",
+      "label": "基本差分输入结构",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_6_1_2",
+      "label": "全差分型运放",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_6_1_3",
+      "label": "Cascode型运放",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_6_1_4",
+      "label": "Class AB型运放",
+      "nodes": 21,
+      "edges": 149
+    },
+    {
+      "id": "ca_6_2_1",
+      "label": "套筒式Cascode差分放大器",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_6_2_2",
+      "label": "自适应偏置套筒式结构",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_6_2_3",
+      "label": "OTA Cascode结构",
+      "nodes": 21,
+      "edges": 113
+    },
+    {
+      "id": "ca_6_2_4",
+      "label": "正反馈OTA差分输入级",
+      "nodes": 21,
+      "edges": 121
+    },
+    {
+      "id": "ca_6_2_5",
+      "label": "折叠式Cascode差分放大器",
+      "nodes": 21,
+      "edges": 127
+    },
+    {
+      "id": "ca_6_8_1",
+      "label": "Class-AB高摆幅CMOS功率放大器",
+      "nodes": 21,
+      "edges": 94
+    },
+    {
+      "id": "ca_6_8_2",
+      "label": "带共模反馈的差分放大器",
+      "nodes": 21,
+      "edges": 140
+    },
+    {
+      "id": "ca_6_8_3",
+      "label": "伪Class-AB望远镜级联运算放大器",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_6__1",
+      "label": "模拟集成运放",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_6__2",
+      "label": "高性能差分放大器",
+      "nodes": 21,
+      "edges": 126
+    },
+    {
+      "id": "ca_6__3",
+      "label": "Class AB输出级",
+      "nodes": 20,
+      "edges": 125
+    },
+    {
+      "id": "ca_6_3_1",
+      "label": "全差分Class A输入级",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_6_3_2",
+      "label": "Class AB单级推挽放大电路",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_6_3_3",
+      "label": "全差分Cascode Class AB单级放大器",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_6_5_1",
+      "label": "局部源电阻差模负反馈电路",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_6_5_2",
+      "label": "六管自适应补偿结构",
+      "nodes": 21,
+      "edges": 129
+    },
+    {
+      "id": "ca_6_5_3",
+      "label": "交叉耦合差分对电平移位结构",
+      "nodes": 21,
+      "edges": 113
+    },
+    {
+      "id": "ca_6_6_1",
+      "label": "Class A/AB两级互补推挽运放",
+      "nodes": 21,
+      "edges": 130
+    },
+    {
+      "id": "ca_6_6_2",
+      "label": "折叠式Cascode Class AB三级运放",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_6_6_3",
+      "label": "单通道BTL功率放大电路",
+      "nodes": 21,
+      "edges": 140
+    },
+    {
+      "id": "ca_7_1_1",
+      "label": "闭环运放电路",
+      "nodes": 21,
+      "edges": 114
+    },
+    {
+      "id": "ca_7_1_2",
+      "label": "单位负反馈闭环系统",
+      "nodes": 21,
+      "edges": 120
+    },
+    {
+      "id": "ca_6_4_1",
+      "label": "低阻低增益全差分电路",
+      "nodes": 21,
+      "edges": 98
+    },
+    {
+      "id": "ca_6_4_2",
+      "label": "高阻高增益全差分电路",
+      "nodes": 20,
+      "edges": 131
+    },
+    {
+      "id": "ca_6_4_3",
+      "label": "N型折叠式Cascode全差分电路",
+      "nodes": 21,
+      "edges": 149
+    },
+    {
+      "id": "ca_6_4_4",
+      "label": "P型折叠式Cascode全差分电路",
+      "nodes": 21,
+      "edges": 150
+    },
+    {
+      "id": "ca_7_6_1",
+      "label": "电流反馈运算放大器",
+      "nodes": 21,
+      "edges": 112
+    },
+    {
+      "id": "ca_7_6_2",
+      "label": "低电压低功耗三级放大器",
+      "nodes": 21,
+      "edges": 92
+    },
+    {
+      "id": "ca_7_5_1",
+      "label": "四种闭环负反馈结构",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_7_2_1",
+      "label": "电压串联负反馈放大器",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_7_2_2",
+      "label": "电流并联负反馈放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_7_2_3",
+      "label": "跨阻放大器",
+      "nodes": 21,
+      "edges": 141
+    },
+    {
+      "id": "ca_7_3_1",
+      "label": "多级放大器稳定性设计",
+      "nodes": 21,
+      "edges": 81
+    },
+    {
+      "id": "ca_7_3_2",
+      "label": "负反馈闭环系统",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_8_1_1",
+      "label": "单级放大器",
+      "nodes": 21,
+      "edges": 102
+    },
+    {
+      "id": "ca_8_1_2",
+      "label": "两级放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_8_1_3",
+      "label": "多级增益结构",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_7_4_1",
+      "label": "两极点系统",
+      "nodes": 21,
+      "edges": 129
+    },
+    {
+      "id": "ca_7_4_2",
+      "label": "三极点一零点系统",
+      "nodes": 21,
+      "edges": 96
+    },
+    {
+      "id": "ca_7_4_3",
+      "label": "Butterworth低通滤波器",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_8_1",
+      "label": "RC串并联网络",
+      "nodes": 21,
+      "edges": 118
+    },
+    {
+      "id": "ca_8_2",
+      "label": "基本单级放大器",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_8_3_1",
+      "label": "基本CS放大器",
+      "nodes": 21,
+      "edges": 116
+    },
+    {
+      "id": "ca_8_3_2",
+      "label": "Miller补偿CS放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_8_3_3",
+      "label": "Cascode补偿CS放大器",
+      "nodes": 21,
+      "edges": 143
+    },
+    {
+      "id": "ca_8_4_1",
+      "label": "两级CS电压放大器",
+      "nodes": 21,
+      "edges": 144
+    },
+    {
+      "id": "ca_8_4_2",
+      "label": "增益倍增型Cascode",
+      "nodes": 21,
+      "edges": 144
+    },
+    {
+      "id": "ca_8__1",
+      "label": "两级放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_8__2",
+      "label": "Cascode结构",
+      "nodes": 21,
+      "edges": 103
+    },
+    {
+      "id": "ca_8__3",
+      "label": "反馈系统",
+      "nodes": 21,
+      "edges": 129
+    },
+    {
+      "id": "ca_9_1_1",
+      "label": "两级放大器频率补偿",
+      "nodes": 21,
+      "edges": 81
+    },
+    {
+      "id": "ca_9_1_2",
+      "label": "三级增益系统频率补偿",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_8_5_1",
+      "label": "两级放大多极点电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_8_5_2",
+      "label": "多级运放",
+      "nodes": 21,
+      "edges": 112
+    },
+    {
+      "id": "ca_9_3_1",
+      "label": "简单Miller补偿两级运放",
+      "nodes": 21,
+      "edges": 126
+    },
+    {
+      "id": "ca_9_3_2",
+      "label": "串联电阻Miller补偿运放",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_9_6_1",
+      "label": "低电压低功耗CMOS放大器",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_9_6_2",
+      "label": "大容性负载驱动器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_10_1",
+      "label": "电压倍增型 Cascode 高速高精度运放",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_9_2_1",
+      "label": "单位负反馈运放电路",
+      "nodes": 21,
+      "edges": 132
+    },
+    {
+      "id": "ca_9_2_2",
+      "label": "二阶巴特沃思滤波器",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_9_2_3",
+      "label": "三阶巴特沃思反馈系统",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_9_5_1",
+      "label": "基本Miller补偿运放",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_9_5_2",
+      "label": "三级运放NMC补偿设计",
+      "nodes": 21,
+      "edges": 141
+    },
+    {
+      "id": "ca_9_4_1",
+      "label": "UMC补偿结构",
+      "nodes": 21,
+      "edges": 114
+    },
+    {
+      "id": "ca_9_4_2",
+      "label": "NMC补偿结构",
+      "nodes": 21,
+      "edges": 80
+    },
+    {
+      "id": "ca_9_4_3",
+      "label": "NMCNR补偿结构",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_10_2_1",
+      "label": "高速运放设计",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_10_2_2",
+      "label": "电容反馈放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_10_3_1",
+      "label": "高速闭环运放",
+      "nodes": 21,
+      "edges": 134
+    },
+    {
+      "id": "ca_10_3_2",
+      "label": "精密运放电路",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_10_6_1",
+      "label": "高摆幅CMOS望远镜运算放大器",
+      "nodes": 21,
+      "edges": 112
+    },
+    {
+      "id": "ca_10_6_2",
+      "label": "低电压低功耗快速建立CMOS运算跨导放大器",
+      "nodes": 21,
+      "edges": 117
+    },
+    {
+      "id": "ca_10_4_1",
+      "label": "两级Folded Cascode全差分Class AB输出结构",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_10_4_2",
+      "label": "两层套筒式Cascode全差分放大电路",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_10_4_3",
+      "label": "四辅助单级放大的GBCA结构",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_11_1",
+      "label": "低噪声放大器",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_10_5_1",
+      "label": "单级Cascode运放",
+      "nodes": 20,
+      "edges": 133
+    },
+    {
+      "id": "ca_10_5_2",
+      "label": "增益提高型GBCA",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_11_4_1",
+      "label": "两级运放PSRR设计",
+      "nodes": 21,
+      "edges": 143
+    },
+    {
+      "id": "ca_11_4_2",
+      "label": "NMOS OTA噪声抑制",
+      "nodes": 21,
+      "edges": 128
+    },
+    {
+      "id": "ca_11_2_1",
+      "label": "电阻噪声模型",
+      "nodes": 21,
+      "edges": 129
+    },
+    {
+      "id": "ca_11_2_2",
+      "label": "二极管噪声模型",
+      "nodes": 21,
+      "edges": 127
+    },
+    {
+      "id": "ca_11_2_3",
+      "label": "MOS管噪声模型",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_11_5_1",
+      "label": "PMOS单级增益电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_11_5_2",
+      "label": "电压串联负反馈运放",
+      "nodes": 21,
+      "edges": 139
+    },
+    {
+      "id": "ca_11_2",
+      "label": "CG单级增益电路噪声",
+      "nodes": 21,
+      "edges": 117
+    },
+    {
+      "id": "ca_11_3",
+      "label": "CS-CG Cascode电路噪声",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_11_4",
+      "label": "CD源跟随器噪声",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_11_5",
+      "label": "差分对噪声",
+      "nodes": 21,
+      "edges": 128
+    },
+    {
+      "id": "ca_11_6_1",
+      "label": "RC低通滤波器",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_11_6_2",
+      "label": "全差分对称电路",
+      "nodes": 21,
+      "edges": 129
+    },
+    {
+      "id": "ca_12_1",
+      "label": "低压运算放大器",
+      "nodes": 21,
+      "edges": 125
+    },
+    {
+      "id": "ca_12_2",
+      "label": "轨至轨运算放大器",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_11_7_1",
+      "label": "级联CMOS运算放大器",
+      "nodes": 21,
+      "edges": 103
+    },
+    {
+      "id": "ca_11_7_2",
+      "label": "单电源AB类功率放大器",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_11_7_3",
+      "label": "低开环增益高PSRR微功率CMOS放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_12_2_1",
+      "label": "低压宽摆幅电流镜",
+      "nodes": 21,
+      "edges": 122
+    },
+    {
+      "id": "ca_12_2_2",
+      "label": "衬底驱动低压运放",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_12_3_1",
+      "label": "轨至轨折叠型Cascode差分输入结构",
+      "nodes": 21,
+      "edges": 145
+    },
+    {
+      "id": "ca_12_3_2",
+      "label": "三倍尾电流控制电路",
+      "nodes": 21,
+      "edges": 135
+    },
+    {
+      "id": "ca_12_5_1",
+      "label": "轨到轨差分运放",
+      "nodes": 21,
+      "edges": 138
+    },
+    {
+      "id": "ca_12_5_2",
+      "label": "新型低压电路结构",
+      "nodes": 21,
+      "edges": 126
+    },
+    {
+      "id": "ca_12_4_1",
+      "label": "CS增益输出级",
+      "nodes": 21,
+      "edges": 140
+    },
+    {
+      "id": "ca_12_4_2",
+      "label": "CS源跟随器输出",
+      "nodes": 21,
+      "edges": 141
+    },
+    {
+      "id": "ca_12_4_3",
+      "label": "互补推挽输出结构",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_12_4_4",
+      "label": "反馈型Class AB控制电路",
+      "nodes": 20,
+      "edges": 135
+    },
+    {
+      "id": "ca_12_6_1",
+      "label": "低电压CMOS运算放大器",
+      "nodes": 21,
+      "edges": 137
+    },
+    {
+      "id": "ca_12_6_2",
+      "label": "轨到轨视频运算放大器",
+      "nodes": 21,
+      "edges": 136
+    },
+    {
+      "id": "ca_12_6_3",
+      "label": "恒定跨导轨到轨输入级",
+      "nodes": 21,
+      "edges": 135
+    }
+  ]
+}

@@ -1,0 +1,1600 @@
+{
+  "application_node_id": "ca_4_7_2",
+  "application_label": "1V BiCMOS带隙基准",
+  "nodes": [
+    {
+      "id": "ca_5_7_2",
+      "label": "超Class AB OTA",
+      "node_type": "circuit_application",
+      "summary": "低电压超Class AB运算跨导放大器，具有极高的压摆率和功率效率。采用动态偏置输出级和自适应偏置技术，适用于便携式设备。",
+      "difficulty": 5,
+      "section_num": "5.7",
+      "keywords": [
+        "高压摆率",
+        "低电压",
+        "功率效率"
+      ],
+      "formulas": [
+        "SR = Iout/CL"
+      ],
+      "applications": [
+        "电池供电系统",
+        "音频处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_5_5",
+      "label": "峰值型自偏置结构",
+      "node_type": "circuit_application",
+      "summary": "峰值型自偏置结构是一种通过非线性电流源和电阻组合实现的自偏置电路，其输出电流在输入电流变化过程中存在一个峰值。这种结构可以提供稳定的偏置电流，适用于高性能应用。",
+      "difficulty": 5,
+      "section_num": "3.5",
+      "keywords": [
+        "峰值型",
+        "非线性",
+        "自偏置"
+      ],
+      "formulas": [
+        "I_o = 2*(sqrt(M)-1)^2 / (k_3*M*R^2)",
+        "g_m = k*Δ = sqrt(2*k*I) = 2*I/Δ"
+      ],
+      "applications": [
+        "高性能偏置",
+        "跨导控制"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_8_1",
+      "label": "RC串并联网络",
+      "node_type": "circuit_application",
+      "summary": "RC串并联网络是用于分析频率特性的典型电路结构。其输入电容为C_in，输出负载电容为C_L，连接输入和输出的Miller电容为C_M。信号源内阻为R_S，负载电阻为R_L。通过开路和短路时间常数分析方法，可以计算其主极点和次极点频率。",
+      "difficulty": 4,
+      "section_num": "8.",
+      "keywords": [
+        "RC网络",
+        "主极点",
+        "次极点"
+      ],
+      "formulas": [
+        "p_1 ≈ 1/(R_S * M * C_M)",
+        "p_2 ≈ g_m / C_L"
+      ],
+      "applications": [
+        "频率特性分析"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_5_1",
+      "label": "单级Cascode运放",
+      "node_type": "circuit_application",
+      "summary": "单级Cascode运放是一种高速高增益运放的主流结构，具有最少的增益级和极点数，适用于高速应用。",
+      "difficulty": 4,
+      "section_num": "10.5",
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_6_1",
+      "label": "Class A/AB两级互补推挽运放",
+      "node_type": "circuit_application",
+      "summary": "该运放结构输入级为NMOS差分对，经过一个NMOS CD交流电压跟随及直流电平移位后，驱动Class A互补CS电压增益的输出级。另一种实现方式输入级为PMOS差分输入的对称跨导放大器OTA，利用OTA中MOS二极管提供的互补极性输出信号，构成CS增益级的互补推挽驱动，通常工作在Class A模式下。",
+      "difficulty": 4,
+      "section_num": "6.6",
+      "keywords": [
+        "差分对",
+        "CD跟随器",
+        "CS增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放",
+        "音频放大"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_4_3",
+      "label": "互补自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "通过类比MOS管恒流策略设计的自偏置电路，利用互补器件实现稳定的偏置电压或电流。设计时需考虑PVT无关性和动态响应特性。",
+      "difficulty": 5,
+      "section_num": "1.4",
+      "keywords": [
+        "自偏置",
+        "互补器件",
+        "PVT无关"
+      ],
+      "formulas": [],
+      "applications": [
+        "基准源",
+        "电源管理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_4_2",
+      "label": "差分放大电路",
+      "node_type": "circuit_application",
+      "summary": "利用差分对管结构放大差分信号的电路，通过对差分和共模信号的不同响应特性，实现高共模抑制比（CMRR）。设计时需平衡交直流特性，确保静态工作点和交流增益的优化。",
+      "difficulty": 5,
+      "section_num": "1.4",
+      "keywords": [
+        "差分放大",
+        "CMRR",
+        "交直流平衡"
+      ],
+      "formulas": [
+        "A_d = g_mR_D",
+        "CMRR = A_d/A_c"
+      ],
+      "applications": [
+        "模拟信号处理",
+        "传感器接口"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_2_6_1",
+      "label": "低电压低电流应用电路",
+      "node_type": "circuit_application",
+      "summary": "低电压低电流应用电路是指工作在低电压和低电流条件下的电路，通常用于便携式设备和电池供电设备。",
+      "difficulty": 4,
+      "section_num": "2.6",
+      "keywords": [
+        "低电压",
+        "低电流",
+        "便携式设备"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "电池供电设备"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_1",
+      "label": "电压倍增型 Cascode 高速高精度运放",
+      "node_type": "circuit_application",
+      "summary": "电压倍增型 Cascode 高速高精度运放是一种采用 Cascode 结构和电压倍增技术的运放设计。它通过堆叠晶体管实现高增益和宽带宽，适用于高速信号处理和高精度应用。",
+      "difficulty": 5,
+      "section_num": "10.",
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高精度"
+      ],
+      "formulas": [
+        "带宽增益积 GBW = A_v * BW"
+      ],
+      "applications": [
+        "ADC/DAC接口",
+        "射频前端"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_3_6",
+      "label": "耗尽管偏置电路",
+      "node_type": "circuit_application",
+      "summary": "耗尽MOS管的重要特点在于当V_GS=0时，导电沟道已经存在并参与导电，因此只要V_DS≠0就有导通电流。在偏置电路中，直接将耗尽管的GS端短路连接，并与若干增强型MOS二极管及电阻相串联，即可形成V_cc-GND的电流通道。",
+      "difficulty": 3,
+      "section_num": "3.3",
+      "keywords": [
+        "耗尽MOS",
+        "自偏置",
+        "恒流特性"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗偏置电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_6_2",
+      "label": "低电压低功耗快速建立CMOS运算跨导放大器",
+      "node_type": "circuit_application",
+      "summary": "低电压低功耗快速建立CMOS运算跨导放大器通过优化跨导和负载结构，实现低电压和低功耗下的快速建立，适用于开关电容应用。",
+      "difficulty": 5,
+      "section_num": "10.6",
+      "keywords": [
+        "低电压",
+        "低功耗",
+        "快速建立"
+      ],
+      "formulas": [
+        "跨导公式: gm = 2 * Id / Vov"
+      ],
+      "applications": [
+        "开关电容应用",
+        "数据转换"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_2",
+      "label": "高性能自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "高性能自偏置电路通过内部反馈机制实现稳定的偏置电压或电流，克服了电阻分压偏置的缺点。具有高电源抑制比和低噪声特性，广泛应用于模拟集成电路中。",
+      "difficulty": 4,
+      "section_num": "3.",
+      "keywords": [
+        "自偏置",
+        "反馈机制",
+        "高电源抑制比"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟集成电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_12_6_1",
+      "label": "低电压CMOS运算放大器",
+      "node_type": "circuit_application",
+      "summary": "低电压CMOS运算放大器采用低电压设计技术和恒定跨导技术，在低电源电压下实现高性能的放大功能，适用于便携式和低功耗设备。",
+      "difficulty": 5,
+      "section_num": "12.6",
+      "keywords": [
+        "低电压",
+        "CMOS",
+        "运算放大器"
+      ],
+      "formulas": [],
+      "applications": [
+        "便携式设备",
+        "低功耗电子设备"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_11_3",
+      "label": "CS-CG Cascode电路噪声",
+      "node_type": "circuit_application",
+      "summary": "CS-CG Cascode结构通过级联CS和CG电路，在保持高增益的同时降低噪声。在低频条件下，Cascode电路的噪声主要由输入管决定，CG管的噪声贡献可以忽略。",
+      "difficulty": 4,
+      "section_num": "11.",
+      "keywords": [
+        "Cascode",
+        "噪声抑制",
+        "高增益"
+      ],
+      "formulas": [
+        "dVieq² ≈ dV1²"
+      ],
+      "applications": [
+        "低噪声高增益放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_1_3",
+      "label": "Cascode型运放",
+      "node_type": "circuit_application",
+      "summary": "采用Cascode结构的运放，以提高增益为主要目的，但会带来电源电压增加和输入输出动态范围减小的局限。折叠式Cascode结构可以部分弥补这些不足。",
+      "difficulty": 4,
+      "section_num": "6.",
+      "keywords": [
+        "Cascode",
+        "高增益",
+        "折叠式"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度应用"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_11_1",
+      "label": "低噪声放大器",
+      "node_type": "circuit_application",
+      "summary": "低噪声放大器是一类抑制噪声传输的高精度高稳定放大电路。通过优化反馈控制和噪声性能模型，可以实现高信噪比和低电源噪声的放大电路。",
+      "difficulty": 4,
+      "section_num": "11.",
+      "keywords": [
+        "低噪声",
+        "高精度",
+        "放大电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "通信系统"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_4_7_2",
+      "label": "1V BiCMOS带隙基准",
+      "node_type": "circuit_application",
+      "summary": "",
+      "difficulty": 4,
+      "section_num": "4.7",
+      "keywords": [
+        "BiCMOS",
+        "1V",
+        "混合工艺"
+      ],
+      "formulas": [],
+      "applications": [
+        "低电压系统"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_4_5_1",
+      "label": "基于V-I转换的电流基准电路",
+      "node_type": "circuit_application",
+      "summary": "如图4-35所示，该电路利用基准电压源和零温度系数电阻实现V-I转换，通过PMOS电流镜提供各PMOS管的偏置，同时转换成NMOS电流镜电流。采用Cascode结构提高电源抑制比，通过电阻温度补偿技术降低输出电流的温度系数。",
+      "difficulty": 4,
+      "section_num": "4.5",
+      "keywords": [
+        "电流镜",
+        "Cascode",
+        "偏置生成"
+      ],
+      "formulas": [
+        "I_ref = V_ref/R"
+      ],
+      "applications": [
+        "模拟IC偏置"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_9_6_1",
+      "label": "低电压低功耗CMOS放大器",
+      "node_type": "circuit_application",
+      "summary": "采用嵌套米勒补偿技术的多级CMOS放大器，专为低电压(1V以下)和低功耗应用设计。电路结构通常包括三级增益级、补偿电容网络和偏置电路，在保持良好稳定性的同时实现高增益带宽积。",
+      "difficulty": 4,
+      "section_num": "9.6",
+      "keywords": [
+        "CMOS",
+        "低电压",
+        "多级"
+      ],
+      "formulas": [
+        "PSRR = 20log(A_v/A_ps)"
+      ],
+      "applications": [
+        "便携式设备",
+        "传感器接口"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_9_2",
+      "label": "低电压MOS级联偏置电路",
+      "node_type": "circuit_application",
+      "summary": "低电压MOS级联偏置电路是一种在低电源电压下生成稳定偏置电压的电路。其结构包括级联MOSFET和自偏置网络，能够在低电压下提供高摆幅和稳定的偏置。",
+      "difficulty": 4,
+      "section_num": "3.9",
+      "keywords": [
+        "级联结构",
+        "自偏置",
+        "低电压"
+      ],
+      "formulas": [
+        "偏置电压公式"
+      ],
+      "applications": [
+        "低功耗电路",
+        "便携式设备"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_5_4",
+      "label": "CMOS单调型自偏置电路",
+      "node_type": "circuit_application",
+      "summary": "CMOS单调型自偏置电路是一种全CMOS实现的自偏置电路，利用MOS管的线性电阻特性取代传统电阻。这种电路结构符合CMOS工艺发展方向，有利于控制温度系数和面积。",
+      "difficulty": 5,
+      "section_num": "3.5",
+      "keywords": [
+        "CMOS",
+        "单调型",
+        "自偏置"
+      ],
+      "formulas": [],
+      "applications": [
+        "低功耗电路",
+        "集成电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_11_3",
+      "relationship": "extends",
+      "description": "CS单级增益电路噪声分析扩展到CS-CG Cascode电路",
+      "weight": 0.8,
+      "evidence": "对于套筒型Cascode增益结构,其CG管等效栅输入噪声,经过源跟随传输到M1管CS增益级的输出,再经CS的增益作用转换到电路的输入",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补自偏置电路与高性能自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_3_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补自偏置电路与耗尽管偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补自偏置电路与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_5_5",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补自偏置电路与峰值型自偏置结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补自偏置电路与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_1_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用高性能自偏置电路与互补自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_3_3_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用高性能自偏置电路与耗尽管偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用高性能自偏置电路与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_3_5_5",
+      "relationship": "relates_to_application",
+      "description": "电路应用高性能自偏置电路与峰值型自偏置结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用高性能自偏置电路与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_6_1",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低电流应用电路与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_6_1",
+      "target_id": "ca_5_7_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低电流应用电路与超Class AB OTA技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_6_1",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低电流应用电路与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_6_1",
+      "target_id": "ca_10_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低电流应用电路与低电压低功耗快速建立CMOS运算跨导放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_2_6_1",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低电流应用电路与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_1_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用耗尽管偏置电路与互补自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用耗尽管偏置电路与高性能自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用耗尽管偏置电路与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_3_5_5",
+      "relationship": "relates_to_application",
+      "description": "电路应用耗尽管偏置电路与峰值型自偏置结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用耗尽管偏置电路与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_1_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与互补自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与高性能自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_3_3_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与耗尽管偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_8_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与两级CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_4",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS单调型自偏置电路与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_5",
+      "target_id": "ca_1_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用峰值型自偏置结构与互补自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_5",
+      "target_id": "ca_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用峰值型自偏置结构与高性能自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_5",
+      "target_id": "ca_3_3_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用峰值型自偏置结构与耗尽管偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_5_5",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用峰值型自偏置结构与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_1_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与互补自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与高性能自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_2_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与低电压低电流应用电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_3_3_6",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与耗尽管偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_3_5_5",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与峰值型自偏置结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_5_7_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与超Class AB OTA技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_10_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与低电压低功耗快速建立CMOS运算跨导放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压MOS级联偏置电路与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_4_5_1",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用基于V-I转换的电流基准电路与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_4_5_1",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用基于V-I转换的电流基准电路与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_4_5_1",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用基于V-I转换的电流基准电路与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_4_5_1",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用基于V-I转换的电流基准电路与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_7_2",
+      "target_id": "ca_2_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用超Class AB OTA与低电压低电流应用电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_7_2",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用超Class AB OTA与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_7_2",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用超Class AB OTA与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_7_2",
+      "target_id": "ca_10_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用超Class AB OTA与低电压低功耗快速建立CMOS运算跨导放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_7_2",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用超Class AB OTA与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_4_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与基于V-I转换的电流基准电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级CMOS运算放大器与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级CMOS运算放大器与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级CMOS运算放大器与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_2_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与低电压低电流应用电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_5_7_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与超Class AB OTA技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_8_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与两级CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_10_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与低电压低功耗快速建立CMOS运算跨导放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_9_6_1",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗CMOS放大器与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_4_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与基于V-I转换的电流基准电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_11_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与低噪声放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_6_2",
+      "target_id": "ca_2_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗快速建立CMOS运算跨导放大器与低电压低电流应用电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_6_2",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗快速建立CMOS运算跨导放大器与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_6_2",
+      "target_id": "ca_5_7_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗快速建立CMOS运算跨导放大器与超Class AB OTA技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_6_2",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗快速建立CMOS运算跨导放大器与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_6_2",
+      "target_id": "ca_12_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压低功耗快速建立CMOS运算跨导放大器与低电压CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低噪声放大器与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_4_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与基于V-I转换的电流基准电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_4_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与基于V-I转换的电流基准电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_2_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与低电压低电流应用电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_3_5_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与CMOS单调型自偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_3_9_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与低电压MOS级联偏置电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_5_7_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与超Class AB OTA技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_8_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与两级CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_9_6_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与低电压低功耗CMOS放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_6_1",
+      "target_id": "ca_10_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用低电压CMOS运算放大器与低电压低功耗快速建立CMOS运算跨导放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_4_2",
+      "target_id": "ca_3_2",
+      "relationship": "功能组合",
+      "description": "差分放大电路和高性能自偏置电路可以组合使用，形成一个更复杂的模拟信号处理系统。自偏置电路可以为差分放大电路提供稳定的偏置电压或电流，确保其静态工作点的稳定性，从而提高整体电路的性能。",
+      "weight": 0.8,
+      "evidence": "差分放大电路需要稳定的偏置电压或电流来确保其静态工作点的稳定性和高共模抑制比（CMRR）。高性能自偏置电路通过内部反馈机制提供稳定的偏置，具有高电源抑制比和低噪声特性，非常适合为差分放大电路提供偏置。这种组合可以显著提升差分放大电路的性能。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_2",
+      "target_id": "ca_5_7_2",
+      "relationship": "技术依赖",
+      "description": "高性能自偏置电路可以为超Class AB OTA提供稳定的偏置电压或电流，从而支持其高压摆率和功率效率的特性。",
+      "weight": 0.7,
+      "evidence": "超Class AB OTA采用动态偏置输出级和自适应偏置技术，这些技术依赖于稳定的偏置电压或电流。高性能自偏置电路通过内部反馈机制提供稳定的偏置，克服了电阻分压偏置的缺点，具有高电源抑制比和低噪声特性，能够满足超Class AB OTA的需求。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_1_4_3",
+      "target_id": "ca_3_2",
+      "relationship": "设计相似",
+      "description": "两个电路应用都采用了自偏置技术，并且都旨在提供稳定的偏置电压或电流。互补自偏置电路通过互补器件实现PVT无关性，而高性能自偏置电路通过内部反馈机制实现高电源抑制比和低噪声特性。两者在设计理念上相似，都是通过特定的电路结构来实现稳定的偏置，而不是依赖外部电阻分压。",
+      "weight": 0.8,
+      "evidence": "1. 两者都采用自偏置技术；2. 两者都强调稳定性（PVT无关性或高电源抑制比）；3. 两者都避免了传统电阻分压偏置的缺点。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_6_1",
+      "target_id": "ca_10_1",
+      "relationship": "性能互补",
+      "description": "Class A/AB两级互补推挽运放和电压倍增型Cascode高速高精度运放在性能上可以互补。前者适用于高精度和音频放大，后者适用于高速信号处理和高精度应用。两者可以结合使用，以同时实现高精度和高速性能。",
+      "weight": 0.7,
+      "evidence": "Class A/AB两级互补推挽运放通过差分对和CD跟随器实现高精度和低失真，适合音频放大；而电压倍增型Cascode运放通过Cascode结构和电压倍增技术实现高增益和宽带宽，适合高速应用。两者的技术特点可以互补，结合使用可以在不同频段和精度要求下优化性能。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_1_4_2",
+      "target_id": "ca_11_1",
+      "relationship": "功能组合",
+      "description": "差分放大电路和低噪声放大器可以组合使用，形成高性能的信号处理系统。差分放大电路负责抑制共模噪声并放大差分信号，而低噪声放大器则进一步放大信号同时保持低噪声特性。",
+      "weight": 0.7,
+      "evidence": "差分放大电路的高共模抑制比（CMRR）可以有效抑制环境噪声，为后续的低噪声放大器提供干净的信号。低噪声放大器通过优化反馈控制和噪声性能模型，可以进一步放大信号而不引入显著噪声。这种组合在传感器接口和通信系统中常见。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_10_1",
+      "relationship": "性能互补",
+      "description": "两级CMOS运算放大器与电压倍增型Cascode高速高精度运放在性能上可以互补。前者适用于中低速、高精度的应用，后者适用于高速、高精度的应用。两者可以在不同的应用场景中互补使用，以满足不同的性能需求。",
+      "weight": 0.7,
+      "evidence": "两级CMOS运算放大器通过米勒补偿等技术实现高精度，但带宽相对较低；而电压倍增型Cascode运放通过Cascode结构和电压倍增技术实现高带宽和高精度。两者在ADC/DAC接口等应用中可以根据速度需求选择或组合使用。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_3_5_4",
+      "relationship": "设计相似",
+      "description": "两个电路应用都采用了自偏置的设计方法，虽然使用的器件类型不同（耗尽管偏置电路使用耗尽MOS管，而CMOS单调型自偏置电路使用CMOS管），但它们在设计理念上都利用了器件的固有特性来实现自偏置，避免了外部偏置电压的需求。",
+      "weight": 0.7,
+      "evidence": "耗尽管偏置电路通过将GS端短路实现自偏置，利用耗尽MOS管在V_GS=0时的导电特性；CMOS单调型自偏置电路则利用MOS管的线性电阻特性取代传统电阻，实现自偏置。两者都体现了自偏置的设计思想。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_12_6_1",
+      "relationship": "技术依赖",
+      "description": "低电压CMOS运算放大器的设计需要依赖RC串并联网络的频率特性分析技术来确保其在低电压下的稳定性和性能。RC串并联网络的分析方法可以帮助确定运算放大器的主极点和次极点，从而优化其频率响应。",
+      "weight": 0.7,
+      "evidence": "低电压CMOS运算放大器的设计需要考虑频率响应和稳定性，而RC串并联网络的分析方法（如开路和短路时间常数分析）是确定主极点和次极点的关键技术。这些极点直接影响运算放大器的带宽和相位裕度。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_4_7_2",
+      "target_id": "ca_6_1_3",
+      "relationship": "功能组合",
+      "description": "1V BiCMOS带隙基准可以为Cascode型运放提供稳定的低电压基准，两者可以组合形成高精度低电压系统。",
+      "weight": 0.7,
+      "evidence": "BiCMOS带隙基准能够提供稳定的1V基准电压，这是Cascode型运放工作所需的。特别是在低电压系统中，稳定的基准电压对保证运放性能至关重要。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_3_6",
+      "target_id": "ca_11_1",
+      "relationship": "功能组合",
+      "description": "耗尽管偏置电路可以为低噪声放大器提供稳定的偏置电流，从而优化其噪声性能。",
+      "weight": 0.7,
+      "evidence": "耗尽管偏置电路具有恒流特性，能够为低噪声放大器提供稳定的工作点，减少电源噪声对放大器性能的影响。低噪声放大器需要高稳定性的偏置来保证其低噪声特性，耗尽管偏置电路的自偏置特性正好满足这一需求。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_8_1",
+      "target_id": "ca_10_6_2",
+      "relationship": "功能组合",
+      "description": "RC串并联网络可用于分析低电压低功耗快速建立CMOS运算跨导放大器的频率特性，特别是在开关电容应用中，RC网络的分析方法有助于优化放大器的频率响应和建立时间。",
+      "weight": 0.7,
+      "evidence": "RC串并联网络是分析频率特性的典型电路结构，而低电压低功耗快速建立CMOS运算跨导放大器需要优化其频率响应以实现快速建立。RC网络的主极点和次极点分析方法可以应用于放大器的频率特性优化。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [],
+    "core_technologies": [],
+    "logical_path": [],
+    "key_bottleneck": "实现1V BiCMOS带隙基准的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 21,
+    "total_edges": 102,
+    "node_types": {
+      "circuit_application": 21
+    },
+    "max_depth": 0
+  }
+}

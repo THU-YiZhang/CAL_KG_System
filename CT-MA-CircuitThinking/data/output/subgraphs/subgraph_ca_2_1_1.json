@@ -1,0 +1,217 @@
+{
+  "application_node_id": "ca_2_1_1",
+  "application_label": "模拟放大器",
+  "nodes": [
+    {
+      "id": "bc_2_1_3",
+      "label": "无源器件",
+      "node_type": "basic_concept",
+      "summary": "无源元件无需静态工作点，只需施加电压或电流即可正常工作，其电参数通常为固定常数，并不随电压或电流工作点的变化而改变，表现为线性特性。典型的例子包括电阻、电容和电感。",
+      "difficulty": 2,
+      "section_num": "2.1",
+      "keywords": [
+        "线性特性",
+        "电阻",
+        "电容",
+        "电感"
+      ],
+      "formulas": [],
+      "applications": [
+        "分压电路",
+        "滤波电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_1_1",
+      "label": "电路元器件",
+      "node_type": "basic_concept",
+      "summary": "电路元器件是构成电路系统不可分割的基本单元，电路功能的实现和性能的提高很大程度上决定于器件的性能。电路元器件主要包含以电阻、电容、电感为代表的无源器件，以及以二极管、双极型晶体管(BJT)、场效应晶体管(MOS管)为代表的有源器件。",
+      "difficulty": 2,
+      "section_num": "2.1",
+      "keywords": [
+        "无源器件",
+        "有源器件",
+        "电路功能"
+      ],
+      "formulas": [],
+      "applications": [
+        "电路设计",
+        "信号处理"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_1_2",
+      "label": "有源器件",
+      "node_type": "basic_concept",
+      "summary": "有源器件需要特定的静态偏置点才能正常工作，其电参数与静态工作点有关，并随工作点的变化而改变，具有非线性特性。典型的例子包括二极管、双极型晶体管(BJT)和场效应晶体管(MOS管)。",
+      "difficulty": 2,
+      "section_num": "2.1",
+      "keywords": [
+        "静态偏置点",
+        "非线性特性",
+        "BJT",
+        "MOS管"
+      ],
+      "formulas": [],
+      "applications": [
+        "放大器",
+        "振荡器"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ct_2_1_1",
+      "label": "小信号近似",
+      "node_type": "core_technology",
+      "summary": "小信号近似是指在合适静态点的小信号条件下，将有源器件近似为线性器件，从而实现对交流小信号的线性处理。这种方法广泛应用于模拟放大器的设计中。",
+      "difficulty": 3,
+      "section_num": "2.1",
+      "keywords": [
+        "静态点",
+        "线性近似",
+        "交流小信号"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟放大器"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_2_1_1",
+      "label": "模拟放大器",
+      "node_type": "circuit_application",
+      "summary": "模拟放大器是一种典型的线性电路，是构成各类线性系统的基本功能单元。它利用小信号近似将有源器件工作在线性区，实现对交流小信号的线性放大。",
+      "difficulty": 4,
+      "section_num": "2.1",
+      "keywords": [
+        "线性放大",
+        "交流小信号",
+        "有源器件"
+      ],
+      "formulas": [
+        "增益公式"
+      ],
+      "applications": [
+        "音频放大",
+        "射频放大"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "ct_2_1_1",
+      "target_id": "ca_2_1_1",
+      "relationship": "implements",
+      "description": "核心技术小信号近似实现电路应用模拟放大器",
+      "weight": 0.8,
+      "evidence": "基于关键词相似性的层次连接",
+      "bidirectional": false,
+      "edge_type": "hierarchical",
+      "source": "hierarchical_connection"
+    },
+    {
+      "source_id": "bc_2_1_1",
+      "target_id": "ct_2_1_1",
+      "relationship": "enables",
+      "description": "电路元器件的基本概念使能了小信号近似技术的应用，因为有源器件的非线性特性需要通过小信号近似来处理。",
+      "weight": 0.8,
+      "evidence": "有源器件的线性近似才能成立，并可实现对交流小信号的线性处理。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_2_1_2",
+      "target_id": "ct_2_1_1",
+      "relationship": "supports",
+      "description": "有源器件的非线性特性支持了小信号近似技术的应用，因为小信号近似正是针对有源器件的非线性特性进行线性化处理。",
+      "weight": 0.9,
+      "evidence": "只有在合适静态点的小信号条件下，有源器件的线性近似才能成立。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_2_1_3",
+      "target_id": "bc_2_1_2",
+      "relationship": "complements",
+      "description": "无源器件的线性特性与有源器件的非线性特性在电路中互补，共同构成完整的电路功能。",
+      "weight": 0.7,
+      "evidence": "电阻分压可以直接为有源器件提供静态偏置电压，正是利用了无源元件的这一特性。",
+      "bidirectional": true,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [
+      {
+        "id": "bc_2_1_3",
+        "label": "无源器件",
+        "summary": "无源元件无需静态工作点，只需施加电压或电流即可正常工作，其电参数通常为固定常数，并不随电压或电流工作点的变化而改变，表现为线性特性。典型的例子包括电阻、电容和电感。"
+      },
+      {
+        "id": "bc_2_1_1",
+        "label": "电路元器件",
+        "summary": "电路元器件是构成电路系统不可分割的基本单元，电路功能的实现和性能的提高很大程度上决定于器件的性能。电路元器件主要包含以电阻、电容、电感为代表的无源器件，以及以二极管、双极型晶体管(BJT)、场效应晶体管(MOS管)为代表的有源器件。"
+      },
+      {
+        "id": "bc_2_1_2",
+        "label": "有源器件",
+        "summary": "有源器件需要特定的静态偏置点才能正常工作，其电参数与静态工作点有关，并随工作点的变化而改变，具有非线性特性。典型的例子包括二极管、双极型晶体管(BJT)和场效应晶体管(MOS管)。"
+      }
+    ],
+    "core_technologies": [
+      {
+        "id": "ct_2_1_1",
+        "label": "小信号近似",
+        "summary": "小信号近似是指在合适静态点的小信号条件下，将有源器件近似为线性器件，从而实现对交流小信号的线性处理。这种方法广泛应用于模拟放大器的设计中。"
+      }
+    ],
+    "logical_path": [
+      {
+        "id": "bc_2_1_1",
+        "label": "电路元器件",
+        "type": "basic_concept",
+        "summary": "电路元器件是构成电路系统不可分割的基本单元，电路功能的实现和性能的提高很大程度上决定于器件的性能。电路元器件主要包含以电阻、电容、电感为代表的无源器件，以及以二极管、双极型晶体管(BJT)、场效应晶体管(MOS管)为代表的有源器件。"
+      },
+      {
+        "id": "ct_2_1_1",
+        "label": "小信号近似",
+        "type": "core_technology",
+        "summary": "小信号近似是指在合适静态点的小信号条件下，将有源器件近似为线性器件，从而实现对交流小信号的线性处理。这种方法广泛应用于模拟放大器的设计中。"
+      },
+      {
+        "id": "ca_2_1_1",
+        "label": "模拟放大器",
+        "type": "circuit_application",
+        "summary": "模拟放大器是一种典型的线性电路，是构成各类线性系统的基本功能单元。它利用小信号近似将有源器件工作在线性区，实现对交流小信号的线性放大。"
+      }
+    ],
+    "key_bottleneck": "实现模拟放大器的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 5,
+    "total_edges": 4,
+    "node_types": {
+      "basic_concept": 3,
+      "core_technology": 1,
+      "circuit_application": 1
+    },
+    "max_depth": 3
+  }
+}

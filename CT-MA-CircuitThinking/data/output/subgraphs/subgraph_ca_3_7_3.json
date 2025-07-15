@@ -1,0 +1,138 @@
+{
+  "application_node_id": "ca_3_7_3",
+  "application_label": "OP控制型基准启动电路",
+  "nodes": [
+    {
+      "id": "ct_3_7_2",
+      "label": "启动电路设计",
+      "node_type": "core_technology",
+      "summary": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。设计启动电路的参数时应使启动电路能够满足以下三点要求：首先能向偏置电路灌入电流，实现启动功能；其次，偏置电路启动后必须能关断启动电路与偏置电路的联系；最后，电路启动后，启动电路应当保持很低的功耗，或者没有功耗。",
+      "difficulty": 3,
+      "section_num": "3.7",
+      "keywords": [
+        "启动电路",
+        "瞬态电流注入",
+        "低功耗"
+      ],
+      "formulas": [],
+      "applications": [
+        "模拟电路",
+        "数字电路"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_3_7_2",
+      "label": "瞬态启动原理",
+      "node_type": "basic_concept",
+      "summary": "瞬态启动原理是指在电源上电瞬间，通过低阻通路形成稳定的电流，为系统提供偏置。低阻通路主要包括无源电阻、有源MOS或BJT二极管饱和电阻、大信号控制下的有源线性电阻等。MOS器件可通过栅压或尺寸的设计调节其电阻的大小，从而改变提供的偏压。",
+      "difficulty": 2,
+      "section_num": "3.7",
+      "keywords": [
+        "瞬态启动",
+        "低阻通路",
+        "MOS器件"
+      ],
+      "formulas": [],
+      "applications": [
+        "启动电路设计"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_7_3",
+      "label": "OP控制型基准启动电路",
+      "node_type": "circuit_application",
+      "summary": "OP控制型基准启动电路由M_6-M_9组成。M_6、M_7组成倒相器，当电路没有启动时M_1的栅极V_bp为高，倒相器输出为0，使得M_8、M_9导通，向BGR注入电流以启动电路。当工作点建立后，M_6栅极降低，关闭启动电路。该启动电路设计的关键是M_6和M_7的宽长比，即倒相器的翻转电压。",
+      "difficulty": 4,
+      "section_num": "3.7",
+      "keywords": [
+        "OP控制型",
+        "基准启动电路",
+        "倒相器"
+      ],
+      "formulas": [],
+      "applications": [
+        "带隙基准电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_3_7_2",
+      "target_id": "ct_3_7_2",
+      "relationship": "enables",
+      "description": "瞬态启动原理的理解使能了启动电路设计方法的实现，通过理解低阻通路和MOS器件的工作原理，可以设计出有效的启动电路。",
+      "weight": 0.8,
+      "evidence": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ct_3_7_2",
+      "target_id": "ca_3_7_3",
+      "relationship": "implements",
+      "description": "启动电路设计方法实现了OP控制型基准启动电路的设计，通过倒相器和MOS管的组合，实现了启动和关闭的功能。",
+      "weight": 0.7,
+      "evidence": "OP控制型基准启动电路由M_6-M_9组成，通过倒相器和MOS管的组合实现了启动和关闭的功能。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [
+      {
+        "id": "bc_3_7_2",
+        "label": "瞬态启动原理",
+        "summary": "瞬态启动原理是指在电源上电瞬间，通过低阻通路形成稳定的电流，为系统提供偏置。低阻通路主要包括无源电阻、有源MOS或BJT二极管饱和电阻、大信号控制下的有源线性电阻等。MOS器件可通过栅压或尺寸的设计调节其电阻的大小，从而改变提供的偏压。"
+      }
+    ],
+    "core_technologies": [
+      {
+        "id": "ct_3_7_2",
+        "label": "启动电路设计",
+        "summary": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。设计启动电路的参数时应使启动电路能够满足以下三点要求：首先能向偏置电路灌入电流，实现启动功能；其次，偏置电路启动后必须能关断启动电路与偏置电路的联系；最后，电路启动后，启动电路应当保持很低的功耗，或者没有功耗。"
+      }
+    ],
+    "logical_path": [
+      {
+        "id": "bc_3_7_2",
+        "label": "瞬态启动原理",
+        "type": "basic_concept",
+        "summary": "瞬态启动原理是指在电源上电瞬间，通过低阻通路形成稳定的电流，为系统提供偏置。低阻通路主要包括无源电阻、有源MOS或BJT二极管饱和电阻、大信号控制下的有源线性电阻等。MOS器件可通过栅压或尺寸的设计调节其电阻的大小，从而改变提供的偏压。"
+      },
+      {
+        "id": "ct_3_7_2",
+        "label": "启动电路设计",
+        "type": "core_technology",
+        "summary": "启动电路设计的关键在于瞬态电流注入位置的选择，并保持对主电路尽量少的影响和干扰。设计启动电路的参数时应使启动电路能够满足以下三点要求：首先能向偏置电路灌入电流，实现启动功能；其次，偏置电路启动后必须能关断启动电路与偏置电路的联系；最后，电路启动后，启动电路应当保持很低的功耗，或者没有功耗。"
+      },
+      {
+        "id": "ca_3_7_3",
+        "label": "OP控制型基准启动电路",
+        "type": "circuit_application",
+        "summary": "OP控制型基准启动电路由M_6-M_9组成。M_6、M_7组成倒相器，当电路没有启动时M_1的栅极V_bp为高，倒相器输出为0，使得M_8、M_9导通，向BGR注入电流以启动电路。当工作点建立后，M_6栅极降低，关闭启动电路。该启动电路设计的关键是M_6和M_7的宽长比，即倒相器的翻转电压。"
+      }
+    ],
+    "key_bottleneck": "实现OP控制型基准启动电路的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 3,
+    "total_edges": 2,
+    "node_types": {
+      "core_technology": 1,
+      "basic_concept": 1,
+      "circuit_application": 1
+    },
+    "max_depth": 2
+  }
+}

@@ -1,0 +1,1969 @@
+{
+  "application_node_id": "ca_12_6_2",
+  "application_label": "轨到轨视频运算放大器",
+  "nodes": [
+    {
+      "id": "ca_3_6_2",
+      "label": "Wilson电流源",
+      "node_type": "circuit_application",
+      "summary": "通过增加反馈管（M4）实现V_DS的匹配，显著提高电流镜的精度。基本型Wilson结构存在V_DS失配，改进型通过电平移位实现V_DS匹配，输出阻抗约为g_m2*r_o2*r_o3。",
+      "difficulty": 4,
+      "section_num": "3.6",
+      "keywords": [
+        "反馈控制",
+        "电平移位",
+        "高输出阻抗"
+      ],
+      "formulas": [
+        "R_o = g_m2 * r_o2 * r_o3"
+      ],
+      "applications": [
+        "高精度电流源",
+        "电源抑制比优化"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_4_2",
+      "label": "高阻高增益全差分电路",
+      "node_type": "circuit_application",
+      "summary": "高阻高增益全差分电路采用恒流负载，差模增益高，但需要CMFB电路控制共模点。适用于高增益信号处理，但设计复杂度较高。",
+      "difficulty": 5,
+      "section_num": "6.4",
+      "keywords": [
+        "恒流负载",
+        "高增益",
+        "CMFB"
+      ],
+      "formulas": [
+        "A_dm = -g_ml(r_dsl//r_ds3)"
+      ],
+      "applications": [
+        "高增益信号处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_5_1",
+      "label": "单级Cascode运放",
+      "node_type": "circuit_application",
+      "summary": "单级Cascode运放是一种高速高增益运放的主流结构，具有最少的增益级和极点数，适用于高速应用。",
+      "difficulty": 4,
+      "section_num": "10.5",
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速运放"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_12_4_4",
+      "label": "反馈型Class AB控制电路",
+      "node_type": "circuit_application",
+      "summary": "反馈型Class AB控制电路通过反馈环路实现静态工作点的精确控制，包括截止型和非截止型两种结构。非截止型结构通过最小电流选择电路确保输出管的最小电流不为零，提高动态响应速度并降低高频失真。",
+      "difficulty": 5,
+      "section_num": "12.4",
+      "keywords": [
+        "反馈控制",
+        "Class AB",
+        "非截止型"
+      ],
+      "formulas": [
+        "√I3 = 2√Im - √I11",
+        "√I4 = 2√Im - √I12"
+      ],
+      "applications": [
+        "输出级设计"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_6_4",
+      "label": "Class AB互补推挽放大电路",
+      "node_type": "circuit_application",
+      "summary": "Class AB互补推挽放大电路结合了Class A和Class B的优点，具有效率高、失真小、功耗低的特点，广泛应用于功率放大。",
+      "difficulty": 4,
+      "section_num": "5.6",
+      "keywords": [
+        "Class AB",
+        "互补推挽",
+        "功率放大"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_3_3",
+      "label": "CD-CG-CS组合放大电路",
+      "node_type": "circuit_application",
+      "summary": "CD-CG-CS是一种三级组合放大电路，通过CD电压缓冲级将输入电压转变为电流信号，再通过CG电流跟随将电流信号转变为输出电压信号。CD和CG的放大管类型必须相反，可用于Class AB模式的CMOS差分输入对，也可作为电平移位结构。",
+      "difficulty": 5,
+      "section_num": "5.3",
+      "keywords": [
+        "CD-CG-CS",
+        "Class AB",
+        "电平移位"
+      ],
+      "formulas": [
+        "V_GSN + V_GSP (固定偏压)"
+      ],
+      "applications": [
+        "差分放大器",
+        "电平移位电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_4_1",
+      "label": "两级Folded Cascode全差分Class AB输出结构",
+      "node_type": "circuit_application",
+      "summary": "如图10-1所示，输入级采用PMOS差分输入的折叠式Cascode，输出级为Class AB推挽结构。使用串联电阻的Miller电容补偿实现稳定工作，具有高增益和宽输出摆幅。",
+      "difficulty": 4,
+      "section_num": "10.4",
+      "keywords": [
+        "折叠式Cascode",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速信号处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_3_4",
+      "label": "Telescope Cascode放大电路",
+      "node_type": "circuit_application",
+      "summary": "Telescope Cascode放大电路采用同类型MOS管垂直级联，通过提高输出阻抗实现高增益。其电压增益公式为A_v = -g_m * R_o，其中R_o = g_m * r_o^2 / (2α)。该结构具有优异的频率响应特性，但需要较高的电源电压且输出摆幅较小。",
+      "difficulty": 5,
+      "section_num": "5.3",
+      "keywords": [
+        "Telescope Cascode",
+        "高输出阻抗",
+        "高增益"
+      ],
+      "formulas": [
+        "A_v = -g_m * R_o",
+        "R_o = g_m * r_o^2 / (2α)"
+      ],
+      "applications": [
+        "高增益放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_6_2",
+      "label": "折叠式Cascode Class AB三级运放",
+      "node_type": "circuit_application",
+      "summary": "该运放结构输入级为折叠式Cascode差分对，中间级为两个相互对立的CD电压跟随器，分别将差分输出向上移动一个V_GSP电平驱动PMOS放大管，向下移动一个V_GSN电平驱动NMOS放大管。输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。",
+      "difficulty": 5,
+      "section_num": "6.6",
+      "keywords": [
+        "折叠式Cascode",
+        "CD跟随器",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度运放",
+        "功率放大"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_10_1",
+      "label": "电压倍增型 Cascode 高速高精度运放",
+      "node_type": "circuit_application",
+      "summary": "电压倍增型 Cascode 高速高精度运放是一种采用 Cascode 结构和电压倍增技术的运放设计。它通过堆叠晶体管实现高增益和宽带宽，适用于高速信号处理和高精度应用。",
+      "difficulty": 5,
+      "section_num": "10.",
+      "keywords": [
+        "Cascode",
+        "高速",
+        "高精度"
+      ],
+      "formulas": [
+        "带宽增益积 GBW = A_v * BW"
+      ],
+      "applications": [
+        "ADC/DAC接口",
+        "射频前端"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_3_2",
+      "label": "Class AB单级推挽放大电路",
+      "node_type": "circuit_application",
+      "summary": "Class AB单级推挽放大电路通过直流电平移位技术实现Class AB工作模式，具有高线性、高压摆率、宽的动态范围和大的负载电流驱动能力。电路结构完全对称，可以抑制非线性失真，扩展线性范围。",
+      "difficulty": 5,
+      "section_num": "6.3",
+      "keywords": [
+        "Class AB",
+        "推挽放大",
+        "高压摆率"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速放大电路"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_8_3",
+      "label": "伪Class-AB望远镜级联运算放大器",
+      "node_type": "circuit_application",
+      "summary": "伪Class-AB望远镜级联运算放大器结合望远镜级联结构和Class-AB输出级，实现高增益和高压摆率。输入级采用差分对，输出级采用Class-AB推挽结构。",
+      "difficulty": 5,
+      "section_num": "6.8",
+      "keywords": [
+        "望远镜级联",
+        "高压摆率",
+        "高增益"
+      ],
+      "formulas": [],
+      "applications": [
+        "高速信号处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_11_3",
+      "label": "CS-CG Cascode电路噪声",
+      "node_type": "circuit_application",
+      "summary": "CS-CG Cascode结构通过级联CS和CG电路，在保持高增益的同时降低噪声。在低频条件下，Cascode电路的噪声主要由输入管决定，CG管的噪声贡献可以忽略。",
+      "difficulty": 4,
+      "section_num": "11.",
+      "keywords": [
+        "Cascode",
+        "噪声抑制",
+        "高增益"
+      ],
+      "formulas": [
+        "dVieq² ≈ dV1²"
+      ],
+      "applications": [
+        "低噪声高增益放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6_1_3",
+      "label": "Cascode型运放",
+      "node_type": "circuit_application",
+      "summary": "采用Cascode结构的运放，以提高增益为主要目的，但会带来电源电压增加和输入输出动态范围减小的局限。折叠式Cascode结构可以部分弥补这些不足。",
+      "difficulty": 4,
+      "section_num": "6.",
+      "keywords": [
+        "Cascode",
+        "高增益",
+        "折叠式"
+      ],
+      "formulas": [],
+      "applications": [
+        "高精度应用"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_11_1",
+      "label": "低噪声放大器",
+      "node_type": "circuit_application",
+      "summary": "低噪声放大器是一类抑制噪声传输的高精度高稳定放大电路。通过优化反馈控制和噪声性能模型，可以实现高信噪比和低电源噪声的放大电路。",
+      "difficulty": 4,
+      "section_num": "11.",
+      "keywords": [
+        "低噪声",
+        "高精度",
+        "放大电路"
+      ],
+      "formulas": [],
+      "applications": [
+        "信号处理",
+        "通信系统"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_12_4_3",
+      "label": "互补推挽输出结构",
+      "node_type": "circuit_application",
+      "summary": "互补推挽输出结构具有负载电流驱动能力强、输出电压摆幅大的特点，但静态工作点对电路的效率和失真影响显著。通常选择互补推挽驱动结构以满足宽摆幅电阻负载的基本驱动要求。",
+      "difficulty": 4,
+      "section_num": "12.4",
+      "keywords": [
+        "互补推挽",
+        "输出级",
+        "Class AB"
+      ],
+      "formulas": [],
+      "applications": [
+        "宽摆幅电阻负载驱动"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_12_6_2",
+      "label": "轨到轨视频运算放大器",
+      "node_type": "circuit_application",
+      "summary": "轨到轨视频运算放大器采用轨到轨输入/输出级设计技术，实现宽动态范围的视频信号放大，适用于视频处理应用。",
+      "difficulty": 5,
+      "section_num": "12.6",
+      "keywords": [
+        "轨到轨",
+        "视频放大器",
+        "宽动态范围"
+      ],
+      "formulas": [],
+      "applications": [
+        "视频处理",
+        "图像传感器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_6__3",
+      "label": "Class AB输出级",
+      "node_type": "circuit_application",
+      "summary": "采用Class AB互补推挽结构的输出级电路，具有高驱动能力和良好线性度。",
+      "difficulty": 4,
+      "section_num": "6.",
+      "keywords": [
+        "输出级",
+        "Class AB",
+        "推挽"
+      ],
+      "formulas": [],
+      "applications": [
+        "音频放大器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_3_9_2",
+      "label": "低电压MOS级联偏置电路",
+      "node_type": "circuit_application",
+      "summary": "低电压MOS级联偏置电路是一种在低电源电压下生成稳定偏置电压的电路。其结构包括级联MOSFET和自偏置网络，能够在低电压下提供高摆幅和稳定的偏置。",
+      "difficulty": 4,
+      "section_num": "3.9",
+      "keywords": [
+        "级联结构",
+        "自偏置",
+        "低电压"
+      ],
+      "formulas": [
+        "偏置电压公式"
+      ],
+      "applications": [
+        "低功耗电路",
+        "便携式设备"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_5_1",
+      "label": "CMOS运算放大器",
+      "node_type": "circuit_application",
+      "summary": "Baker等人的著作提供了CMOS运算放大器的详细设计实例，包括电路结构、版图考虑和性能优化。",
+      "difficulty": 5,
+      "section_num": "1.5",
+      "keywords": [
+        "差分对",
+        "输出级",
+        "补偿网络"
+      ],
+      "formulas": [
+        "转换速率",
+        "输入失调电压"
+      ],
+      "applications": [
+        "数据采集系统",
+        "模拟信号处理"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_5_2_3",
+      "label": "互补推挽Class AB放大器",
+      "node_type": "circuit_application",
+      "summary": "NMOS和PMOS管同时作为放大管，静态偏置在弱开启状态。优点：高效率、低失真；缺点：偏置复杂。通过消除死区实现全波放大，适合功率应用。增益由两管gm共同决定。",
+      "difficulty": 5,
+      "section_num": "5.2",
+      "keywords": [
+        "推挽结构",
+        "功率放大",
+        "Class AB"
+      ],
+      "formulas": [
+        "Av = (gmn+gmp)RL"
+      ],
+      "applications": [
+        "音频功放",
+        "输出驱动"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_11_3",
+      "relationship": "extends",
+      "description": "CS单级增益电路噪声分析扩展到CS-CG Cascode电路",
+      "weight": 0.8,
+      "evidence": "对于套筒型Cascode增益结构,其CG管等效栅输入噪声,经过源跟随传输到M1管CS增益级的输出,再经CS的增益作用转换到电路的输入",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "extends",
+      "description": "互补推挽输出结构通过反馈型Class AB控制电路扩展了其应用范围，实现了更优的性能。",
+      "weight": 0.8,
+      "evidence": "低压运放的输出级通常选择Class AB互补推挽放大结构,以满足输出电压的轨至轨摆幅、提高负载的电流驱动能力并降低失真。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ca_1_5_1",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS运算放大器与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_1_5_1",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CMOS运算放大器与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Wilson电流源与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽Class AB放大器与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_6_4",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB互补推挽放大电路与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_3",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用CD-CG-CS组合放大电路与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_6_4_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与高阻高增益全差分电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Telescope Cascode放大电路与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_6_4_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与高阻高增益全差分电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Cascode型运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_6_4_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与高阻高增益全差分电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用伪Class-AB望远镜级联运算放大器与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_1_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB输出级与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用Class AB单级推挽放大电路与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用折叠式Cascode Class AB三级运放与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用高阻高增益全差分电路与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用高阻高增益全差分电路与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用高阻高增益全差分电路与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用高阻高增益全差分电路与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用高阻高增益全差分电路与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_11_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与低噪声放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_1",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用电压倍增型 Cascode 高速高精度运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_12_4_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与互补推挽输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_4_1",
+      "target_id": "ca_12_4_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用两级Folded Cascode全差分Class AB输出结构与反馈型Class AB控制电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用低噪声放大器与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_6_4_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与高阻高增益全差分电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_10_5_1",
+      "target_id": "ca_11_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用单级Cascode运放与CS-CG Cascode电路噪声技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_5_3_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与Telescope Cascode放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_6_1_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与Cascode型运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_6_8_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与伪Class-AB望远镜级联运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_6_4_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与高阻高增益全差分电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_10_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与电压倍增型 Cascode 高速高精度运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_3",
+      "target_id": "ca_10_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用CS-CG Cascode电路噪声与单级Cascode运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_1_5_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与CMOS运算放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_3",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用互补推挽输出结构与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_3_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Wilson电流源技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_5_2_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与互补推挽Class AB放大器技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_5_6_4",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Class AB互补推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_5_3_3",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与CD-CG-CS组合放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_6__3",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Class AB输出级技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_6_3_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与Class AB单级推挽放大电路技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_6_6_2",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与折叠式Cascode Class AB三级运放技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_12_4_4",
+      "target_id": "ca_10_4_1",
+      "relationship": "relates_to_application",
+      "description": "电路应用反馈型Class AB控制电路与两级Folded Cascode全差分Class AB输出结构技术相关",
+      "weight": 0.5,
+      "evidence": "基于关键词相似性的应用关联",
+      "bidirectional": true,
+      "edge_type": "application_network",
+      "source": "application_connection"
+    },
+    {
+      "source_id": "ca_11_1",
+      "target_id": "ca_12_4_3",
+      "relationship": "功能组合",
+      "description": "CS单级增益电路噪声优化后的低噪声放大器可以与互补推挽输出结构组合，形成高性能的放大器系统。CS电路提供低噪声的前级放大，而互补推挽输出结构提供强大的驱动能力和宽摆幅输出。",
+      "weight": 0.7,
+      "evidence": "CS单级增益电路通过优化跨导gm和负载电阻RD来降低噪声，适合作为前级放大；互补推挽输出结构具有高驱动能力和宽摆幅特性，适合作为输出级。两者组合可以同时实现低噪声和高驱动能力。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6__3",
+      "target_id": "ca_6_6_2",
+      "relationship": "设计相似",
+      "description": "两个电路应用都采用了Class AB推挽结构作为输出级，这种结构在音频放大器和功率放大器中都能提供高驱动能力和良好线性度。",
+      "weight": 0.8,
+      "evidence": "节点1明确描述了Class AB互补推挽结构的输出级电路，节点2也提到输出级互补放大管的偏置和驱动电压可独立设定，通常控制在Class AB推挽驱动模式。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_12_4_4",
+      "relationship": "功能组合",
+      "description": "低电压MOS级联偏置电路可以为反馈型Class AB控制电路提供稳定的偏置电压，特别是在低电压工作环境下。这种组合可以优化输出级的性能，确保在低功耗条件下仍能保持高动态响应速度和低失真。",
+      "weight": 0.7,
+      "evidence": "低电压MOS级联偏置电路通过级联结构和自偏置网络生成稳定的偏置电压，这正是反馈型Class AB控制电路在低电压工作时所需要的。Class AB控制电路依赖于稳定的偏置来确保输出管的最小电流不为零，从而提高动态响应速度并降低高频失真。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_1_3",
+      "target_id": "ca_6_6_2",
+      "relationship": "技术依赖",
+      "description": "节点2的折叠式Cascode Class AB三级运放直接采用了节点1中描述的折叠式Cascode结构作为其输入级，表明节点2在技术上依赖于节点1的Cascode结构设计。",
+      "weight": 0.9,
+      "evidence": "节点1描述了Cascode结构运放及其折叠式变体，而节点2明确说明其输入级采用折叠式Cascode差分对，这是节点1技术的具体应用。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_5_3_4",
+      "target_id": "ca_6_4_2",
+      "relationship": "性能互补",
+      "description": "Telescope Cascode放大电路和高阻高增益全差分电路在高增益信号处理方面具有性能互补性。Telescope Cascode提供高输出阻抗和高增益，而全差分电路提供差分信号处理能力，两者结合可以构建更高性能的差分放大器系统。",
+      "weight": 0.7,
+      "evidence": "两者都专注于实现高增益特性，Telescope Cascode通过垂直级联MOS管提高输出阻抗，全差分电路通过恒流负载实现高差模增益。在差分放大器设计中，可以将Telescope Cascode结构用于差分对管，利用其高增益特性，同时利用全差分电路的CMFB控制共模点。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_6_2",
+      "target_id": "ca_10_5_1",
+      "relationship": "设计相似",
+      "description": "两个电路应用都采用了Cascode结构，这是一种提高增益和带宽的常用设计方法。虽然一个用于多级运放，另一个用于单级运放，但它们在设计理念上共享了Cascode技术的优势。",
+      "weight": 0.7,
+      "evidence": "节点1中的折叠式Cascode差分对和节点2中的单级Cascode运放都利用了Cascode结构来提升增益和频率响应。折叠式Cascode在节点1中用于输入级，而节点2直接采用单级Cascode作为主要结构。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_3_2",
+      "target_id": "ca_12_4_3",
+      "relationship": "功能组合",
+      "description": "Class AB单级推挽放大电路和互补推挽输出结构可以组合形成一个完整的放大器系统。前者作为输入级提供高线性度和高压摆率，后者作为输出级提供强大的负载驱动能力和宽输出电压摆幅。",
+      "weight": 0.9,
+      "evidence": "两个电路都采用Class AB工作模式，具有推挽结构，且都强调高驱动能力和宽动态范围。Class AB单级推挽放大电路的输出可以直接驱动互补推挽输出结构，形成前级驱动后级的完整放大系统。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_6_8_3",
+      "relationship": "设计相似",
+      "description": "两个电路应用都采用了级联结构的设计方法，虽然具体实现和应用目标不同，但在电路拓扑结构上有相似之处。",
+      "weight": 0.7,
+      "evidence": "低电压MOS级联偏置电路和伪Class-AB望远镜级联运算放大器都使用了级联结构。前者用于生成稳定的偏置电压，后者用于实现高增益和高压摆率。这种级联结构的设计方法在两个电路中都有体现，尽管具体实现和优化目标不同。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_5_2_3",
+      "target_id": "ca_12_6_2",
+      "relationship": "设计相似",
+      "description": "互补推挽Class AB放大器和轨到轨视频运算放大器在设计上都采用了互补的MOS管结构以实现宽动态范围的信号放大。虽然应用场景不同，但两者在消除死区和实现全波放大方面采用了相似的设计理念。",
+      "weight": 0.7,
+      "evidence": "两者都使用NMOS和PMOS管的互补结构来扩展动态范围：Class AB放大器通过推挽结构消除死区，轨到轨运放通过互补输入/输出级实现轨到轨摆幅。这种结构上的相似性体现在都需要精确的偏置控制来协调两管的工作状态。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_6__3",
+      "relationship": "功能组合",
+      "description": "低电压MOS级联偏置电路可以为Class AB输出级提供稳定的偏置电压，特别是在低电压供电的应用场景中。这种组合可以确保Class AB输出级在低电压下仍能保持高驱动能力和良好的线性度。",
+      "weight": 0.7,
+      "evidence": "低电压MOS级联偏置电路通过级联结构和自偏置网络生成稳定的偏置电压，这种电压可以用于Class AB输出级的偏置，确保其在低电压下正常工作。Class AB输出级需要稳定的偏置以实现高效率和低失真，而低电压MOS级联偏置电路正好满足这一需求。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_8_3",
+      "target_id": "ca_6__3",
+      "relationship": "功能组合",
+      "description": "伪Class-AB望远镜级联运算放大器和Class AB输出级在功能上可以组合使用。伪Class-AB望远镜级联运算放大器的输出级采用Class-AB推挽结构，而Class AB输出级正是这种结构的典型实现。两者结合可以形成完整的放大器系统，其中望远镜级联结构提供高增益，Class AB输出级提供高驱动能力。",
+      "weight": 0.9,
+      "evidence": "伪Class-AB望远镜级联运算放大器的描述中明确提到其输出级采用Class-AB推挽结构，这与Class AB输出级的描述完全一致。这种结构上的匹配使得两者可以无缝组合。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_6_4_2",
+      "target_id": "ca_10_4_1",
+      "relationship": "功能组合",
+      "description": "高阻高增益全差分电路可以作为两级Folded Cascode全差分Class AB输出结构的输入级，形成更高性能的运算放大器系统。高阻高增益全差分电路提供高增益输入级，而Folded Cascode Class AB输出结构提供宽输出摆幅和高速驱动能力。",
+      "weight": 0.8,
+      "evidence": "1. 高阻高增益全差分电路的输出可以连接到Folded Cascode结构的输入级；2. 两者都是全差分结构，可以无缝连接；3. 高增益输入级与高摆幅输出级的组合是高性能运放的常见设计方法。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_6_2",
+      "target_id": "ca_6_8_3",
+      "relationship": "功能组合",
+      "description": "Wilson电流源可以作为伪Class-AB望远镜级联运算放大器的偏置电流源，为其提供高精度的偏置电流。",
+      "weight": 0.7,
+      "evidence": "Wilson电流源具有高输出阻抗和高精度特性，适合作为运算放大器的偏置电路。伪Class-AB望远镜级联运算放大器需要稳定的偏置电流以实现高增益和高压摆率。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    },
+    {
+      "source_id": "ca_3_9_2",
+      "target_id": "ca_6_6_2",
+      "relationship": "技术依赖",
+      "description": "低电压MOS级联偏置电路为折叠式Cascode Class AB三级运放提供了稳定的偏置电压，特别是在低电压工作环境下。级联偏置电路的高摆幅和稳定性直接影响了运放的性能和可靠性。",
+      "weight": 0.8,
+      "evidence": "折叠式Cascode Class AB三级运放的输入级采用了折叠式Cascode结构，这种结构需要稳定的偏置电压来确保差分对的正常工作。低电压MOS级联偏置电路正好提供了这种稳定的偏置电压，尤其是在低电源电压条件下。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [],
+    "core_technologies": [],
+    "logical_path": [],
+    "key_bottleneck": "实现轨到轨视频运算放大器的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 21,
+    "total_edges": 136,
+    "node_types": {
+      "circuit_application": 21
+    },
+    "max_depth": 0
+  }
+}

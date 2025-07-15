@@ -1,0 +1,264 @@
+{
+  "application_node_id": "ca_1_2_2",
+  "application_label": "振荡器",
+  "nodes": [
+    {
+      "id": "ca_2_1_2",
+      "label": "数字逻辑门电路",
+      "node_type": "circuit_application",
+      "summary": "数字逻辑门电路利用MOS管在非线性的开关导通与截止状态之间切换和转化，实现稳定的非线性状态。基本的数字电路包括随机逻辑门电路。",
+      "difficulty": 4,
+      "section_num": "2.1",
+      "keywords": [
+        "MOS管",
+        "开关状态",
+        "逻辑门"
+      ],
+      "formulas": [],
+      "applications": [
+        "数字处理器",
+        "存储器"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_1_5",
+      "label": "非线性电路",
+      "node_type": "basic_concept",
+      "summary": "非线性电路不满足齐次性与叠加性的线性约束关系，其非线性失真将有新的频率分量产生。典型的非线性电路包括比较器和振荡器。",
+      "difficulty": 2,
+      "section_num": "2.1",
+      "keywords": [
+        "非线性失真",
+        "比较器",
+        "振荡器"
+      ],
+      "formulas": [],
+      "applications": [
+        "数字逻辑电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ct_1_2_2",
+      "label": "频率补偿",
+      "node_type": "core_technology",
+      "summary": "频率补偿是确保运放在闭环负反馈下稳定的关键技术，通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡。常见的补偿技术包括米勒补偿、超前补偿等。",
+      "difficulty": 3,
+      "section_num": "1.2",
+      "keywords": [
+        "稳定性",
+        "米勒补偿",
+        "超前补偿"
+      ],
+      "formulas": [
+        "f_c = 1 / (2πRC)"
+      ],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_1_2_2",
+      "label": "静态工作点",
+      "node_type": "basic_concept",
+      "summary": "静态工作点是指电路在无信号输入时的直流工作状态，是电路稳定工作的基础。对于运放电路，静态工作点的设计尤为重要，因为它直接影响电路的动态性能和稳定性。",
+      "difficulty": 2,
+      "section_num": "1.2",
+      "keywords": [
+        "直流工作状态",
+        "稳定性",
+        "动态性能"
+      ],
+      "formulas": [
+        "V_Q = V_CC / 2"
+      ],
+      "applications": [
+        "运放设计",
+        "偏置电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_1_2_2",
+      "label": "振荡器",
+      "node_type": "circuit_application",
+      "summary": "振荡器是利用运放的非线性特性产生周期性信号的电路，常见结构包括RC振荡器、晶体振荡器等。设计时需考虑频率稳定性、起振条件和波形质量。",
+      "difficulty": 4,
+      "section_num": "1.2",
+      "keywords": [
+        "周期性信号",
+        "频率稳定性",
+        "起振条件"
+      ],
+      "formulas": [
+        "f_osc = 1 / (2π√(LC))"
+      ],
+      "applications": [
+        "时钟生成",
+        "信号源"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_1_2_3",
+      "label": "负反馈",
+      "node_type": "basic_concept",
+      "summary": "负反馈是将输出信号的一部分反相后反馈到输入端，用于稳定放大器的增益、减少失真和扩展带宽。运放通常在闭环负反馈配置下工作，以实现稳定的线性放大。",
+      "difficulty": 2,
+      "section_num": "1.2",
+      "keywords": [
+        "稳定性",
+        "增益控制",
+        "失真减少"
+      ],
+      "formulas": [
+        "A_f = A / (1 + A*β)"
+      ],
+      "applications": [
+        "运放设计",
+        "控制系统"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_1_2_2",
+      "target_id": "ct_1_2_2",
+      "relationship": "enables",
+      "description": "基础概念静态工作点使能核心技术频率补偿",
+      "weight": 0.7,
+      "evidence": "基于关键词相似性的层次连接",
+      "bidirectional": false,
+      "edge_type": "hierarchical",
+      "source": "hierarchical_connection"
+    },
+    {
+      "source_id": "bc_1_2_3",
+      "target_id": "ct_1_2_2",
+      "relationship": "enables",
+      "description": "基础概念负反馈使能核心技术频率补偿",
+      "weight": 0.7,
+      "evidence": "基于关键词相似性的层次连接",
+      "bidirectional": false,
+      "edge_type": "hierarchical",
+      "source": "hierarchical_connection"
+    },
+    {
+      "source_id": "bc_2_1_5",
+      "target_id": "ca_2_1_2",
+      "relationship": "applies_to",
+      "description": "非线性电路的概念应用于数字逻辑门电路的设计，因为数字逻辑门利用MOS管的非线性开关特性。",
+      "weight": 0.9,
+      "evidence": "数字逻辑电路利用的就是这样一种稳定的非线性状态。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_1_2_3",
+      "target_id": "ct_1_2_2",
+      "relationship": "supports",
+      "description": "负反馈理论支撑了频率补偿技术的实现，确保运放在闭环下的稳定性。",
+      "weight": 0.8,
+      "evidence": "运放的设计与应用必然涉及到模拟系统方面的相关知识，包括系统的频率响应特性、系统的稳定性",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ct_1_2_2",
+      "target_id": "ca_1_2_2",
+      "relationship": "applies_to",
+      "description": "频率补偿技术应用于振荡器设计，确保振荡信号的稳定性和纯度。",
+      "weight": 0.75,
+      "evidence": "通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ca_2_1_2",
+      "target_id": "ca_1_2_2",
+      "relationship": "功能组合",
+      "description": "数字逻辑门电路和振荡器可以组合形成更复杂的数字系统。振荡器生成的时钟信号可以用于同步数字逻辑门电路的操作，确保数字处理器和存储器的时序正确性。",
+      "weight": 0.7,
+      "evidence": "数字逻辑门电路需要时钟信号来控制其操作时序，而振荡器正是生成这种时钟信号的关键组件。例如，在数字处理器中，晶体振荡器提供稳定的时钟信号，驱动逻辑门电路按照正确的时序执行指令。",
+      "bidirectional": false,
+      "edge_type": "inter_section",
+      "source": "cross_connection"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [
+      {
+        "id": "bc_2_1_5",
+        "label": "非线性电路",
+        "summary": "非线性电路不满足齐次性与叠加性的线性约束关系，其非线性失真将有新的频率分量产生。典型的非线性电路包括比较器和振荡器。"
+      },
+      {
+        "id": "bc_1_2_2",
+        "label": "静态工作点",
+        "summary": "静态工作点是指电路在无信号输入时的直流工作状态，是电路稳定工作的基础。对于运放电路，静态工作点的设计尤为重要，因为它直接影响电路的动态性能和稳定性。"
+      },
+      {
+        "id": "bc_1_2_3",
+        "label": "负反馈",
+        "summary": "负反馈是将输出信号的一部分反相后反馈到输入端，用于稳定放大器的增益、减少失真和扩展带宽。运放通常在闭环负反馈配置下工作，以实现稳定的线性放大。"
+      }
+    ],
+    "core_technologies": [
+      {
+        "id": "ct_1_2_2",
+        "label": "频率补偿",
+        "summary": "频率补偿是确保运放在闭环负反馈下稳定的关键技术，通过添加补偿电容或零点来调整系统的频率响应，避免自激振荡。常见的补偿技术包括米勒补偿、超前补偿等。"
+      }
+    ],
+    "logical_path": [
+      {
+        "id": "bc_2_1_5",
+        "label": "非线性电路",
+        "type": "basic_concept",
+        "summary": "非线性电路不满足齐次性与叠加性的线性约束关系，其非线性失真将有新的频率分量产生。典型的非线性电路包括比较器和振荡器。"
+      },
+      {
+        "id": "ca_2_1_2",
+        "label": "数字逻辑门电路",
+        "type": "circuit_application",
+        "summary": "数字逻辑门电路利用MOS管在非线性的开关导通与截止状态之间切换和转化，实现稳定的非线性状态。基本的数字电路包括随机逻辑门电路。"
+      },
+      {
+        "id": "ca_1_2_2",
+        "label": "振荡器",
+        "type": "circuit_application",
+        "summary": "振荡器是利用运放的非线性特性产生周期性信号的电路，常见结构包括RC振荡器、晶体振荡器等。设计时需考虑频率稳定性、起振条件和波形质量。"
+      }
+    ],
+    "key_bottleneck": "实现振荡器的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 6,
+    "total_edges": 6,
+    "node_types": {
+      "circuit_application": 2,
+      "basic_concept": 3,
+      "core_technology": 1
+    },
+    "max_depth": 2
+  }
+}

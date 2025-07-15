@@ -1,0 +1,234 @@
+{
+  "application_node_id": "ca_2_5_3",
+  "application_label": "MOS管开关电路",
+  "nodes": [
+    {
+      "id": "ct_2_5_1",
+      "label": "有源器件偏置技术",
+      "node_type": "core_technology",
+      "summary": "有源器件（如二极管、BJT管、MOS管）需要提供合适的静态工作点偏置以确保正常工作和最佳信号处理功能。二极管和BJT管的正向导通电压稳定（0.6~0.7V），而MOS管的阈值电压与工艺密切相关。",
+      "difficulty": 3,
+      "section_num": "2.5",
+      "keywords": [
+        "静态工作点",
+        "偏置电路",
+        "阈值电压",
+        "工艺相关性"
+      ],
+      "formulas": [
+        "V_BE(on) = 0.6~0.7V",
+        "V_TH (工艺相关)"
+      ],
+      "applications": [
+        "放大电路",
+        "模拟电路"
+      ],
+      "properties": {},
+      "level": 2,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_5_1",
+      "label": "PN结",
+      "node_type": "basic_concept",
+      "summary": "PN结是构成半导体器件及其电路的物理和结构基础，由P型和N型半导体材料接触形成，具有单向导电性。正向偏置时导通，反向偏置时截止。",
+      "difficulty": 2,
+      "section_num": "2.5",
+      "keywords": [
+        "半导体",
+        "单向导电性",
+        "正向导通",
+        "反向截止"
+      ],
+      "formulas": [],
+      "applications": [
+        "二极管",
+        "BJT管",
+        "MOS管"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_5_3",
+      "label": "BJT管",
+      "node_type": "basic_concept",
+      "summary": "BJT管（双极型晶体管）是由两个背靠背PN结构成的电流放大器件，多子与少子（双载流子）参与导电，输入电压与输出电流呈指数关系，具有高跨导、高速和大电流驱动特性，但静态电流大，不适合大规模集成。",
+      "difficulty": 3,
+      "section_num": "2.5",
+      "keywords": [
+        "双极型晶体管",
+        "电流放大",
+        "高跨导",
+        "大电流驱动"
+      ],
+      "formulas": [
+        "指数关系"
+      ],
+      "applications": [
+        "放大电路",
+        "开关电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    },
+    {
+      "id": "ca_2_5_3",
+      "label": "MOS管开关电路",
+      "node_type": "circuit_application",
+      "summary": "MOS管用于开关电路，利用其高输入阻抗和电压驱动特性实现高效开关功能，但噪声较大且驱动能力较弱。",
+      "difficulty": 4,
+      "section_num": "2.5",
+      "keywords": [
+        "开关电路",
+        "高输入阻抗",
+        "电压驱动"
+      ],
+      "formulas": [
+        "开关时间公式"
+      ],
+      "applications": [
+        "数字电路",
+        "功率开关"
+      ],
+      "properties": {},
+      "level": 3,
+      "source": "sub_logic"
+    },
+    {
+      "id": "bc_2_5_4",
+      "label": "MOS管",
+      "node_type": "basic_concept",
+      "summary": "MOS管（金属氧化物半导体场效应晶体管）是基于表面沟道反型的电场感应多子输运型有源器件，输入电压与输出电流呈平方率关系，输入阻抗高，适合电压驱动，但噪声大，跨导和电流驱动能力较弱。",
+      "difficulty": 3,
+      "section_num": "2.5",
+      "keywords": [
+        "场效应晶体管",
+        "平方率关系",
+        "高输入阻抗",
+        "电压驱动"
+      ],
+      "formulas": [
+        "平方率关系"
+      ],
+      "applications": [
+        "放大电路",
+        "开关电路",
+        "数字电路"
+      ],
+      "properties": {},
+      "level": 1,
+      "source": "sub_logic"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "bc_2_5_4",
+      "target_id": "ca_2_5_3",
+      "relationship": "supports",
+      "description": "基础概念MOS管支撑电路应用MOS管开关电路",
+      "weight": 0.6,
+      "evidence": "基于强关键词相似性的直接支撑",
+      "bidirectional": false,
+      "edge_type": "hierarchical",
+      "source": "hierarchical_connection"
+    },
+    {
+      "source_id": "bc_2_5_1",
+      "target_id": "bc_2_5_3",
+      "relationship": "enables",
+      "description": "两个背靠背PN结构成BJT管，其电流放大功能依赖于PN结的载流子扩散机制。",
+      "weight": 0.9,
+      "evidence": "利用不同电压偏置的两个背靠背PN结可构成多子与少子即双载流子参与导电的电流放大型BJT管。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_2_5_3",
+      "target_id": "ct_2_5_1",
+      "relationship": "supports",
+      "description": "BJT管的指数关系特性支持静态工作点偏置技术的实现。",
+      "weight": 0.8,
+      "evidence": "BJT管的输入电压与输出电流具有典型的指数规律关系，因此需要合适的静态工作点偏置。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "bc_2_5_4",
+      "target_id": "ct_2_5_1",
+      "relationship": "supports",
+      "description": "MOS管的平方率关系和高输入阻抗特性支持静态工作点偏置技术的实现。",
+      "weight": 0.8,
+      "evidence": "MOS管的输入电压与输出电流表现为平方率关系，低频下输入阻抗趋近无穷大，适合电压驱动。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    },
+    {
+      "source_id": "ct_2_5_1",
+      "target_id": "ca_2_5_3",
+      "relationship": "implements",
+      "description": "有源器件偏置技术是实现MOS管开关电路正常工作的关键。",
+      "weight": 0.9,
+      "evidence": "有源器件必须提供合适的静态工作点偏置，器件才能正常工作并实现最佳的信号处理功能。",
+      "bidirectional": false,
+      "edge_type": "intra_section",
+      "source": "sub_logic"
+    }
+  ],
+  "path_analysis": {
+    "basic_concepts": [
+      {
+        "id": "bc_2_5_1",
+        "label": "PN结",
+        "summary": "PN结是构成半导体器件及其电路的物理和结构基础，由P型和N型半导体材料接触形成，具有单向导电性。正向偏置时导通，反向偏置时截止。"
+      },
+      {
+        "id": "bc_2_5_3",
+        "label": "BJT管",
+        "summary": "BJT管（双极型晶体管）是由两个背靠背PN结构成的电流放大器件，多子与少子（双载流子）参与导电，输入电压与输出电流呈指数关系，具有高跨导、高速和大电流驱动特性，但静态电流大，不适合大规模集成。"
+      },
+      {
+        "id": "bc_2_5_4",
+        "label": "MOS管",
+        "summary": "MOS管（金属氧化物半导体场效应晶体管）是基于表面沟道反型的电场感应多子输运型有源器件，输入电压与输出电流呈平方率关系，输入阻抗高，适合电压驱动，但噪声大，跨导和电流驱动能力较弱。"
+      }
+    ],
+    "core_technologies": [
+      {
+        "id": "ct_2_5_1",
+        "label": "有源器件偏置技术",
+        "summary": "有源器件（如二极管、BJT管、MOS管）需要提供合适的静态工作点偏置以确保正常工作和最佳信号处理功能。二极管和BJT管的正向导通电压稳定（0.6~0.7V），而MOS管的阈值电压与工艺密切相关。"
+      }
+    ],
+    "logical_path": [
+      {
+        "id": "bc_2_5_4",
+        "label": "MOS管",
+        "type": "basic_concept",
+        "summary": "MOS管（金属氧化物半导体场效应晶体管）是基于表面沟道反型的电场感应多子输运型有源器件，输入电压与输出电流呈平方率关系，输入阻抗高，适合电压驱动，但噪声大，跨导和电流驱动能力较弱。"
+      },
+      {
+        "id": "ca_2_5_3",
+        "label": "MOS管开关电路",
+        "type": "circuit_application",
+        "summary": "MOS管用于开关电路，利用其高输入阻抗和电压驱动特性实现高效开关功能，但噪声较大且驱动能力较弱。"
+      }
+    ],
+    "key_bottleneck": "实现MOS管开关电路的关键技术挑战"
+  },
+  "statistics": {
+    "total_nodes": 5,
+    "total_edges": 5,
+    "node_types": {
+      "core_technology": 1,
+      "basic_concept": 3,
+      "circuit_application": 1
+    },
+    "max_depth": 3
+  }
+}

@@ -1,0 +1,164 @@
+# CT-MA-CircuitThinking System Configuration
+
+project:
+  name: "CT-MA-CircuitThinking"
+  version: "1.0.0"
+  description: "Circuit Thinking Multi-Agent System"
+  author: "CAL-KG Team"
+
+# Data Paths
+data:
+  input_kg_path: "data/input/unified_knowledge_graph.json"
+  knowledge_base_path: "data/knowledge_base/"
+  output_path: "data/output/"
+  subgraphs_path: "data/output/subgraphs/"
+  cot_datasets_path: "data/output/cot_datasets/"
+  reports_path: "data/output/reports/"
+
+# Model Configuration
+models:
+  llm:
+    provider: "deepseek"  # deepseek, openai, anthropic
+    model: "DMXAPI-DeepSeek-V3"
+    api_key: "sk-pBUBTdSpfx0ppYf30rzzmbr60WiffKq52EQzx45r9rntGjli"
+    base_url: "https://www.dmxapi.cn/v1"
+    temperature: 0.3
+    max_tokens: 4000
+    timeout: 60
+    retry_times: 3
+    retry_delay: 1.0
+
+  embedding:
+    provider: "openai"
+    model: "text-embedding-3-small"
+    api_key: "sk-pBUBTdSpfx0ppYf30rzzmbr60WiffKq52EQzx45r9rntGjli"  # Same key as LLM
+    base_url: "https://www.dmxapi.cn/v1"  # Same base_url as LLM
+    dimensions: 1536
+    batch_size: 100
+
+  # Expert models for improvement team
+  expert_models:
+    logic_expert: "DMXAPI-HuoShan-DeepSeek-R1-671B-64k"
+    technical_expert: "qwen3-235b-a22b"
+    clarity_expert: "DMXAPI-HuoShan-DeepSeek-R1-671B-64k"
+    completeness_expert: "qwen3-235b-a22b"
+
+# Processing Configuration
+processing:
+  batch_size: 10
+  max_workers: 4
+  timeout: 300
+  enable_parallel: true
+  save_intermediate: true
+
+# Subgraph Extraction
+subgraph:
+  max_depth: 5
+  min_nodes: 3
+  max_nodes: 20
+  target_node_types: ["circuit_application"]
+  include_node_types: ["basic_concept", "core_technology", "circuit_application"]
+  
+# Question Generation Configuration
+question_generation:
+  # Number of questions to generate initially
+  initial_generation_count: 10
+  # Number of questions to select after filtering
+  final_selection_count: 2
+  # Question types and their weights for diversity
+  question_types:
+    circuit_analysis: 0.25      # 电路分析类问题
+    design_optimization: 0.20   # 设计优化类问题
+    parameter_calculation: 0.15 # 参数计算类问题
+    performance_comparison: 0.15 # 性能比较类问题
+    troubleshooting: 0.10       # 故障诊断类问题
+    application_design: 0.15    # 应用设计类问题
+  # Difficulty distribution
+  difficulty_distribution:
+    easy: 0.2      # 简单问题（基础概念）
+    medium: 0.5    # 中等问题（技术应用）
+    hard: 0.3      # 困难问题（综合设计）
+
+# Quality Control
+quality:
+  min_logic_length: 100
+  min_think_length: 500
+  min_answer_length: 800  # Updated for detailed answers
+  max_total_length: 8000  # Updated for longer content
+  required_sections: ["logic", "think", "answer"]
+  min_quality_score: 0.7
+
+# RAG Configuration
+rag:
+  vector_store:
+    collection_name: "circuit_knowledge"
+    persist_directory: "./data/chroma_db"
+
+  document_processing:
+    chunk_size: 512
+    chunk_overlap: 50
+    supported_formats: ["pdf", "txt", "md", "docx"]
+
+  retrieval:
+    top_k: 10
+    score_threshold: 0.7
+    enable_reranking: true
+    enable_query_expansion: true
+
+  knowledge_enhancement:
+    strategies: ["definition_lookup", "formula_extraction", "example_retrieval"]
+    max_contexts_per_node: 5
+    context_window: 2048
+    enhance_basic_concepts: true
+    enhance_core_technologies: true
+    enhance_circuit_applications: true
+
+  # LlamaIndex configuration for book retrieval
+  llamaindex:
+    chunk_size: 1024
+    chunk_overlap: 200
+    top_k: 10
+
+  books_path: "data/books/"
+  index_path: "data/llamaindex_storage/"
+
+# Question Design Configuration
+question_design:
+  enable: true
+  agent_types: ["complexity", "logic", "application"]
+  questions_per_type: 3
+  max_hop_count: 4
+
+# Expert Team Configuration
+expert_team:
+  enable: true
+  parallel_review: true
+  score_threshold: 6.0
+  satisfaction_threshold: 8.0
+  max_iterations: 3
+  improvement_strategies:
+    minor_refinement: 8.0
+    moderate_improvement: 6.0
+    major_revision: 0.0
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/ct_ma_{timestamp}.log"
+  console: true
+
+# Monitoring
+monitoring:
+  enable_wandb: false
+  wandb_project: "ct-ma-circuit-thinking"
+  wandb_entity: "your-entity"
+  track_metrics: true
+  save_artifacts: true
+
+# Development
+development:
+  debug: false
+  verbose: true
+  save_prompts: true
+  validate_outputs: true

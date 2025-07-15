@@ -1,0 +1,96 @@
+# CT-MA-CircuitThinking System Configuration Example
+# Copy this file to system_config.yaml and update the values
+
+project:
+  name: "CT-MA-CircuitThinking"
+  version: "1.0.0"
+  description: "Circuit Thinking Multi-Agent System"
+  author: "CAL-KG Team"
+
+# Data Paths
+data:
+  input_kg_path: "data/input/unified_knowledge_graph.json"
+  knowledge_base_path: "data/knowledge_base/"
+  output_path: "data/output/"
+  subgraphs_path: "data/output/subgraphs/"
+  cot_datasets_path: "data/output/cot_datasets/"
+  reports_path: "data/output/reports/"
+
+# Model Configuration
+models:
+  llm:
+    provider: "deepseek"  # deepseek, openai, anthropic
+    model: "deepseek-chat"
+    api_key: "${DEEPSEEK_API_KEY}"  # Set this environment variable
+    base_url: "https://api.deepseek.com/v1"
+    temperature: 0.3
+    max_tokens: 4000
+    timeout: 60
+    retry_times: 3
+    retry_delay: 1.0
+
+  embedding:
+    provider: "openai"
+    model: "text-embedding-3-small"
+    api_key: "${OPENAI_API_KEY}"  # Set this environment variable
+    dimensions: 1536
+    batch_size: 100
+
+# Processing Configuration
+processing:
+  batch_size: 10
+  max_workers: 4
+  timeout: 300
+  enable_parallel: true
+  save_intermediate: true
+
+# Subgraph Extraction
+subgraph:
+  max_depth: 5
+  min_nodes: 3
+  max_nodes: 20
+  target_node_types: ["circuit_application"]
+  include_node_types: ["basic_concept", "core_technology", "circuit_application"]
+  
+# Quality Control
+quality:
+  min_logic_length: 100
+  min_think_length: 500
+  min_answer_length: 100
+  max_total_length: 5000
+  required_sections: ["logic", "think", "answer"]
+  min_quality_score: 0.7
+  
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/ct_ma_{timestamp}.log"
+  console: true
+
+# Monitoring
+monitoring:
+  enable_wandb: false
+  wandb_project: "ct-ma-circuit-thinking"
+  wandb_entity: "your-entity"
+  track_metrics: true
+  save_artifacts: true
+
+# Development
+development:
+  debug: false
+  verbose: true
+  save_prompts: true
+  validate_outputs: true
+
+# Environment Variables Required:
+# - DEEPSEEK_API_KEY: Your DeepSeek API key
+# - OPENAI_API_KEY: Your OpenAI API key for embeddings
+#
+# To set environment variables:
+# Windows: set DEEPSEEK_API_KEY=your_key_here
+# Linux/Mac: export DEEPSEEK_API_KEY=your_key_here
+#
+# Or create a .env file in the project root with:
+# DEEPSEEK_API_KEY=your_key_here
+# OPENAI_API_KEY=your_key_here
