@@ -114,33 +114,33 @@ CAL_KG_System/
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#ff6b6b',
-    'primaryTextColor': '#fff',
-    'primaryBorderColor': '#ff4757',
-    'lineColor': '#5f27cd',
-    'secondaryColor': '#00d2d3',
-    'tertiaryColor': '#ff9ff3',
-    'background': '#f1f2f6',
+    'primaryColor': '#2563eb',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#1d4ed8',
+    'lineColor': '#6b7280',
+    'secondaryColor': '#10b981',
+    'tertiaryColor': '#f59e0b',
+    'background': '#f8fafc',
     'mainBkg': '#ffffff',
-    'secondBkg': '#e8f4fd',
-    'tertiaryBkg': '#fff5f5'
+    'secondBkg': '#f1f5f9',
+    'tertiaryBkg': '#fef3c7'
   }
 }}%%
 
 flowchart LR
     %% 输入阶段
-    subgraph INPUT ["📚 输入阶段"]
-        A["📄 电路技术文档<br/>📊 PDF/Word/Text<br/>🔢 平均500-1000页"]
+    subgraph INPUT ["📚 数据输入层"]
+        A["📄 电路技术文档<br/>📊 多格式支持<br/>📏 500-1000页"]
     end
 
     %% CAL-KG知识图谱构建阶段
-    subgraph CALKG ["🔬 CAL-KG 知识图谱构建"]
+    subgraph CALKG ["🔬 CAL-KG 知识图谱构建层"]
         direction TB
-        B["📖 智能文档分割<br/>🤖 DeepSeek-V3<br/>⚡ 95%+准确率<br/>🔧 目录-正文匹配"]
-        C["🧠 主逻辑图谱生成<br/>🔗 章节关系分析<br/>📈 CoT推理<br/>🎯 学习路径构建"]
-        D["🔬 子逻辑图谱生成<br/>🏷️ 三元分类<br/>⚙️ 动态节点调整<br/>🔄 并发处理"]
-        E["🔗 智能连接分析<br/>🎯 应用中心模型<br/>📊 相似性计算<br/>🔍 技术证据验证"]
-        F["🔄 知识图谱融合<br/>📊 695节点+2242边<br/>🎨 可视化生成<br/>💾 JSON格式输出"]
+        B["📖 智能文档分割<br/>🎯 95%+ 准确率<br/>⚡ 8并发处理"]
+        C["🧠 主逻辑图谱生成<br/>🔗 章节关系分析<br/>📈 CoT推理引擎"]
+        D["🔬 子逻辑图谱生成<br/>🏷️ 三元智能分类<br/>⚙️ 动态节点调整"]
+        E["🔗 智能连接分析<br/>🎯 应用中心模型<br/>📊 相似性计算"]
+        F["🔄 知识图谱融合<br/>📊 695节点+2242边<br/>💾 标准化输出"]
 
         B --> C
         B --> D
@@ -150,12 +150,12 @@ flowchart LR
     end
 
     %% CT-MA思维链生成阶段
-    subgraph CTMA ["🤖 CT-MA 思维链生成"]
+    subgraph CTMA ["🤖 CT-MA 思维链生成层"]
         direction TB
-        G["🧠 智能节点筛选<br/>🎯 应用主题驱动<br/>📊 182→15节点<br/>✅ 90%+准确率"]
-        H["🎲 多样化问题生成<br/>📝 6大问题类型<br/>🎚️ 3个难度等级<br/>⚙️ 可配置数量"]
+        G["🧠 智能节点筛选<br/>📊 182→15节点<br/>✅ 90%+ 准确率"]
+        H["🎲 多样化问题生成<br/>📝 6大问题类型<br/>🎚️ 3个难度等级"]
         I["🔄 统一CoT生成<br/>💡 Logic(109字符)<br/>🧠 Think(813字符)<br/>💬 Answer(933字符)"]
-        J["👨‍🔬 专家团队评审<br/>📊 7.5/10平均分<br/>🔄 迭代改进<br/>✅ 质量保证"]
+        J["👨‍🔬 专家团队评审<br/>📊 7.5/10 评分<br/>✅ 质量保证"]
 
         G --> H
         H --> I
@@ -163,16 +163,9 @@ flowchart LR
     end
 
     %% 输出阶段
-    subgraph OUTPUT ["📈 输出成果"]
-        K["📊 交互式知识图谱<br/>🌐 HTML可视化<br/>🖱️ 拖拽交互<br/>🔍 节点搜索"]
-        L["🧠 高质量思维链数据<br/>📝 Logic-Think-Answer<br/>🎯 逻辑一致性<br/>📚 AI训练就绪"]
-    end
-
-    %% 辅助系统
-    subgraph SUPPORT ["🛠️ 支撑系统"]
-        M["📚 RAG知识库<br/>🔍 LlamaIndex<br/>📖 电路设计文档<br/>🔗 证据检索"]
-        N["⚡ 并发处理架构<br/>🚀 8并发API<br/>🔄 智能重试<br/>📊 99%+完成率"]
-        O["⚙️ 配置管理系统<br/>📝 YAML配置<br/>🎛️ 参数调优<br/>🔧 模块化设计"]
+    subgraph OUTPUT ["📈 成果输出层"]
+        K["📊 交互式知识图谱<br/>🌐 HTML可视化<br/>🖱️ 拖拽交互"]
+        L["🧠 高质量思维链<br/>📝 完整推理链<br/>🤖 AI训练就绪"]
     end
 
     %% 连接关系
@@ -181,159 +174,186 @@ flowchart LR
     J --> K
     J --> L
 
-    %% 辅助连接
-    M -.-> I
-    N -.-> B
-    N -.-> C
-    N -.-> D
-    N -.-> E
-    O -.-> CALKG
-    O -.-> CTMA
-
     %% 样式定义
-    classDef inputStyle fill:#e8f5e8,stroke:#4caf50,stroke-width:3px,color:#2e7d32
-    classDef processStyle fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#1565c0
-    classDef outputStyle fill:#fff3e0,stroke:#ff9800,stroke-width:3px,color:#ef6c00
-    classDef supportStyle fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#7b1fa2
+    classDef inputStyle fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e40af
+    classDef processStyle fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#047857
+    classDef outputStyle fill:#fef3c7,stroke:#f59e0b,stroke-width:2px,color:#d97706
 
     class A inputStyle
     class B,C,D,E,F,G,H,I,J processStyle
     class K,L outputStyle
-    class M,N,O supportStyle
-
-    %% 添加点击事件和动画
-    click A "https://github.com/your-repo/CAL-KG-System" "查看项目详情"
-    click F "https://github.com/your-repo/CAL-KG-System/tree/main/output/final" "查看知识图谱输出"
-    click L "https://github.com/your-repo/CAL-KG-System/tree/main/CT-MA-CircuitThinking/output" "查看思维链数据"
 ```
 
 #### 🎯 技术流程详细说明
 
-<table align="center" style="width: 100%; border-collapse: collapse; margin: 20px 0;">
-<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-<th style="padding: 15px; text-align: center; font-size: 16px;">🔬 处理阶段</th>
-<th style="padding: 15px; text-align: center; font-size: 16px;">⚡ 核心技术</th>
-<th style="padding: 15px; text-align: center; font-size: 16px;">📊 性能指标</th>
-<th style="padding: 15px; text-align: center; font-size: 16px;">🎯 输出成果</th>
+<div style="background: #f8fafc; padding: 30px; border-radius: 12px; margin: 30px 0;">
+
+<table style="width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+<thead>
+<tr style="background: #2563eb; color: white;">
+<th style="padding: 20px; text-align: left; font-weight: 600; width: 20%;">🔬 处理阶段</th>
+<th style="padding: 20px; text-align: left; font-weight: 600; width: 30%;">⚡ 核心技术</th>
+<th style="padding: 20px; text-align: left; font-weight: 600; width: 25%;">📊 性能指标</th>
+<th style="padding: 20px; text-align: left; font-weight: 600; width: 25%;">🎯 输出成果</th>
 </tr>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6;"><strong>📖 文档分割</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• DeepSeek-V3语义理解<br/>
-• 正则+AI混合识别<br/>
-• 目录-正文智能匹配
+</thead>
+<tbody>
+<tr style="border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; vertical-align: top;">
+<div style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">📖 文档分割</div>
+<div style="color: #6b7280; font-size: 14px;">智能解析层</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 准确率: <strong>95%+</strong><br/>
-• 处理速度: <strong>8并发</strong><br/>
-• 支持格式: PDF/Word/Text
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• DeepSeek-V3 语义理解</div>
+<div style="margin-bottom: 8px;">• 正则+AI 混合识别</div>
+<div>• 目录-正文智能匹配</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 结构化章节数据<br/>
-• 层次化内容组织<br/>
-• 完整目录映射
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">准确率: <span style="color: #10b981; font-weight: 600;">95%+</span></div>
+<div style="margin-bottom: 8px;">并发数: <span style="color: #10b981; font-weight: 600;">8线程</span></div>
+<div>格式: PDF/Word/Text</div>
 </td>
-</tr>
-<tr style="background: #ffffff;">
-<td style="padding: 12px; border: 1px solid #dee2e6;"><strong>🧠 主逻辑构建</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• CoT思维链推理<br/>
-• 章节关系建模<br/>
-• 学习路径生成
-</td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 关系准确率: <strong>90%+</strong><br/>
-• 处理章节: <strong>50-100个</strong><br/>
-• 依赖深度: <strong>3-5层</strong>
-</td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 章节依赖图谱<br/>
-• 知识学习路径<br/>
-• 难度等级评估
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 结构化章节数据</div>
+<div style="margin-bottom: 8px;">• 层次化内容组织</div>
+<div>• 完整目录映射</div>
 </td>
 </tr>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6;"><strong>🔬 子逻辑提取</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 三元分类算法<br/>
-• 动态节点调整<br/>
-• 并发批处理
+<tr style="background: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; vertical-align: top;">
+<div style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">🧠 主逻辑构建</div>
+<div style="color: #6b7280; font-size: 14px;">关系建模层</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 节点数量: <strong>695个</strong><br/>
-• 分类准确率: <strong>92%+</strong><br/>
-• 处理效率: <strong>6-8倍提升</strong>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• CoT 思维链推理</div>
+<div style="margin-bottom: 8px;">• 章节关系建模</div>
+<div>• 学习路径生成</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 基础概念节点<br/>
-• 核心技术节点<br/>
-• 电路应用节点
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">关系准确率: <span style="color: #10b981; font-weight: 600;">90%+</span></div>
+<div style="margin-bottom: 8px;">处理章节: <span style="color: #10b981; font-weight: 600;">50-100个</span></div>
+<div>依赖深度: 3-5层</div>
 </td>
-</tr>
-<tr style="background: #ffffff;">
-<td style="padding: 12px; border: 1px solid #dee2e6;"><strong>🔗 连接分析</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 应用中心模型<br/>
-• 相似性计算<br/>
-• 技术证据验证
-</td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 连接数量: <strong>2242条</strong><br/>
-• 强度评估: <strong>0-1分值</strong><br/>
-• 跨章节发现: <strong>80%+</strong>
-</td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 技术关联网络<br/>
-• 应用依赖关系<br/>
-• 连接强度评分
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 章节依赖图谱</div>
+<div style="margin-bottom: 8px;">• 知识学习路径</div>
+<div>• 难度等级评估</div>
 </td>
 </tr>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6;"><strong>🤖 思维链生成</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 统一CoT Agent<br/>
-• 智能问题设计<br/>
-• RAG知识增强
+<tr style="border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; vertical-align: top;">
+<div style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">🔬 子逻辑提取</div>
+<div style="color: #6b7280; font-size: 14px;">知识分类层</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• Logic: <strong>109字符</strong><br/>
-• Think: <strong>813字符</strong><br/>
-• Answer: <strong>933字符</strong>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 三元分类算法</div>
+<div style="margin-bottom: 8px;">• 动态节点调整</div>
+<div>• 并发批处理</div>
 </td>
-<td style="padding: 12px; border: 1px solid #dee2e6;">
-• 完整推理链条<br/>
-• 专家级回答<br/>
-• AI训练数据
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">节点数量: <span style="color: #10b981; font-weight: 600;">695个</span></div>
+<div style="margin-bottom: 8px;">分类准确率: <span style="color: #10b981; font-weight: 600;">92%+</span></div>
+<div>效率提升: 6-8倍</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 基础概念节点</div>
+<div style="margin-bottom: 8px;">• 核心技术节点</div>
+<div>• 电路应用节点</div>
 </td>
 </tr>
+<tr style="background: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; vertical-align: top;">
+<div style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">🔗 连接分析</div>
+<div style="color: #6b7280; font-size: 14px;">关联发现层</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 应用中心模型</div>
+<div style="margin-bottom: 8px;">• 相似性计算</div>
+<div>• 技术证据验证</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">连接数量: <span style="color: #10b981; font-weight: 600;">2242条</span></div>
+<div style="margin-bottom: 8px;">强度评估: 0-1分值</div>
+<div>跨章节发现: 80%+</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 技术关联网络</div>
+<div style="margin-bottom: 8px;">• 应用依赖关系</div>
+<div>• 连接强度评分</div>
+</td>
+</tr>
+<tr>
+<td style="padding: 20px; vertical-align: top;">
+<div style="font-weight: 600; color: #1f2937; margin-bottom: 8px;">🤖 思维链生成</div>
+<div style="color: #6b7280; font-size: 14px;">CoT生成层</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 统一CoT Agent</div>
+<div style="margin-bottom: 8px;">• 智能问题设计</div>
+<div>• RAG知识增强</div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">Logic: <span style="color: #10b981; font-weight: 600;">109字符</span></div>
+<div style="margin-bottom: 8px;">Think: <span style="color: #10b981; font-weight: 600;">813字符</span></div>
+<div>Answer: <span style="color: #10b981; font-weight: 600;">933字符</span></div>
+</td>
+<td style="padding: 20px; vertical-align: top;">
+<div style="margin-bottom: 8px;">• 完整推理链条</div>
+<div style="margin-bottom: 8px;">• 专家级回答</div>
+<div>• AI训练数据</div>
+</td>
+</tr>
+</tbody>
 </table>
+
+</div>
 
 #### ⚡ 系统性能亮点
 
-<div style="display: flex; justify-content: space-around; margin: 30px 0; flex-wrap: wrap;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 40px 0; padding: 0 20px;">
 
-<div style="text-align: center; margin: 10px; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 15px; color: white; min-width: 200px;">
-<h4>🚀 处理效率</h4>
-<p style="font-size: 24px; margin: 10px 0;"><strong>8并发</strong></p>
-<p>6-8倍性能提升</p>
+<div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+<div style="width: 64px; height: 64px; background: #dbeafe; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px;">🚀</div>
+<h4 style="color: #1f2937; margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">处理效率</h4>
+<div style="font-size: 36px; font-weight: 700; color: #2563eb; margin: 12px 0;">8x</div>
+<p style="color: #6b7280; margin: 0; font-size: 14px;">并发处理加速</p>
+<div style="background: #f1f5f9; height: 6px; border-radius: 3px; margin: 16px 0; overflow: hidden;">
+<div style="background: #2563eb; height: 100%; width: 85%; border-radius: 3px;"></div>
+</div>
+<small style="color: #9ca3af;">相比单线程提升800%</small>
 </div>
 
-<div style="text-align: center; margin: 10px; padding: 20px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 15px; color: white; min-width: 200px;">
-<h4>🎯 准确率</h4>
-<p style="font-size: 24px; margin: 10px 0;"><strong>95%+</strong></p>
-<p>文档分割准确率</p>
+<div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+<div style="width: 64px; height: 64px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px;">🎯</div>
+<h4 style="color: #1f2937; margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">准确率</h4>
+<div style="font-size: 36px; font-weight: 700; color: #10b981; margin: 12px 0;">95%</div>
+<p style="color: #6b7280; margin: 0; font-size: 14px;">文档分割精度</p>
+<div style="background: #f1f5f9; height: 6px; border-radius: 3px; margin: 16px 0; overflow: hidden;">
+<div style="background: #10b981; height: 100%; width: 95%; border-radius: 3px;"></div>
+</div>
+<small style="color: #9ca3af;">行业领先水平</small>
 </div>
 
-<div style="text-align: center; margin: 10px; padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 15px; color: white; min-width: 200px;">
-<h4>📊 数据规模</h4>
-<p style="font-size: 24px; margin: 10px 0;"><strong>695节点</strong></p>
-<p>2242条连接关系</p>
+<div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+<div style="width: 64px; height: 64px; background: #fef3c7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px;">📊</div>
+<h4 style="color: #1f2937; margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">数据规模</h4>
+<div style="font-size: 36px; font-weight: 700; color: #f59e0b; margin: 12px 0;">695</div>
+<p style="color: #6b7280; margin: 0; font-size: 14px;">知识图谱节点</p>
+<div style="background: #f1f5f9; height: 6px; border-radius: 3px; margin: 16px 0; overflow: hidden;">
+<div style="background: #f59e0b; height: 100%; width: 90%; border-radius: 3px;"></div>
+</div>
+<small style="color: #9ca3af;">2242条连接关系</small>
 </div>
 
-<div style="text-align: center; margin: 10px; padding: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); border-radius: 15px; color: white; min-width: 200px;">
-<h4>🤖 CoT质量</h4>
-<p style="font-size: 24px; margin: 10px 0;"><strong>7.5/10</strong></p>
-<p>专家评审评分</p>
+<div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; text-align: center; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); transition: transform 0.2s;">
+<div style="width: 64px; height: 64px; background: #f3e8ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 28px;">🤖</div>
+<h4 style="color: #1f2937; margin: 0 0 12px 0; font-size: 18px; font-weight: 600;">AI质量</h4>
+<div style="font-size: 36px; font-weight: 700; color: #8b5cf6; margin: 12px 0;">7.5</div>
+<p style="color: #6b7280; margin: 0; font-size: 14px;">专家评审评分</p>
+<div style="background: #f1f5f9; height: 6px; border-radius: 3px; margin: 16px 0; overflow: hidden;">
+<div style="background: #8b5cf6; height: 100%; width: 75%; border-radius: 3px;"></div>
+</div>
+<small style="color: #9ca3af;">满分10分制</small>
 </div>
 
 </div>
@@ -491,18 +511,21 @@ graph TB
 
 #### 🎯 实时性能监控仪表板
 
-<div align="center">
+<div style="background: #f8fafc; padding: 40px; border-radius: 12px; margin: 40px 0;">
+
+<div align="center" style="margin-bottom: 40px;">
 
 ```mermaid
 %%{init: {
   'theme': 'base',
   'themeVariables': {
-    'primaryColor': '#ff6b6b',
-    'primaryTextColor': '#fff',
-    'primaryBorderColor': '#ff4757',
-    'lineColor': '#5f27cd',
-    'secondaryColor': '#00d2d3',
-    'tertiaryColor': '#ff9ff3'
+    'primaryColor': '#2563eb',
+    'primaryTextColor': '#ffffff',
+    'primaryBorderColor': '#1d4ed8',
+    'lineColor': '#6b7280',
+    'secondaryColor': '#10b981',
+    'tertiaryColor': '#f59e0b',
+    'background': '#f8fafc'
   }
 }}%%
 
@@ -516,94 +539,66 @@ pie title 📊 系统性能分布
 
 </div>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 30px 0;">
-
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-<h3 style="margin: 0 0 15px 0;">⚡ 处理性能</h3>
-<div style="font-size: 36px; font-weight: bold; margin: 10px 0;">8x</div>
-<p style="margin: 5px 0;">并发处理加速</p>
-<div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; margin: 15px 0;">
-<div style="background: #4CAF50; height: 100%; width: 85%; border-radius: 4px;"></div>
-</div>
-<small>相比单线程提升800%</small>
-</div>
-
-<div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-<h3 style="margin: 0 0 15px 0;">🎯 准确率</h3>
-<div style="font-size: 36px; font-weight: bold; margin: 10px 0;">95%</div>
-<p style="margin: 5px 0;">文档分割精度</p>
-<div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; margin: 15px 0;">
-<div style="background: #FF9800; height: 100%; width: 95%; border-radius: 4px;"></div>
-</div>
-<small>行业领先水平</small>
-</div>
-
-<div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-<h3 style="margin: 0 0 15px 0;">📊 数据规模</h3>
-<div style="font-size: 36px; font-weight: bold; margin: 10px 0;">695</div>
-<p style="margin: 5px 0;">知识图谱节点</p>
-<div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; margin: 15px 0;">
-<div style="background: #2196F3; height: 100%; width: 90%; border-radius: 4px;"></div>
-</div>
-<small>2242条连接关系</small>
-</div>
-
-<div style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); padding: 25px; border-radius: 15px; color: white; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
-<h3 style="margin: 0 0 15px 0;">🤖 AI质量</h3>
-<div style="font-size: 36px; font-weight: bold; margin: 10px 0;">7.5</div>
-<p style="margin: 5px 0;">专家评审评分</p>
-<div style="background: rgba(255,255,255,0.2); height: 8px; border-radius: 4px; margin: 15px 0;">
-<div style="background: #4CAF50; height: 100%; width: 75%; border-radius: 4px;"></div>
-</div>
-<small>满分10分制</small>
-</div>
-
 </div>
 
 #### 📈 技术指标对比
 
-<table align="center" style="width: 100%; border-collapse: collapse; margin: 20px 0; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: white; padding: 30px; border-radius: 12px; margin: 30px 0; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+
+<table style="width: 100%; border-collapse: collapse;">
 <thead>
-<tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-<th style="padding: 15px; text-align: center;">🔧 技术指标</th>
-<th style="padding: 15px; text-align: center;">📊 传统方法</th>
-<th style="padding: 15px; text-align: center;">🚀 CAL-KG系统</th>
-<th style="padding: 15px; text-align: center;">📈 提升幅度</th>
+<tr style="background: #2563eb; color: white;">
+<th style="padding: 20px; text-align: left; font-weight: 600; border-radius: 8px 0 0 0;">🔧 技术指标</th>
+<th style="padding: 20px; text-align: center; font-weight: 600;">📊 传统方法</th>
+<th style="padding: 20px; text-align: center; font-weight: 600;">🚀 CAL-KG系统</th>
+<th style="padding: 20px; text-align: center; font-weight: 600; border-radius: 0 8px 0 0;">📈 提升幅度</th>
 </tr>
 </thead>
 <tbody>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">⚡ 处理速度</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;">单线程串行</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;"><strong>8并发处理</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center; color: #4CAF50;"><strong>+800%</strong></td>
+<tr style="border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; font-weight: 600; color: #1f2937;">⚡ 处理速度</td>
+<td style="padding: 20px; text-align: center; color: #6b7280;">单线程串行</td>
+<td style="padding: 20px; text-align: center; color: #1f2937; font-weight: 600;">8并发处理</td>
+<td style="padding: 20px; text-align: center;">
+<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600;">+800%</span>
+</td>
 </tr>
-<tr style="background: #ffffff;">
-<td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">🎯 分割准确率</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;">70-80%</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;"><strong>95%+</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center; color: #4CAF50;"><strong>+20%</strong></td>
+<tr style="background: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; font-weight: 600; color: #1f2937;">🎯 分割准确率</td>
+<td style="padding: 20px; text-align: center; color: #6b7280;">70-80%</td>
+<td style="padding: 20px; text-align: center; color: #1f2937; font-weight: 600;">95%+</td>
+<td style="padding: 20px; text-align: center;">
+<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600;">+20%</span>
+</td>
 </tr>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">🔗 关系发现</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;">手工标注</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;"><strong>自动发现</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center; color: #4CAF50;"><strong>+1000%</strong></td>
+<tr style="border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; font-weight: 600; color: #1f2937;">🔗 关系发现</td>
+<td style="padding: 20px; text-align: center; color: #6b7280;">手工标注</td>
+<td style="padding: 20px; text-align: center; color: #1f2937; font-weight: 600;">自动发现</td>
+<td style="padding: 20px; text-align: center;">
+<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600;">+1000%</span>
+</td>
 </tr>
-<tr style="background: #ffffff;">
-<td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">🤖 CoT生成</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;">分离式生成</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;"><strong>统一式生成</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center; color: #4CAF50;"><strong>+300%</strong></td>
+<tr style="background: #f9fafb; border-bottom: 1px solid #e5e7eb;">
+<td style="padding: 20px; font-weight: 600; color: #1f2937;">🤖 CoT生成</td>
+<td style="padding: 20px; text-align: center; color: #6b7280;">分离式生成</td>
+<td style="padding: 20px; text-align: center; color: #1f2937; font-weight: 600;">统一式生成</td>
+<td style="padding: 20px; text-align: center;">
+<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600;">+300%</span>
+</td>
 </tr>
-<tr style="background: #f8f9fa;">
-<td style="padding: 12px; border: 1px solid #dee2e6; font-weight: bold;">📊 数据质量</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;">6.0/10</td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center;"><strong>7.5/10</strong></td>
-<td style="padding: 12px; border: 1px solid #dee2e6; text-align: center; color: #4CAF50;"><strong>+25%</strong></td>
+<tr>
+<td style="padding: 20px; font-weight: 600; color: #1f2937;">📊 数据质量</td>
+<td style="padding: 20px; text-align: center; color: #6b7280;">6.0/10</td>
+<td style="padding: 20px; text-align: center; color: #1f2937; font-weight: 600;">7.5/10</td>
+<td style="padding: 20px; text-align: center;">
+<span style="background: #dcfce7; color: #166534; padding: 4px 12px; border-radius: 20px; font-weight: 600;">+25%</span>
+</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 
 ---
 
